@@ -1,0 +1,31 @@
+name: "1 · Araştırmacı (haftalık rapor)"
+on:
+  schedule:
+    - cron: "0 17 * * 0"   # Her pazar 20:00 (İstanbul)
+  workflow_dispatch:
+    inputs:
+      bu_hafta:
+        description: "Bu haftayı mı araştırsın? (1 = evet, boş = gelecek hafta)"
+        required: false
+        default: ""
+permissions:
+  contents: write
+concurrency: { group: repo-yazma, cancel-in-progress: false }
+jobs:
+  rapor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Haftalık raporu hazırla
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+          BU_HAFTA: ${{ inputs.bu_hafta }}
+        run: python scripts/weekly_report.py
+      - name: Kaydet
+        run: |
+          git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
+          git add reports data; git commit -m "Haftalık rapor" || exit 0
+          git pull --rebase && git push

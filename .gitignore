@@ -1,0 +1,5 @@
+projects/*/out/
+__pycache__/
+*.tmp.mp4
+node_modules/
+.netlify/

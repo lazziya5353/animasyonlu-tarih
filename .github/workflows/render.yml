@@ -1,0 +1,40 @@
+name: "4 · Kurgucu (video)"
+on:
+  workflow_dispatch:
+    inputs:
+      slug: { description: "Proje klasörü (projects/ altındaki ad)", required: true }
+permissions:
+  contents: write
+concurrency:
+  group: render-${{ inputs.slug }}
+  cancel-in-progress: true
+jobs:
+  video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      SLUG: ${{ inputs.slug }}
+    steps:
+      - name: Proje adını kontrol et
+        run: echo "$SLUG" | grep -Eq '^[a-z0-9-]+$' || (echo 'Geçersiz proje adı'; exit 1)
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q -r requirements.txt
+      - name: Videoyu üret
+        run: |
+          python scripts/set_status.py kurgucu calisiyor "${{ inputs.slug }} videosu üretiliyor"
+          python engine/render.py projects/${{ inputs.slug }}
+          python engine/render.py projects/${{ inputs.slug }} --preview 2 15 30 45 --out projects/${{ inputs.slug }}/onizleme.jpg
+      - name: Videoyu yayınla (GitHub Release)
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          TAG="video-${{ inputs.slug }}"
+          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --title "${{ inputs.slug }}" --notes "Animasyonlu Tarih videosu"
+          gh release upload "$TAG" "projects/${{ inputs.slug }}/out/video.mp4" --clobber
+          python scripts/set_status.py kurgucu tamam "${{ inputs.slug }} videosu hazır" "release:$TAG"
+      - name: Kaydet
+        run: |
+          git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
+          git add projects/${{ inputs.slug }}/onizleme.jpg projects/${{ inputs.slug }}/project.timed.json data 2>/dev/null; git commit -m "Video: ${{ inputs.slug }}" || exit 0
+          git pull --rebase && git push

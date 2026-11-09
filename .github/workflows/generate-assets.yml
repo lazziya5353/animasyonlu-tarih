@@ -1,0 +1,35 @@
+name: "3 · Görsel + Ses (Gemini)"
+on:
+  workflow_dispatch:
+    inputs:
+      slug: { description: "Proje klasörü (projects/ altındaki ad)", required: true }
+      only: { description: "Sadece bu görseli yeniden üret (numara, isteğe bağlı)", required: false, default: "" }
+      ses: { description: "Sadece sesi yeniden üret (1 = evet)", required: false, default: "" }
+permissions:
+  contents: write
+concurrency: { group: repo-yazma, cancel-in-progress: false }
+jobs:
+  uret:
+    runs-on: ubuntu-latest
+    env:
+      SLUG: ${{ inputs.slug }}
+    steps:
+      - name: Proje adını kontrol et
+        run: echo "$SLUG" | grep -Eq '^[a-z0-9-]+$' || (echo 'Geçersiz proje adı'; exit 1)
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Üret
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          ARGS="--slug ${{ inputs.slug }}"
+          [ -n "${{ inputs.only }}" ] && ARGS="$ARGS --only ${{ inputs.only }}"
+          [ "${{ inputs.ses }}" = "1" ] && ARGS="$ARGS --ses"
+          python scripts/generate_assets.py $ARGS
+      - name: Kaydet
+        run: |
+          git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
+          git add projects data; git commit -m "Görsel/ses: ${{ inputs.slug }}" || exit 0
+          git pull --rebase && git push

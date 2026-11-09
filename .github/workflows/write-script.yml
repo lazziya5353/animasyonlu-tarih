@@ -1,0 +1,30 @@
+name: "2 · Senarist + Doğruluk kontrol"
+on:
+  workflow_dispatch:
+    inputs:
+      konu: { description: "Konu (ör. Malazgirt Meydan Muharebesi 1071)", required: true }
+      tarih: { description: "Tarih (isteğe bağlı, YYYY-AA-GG)", required: false, default: "" }
+      notlar: { description: "Ek not (isteğe bağlı)", required: false, default: "" }
+permissions:
+  contents: write
+concurrency: { group: repo-yazma, cancel-in-progress: false }
+jobs:
+  metin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Metni yaz
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+          KONU: ${{ inputs.konu }}
+          TARIH: ${{ inputs.tarih }}
+          NOTLAR: ${{ inputs.notlar }}
+        run: python scripts/write_script.py --konu "$KONU" --tarih "$TARIH" --not "$NOTLAR"
+      - name: Kaydet
+        run: |
+          git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
+          git add projects data; git commit -m "Metin: yeni konu" || exit 0
+          git pull --rebase && git push
