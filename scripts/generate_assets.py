@@ -13,14 +13,19 @@ TTS_MODEL = os.environ.get("GEMINI_TTS_MODEL") or "gemini-2.5-flash-preview-tts"
 VOICE = os.environ.get("GEMINI_VOICE") or "Charon"
 IMG_USD = float(os.environ.get("GEMINI_IMG_USD") or 0.039)
 
+class GeminiError(Exception):
+    pass
+
 def call(model, body):
     key = os.environ["GEMINI_API_KEY"]
     req = urllib.request.Request(API.format(m=model), data=json.dumps(body).encode(), headers={"content-type": "application/json", "x-goog-api-key": key})
     for attempt in range(4):
         try: return json.load(urllib.request.urlopen(req, timeout=300))
         except urllib.error.HTTPError as e:
+            msg = e.read().decode()[:400]
+            if e.code == 429 and "limit: 0" in msg: raise GeminiError("Ücretsiz planda bu model kapalı (kota 0)")
             if e.code in (429, 500, 503) and attempt < 3: time.sleep(30 * (attempt + 1)); continue
-            raise SystemExit(f"Gemini hatası {e.code}: {e.read().decode()[:400]}")
+            raise GeminiError(f"Gemini hatası {e.code}: {msg}")
 
 def inline_parts(r):
     for c in r.get("candidates", []):
@@ -51,16 +56,25 @@ def main():
     if not os.environ.get("GEMINI_API_KEY"):
         set_status("gorsel", "bekliyor", "GEMINI_API_KEY yok: görselleri ve sesi panelden elle yükle"); print("GEMINI_API_KEY yok, atlandı."); return
     d = os.path.join(ROOT, "projects", a.slug); sc = json.load(open(os.path.join(d, "script.json")))
-    set_status("gorsel", "calisiyor", f"{a.slug} görselleri üretiliyor")
+    set_status("gorsel", "calisiyor", f"{a.slug} ses ve görseller üretiliyor")
+    notes = []
+    if a.ses or not a.only:  # önce ses: görseller kapalı olsa bile ses üretilsin
+        if not os.path.exists(os.path.join(d, "ses.wav")) or a.ses:
+            try: print("ses", voice(sc["seslendirme_metni"], os.path.join(d, "ses.wav"))); notes.append("ses hazır")
+            except GeminiError as e: print("SES HATASI:", e); notes.append(f"ses üretilemedi ({e})")
     if not a.ses:
+        made = 0
         for i, s in enumerate(sc["sahneler"], 1):
             if a.only and i != a.only: continue
             out = os.path.join(d, s["image"]); os.makedirs(os.path.dirname(out), exist_ok=True)
             if os.path.exists(out) and not a.only: continue
-            print("görsel", i, image(s["prompt_tam"], out))
-    if a.ses or not a.only:
-        if not os.path.exists(os.path.join(d, "ses.wav")) or a.ses: print("ses", voice(sc["seslendirme_metni"], os.path.join(d, "ses.wav")))
-    set_status("gorsel", "tamam", f"{a.slug} görselleri ve sesi hazır", f"projects/{a.slug}/images")
+            try:
+                ok = image(s["prompt_tam"], out); made += bool(ok); print("görsel", i, ok)
+            except GeminiError as e:
+                print("GÖRSEL HATASI:", e); notes.append(f"görseller elle yüklenecek: {e}"); break
+        if made: notes.append(f"{made} görsel üretildi")
+    bad = any("üretilemedi" in n for n in notes)
+    set_status("gorsel", "hata" if bad else "tamam", f"{a.slug}: " + ", ".join(notes or ["yapılacak bir şey yok"]), f"projects/{a.slug}")
 
 if __name__ == "__main__":
     main()
