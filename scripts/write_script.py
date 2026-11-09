@@ -15,7 +15,7 @@ def main():
     set_status("senarist", "calisiyor", f"'{a.konu}' metni yazılıyor")
     system = ("Sen 'Animasyonlu Tarih' sayfasının senaristi ve doğruluk kontrolcüsüsün. 60-65 saniyelik, sakin bir erkek anlatıcının okuyacağı Türkçe metinler yazarsın. "
               "Kurallar: İlk cümle merak uyandıran bir kanca. Toplam 130-150 kelime. Kısa, net cümleler. Yıllar ve tarihler YAZIYLA (bin dört yüz elli üç) yazılır ki ses yapay zekası doğru okusun. "
-              "Sadece kesin, kaynakta doğrulanabilir bilgiler; tartışmalı rakam ve uydurma sözlerden kaçın. Gerçek kişilerin yüzünü görsel promptlarında gösterme (arkadan, siluet, uzaktan). "
+              "Sadece kesin, kaynakta doğrulanabilir bilgiler; tartışmalı rakam ve uydurma sözlerden kaçın. Yıl, tarih ve saatleri metinde rakamla yaz (1953, 29 Ekim 1923, 09.05), yazıyla yazma. Gerçek kişilerin yüzünü görsel promptlarında gösterme (arkadan, siluet, uzaktan). "
               "Görsellerde yazı, hat, tuğra, bayrak hatası olmasın; dönemine uygun kıyafet. Kanlı/vahşet sahnesi yok. Sadece JSON döndür.")
     user = f"""Konu: {a.konu}
 Tarih: {a.tarih or '-'}

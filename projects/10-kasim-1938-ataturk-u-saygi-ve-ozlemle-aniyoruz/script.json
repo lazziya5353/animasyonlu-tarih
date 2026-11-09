@@ -5,7 +5,7 @@
  "sahneler": [
   {
    "lines": [
-    "Dolmabahçe'de bir odada saat, dokuzu beş geçeyi gösteriyor.",
+    "Dolmabahçe'de bir odada saat, 09.05'i gösteriyor.",
     "O sabah ülke bir an durdu."
    ],
    "big": "09.05",
@@ -22,7 +22,7 @@
   },
   {
    "lines": [
-    "Bin dokuz yüz on dokuz, on dokuz Mayıs.",
+    "19 Mayıs 1919.",
     "Mustafa Kemal Samsun'a çıktı ve Kurtuluş Savaşı'nın yolu açıldı."
    ],
    "big": "1919",
@@ -39,7 +39,7 @@
   },
   {
    "lines": [
-    "Bin dokuz yüz yirmi, yirmi üç Nisan.",
+    "23 Nisan 1920.",
     "Ankara'da Türkiye Büyük Millet Meclisi açıldı."
    ],
    "big": "1920",
@@ -56,7 +56,7 @@
   },
   {
    "lines": [
-    "Bin dokuz yüz yirmi iki.",
+    "1922.",
     "Türk ordusu İzmir'e girdi."
    ],
    "big": "1922",
@@ -73,7 +73,7 @@
   },
   {
    "lines": [
-    "Yirmi dokuz Ekim bin dokuz yüz yirmi üç.",
+    "29 Ekim 1923.",
     "Cumhuriyet ilan edildi."
    ],
    "big": "1923",
@@ -91,7 +91,7 @@
   },
   {
    "lines": [
-    "Bin dokuz yüz otuz dört.",
+    "1934.",
     "Kadınlara milletvekili seçme ve seçilme hakkı verildi."
    ],
    "big": "1934",
@@ -108,7 +108,7 @@
   },
   {
    "lines": [
-    "Bin dokuz yüz otuz sekiz sonbaharı.",
+    "1938 sonbaharı.",
     "Hastalığı ağırlaşmıştı ve Dolmabahçe'de tedavi görüyordu."
    ],
    "big": "1938",
@@ -125,8 +125,8 @@
   },
   {
    "lines": [
-    "On Kasım bin dokuz yüz otuz sekiz.",
-    "Sabah dokuzu beş geçe Atatürk hayata gözlerini yumdu."
+    "10 Kasım 1938.",
+    "Sabah 09.05'te Atatürk hayata gözlerini yumdu."
    ],
    "big": "09.05",
    "sub": "10 KASIM",
@@ -143,7 +143,7 @@
   },
   {
    "lines": [
-    "Bin dokuz yüz elli üç, on Kasım.",
+    "10 Kasım 1953.",
     "Naaşı Anıtkabir'e nakledildi."
    ],
    "big": "1953",
@@ -160,7 +160,7 @@
   },
   {
    "lines": [
-    "Bugün saat dokuzu beş geçe sirenler çalıyor.",
+    "Bugün saat 09.05'te sirenler çalıyor.",
     "Bir ülke saygıyla duruyor."
    ],
    "big": "SAYGI",
@@ -282,6 +282,6 @@
  "konu": "10 Kasım 1938 – Atatürk'ü saygı ve özlemle anıyoruz",
  "tarih": "2026-11-10",
  "slug": "10-kasim-1938-ataturk-u-saygi-ve-ozlemle-aniyoruz",
- "durum": "onaylandi",
- "seslendirme_metni": "Dolmabahçe'de bir odada saat, dokuzu beş geçeyi gösteriyor.\nO sabah ülke bir an durdu.\nBin dokuz yüz on dokuz, on dokuz Mayıs.\nMustafa Kemal Samsun'a çıktı ve Kurtuluş Savaşı'nın yolu açıldı.\nBin dokuz yüz yirmi, yirmi üç Nisan.\nAnkara'da Türkiye Büyük Millet Meclisi açıldı.\nBin dokuz yüz yirmi iki.\nTürk ordusu İzmir'e girdi.\nYirmi dokuz Ekim bin dokuz yüz yirmi üç.\nCumhuriyet ilan edildi.\nBin dokuz yüz otuz dört.\nKadınlara milletvekili seçme ve seçilme hakkı verildi.\nBin dokuz yüz otuz sekiz sonbaharı.\nHastalığı ağırlaşmıştı ve Dolmabahçe'de tedavi görüyordu.\nOn Kasım bin dokuz yüz otuz sekiz.\nSabah dokuzu beş geçe Atatürk hayata gözlerini yumdu.\nBin dokuz yüz elli üç, on Kasım.\nNaaşı Anıtkabir'e nakledildi.\nBugün saat dokuzu beş geçe sirenler çalıyor.\nBir ülke saygıyla duruyor.\nAtatürk şöyle demişti:\nBenim naçiz vücudum elbet bir gün toprak olacaktır, ancak Türkiye Cumhuriyeti ilelebet payidar kalacaktır.\nCumhuriyet bize emanet.\nOnu yaşatacağız. Saygıyla, özlemle, bağlılıkla."
+ "durum": "onay-bekliyor",
+ "seslendirme_metni": "Dolmabahçe'de bir odada saat, dokuzu beş geçeyi gösteriyor.\nO sabah ülke bir an durdu.\n19 Mayıs 1919.\nMustafa Kemal Samsun'a çıktı ve Kurtuluş Savaşı'nın yolu açıldı.\n23 Nisan 1920.\nAnkara'da Türkiye Büyük Millet Meclisi açıldı.\n1922.\nTürk ordusu İzmir'e girdi.\n29 Ekim 1923.\nCumhuriyet ilan edildi.\n1934.\nKadınlara milletvekili seçme ve seçilme hakkı verildi.\n1938 sonbaharı.\nHastalığı ağırlaşmıştı ve Dolmabahçe'de tedavi görüyordu.\n10 Kasım 1938.\nSabah dokuzu beş geçe Atatürk hayata gözlerini yumdu.\n10 Kasım 1953.\nNaaşı Anıtkabir'e nakledildi.\nBugün saat dokuzu beş geçe sirenler çalıyor.\nBir ülke saygıyla duruyor.\nAtatürk şöyle demişti:\nBenim naçiz vücudum elbet bir gün toprak olacaktır, ancak Türkiye Cumhuriyeti ilelebet payidar kalacaktır.\nCumhuriyet bize emanet.\nOnu yaşatacağız. Saygıyla, özlemle, bağlılıkla."
 }

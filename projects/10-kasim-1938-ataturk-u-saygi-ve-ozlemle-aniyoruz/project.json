@@ -10,7 +10,7 @@
    "start": null,
    "end": null,
    "lines": [
-    "Dolmabahçe'de bir odada saat, dokuzu beş geçeyi gösteriyor.",
+    "Dolmabahçe'de bir odada saat, 09.05'i gösteriyor.",
     "O sabah ülke bir an durdu."
    ],
    "big": "09.05",
@@ -35,7 +35,7 @@
    "start": null,
    "end": null,
    "lines": [
-    "Bin dokuz yüz on dokuz, on dokuz Mayıs.",
+    "19 Mayıs 1919.",
     "Mustafa Kemal Samsun'a çıktı ve Kurtuluş Savaşı'nın yolu açıldı."
    ],
    "big": "1919",
@@ -60,7 +60,7 @@
    "start": null,
    "end": null,
    "lines": [
-    "Bin dokuz yüz yirmi, yirmi üç Nisan.",
+    "23 Nisan 1920.",
     "Ankara'da Türkiye Büyük Millet Meclisi açıldı."
    ],
    "big": "1920",
@@ -85,7 +85,7 @@
    "start": null,
    "end": null,
    "lines": [
-    "Bin dokuz yüz yirmi iki.",
+    "1922.",
     "Türk ordusu İzmir'e girdi."
    ],
    "big": "1922",
@@ -110,7 +110,7 @@
    "start": null,
    "end": null,
    "lines": [
-    "Yirmi dokuz Ekim bin dokuz yüz yirmi üç.",
+    "29 Ekim 1923.",
     "Cumhuriyet ilan edildi."
    ],
    "big": "1923",
@@ -136,7 +136,7 @@
    "start": null,
    "end": null,
    "lines": [
-    "Bin dokuz yüz otuz dört.",
+    "1934.",
     "Kadınlara milletvekili seçme ve seçilme hakkı verildi."
    ],
    "big": "1934",
@@ -161,7 +161,7 @@
    "start": null,
    "end": null,
    "lines": [
-    "Bin dokuz yüz otuz sekiz sonbaharı.",
+    "1938 sonbaharı.",
     "Hastalığı ağırlaşmıştı ve Dolmabahçe'de tedavi görüyordu."
    ],
    "big": "1938",
@@ -186,8 +186,8 @@
    "start": null,
    "end": null,
    "lines": [
-    "On Kasım bin dokuz yüz otuz sekiz.",
-    "Sabah dokuzu beş geçe Atatürk hayata gözlerini yumdu."
+    "10 Kasım 1938.",
+    "Sabah 09.05'te Atatürk hayata gözlerini yumdu."
    ],
    "big": "09.05",
    "sub": "10 KASIM",
@@ -212,7 +212,7 @@
    "start": null,
    "end": null,
    "lines": [
-    "Bin dokuz yüz elli üç, on Kasım.",
+    "10 Kasım 1953.",
     "Naaşı Anıtkabir'e nakledildi."
    ],
    "big": "1953",
@@ -237,7 +237,7 @@
    "start": null,
    "end": null,
    "lines": [
-    "Bugün saat dokuzu beş geçe sirenler çalıyor.",
+    "Bugün saat 09.05'te sirenler çalıyor.",
     "Bir ülke saygıyla duruyor."
    ],
    "big": "SAYGI",

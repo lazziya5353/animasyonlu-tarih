@@ -103,8 +103,12 @@ async function openProject(slug) {
   let h = `<button class="ghost" id="back">← Geri</button><h2 style="margin-top:14px">${esc(sc?.baslik || P.project?.title || slug)}</h2>`;
   if (sc) {
     const st = sc.durum === "onaylandi" ? `<span class="st ok">Onaylandı</span>` : `<span class="st wait">Onay bekliyor</span>`;
-    h += `<div class="card">${st}<h3 style="font-size:14px;margin:12px 0 6px">Seslendirme metni</h3><pre>${esc(sc.seslendirme_metni)}</pre>
-      <div class="flex"><button data-copy="${esc(sc.seslendirme_metni)}">Metni kopyala</button>${sc.durum !== "onaylandi" ? `<button class="gold" id="approve">Onayla → görsel + ses üret</button>` : ""}</div></div>`;
+    const edit = sc.durum !== "onaylandi";
+    const body = edit
+      ? `<div class="mut" style="margin:8px 0">Onaylamadan önce metni burada düzenleyebilirsin. Her satır bir cümle.</div>` + sc.sahneler.map((s, i) => `<div class="ed"><span class="mut">${i + 1} · ${esc(s.big || "")}</span><textarea data-sc="${i}" rows="${Math.max(2, (s.lines || []).length)}">${esc((s.lines || []).join("\n"))}</textarea></div>`).join("")
+      : `<pre>${esc(sc.seslendirme_metni)}</pre>`;
+    h += `<div class="card">${st}<h3 style="font-size:14px;margin:12px 0 6px">Seslendirme metni</h3>${body}
+      <div class="flex"><button data-copy="${esc(sc.seslendirme_metni)}">Metni kopyala</button>${edit ? `<button id="savetxt">Değişiklikleri kaydet</button><button class="gold" id="approve">Onayla → görsel + ses üret</button>` : ""}</div></div>`;
   }
   const scenes = sc?.sahneler || (P.project?.scenes || []).map((s) => ({ image: s.image, big: s.big }));
   h += `<h2>Sahneler</h2><div class="scenes">`;
@@ -126,7 +130,11 @@ async function openProject(slug) {
   });
   if (hasVoice) $("#aud").src = await fileUrl(`projects/${slug}/ses.wav`);
   $("#up-ses").onchange = (e) => upload(slug, "ses.wav", e.target.files[0]);
-  if ($("#approve")) $("#approve").onclick = async () => { await api("approve", { slug }); toast("Onaylandı, görseller üretiliyor"); openProject(slug); };
+  const readEdits = () => [...d.querySelectorAll("textarea[data-sc]")].map((t) => t.value.split("\n").map((x) => x.trim()).filter(Boolean));
+  const changed = () => sc && readEdits().some((l, i) => l.join("\n") !== (sc.sahneler[i].lines || []).join("\n"));
+  const saveTxt = async () => { if (!changed()) return; await api("save_text", { slug, sahneler: readEdits() }); toast("Metin kaydedildi"); };
+  if ($("#savetxt")) $("#savetxt").onclick = async () => { await saveTxt(); openProject(slug); };
+  if ($("#approve")) $("#approve").onclick = async () => { await saveTxt(); await api("approve", { slug }); toast("Onaylandı, görseller üretiliyor"); openProject(slug); };
   $("#render").onclick = async () => { await api("run", { agent: "kurgucu", inputs: { slug } }); toast("Kurgucu çalışıyor (5-10 dk)"); };
   if (P.video) {
     const u = DEMO ? "../demo.mp4" : (await api("video_url", { id: P.video.id })).url; $("#vid").src = u;

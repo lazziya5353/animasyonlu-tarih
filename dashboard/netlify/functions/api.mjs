@@ -104,6 +104,21 @@ export default async (req) => {
         await dispatch(b.agent, inputs);
         return json({ ok: true });
       }
+      case "save_text": { // onaydan önce paneldeki metin düzenlemelerini kaydet
+        if (!validSlug(b.slug) || !Array.isArray(b.sahneler)) return json({ hata: "Geçersiz istek" }, 400);
+        const sc = await readJson(`projects/${b.slug}/script.json`);
+        if (!sc || sc.durum === "onaylandi") return json({ hata: "Onaylanmış metin düzenlenemez" }, 400);
+        if (b.sahneler.length !== sc.sahneler.length) return json({ hata: "Sahne sayısı değişemez" }, 400);
+        const clean = b.sahneler.map((l) => (Array.isArray(l) ? l : []).map((x) => String(x).trim().slice(0, 400)).filter(Boolean).slice(0, 6));
+        if (clean.some((l) => !l.length)) return json({ hata: "Her sahnede en az bir cümle olmalı" }, 400);
+        clean.forEach((l, i) => (sc.sahneler[i].lines = l));
+        sc.seslendirme_metni = clean.flat().join("\n");
+        const pj = await readJson(`projects/${b.slug}/project.json`);
+        if (pj?.scenes) clean.forEach((l, i) => { if (pj.scenes[i]) { pj.scenes[i].lines = l; pj.scenes[i].start = null; pj.scenes[i].end = null; } });
+        await writeFile(`projects/${b.slug}/script.json`, Buffer.from(JSON.stringify(sc, null, 1)).toString("base64"), `Metin düzenlendi: ${b.slug}`);
+        if (pj) await writeFile(`projects/${b.slug}/project.json`, Buffer.from(JSON.stringify(pj, null, 1)).toString("base64"), `Sahne metinleri: ${b.slug}`);
+        return json({ ok: true });
+      }
       case "approve": { // metni onayla → görsel/ses üretimini başlat
         if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);
         const sc = await readJson(`projects/${b.slug}/script.json`);

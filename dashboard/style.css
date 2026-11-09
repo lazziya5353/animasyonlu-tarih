@@ -34,3 +34,5 @@ pre{white-space:pre-wrap;font-family:inherit;font-size:14px;line-height:1.6;marg
 .login{max-width:340px;margin:18vh auto;text-align:center}.login input{width:100%;font:inherit;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--txt);margin:16px 0 10px}
 .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--gold);color:#1a1407;padding:10px 16px;border-radius:12px;font-weight:700;font-size:13px}
 video{width:100%;border-radius:14px;background:#000;max-height:70vh}
+
+.ed{margin:8px 0}.ed textarea{width:100%;font:inherit;font-size:14px;line-height:1.45;padding:9px 11px;border-radius:10px;border:1px solid var(--line);background:var(--card2);color:var(--txt);resize:vertical;margin-top:4px}
