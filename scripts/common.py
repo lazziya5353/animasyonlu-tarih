@@ -35,10 +35,19 @@ def claude(system, user, agent, max_tokens=6000, web_search=0):
     log_usage(agent, "claude", usd, f"{u.get('input_tokens', 0)} giriş / {u.get('output_tokens', 0)} çıkış token, {searches} arama")
     return "".join(b.get("text", "") for b in r.get("content", []) if b.get("type") == "text")
 
-def extract_json(txt):
+def extract_json(txt, agent="ajan"):
+    # Ham cevabı sakla: ayrıştırma bozulsa bile ödenen cevap kaybolmasın.
+    os.makedirs(os.path.join(ROOT, "data", "ham"), exist_ok=True)
+    open(os.path.join(ROOT, "data", "ham", f"{agent}.txt"), "w").write(txt)
     m = re.search(r"```(?:json)?\s*(\{.*\})\s*```", txt, re.S)
     s = m.group(1) if m else txt[txt.find("{"): txt.rfind("}") + 1]
-    return json.loads(s)
+    try:
+        return json.loads(s)
+    except json.JSONDecodeError:
+        import json_repair  # tırnak/virgül hatalarını onarır
+        out = json_repair.loads(s)
+        if not isinstance(out, dict) or not out: raise
+        return out
 
 def slugify(s):
     tr = str.maketrans("çğıöşüÇĞİÖŞÜ", "cgiosuCGIOSU")

@@ -31,7 +31,7 @@ JSON şeması:
 "savas_onerisi":{{"baslik":"","yil":0,"taraflar":"","sonuc":"","ozet":"","neden":"","harita_bolgesi":"avrupa_ortadogu|bati_avrupa|orta_asya|akdeniz|anadolu"}},
 "onerilen":[{{"baslik":"","tarih":"YYYY-MM-DD veya boş","tur":""}}]}}"""
     txt = claude(system, user, "arastirmaci", max_tokens=5000, web_search=int(os.environ.get("ARAMA_SAYISI", "4")))
-    rep = extract_json(txt); rep["olusturma"] = datetime.datetime.utcnow().isoformat(timespec="seconds") + "Z"
+    rep = extract_json(txt, "arastirmaci"); rep["olusturma"] = datetime.datetime.utcnow().isoformat(timespec="seconds") + "Z"
     for d in rep.get("gunler", []):
         for o in d.get("olaylar", []): o.setdefault("durum", "bekliyor")
     os.makedirs(os.path.join(ROOT, "reports"), exist_ok=True)
@@ -41,4 +41,7 @@ JSON şeması:
     print(json.dumps(rep, ensure_ascii=False)[:2000])
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except BaseException as e:
+        set_status("arastirmaci", "hata", str(e)[:300]); raise
