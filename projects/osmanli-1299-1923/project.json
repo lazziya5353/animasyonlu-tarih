@@ -1,0 +1,673 @@
+{
+ "title": "Osmanlı'nın kuruluşundan Cumhuriyet'e (1299–1923)",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "duration": 69.5,
+ "hook": "624 YILLIK YÜRÜYÜŞ",
+ "map_region": "avrupa_ortadogu",
+ "scenes": [
+  {
+   "image": "images/img01.jpg",
+   "start": 0.0,
+   "end": 6.6,
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "fx": [
+    "fog",
+    "dust",
+    "rays"
+   ],
+   "big": "1299",
+   "sub": "SÖĞÜT · KURULUŞ",
+   "year": 1299,
+   "label": "1299"
+  },
+  {
+   "image": "images/img02.jpg",
+   "start": 6.6,
+   "end": 11.0,
+   "kb": [
+    1.05,
+    1.18,
+    0.5,
+    0.6,
+    0.5,
+    0.55
+   ],
+   "fx": [
+    "dust"
+   ],
+   "big": "1326",
+   "sub": "BURSA",
+   "year": 1326,
+   "label": "1326"
+  },
+  {
+   "image": "images/img03.jpg",
+   "start": 11.0,
+   "end": 15.6,
+   "kb": [
+    1.08,
+    1.25,
+    0.5,
+    0.5,
+    0.45,
+    0.55
+   ],
+   "fx": [
+    "ember",
+    "flicker"
+   ],
+   "big": "1453",
+   "sub": "GEMİLER KARADAN",
+   "year": 1453,
+   "label": "1453"
+  },
+  {
+   "image": "images/img04.jpg",
+   "start": 15.6,
+   "end": 17.4,
+   "kb": [
+    1.2,
+    1.08,
+    0.5,
+    0.55,
+    0.5,
+    0.55
+   ],
+   "fx": [
+    "smoke",
+    "ember_few"
+   ],
+   "big": "FETİH",
+   "sub": "İSTANBUL",
+   "year": 1453,
+   "label": "1453"
+  },
+  {
+   "image": "images/img05.jpg",
+   "start": 17.4,
+   "end": 21.8,
+   "kb": [
+    1.05,
+    1.16,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "fx": [
+    "gold",
+    "rays"
+   ],
+   "big": "1517",
+   "sub": "KUTSAL EMANETLER",
+   "year": 1517,
+   "label": "1517"
+  },
+  {
+   "image": "images/img06.jpg",
+   "start": 21.8,
+   "end": 25.95,
+   "kb": [
+    1.35,
+    1.22,
+    0.5,
+    0.32,
+    0.5,
+    0.3
+   ],
+   "fx": [
+    "dust"
+   ],
+   "big": "KANUNİ",
+   "sub": "1520 – 1566",
+   "year": 1520,
+   "label": "1520"
+  },
+  {
+   "image": "images/img07.jpg",
+   "start": 25.95,
+   "end": 30.6,
+   "kb": [
+    1.15,
+    1.03,
+    0.3,
+    0.6,
+    0.4,
+    0.55
+   ],
+   "fx": [
+    "fog",
+    "ember_few"
+   ],
+   "big": "1683",
+   "sub": "VİYANA",
+   "year": 1683,
+   "label": "1683"
+  },
+  {
+   "image": "images/img08.jpg",
+   "start": 30.6,
+   "end": 35.0,
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.6,
+    0.5,
+    0.65
+   ],
+   "fx": [
+    "snow"
+   ],
+   "big": "ECDAD",
+   "sub": "CEPHEDEN CEPHEYE",
+   "year": 1800,
+   "label": "1800'LER"
+  },
+  {
+   "image": "images/img09.jpg",
+   "start": 35.0,
+   "end": 40.5,
+   "kb": [
+    1.2,
+    1.05,
+    0.45,
+    0.65,
+    0.5,
+    0.55
+   ],
+   "fx": [
+    "smoke"
+   ],
+   "big": "1915",
+   "sub": "ÇANAKKALE",
+   "year": 1915,
+   "label": "1915"
+  },
+  {
+   "image": "images/img10.jpg",
+   "start": 40.5,
+   "end": 43.9,
+   "kb": [
+    1.05,
+    1.15,
+    0.5,
+    0.5,
+    0.4,
+    0.55
+   ],
+   "fx": [
+    "rain"
+   ],
+   "big": "1918",
+   "sub": "İŞGAL",
+   "year": 1918,
+   "label": "1918",
+   "effect": "type",
+   "type_text": "30 EKİM 1918 · MONDROS"
+  },
+  {
+   "image": "images/img11.jpg",
+   "start": 43.9,
+   "end": 48.15,
+   "kb": [
+    1.04,
+    1.16,
+    0.5,
+    0.5,
+    0.55,
+    0.55
+   ],
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "big": "1919",
+   "sub": "19 MAYIS · SAMSUN",
+   "year": 1919,
+   "label": "1919",
+   "effect": "stamp"
+  },
+  {
+   "image": "images/img12.jpg",
+   "start": 48.15,
+   "end": 52.3,
+   "kb": [
+    1.16,
+    1.04,
+    0.5,
+    0.45,
+    0.5,
+    0.5
+   ],
+   "fx": [
+    "dust"
+   ],
+   "big": "1920",
+   "sub": "23 NİSAN · MECLİS",
+   "year": 1920,
+   "label": "1920"
+  },
+  {
+   "image": "images/img13.jpg",
+   "start": 52.3,
+   "end": 54.6,
+   "kb": [
+    1.08,
+    1.2,
+    0.5,
+    0.6,
+    0.5,
+    0.6
+   ],
+   "fx": [
+    "smoke",
+    "dust"
+   ],
+   "big": "1922",
+   "sub": "BÜYÜK TAARRUZ",
+   "year": 1922,
+   "label": "1922"
+  },
+  {
+   "image": "images/img14.jpg",
+   "start": 54.6,
+   "end": 62.7,
+   "kb": [
+    1.02,
+    1.2,
+    0.5,
+    0.5,
+    0.5,
+    0.45
+   ],
+   "fx": [
+    "gold"
+   ],
+   "big": "1923",
+   "sub": "29 EKİM · CUMHURİYET",
+   "year": 1923,
+   "label": "1923",
+   "effect": "glow"
+  },
+  {
+   "image": "images/img01.jpg",
+   "start": 62.7,
+   "end": 69.2,
+   "kb": [
+    1.04,
+    1.16,
+    0.5,
+    0.5,
+    0.5,
+    0.45
+   ],
+   "fx": [
+    "fog",
+    "dust",
+    "rays"
+   ],
+   "timeline": false
+  }
+ ],
+ "captions": [
+  {
+   "start": 2.07,
+   "end": 6.6,
+   "text": "Söğüt'te küçük bir obanın çadırında, bir cihan devletinin tohumu atıldı."
+  },
+  {
+   "start": 6.73,
+   "end": 11.0,
+   "text": "Osman Gazi'nin sancağını, Orhan Gazi Bursa'ya dikti."
+  },
+  {
+   "start": 12.61,
+   "end": 15.6,
+   "text": "Yirmi bir yaşındaki Fatih, gemileri karadan yürüttü."
+  },
+  {
+   "start": 15.6,
+   "end": 17.4,
+   "text": "İstanbul fethedildi."
+  },
+  {
+   "start": 17.48,
+   "end": 21.8,
+   "text": "Yavuz Sultan Selim ile Kutsal Emanetler İstanbul'a geldi."
+  },
+  {
+   "start": 21.87,
+   "end": 25.95,
+   "text": "Kanuni'nin devrinde sancağımız üç kıtada dalgalandı."
+  },
+  {
+   "start": 26.02,
+   "end": 30.6,
+   "text": "1683'te Viyana önlerinde uzun bir geri çekiliş başladı."
+  },
+  {
+   "start": 30.73,
+   "end": 35.0,
+   "text": "Ama ecdadımız asırlar boyu, cepheden cepheye koştu."
+  },
+  {
+   "start": 36.68,
+   "end": 40.5,
+   "text": "Çanakkale'de bir nesil, \"geçilmez\" dedi ve geçit vermedi."
+  },
+  {
+   "start": 40.59,
+   "end": 43.9,
+   "text": "Savaş bitti. Vatan, işgal altındaydı."
+  },
+  {
+   "start": 43.98,
+   "end": 48.15,
+   "text": "19 Mayıs 1919'da Samsun'da bir ışık yandı."
+  },
+  {
+   "start": 48.23,
+   "end": 52.3,
+   "text": "Ankara'da Meclis kuruldu, millet yeniden ayağa kalktı."
+  },
+  {
+   "start": 52.39,
+   "end": 54.6,
+   "text": "Büyük Taarruz'la zafer kazanıldı."
+  },
+  {
+   "start": 54.73,
+   "end": 58.5,
+   "text": "Ve 1923'te Cumhuriyet ilan edildi."
+  },
+  {
+   "start": 58.57,
+   "end": 62.7,
+   "text": "Altı yüz yirmi dört yıllık yürüyüş, yeni bir şafağa ulaştı."
+  },
+  {
+   "start": 62.85,
+   "end": 65.6,
+   "text": "Bu toprakları bize emanet edenlere rahmetle."
+  }
+ ],
+ "eras": [
+  {
+   "name": "KURULUŞ",
+   "from": 0,
+   "to": 1,
+   "color": [
+    120,
+    200,
+    160
+   ]
+  },
+  {
+   "name": "YÜKSELME",
+   "from": 2,
+   "to": 5,
+   "color": [
+    232,
+    196,
+    120
+   ]
+  },
+  {
+   "name": "DURAKLAMA",
+   "from": 6,
+   "to": 6,
+   "color": [
+    200,
+    150,
+    110
+   ]
+  },
+  {
+   "name": "GERİLEME",
+   "from": 7,
+   "to": 9,
+   "color": [
+    170,
+    120,
+    120
+   ]
+  },
+  {
+   "name": "KURTULUŞ",
+   "from": 10,
+   "to": 13,
+   "color": [
+    230,
+    80,
+    80
+   ]
+  }
+ ],
+ "maps": [
+  {
+   "start": 6.6,
+   "end": 8.9,
+   "cam_from": [
+    29.6,
+    40.45,
+    5.6
+   ],
+   "cam_to": [
+    29.6,
+    40.4,
+    4.8
+   ],
+   "routes": [
+    [
+     "Söğüt",
+     "Bursa"
+    ]
+   ],
+   "cities": [
+    "Söğüt",
+    "Bursa",
+    "İstanbul"
+   ],
+   "title": "SÖĞÜT  —  BURSA",
+   "labels": {
+    "Söğüt": [
+     60,
+     62
+    ],
+    "Bursa": [
+     -95,
+     -45
+    ],
+    "İstanbul": [
+     0,
+     -62
+    ]
+   }
+  },
+  {
+   "start": 27.1,
+   "end": 29.4,
+   "cam_from": [
+    22.9,
+    44.6,
+    15.0
+   ],
+   "cam_to": [
+    22.7,
+    44.7,
+    14.4
+   ],
+   "routes": [
+    [
+     "İstanbul",
+     "Belgrad",
+     "Viyana"
+    ]
+   ],
+   "cities": [
+    "İstanbul",
+    "Viyana"
+   ],
+   "title": "İSTANBUL  —  VİYANA",
+   "labels": {
+    "İstanbul": [
+     -170,
+     -40
+    ],
+    "Viyana": [
+     120,
+     -10
+    ]
+   }
+  },
+  {
+   "start": 43.9,
+   "end": 46.0,
+   "cam_from": [
+    32.2,
+    40.6,
+    12
+   ],
+   "cam_to": [
+    32.6,
+    40.6,
+    10.5
+   ],
+   "routes": [
+    [
+     "İstanbul",
+     [
+      31.0,
+      41.55
+     ],
+     [
+      34.0,
+      42.0
+     ],
+     "Samsun"
+    ]
+   ],
+   "cities": [
+    "İstanbul",
+    "Samsun"
+   ],
+   "title": "İSTANBUL  —  SAMSUN",
+   "labels": {
+    "İstanbul": [
+     0,
+     -62
+    ],
+    "Samsun": [
+     0,
+     -62
+    ]
+   }
+  },
+  {
+   "start": 48.15,
+   "end": 50.0,
+   "cam_from": [
+    33.2,
+    40.5,
+    11
+   ],
+   "cam_to": [
+    33.0,
+    40.3,
+    9.5
+   ],
+   "routes": [],
+   "cities": [
+    "Samsun",
+    "Ankara"
+   ],
+   "title": "ANKARA",
+   "labels": {
+    "Samsun": [
+     0,
+     -62
+    ],
+    "Ankara": [
+     0,
+     62
+    ]
+   }
+  }
+ ],
+ "jumps": [
+  {
+   "t": 11.0,
+   "value": 127
+  },
+  {
+   "t": 17.4,
+   "value": 64
+  },
+  {
+   "t": 25.95,
+   "value": 117
+  },
+  {
+   "t": 35.0,
+   "value": 232
+  }
+ ],
+ "cards": [
+  {
+   "start": 12.9,
+   "end": 15.4,
+   "value": 53,
+   "unit": "GÜN",
+   "small": "SÜREN KUŞATMA"
+  },
+  {
+   "start": 22.6,
+   "end": 25.8,
+   "value": 46,
+   "unit": "YIL",
+   "small": "SALTANAT"
+  },
+  {
+   "start": 63.0,
+   "end": 67.2,
+   "value": 624,
+   "unit": "YIL",
+   "small": "36 PADİŞAH",
+   "y": 1180
+  }
+ ],
+ "ayyildiz": [
+  56.4,
+  58.3,
+  60.9,
+  62.5
+ ],
+ "outro": {
+  "start": 62.4,
+  "title": "1299 — 1923",
+  "line": "RUHLARI ŞAD OLSUN",
+  "line_at": 65.3
+ },
+ "music": {
+  "booms": [
+   0.3,
+   11.3,
+   35.3,
+   54.9
+  ],
+  "major_from": 54.9,
+  "heartbeat": [
+   35.3,
+   54.6
+  ]
+ }
+}

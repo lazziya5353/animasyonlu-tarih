@@ -1,0 +1,7 @@
+{
+  "avrupa_ortadogu": {"lon0": 10, "lon1": 46, "lat0": 32, "lat1": 52, "k": 150, "clat": 42, "aciklama": "Balkanlar, Anadolu, Doğu Akdeniz"},
+  "bati_avrupa": {"lon0": -12, "lon1": 22, "lat0": 35, "lat1": 60, "k": 120, "clat": 47, "aciklama": "Fransa, İngiltere, Almanya, İtalya"},
+  "orta_asya": {"lon0": 40, "lon1": 120, "lat0": 20, "lat1": 55, "k": 60, "clat": 38, "aciklama": "İpek Yolu, Moğollar, Türk devletleri"},
+  "akdeniz": {"lon0": -10, "lon1": 40, "lat0": 25, "lat1": 50, "k": 100, "clat": 38, "aciklama": "Roma, Kartaca, Haçlı Seferleri"},
+  "anadolu": {"lon0": 25, "lon1": 46, "lat0": 34, "lat1": 43, "k": 220, "clat": 39, "aciklama": "Malazgirt, Kurtuluş Savaşı"}
+}

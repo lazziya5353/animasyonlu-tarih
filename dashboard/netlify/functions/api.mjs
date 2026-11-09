@@ -1,0 +1,136 @@
+// Animasyonlu Tarih kontrol paneli API'si (Netlify Function).
+// Ortam değişkenleri: GITHUB_TOKEN (repo + workflow yetkili), GITHUB_REPO (sahip/repo), PANEL_SIFRE, AYLIK_BUTCE_USD (isteğe bağlı)
+import crypto from "node:crypto";
+
+const REPO = process.env.GITHUB_REPO || "lazziya5353/animasyonlu-tarih";
+const GH = "https://api.github.com";
+const WORKFLOWS = {
+  arastirmaci: "weekly-report.yml",
+  senarist: "write-script.yml",
+  gorsel: "generate-assets.yml",
+  kurgucu: "render.yml",
+};
+const json = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
+const token = () => crypto.createHmac("sha256", process.env.PANEL_SIFRE || "").update("animasyonlu-tarih-panel").digest("hex");
+const same = (a, b) => { const x = Buffer.from(String(a)), y = Buffer.from(String(b)); return x.length === y.length && crypto.timingSafeEqual(x, y); };
+
+async function gh(path, opts = {}) {
+  const r = await fetch(GH + path, {
+    ...opts,
+    headers: { authorization: `Bearer ${process.env.GITHUB_TOKEN}`, accept: opts.accept || "application/vnd.github+json", "x-github-api-version": "2022-11-28", ...(opts.headers || {}) },
+  });
+  return r;
+}
+async function ghJson(path, opts) { const r = await gh(path, opts); if (!r.ok) throw new Error(`GitHub ${r.status}: ${(await r.text()).slice(0, 200)}`); return r.status === 204 ? {} : r.json(); }
+async function readJson(path) {
+  const r = await gh(`/repos/${REPO}/contents/${path}`, { accept: "application/vnd.github.raw" });
+  return r.ok ? r.json() : null;
+}
+async function writeFile(path, contentB64, message) {
+  const cur = await gh(`/repos/${REPO}/contents/${path}`);
+  const sha = cur.ok ? (await cur.json()).sha : undefined;
+  return ghJson(`/repos/${REPO}/contents/${path}`, { method: "PUT", body: JSON.stringify({ message, content: contentB64, sha }) });
+}
+const dispatch = (wf, inputs = {}) => ghJson(`/repos/${REPO}/actions/workflows/${WORKFLOWS[wf]}/dispatches`, { method: "POST", body: JSON.stringify({ ref: "main", inputs }) });
+const validSlug = (s) => /^[a-z0-9-]{1,60}$/.test(s || "");
+
+let failed = []; // basit kaba kuvvet koruması (sıcak fonksiyon örneği başına)
+
+export default async (req) => {
+  if (req.method !== "POST") return json({ hata: "POST gerekli" }, 405);
+  let b = {};
+  try { b = await req.json(); } catch {}
+  if (b.action === "login") {
+    const now = Date.now(); failed = failed.filter((t) => now - t < 15 * 60e3);
+    if (failed.length >= 10) return json({ hata: "Çok fazla yanlış deneme. 15 dakika sonra tekrar dene." }, 429);
+    if (!process.env.PANEL_SIFRE || !same(b.sifre || "", process.env.PANEL_SIFRE)) { failed.push(now); return json({ hata: "Şifre yanlış" }, 401); }
+    return json({ token: token() });
+  }
+  if (!same(req.headers.get("x-panel-token") || "", token())) return json({ hata: "Giriş gerekli" }, 401);
+  if (!process.env.GITHUB_TOKEN) return json({ hata: "GITHUB_TOKEN tanımlı değil (Netlify > Site settings > Environment variables)" }, 500);
+
+  try {
+    switch (b.action) {
+      case "overview": {
+        const [status, usage, report, list] = await Promise.all([
+          readJson("data/status.json"), readJson("data/usage.json"), readJson("reports/latest.json"),
+          gh(`/repos/${REPO}/contents/projects`).then((r) => (r.ok ? r.json() : [])),
+        ]);
+        const runs = {};
+        await Promise.all(Object.entries(WORKFLOWS).map(async ([k, f]) => {
+          const r = await gh(`/repos/${REPO}/actions/workflows/${f}/runs?per_page=1`);
+          const run = r.ok ? (await r.json()).workflow_runs?.[0] : null;
+          runs[k] = run ? { durum: run.status, sonuc: run.conclusion, zaman: run.updated_at, url: run.html_url } : null;
+        }));
+        const ay = new Date().toISOString().slice(0, 7);
+        const kayit = usage?.kayitlar || [];
+        const aylik = kayit.filter((x) => x.zaman.startsWith(ay)).reduce((s, x) => s + x.usd, 0);
+        const servis = {};
+        kayit.filter((x) => x.zaman.startsWith(ay)).forEach((x) => (servis[x.servis] = (servis[x.servis] || 0) + x.usd));
+        return json({ status: status || {}, runs, report, projeler: (list || []).filter((x) => x.type === "dir").map((x) => x.name),
+          harcama: { aylik, servis, butce: Number(process.env.AYLIK_BUTCE_USD || 15), son: kayit.slice(-8).reverse() } });
+      }
+      case "project": {
+        if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);
+        const [script, project, imgs, files, rel] = await Promise.all([
+          readJson(`projects/${b.slug}/script.json`), readJson(`projects/${b.slug}/project.json`),
+          gh(`/repos/${REPO}/contents/projects/${b.slug}/images`).then((r) => (r.ok ? r.json() : [])),
+          gh(`/repos/${REPO}/contents/projects/${b.slug}`).then((r) => (r.ok ? r.json() : [])),
+          gh(`/repos/${REPO}/releases/tags/video-${b.slug}`).then((r) => (r.ok ? r.json() : null)),
+        ]);
+        const asset = rel?.assets?.find((a) => a.name.endsWith(".mp4"));
+        return json({ script, project, gorseller: (imgs || []).map((x) => x.name), dosyalar: (files || []).map((x) => x.name),
+          video: asset ? { id: asset.id, boyut: asset.size, zaman: asset.updated_at } : null });
+      }
+      case "file": { // görsel / ses önizleme (en fazla ~4 MB)
+        if (!/^projects\/[a-z0-9-]+\/[\w./-]+\.(jpg|jpeg|png|wav|mp3)$/.test(b.path || "") || b.path.includes("..")) return json({ hata: "Geçersiz dosya" }, 400);
+        const r = await gh(`/repos/${REPO}/contents/${b.path}`, { accept: "application/vnd.github.raw" });
+        if (!r.ok) return json({ hata: "Dosya yok" }, 404);
+        const ext = b.path.split(".").pop();
+        const type = { jpg: "image/jpeg", jpeg: "image/jpeg", png: "image/png", wav: "audio/wav", mp3: "audio/mpeg" }[ext];
+        return new Response(await r.arrayBuffer(), { headers: { "content-type": type, "cache-control": "private, max-age=300" } });
+      }
+      case "video_url": { // GitHub'ın kısa süreli imzalı indirme adresini döndürür
+        const r = await gh(`/repos/${REPO}/releases/assets/${Number(b.id)}`, { accept: "application/octet-stream", redirect: "manual" });
+        const loc = r.headers.get("location");
+        return loc ? json({ url: loc }) : json({ hata: "Video adresi alınamadı" }, 500);
+      }
+      case "run": { // ajanı çalıştır
+        if (!WORKFLOWS[b.agent]) return json({ hata: "Bilinmeyen ajan" }, 400);
+        const inputs = {};
+        for (const [k, v] of Object.entries(b.inputs || {})) inputs[k] = String(v).slice(0, 300);
+        if (inputs.slug && !validSlug(inputs.slug)) return json({ hata: "Geçersiz proje" }, 400);
+        await dispatch(b.agent, inputs);
+        return json({ ok: true });
+      }
+      case "approve": { // metni onayla → görsel/ses üretimini başlat
+        if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);
+        const sc = await readJson(`projects/${b.slug}/script.json`);
+        sc.durum = "onaylandi";
+        await writeFile(`projects/${b.slug}/script.json`, Buffer.from(JSON.stringify(sc, null, 1)).toString("base64"), `Metin onaylandı: ${b.slug}`);
+        if (b.uret !== false) await dispatch("gorsel", { slug: b.slug });
+        return json({ ok: true });
+      }
+      case "upload": { // Gemini bağlı değilken görsel/ses elle yükleme
+        if (!validSlug(b.slug) || !/^(images\/s\d{2}\.jpg|ses\.wav)$/.test(b.name || "")) return json({ hata: "Geçersiz dosya adı" }, 400);
+        await writeFile(`projects/${b.slug}/${b.name}`, b.base64, `Yükleme: ${b.slug}/${b.name}`);
+        return json({ ok: true });
+      }
+      case "decide": { // haftalık rapordaki konuya Yap / Geç
+        const rep = await readJson("reports/latest.json");
+        let hedef = null;
+        for (const g of rep.gunler || []) for (const o of g.olaylar || []) if (o.baslik === b.baslik) { o.durum = b.karar; hedef = { ...o, tarih: g.tarih }; }
+        if (rep.savas_onerisi?.baslik === b.baslik) { rep.savas_onerisi.durum = b.karar; hedef = rep.savas_onerisi; }
+        await writeFile("reports/latest.json", Buffer.from(JSON.stringify(rep, null, 1)).toString("base64"), `Karar: ${b.karar} · ${b.baslik}`);
+        if (b.karar === "yap" && hedef) await dispatch("senarist", { konu: `${hedef.baslik} (${hedef.yil || ""})`, tarih: hedef.tarih || "", notlar: hedef.ozet || "" });
+        return json({ ok: true });
+      }
+      default:
+        return json({ hata: "Bilinmeyen işlem" }, 400);
+    }
+  } catch (e) {
+    return json({ hata: String(e.message || e) }, 500);
+  }
+};
+
+export const config = { path: "/api" };
