@@ -16,15 +16,27 @@ def main():
     for f in sorted(os.listdir(os.path.join(ROOT, "projects"))):
         pj = os.path.join(ROOT, "projects", f, "project.json")
         if os.path.exists(pj): gecmis.append(json.load(open(pj)).get("title", f))
-    system = ("Sen 'Animasyonlu Tarih' adlı Türkçe Instagram/TikTok tarih sayfasının araştırmacısısın. 60 saniyelik dikey videolar üretiliyor: "
+    system = ("Sen 'Animasyon Tarih' (@animasyon.tarih) adlı Türkçe Instagram/TikTok tarih sayfasının araştırmacısısın. 60 saniyelik dikey videolar üretiliyor: "
               "Tarihte Bugün, savaşlar ve dünya tarihi. Doğruluk her şeyden önemli: yalnızca tarihi kesin, kaynakta doğrulanabilen olayları yaz. "
               "Son 50 yılın tartışmalı/süren çatışmalarından ve vahşet odaklı konulardan kaçın. Sadece JSON döndür; açıklama yazma, metinleri kısa tut.")
+    # Analistin ve yorum ajanının bulguları (ücretsiz toplanır, birkaç satır = önemsiz token)
+    ipucu = []
+    try:
+        an = json.load(open(os.path.join(ROOT, "data", "analiz.json")))
+        vids = (an.get("instagram") or {}).get("videolar") or []
+        if vids: ipucu.append("En çok izlenen videolarımız: " + "; ".join(f"{v['baslik'][:50]} ({v['izlenme']} izlenme)" for v in vids[:3]))
+    except Exception: pass
+    try:
+        fk = json.load(open(os.path.join(ROOT, "data", "yorumlar.json"))).get("fikirler") or []
+        if fk: ipucu.append("İzleyicilerin istediği konular: " + ", ".join(f["konu"] for f in fk[-6:]))
+    except Exception: pass
+    ipucu = ("\nİzleyici verisi (önerilerinde dikkate al):\n" + "\n".join(ipucu) + "\n") if ipucu else ""
     user = f"""Şu tarihler için (yıl fark etmez, gün ve ay eşleşsin) en iyi video konularını bul:
 {chr(10).join(f'- {d.isoformat()} {GUNLER[d.weekday()]} → {d.day} {d.strftime("%m")}. ay' for d in days)}
 
 Her gün için 1-2 olay yaz (Türk tarihi ve dünya tarihi karışık). Her olaya 1-5 arası 'yildiz' ver: Türk izleyicide izlenme potansiyeli, görsellik, duygusal etki.
 Ayrıca tarihten bağımsız 1 'savas_onerisi' ver (harita animasyonuna uygun, iki taraf, sonuç). Daha önce yapılan konuları tekrar önerme: {gecmis}
-En iyi 3 konuyu 'onerilen' listesine koy.
+En iyi 3 konuyu 'onerilen' listesine koy.{ipucu}
 
 JSON şeması:
 {{"hafta":"{wk}","gunler":[{{"tarih":"YYYY-MM-DD","gun":"Pazartesi","olaylar":[{{"yil":1938,"baslik":"kısa başlık","ozet":"tek kısa cümle","yildiz":5,"neden":"en fazla 8 kelime","tur":"tarihte-bugun|savas|dunya","kaynak":"url"}}]}}],

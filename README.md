@@ -1,4 +1,4 @@
-# Animasyonlu Tarih
+# Animasyon Tarih (@animasyon.tarih)
 
 60 saniyelik dikey tarih videoları (Tarihte Bugün · Savaşlar · Dünya Tarihi) üreten ajan sistemi ve kontrol paneli.
 
@@ -6,10 +6,16 @@
 
 | Ajan | Ne yapar | Ne zaman çalışır | Ne harcar |
 |---|---|---|---|
-| 1 · Araştırmacı | Gelecek haftanın "Tarihte Bugün" olaylarını + 1 savaş önerisini yıldız puanıyla çıkarır | Her pazar 20.00 (otomatik) | Claude API |
-| 2 · Senarist + Kontrol | Seçilen konu için 60 sn metin, sahneler, Gemini promptları, açıklama + hashtag; bilgileri kaynakla doğrular | Panelde "Yap" deyince | Claude API |
-| 3 · Görsel + Ses | Gemini ile sahne görsellerini ve seslendirmeyi üretir (anahtar yoksa elle yüklersin) | Panelde "Onayla" deyince | Gemini API |
-| 4 · Kurgucu | Harita, zaman çizelgesi, sayaçlar, efektler ve müzikle videoyu çıkarır | Panelde "Videoyu üret" deyince | Ücretsiz (GitHub sunucusu) |
+| 1 · Araştırmacı | Gelecek haftanın "Tarihte Bugün" olaylarını + 1 savaş önerisini yıldız puanıyla çıkarır; analistin ve yorumların bulgularını dikkate alır | Her pazar 20.00 (otomatik) | Claude API (~$0,30) |
+| 2 · Senarist | Konu için 60 sn metin, sahneler, Gemini promptları, açıklama + hashtag | Panelde "Yap" → "API yazsın" deyince (ya da metni sohbette birlikte yazarız, ücretsiz) | Claude API (~$0,30) |
+| 3 · Ses + Görsel | Gemini ile seslendirme (ücretsiz kota); görseller Gemini uygulamasından elle, panelden toplu yüklenir | Panelde "Onayla" deyince | Ücretsiz |
+| 4 · Kurgucu | Harita, zaman çizelgesi, sayaçlar, efektler, müzik ve filigranla videoyu çıkarır | Panelde "Videoyu üret" deyince | Ücretsiz |
+| 5 · Kontrolcüler | **Senaryo** (kural tabanlı), **ses** (metinle karşılaştırma, hatalıysa yeniden ürettirir), **görsel** (dönem, yazı, bayrak, yüz, yapay zeka hataları), **kurgu** (taşan yazı, siyah/donuk kare, ses seviyesi, senkron) | Her ajanın arkasından otomatik | Ücretsiz (Gemini ücretsiz kota) |
+| 6 · Yayıncı | Videoyu Instagram'a Reels olarak paylaşır; panelden saat planlanır | "Planla" / "Şimdi paylaş" | Ücretsiz (Instagram resmi API) |
+| 7 · Analist | İzlenme, kaydetme, takipçi istatistikleri; en iyi video ve paylaşım saati | Her pazartesi 08.15 | Ücretsiz |
+| 8 · Yorum ajanı | Yorumları toplar, türünü belirler, cevap taslağı yazar; sen onaylayınca gönderir | Her gün 10.40 | Ücretsiz (Gemini ücretsiz kota) |
+
+Instagram bağlantısı: [docs/YAYIN_KURULUM.md](docs/YAYIN_KURULUM.md)
 
 Hepsini **kontrol panelinden** (Netlify) görür ve yönetirsin: ajanların durumu, haftalık rapor, Yap/Geç, metin onayı, görsel/ses önizleme, video izle/indir, aylık harcama.
 

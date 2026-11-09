@@ -12,7 +12,7 @@ PRICE_SEARCH = float(os.environ.get("CLAUDE_PRICE_SEARCH") or 0.01)
 def log_usage(agent, service, usd, detail=""):
     os.makedirs(os.path.dirname(USAGE), exist_ok=True)
     data = json.load(open(USAGE)) if os.path.exists(USAGE) else {"kayitlar": []}
-    data["kayitlar"].append({"zaman": datetime.datetime.utcnow().isoformat(timespec="seconds") + "Z", "ajan": agent, "servis": service, "usd": round(usd, 4), "detay": detail})
+    data["kayitlar"].append({"zaman": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "ajan": agent, "servis": service, "usd": round(usd, 4), "detay": detail})
     data["kayitlar"] = data["kayitlar"][-500:]
     json.dump(data, open(USAGE, "w"), ensure_ascii=False, indent=1)
 
@@ -57,5 +57,7 @@ def slugify(s):
 def set_status(agent, durum, mesaj, cikti=None):
     p = os.path.join(ROOT, "data", "status.json"); os.makedirs(os.path.dirname(p), exist_ok=True)
     data = json.load(open(p)) if os.path.exists(p) else {}
-    data[agent] = {"durum": durum, "mesaj": mesaj, "cikti": cikti, "zaman": datetime.datetime.utcnow().isoformat(timespec="seconds") + "Z"}
+    eski = data.get(agent) or {}
+    if durum == "bekliyor" and eski.get("durum") == durum and eski.get("mesaj") == mesaj: return  # her gün aynı "bağlı değil" kaydıyla repo kirlenmesin
+    data[agent] = {"durum": durum, "mesaj": mesaj, "cikti": cikti, "zaman": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
     json.dump(data, open(p, "w"), ensure_ascii=False, indent=1)

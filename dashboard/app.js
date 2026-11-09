@@ -2,15 +2,21 @@ const DEMO = new URLSearchParams(location.search).has("demo");
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 let TOKEN = localStorage.getItem("at_token") || "";
+const HANDLE = "@animasyon.tarih";
 
 const AGENTS = [
-  { k: "arastirmaci", ic: "🔎", ad: "Araştırmacı", is: "Her pazar 20.00'de haftanın konularını çıkarır" },
-  { k: "senarist", ic: "✍️", ad: "Senarist + Kontrol", is: "60 sn metin, sahneler, açıklama; bilgileri doğrular" },
-  { k: "gorsel", ic: "🎨", ad: "Görsel + Ses", is: "Gemini ile sahne görselleri ve seslendirme" },
-  { k: "kurgucu", ic: "🎬", ad: "Kurgucu", is: "Harita, çizelge, efektlerle videoyu çıkarır" },
+  { k: "arastirmaci", ic: "🔎", ad: "Araştırmacı", is: "Her pazar 20.00'de haftanın konularını çıkarır", btn: "Şimdi araştır", ucret: true },
+  { k: "senarist", ic: "✍️", ad: "Senarist", is: "60 sn metin, sahneler, açıklama yazar", btn: "Yeni konu", ucret: true },
+  { k: "gorsel", ic: "🎙️", ad: "Ses + Görsel", is: "Gemini ile seslendirme (ücretsiz)", btn: "Çalıştır" },
+  { k: "kurgucu", ic: "🎬", ad: "Kurgucu", is: "Harita, çizelge, efekt ve filigranla videoyu çıkarır", btn: "Çalıştır" },
+  { k: "kontrol", ic: "🛡️", ad: "Kontrolcüler", is: "Senaryo, ses, görsel ve kurguyu denetler", btn: "Kontrol et" },
+  { k: "yayinci", ic: "📤", ad: "Yayıncı", is: "Instagram'a Reels olarak paylaşır", btn: "Bağlantıyı test et" },
+  { k: "analist", ic: "📊", ad: "Analist", is: "Her pazartesi izlenme istatistiklerini toplar", btn: "Şimdi topla" },
+  { k: "yorumcu", ic: "💬", ad: "Yorum ajanı", is: "Yorumları toplar, cevap taslağı yazar", btn: "Yorumları topla" },
 ];
+const ASAMA_AD = { senaryo: "Senaryo", ses: "Ses", gorsel: "Görseller", kurgu: "Kurgu" };
 
-function toast(t) { const d = document.createElement("div"); d.className = "toast"; d.textContent = t; document.body.append(d); setTimeout(() => d.remove(), 2600); }
+function toast(t) { const d = document.createElement("div"); d.className = "toast"; d.textContent = t; document.body.append(d); setTimeout(() => d.remove(), 2800); }
 async function api(action, body = {}, raw = false) {
   if (DEMO) return demo(action, body);
   const r = await fetch("/api", { method: "POST", headers: { "content-type": "application/json", "x-panel-token": TOKEN }, body: JSON.stringify({ action, ...body }) });
@@ -18,14 +24,17 @@ async function api(action, body = {}, raw = false) {
   if (raw) return r;
   const j = await r.json(); if (!r.ok) throw new Error(j.hata || "Hata"); return j;
 }
+async function guvenli(fn, ok) { try { const r = await fn(); if (ok) toast(ok); return r; } catch (e) { toast(e.message || "Hata"); throw e; } }
 const ago = (iso) => { if (!iso) return "hiç çalışmadı"; const m = Math.round((Date.now() - new Date(iso)) / 60000); return m < 1 ? "az önce" : m < 60 ? `${m} dk önce` : m < 1440 ? `${Math.round(m / 60)} saat önce` : `${Math.round(m / 1440)} gün önce`; };
+const tarihTR = (iso) => new Date(iso).toLocaleString("tr-TR", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" });
 function stOf(run, st) {
   if (run && (run.durum === "in_progress" || run.durum === "queued")) return ["run", "Çalışıyor"];
-  if (run && run.sonuc === "failure") return ["err", "Hata"];
+  if (st?.durum === "hata" || (run && run.sonuc === "failure")) return ["err", "Hata"];
   if (st?.durum === "bekliyor") return ["wait", "Bekliyor"];
   if (run && run.sonuc === "success") return ["ok", "Tamam"];
   return ["wait", "Hazır"];
 }
+const pill = (d) => d === "tamam" ? `<span class="st ok">Temiz</span>` : d === "uyari" ? `<span class="st wait">Uyarı</span>` : d === "hata" ? `<span class="st err">Hata</span>` : `<span class="st">Bekliyor</span>`;
 
 function showLogin() { $("#app").classList.add("hide"); $("#login").classList.remove("hide"); }
 $("#go").onclick = async () => {
@@ -33,27 +42,29 @@ $("#go").onclick = async () => {
   catch (e) { $("#lerr").textContent = e.message; }
 };
 $("#pw").addEventListener("keydown", (e) => { if (e.key === "Enter") $("#go").click(); });
-$("#refresh").onclick = () => load();
+$("#refresh").onclick = () => (CUR ? openProject(CUR) : load());
 
 async function start() { $("#login").classList.add("hide"); $("#app").classList.remove("hide"); load(); }
-let O = null;
+let O = null, CUR = null;
 async function load() {
   try { O = await api("overview"); render(); } catch (e) { $("#main").innerHTML = `<div class="card" style="color:var(--err)">${esc(e.message)}</div>`; }
 }
 
+// ───────── ana sayfa ─────────
 function render() {
   const h = O.harcama, pct = Math.min(100, (h.aylik / h.butce) * 100);
-  const srv = Object.entries(h.servis || {}).map(([k, v]) => `<span class="tag">${esc(k)} $${v.toFixed(2)}</span>`).join("");
-  let html = `<div class="card spend"><div class="row"><span class="mut">Bu ay harcama</span><span class="mut">Bütçe $${h.butce}</span></div>
+  const srv = Object.entries(h.servis || {}).filter(([, v]) => v > 0).map(([k, v]) => `<span class="tag">${esc(k)} $${v.toFixed(2)}</span>`).join("");
+  let html = `<div class="card spend"><div class="row"><span class="mut">Bu ay harcama (Claude API)</span><span class="mut">Bütçe $${h.butce}</span></div>
     <b>$${h.aylik.toFixed(2)}</b><div class="bar"><i style="width:${pct}%"></i></div><div class="chips">${srv || '<span class="mut">Henüz harcama yok</span>'}</div></div>
     <h2>Ajanlar</h2><div class="agents">`;
   for (const a of AGENTS) {
     const run = O.runs[a.k], st = O.status[a.k]; const [c, l] = stOf(run, st);
     html += `<div class="card agent"><div class="ic">${a.ic}</div><h3>${a.ad}</h3><span class="st ${c}">${l}</span>
-      <p>${esc(st?.mesaj || a.is)}</p><div class="mut" style="font-size:11.5px;margin-bottom:10px">Son çalışma: ${ago(run?.zaman || st?.zaman)}</div>
-      <button data-run="${a.k}">${a.k === "arastirmaci" ? "Şimdi araştır" : a.k === "senarist" ? "Yeni konu" : "Çalıştır"}</button></div>`;
+      <p>${esc(st?.mesaj || a.is)}</p><div class="mut" style="font-size:11.5px;margin-bottom:10px">Son çalışma: ${ago(run?.zaman || st?.zaman)}${a.ucret ? " · <span title='Claude API kredisi harcar'>💳</span>" : ""}</div>
+      <button data-run="${a.k}">${a.btn}</button></div>`;
   }
   html += `</div>`;
+  html += renderYorumlar() + renderAnaliz();
   const r = O.report;
   html += `<h2>Haftanın raporu ${r ? `<span class="mut" style="font-family:Mont;font-size:12px">· ${esc(r.hafta)}</span>` : ""}</h2>`;
   if (!r) html += `<div class="card mut">Henüz rapor yok. Araştırmacıyı çalıştır ya da pazar akşamını bekle.</div>`;
@@ -67,75 +78,142 @@ function render() {
     html += `</div>`;
     if (r.savas_onerisi) html += `<div class="card war" style="margin-top:12px"><div class="d" style="color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.08em">⚔️ HAFTANIN SAVAŞ ÖNERİSİ</div>${evRow(r.savas_onerisi)}</div>`;
   }
+  const fk = O.yorumlar?.fikirler || [];
+  if (fk.length) html += `<div class="card" style="margin-top:12px"><div class="d" style="color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.08em">💡 İZLEYİCİ ÖNERİLERİ</div>${fk.map((f) => `<div class="mut" style="padding:5px 0">${esc(f.konu)} · <span style="opacity:.7">${esc(f.kaynak)}</span></div>`).join("")}</div>`;
   html += `<h2>Projeler</h2>`;
   html += O.projeler.length ? O.projeler.map((p) => `<div class="card proj" data-p="${esc(p)}"><div class="th" data-th="${esc(p)}"></div><div><b>${esc(p)}</b><span class="mut">Aç →</span></div></div>`).join("") : `<div class="card mut">Henüz proje yok.</div>`;
-  html += `<h2>Son harcamalar</h2><div class="card">${(h.son || []).map((x) => `<div class="mut" style="display:flex;justify-content:space-between;padding:4px 0"><span>${esc(x.ajan)} · ${esc(x.detay)}</span><span>$${x.usd.toFixed(3)}</span></div>`).join("") || '<span class="mut">Kayıt yok</span>'}</div>`;
+  html += `<h2>Son harcamalar</h2><div class="card">${(h.son || []).filter((x) => x.usd > 0).map((x) => `<div class="mut" style="display:flex;justify-content:space-between;padding:4px 0"><span>${esc(x.ajan)} · ${esc(x.detay)}</span><span>$${x.usd.toFixed(3)}</span></div>`).join("") || '<span class="mut">Kayıt yok</span>'}</div>`;
   $("#main").innerHTML = html;
   document.querySelectorAll("[data-run]").forEach((b) => (b.onclick = () => runAgent(b.dataset.run)));
   document.querySelectorAll("[data-karar]").forEach((b) => (b.onclick = () => decide(b.dataset.baslik, b.dataset.karar)));
   document.querySelectorAll("[data-p]").forEach((b) => (b.onclick = () => openProject(b.dataset.p)));
   document.querySelectorAll("[data-th]").forEach(async (d) => { const u = await fileUrl(`projects/${d.dataset.th}/images/${DEMO ? "img01.jpg" : "s01.jpg"}`); if (u) d.style.backgroundImage = `url(${u})`; });
+  baglaYorumlar();
 }
 function evRow(o) {
   const stars = "★".repeat(o.yildiz || 0) + "☆".repeat(5 - (o.yildiz || 0));
-  const karar = o.durum === "yap" ? `<span class="tag yap">Yapılıyor</span>` : o.durum === "gec" ? `<span class="tag gec">Geçildi</span>` :
+  const karar = o.durum === "yap" ? `<span class="tag yap">Yapılacak</span>` : o.durum === "gec" ? `<span class="tag gec">Geçildi</span>` :
     `<div class="acts"><button class="gold" data-karar="yap" data-baslik="${esc(o.baslik)}">Yap</button><button data-karar="gec" data-baslik="${esc(o.baslik)}">Geç</button></div>`;
   return `<div class="ev"><div class="t"><b>${o.yil ? esc(o.yil) + " · " : ""}${esc(o.baslik)}</b><span>${esc(o.ozet || "")}</span><div class="stars">${stars}</div></div>${karar}</div>`;
 }
-async function decide(baslik, karar) { await api("decide", { baslik, karar }); toast(karar === "yap" ? "Senarist çalışmaya başladı" : "Geçildi"); load(); }
+async function decide(baslik, karar) {
+  let apiIle = false;
+  if (karar === "yap") apiIle = confirm("Senaryoyu Claude API mi yazsın? (~$0,30 kredi harcar)\n\nTamam → API yazar\nİptal → sadece 'yapılacak' diye işaretle, metni sohbette birlikte yazarız (ücretsiz)");
+  await guvenli(() => api("decide", { baslik, karar, api: apiIle }), karar === "yap" ? (apiIle ? "Senarist çalışmaya başladı" : "Yapılacak olarak işaretlendi") : "Geçildi");
+  load();
+}
 async function runAgent(k) {
   let inputs = {};
-  if (k === "senarist") { const konu = prompt("Konu? (ör. Mohaç Meydan Muharebesi 1526)"); if (!konu) return; inputs = { konu }; }
-  if (k === "gorsel" || k === "kurgucu") { const slug = prompt("Hangi proje?\n" + O.projeler.join("\n")); if (!slug) return; inputs = { slug }; }
-  await api("run", { agent: k, inputs }); toast("Ajan çalıştırıldı"); setTimeout(load, 4000);
+  const a = AGENTS.find((x) => x.k === k);
+  if (k === "senarist") {
+    const konu = prompt("Konu? (ör. Mohaç Meydan Muharebesi 1526)\n\nNot: Claude API ile yazar, ~$0,30 kredi harcar."); if (!konu) return; inputs = { konu };
+  }
+  if (k === "arastirmaci" && !confirm("Araştırmacı Claude API kredisi harcar (~$0,30). Devam edilsin mi?")) return;
+  if (["gorsel", "kurgucu", "kontrol"].includes(k)) { const slug = prompt("Hangi proje?\n" + O.projeler.join("\n"), O.projeler[0] || ""); if (!slug) return; inputs = { slug }; if (k === "kontrol") inputs.asama = "hepsi"; }
+  if (k === "yayinci") inputs = { test: "1" };
+  if (k === "yorumcu") inputs = { mod: "topla" };
+  await guvenli(() => api("run", { agent: k, inputs }), `${a.ad} çalıştırıldı`); setTimeout(load, 5000);
 }
+
+function renderYorumlar() {
+  const y = O.yorumlar?.bekleyen || [];
+  if (!y.length) return "";
+  const tur = { soru: "❓ Soru", ovgu: "💛 Övgü", elestiri: "⚠️ Eleştiri", oneri: "💡 Öneri", spam: "🚫 Spam", hakaret: "⛔ Hakaret", diger: "💬" };
+  return `<h2>Bekleyen yorumlar <span class="mut" style="font-family:Mont;font-size:12px">· ${y.length}</span></h2><div class="card" id="yorumlar">` + y.map((c) => `
+    <div class="ym" data-id="${esc(c.id)}"><div class="mut" style="font-size:12px">${tur[c.tur] || "💬"} · @${esc(c.kullanici)} · ${esc(c.gonderi)}</div>
+    <div style="margin:4px 0 6px">${esc(c.metin)}</div>
+    ${["spam", "hakaret"].includes(c.tur) ? "" : `<textarea rows="2" placeholder="Cevabın…">${esc(c.taslak || "")}</textarea>`}
+    <div class="acts">${["spam", "hakaret"].includes(c.tur) ? "" : `<button class="gold" data-y="onaylandi">Gönder</button>`}<button data-y="gizle">Gizle</button><button data-y="gecildi">Geç</button></div></div>`).join("") + `</div>`;
+}
+function baglaYorumlar() {
+  document.querySelectorAll("#yorumlar [data-y]").forEach((b) => (b.onclick = async () => {
+    const box = b.closest(".ym"); const ta = box.querySelector("textarea");
+    if (b.dataset.y === "onaylandi" && !ta?.value.trim()) return toast("Önce cevabı yaz");
+    await guvenli(() => api("yorum_karar", { kararlar: [{ id: box.dataset.id, durum: b.dataset.y, taslak: ta?.value }] }), b.dataset.y === "onaylandi" ? "Cevap gönderiliyor" : b.dataset.y === "gizle" ? "Yorum gizleniyor" : "Geçildi");
+    box.remove();
+  }));
+}
+function renderAnaliz() {
+  const a = O.analiz; if (!a || !(a.instagram || a.youtube)) return "";
+  const ig = a.instagram; let h = `<h2>İstatistikler <span class="mut" style="font-family:Mont;font-size:12px">· ${ago(a.zaman)}</span></h2><div class="card">`;
+  if (ig) h += `<div class="kpi"><div><b>${ig.takipci}</b><span>Takipçi</span></div><div><b>${ig.gonderi}</b><span>Gönderi</span></div><div><b>${a.en_iyi_zaman || "—"}</b><span>En iyi saat</span></div></div>` +
+    (ig.videolar || []).slice(0, 5).map((v, i) => `<div class="mut" style="display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-top:1px solid var(--line)"><span>${i + 1}. ${esc(v.baslik)}</span><span style="white-space:nowrap">▶ ${v.izlenme} · 🔖 ${v.kaydetme}</span></div>`).join("");
+  if (a.youtube) h += `<div class="mut" style="margin-top:10px">YouTube: ${a.youtube.abone} abone · ${a.youtube.videolar.reduce((s, v) => s + v.izlenme, 0)} toplam izlenme</div>`;
+  if (a.notlar?.length) h += `<div class="mut" style="margin-top:10px">${a.notlar.map(esc).join("<br>")}</div>`;
+  return h + `</div>`;
+}
+
 const urlCache = {};
-async function fileUrl(path) {
+async function fileUrl(path, taze) {
   if (DEMO) return `../${path}`;
-  if (urlCache[path]) return urlCache[path];
+  if (urlCache[path] && !taze) return urlCache[path];
   const r = await api("file", { path }, true); if (!r.ok) return null;
   return (urlCache[path] = URL.createObjectURL(await r.blob()));
 }
 
+// ───────── proje sayfası ─────────
 async function openProject(slug) {
+  CUR = slug;
   const P = await api("project", { slug }); const sc = P.script; const d = $("#detail");
   $("#main").classList.add("hide"); d.classList.remove("hide");
+  const scenes = sc?.sahneler || (P.project?.scenes || []).map((s) => ({ image: s.image, big: s.big }));
+  const sahneSorun = {}; for (const m of P.kontrol?.gorsel?.maddeler || []) if (m.sahne && m.seviye !== "bilgi") (sahneSorun[m.sahne] ||= []).push(m);
   let h = `<button class="ghost" id="back">← Geri</button><h2 style="margin-top:14px">${esc(sc?.baslik || P.project?.title || slug)}</h2>`;
+  h += kontrolKart(P);
   if (sc) {
     const st = sc.durum === "onaylandi" ? `<span class="st ok">Onaylandı</span>` : `<span class="st wait">Onay bekliyor</span>`;
     const edit = sc.durum !== "onaylandi";
     const body = edit
       ? `<div class="mut" style="margin:8px 0">Onaylamadan önce metni burada düzenleyebilirsin. Her satır bir cümle.</div>` + sc.sahneler.map((s, i) => `<div class="ed"><span class="mut">${i + 1} · ${esc(s.big || "")}</span><textarea data-sc="${i}" rows="${Math.max(2, (s.lines || []).length)}">${esc((s.lines || []).join("\n"))}</textarea></div>`).join("")
       : `<pre>${esc(sc.seslendirme_metni)}</pre>`;
-    h += `<div class="card">${st}<h3 style="font-size:14px;margin:12px 0 6px">Seslendirme metni</h3>${body}
-      <div class="flex"><button data-copy="${esc(sc.seslendirme_metni)}">Metni kopyala</button>${edit ? `<button id="savetxt">Değişiklikleri kaydet</button><button class="gold" id="approve">Onayla → görsel + ses üret</button>` : ""}</div></div>`;
+    h += `<h2>Metin</h2><div class="card">${st}<h3 style="font-size:14px;margin:12px 0 6px">Seslendirme metni</h3>${body}
+      <div class="flex"><button data-copy="${esc(sc.seslendirme_metni)}">Metni kopyala</button>${edit ? `<button id="savetxt">Değişiklikleri kaydet</button><button class="gold" id="approve">Onayla → ses üret</button>` : ""}</div></div>`;
   }
-  const scenes = sc?.sahneler || (P.project?.scenes || []).map((s) => ({ image: s.image, big: s.big }));
-  h += `<h2>Sahneler</h2><div class="scenes">`;
-  scenes.forEach((s, i) => { const has = P.gorseller.includes(s.image.split("/").pop()); h += `<div class="sc" data-img="${has ? esc(s.image) : ""}" data-i="${i + 1}"><i>${i + 1}</i>${has ? "" : "Yükle"}</div>`; });
-  h += `</div>`;
-  if (sc) h += `<details class="card" style="margin-top:12px"><summary>Gemini promptları (kopyala)</summary>${sc.sahneler.map((s, i) => `<div class="flex" style="align-items:center"><span class="mut">${i + 1}</span><button data-copy="${esc(s.prompt_tam)}">${esc(s.big || "Sahne")} promptunu kopyala</button></div>`).join("")}</details>`;
+  const eksik = scenes.filter((s) => !P.gorseller.includes(s.image.split("/").pop())).length;
+  h += `<h2>Sahneler <span class="mut" style="font-family:Mont;font-size:12px">· ${scenes.length - eksik}/${scenes.length} görsel</span></h2>`;
+  h += `<div class="drop" id="drop"><b>Görselleri toplu yükle</b><span class="mut">Gemini'de ürettiğin görselleri buraya sürükle ya da dokunup hepsini birden seç</span><input type="file" accept="image/*" multiple id="toplu" hidden></div>`;
+  h += `<div class="scenes">`;
+  scenes.forEach((s, i) => { const has = P.gorseller.includes(s.image.split("/").pop()); const so = sahneSorun[i + 1];
+    h += `<div class="sc" data-img="${has ? esc(s.image) : ""}" data-i="${i + 1}" title="${esc((so || []).map((m) => m.mesaj).join("\n"))}"><i>${i + 1}</i>${so ? `<em class="${so.some((m) => m.seviye === "hata") ? "e" : "w"}">!</em>` : ""}${has ? "" : "Yükle"}</div>`; });
+  h += `</div><div class="mut" style="margin-top:6px">Tek bir görseli değiştirmek için karesine dokun.</div>`;
+  if (sc) h += `<details class="card" style="margin-top:12px"><summary>Gemini promptları</summary>
+    <div class="flex"><button class="gold" id="tumprompt">Tüm promptları kopyala (${sc.sahneler.length})</button></div>
+    ${sc.sahneler.map((s, i) => `<div class="flex" style="align-items:center"><span class="mut">${i + 1}</span><button data-copy="${esc(s.prompt_tam)}">${esc(s.big || "Sahne")} promptunu kopyala</button></div>`).join("")}</details>`;
   const hasVoice = P.dosyalar.includes("ses.wav");
   h += `<h2>Ses</h2><div class="card">${hasVoice ? `<audio id="aud" controls style="width:100%"></audio>` : `<span class="mut">Ses yok.</span>`}<div class="flex"><label class="btn">Ses yükle (.wav)<input type="file" accept="audio/wav" id="up-ses" hidden></label></div></div>`;
   h += `<h2>Video</h2><div class="card">${P.video ? `<video id="vid" controls playsinline></video><div class="mut" style="margin-top:8px">${(P.video.boyut / 1e6).toFixed(1)} MB · ${ago(P.video.zaman)}</div>` : `<span class="mut">Henüz video yok.</span>`}
     <div class="flex"><button class="gold" id="render">${P.video ? "Videoyu yeniden üret" : "Videoyu üret"}</button>${P.video ? `<button id="dl">İndir</button>` : ""}</div></div>`;
-  if (sc?.aciklama) { const t = sc.aciklama + "\n\n" + (sc.hashtagler || []).map((x) => (x.startsWith("#") ? x : "#" + x)).join(" ");
-    h += `<h2>Paylaşım açıklaması</h2><div class="card"><pre>${esc(t)}</pre><div class="flex"><button data-copy="${esc(t)}">Kopyala</button></div></div>`; }
+  if (sc) h += paylasimKart(P, sc);
   d.innerHTML = h;
-  $("#back").onclick = () => { d.classList.add("hide"); $("#main").classList.remove("hide"); };
+  window.scrollTo(0, 0);
+  $("#back").onclick = () => { CUR = null; d.classList.add("hide"); $("#main").classList.remove("hide"); load(); };
   d.querySelectorAll("[data-copy]").forEach((b) => (b.onclick = () => { navigator.clipboard.writeText(b.dataset.copy); toast("Kopyalandı"); }));
   d.querySelectorAll(".sc").forEach(async (el) => {
     if (el.dataset.img) { const u = await fileUrl(`projects/${slug}/${el.dataset.img}`); if (u) el.style.backgroundImage = `url(${u})`; }
-    el.onclick = () => { const inp = document.createElement("input"); inp.type = "file"; inp.accept = "image/*"; inp.onchange = () => upload(slug, `images/s${String(el.dataset.i).padStart(2, "0")}.jpg`, inp.files[0]); inp.click(); };
+    el.onclick = () => { const inp = document.createElement("input"); inp.type = "file"; inp.accept = "image/*"; inp.onchange = () => topluSecim(slug, scenes, P, [...inp.files], Number(el.dataset.i)); inp.click(); };
   });
+  const dr = $("#drop"), tf = $("#toplu");
+  dr.onclick = () => tf.click(); tf.onchange = () => topluSecim(slug, scenes, P, [...tf.files]);
+  dr.ondragover = (e) => { e.preventDefault(); dr.classList.add("on"); }; dr.ondragleave = () => dr.classList.remove("on");
+  dr.ondrop = (e) => { e.preventDefault(); dr.classList.remove("on"); topluSecim(slug, scenes, P, [...e.dataTransfer.files].filter((f) => f.type.startsWith("image/"))); };
+  if ($("#tumprompt")) $("#tumprompt").onclick = () => {
+    const t = `Aşağıdaki ${sc.sahneler.length} görseli sırayla üret. Her biri AYRI bir görsel olsun, hepsi dikey 9:16, gerçekçi sinematik film karesi. Görsellerde yazı olmasın.\n\n` +
+      sc.sahneler.map((s, i) => `${i + 1}) ${s.prompt_tam}`).join("\n\n");
+    navigator.clipboard.writeText(t); toast(`${sc.sahneler.length} prompt kopyalandı`);
+  };
   if (hasVoice) $("#aud").src = await fileUrl(`projects/${slug}/ses.wav`);
-  $("#up-ses").onchange = (e) => upload(slug, "ses.wav", e.target.files[0]);
+  $("#up-ses").onchange = (e) => upload(slug, "ses.wav", e.target.files[0]).then(() => openProject(slug));
   const readEdits = () => [...d.querySelectorAll("textarea[data-sc]")].map((t) => t.value.split("\n").map((x) => x.trim()).filter(Boolean));
   const changed = () => sc && readEdits().some((l, i) => l.join("\n") !== (sc.sahneler[i].lines || []).join("\n"));
-  const saveTxt = async () => { if (!changed()) return; await api("save_text", { slug, sahneler: readEdits() }); toast("Metin kaydedildi"); };
+  const saveTxt = async () => { if (!changed()) return; await guvenli(() => api("save_text", { slug, sahneler: readEdits() }), "Metin kaydedildi, senaryo kontrol ediliyor"); };
   if ($("#savetxt")) $("#savetxt").onclick = async () => { await saveTxt(); openProject(slug); };
-  if ($("#approve")) $("#approve").onclick = async () => { await saveTxt(); await api("approve", { slug }); toast("Onaylandı, görseller üretiliyor"); openProject(slug); };
-  $("#render").onclick = async () => { await api("run", { agent: "kurgucu", inputs: { slug } }); toast("Kurgucu çalışıyor (5-10 dk)"); };
+  if ($("#approve")) $("#approve").onclick = async () => { await saveTxt(); await guvenli(() => api("approve", { slug }), "Onaylandı, ses üretiliyor"); openProject(slug); };
+  $("#render").onclick = async () => {
+    if (eksik && !confirm(`${eksik} sahnenin görseli eksik. Yine de video üretilsin mi?`)) return;
+    await guvenli(() => api("run", { agent: "kurgucu", inputs: { slug } }), "Kurgucu çalışıyor (5-10 dk), bitince kurgu kontrolü otomatik yapılır");
+  };
+  if ($("#rekontrol")) $("#rekontrol").onclick = () => guvenli(() => api("run", { agent: "kontrol", inputs: { slug, asama: "hepsi" } }), "Kontrolcüler çalışıyor (~2 dk)");
+  d.querySelectorAll("[data-kk]").forEach(async (b) => { const u = await fileUrl(`projects/${slug}/kontrol/kareler.jpg`); if (u) { b.src = u; b.onclick = () => window.open(u); } });
   if (P.video) {
     const u = DEMO ? "../demo.mp4" : (await api("video_url", { id: P.video.id })).url; $("#vid").src = u;
     // imzalı adres birkaç dakikada eskir: indirirken her seferinde yenisini al
@@ -144,30 +222,151 @@ async function openProject(slug) {
       catch { toast("Video adresi alınamadı, sayfayı yenileyip tekrar dene"); }
     };
   }
-}
-async function upload(slug, name, file) {
-  if (!file) return; if (file.size > 4.2e6) return toast("Dosya 4 MB'tan büyük olamaz");
-  const b64 = await new Promise((res) => { const r = new FileReader(); r.onload = () => res(String(r.result).split(",")[1]); r.readAsDataURL(file); });
-  await api("upload", { slug, name, base64: b64 }); toast("Yüklendi"); openProject(slug);
+  if (sc) baglaPaylasim(slug, P, sc);
 }
 
-// ── demo verisi (?demo=1) ──
+function kontrolKart(P) {
+  const K = P.kontrol || {}; const var_ = Object.values(K).some(Boolean);
+  let h = `<h2>Kontrolcüler</h2><div class="card">`;
+  if (!var_) h += `<div class="mut">Henüz kontrol yapılmadı. Metin yazılınca, ses üretilince, görseller yüklenince ve video çıkınca otomatik çalışır.</div>`;
+  for (const k of ["senaryo", "ses", "gorsel", "kurgu"]) {
+    const r = K[k]; if (!r) { h += `<div class="krow"><b>${ASAMA_AD[k]}</b>${pill()}<span class="mut">—</span></div>`; continue; }
+    const md = (r.maddeler || []).filter((m) => m.seviye !== "bilgi"), bilgi = (r.maddeler || []).filter((m) => m.seviye === "bilgi");
+    h += `<details class="krow"${r.durum === "hata" ? " open" : ""}><summary><b>${ASAMA_AD[k]}</b>${pill(r.durum)}<span class="mut">${esc(r.ozet)} · ${ago(r.zaman)}</span></summary>
+      ${md.length ? `<ul>${md.map((m) => `<li class="${m.seviye}">${m.sahne ? `<b>Sahne ${m.sahne}:</b> ` : ""}${esc(m.mesaj)}</li>`).join("")}</ul>` : `<div class="mut" style="padding:6px 0 4px">Sorun bulunmadı ✓</div>`}
+      ${bilgi.length ? `<div class="mut" style="font-size:12px">${bilgi.map((m) => esc(m.mesaj)).join("<br>")}</div>` : ""}
+      ${k === "kurgu" ? `<img data-kk class="kk" alt="Kontrol kareleri">` : ""}</details>`;
+  }
+  return h + `<div class="flex"><button id="rekontrol">Hepsini yeniden kontrol et</button></div></div>`;
+}
+
+function varsayilanMetin(sc) {
+  if (sc.paylasim) return sc.paylasim;
+  const hs = (sc.hashtagler || []).map((x) => (x.startsWith("#") ? x : "#" + x)).join(" ");
+  return `${(sc.aciklama || "").trim()}\n\n🔔 Tarihin unutulmaz anları için takip et: ${HANDLE}\n\n${hs}`.trim();
+}
+function sonraki(saat = 19, dk = 0) { const t = new Date(); t.setSeconds(0, 0); t.setHours(saat, dk); if (t < Date.now() + 15 * 60e3) t.setDate(t.getDate() + 1); return t; }
+const yerelISO = (t) => new Date(t - t.getTimezoneOffset() * 60e3).toISOString().slice(0, 16);
+
+function paylasimKart(P, sc) {
+  const ig = P.yayin?.instagram, plan = (P.plan || []).filter((x) => ["bekliyor", "gonderildi"].includes(x.durum)), son = (P.plan || []).slice(-1)[0];
+  let h = `<h2>Paylaşım</h2><div class="card"><div class="mut" style="margin-bottom:6px">Instagram açıklaması (düzenleyebilirsin)</div>
+    <textarea id="caption" rows="9" class="full">${esc(varsayilanMetin(sc))}</textarea>
+    <div class="flex"><button id="capkaydet">Kaydet</button><button id="capkopya">Kopyala</button></div>`;
+  h += `<div class="sep"></div><b style="font-size:14px">📸 Instagram</b>`;
+  if (ig) h += `<div style="margin-top:8px"><span class="st ok">Yayında</span> <a href="${esc(ig.permalink)}" target="_blank" rel="noopener">Gönderiyi aç ↗</a> <span class="mut">· ${ig.zaman ? tarihTR(ig.zaman) : ""}</span></div>`;
+  else {
+    if (plan.length) h += plan.map((x) => `<div style="margin-top:8px"><span class="st ${x.durum === "bekliyor" ? "wait" : "run"}">${x.durum === "bekliyor" ? "Planlandı" : "Yükleniyor"}</span> <span class="mut">${tarihTR(x.zaman)}</span> ${x.durum === "bekliyor" ? `<button class="ghost" data-iptal="${esc(x.id)}">İptal</button>` : ""}</div>`).join("");
+    else if (son?.durum === "hata") h += `<div style="margin-top:8px"><span class="st err">Paylaşılamadı</span> <span class="mut">${esc(son.mesaj || "")}</span></div>`;
+    h += `<div class="flex" style="align-items:center"><input type="datetime-local" id="pzaman" value="${yerelISO(sonraki(19))}"><button class="gold" id="planla"${!P.video ? " disabled" : ""}>Planla</button><button id="simdi"${!P.video ? " disabled" : ""}>Şimdi paylaş</button></div>
+      <div class="mut" style="margin-top:6px;font-size:12px">${P.video ? "Paylaşmadan önce kurgu kontrolüne bakılır; hata varsa paylaşmaz." : "Önce videoyu üret."} Instagram bağlı değilse kurulum: docs/YAYIN_KURULUM.md</div>`;
+  }
+  const baslik = `${(sc.baslik || "").slice(0, 88)} #Shorts`;
+  const etiket = (sc.hashtagler || []).map((x) => x.replace(/^#/, "")).join(", ");
+  h += `<div class="sep"></div><b style="font-size:14px">▶️ YouTube Shorts paketi</b>
+    <div class="mut" style="margin:6px 0 8px;font-size:12px">YouTube, onaysız uygulamaların otomatik yüklediği videoları kalıcı olarak gizli bırakıyor; bu yüzden videoyu Studio'dan sen yüklersin, metinler hazır:</div>
+    <div class="flex"><button data-copy="${esc(baslik)}">Başlığı kopyala</button><button data-copy="${esc(varsayilanMetin(sc))}">Açıklamayı kopyala</button><button data-copy="${esc(etiket)}">Etiketleri kopyala</button></div></div>`;
+  return h;
+}
+function baglaPaylasim(slug, P, sc) {
+  const cap = () => $("#caption").value;
+  $("#capkaydet").onclick = () => guvenli(() => api("save_caption", { slug, metin: cap() }), "Açıklama kaydedildi");
+  $("#capkopya").onclick = () => { navigator.clipboard.writeText(cap()); toast("Kopyalandı"); };
+  const kaydetGerekirse = async () => { if (cap() !== varsayilanMetin(sc)) await api("save_caption", { slug, metin: cap() }); };
+  if ($("#planla")) $("#planla").onclick = async () => {
+    const t = new Date($("#pzaman").value); if (isNaN(t)) return toast("Tarih seç");
+    await kaydetGerekirse(); await guvenli(() => api("planla", { slug, zaman: t.toISOString() }), `${tarihTR(t)} için planlandı`); openProject(slug);
+  };
+  if ($("#simdi")) $("#simdi").onclick = async () => {
+    if (!confirm("Video şimdi Instagram'da paylaşılsın mı?")) return;
+    await kaydetGerekirse(); await guvenli(() => api("run", { agent: "yayinci", inputs: { slug } }), "Yayıncı çalışıyor (~3 dk)"); setTimeout(() => openProject(slug), 4000);
+  };
+  document.querySelectorAll("[data-iptal]").forEach((b) => (b.onclick = async () => { await guvenli(() => api("plan_iptal", { id: b.dataset.iptal }), "Plan iptal edildi"); openProject(slug); }));
+}
+
+// ───────── toplu görsel yükleme ─────────
+async function kucult(file) { // 1080×1920'yi aşmayacak şekilde JPEG'e çevirir (yükleme sınırı ve hız için)
+  const img = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = URL.createObjectURL(file); });
+  const k = Math.min(1, 1920 / img.naturalHeight, 1920 / img.naturalWidth);
+  const c = document.createElement("canvas"); c.width = Math.round(img.naturalWidth * k); c.height = Math.round(img.naturalHeight * k);
+  c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+  let q = 0.9, b; do { b = await new Promise((r) => c.toBlob(r, "image/jpeg", q)); q -= 0.1; } while (b.size > 3.6e6 && q > 0.4);
+  return { blob: b, url: URL.createObjectURL(b), ad: file.name };
+}
+async function topluSecim(slug, scenes, P, files, baslangic) {
+  if (!files.length) return;
+  files.sort((a, b) => a.lastModified - b.lastModified || a.name.localeCompare(b.name, "tr", { numeric: true }));
+  const bos = scenes.map((s, i) => i + 1).filter((i) => !P.gorseller.includes(scenes[i - 1].image.split("/").pop()));
+  // tek karede dokunulduysa oradan başla; yoksa önce boş sahneleri doldur, hepsi doluysa 1'den başla
+  let hedef = baslangic ? scenes.map((s, i) => i + 1).filter((i) => i >= baslangic) : (files.length <= bos.length ? bos : scenes.map((s, i) => i + 1));
+  hedef = hedef.slice(0, files.length);
+  const ogeler = await Promise.all(files.slice(0, hedef.length).map(kucult));
+  const m = document.createElement("div"); m.className = "modal";
+  const ciz = () => {
+    m.innerHTML = `<div class="card mbox"><b>${ogeler.length} görsel yüklenecek</b><div class="mut" style="margin:4px 0 10px">Sıra indirme sırasına göre. Yer değiştirmek için iki görsele sırayla dokun.</div>
+      <div class="scenes">${ogeler.map((o, k) => `<div class="sc sel" data-k="${k}" style="background-image:url(${o.url})"><i>${hedef[k]}</i><span class="cap">${esc(scenes[hedef[k] - 1].big || "")}</span></div>`).join("")}</div>
+      <div class="prog hide"><i></i></div><div class="flex"><button class="gold" id="yuklebas">Yükle</button><button id="vazgec">Vazgeç</button></div></div>`;
+    let secili = null;
+    m.querySelectorAll("[data-k]").forEach((el) => (el.onclick = () => {
+      const k = Number(el.dataset.k);
+      if (secili === null) { secili = k; el.classList.add("on"); return; }
+      [ogeler[secili], ogeler[k]] = [ogeler[k], ogeler[secili]]; secili = null; ciz();
+    }));
+    m.querySelector("#vazgec").onclick = () => m.remove();
+    m.querySelector("#yuklebas").onclick = async () => {
+      const bar = m.querySelector(".prog"); bar.classList.remove("hide"); m.querySelector("#yuklebas").disabled = true; m.querySelector("#vazgec").disabled = true;
+      let hata = 0;
+      for (let k = 0; k < ogeler.length; k++) {
+        try { await upload(slug, `images/s${String(hedef[k]).padStart(2, "0")}.jpg`, ogeler[k].blob, true); delete urlCache[`projects/${slug}/images/s${String(hedef[k]).padStart(2, "0")}.jpg`]; }
+        catch { hata++; }
+        bar.firstElementChild.style.width = `${((k + 1) / ogeler.length) * 100}%`;
+      }
+      m.remove();
+      if (hata) toast(`${hata} görsel yüklenemedi, tekrar dene`);
+      else { toast("Görseller yüklendi, görsel kontrolcüsü çalışıyor"); await api("run", { agent: "kontrol", inputs: { slug, asama: "gorsel" } }).catch(() => {}); }
+      openProject(slug);
+    };
+  };
+  document.body.append(m); ciz();
+}
+async function upload(slug, name, file, sessiz) {
+  if (!file) return; if (file.size > 4.2e6) { toast("Dosya 4 MB'tan büyük olamaz"); throw new Error("büyük"); }
+  const b64 = await new Promise((res) => { const r = new FileReader(); r.onload = () => res(String(r.result).split(",")[1]); r.readAsDataURL(file); });
+  await api("upload", { slug, name, base64: b64 }); if (!sessiz) toast("Yüklendi");
+}
+
+// ───────── demo verisi (?demo=1) ─────────
 function demo(action) {
-  const now = new Date().toISOString();
+  const now = new Date().toISOString(), saat = (h) => new Date(Date.now() - h * 3600e3).toISOString();
   if (action === "login") return { token: "demo" };
   if (action === "overview") return {
     status: { arastirmaci: { durum: "tamam", mesaj: "2026-W47 raporu hazır", zaman: now }, senarist: { durum: "tamam", mesaj: "'Malazgirt 1071' metni onay bekliyor", zaman: now },
-      gorsel: { durum: "bekliyor", mesaj: "Gemini anahtarı yok: görselleri elle yükle", zaman: now }, kurgucu: { durum: "calisiyor", mesaj: "osmanli-1299-1923 videosu üretiliyor", zaman: now } },
-    runs: { arastirmaci: { durum: "completed", sonuc: "success", zaman: now }, senarist: { durum: "completed", sonuc: "success", zaman: now }, gorsel: null, kurgucu: { durum: "in_progress", zaman: now } },
+      gorsel: { durum: "tamam", mesaj: "malazgirt-1071: ses hazır", zaman: now }, kurgucu: { durum: "calisiyor", mesaj: "osmanli-1299-1923 videosu üretiliyor", zaman: now },
+      kontrol: { durum: "tamam", mesaj: "malazgirt-1071: senaryo ✓, ses ✓, gorsel !", zaman: saat(1) }, yayinci: { durum: "tamam", mesaj: "Instagram bağlı: @animasyon.tarih · 1.284 takipçi", zaman: saat(5) },
+      analist: { durum: "tamam", mesaj: "Takipçi: 1284 (+212) · En çok izlenen: 10 Kasım", zaman: saat(30) }, yorumcu: { durum: "tamam", mesaj: "6 yeni yorum · 2 cevap bekliyor", zaman: saat(2) } },
+    runs: { arastirmaci: { durum: "completed", sonuc: "success", zaman: now }, senarist: { durum: "completed", sonuc: "success", zaman: now }, gorsel: { durum: "completed", sonuc: "success", zaman: now }, kurgucu: { durum: "in_progress", zaman: now },
+      kontrol: { durum: "completed", sonuc: "success", zaman: saat(1) }, yayinci: { durum: "completed", sonuc: "success", zaman: saat(5) }, analist: { durum: "completed", sonuc: "success", zaman: saat(30) }, yorumcu: { durum: "completed", sonuc: "success", zaman: saat(2) } },
     projeler: ["osmanli-1299-1923", "malazgirt-1071"],
-    harcama: { aylik: 1.84, butce: 15, servis: { claude: 0.62, "gemini-gorsel": 1.09, "gemini-ses": 0.13 }, son: [{ ajan: "senarist", detay: "Malazgirt metni", usd: 0.21 }, { ajan: "arastirmaci", detay: "haftalık rapor", usd: 0.38 }] },
+    harcama: { aylik: 0.92, butce: 5, servis: { claude: 0.92 }, son: [{ ajan: "arastirmaci", detay: "haftalık rapor", usd: 0.31 }] },
+    analiz: { zaman: saat(30), en_iyi_zaman: "Pazar 19.00", instagram: { takipci: 1284, gonderi: 6, videolar: [{ baslik: "Saat 09.05… Zaman bir an durdu. 🇹🇷", izlenme: 48210, kaydetme: 2140 }, { baslik: "1299'da Söğüt'te küçük bir beylik…", izlenme: 12904, kaydetme: 611 }, { baslik: "Malazgirt 1071", izlenme: 6120, kaydetme: 288 }] }, notlar: ["Takipçi: 1284 (+212 geçen kontrole göre)", "En iyi paylaşım zamanı şimdilik: Pazar 19.00"] },
+    yorumlar: { bekleyen: [{ id: "1", tur: "soru", kullanici: "tarihsever_34", gonderi: "Saat 09.05…", metin: "Naaşı neden 15 yıl Etnografya Müzesi'nde kaldı?", taslak: "Anıtkabir'in yapımı 1953'te tamamlandığı için geçici olarak orada kaldı 🙏 Bunu ayrı bir videoda anlatabiliriz!" },
+      { id: "2", tur: "oneri", kullanici: "mert.yilmaz", gonderi: "1299'da Söğüt'te…", metin: "Çanakkale'yi de yapın lütfen", taslak: "Harika fikir, listemize ekledik! 18 Mart'a özel hazırlıyoruz 🇹🇷" },
+      { id: "3", tur: "spam", kullanici: "kazan_hemen99", gonderi: "Malazgirt 1071", metin: "Takipçi kazanmak için profilime gel!!!", taslak: "" }],
+      fikirler: [{ konu: "Çanakkale Deniz Zaferi", kaynak: "@mert.yilmaz" }, { konu: "Anıtkabir'in yapım hikâyesi", kaynak: "@tarihsever_34" }] },
     report: { hafta: "2026-W47", gunler: [
       { tarih: "2026-11-17", gun: "Salı", olaylar: [{ yil: 1922, baslik: "Son padişah Vahdettin İstanbul'dan ayrıldı", ozet: "Vahdettin 17 Kasım'da bir İngiliz gemisiyle şehri terk etti.", yildiz: 4 }] },
-      { tarih: "2026-11-18", gun: "Çarşamba", olaylar: [{ yil: 1928, baslik: "Mickey Mouse'un ilk sesli filmi", ozet: "Steamboat Willie gösterime girdi.", yildiz: 2, durum: "gec" }] },
-      { tarih: "2026-11-19", gun: "Perşembe", olaylar: [{ yil: 1863, baslik: "Gettysburg Söylevi", ozet: "Lincoln'ün 2 dakikalık tarihi konuşması.", yildiz: 3 }] },
       { tarih: "2026-11-20", gun: "Cuma", olaylar: [{ yil: 1945, baslik: "Nürnberg Davaları başladı", ozet: "Nazi liderleri yargılanmaya başlandı.", yildiz: 4, durum: "yap" }] }],
       savas_onerisi: { yil: 1071, baslik: "Malazgirt Meydan Muharebesi", ozet: "Alparslan'ın zaferiyle Anadolu'nun kapıları Türklere açıldı. Harita animasyonuna çok uygun.", yildiz: 5, durum: "yap" } } };
-  if (action === "project") return { script: { baslik: "Malazgirt 1071", durum: "onay-bekliyor", seslendirme_metni: "Bin yetmiş bir. Ağustosun son günleri...\nAlparslan'ın ordusu Malazgirt ovasında Bizans'ın karşısındaydı...", sahneler: [{ image: "images/img01.jpg", big: "1071", prompt_tam: "..." }, { image: "images/img02.jpg", big: "ALPARSLAN", prompt_tam: "..." }, { image: "images/s03.jpg", big: "MALAZGİRT", prompt_tam: "..." }, { image: "images/s04.jpg", big: "ZAFER", prompt_tam: "..." }], aciklama: "Anadolu'nun kapısını açan savaş...", hashtagler: ["tarih", "malazgirt"] }, gorseller: ["img01.jpg", "img02.jpg"], dosyalar: ["ses.wav"], video: null };
+  if (action === "project") return {
+    script: { baslik: "Malazgirt 1071", durum: "onaylandi", seslendirme_metni: "1071. Ağustosun son günleri...\nAlparslan'ın ordusu Malazgirt ovasında Bizans'ın karşısındaydı...",
+      sahneler: [{ image: "images/img01.jpg", big: "1071", prompt_tam: "..." }, { image: "images/img02.jpg", big: "ALPARSLAN", prompt_tam: "..." }, { image: "images/img03.jpg", big: "MALAZGİRT", prompt_tam: "..." }, { image: "images/s04.jpg", big: "ZAFER", prompt_tam: "..." }],
+      aciklama: "Anadolu'nun kapısını açan savaş: 26 Ağustos 1071.", hashtagler: ["tarih", "malazgirt", "alparslan"] },
+    gorseller: ["img01.jpg", "img02.jpg", "img03.jpg"], dosyalar: ["ses.wav"], video: { id: 1, boyut: 6.6e7, zaman: saat(1) },
+    kontrol: { senaryo: { durum: "tamam", ozet: "12 sahne, tahmini 71 sn · 0 not", maddeler: [], zaman: saat(3) },
+      ses: { durum: "tamam", ozet: "72 sn, metinle %97 uyumlu", maddeler: [], zaman: saat(2) },
+      gorsel: { durum: "uyari", ozet: "3/4 görsel, ortalama puan 8.6/10", maddeler: [{ seviye: "uyari", sahne: 2, mesaj: "Arka plandaki askerin elinde döneme uymayan tüfek benzeri bir silah var" }, { seviye: "hata", mesaj: "eksik görsel: sahne 4" }], zaman: saat(1) },
+      kurgu: { durum: "tamam", ozet: "75 sn, -14 LUFS, senkron 24/24", maddeler: [{ seviye: "bilgi", mesaj: "sığmadığı için küçültüldü: “SAMSUN'DAN ANKARA'YA”" }], zaman: saat(1) } },
+    yayin: {}, plan: [{ id: "x", slug: "malazgirt-1071", zaman: sonraki(19).toISOString(), durum: "bekliyor" }] };
   return { ok: true };
 }
 

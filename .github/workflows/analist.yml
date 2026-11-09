@@ -1,0 +1,29 @@
+name: "7 · Analist (haftalık istatistik)"
+on:
+  schedule:
+    - cron: "15 5 * * 1"   # Her pazartesi 08:15 (İstanbul)
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: repo-yazma, cancel-in-progress: false }
+jobs:
+  analiz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: İstatistikleri topla
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+          YT_CHANNEL_ID: ${{ vars.YT_CHANNEL_ID }}
+        run: python scripts/analist.py
+      - name: Kaydet
+        if: always()
+        run: |
+          git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
+          git add data; git commit -m "Analist: haftalık istatistik" || exit 0
+          git pull --rebase && git push

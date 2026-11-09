@@ -55,7 +55,7 @@ def voice(text, out):
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", trimmed, "-af", f"atempo={tempo}", out], check=True)
         os.remove(raw); os.remove(trimmed)
         u = r.get("usageMetadata", {}); usd = u.get("promptTokenCount", 0) / 1e6 * 0.5 + u.get("candidatesTokenCount", 0) / 1e6 * 10
-        log_usage("ses", "gemini-ses", usd, f"{VOICE} sesi"); return True
+        log_usage("ses", "gemini-ses", usd if os.environ.get("GEMINI_UCRETLI") == "1" else 0.0, f"{VOICE} sesi" + ("" if os.environ.get("GEMINI_UCRETLI") == "1" else " (ücretsiz kota)")); return True
     return False
 
 def main():

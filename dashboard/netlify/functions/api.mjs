@@ -9,7 +9,13 @@ const WORKFLOWS = {
   senarist: "write-script.yml",
   gorsel: "generate-assets.yml",
   kurgucu: "render.yml",
+  kontrol: "kontrol.yml",
+  yayinci: "yayinci.yml",
+  analist: "analist.yml",
+  yorumcu: "yorumcu.yml",
 };
+const ASAMALAR = ["senaryo", "ses", "gorsel", "kurgu", "hepsi"];
+const b64 = (o) => Buffer.from(JSON.stringify(o, null, 1)).toString("base64");
 const json = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
 const token = () => crypto.createHmac("sha256", (process.env.PANEL_SIFRE || "").trim()).update("animasyonlu-tarih-panel").digest("hex");
 const same = (a, b) => { const x = Buffer.from(String(a)), y = Buffer.from(String(b)); return x.length === y.length && crypto.timingSafeEqual(x, y); };
@@ -53,9 +59,10 @@ export default async (req) => {
   try {
     switch (b.action) {
       case "overview": {
-        const [status, usage, report, list] = await Promise.all([
+        const [status, usage, report, list, analiz, yorumlar] = await Promise.all([
           readJson("data/status.json"), readJson("data/usage.json"), readJson("reports/latest.json"),
           gh(`/repos/${REPO}/contents/projects`).then((r) => (r.ok ? r.json() : [])),
+          readJson("data/analiz.json"), readJson("data/yorumlar.json"),
         ]);
         const runs = {};
         await Promise.all(Object.entries(WORKFLOWS).map(async ([k, f]) => {
@@ -68,20 +75,25 @@ export default async (req) => {
         const aylik = kayit.filter((x) => x.zaman.startsWith(ay)).reduce((s, x) => s + x.usd, 0);
         const servis = {};
         kayit.filter((x) => x.zaman.startsWith(ay)).forEach((x) => (servis[x.servis] = (servis[x.servis] || 0) + x.usd));
-        return json({ status: status || {}, runs, report, projeler: (list || []).filter((x) => x.type === "dir").map((x) => x.name),
+        return json({ status: status || {}, runs, report, projeler: (list || []).filter((x) => x.type === "dir").map((x) => x.name), analiz,
+          yorumlar: { bekleyen: (yorumlar?.yorumlar || []).filter((y) => y.durum === "yeni").slice(0, 40), fikirler: (yorumlar?.fikirler || []).slice(-8).reverse() },
           harcama: { aylik, servis, butce: Number(process.env.AYLIK_BUTCE_USD || 15), son: kayit.slice(-8).reverse() } });
       }
       case "project": {
         if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);
-        const [script, project, imgs, files, rel] = await Promise.all([
+        const [script, project, imgs, files, rel, yayinlar, kuyruk, ...kontrol] = await Promise.all([
           readJson(`projects/${b.slug}/script.json`), readJson(`projects/${b.slug}/project.json`),
           gh(`/repos/${REPO}/contents/projects/${b.slug}/images`).then((r) => (r.ok ? r.json() : [])),
           gh(`/repos/${REPO}/contents/projects/${b.slug}`).then((r) => (r.ok ? r.json() : [])),
           gh(`/repos/${REPO}/releases/tags/video-${b.slug}`).then((r) => (r.ok ? r.json() : null)),
+          readJson("data/yayinlar.json"), readJson("data/yayin_kuyrugu.json"),
+          ...["senaryo", "ses", "gorsel", "kurgu"].map((k) => readJson(`projects/${b.slug}/kontrol/${k}.json`)),
         ]);
         const asset = rel?.assets?.find((a) => a.name.endsWith(".mp4"));
         return json({ script, project, gorseller: (imgs || []).map((x) => x.name), dosyalar: (files || []).map((x) => x.name),
-          video: asset ? { id: asset.id, boyut: asset.size, zaman: asset.updated_at } : null });
+          video: asset ? { id: asset.id, boyut: asset.size, zaman: asset.updated_at } : null,
+          kontrol: Object.fromEntries(["senaryo", "ses", "gorsel", "kurgu"].map((k, i) => [k, kontrol[i]])),
+          yayin: yayinlar?.[b.slug] || {}, plan: (kuyruk?.isler || []).filter((x) => x.slug === b.slug).slice(-5) });
       }
       case "file": { // görsel / ses önizleme (en fazla ~4 MB)
         if (!/^projects\/[a-z0-9-]+\/[\w./-]+\.(jpg|jpeg|png|wav|mp3)$/.test(b.path || "") || b.path.includes("..")) return json({ hata: "Geçersiz dosya" }, 400);
@@ -101,6 +113,8 @@ export default async (req) => {
         const inputs = {};
         for (const [k, v] of Object.entries(b.inputs || {})) inputs[k] = String(v).slice(0, 300);
         if (inputs.slug && !validSlug(inputs.slug)) return json({ hata: "Geçersiz proje" }, 400);
+        if (b.agent === "kontrol" && (!inputs.slug || !ASAMALAR.includes(inputs.asama || "hepsi"))) return json({ hata: "Geçersiz kontrol isteği" }, 400);
+        if (b.agent === "yorumcu" && inputs.mod && !["topla", "gonder"].includes(inputs.mod)) return json({ hata: "Geçersiz mod" }, 400);
         await dispatch(b.agent, inputs);
         return json({ ok: true });
       }
@@ -117,6 +131,7 @@ export default async (req) => {
         if (pj?.scenes) clean.forEach((l, i) => { if (pj.scenes[i]) { pj.scenes[i].lines = l; pj.scenes[i].start = null; pj.scenes[i].end = null; } });
         await writeFile(`projects/${b.slug}/script.json`, Buffer.from(JSON.stringify(sc, null, 1)).toString("base64"), `Metin düzenlendi: ${b.slug}`);
         if (pj) await writeFile(`projects/${b.slug}/project.json`, Buffer.from(JSON.stringify(pj, null, 1)).toString("base64"), `Sahne metinleri: ${b.slug}`);
+        await dispatch("kontrol", { slug: b.slug, asama: "senaryo" }).catch(() => {});
         return json({ ok: true });
       }
       case "approve": { // metni onayla → görsel/ses üretimini başlat
@@ -138,8 +153,50 @@ export default async (req) => {
         for (const g of rep.gunler || []) for (const o of g.olaylar || []) if (o.baslik === b.baslik) { o.durum = b.karar; hedef = { ...o, tarih: g.tarih }; }
         if (rep.savas_onerisi?.baslik === b.baslik) { rep.savas_onerisi.durum = b.karar; hedef = rep.savas_onerisi; }
         await writeFile("reports/latest.json", Buffer.from(JSON.stringify(rep, null, 1)).toString("base64"), `Karar: ${b.karar} · ${b.baslik}`);
-        if (b.karar === "yap" && hedef) await dispatch("senarist", { konu: `${hedef.baslik} (${hedef.yil || ""})`, tarih: hedef.tarih || "", notlar: hedef.ozet || "" });
+        if (b.karar === "yap" && hedef && b.api) await dispatch("senarist", { konu: `${hedef.baslik} (${hedef.yil || ""})`, tarih: hedef.tarih || "", notlar: hedef.ozet || "" });
         return json({ ok: true });
+      }
+      case "save_caption": { // paylaşım açıklamasını düzenle
+        if (!validSlug(b.slug) || typeof b.metin !== "string") return json({ hata: "Geçersiz istek" }, 400);
+        const sc = await readJson(`projects/${b.slug}/script.json`);
+        if (!sc) return json({ hata: "Metin yok" }, 404);
+        sc.paylasim = b.metin.slice(0, 2200);
+        await writeFile(`projects/${b.slug}/script.json`, b64(sc), `Paylaşım metni: ${b.slug}`);
+        return json({ ok: true });
+      }
+      case "planla": { // Instagram paylaşımını ileri bir saate planla (zamanlayıcı fonksiyon 10 dk'da bir bakar)
+        if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);
+        const t = new Date(b.zaman); const now = Date.now();
+        if (isNaN(t) || t < now - 60e3 || t > now + 60 * 864e5) return json({ hata: "Geçersiz zaman (en fazla 60 gün sonrası)" }, 400);
+        const q = (await readJson("data/yayin_kuyrugu.json")) || { isler: [] };
+        if (q.isler.some((x) => x.slug === b.slug && x.durum === "bekliyor")) return json({ hata: "Bu video için zaten bekleyen bir plan var" }, 400);
+        const id = `${Date.now().toString(36)}-${crypto.randomBytes(3).toString("hex")}`;
+        q.isler.push({ id, slug: b.slug, platform: "instagram", zaman: t.toISOString(), durum: "bekliyor" });
+        q.isler = q.isler.slice(-100);
+        await writeFile("data/yayin_kuyrugu.json", b64(q), `Plan: ${b.slug} → ${t.toISOString()}`);
+        return json({ ok: true, id });
+      }
+      case "plan_iptal": {
+        const q = (await readJson("data/yayin_kuyrugu.json")) || { isler: [] };
+        const it = q.isler.find((x) => x.id === b.id && x.durum === "bekliyor");
+        if (!it) return json({ hata: "Plan bulunamadı" }, 404);
+        it.durum = "iptal";
+        await writeFile("data/yayin_kuyrugu.json", b64(q), `Plan iptal: ${it.slug}`);
+        return json({ ok: true });
+      }
+      case "yorum_karar": { // [{id, durum: onaylandi|gizle|gecildi, taslak}]
+        if (!Array.isArray(b.kararlar) || !b.kararlar.length) return json({ hata: "Karar yok" }, 400);
+        const db = (await readJson("data/yorumlar.json")) || { yorumlar: [] };
+        let gonderilecek = 0;
+        for (const k of b.kararlar.slice(0, 60)) {
+          const y = db.yorumlar.find((x) => x.id === String(k.id));
+          if (!y || !["onaylandi", "gizle", "gecildi"].includes(k.durum)) continue;
+          y.durum = k.durum; if (typeof k.taslak === "string") y.taslak = k.taslak.slice(0, 1000);
+          if (k.durum !== "gecildi") gonderilecek++;
+        }
+        await writeFile("data/yorumlar.json", b64(db), "Yorum kararları");
+        if (gonderilecek) await dispatch("yorumcu", { mod: "gonder" });
+        return json({ ok: true, gonderilecek });
       }
       default:
         return json({ hata: "Bilinmeyen işlem" }, 400);

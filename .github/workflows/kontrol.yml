@@ -1,0 +1,43 @@
+name: "5 · Kontrolcü"
+on:
+  workflow_dispatch:
+    inputs:
+      slug: { description: "Proje klasörü", required: true }
+      asama: { description: "senaryo / ses / gorsel / kurgu / hepsi", required: false, default: "hepsi" }
+permissions:
+  contents: write
+concurrency:
+  group: kontrol-${{ inputs.slug }}
+  cancel-in-progress: true
+jobs:
+  kontrol:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SLUG: ${{ inputs.slug }}
+      ASAMA: ${{ inputs.asama }}
+    steps:
+      - name: Girdileri kontrol et
+        run: |
+          echo "$SLUG" | grep -Eq '^[a-z0-9-]{1,60}$' || (echo 'Geçersiz proje adı'; exit 1)
+          echo "$ASAMA" | grep -Eq '^(senaryo|ses|gorsel|kurgu|hepsi)$' || (echo 'Geçersiz aşama'; exit 1)
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q -r requirements.txt
+      - name: Videoyu indir (kurgu kontrolü için)
+        if: inputs.asama == 'kurgu' || inputs.asama == 'hepsi'
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          mkdir -p "projects/$SLUG/out"
+          gh release download "video-$SLUG" -p video.mp4 -D "projects/$SLUG/out" --clobber || echo "Henüz video yok"
+      - name: Kontrol et
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/kontrol.py "$ASAMA" --slug "$SLUG"
+      - name: Kaydet
+        if: always()
+        run: |
+          git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
+          git add "projects/$SLUG/kontrol" data; git commit -m "Kontrol: $SLUG ($ASAMA)" || exit 0
+          git pull --rebase && git push

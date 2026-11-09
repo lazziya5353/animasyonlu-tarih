@@ -1,0 +1,46 @@
+name: "6 · Yayıncı (Instagram)"
+on:
+  workflow_dispatch:
+    inputs:
+      slug: { description: "Proje klasörü (boş + test=1 ise sadece bağlantı testi)", required: false, default: "" }
+      kuyruk: { description: "Zamanlanmış iş kimliği (panel doldurur)", required: false, default: "" }
+      test: { description: "Sadece bağlantıyı test et (1 = evet)", required: false, default: "" }
+      zorla: { description: "Kurgu kontrolünde hata olsa da paylaş (1 = evet)", required: false, default: "" }
+permissions:
+  contents: write
+concurrency: { group: yayinci, cancel-in-progress: false }
+jobs:
+  yayinla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SLUG: ${{ inputs.slug }}
+      KUYRUK: ${{ inputs.kuyruk }}
+      TEST: ${{ inputs.test }}
+      ZORLA: ${{ inputs.zorla }}
+    steps:
+      - name: Girdileri kontrol et
+        run: |
+          [ -z "$SLUG" ] || echo "$SLUG" | grep -Eq '^[a-z0-9-]{1,60}$' || (echo 'Geçersiz proje adı'; exit 1)
+          [ -z "$KUYRUK" ] || echo "$KUYRUK" | grep -Eq '^[a-z0-9-]{1,40}$' || (echo 'Geçersiz kuyruk kimliği'; exit 1)
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Paylaş
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ARGS=""
+          [ "$TEST" = "1" ] && ARGS="--test"
+          [ -n "$SLUG" ] && ARGS="$ARGS --slug $SLUG"
+          [ -n "$KUYRUK" ] && ARGS="$ARGS --kuyruk $KUYRUK"
+          [ "$ZORLA" = "1" ] && ARGS="$ARGS --zorla"
+          python scripts/yayinci.py $ARGS
+      - name: Kaydet
+        if: always()
+        run: |
+          git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
+          git add data; git commit -m "Yayıncı: ${SLUG:-test}" || exit 0
+          git pull --rebase && git push

@@ -237,7 +237,9 @@ class Project:
             p.stdin.write(self.frame(n / FPS).tobytes())
             if n % 300 == 0: print(f"{n}/{N}", flush=True)
         p.stdin.close(); p.wait()
-        if p.returncode == 0: os.replace(out + ".tmp.mp4", out)
+        if p.returncode != 0: raise SystemExit(f"ffmpeg başarısız oldu (kod {p.returncode}); video üretilemedi")
+        os.replace(out + ".tmp.mp4", out)
+        json.dump(UYARILAR, open(os.path.join(os.path.dirname(out), "uyarilar.json"), "w"), ensure_ascii=False)
         return out
 
 if __name__ == "__main__":

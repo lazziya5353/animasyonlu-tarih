@@ -22,5 +22,11 @@
   "mesaj": "10-kasim-1938-ataturk-u-saygi-ve-ozlemle-aniyoruz videosu hazır",
   "cikti": "release:video-10-kasim-1938-ataturk-u-saygi-ve-ozlemle-aniyoruz",
   "zaman": "2026-11-09T10:09:17Z"
+ },
+ "kontrol": {
+  "durum": "tamam",
+  "mesaj": "10-kasim-1938-ataturk-u-saygi-ve-ozlemle-aniyoruz: gorsel ✓",
+  "cikti": "projects/10-kasim-1938-ataturk-u-saygi-ve-ozlemle-aniyoruz/kontrol",
+  "zaman": "2026-11-09T23:37:43Z"
  }
 }

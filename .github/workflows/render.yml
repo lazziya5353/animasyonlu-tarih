@@ -16,25 +16,33 @@ jobs:
       SLUG: ${{ inputs.slug }}
     steps:
       - name: Proje adını kontrol et
-        run: echo "$SLUG" | grep -Eq '^[a-z0-9-]+$' || (echo 'Geçersiz proje adı'; exit 1)
+        run: echo "$SLUG" | grep -Eq '^[a-z0-9-]{1,60}$' || (echo 'Geçersiz proje adı'; exit 1)
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q -r requirements.txt
       - name: Videoyu üret
         run: |
-          python scripts/set_status.py kurgucu calisiyor "${{ inputs.slug }} videosu üretiliyor"
-          python engine/render.py projects/${{ inputs.slug }}
-          python engine/render.py projects/${{ inputs.slug }} --preview 2 15 30 45 --out projects/${{ inputs.slug }}/onizleme.jpg
+          python scripts/set_status.py kurgucu calisiyor "$SLUG videosu üretiliyor"
+          python engine/render.py "projects/$SLUG"
+          python engine/render.py "projects/$SLUG" --preview 2 15 30 45 --out "projects/$SLUG/onizleme.jpg"
+      - name: Kurgu kontrolcüsü (kare, ses seviyesi, senkron)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/kontrol.py kurgu --slug "$SLUG"
       - name: Videoyu yayınla (GitHub Release)
         env: { GH_TOKEN: "${{ github.token }}" }
         run: |
-          TAG="video-${{ inputs.slug }}"
-          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --title "${{ inputs.slug }}" --notes "Animasyonlu Tarih videosu"
-          gh release upload "$TAG" "projects/${{ inputs.slug }}/out/video.mp4" --clobber
-          python scripts/set_status.py kurgucu tamam "${{ inputs.slug }} videosu hazır" "release:$TAG"
+          TAG="video-$SLUG"
+          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --title "$SLUG" --notes "Animasyonlu Tarih videosu"
+          gh release upload "$TAG" "projects/$SLUG/out/video.mp4" --clobber
+          python scripts/set_status.py kurgucu tamam "$SLUG videosu hazır" "release:$TAG"
+      - name: Hata durumunu panele yaz
+        if: failure()
+        run: python scripts/set_status.py kurgucu hata "$SLUG videosu üretilemedi, GitHub Actions kaydına bak"
       - name: Kaydet
+        if: always()
         run: |
           git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
-          git add projects/${{ inputs.slug }}/onizleme.jpg projects/${{ inputs.slug }}/project.timed.json data 2>/dev/null; git commit -m "Video: ${{ inputs.slug }}" || exit 0
+          git add "projects/$SLUG/onizleme.jpg" "projects/$SLUG/project.timed.json" "projects/$SLUG/kontrol" data 2>/dev/null; git commit -m "Video: $SLUG" || exit 0
           git pull --rebase && git push

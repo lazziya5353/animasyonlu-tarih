@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: pip install -q json-repair
+      - run: pip install -q json-repair pillow
       - name: Metni yaz
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -24,6 +24,11 @@ jobs:
           TARIH: ${{ inputs.tarih }}
           NOTLAR: ${{ inputs.notlar }}
         run: python scripts/write_script.py --konu "$KONU" --tarih "$TARIH" --not "$NOTLAR"
+      - name: Senaryo kontrolcüsü (ücretsiz, kural tabanlı)
+        run: |
+          for f in $(git status --porcelain projects | grep -o 'projects/[a-z0-9-]*/' | sort -u); do
+            python scripts/kontrol.py senaryo --slug "$(basename "$f")"
+          done
       - name: Kaydet
         if: always()
         run: |
