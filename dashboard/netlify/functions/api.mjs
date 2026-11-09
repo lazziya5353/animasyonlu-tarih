@@ -11,7 +11,7 @@ const WORKFLOWS = {
   kurgucu: "render.yml",
 };
 const json = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json", "cache-control": "no-store" } });
-const token = () => crypto.createHmac("sha256", process.env.PANEL_SIFRE || "").update("animasyonlu-tarih-panel").digest("hex");
+const token = () => crypto.createHmac("sha256", (process.env.PANEL_SIFRE || "").trim()).update("animasyonlu-tarih-panel").digest("hex");
 const same = (a, b) => { const x = Buffer.from(String(a)), y = Buffer.from(String(b)); return x.length === y.length && crypto.timingSafeEqual(x, y); };
 
 async function gh(path, opts = {}) {
@@ -43,7 +43,8 @@ export default async (req) => {
   if (b.action === "login") {
     const now = Date.now(); failed = failed.filter((t) => now - t < 15 * 60e3);
     if (failed.length >= 10) return json({ hata: "Çok fazla yanlış deneme. 15 dakika sonra tekrar dene." }, 429);
-    if (!process.env.PANEL_SIFRE || !same(b.sifre || "", process.env.PANEL_SIFRE)) { failed.push(now); return json({ hata: "Şifre yanlış" }, 401); }
+    if (!process.env.PANEL_SIFRE) return json({ hata: "PANEL_SIFRE Netlify'da tanımlı değil ya da yayın yenilenmedi" }, 500);
+    if (!same(String(b.sifre || "").trim(), process.env.PANEL_SIFRE.trim())) { failed.push(now); return json({ hata: "Şifre yanlış" }, 401); }
     return json({ token: token() });
   }
   if (!same(req.headers.get("x-panel-token") || "", token())) return json({ hata: "Giriş gerekli" }, 401);
