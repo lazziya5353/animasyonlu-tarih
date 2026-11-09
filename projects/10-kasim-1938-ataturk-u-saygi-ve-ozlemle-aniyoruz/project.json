@@ -334,7 +334,40 @@
   "title": "SONSUZA DEK SAYGIYLA",
   "line": "Cumhuriyet bize emanet."
  },
- "maps_plan": [],
+ "maps_plan": [
+  {
+   "scene": 1,
+   "route": [
+    "Samsun",
+    "Erzurum",
+    "Sivas",
+    "Ankara"
+   ],
+   "cities": [
+    "Samsun",
+    "Erzurum",
+    "Sivas",
+    "Ankara"
+   ],
+   "title": "SAMSUN'DAN ANKARA'YA"
+  },
+  {
+   "scene": 3,
+   "route": [
+    "Ankara",
+    "Sakarya",
+    "Dumlupınar",
+    "İzmir"
+   ],
+   "cities": [
+    "Ankara",
+    "Sakarya",
+    "Dumlupınar",
+    "İzmir"
+   ],
+   "title": "BÜYÜK TAARRUZ"
+  }
+ ],
  "cards_plan": [
   {
    "scene": 8,

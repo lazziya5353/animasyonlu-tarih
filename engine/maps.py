@@ -81,5 +81,5 @@ class MapRenderer:
             ox, oy = label_off.get(c, (0, -62)); lab = text(c.upper(), "serif", 46, (255, 240, 215), spacing=3)
             lx = min(max(x + ox, lab.width / 2 - 20), W - lab.width / 2 + 20)  # kenardan taşmasın
             put(fr, lab, lx, y + oy, a)
-        if title: put(fr, text(title, "sans9", 40, GOLD, spacing=6), W / 2, 640, clamp((lt - 0.1) / 0.4))
+        if title: put(fr, text(title, "sans9", 40, GOLD, spacing=6), W / 2, 360, clamp((lt - 0.1) / 0.4))
         return fr

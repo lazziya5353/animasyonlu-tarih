@@ -59,7 +59,7 @@ class Project:
                 k = min(len(sc) - 1, int(m.get("scene", m.get("after_scene", 0) + 1))); names = [x for x in m.get("cities", []) + m.get("route", []) if x in cities_all]
                 if not names: continue
                 lons = [cities_all[x][0] for x in names]; lats = [cities_all[x][1] for x in names]
-                wdeg = max(4.5, (max(lons) - min(lons)) * 1.5, (max(lats) - min(lats)) * 1.5 * 0.56 / 0.75)
+                wdeg = max(4.5, (max(lons) - min(lons)) * 1.9, (max(lats) - min(lats)) * 1.9 * 0.56 / 0.75)
                 cx, cy = (max(lons) + min(lons)) / 2, (max(lats) + min(lats)) / 2
                 t0 = sc[k]["start"]; t1 = min(sc[k]["end"] - 0.3, t0 + 2.3)
                 c["maps"].append({"start": t0, "end": t1, "cam_from": [cx, cy, wdeg * 1.12], "cam_to": [cx, cy, wdeg], "routes": [m["route"]] if m.get("route") else [],
@@ -67,11 +67,14 @@ class Project:
         if c.get("cards_plan") and not c.get("cards"):
             c["cards"] = [{"start": sc[min(len(sc) - 1, k["scene"])]["start"] + 1.2, "end": sc[min(len(sc) - 1, k["scene"])]["end"] - 0.3,
                            "value": k["value"], "unit": k.get("unit", ""), "small": k.get("small", "")} for k in c["cards_plan"]]
-        if c.get("outro_plan") and not c.get("outro"):
-            c["outro"] = {"start": max(sc[-1]["start"], voice_dur - 3.5), "title": c["outro_plan"].get("title", ""), "line": c["outro_plan"].get("line", ""), "line_at": voice_dur - 1.2}
         if c.get("finale") == "ayyildiz" and not c.get("ayyildiz"):
-            t = sc[-1]["start"] if len(sc) > 1 else voice_dur - 6; t0 = max(1.0, t - 6.0)
+            # ay yıldız son sahnenin başında toplanır; kapanış yazısı ondan sonra gelir
+            t0 = max(1.0, (sc[-1]["start"] - 0.4) if len(sc) > 1 else voice_dur - 6)
             c["ayyildiz"] = [t0, t0 + 1.9, t0 + 4.5, t0 + 6.1]
+        if c.get("outro_plan") and not c.get("outro"):
+            st = max(sc[-1]["start"], voice_dur - 3.5, (c.get("ayyildiz") or [0, 0, 0, 0])[3])
+            c["outro"] = {"start": st, "title": c["outro_plan"].get("title", ""), "line": c["outro_plan"].get("line", ""), "line_at": max(voice_dur - 1.2, st + 1.0)}
+            if not c.get("duration"): c["duration"] = round(max(sc[-1]["end"] + c.get("voice_offset", 0) + 0.2, st + 3.6), 2)
         if not c.get("jumps"):
             c["jumps"] = []; yrs = [(i, s.get("year")) for i, s in enumerate(sc) if isinstance(s.get("year"), (int, float))]
             for (i0, y0), (i1, y1) in zip(yrs, yrs[1:]):
@@ -167,7 +170,10 @@ class Project:
             ta = max(clamp(l2 / .8), dk * .9); la = max(clamp((tv - o.get("line_at", o["start"] + 2)) / .4), dk * .9)
             if dk > 0: fr.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, int(255 * dk * .82))))
             if o.get("title"): put(fr, text(o["title"], "serif", 70, GOLD, glow=GOLD, spacing=6), W / 2, 760, ta)
-            if o.get("line"): put(fr, text(o["line"], "serif", 76, WHITE, glow=GOLD, spacing=4), W / 2, 900, la)
+            if o.get("line"):
+                sz = 76; im = text(o["line"], "serif", sz, WHITE, glow=GOLD, spacing=4)
+                while im.width > W - 110 and sz > 40: sz -= 4; im = text(o["line"], "serif", sz, WHITE, glow=GOLD, spacing=4)
+                put(fr, im, W / 2, 900, la)
         if T < .5: fr.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, int(255 * (1 - T / .5)))))
         return fr.convert("RGB")
 
