@@ -32,7 +32,7 @@ $("#go").onclick = async () => {
   try { const j = await api("login", { sifre: $("#pw").value }); TOKEN = j.token; localStorage.setItem("at_token", TOKEN); start(); }
   catch (e) { $("#lerr").textContent = e.message; }
 };
-$("#pw").onkeydown = (e) => e.key === "Enter" && $("#go").click();
+$("#pw").addEventListener("keydown", (e) => { if (e.key === "Enter") $("#go").click(); });
 $("#refresh").onclick = () => load();
 
 async function start() { $("#login").classList.add("hide"); $("#app").classList.remove("hide"); load(); }
