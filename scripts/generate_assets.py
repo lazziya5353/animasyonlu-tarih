@@ -46,7 +46,14 @@ def voice(text, out):
                          "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": VOICE}}}}})
     for d in inline_parts(r):
         pcm = out + ".pcm"; open(pcm, "wb").write(base64.b64decode(d["data"]))
-        subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "s16le", "-ar", "24000", "-ac", "1", "-i", pcm, out], check=True); os.remove(pcm)
+        raw = out + ".ham.wav"
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "s16le", "-ar", "24000", "-ac", "1", "-i", pcm, raw], check=True); os.remove(pcm)
+        # uzun sessizlikleri 0.4 sn'ye indir, hafif hızlandır (ses tonu değişmez)
+        trimmed = out + ".kisa.wav"
+        subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "trim_pauses.py"), raw, trimmed, "0.4"], check=True)
+        tempo = os.environ.get("GEMINI_SES_TEMPO") or "1.1"
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", trimmed, "-af", f"atempo={tempo}", out], check=True)
+        os.remove(raw); os.remove(trimmed)
         u = r.get("usageMetadata", {}); usd = u.get("promptTokenCount", 0) / 1e6 * 0.5 + u.get("candidatesTokenCount", 0) / 1e6 * 10
         log_usage("ses", "gemini-ses", usd, f"{VOICE} sesi"); return True
     return False

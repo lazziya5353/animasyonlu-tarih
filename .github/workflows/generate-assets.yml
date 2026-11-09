@@ -19,14 +19,16 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q numpy soundfile
       - name: Üret
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ONLY: ${{ inputs.only }}
+          SES: ${{ inputs.ses }}
         run: |
-          ARGS="--slug ${{ inputs.slug }}"
-          [ -n "${{ inputs.only }}" ] && ARGS="$ARGS --only ${{ inputs.only }}"
-          [ "${{ inputs.ses }}" = "1" ] && ARGS="$ARGS --ses"
+          ARGS="--slug $SLUG"
+          echo "$ONLY" | grep -Eq '^[0-9]+$' && ARGS="$ARGS --only $ONLY"
+          [ "$SES" = "1" ] && ARGS="$ARGS --ses"
           python scripts/generate_assets.py $ARGS
       - name: Kaydet
         run: |
