@@ -1,1 +1,11 @@
-{"kayitlar": []}
+{
+ "kayitlar": [
+  {
+   "zaman": "2026-11-09T08:37:55Z",
+   "ajan": "arastirmaci",
+   "servis": "claude",
+   "usd": 0.2823,
+   "detay": "46214 giriş / 6912 çıkış token, 4 arama"
+  }
+ ]
+}

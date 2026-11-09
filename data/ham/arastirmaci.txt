@@ -1,0 +1,88 @@
+```json
+{
+  "hafta": "2026-W47",
+  "gunler": [
+    {
+      "tarih": "2026-11-16",
+      "gun": "Pazartesi",
+      "olaylar": [
+        {
+          "yil": 1532,
+          "baslik": "Cajamarca: Pizarro ile Atahualpa karşı karşıya",
+          "ozet": "İspanyol conquistador Francisco Pizarro'nun az sayıdaki adamı, And Dağları'ndaki Cajamarca'da İnka hükümdarı Atahualpa ile karşılaştı. Karşılaşma İnka İmparatorluğu'nun çöküşünü başlattı.",
+          "yildiz": 4,
+          "neden": "Küçük bir grubun koca bir imparatorluğu devirmesi sürpriz bir hikâye. Dağ, altın ve imparator görselleri harita animasyonuna çok uygun. Anlatımda şiddet detayı verilmemeli.",
+          "tur": "dunya",
+          "kaynak": "https://en.wikipedia.org/wiki/Battle_of_Cajamarca",
+          "dogrulandi": false
+        },
+        {
+          "yil": 1945,
+          "baslik": "UNESCO kuruldu",
+          "ozet": "İkinci Dünya Savaşı sona erdikten sonra UNESCO Anayasası 16 Kasım 1945'te Londra'da imzalandı. Amaç eğitim, bilim ve kültür yoluyla barışı korumaktı.",
+          "yildiz": 2,
+          "neden": "Savaş sonrası barış arayışı iyi bir tema. Görsel potansiyeli ve izlenme potansiyeli orta.",
+          "tur": "dunya",
+          "kaynak": "https://en.wikipedia.org/wiki/UNESCO",
+          "dogrulandi": false
+        },
+        {
+          "yil": 1922,
+          "baslik": "Vahdettin'in Harington'a sığınma mektubu",
+          "ozet": "Sultan Vahdettin, 16 Kasım 1922'de İstanbul'daki İngiliz işgal kuvvetleri komutanı General Harington'a yazdığı mektupta güvenliğinden endişe duyduğunu belirterek himaye istedi. Mektup ertesi günkü ayrılışın hazırlığıydı.",
+          "yildiz": 3,
+          "neden": "17 Kasım videosuna giriş olabilecek bir ön hikâye. Gerçek bir mektup belgesi olması videoyu inandırıcı kılar.",
+          "tur": "tarihte-bugun",
+          "kaynak": "https://www.malumatfurus.org/vahdettinin-iltica-mektubu/",
+          "dogrulandi": true
+        }
+      ]
+    },
+    {
+      "tarih": "2026-11-17",
+      "gun": "Salı",
+      "olaylar": [
+        {
+          "yil": 1922,
+          "baslik": "Son padişah Vahdettin İstanbul'dan ayrıldı",
+          "ozet": "Saltanatın 1 Kasım 1922'de kaldırılmasından sonra Vahdettin, 17 Kasım sabahı İngiliz HMS Malaya zırhlısıyla İstanbul'dan Malta'ya gitti. Kaynaklarda ayrılışı anlatan sözcükler ('kaçtı', 'ayrıldı') farklı; videoda 'ayrıldı' gibi nötr bir ifade ve belgelere dayalı bir anlatım seçilmeli.",
+          "yildiz": 5,
+          "neden": "Osmanlı hanedanının sonu güçlü bir dönüm noktası. Boğaz, zırhlı gemi ve şafak sahnesi dikey videoda çok iyi görünür. Türk izleyicinin ilgisi yüksek.",
+          "tur": "tarihte-bugun",
+          "kaynak": "https://www.cumhuriyet.com.tr/yazarlar/olaylar-ve-gorusler/vahdettin-nasil-kacti-taner-baytok-2003478",
+          "dogrulandi": true
+        },
+        {
+          "yil": 1869,
+          "baslik": "Süveyş Kanalı açıldı",
+          "ozet": "On yıl süren inşaatın ardından Süveyş Kanalı 17 Kasım 1869'da törenle açıldı. Kanal Akdeniz ile Kızıldeniz'i birleştirdi ve Avrupa-Asya deniz yolunu binlerce mil kısalttı.",
+          "yildiz": 4,
+          "neden": "Haritada Ümit Burnu'nu dolaşan rota ile kanal rotasını karşılaştırmak çok görsel. Dönemin Mısır'ı Osmanlı idaresindeydi, bu da Türk izleyiciye yakın bir bağ kuruyor.",
+          "tur": "dunya",
+          "kaynak": "https://www.history.com/this-day-in-history/november-17/suez-canal-opens",
+          "dogrulandi": true
+        }
+      ]
+    },
+    {
+      "tarih": "2026-11-18",
+      "gun": "Çarşamba",
+      "olaylar": [
+        {
+          "yil": 1928,
+          "baslik": "Steamboat Willie: Mickey Mouse sahneye çıktı",
+          "ozet": "Disney'in senkronize sesli çizgi filmi Steamboat Willie 18 Kasım 1928'de New York'ta ilk kez gösterildi. Film, Mickey Mouse'u dünyaya tanıttı.",
+          "yildiz": 5,
+          "neden": "Sayfanın 'animasyon' kimliğiyle birebir uyuyor. Nostaljik ve görsel olarak güçlü, paylaşım potansiyeli yüksek.",
+          "tur": "dunya",
+          "kaynak": "https://en.wikipedia.org/wiki/Steamboat_Willie",
+          "dogrulandi": false
+        },
+        {
+          "yil": 1626,
+          "baslik": "Aziz Petrus Bazilikası kutsandı",
+          "ozet": "Vatikan'daki yeni Aziz Petrus Bazilikası 18 Kasım 1626'da Papa VIII. Urbanus tarafından kutsandı. Yapının inşası yaklaşık bir asır sürmüştü.",
+          "yildiz": 2,
+          "neden": "Mimari görseller güzel. Türk izleyiciye yakınlığı ve hikâye gücü sınırlı.",
+          "tur": "dunya",
+          "kaynak": "
