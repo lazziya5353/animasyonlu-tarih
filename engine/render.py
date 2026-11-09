@@ -12,6 +12,23 @@ from maps import MapRenderer
 import music as MUSIC
 from align import align
 
+HERE = os.path.dirname(os.path.abspath(__file__))
+try: MARKA = json.load(open(os.path.join(HERE, "assets", "marka.json")))
+except Exception: MARKA = {}
+_LOGO = os.path.join(HERE, "assets", "logo_mark.png")
+LOGO = Image.open(_LOGO).convert("RGBA") if os.path.exists(_LOGO) else None
+# gezen imzanın uğradığı yerler: altyazı, başlık ve Instagram butonlarından uzak orta bölgeler
+GEZEN = [(540, 720), (700, 1000), (420, 880), (660, 1160), (540, 960)]
+UYARILAR = []  # kurgu kontrolcüsü için: sığmadığı için küçültülen yazılar
+
+def fit(txt, font, size, col, maxw=W - 90, min_size=40, **kw):
+    """Yazıyı genişliğe sığana kadar küçültür; taşma imkânsız."""
+    im = text(txt, font, size, col, **kw); s0 = size
+    while im.width > maxw and size > min_size:
+        size -= 4; im = text(txt, font, size, col, **kw)
+    if size != s0 and txt not in UYARILAR: UYARILAR.append(txt)
+    return im
+
 ERA_DEFAULT_COL = [(120, 200, 160), (232, 196, 120), (200, 150, 110), (170, 120, 120), (230, 80, 80), (130, 170, 230)]
 
 class Project:
@@ -122,16 +139,18 @@ class Project:
         p = ease(lt / .9); eff = s.get("effect")
         if eff == "stamp":
             sc = 1 + 1.2 * (1 - clamp(lt / 0.18)) ** 2; shake = (6 * math.sin(lt * 90) * clamp((0.45 - lt) / 0.3)) if lt < 0.45 else 0
-            put(fr, text(big, "serif", 150, GOLD, glow=GOLD, spacing=14), W / 2 + shake, 330, clamp(lt / .12) * out, sc)
+            put(fr, fit(big, "serif", 150, GOLD, glow=GOLD, spacing=14), W / 2 + shake, 330, clamp(lt / .12) * out, sc)
         elif eff == "glow":
-            put(fr, text(big, "serif", 160, (255, 222, 150), glow=(255, 200, 110), spacing=int(40 - 26 * p)), W / 2, 330, clamp(lt / .5) * out, 1 + 0.02 * math.sin(lt * 3))
+            put(fr, fit(big, "serif", 160, (255, 222, 150), glow=(255, 200, 110), spacing=int(40 - 26 * p)), W / 2, 330, clamp(lt / .5) * out, 1 + 0.02 * math.sin(lt * 3))
         else:
-            put(fr, text(big, "serif", 150 if len(big) <= 4 else 118, GOLD, glow=GOLD, spacing=int(40 - 26 * p)), W / 2, 330, clamp(lt / .5) * out)
+            put(fr, fit(big, "serif", 150 if len(big) <= 4 else 118, GOLD, glow=GOLD, spacing=int(40 - 26 * p)), W / 2, 330, clamp(lt / .5) * out)
         if eff == "type" and s.get("type_text"):
             full = s["type_text"]; n = int(clamp((lt - .3) / 1.4) * len(full)); st = full[:n] + ("▌" if (int(lt * 4) % 2 == 0 and n < len(full)) else "")
-            if st: put(fr, text(st, "mono", 36, (245, 235, 215), spacing=2), W / 2, 455, out)
+            sz = 36
+            while sz > 24 and text(full + "▌", "mono", sz, (245, 235, 215), spacing=2).width > W - 90: sz -= 2
+            if st: put(fr, text(st, "mono", sz, (245, 235, 215), spacing=2), W / 2, 455, out)
         elif s.get("sub"):
-            put(fr, text(s["sub"], "sans9", 34, WHITE, spacing=10), W / 2, 455, clamp((lt - .35) / .5) * out)
+            put(fr, fit(s["sub"], "sans9", 34, WHITE, min_size=22, spacing=10), W / 2, 455, clamp((lt - .35) / .5) * out)
 
     def frame(self, T):
         c = self.cfg; tv = T - self.off; i = self.scene_at(tv); s = self.S[i]; lt = tv - s["start"]
@@ -147,7 +166,7 @@ class Project:
         if self.ay: self.ay.draw(fr, tv)
         fr.alpha_composite(Image.new("RGBA", (W, H), (60, 35, 10, 16))); fr.alpha_composite(BANDS); fr.alpha_composite(VIG)
         fr.alpha_composite(GRAIN[int(T * 24) % len(GRAIN)])
-        if c.get("hook") and T < 3.2: put(fr, text(c["hook"], "sans9", 40, WHITE, spacing=8), W / 2, 150, clamp(T / .5) * clamp((3.2 - T) / .5))
+        if c.get("hook") and T < 3.2: put(fr, fit(c["hook"], "sans9", 40, WHITE, min_size=24, spacing=8), W / 2, 150, clamp(T / .5) * clamp((3.2 - T) / .5))
         if not m or (tv - m["start"]) > (m["end"] - m["start"]) - 0.2:
             self.titles(fr, i, tv, lt)
             for j in self.jumps:
@@ -169,22 +188,42 @@ class Project:
             l2 = tv - o["start"]; dk = clamp((T - (self.dur - 2.2)) / 1.9)
             ta = max(clamp(l2 / .8), dk * .9); la = max(clamp((tv - o.get("line_at", o["start"] + 2)) / .4), dk * .9)
             if dk > 0: fr.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, int(255 * dk * .82))))
-            if o.get("title"): put(fr, text(o["title"], "serif", 70, GOLD, glow=GOLD, spacing=6), W / 2, 760, ta)
+            if o.get("title"): put(fr, fit(o["title"], "serif", 70, GOLD, glow=GOLD, spacing=6), W / 2, 760, ta)
             if o.get("line"):
-                sz = 76; im = text(o["line"], "serif", sz, WHITE, glow=GOLD, spacing=4)
-                while im.width > W - 110 and sz > 40: sz -= 4; im = text(o["line"], "serif", sz, WHITE, glow=GOLD, spacing=4)
-                put(fr, im, W / 2, 900, la)
+                put(fr, fit(o["line"], "serif", 76, WHITE, maxw=W - 110, glow=GOLD, spacing=4), W / 2, 900, la)
+        self.watermark(fr, T)
         if T < .5: fr.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, int(255 * (1 - T / .5)))))
         return fr.convert("RGB")
+
+    def watermark(self, fr, T):
+        """Köşede küçük logo + sayfa adı; kırpılıp silinmesin diye arada ekranın farklı yerinde beliren soluk imza."""
+        mk = {**MARKA, **(self.cfg.get("filigran") or {})}
+        if not mk.get("filigran", True) or not mk.get("handle"): return
+        if not hasattr(self, "_wm"):
+            ht = text(mk["handle"], "sans", 25, (255, 244, 220), shadow=True, spacing=1)
+            lg = LOGO.resize((int(LOGO.width * 46 / LOGO.height), 46), Image.LANCZOS) if LOGO else None
+            w = (lg.width + 10 if lg else 0) + ht.width; h = max(46, ht.height)
+            im = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+            if lg: im.alpha_composite(lg, (0, (h - lg.height) // 2))
+            im.alpha_composite(ht, ((lg.width + 10) if lg else 0, (h - ht.height) // 2))
+            self._wm = im; self._wm2 = text(mk["handle"], "sans9", 40, (255, 255, 255), shadow=False, spacing=3)
+        # sol orta-alt: Instagram'ın üst çubuğu, sağdaki butonlar ve alttaki açıklama alanının dışında
+        put(fr, self._wm, 44 + self._wm.width / 2, 1305, 0.55 * clamp((T - 1.0) / .6) * clamp((self.dur - 2.4 - T) / .6))
+        per = float(mk.get("gezen_imza_aralik", 15) or 0)
+        if per > 0 and 6 < T < self.dur - 4:
+            k = int(T // per); q = T - k * per
+            if k > 0 and q < 2.2:
+                x, y = GEZEN[k % len(GEZEN)]
+                put(fr, self._wm2, x, y, 0.30 * clamp(q / .5) * clamp((2.2 - q) / .5))
 
     def audio(self):
         out = os.path.join(self.dir, "out"); os.makedirs(out, exist_ok=True)
         mus = os.path.join(out, "music.wav"); mix = os.path.join(out, "mix.wav"); mc = self.cfg.get("music", {})
-        MUSIC.make(mus, self.dur, booms=mc.get("booms", [self.off]), major_from=mc.get("major_from"), heartbeat=mc.get("heartbeat"))
+        MUSIC.make(mus, self.dur, booms=mc.get("booms", [self.off]), major_from=mc.get("major_from"), heartbeat=mc.get("heartbeat"), drone=mc.get("drone", False))
         ms = int(self.off * 1000)
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", mus, "-i", self.voice, "-filter_complex",
-                        f"[1:a]aresample=44100,adelay={ms}|{ms},apad=whole_dur={self.dur},highpass=f=60,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=150[v];[v]asplit=2[v1][v2];"
-                        f"[0:a]volume={mc.get('volume', 0.32)}[m];[m][v2]sidechaincompress=threshold=0.05:ratio=4:attack=20:release=400[md];"
+                        f"[1:a]aresample=44100,adelay={ms}|{ms},apad=whole_dur={self.dur},highpass=f=70,afftdn=nf=-30,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=150[v];[v]asplit=2[v1][v2];"
+                        f"[0:a]highpass=f=110,lowpass=f=7000,volume={mc.get('volume', 0.24)}[m];[m][v2]sidechaincompress=threshold=0.04:ratio=6:attack=15:release=450[md];"
                         f"[md][v1]amix=inputs=2:normalize=0:duration=longest,loudnorm=I=-14:TP=-1.5,atrim=0:{self.dur}[o]", "-map", "[o]", "-ar", "44100", mix], check=True)
         return mix
 

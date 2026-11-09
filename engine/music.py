@@ -10,7 +10,7 @@ m2f = lambda m: 440 * 2 ** ((m - 69) / 12)
 MINOR = [[50, 57, 62, 65], [46, 53, 58, 62], [53, 57, 60, 65], [48, 55, 60, 63]]
 MAJOR = [50, 57, 62, 66, 69]
 
-def make(out, dur, booms=(), major_from=None, heartbeat=None, seed=7):
+def make(out, dur, booms=(), major_from=None, heartbeat=None, seed=7, drone=False):
     n = int(SR * dur); t = np.arange(n) / SR; rng = np.random.default_rng(seed); L = np.zeros(n); R = np.zeros(n)
     def strings(notes, t0, t1, g):
         i0, i1 = int(max(0, t0) * SR), min(n, int(t1 * SR)); m = i1 - i0
@@ -31,7 +31,8 @@ def make(out, dur, booms=(), major_from=None, heartbeat=None, seed=7):
             notes, g = MINOR[k % 4], 0.5 + 0.03 * k
             if major_from is not None and t0 < major_from < t1: t1 = major_from
         strings(notes, t0 - 0.8, t1 + 0.8, min(g, 0.7)); t0 = t1; k += 1
-    dr = np.sin(2 * np.pi * m2f(38) * t) * 0.12 + np.sin(2 * np.pi * m2f(26) * t) * 0.08; L += dr * np.minimum(t / 3, 1); R += dr * np.minimum(t / 3, 1)
+    if drone:  # eski sürümdeki alçak uğultu; varsayılan kapalı
+        dr = np.sin(2 * np.pi * m2f(38) * t) * 0.12 + np.sin(2 * np.pi * m2f(26) * t) * 0.08; L += dr * np.minimum(t / 3, 1); R += dr * np.minimum(t / 3, 1)
     for tt in booms:
         m = int(3 * SR); x = np.arange(m) / SR
         b = np.sin(2 * np.pi * np.cumsum(55 + 40 * np.exp(-x * 6)) / SR) * np.exp(-x * 1.6) + lp(rng.standard_normal(m), 300) * np.exp(-x * 5) * 0.6
