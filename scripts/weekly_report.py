@@ -18,19 +18,19 @@ def main():
         if os.path.exists(pj): gecmis.append(json.load(open(pj)).get("title", f))
     system = ("Sen 'Animasyonlu Tarih' adlı Türkçe Instagram/TikTok tarih sayfasının araştırmacısısın. 60 saniyelik dikey videolar üretiliyor: "
               "Tarihte Bugün, savaşlar ve dünya tarihi. Doğruluk her şeyden önemli: yalnızca tarihi kesin, kaynakta doğrulanabilen olayları yaz. "
-              "Son 50 yılın tartışmalı/süren çatışmalarından ve vahşet odaklı konulardan kaçın. Sadece JSON döndür.")
+              "Son 50 yılın tartışmalı/süren çatışmalarından ve vahşet odaklı konulardan kaçın. Sadece JSON döndür; açıklama yazma, metinleri kısa tut.")
     user = f"""Şu tarihler için (yıl fark etmez, gün ve ay eşleşsin) en iyi video konularını bul:
 {chr(10).join(f'- {d.isoformat()} {GUNLER[d.weekday()]} → {d.day} {d.strftime("%m")}. ay' for d in days)}
 
-Her gün için 1-3 olay yaz (Türk tarihi ve dünya tarihi karışık). Her olaya 1-5 arası 'yildiz' ver: Türk izleyicide izlenme potansiyeli, görsellik, duygusal etki.
+Her gün için 1-2 olay yaz (Türk tarihi ve dünya tarihi karışık). Her olaya 1-5 arası 'yildiz' ver: Türk izleyicide izlenme potansiyeli, görsellik, duygusal etki.
 Ayrıca tarihten bağımsız 1 'savas_onerisi' ver (harita animasyonuna uygun, iki taraf, sonuç). Daha önce yapılan konuları tekrar önerme: {gecmis}
 En iyi 3 konuyu 'onerilen' listesine koy.
 
 JSON şeması:
-{{"hafta":"{wk}","gunler":[{{"tarih":"YYYY-MM-DD","gun":"Pazartesi","olaylar":[{{"yil":1938,"baslik":"kısa başlık","ozet":"1-2 cümle","yildiz":5,"neden":"neden izlenir","tur":"tarihte-bugun|savas|dunya","kaynak":"url"}}]}}],
+{{"hafta":"{wk}","gunler":[{{"tarih":"YYYY-MM-DD","gun":"Pazartesi","olaylar":[{{"yil":1938,"baslik":"kısa başlık","ozet":"tek kısa cümle","yildiz":5,"neden":"en fazla 8 kelime","tur":"tarihte-bugun|savas|dunya","kaynak":"url"}}]}}],
 "savas_onerisi":{{"baslik":"","yil":0,"taraflar":"","sonuc":"","ozet":"","neden":"","harita_bolgesi":"avrupa_ortadogu|bati_avrupa|orta_asya|akdeniz|anadolu"}},
 "onerilen":[{{"baslik":"","tarih":"YYYY-MM-DD veya boş","tur":""}}]}}"""
-    txt = claude(system, user, "arastirmaci", max_tokens=5000, web_search=int(os.environ.get("ARAMA_SAYISI", "4")))
+    txt = claude(system, user, "arastirmaci", max_tokens=16000, web_search=int(os.environ.get("ARAMA_SAYISI", "4")))
     rep = extract_json(txt, "arastirmaci"); rep["olusturma"] = datetime.datetime.utcnow().isoformat(timespec="seconds") + "Z"
     for d in rep.get("gunler", []):
         for o in d.get("olaylar", []): o.setdefault("durum", "bekliyor")

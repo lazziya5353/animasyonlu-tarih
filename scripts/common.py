@@ -33,6 +33,7 @@ def claude(system, user, agent, max_tokens=6000, web_search=0):
     u = r.get("usage", {}); searches = (u.get("server_tool_use") or {}).get("web_search_requests", 0)
     usd = u.get("input_tokens", 0) / 1e6 * PRICE_IN + u.get("output_tokens", 0) / 1e6 * PRICE_OUT + searches * PRICE_SEARCH
     log_usage(agent, "claude", usd, f"{u.get('input_tokens', 0)} giriş / {u.get('output_tokens', 0)} çıkış token, {searches} arama")
+    if r.get("stop_reason") == "max_tokens": print("UYARI: cevap token sınırında kesildi")
     return "".join(b.get("text", "") for b in r.get("content", []) if b.get("type") == "text")
 
 def extract_json(txt, agent="ajan"):
