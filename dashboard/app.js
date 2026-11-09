@@ -138,7 +138,11 @@ async function openProject(slug) {
   $("#render").onclick = async () => { await api("run", { agent: "kurgucu", inputs: { slug } }); toast("Kurgucu çalışıyor (5-10 dk)"); };
   if (P.video) {
     const u = DEMO ? "../demo.mp4" : (await api("video_url", { id: P.video.id })).url; $("#vid").src = u;
-    $("#dl").onclick = () => { const a = document.createElement("a"); a.href = u; a.download = `${slug}.mp4`; a.click(); };
+    // imzalı adres birkaç dakikada eskir: indirirken her seferinde yenisini al
+    $("#dl").onclick = async () => {
+      try { const r = DEMO ? { url: u } : await api("video_url", { id: P.video.id }); if (!r.url) throw 0; location.href = r.url; }
+      catch { toast("Video adresi alınamadı, sayfayı yenileyip tekrar dene"); }
+    };
   }
 }
 async function upload(slug, name, file) {
