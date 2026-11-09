@@ -126,7 +126,7 @@ async function openProject(slug) {
   d.querySelectorAll("[data-copy]").forEach((b) => (b.onclick = () => { navigator.clipboard.writeText(b.dataset.copy); toast("Kopyalandı"); }));
   d.querySelectorAll(".sc").forEach(async (el) => {
     if (el.dataset.img) { const u = await fileUrl(`projects/${slug}/${el.dataset.img}`); if (u) el.style.backgroundImage = `url(${u})`; }
-    el.onclick = () => { const inp = document.createElement("input"); inp.type = "file"; inp.accept = "image/jpeg"; inp.onchange = () => upload(slug, `images/s${String(el.dataset.i).padStart(2, "0")}.jpg`, inp.files[0]); inp.click(); };
+    el.onclick = () => { const inp = document.createElement("input"); inp.type = "file"; inp.accept = "image/*"; inp.onchange = () => upload(slug, `images/s${String(el.dataset.i).padStart(2, "0")}.jpg`, inp.files[0]); inp.click(); };
   });
   if (hasVoice) $("#aud").src = await fileUrl(`projects/${slug}/ses.wav`);
   $("#up-ses").onchange = (e) => upload(slug, "ses.wav", e.target.files[0]);
