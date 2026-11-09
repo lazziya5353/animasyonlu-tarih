@@ -16,5 +16,11 @@
   "mesaj": "10-kasim-1938-ataturk-u-saygi-ve-ozlemle-aniyoruz: ses hazır",
   "cikti": "projects/10-kasim-1938-ataturk-u-saygi-ve-ozlemle-aniyoruz",
   "zaman": "2026-11-09T09:28:08Z"
+ },
+ "kurgucu": {
+  "durum": "tamam",
+  "mesaj": "10-kasim-1938-ataturk-u-saygi-ve-ozlemle-aniyoruz videosu hazır",
+  "cikti": "release:video-10-kasim-1938-ataturk-u-saygi-ve-ozlemle-aniyoruz",
+  "zaman": "2026-11-09T10:09:17Z"
  }
 }

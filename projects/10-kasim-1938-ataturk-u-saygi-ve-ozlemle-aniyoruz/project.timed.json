@@ -1,0 +1,587 @@
+{
+ "title": "Dokuzu Beş Geçe: 10 Kasım 1938",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "SAAT 09.05",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": 0.0,
+   "end": 7.779999999999999,
+   "lines": [
+    "Dolmabahçe'de bir odada saat, 09.05'i gösteriyor.",
+    "O sabah ülke bir an durdu."
+   ],
+   "big": "09.05",
+   "sub": "DOLMABAHÇE",
+   "year": 1938,
+   "label": "09.05",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": 7.779999999999999,
+   "end": 15.209999999999999,
+   "lines": [
+    "19 Mayıs 1919.",
+    "Mustafa Kemal Samsun'a çıktı ve Kurtuluş Savaşı'nın yolu açıldı."
+   ],
+   "big": "1919",
+   "sub": "SAMSUN",
+   "year": 1919,
+   "label": "1919",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": 15.209999999999999,
+   "end": 21.05,
+   "lines": [
+    "23 Nisan 1920.",
+    "Ankara'da Türkiye Büyük Millet Meclisi açıldı."
+   ],
+   "big": "1920",
+   "sub": "TBMM",
+   "year": 1920,
+   "label": "1920",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": 21.05,
+   "end": 24.73,
+   "lines": [
+    "1922.",
+    "Türk ordusu İzmir'e girdi."
+   ],
+   "big": "1922",
+   "sub": "İZMİR",
+   "year": 1922,
+   "label": "1922",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": 24.73,
+   "end": 29.32,
+   "lines": [
+    "29 Ekim 1923.",
+    "Cumhuriyet ilan edildi."
+   ],
+   "big": "1923",
+   "sub": "CUMHURİYET",
+   "year": 1923,
+   "label": "1923",
+   "fx": [
+    "gold",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "glow"
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": 29.32,
+   "end": 34.59,
+   "lines": [
+    "1934.",
+    "Kadınlara milletvekili seçme ve seçilme hakkı verildi."
+   ],
+   "big": "1934",
+   "sub": "KADIN HAKKI",
+   "year": 1934,
+   "label": "1934",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": 34.59,
+   "end": 41.14,
+   "lines": [
+    "1938 sonbaharı.",
+    "Hastalığı ağırlaşmıştı ve Dolmabahçe'de tedavi görüyordu."
+   ],
+   "big": "1938",
+   "sub": "SONBAHAR",
+   "year": 1938,
+   "label": "1938",
+   "fx": [
+    "fog",
+    "flicker"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": 41.14,
+   "end": 47.31,
+   "lines": [
+    "10 Kasım 1938.",
+    "Sabah 09.05'te Atatürk hayata gözlerini yumdu."
+   ],
+   "big": "09.05",
+   "sub": "10 KASIM",
+   "year": 1938,
+   "label": "10 KASIM",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": 47.31,
+   "end": 51.95,
+   "lines": [
+    "10 Kasım 1953.",
+    "Naaşı Anıtkabir'e nakledildi."
+   ],
+   "big": "1953",
+   "sub": "ANITKABİR",
+   "year": 1953,
+   "label": "1953",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": 51.95,
+   "end": 57.24,
+   "lines": [
+    "Bugün saat 09.05'te sirenler çalıyor.",
+    "Bir ülke saygıyla duruyor."
+   ],
+   "big": "SAYGI",
+   "sub": "SAYGI DURUŞU",
+   "year": 2026,
+   "label": "BUGÜN",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": 57.24,
+   "end": 66.16999999999999,
+   "lines": [
+    "Atatürk şöyle demişti:",
+    "Benim naçiz vücudum elbet bir gün toprak olacaktır, ancak Türkiye Cumhuriyeti ilelebet payidar kalacaktır."
+   ],
+   "big": "SÖZ",
+   "sub": "ATATÜRK",
+   "year": 2026,
+   "label": "BUGÜN",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": 66.16999999999999,
+   "end": 74.89387500000001,
+   "lines": [
+    "Cumhuriyet bize emanet.",
+    "Onu yaşatacağız. Saygıyla, özlemle, bağlılıkla."
+   ],
+   "big": "EMANET",
+   "sub": "SAYGIYLA ANIYORUZ",
+   "year": 2026,
+   "label": "BUGÜN",
+   "fx": [
+    "gold",
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "glow"
+  }
+ ],
+ "eras": [
+  {
+   "name": "KURTULUŞ",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "name": "CUMHURİYET",
+   "from": 4,
+   "to": 5
+  },
+  {
+   "name": "VEDA",
+   "from": 6,
+   "to": 8
+  },
+  {
+   "name": "EMANET",
+   "from": 9,
+   "to": 11
+  }
+ ],
+ "outro_plan": {
+  "title": "SONSUZA DEK SAYGIYLA",
+  "line": "Cumhuriyet bize emanet."
+ },
+ "maps_plan": [
+  {
+   "scene": 1,
+   "route": [
+    "Samsun",
+    "Erzurum",
+    "Sivas",
+    "Ankara"
+   ],
+   "cities": [
+    "Samsun",
+    "Erzurum",
+    "Sivas",
+    "Ankara"
+   ],
+   "title": "SAMSUN'DAN ANKARA'YA"
+  },
+  {
+   "scene": 3,
+   "route": [
+    "Ankara",
+    "Sakarya",
+    "Dumlupınar",
+    "İzmir"
+   ],
+   "cities": [
+    "Ankara",
+    "Sakarya",
+    "Dumlupınar",
+    "İzmir"
+   ],
+   "title": "BÜYÜK TAARRUZ"
+  }
+ ],
+ "cards_plan": [
+  {
+   "scene": 8,
+   "value": 15,
+   "unit": "YIL",
+   "small": "GEÇİCİ KABİRDE"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "ayyildiz",
+ "maps": [
+  {
+   "start": 7.779999999999999,
+   "end": 10.079999999999998,
+   "cam_from": [
+    37.065,
+    40.519999999999996,
+    17.896480000000007
+   ],
+   "cam_to": [
+    37.065,
+    40.519999999999996,
+    15.979000000000006
+   ],
+   "routes": [
+    [
+     "Samsun",
+     "Erzurum",
+     "Sivas",
+     "Ankara"
+    ]
+   ],
+   "cities": [
+    "Samsun",
+    "Erzurum",
+    "Sivas",
+    "Ankara"
+   ],
+   "title": "SAMSUN'DAN ANKARA'YA",
+   "labels": {}
+  },
+  {
+   "start": 21.05,
+   "end": 23.35,
+   "cam_from": [
+    30.0,
+    39.175,
+    12.172159999999998
+   ],
+   "cam_to": [
+    30.0,
+    39.175,
+    10.867999999999997
+   ],
+   "routes": [
+    [
+     "Ankara",
+     "Sakarya",
+     "Dumlupınar",
+     "İzmir"
+    ]
+   ],
+   "cities": [
+    "Ankara",
+    "Sakarya",
+    "Dumlupınar",
+    "İzmir"
+   ],
+   "title": "BÜYÜK TAARRUZ",
+   "labels": {}
+  }
+ ],
+ "cards": [
+  {
+   "start": 48.510000000000005,
+   "end": 51.650000000000006,
+   "value": 15,
+   "unit": "YIL",
+   "small": "GEÇİCİ KABİRDE"
+  }
+ ],
+ "ayyildiz": [
+  65.76999999999998,
+  67.66999999999999,
+  70.26999999999998,
+  71.86999999999998
+ ],
+ "outro": {
+  "start": 71.86999999999998,
+  "title": "SONSUZA DEK SAYGIYLA",
+  "line": "Cumhuriyet bize emanet.",
+  "line_at": 72.86999999999998
+ },
+ "duration": 75.47,
+ "jumps": [
+  {
+   "t": 51.95,
+   "value": 73
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.0,
+   "end": 4.91,
+   "text": "Dolmabahçe'de bir odada saat, 09.05'i gösteriyor."
+  },
+  {
+   "start": 5.26,
+   "end": 7.58,
+   "text": "O sabah ülke bir an durdu."
+  },
+  {
+   "start": 7.93,
+   "end": 10.38,
+   "text": "19 Mayıs 1919."
+  },
+  {
+   "start": 10.72,
+   "end": 15.01,
+   "text": "Mustafa Kemal Samsun'a çıktı ve Kurtuluş Savaşı'nın yolu açıldı."
+  },
+  {
+   "start": 15.36,
+   "end": 17.61,
+   "text": "23 Nisan 1920."
+  },
+  {
+   "start": 17.98,
+   "end": 20.85,
+   "text": "Ankara'da Türkiye Büyük Millet Meclisi açıldı."
+  },
+  {
+   "start": 22.89,
+   "end": 24.53,
+   "text": "Türk ordusu İzmir'e girdi."
+  },
+  {
+   "start": 24.88,
+   "end": 27.21,
+   "text": "29 Ekim 1923."
+  },
+  {
+   "start": 27.58,
+   "end": 29.11,
+   "text": "Cumhuriyet ilan edildi."
+  },
+  {
+   "start": 31.12,
+   "end": 34.39,
+   "text": "Kadınlara milletvekili seçme ve seçilme hakkı verildi."
+  },
+  {
+   "start": 34.74,
+   "end": 36.65,
+   "text": "1938 sonbaharı."
+  },
+  {
+   "start": 37.0,
+   "end": 40.9,
+   "text": "Hastalığı ağırlaşmıştı ve Dolmabahçe'de tedavi görüyordu."
+  },
+  {
+   "start": 41.29,
+   "end": 43.39,
+   "text": "10 Kasım 1938."
+  },
+  {
+   "start": 43.74,
+   "end": 47.1,
+   "text": "Sabah 09.05'te Atatürk hayata gözlerini yumdu."
+  },
+  {
+   "start": 47.46,
+   "end": 49.46,
+   "text": "10 Kasım 1953."
+  },
+  {
+   "start": 49.82,
+   "end": 51.74,
+   "text": "Naaşı Anıtkabir'e nakledildi."
+  },
+  {
+   "start": 52.1,
+   "end": 55.08,
+   "text": "Bugün saat 09.05'te sirenler çalıyor."
+  },
+  {
+   "start": 55.43,
+   "end": 57.04,
+   "text": "Bir ülke saygıyla duruyor."
+  },
+  {
+   "start": 57.39,
+   "end": 58.7,
+   "text": "Atatürk şöyle demişti:"
+  },
+  {
+   "start": 59.06,
+   "end": 65.97,
+   "text": "Benim naçiz vücudum elbet bir gün toprak olacaktır, ancak Türkiye Cumhuriyeti ilelebet payidar kalacaktır."
+  },
+  {
+   "start": 66.32,
+   "end": 67.91,
+   "text": "Cumhuriyet bize emanet."
+  },
+  {
+   "start": 68.26,
+   "end": 72.69,
+   "text": "Onu yaşatacağız. Saygıyla, özlemle, bağlılıkla."
+  }
+ ]
+}
