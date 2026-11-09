@@ -41,7 +41,7 @@ def image(prompt, out):
     return False
 
 def voice(text, out):
-    style = "Sakin, derin ve ağır bir erkek belgesel anlatıcısı gibi, duygulu ve vakur bir tonla oku. Cümle aralarında kısa duraksa:\n"
+    style = os.environ.get("GEMINI_SES_STIL") or "Derin sesli bir erkek belgesel anlatıcısı gibi sakin ve vakur ama akıcı, normal konuşma hızında oku. Cümle aralarında çok kısa duraksa, uzun sessizlik bırakma. Metin 60 saniyelik bir video için:\n"
     r = call(TTS_MODEL, {"contents": [{"parts": [{"text": style + text}]}],
                          "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": VOICE}}}}})
     for d in inline_parts(r):
