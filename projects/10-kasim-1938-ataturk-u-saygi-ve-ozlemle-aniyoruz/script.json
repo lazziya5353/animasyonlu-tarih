@@ -1,0 +1,287 @@
+{
+ "baslik": "Dokuzu Beş Geçe: 10 Kasım 1938",
+ "hook": "SAAT 09.05",
+ "map_region": "anadolu",
+ "sahneler": [
+  {
+   "lines": [
+    "Dolmabahçe'de bir odada saat, dokuzu beş geçeyi gösteriyor.",
+    "O sabah ülke bir an durdu."
+   ],
+   "big": "09.05",
+   "sub": "DOLMABAHÇE",
+   "year": 1938,
+   "label": "09.05",
+   "prompt": "Close-up of an antique palace mantel clock with its hands stopped at five past nine, soft window light, dust in the air, blurred Ottoman-era palace interior behind it, plain clock face with no writing, no people, solemn and quiet mood, cinematic vertical composition",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "prompt_tam": "Close-up of an antique palace mantel clock with its hands stopped at five past nine, soft window light, dust in the air, blurred Ottoman-era palace interior behind it, plain clock face with no writing, no people, solemn and quiet mood, cinematic vertical composition, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s01.jpg"
+  },
+  {
+   "lines": [
+    "Bin dokuz yüz on dokuz, on dokuz Mayıs.",
+    "Mustafa Kemal Samsun'a çıktı ve Kurtuluş Savaşı'nın yolu açıldı."
+   ],
+   "big": "1919",
+   "sub": "SAMSUN",
+   "year": 1919,
+   "label": "1919",
+   "prompt": "A steamship at anchor off a Black Sea port at dawn seen from a distant shore, small silhouettes of men in 1919 Ottoman military overcoats and papakha hats standing on the pier seen from behind and far away, calm sea, pale golden sky, no flags, no text on the ship",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "prompt_tam": "A steamship at anchor off a Black Sea port at dawn seen from a distant shore, small silhouettes of men in 1919 Ottoman military overcoats and papakha hats standing on the pier seen from behind and far away, calm sea, pale golden sky, no flags, no text on the ship, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s02.jpg"
+  },
+  {
+   "lines": [
+    "Bin dokuz yüz yirmi, yirmi üç Nisan.",
+    "Ankara'da Türkiye Büyük Millet Meclisi açıldı."
+   ],
+   "big": "1920",
+   "sub": "TBMM",
+   "year": 1920,
+   "label": "1920",
+   "prompt": "A modest two-storey stone assembly building in Ankara in 1920, a crowd of men in period Anatolian dress, fezzes, turbans and lambskin caps gathering at the entrance, all seen from behind or as distant silhouettes, spring morning light, no signs, no writing, no flags",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "prompt_tam": "A modest two-storey stone assembly building in Ankara in 1920, a crowd of men in period Anatolian dress, fezzes, turbans and lambskin caps gathering at the entrance, all seen from behind or as distant silhouettes, spring morning light, no signs, no writing, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s03.jpg"
+  },
+  {
+   "lines": [
+    "Bin dokuz yüz yirmi iki.",
+    "Türk ordusu İzmir'e girdi."
+   ],
+   "big": "1922",
+   "sub": "İZMİR",
+   "year": 1922,
+   "label": "1922",
+   "prompt": "Izmir waterfront at early morning in 1922, distant silhouettes of horsemen in Turkish army uniforms riding along the quay, one Turkish flag on a pole with correct 3:2 proportions, a white crescent and five-pointed star on a red field, crescent opening to the right, calm bay, soft warm light, no text, no violence",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "prompt_tam": "Izmir waterfront at early morning in 1922, distant silhouettes of horsemen in Turkish army uniforms riding along the quay, one Turkish flag on a pole with correct 3:2 proportions, a white crescent and five-pointed star on a red field, crescent opening to the right, calm bay, soft warm light, no text, no violence, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s04.jpg"
+  },
+  {
+   "lines": [
+    "Yirmi dokuz Ekim bin dokuz yüz yirmi üç.",
+    "Cumhuriyet ilan edildi."
+   ],
+   "big": "1923",
+   "sub": "CUMHURİYET",
+   "year": 1923,
+   "label": "1923",
+   "prompt": "Ankara street in October 1923, people in 1920s clothing seen from behind looking up at Turkish flags on poles, each flag with correct 3:2 proportions and a white crescent and star on red, golden afternoon light, dignified and hopeful mood, no writing, no banners with text",
+   "fx": [
+    "gold",
+    "rays"
+   ],
+   "effect": "glow",
+   "prompt_tam": "Ankara street in October 1923, people in 1920s clothing seen from behind looking up at Turkish flags on poles, each flag with correct 3:2 proportions and a white crescent and star on red, golden afternoon light, dignified and hopeful mood, no writing, no banners with text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s05.jpg"
+  },
+  {
+   "lines": [
+    "Bin dokuz yüz otuz dört.",
+    "Kadınlara milletvekili seçme ve seçilme hakkı verildi."
+   ],
+   "big": "1934",
+   "sub": "KADIN HAKKI",
+   "year": 1934,
+   "label": "1934",
+   "prompt": "Women in 1930s style coats and hats walking up the steps of a government building in Ankara, seen from behind and at a distance, crisp morning light, modern republic-era architecture, no signs, no writing, no flags",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "prompt_tam": "Women in 1930s style coats and hats walking up the steps of a government building in Ankara, seen from behind and at a distance, crisp morning light, modern republic-era architecture, no signs, no writing, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s06.jpg"
+  },
+  {
+   "lines": [
+    "Bin dokuz yüz otuz sekiz sonbaharı.",
+    "Hastalığı ağırlaşmıştı ve Dolmabahçe'de tedavi görüyordu."
+   ],
+   "big": "1938",
+   "sub": "SONBAHAR",
+   "year": 1938,
+   "label": "1938",
+   "prompt": "Dolmabahçe Palace waterfront at dusk in autumn 1938 seen from across the Bosphorus, one warm lit window, mist over the water, a lone small boat, empty quay, quiet melancholy mood, no people, no text",
+   "fx": [
+    "fog",
+    "flicker"
+   ],
+   "prompt_tam": "Dolmabahçe Palace waterfront at dusk in autumn 1938 seen from across the Bosphorus, one warm lit window, mist over the water, a lone small boat, empty quay, quiet melancholy mood, no people, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s07.jpg"
+  },
+  {
+   "lines": [
+    "On Kasım bin dokuz yüz otuz sekiz.",
+    "Sabah dokuzu beş geçe Atatürk hayata gözlerini yumdu."
+   ],
+   "big": "09.05",
+   "sub": "10 KASIM",
+   "year": 1938,
+   "label": "10 KASIM",
+   "prompt": "A tall palace window with heavy curtains at early morning, pale light falling on an empty floor, a Turkish flag lowered halfway on a pole visible outside through the misty glass, correct 3:2 flag proportions with white crescent and star on red, no people, very quiet and solemn, no text",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "effect": "stamp",
+   "prompt_tam": "A tall palace window with heavy curtains at early morning, pale light falling on an empty floor, a Turkish flag lowered halfway on a pole visible outside through the misty glass, correct 3:2 flag proportions with white crescent and star on red, no people, very quiet and solemn, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s08.jpg"
+  },
+  {
+   "lines": [
+    "Bin dokuz yüz elli üç, on Kasım.",
+    "Naaşı Anıtkabir'e nakledildi."
+   ],
+   "big": "1953",
+   "sub": "ANITKABİR",
+   "year": 1953,
+   "label": "1953",
+   "prompt": "Anıtkabir mausoleum in Ankara at dawn seen from the Lion Road with stone lion statues lining the path, mist over the stone courtyard, tiny silhouettes of visitors far away, soft golden light, no text, no inscriptions",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "prompt_tam": "Anıtkabir mausoleum in Ankara at dawn seen from the Lion Road with stone lion statues lining the path, mist over the stone courtyard, tiny silhouettes of visitors far away, soft golden light, no text, no inscriptions, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s09.jpg"
+  },
+  {
+   "lines": [
+    "Bugün saat dokuzu beş geçe sirenler çalıyor.",
+    "Bir ülke saygıyla duruyor."
+   ],
+   "big": "SAYGI",
+   "sub": "SAYGI DURUŞU",
+   "year": 2026,
+   "label": "BUGÜN",
+   "prompt": "A city street in Istanbul in the morning where a large crowd stands motionless with heads lowered, seen from behind, Turkish flags at half-mast on poles with correct 3:2 proportions, white crescent and star on red, foggy Bosphorus in the background, quiet and respectful mood, no text, no banners with writing",
+   "fx": [
+    "fog"
+   ],
+   "prompt_tam": "A city street in Istanbul in the morning where a large crowd stands motionless with heads lowered, seen from behind, Turkish flags at half-mast on poles with correct 3:2 proportions, white crescent and star on red, foggy Bosphorus in the background, quiet and respectful mood, no text, no banners with writing, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s10.jpg"
+  },
+  {
+   "lines": [
+    "Atatürk şöyle demişti:",
+    "Benim naçiz vücudum elbet bir gün toprak olacaktır, ancak Türkiye Cumhuriyeti ilelebet payidar kalacaktır."
+   ],
+   "big": "SÖZ",
+   "sub": "ATATÜRK",
+   "year": 2026,
+   "label": "BUGÜN",
+   "prompt": "An empty wooden desk by a window at dawn with a closed book, a fountain pen and a folded Turkish flag with correct proportions, soft light across the desk, Bosphorus mist outside, no people, no readable writing on any object",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "prompt_tam": "An empty wooden desk by a window at dawn with a closed book, a fountain pen and a folded Turkish flag with correct proportions, soft light across the desk, Bosphorus mist outside, no people, no readable writing on any object, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s11.jpg"
+  },
+  {
+   "lines": [
+    "Cumhuriyet bize emanet.",
+    "Onu yaşatacağız. Saygıyla, özlemle, bağlılıkla."
+   ],
+   "big": "EMANET",
+   "sub": "SAYGIYLA ANIYORUZ",
+   "year": 2026,
+   "label": "BUGÜN",
+   "prompt": "A Turkish flag with correct 3:2 proportions, white crescent and five-pointed star on a red field, crescent opening to the right, flying at full mast against a calm golden sunrise sky, filmed from below, a few distant silhouettes of people far away at the bottom of the frame, hopeful and solemn mood, no text",
+   "fx": [
+    "gold",
+    "rays"
+   ],
+   "effect": "glow",
+   "prompt_tam": "A Turkish flag with correct 3:2 proportions, white crescent and five-pointed star on a red field, crescent opening to the right, flying at full mast against a calm golden sunrise sky, filmed from below, a few distant silhouettes of people far away at the bottom of the frame, hopeful and solemn mood, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s12.jpg"
+  }
+ ],
+ "finale": "ayyildiz",
+ "maps": [],
+ "cards": [
+  {
+   "scene": 8,
+   "value": 15,
+   "unit": "YIL",
+   "small": "GEÇİCİ KABİRDE"
+  }
+ ],
+ "eras": [
+  {
+   "name": "KURTULUŞ",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "name": "CUMHURİYET",
+   "from": 4,
+   "to": 5
+  },
+  {
+   "name": "VEDA",
+   "from": 6,
+   "to": 8
+  },
+  {
+   "name": "EMANET",
+   "from": 9,
+   "to": 11
+  }
+ ],
+ "outro": {
+  "title": "SONSUZA DEK SAYGIYLA",
+  "line": "Cumhuriyet bize emanet."
+ },
+ "aciklama": "Bugün sabah dokuzu beş geçe Türkiye, Atatürk'ü saygı ve özlemle anıyor. Samsun'dan Anıtkabir'e uzanan yolu kısa kilometre taşlarıyla andık. Cumhuriyet bize emanet. Siz bugün saat 09.05'te nerede olacaksınız ve Atatürk'ü nasıl anıyorsunuz?",
+ "hashtagler": [
+  "#10Kasım",
+  "#Atatürk",
+  "#SaygıVeÖzlemle",
+  "#AtatürküAnmaGünü",
+  "#Anıtkabir",
+  "#09Kasım",
+  "#CumhuriyetEmanet",
+  "#MustafaKemalAtatürk",
+  "#AnimasyonluTarih",
+  "#Dolmabahçe"
+ ],
+ "kaynaklar": [
+  "https://tr.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk'%C3%BCn_%C3%B6l%C3%BCm%C3%BC_ve_devlet_cenaze_t%C3%B6reni",
+  "https://www.aa.com.tr/tr/gundem/buyuk-onder-ataturkun-ebediyete-intikalinin-85inci-yili/3048106",
+  "https://www.milliyet.com.tr/gundem/nefeslerin-tutuldugu-tarih-9-kasim-1953-1789751",
+  "https://fnb.meb.k12.tr/icerikler/10kasimataturkuanmagunuveataturkhaftasi_15507486.html",
+  "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Mustafa_Kemal_Atat%C3%BCrk",
+  "https://hacibektasivelioemo.meb.k12.tr/icerikler/benimnacizvucudumelbetbirguntoprakolacaktirancakturkiyecumhuriyetiilelebetpayidarkalacaktirmustafakemalataturk_16824213.html"
+ ],
+ "kontrol_notlari": [
+  "Doğrulandı (AA, Vikipedi, MEB sayfası): Atatürk 10 Kasım 1938 Perşembe sabahı saat 09.05'te Dolmabahçe Sarayı'nda öldü.",
+  "Doğrulandı (Vikipedi, MEB sayfası, Milliyet): Naaşı 21 Kasım 1938'de Ankara Etnografya Müzesi'ndeki geçici kabre konuldu ve 10 Kasım 1953'te Anıtkabir'e nakledildi. Aradaki süre 15 yıl.",
+  "Sağlığının 1937'den itibaren bozulduğu ve ölümüne yakın dönemde Dolmabahçe Sarayı'nda kaldığı kaynaklarda yer alıyor (Vikipedi, MEB sayfası).",
+  "Alıntı: 'Benim naçiz vücudum elbet bir gün toprak olacaktır, ancak Türkiye Cumhuriyeti ilelebet payidar kalacaktır.' sözü Atatürk'e atfedilen ve MEB sayfalarında yer alan yaygın bir sözdür. Kaynaklarda bağlam ve tarih tutarsız: 1923, 1925, 1926 ve 1933 gösteriliyor. Bu yüzden metinde tarih verilmedi. Bazı kaynaklarda 'ancak', bazılarında 'fakat' geçiyor. Yayından önce Atatürk Araştırma Merkezi veya Söylev ve Demeçler gibi birincil bir kaynaktan teyit edilmesi önerilir.",
+  "Bu oturumda aramayla doğrulanmadı, genel tarih bilgisine dayanıyor: 19 Mayıs 1919 Samsun'a çıkış, 23 Nisan 1920 TBMM'nin açılışı, 9 Eylül 1922 İzmir'e giriş, 29 Ekim 1923 Cumhuriyet'in ilanı ve 1934'te kadınlara seçme ve seçilme hakkı (Aralık 1934). Yayından önce kontrol edilmesi önerilir.",
+  "Sahne 1'deki 'saat dokuzu beş geçeyi gösteriyor' ifadesi, Dolmabahçe'deki odada saatin bu saatte durdurulduğu bilgisine dayanıyor. Bu bilgi de aramada doğrulanmadı. İstenirse sahne daha güvenli bir ifadeyle değiştirilebilir.",
+  "Kıyıda siren ve saygı duruşunun süresi (bir mi iki dakika mı) kaynaklara göre değiştiği için metinde süre verilmedi.",
+  "Doğum yılı kaynaklarda tartışmalı olduğu için (1880/1881) metinde ve kartlarda kullanılmadı.",
+  "Görsel notları: Atatürk'ün yüzü veya portresi yok, tüm figürler arkadan veya uzaktan siluet. Bayraklar 3:2 oranında, beyaz ay yıldız kırmızı zeminde ve ay açıklığı sağa dönük. Harita yok. Sahne 8'deki yarıya inmiş bayrak için bayrak direği oranlarına dikkat edin.",
+  "Kelime sayısı yaklaşık 148 (130-150 aralığında), okunuşu yaklaşık 60-65 saniye. Yıllar yazıyla yazıldı."
+ ],
+ "konu": "10 Kasım 1938 – Atatürk'ü saygı ve özlemle anıyoruz",
+ "tarih": "2026-11-10",
+ "slug": "10-kasim-1938-ataturk-u-saygi-ve-ozlemle-aniyoruz",
+ "durum": "onay-bekliyor",
+ "seslendirme_metni": "Dolmabahçe'de bir odada saat, dokuzu beş geçeyi gösteriyor.\nO sabah ülke bir an durdu.\nBin dokuz yüz on dokuz, on dokuz Mayıs.\nMustafa Kemal Samsun'a çıktı ve Kurtuluş Savaşı'nın yolu açıldı.\nBin dokuz yüz yirmi, yirmi üç Nisan.\nAnkara'da Türkiye Büyük Millet Meclisi açıldı.\nBin dokuz yüz yirmi iki.\nTürk ordusu İzmir'e girdi.\nYirmi dokuz Ekim bin dokuz yüz yirmi üç.\nCumhuriyet ilan edildi.\nBin dokuz yüz otuz dört.\nKadınlara milletvekili seçme ve seçilme hakkı verildi.\nBin dokuz yüz otuz sekiz sonbaharı.\nHastalığı ağırlaşmıştı ve Dolmabahçe'de tedavi görüyordu.\nOn Kasım bin dokuz yüz otuz sekiz.\nSabah dokuzu beş geçe Atatürk hayata gözlerini yumdu.\nBin dokuz yüz elli üç, on Kasım.\nNaaşı Anıtkabir'e nakledildi.\nBugün saat dokuzu beş geçe sirenler çalıyor.\nBir ülke saygıyla duruyor.\nAtatürk şöyle demişti:\nBenim naçiz vücudum elbet bir gün toprak olacaktır, ancak Türkiye Cumhuriyeti ilelebet payidar kalacaktır.\nCumhuriyet bize emanet.\nOnu yaşatacağız. Saygıyla, özlemle, bağlılıkla."
+}

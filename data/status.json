@@ -6,9 +6,9 @@
   "zaman": "2026-11-09T08:39:46Z"
  },
  "senarist": {
-  "durum": "hata",
-  "mesaj": "Expecting value: line 1 column 1 (char 0)",
-  "cikti": null,
-  "zaman": "2026-11-09T09:06:22Z"
+  "durum": "tamam",
+  "mesaj": "'10 Kasım 1938 – Atatürk'ü saygı ve özlemle anıyoruz' metni onay bekliyor",
+  "cikti": "projects/10-kasim-1938-ataturk-u-saygi-ve-ozlemle-aniyoruz/script.json",
+  "zaman": "2026-11-09T09:08:46Z"
  }
 }
