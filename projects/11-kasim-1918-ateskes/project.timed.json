@@ -1,0 +1,541 @@
+{
+ "title": "11 Kasım 1918: Silahların Sustuğu Gün",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "SAAT 11.00",
+ "map_region": "avrupa_genis",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": 0.0,
+   "end": 6.76,
+   "lines": [
+    "11 Kasım 1918, Compiègne ormanı.",
+    "Bir tren vagonunda, Büyük Savaş'ın sonu yazılıyor."
+   ],
+   "big": "1918",
+   "sub": "COMPIÈGNE ORMANI",
+   "year": 1918,
+   "label": "1918",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": 6.76,
+   "end": 10.74,
+   "lines": [
+    "1914'te başlayan savaş,",
+    "bütün dünyayı sarmıştı."
+   ],
+   "big": "1914",
+   "sub": "BÜYÜK SAVAŞ",
+   "year": 1914,
+   "label": "1914",
+   "fx": [
+    "ember_few",
+    "smoke"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": 10.74,
+   "end": 13.889999999999999,
+   "lines": [
+    "Siperlerde milyonlarca asker hayatını kaybetti."
+   ],
+   "big": "1916",
+   "sub": "SİPERLER",
+   "year": 1916,
+   "label": "1916",
+   "fx": [
+    "smoke",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": 13.889999999999999,
+   "end": 16.44,
+   "lines": [
+    "Sabah 5 sularında ateşkes imzalandı."
+   ],
+   "big": "İMZA",
+   "sub": "SABAH 05.00",
+   "year": 1918,
+   "label": "1918",
+   "fx": [
+    "flicker"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": 16.44,
+   "end": 21.110000000000003,
+   "lines": [
+    "Silahlar, 11. ayın 11. gününün 11. saatinde susacaktı."
+   ],
+   "big": "11.11.11",
+   "sub": "11. AY · 11. GÜN · 11. SAAT",
+   "year": 1918,
+   "label": "1918",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "glow"
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": 21.110000000000003,
+   "end": 23.560000000000002,
+   "lines": [
+    "Ama son dakikalara kadar çatışma sürdü."
+   ],
+   "big": "10.59",
+   "sub": "SON DAKİKALAR",
+   "year": 1918,
+   "label": "1918",
+   "fx": [
+    "smoke",
+    "ember_few"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "type",
+   "type_text": "SAAT 10.59"
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": 23.560000000000002,
+   "end": 28.39,
+   "lines": [
+    "Saat 11'de cephe sustu.",
+    "Dört yıl sonra ilk kez, top sesi duyulmadı."
+   ],
+   "big": "11.00",
+   "sub": "SESSİZLİK",
+   "year": 1918,
+   "label": "1918",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": 28.39,
+   "end": 30.450000000000003,
+   "lines": [
+    "Paris ve Londra barışı kutladı."
+   ],
+   "big": "ZAFER",
+   "sub": "PARİS · LONDRA",
+   "year": 1918,
+   "label": "1918",
+   "fx": [
+    "gold",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": 30.450000000000003,
+   "end": 35.39,
+   "lines": [
+    "Osmanlı için savaş, 30 Ekim'de Mondros'ta bitmişti.",
+    "Şartları çok ağırdı."
+   ],
+   "big": "MONDROS",
+   "sub": "30 EKİM 1918",
+   "year": 1918,
+   "label": "1918",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": 35.39,
+   "end": 39.67,
+   "lines": [
+    "Compiègne'den 2 gün sonra,",
+    "İtilaf donanması İstanbul'a demirledi."
+   ],
+   "big": "13 KASIM",
+   "sub": "İSTANBUL",
+   "year": 1918,
+   "label": "1918",
+   "fx": [
+    "smoke",
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": 39.67,
+   "end": 44.11,
+   "lines": [
+    "Avrupa'da savaş bitmişti.",
+    "Anadolu'da ise yeni bir mücadele başlıyordu."
+   ],
+   "big": "1919",
+   "sub": "ANADOLU",
+   "year": 1919,
+   "label": "1919",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": 44.11,
+   "end": 50.815458,
+   "lines": [
+    "Bugün birçok ülkede 11 Kasım'da,",
+    "savaşta ölenler saygıyla anılıyor."
+   ],
+   "big": "ANMA",
+   "sub": "11 KASIM",
+   "year": 2026,
+   "label": "2026",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "BÜYÜK SAVAŞ",
+   "from": 0,
+   "to": 2
+  },
+  {
+   "name": "ATEŞKES",
+   "from": 3,
+   "to": 7
+  },
+  {
+   "name": "İŞGAL",
+   "from": 8,
+   "to": 9
+  },
+  {
+   "name": "UMUT",
+   "from": 10,
+   "to": 11
+  }
+ ],
+ "outro_plan": {
+  "title": "11.11.1918",
+  "line": "Bir savaşın sonu, yeni bir destanın başı."
+ },
+ "maps_plan": [
+  {
+   "scene": 0,
+   "cities": [
+    "Compiègne",
+    "Berlin",
+    "Londra"
+   ],
+   "title": "BATI CEPHESİ"
+  },
+  {
+   "scene": 8,
+   "route": [
+    "Mondros",
+    "Çanakkale",
+    "İstanbul"
+   ],
+   "cities": [
+    "Mondros",
+    "Çanakkale",
+    "İstanbul"
+   ],
+   "title": "İŞGALİN YOLU"
+  }
+ ],
+ "cards_plan": [
+  {
+   "scene": 2,
+   "value": 10,
+   "unit": "MİLYON",
+   "small": "HAYATINI KAYBEDEN ASKER"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "maps": [
+  {
+   "start": 0.0,
+   "end": 2.3,
+   "cam_from": [
+    6.635,
+    50.97,
+    28.791840000000004
+   ],
+   "cam_to": [
+    6.635,
+    50.97,
+    25.707
+   ],
+   "routes": [],
+   "cities": [
+    "Compiègne",
+    "Berlin",
+    "Londra"
+   ],
+   "title": "BATI CEPHESİ",
+   "labels": {}
+  },
+  {
+   "start": 30.450000000000003,
+   "end": 32.75,
+   "cam_from": [
+    27.125,
+    40.44,
+    7.894880000000002
+   ],
+   "cam_to": [
+    27.125,
+    40.44,
+    7.049000000000001
+   ],
+   "routes": [
+    [
+     "Mondros",
+     "Çanakkale",
+     "İstanbul"
+    ]
+   ],
+   "cities": [
+    "Mondros",
+    "Çanakkale",
+    "İstanbul"
+   ],
+   "title": "İŞGALİN YOLU",
+   "labels": {}
+  }
+ ],
+ "cards": [
+  {
+   "start": 11.94,
+   "end": 13.589999999999998,
+   "value": 10,
+   "unit": "MİLYON",
+   "small": "HAYATINI KAYBEDEN ASKER"
+  }
+ ],
+ "outro": {
+  "start": 45.115458,
+  "title": "11.11.1918",
+  "line": "Bir savaşın sonu, yeni bir destanın başı.",
+  "line_at": 47.415457999999994
+ },
+ "duration": 51.32,
+ "jumps": [
+  {
+   "t": 44.11,
+   "value": 107
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.0,
+   "end": 3.36,
+   "text": "11 Kasım 1918, Compiègne ormanı."
+  },
+  {
+   "start": 3.73,
+   "end": 6.57,
+   "text": "Bir tren vagonunda, Büyük Savaş'ın sonu yazılıyor."
+  },
+  {
+   "start": 6.91,
+   "end": 8.84,
+   "text": "1914'te başlayan savaş,"
+  },
+  {
+   "start": 9.18,
+   "end": 10.53,
+   "text": "bütün dünyayı sarmıştı."
+  },
+  {
+   "start": 10.89,
+   "end": 13.68,
+   "text": "Siperlerde milyonlarca asker hayatını kaybetti."
+  },
+  {
+   "start": 14.04,
+   "end": 16.24,
+   "text": "Sabah 5 sularında ateşkes imzalandı."
+  },
+  {
+   "start": 16.59,
+   "end": 20.91,
+   "text": "Silahlar, 11. ayın 11. gününün 11. saatinde susacaktı."
+  },
+  {
+   "start": 21.26,
+   "end": 23.34,
+   "text": "Ama son dakikalara kadar çatışma sürdü."
+  },
+  {
+   "start": 23.71,
+   "end": 25.21,
+   "text": "Saat 11'de cephe sustu."
+  },
+  {
+   "start": 25.56,
+   "end": 28.17,
+   "text": "Dört yıl sonra ilk kez, top sesi duyulmadı."
+  },
+  {
+   "start": 28.54,
+   "end": 30.24,
+   "text": "Paris ve Londra barışı kutladı."
+  },
+  {
+   "start": 30.6,
+   "end": 33.72,
+   "text": "Osmanlı için savaş, 30 Ekim'de Mondros'ta bitmişti."
+  },
+  {
+   "start": 34.08,
+   "end": 35.18,
+   "text": "Şartları çok ağırdı."
+  },
+  {
+   "start": 35.54,
+   "end": 37.05,
+   "text": "Compiègne'den 2 gün sonra,"
+  },
+  {
+   "start": 37.41,
+   "end": 39.47,
+   "text": "İtilaf donanması İstanbul'a demirledi."
+  },
+  {
+   "start": 39.82,
+   "end": 41.19,
+   "text": "Avrupa'da savaş bitmişti."
+  },
+  {
+   "start": 41.55,
+   "end": 43.91,
+   "text": "Anadolu'da ise yeni bir mücadele başlıyordu."
+  },
+  {
+   "start": 44.26,
+   "end": 46.11,
+   "text": "Bugün birçok ülkede 11 Kasım'da,"
+  },
+  {
+   "start": 46.45,
+   "end": 48.62,
+   "text": "savaşta ölenler saygıyla anılıyor."
+  }
+ ]
+}

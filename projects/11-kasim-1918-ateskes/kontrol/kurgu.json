@@ -1,12 +1,19 @@
 {
  "asama": "kurgu",
- "durum": "hata",
- "ozet": "Video yok",
+ "durum": "tamam",
+ "ozet": "51 sn, -15 LUFS, senkron 19/19",
  "maddeler": [
   {
-   "seviye": "hata",
-   "mesaj": "video dosyası yok"
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “Bir savaşın sonu, yeni bir destanın başı.”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.8-flash 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. )"
   }
  ],
- "zaman": "2026-11-10T20:13:48Z"
+ "sure": 51.3,
+ "lufs": -14.9,
+ "senkron": "19/19",
+ "zaman": "2026-11-10T20:57:38Z"
 }

@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "10-kasim-1938-ataturk-u-saygi-ve-ozlemle-aniyoruz videosu hazır",
-  "cikti": "release:video-10-kasim-1938-ataturk-u-saygi-ve-ozlemle-aniyoruz",
-  "zaman": "2026-11-10T20:05:03Z"
+  "mesaj": "11-kasim-1918-ateskes videosu hazır",
+  "cikti": "release:video-11-kasim-1918-ateskes",
+  "zaman": "2026-11-10T20:57:45Z"
  },
  "kontrol": {
-  "durum": "hata",
-  "mesaj": "11-kasim-1918-ateskes: gorsel ✗",
+  "durum": "tamam",
+  "mesaj": "11-kasim-1918-ateskes: kurgu ✓",
   "cikti": "projects/11-kasim-1918-ateskes/kontrol",
-  "zaman": "2026-11-10T20:26:38Z"
+  "zaman": "2026-11-10T20:57:38Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
