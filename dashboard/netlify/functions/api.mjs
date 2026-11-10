@@ -1,6 +1,7 @@
 // Animasyonlu Tarih kontrol paneli API'si (Netlify Function).
 // Ortam değişkenleri: GITHUB_TOKEN (repo + workflow yetkili), GITHUB_REPO (sahip/repo), PANEL_SIFRE, AYLIK_BUTCE_USD (isteğe bağlı)
 import crypto from "node:crypto";
+import { getStore } from "@netlify/blobs";
 
 const REPO = process.env.GITHUB_REPO || "lazziya5353/animasyonlu-tarih";
 const GH = "https://api.github.com";
@@ -41,6 +42,25 @@ const dispatch = (wf, inputs = {}) => ghJson(`/repos/${REPO}/actions/workflows/$
 const validSlug = (s) => /^[a-z0-9-]{1,60}$/.test(s || "");
 
 let failed = []; // basit kaba kuvvet koruması (sıcak fonksiyon örneği başına)
+const gecerliGh = new Map(); // doğrulanmış GitHub Actions anahtarları (10 dk)
+
+// Canlı olaylar (Kurgu Stüdyosu): Netlify Blobs'ta proje başına son 800 olay
+const AJANLAR = ["arastirmaci", "senarist", "ses", "kurgucu", "efekt", "kontrol", "yayinci", "sen"];
+const TURLER = ["yazi", "gorsel", "efekt", "harita", "ses", "muzik", "kontrol", "bilgi", "ilerleme"];
+async function olayEkle(slug, liste) {
+  const st = getStore("olaylar"); const key = validSlug(slug) ? slug : "_genel";
+  const cur = (await st.get(key, { type: "json" })) || { n: 0, liste: [] };
+  for (const o of liste.slice(0, 60)) {
+    if (!AJANLAR.includes(o.ajan) || !TURLER.includes(o.tur)) continue;
+    const temiz = { i: ++cur.n, ajan: o.ajan, tur: o.tur, mesaj: String(o.mesaj || "").slice(0, 200), z: Number(o.z) || Date.now() / 1000 };
+    for (const k of ["t0", "t1", "yuzde", "sahne"]) if (Number.isFinite(Number(o[k])) && o[k] !== null && o[k] !== undefined) temiz[k] = Number(o[k]);
+    for (const k of ["seviye", "asama", "durum"]) if (typeof o[k] === "string") temiz[k] = o[k].slice(0, 20);
+    cur.liste.push(temiz);
+  }
+  cur.liste = cur.liste.slice(-800);
+  await st.setJSON(key, cur);
+  return cur.n;
+}
 
 export default async (req) => {
   if (req.method !== "POST") return json({ hata: "POST gerekli" }, 405);
@@ -52,6 +72,16 @@ export default async (req) => {
     if (!process.env.PANEL_SIFRE) return json({ hata: "PANEL_SIFRE Netlify'da tanımlı değil ya da yayın yenilenmedi" }, 500);
     if (!same(String(b.sifre || "").trim(), process.env.PANEL_SIFRE.trim())) { failed.push(now); return json({ hata: "Şifre yanlış" }, 401); }
     return json({ token: token() });
+  }
+  if (b.action === "olay" && req.headers.get("x-gh-token")) { // ajanlardan canlı olay: GitHub Actions anahtarı bu repoya erişebiliyor mu?
+    const t = req.headers.get("x-gh-token"); const k = crypto.createHash("sha256").update(t).digest("hex");
+    if (!(gecerliGh.get(k) > Date.now())) {
+      const r = await fetch(`${GH}/repos/${REPO}`, { headers: { authorization: `Bearer ${t}`, accept: "application/vnd.github+json" } });
+      if (!r.ok) return json({ hata: "Yetkisiz" }, 401);
+      gecerliGh.set(k, Date.now() + 10 * 60e3);
+    }
+    if (!Array.isArray(b.olaylar)) return json({ hata: "Olay yok" }, 400);
+    try { return json({ ok: true, n: await olayEkle(b.slug, b.olaylar) }); } catch (e) { return json({ hata: String(e.message || e) }, 500); }
   }
   if (!same(req.headers.get("x-panel-token") || "", token())) return json({ hata: "Giriş gerekli" }, 401);
   if (!process.env.GITHUB_TOKEN) return json({ hata: "GITHUB_TOKEN tanımlı değil (Netlify > Site settings > Environment variables)" }, 500);
@@ -81,19 +111,20 @@ export default async (req) => {
       }
       case "project": {
         if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);
-        const [script, project, imgs, files, rel, yayinlar, kuyruk, ...kontrol] = await Promise.all([
+        const [script, project, imgs, files, rel, yayinlar, kuyruk, timed, ...kontrol] = await Promise.all([
           readJson(`projects/${b.slug}/script.json`), readJson(`projects/${b.slug}/project.json`),
           gh(`/repos/${REPO}/contents/projects/${b.slug}/images`).then((r) => (r.ok ? r.json() : [])),
           gh(`/repos/${REPO}/contents/projects/${b.slug}`).then((r) => (r.ok ? r.json() : [])),
           gh(`/repos/${REPO}/releases/tags/video-${b.slug}`).then((r) => (r.ok ? r.json() : null)),
           readJson("data/yayinlar.json"), readJson("data/yayin_kuyrugu.json"),
+          b.studyo ? readJson(`projects/${b.slug}/project.timed.json`) : null,
           ...["senaryo", "ses", "gorsel", "kurgu"].map((k) => readJson(`projects/${b.slug}/kontrol/${k}.json`)),
         ]);
         const asset = rel?.assets?.find((a) => a.name.endsWith(".mp4"));
         return json({ script, project, gorseller: (imgs || []).map((x) => x.name), dosyalar: (files || []).map((x) => x.name),
           video: asset ? { id: asset.id, boyut: asset.size, zaman: asset.updated_at } : null,
           kontrol: Object.fromEntries(["senaryo", "ses", "gorsel", "kurgu"].map((k, i) => [k, kontrol[i]])),
-          yayin: yayinlar?.[b.slug] || {}, plan: (kuyruk?.isler || []).filter((x) => x.slug === b.slug).slice(-5) });
+          timed, yayin: yayinlar?.[b.slug] || {}, plan: (kuyruk?.isler || []).filter((x) => x.slug === b.slug).slice(-5) });
       }
       case "file": { // görsel / ses önizleme (en fazla ~4 MB)
         if (!/^projects\/[a-z0-9-]+\/[\w./-]+\.(jpg|jpeg|png|wav|mp3)$/.test(b.path || "") || b.path.includes("..")) return json({ hata: "Geçersiz dosya" }, 400);
@@ -155,6 +186,16 @@ export default async (req) => {
         await writeFile("reports/latest.json", Buffer.from(JSON.stringify(rep, null, 1)).toString("base64"), `Karar: ${b.karar} · ${b.baslik}`);
         if (b.karar === "yap" && hedef && b.api) await dispatch("senarist", { konu: `${hedef.baslik} (${hedef.yil || ""})`, tarih: hedef.tarih || "", notlar: hedef.ozet || "" });
         return json({ ok: true });
+      }
+      case "olay": { // panelden (senin) olayların: ör. toplu görsel yükleme
+        if (!Array.isArray(b.olaylar)) return json({ hata: "Olay yok" }, 400);
+        return json({ ok: true, n: await olayEkle(b.slug, b.olaylar.map((o) => ({ ...o, ajan: "sen" }))) });
+      }
+      case "olaylar": { // Kurgu Stüdyosu: belli bir sıradan sonraki olaylar
+        if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);
+        const cur = (await getStore("olaylar").get(b.slug, { type: "json" })) || { n: 0, liste: [] };
+        const den = Number(b.den) || 0;
+        return json({ n: cur.n, olaylar: cur.liste.filter((o) => o.i > den) });
       }
       case "save_caption": { // paylaşım açıklamasını düzenle
         if (!validSlug(b.slug) || typeof b.metin !== "string") return json({ hata: "Geçersiz istek" }, 400);

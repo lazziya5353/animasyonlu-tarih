@@ -52,3 +52,4 @@ details.krow{display:block}.krow b{min-width:78px;font-size:14px}.krow summary .
 .prog{height:8px;border-radius:6px;background:var(--card2);margin-top:12px;overflow:hidden}.prog i{display:block;height:100%;width:0;background:var(--gold);transition:width .3s}
 .kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}.kpi div{background:var(--card2);border-radius:12px;padding:10px;text-align:center}.kpi b{display:block;font-family:Cinzel;font-size:18px;color:var(--gold)}.kpi span{font-size:11.5px;color:var(--mut)}
 .ym{padding:12px 0;border-top:1px solid var(--line)}.ym:first-child{border-top:0;padding-top:0}.ym .acts{display:flex;gap:6px;margin-top:8px}.ym .acts button{padding:6px 11px;font-size:12px}
+a.btn{text-decoration:none;display:inline-block}

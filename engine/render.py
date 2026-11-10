@@ -11,6 +11,11 @@ from fx import atmos, AyYildiz
 from maps import MapRenderer
 import music as MUSIC
 from align import align
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "scripts"))
+try:
+    from olay import olay
+except Exception:  # olay sistemi yoksa motor yine çalışır
+    def olay(*a, **k): pass
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 try: MARKA = json.load(open(os.path.join(HERE, "assets", "marka.json")))
@@ -239,19 +244,39 @@ class Project:
                         f"[md][v1]amix=inputs=2:normalize=0:duration=longest,loudnorm=I=-14:TP=-1.5,atrim=0:{self.dur}[o]", "-map", "[o]", "-ar", "44100", mix], check=True)
         return mix
 
+    def olay_plan(self):
+        """Kurgu Stüdyosu'ndaki canlı imleçler için: kurgucunun zaman çizelgesine yerleştirdiği her şeyi bildirir."""
+        slug = os.path.basename(os.path.normpath(self.dir)); off = self.off
+        O = lambda tur, msg, **k: olay("kurgucu", tur, msg, slug=slug, **k)
+        O("ses", f"Ses analiz ediliyor: {len(self.caps)} cümle, {self.dur:.0f} sn", t0=0, t1=self.dur)
+        for i, s in enumerate(self.S):
+            O("gorsel", f"Sahne {i + 1} · {s.get('big') or ''} yerleştirildi", t0=s["start"] + off, t1=s["end"] + off, sahne=i + 1)
+            for c in self.caps:
+                if s["start"] - .05 <= c["start"] < s["end"]: O("yazi", f"“{c['text'][:48]}” sese hizalandı", t0=c["start"] + off, t1=c["end"] + off, sahne=i + 1)
+            if s.get("fx") or s.get("effect"):
+                olay("efekt", "efekt", f"Sahne {i + 1}: {', '.join((s.get('fx') or []) + ([s['effect']] if s.get('effect') else []))}", slug=slug, t0=s["start"] + off, t1=min(s["end"], s["start"] + 2.6) + off, sahne=i + 1)
+        for m in self.maps: O("harita", f"Harita: {m.get('title', '')}", t0=m["start"] + off, t1=m["end"] + off)
+        for c in self.cards: olay("efekt", "efekt", f"Sayaç kartı: {c.get('value')} {c.get('unit', '')}", slug=slug, t0=c["start"] + off, t1=c["end"] + off)
+        for j in self.jumps: olay("efekt", "efekt", f"Zaman atlaması: +{j.get('value')} yıl", slug=slug, t0=j["t"] + off, t1=j["t"] + off + 1.4)
+        if self.cfg.get("ayyildiz"): a = self.cfg["ayyildiz"]; olay("efekt", "efekt", "Ay yıldız finali", slug=slug, t0=a[0] + off, t1=a[3] + off)
+        O("muzik", "Müzik besteleniyor, sese göre kısılacak", t0=0, t1=self.dur)
+        olay("efekt", "efekt", f"Filigran: {MARKA.get('handle', '')}", slug=slug, t0=1.0, t1=self.dur - 2.4)
+
     def render(self, out=None, crf=28):
-        out = out or os.path.join(self.dir, "out", "video.mp4"); mix = self.audio()
+        out = out or os.path.join(self.dir, "out", "video.mp4"); self.olay_plan(); mix = self.audio()
         p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-i", mix,
                               "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", str(crf), "-pix_fmt", "yuv420p",
                               "-c:a", "aac", "-b:a", "192k", "-t", f"{self.dur:.2f}", "-movflags", "+faststart", out + ".tmp.mp4"], stdin=subprocess.PIPE)
-        N = int(self.dur * FPS)
+        N = int(self.dur * FPS); slug = os.path.basename(os.path.normpath(self.dir)); adim = max(1, N // 20)
         for n in range(N):
             p.stdin.write(self.frame(n / FPS).tobytes())
             if n % 300 == 0: print(f"{n}/{N}", flush=True)
+            if n % adim == 0: olay("kurgucu", "ilerleme", f"Kareler işleniyor %{100 * n // N}", slug=slug, t0=n / FPS, yuzde=100 * n // N)
         p.stdin.close(); p.wait()
         if p.returncode != 0: raise SystemExit(f"ffmpeg başarısız oldu (kod {p.returncode}); video üretilemedi")
         os.replace(out + ".tmp.mp4", out)
         json.dump(UYARILAR, open(os.path.join(os.path.dirname(out), "uyarilar.json"), "w"), ensure_ascii=False)
+        olay("kurgucu", "bilgi", "Video hazır ✓", slug=slug, yuzde=100)
         return out
 
 if __name__ == "__main__":

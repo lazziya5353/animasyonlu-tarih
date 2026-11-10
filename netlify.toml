@@ -4,7 +4,7 @@
   functions = "dashboard/netlify/functions"
   command = "echo panel hazır"
   # Ajanlar her rapor/projede repoya yazar; panel kodu değişmedikçe Netlify yeniden yayınlamasın (kredi tasarrufu)
-  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- dashboard/ netlify.toml"
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- dashboard/ netlify.toml package.json"
 
 [[headers]]
   for = "/*"

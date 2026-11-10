@@ -1,0 +1,9 @@
+{
+  "name": "animasyon-tarih-panel",
+  "private": true,
+  "description": "Kontrol paneli fonksiyonlarının bağımlılıkları (Netlify kurar)",
+  "type": "module",
+  "dependencies": {
+    "@netlify/blobs": ">=8.1.0"
+  }
+}

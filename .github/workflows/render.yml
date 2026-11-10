@@ -14,6 +14,8 @@ jobs:
     timeout-minutes: 60
     env:
       PYTHONUNBUFFERED: "1"
+      GH_TOKEN: ${{ github.token }}   # canlı olaylar için (Kurgu Stüdyosu)
+      PANEL_URL: ${{ vars.PANEL_URL }}
       SLUG: ${{ inputs.slug }}
     steps:
       - name: Proje adını kontrol et

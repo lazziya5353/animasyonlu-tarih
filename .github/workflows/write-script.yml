@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PYTHONUNBUFFERED: "1"
+      GH_TOKEN: ${{ github.token }}   # canlı olaylar için (Kurgu Stüdyosu)
+      PANEL_URL: ${{ vars.PANEL_URL }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

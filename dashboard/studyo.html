@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0d0f14">
+<title>Kurgu Stüdyosu · Animasyon Tarih</title>
+<link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="studyo.css?v=1">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="./">⏳ ANİMASYON TARİH</a>
+  <span class="proj" id="proj">Kurgu Stüdyosu</span>
+  <div class="chips" id="chips"></div>
+  <span class="canli" id="canli">○ Bekleniyor</span>
+  <button id="tekrar" title="Bütün süreci baştan hızlı izle">↺ Tekrar oynat</button>
+  <span class="tc" id="tc">00:00.0</span>
+</header>
+<main class="grid">
+  <section class="pane havuz"><div class="h">Medya havuzu</div><div class="pool" id="pool"></div></section>
+  <section class="pane"><div class="h">Ajan akışı</div><div class="log" id="log"></div></section>
+  <section class="pane mon"><div class="h">Program</div>
+    <div class="ekran" id="ekran"><video id="v" playsinline muted></video><img id="still" alt=""><div class="alt" id="alt"></div><div class="render-bar" id="rbar"><i></i><span></span></div></div>
+    <div class="ctrl"><button id="oynat">▶ Oynat</button><button id="ses" title="Sesi aç/kapat">🔇</button><span id="st">—</span></div></section>
+  <section class="pane insp"><div class="h">Sahne denetçisi</div>
+    <div class="big" id="ibig">—</div><div class="sub" id="isub"></div>
+    <div class="h k">Altyazı</div><div class="field" id="icap"></div>
+    <div class="row"><span>Efekt</span><b id="ifx">—</b></div>
+    <div class="row"><span>Dönem</span><b id="iera">—</b></div>
+    <div class="h k">Kontrolcü notları</div><div id="ikon" class="kon"></div>
+  </section>
+</main>
+<section class="tl" id="tl">
+  <div class="ruler" id="ruler"></div>
+  <div class="track" data-tr="yazi"><span class="lab">YAZI</span></div>
+  <div class="track" data-tr="efekt"><span class="lab">EFEKT</span></div>
+  <div class="track" data-tr="gorsel"><span class="lab">GÖRSEL</span></div>
+  <div class="track" data-tr="harita"><span class="lab">HARİTA</span></div>
+  <div class="track" data-tr="ses"><span class="lab">SES</span><canvas class="wave" id="wave"></canvas></div>
+  <div class="track" data-tr="muzik"><span class="lab">MÜZİK</span></div>
+  <div class="track" data-tr="kontrol"><span class="lab">KONTROL</span></div>
+  <div class="ph" id="ph"></div><div class="rh" id="rh"></div>
+</section>
+<div id="imlecler"></div>
+<div class="giris hide" id="giris"><div class="kutu"><b>Önce panele giriş yap</b><a href="./">Panele git →</a></div></div>
+<script src="studyo.js?v=1"></script>
+</body>
+</html>

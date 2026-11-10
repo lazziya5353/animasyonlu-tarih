@@ -8,6 +8,7 @@ import os, sys, re, json, math, argparse, datetime, difflib, subprocess, hashlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import ROOT, set_status
 import gemini
+from olay import olay
 
 ENGINE = os.path.join(ROOT, "engine")
 TR_KARAKTER_SN = 11.3          # işlenmiş seslendirmede ölçülen hız (karakter / sn)
@@ -15,6 +16,7 @@ REELS_MAX = 90                 # Instagram API ile Reels üst sınırı (sn)
 
 
 # ───────── ortak ─────────
+ASAMA_AD = {"senaryo": "Senaryo", "ses": "Ses", "gorsel": "Görsel", "kurgu": "Kurgu"}
 class Rapor:
     def __init__(self, asama):
         self.asama = asama; self.maddeler = []; self.ek = {}
@@ -36,6 +38,9 @@ class Rapor:
         out = {"asama": self.asama, "durum": self.durum, "ozet": ozet, "maddeler": self.maddeler, **self.ek,
                "zaman": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
         json.dump(out, open(os.path.join(d, f"{self.asama}.json"), "w"), ensure_ascii=False, indent=1)
+        for m in self.maddeler:
+            if m["seviye"] != "bilgi": olay("kontrol", "kontrol", f"{ASAMA_AD.get(self.asama, self.asama)}: {m['mesaj'][:120]}", slug=slug, sahne=m.get("sahne"), seviye=m["seviye"], asama=self.asama)
+        olay("kontrol", "bilgi", f"{ASAMA_AD.get(self.asama, self.asama)} kontrolü: {ozet}", slug=slug, asama=self.asama, durum=self.durum)
         ikon = {"tamam": "✓", "uyari": "!", "hata": "✗"}[self.durum]
         print(f"[{self.asama}] {ikon} {ozet}")
         for m in self.maddeler: print(f"   - {m['seviye']}: {('sahne ' + str(m['sahne']) + ': ') if m.get('sahne') else ''}{m['mesaj']}")

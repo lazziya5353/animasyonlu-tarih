@@ -5,6 +5,7 @@ GEMINI_API_KEY yoksa hiçbir şey yapmaz (görsel/ses elle yüklenir).
   python scripts/generate_assets.py --slug malazgirt-1071 --ses       # sadece ses"""
 import os, sys, json, base64, argparse, subprocess, urllib.request, urllib.error, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from olay import olay, slug_ayarla
 from common import ROOT, log_usage, set_status
 
 API = "https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent"
@@ -63,11 +64,15 @@ def main():
     if not os.environ.get("GEMINI_API_KEY"):
         set_status("gorsel", "bekliyor", "GEMINI_API_KEY yok: görselleri ve sesi panelden elle yükle"); print("GEMINI_API_KEY yok, atlandı."); return
     d = os.path.join(ROOT, "projects", a.slug); sc = json.load(open(os.path.join(d, "script.json")))
-    set_status("gorsel", "calisiyor", f"{a.slug} ses ve görseller üretiliyor")
+    set_status("gorsel", "calisiyor", f"{a.slug} ses ve görseller üretiliyor"); slug_ayarla(a.slug)
     notes = []
     if a.ses or not a.only:  # önce ses: görseller kapalı olsa bile ses üretilsin
         if not os.path.exists(os.path.join(d, "ses.wav")) or a.ses:
-            try: print("ses", voice(sc["seslendirme_metni"], os.path.join(d, "ses.wav"))); notes.append("ses hazır")
+            try:
+                olay("ses", "ses", f"Seslendirme başladı: {len(sc['seslendirme_metni'])} karakter, erkek anlatıcı")
+                print("ses", voice(sc["seslendirme_metni"], os.path.join(d, "ses.wav"))); notes.append("ses hazır")
+                sure = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", os.path.join(d, "ses.wav")], capture_output=True, text=True).stdout or 0)
+                olay("ses", "ses", f"Ses hazır: {sure:.0f} sn, duraklamalar kısaltıldı", t0=0, t1=sure)
             except GeminiError as e: print("SES HATASI:", e); notes.append(f"ses üretilemedi ({e})")
     if not a.ses:
         made = 0
