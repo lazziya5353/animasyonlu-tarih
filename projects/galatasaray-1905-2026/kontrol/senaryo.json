@@ -1,13 +1,8 @@
 {
  "asama": "senaryo",
- "durum": "uyari",
- "ozet": "14 sahne, tahmini 84 sn · 1 not",
- "maddeler": [
-  {
-   "seviye": "uyari",
-   "mesaj": "metin biraz uzun: tahmini 84 sn"
-  }
- ],
- "tahmini_sure": 84.4,
- "zaman": "2026-11-10T21:32:48Z"
+ "durum": "tamam",
+ "ozet": "13 sahne, tahmini 68 sn · 0 not",
+ "maddeler": [],
+ "tahmini_sure": 67.7,
+ "zaman": "2026-11-10T22:00:27Z"
 }

@@ -15,7 +15,7 @@ def proje_yaz(sc, d):
         kb = [[1.04, 1.18, .5, .55, .5, .5], [1.18, 1.04, .5, .5, .5, .55]][i % 2]
         scenes.append({"image": s["image"], "start": None, "end": None, "lines": s["lines"], "big": s.get("big"), "sub": s.get("sub"),
                        "year": s.get("year"), "label": s.get("label", str(s.get("year", ""))), "fx": s.get("fx", []), "kb": kb,
-                       **({"effect": s["effect"]} if s.get("effect") in ("stamp", "type", "glow") else {}), **({"type_text": s["type_text"]} if s.get("type_text") else {})})
+                       **({"effect": s["effect"]} if s.get("effect") in ("stamp", "type", "glow") else {}), **({"type_text": s["type_text"]} if s.get("type_text") else {}), **({"tablo": s["tablo"]} if s.get("tablo") else {})})
     proj = {"title": sc.get("baslik", sc.get("konu", "")), "voice": "ses.wav", "voice_offset": 0.3, "hook": sc.get("hook"), "map_region": sc.get("map_region", "avrupa_ortadogu"),
             "scenes": scenes, "eras": sc.get("eras", []), "outro_plan": sc.get("outro"), "maps_plan": sc.get("maps", []), "cards_plan": sc.get("cards", []),
             "music": {"booms": [0.3]}, "finale": sc.get("finale", "")}

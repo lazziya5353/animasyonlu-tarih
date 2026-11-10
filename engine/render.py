@@ -56,7 +56,7 @@ class Project:
         self.maps = c.get("maps", []); self.mapr = MapRenderer(c.get("map_region", "avrupa_ortadogu"), c.get("cities")) if self.maps else None
         self.jumps = c.get("jumps", []); self.cards = c.get("cards", [])
         ay = c.get("ayyildiz"); self.ay = AyYildiz(*ay) if ay else None
-        self.eras = c.get("eras", [])
+        self.eras = c.get("eras", []); self._tablo = {}
 
     def auto_time(self):
         """Her sahnenin 'lines' (cümleler) alanı varsa sesi cümlelere hizalar ve sahne/altyazı zamanlarını yazar."""
@@ -67,6 +67,12 @@ class Project:
         for i, s in enumerate(c["scenes"]):
             mine = [g for g, o in zip(segs, owner) if o == i]
             if mine: s["start"], s["end"] = mine[0]["start"], mine[-1]["end"]
+            if s.get("tablo") and mine:
+                # her cümle bir satırı yakar: satır, okunduğu cümlenin başladığı an yanar
+                act = [None] * len(s["tablo"]["rows"])
+                for g, r in zip(mine, s["tablo"].get("sira", [])):
+                    if r is not None and r < len(act): act[r] = g["start"]
+                s["tablo"]["act_abs"] = act
         sc = c["scenes"]
         for i, s in enumerate(sc):
             if s.get("start") is None: s["start"] = sc[i - 1]["end"] if i else 0.0; s["end"] = s["start"] + 3
@@ -115,7 +121,16 @@ class Project:
             if s["start"] <= tv < s["end"]: return i
         return len(self.S) - 1
     def scene_img(self, i, tv):
-        s = self.S[i]; p = (tv - s["start"] + 0.5) / (s["end"] - s["start"] + 1.0)
+        s = self.S[i]
+        if s.get("tablo"):
+            if i not in self._tablo:
+                from tablo import Tablo
+                self._tablo[i] = Tablo(self.dir, s["image"], s["tablo"], W, H)
+            act = [(a - s["start"]) if a is not None else None for a in s["tablo"].get("act_abs", [])]
+            if not any(a is not None for a in act):  # hizalama yoksa satırları sahneye eşit dağıt
+                n = len(s["tablo"]["rows"]); d = max(1.0, s["end"] - s["start"] - 1.5); act = [0.6 + d * k / n for k in range(n)]
+            return self._tablo[i].frame(tv - s["start"], act)
+        p = (tv - s["start"] + 0.5) / (s["end"] - s["start"] + 1.0)
         return kenburns(os.path.join(self.dir, s["image"]), p, *s.get("kb", [1.04, 1.16, .5, .5, .5, .5]))
 
     # ── zaman çizelgesi + dönem şeridi ──
@@ -196,7 +211,7 @@ class Project:
             if cd["start"] <= tv < cd["end"]:
                 q = tv - cd["start"]; p = clamp(q / .35) * clamp((cd["end"] - tv) / .35)
                 gold_card(fr, W / 2, cd.get("y", 800), f"{int(round(cd['value'] * ease(q / 1.1)))} {cd.get('unit', '')}".strip(), cd.get("small", ""), p)
-        for cp in self.caps:
+        for cp in ([] if s.get("tablo") else self.caps):
             if cp["start"] - .1 <= tv < cp["end"] + .05:
                 put(fr, caption_img(cp["text"]), W / 2, 1500, clamp((tv - cp["start"] + .1) / .3) * clamp((cp["end"] + .05 - tv) / .25))
         o = c.get("outro")
@@ -208,11 +223,11 @@ class Project:
             if o.get("title"): put(fr, fit(o["title"], "serif", 70, GOLD, glow=GOLD, spacing=6), W / 2, 760, ta)
             if o.get("line"):
                 put(fr, fit(o["line"], "serif", 76, WHITE, maxw=W - 110, glow=GOLD, spacing=4), W / 2, 900, la)
-        self.watermark(fr, T)
+        self.watermark(fr, T, kose=not s.get("tablo"))
         if T < .5: fr.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, int(255 * (1 - T / .5)))))
         return fr.convert("RGB")
 
-    def watermark(self, fr, T):
+    def watermark(self, fr, T, kose=True):
         """Köşede küçük logo + sayfa adı; kırpılıp silinmesin diye arada ekranın farklı yerinde beliren soluk imza."""
         mk = {**MARKA, **(self.cfg.get("filigran") or {})}
         if not mk.get("filigran", True) or not mk.get("handle"): return
@@ -225,7 +240,7 @@ class Project:
             im.alpha_composite(ht, ((lg.width + 10) if lg else 0, (h - ht.height) // 2))
             self._wm = im; self._wm2 = text(mk["handle"], "sans9", 40, (255, 255, 255), shadow=False, spacing=3)
         # sol orta-alt: Instagram'ın üst çubuğu, sağdaki butonlar ve alttaki açıklama alanının dışında
-        put(fr, self._wm, 44 + self._wm.width / 2, 1305, 0.55 * clamp((T - 1.0) / .6) * clamp((self.dur - 2.4 - T) / .6))
+        if kose: put(fr, self._wm, 44 + self._wm.width / 2, 1305, 0.55 * clamp((T - 1.0) / .6) * clamp((self.dur - 2.4 - T) / .6))
         per = float(mk.get("gezen_imza_aralik", 15) or 0)
         if per > 0 and 6 < T < self.dur - 4:
             k = int(T // per); q = T - k * per

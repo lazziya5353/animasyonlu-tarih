@@ -11,7 +11,7 @@ import gemini
 from olay import olay
 
 ENGINE = os.path.join(ROOT, "engine")
-TR_KARAKTER_SN = 11.3          # işlenmiş seslendirmede ölçülen hız (karakter / sn)
+TR_KARAKTER_SN = 14.5          # işlenmiş seslendirmede ölçülen hız (karakter / sn); 11 Kasım 1918: 758 kar / 48.6 sn ≈ 15.6, temkinli 14.5
 REELS_MAX = 90                 # Instagram API ile Reels üst sınırı (sn)
 
 

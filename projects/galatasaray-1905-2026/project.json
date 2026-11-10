@@ -10,8 +10,8 @@
    "start": null,
    "end": null,
    "lines": [
-    "İstanbul, 1905.",
-    "Bir lise sınıfında, büyük bir hikâye başlıyor."
+    "26 şampiyonluk, 19 kupa, Avrupa'da iki zafer.",
+    "Hepsi 1905'te, bir lise sınıfında başladı."
    ],
    "big": "1905",
    "sub": "İSTANBUL",
@@ -60,12 +60,13 @@
    "start": null,
    "end": null,
    "lines": [
-    "Seyirciler onlara Galata Sarayı Efendileri dedi."
+    "İlk maçlarından birini 2-0 kazandılar.",
+    "Seyirciler: Galata Sarayı Efendileri!"
    ],
-   "big": "SARI-KIRMIZI",
+   "big": "2-0",
    "sub": "GALATA SARAYI EFENDİLERİ",
-   "year": 1908,
-   "label": "1908",
+   "year": 1906,
+   "label": "1906",
    "fx": [
     "dust",
     "rays"
@@ -110,8 +111,8 @@
    "start": null,
    "end": null,
    "lines": [
-    "Türkiye Kupası'nın ilk dört yılında",
-    "kupayı kimseye vermediler."
+    "İlk dört Türkiye Kupası",
+    "da onların oldu."
    ],
    "big": "4/4",
    "sub": "İLK DÖRT TÜRKİYE KUPASI",
@@ -209,8 +210,8 @@
    "start": null,
    "end": null,
    "lines": [
-    "Ve Galatasaray, Avrupa'da kupa kazanan",
-    "ilk Türk takımı oldu."
+    "Türkiye ilk Avrupa kupasını",
+    "Galatasaray'la kazandı."
    ],
    "big": "UEFA KUPASI",
    "sub": "AVRUPA FATİHİ",
@@ -235,8 +236,8 @@
    "start": null,
    "end": null,
    "lines": [
-    "Üç ay sonra Monako'da Real Madrid'i yendi.",
-    "UEFA Süper Kupası da İstanbul'a geldi."
+    "Üç ay sonra Monako'da",
+    "UEFA Süper Kupası da geldi."
    ],
    "big": "SÜPER KUPA",
    "sub": "MONAKO · 2000",
@@ -260,8 +261,8 @@
    "start": null,
    "end": null,
    "lines": [
-    "Son dört sezonda",
-    "üst üste dört şampiyonluk geldi."
+    "Son dört sezonun dördü de",
+    "şampiyonlukla bitti."
    ],
    "big": "4 SERİ",
    "sub": "2023 · 2024 · 2025 · 2026",
@@ -285,16 +286,22 @@
    "start": null,
    "end": null,
    "lines": [
-    "Bugün TFF verilerine göre ligde 26 şampiyonluk.",
-    "Fenerbahçe 19, Beşiktaş 16, Trabzonspor 7."
+    "TFF verilerine göre lig şampiyonlukları:",
+    "Trabzonspor, 7.",
+    "Beşiktaş, 16.",
+    "Fenerbahçe, 19.",
+    "Galatasaray, 26!",
+    "Türkiye Kupası'nda.",
+    "Fenerbahçe, 7.",
+    "Trabzonspor, 10.",
+    "Beşiktaş, 11.",
+    "Galatasaray, 19!"
    ],
-   "big": "26",
-   "sub": "SÜPER LİG ŞAMPİYONLUĞU",
+   "big": "",
+   "sub": "",
    "year": 2026,
    "label": "2026",
-   "fx": [
-    "gold"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -302,18 +309,152 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "tablo": {
+    "rows": [
+     [
+      623,
+      773
+     ],
+     [
+      790,
+      941
+     ],
+     [
+      958,
+      1114
+     ],
+     [
+      1131,
+      1284
+     ],
+     [
+      1464,
+      1619
+     ],
+     [
+      1637,
+      1795
+     ],
+     [
+      1813,
+      1974
+     ],
+     [
+      1992,
+      2154
+     ]
+    ],
+    "bars": [
+     [
+      742,
+      770,
+      1133
+     ],
+     [
+      913,
+      934,
+      910
+     ],
+     [
+      1083,
+      1105,
+      816
+     ],
+     [
+      1255,
+      1276,
+      523
+     ],
+     [
+      1587,
+      1618,
+      1134
+     ],
+     [
+      1763,
+      1784,
+      820
+     ],
+     [
+      1941,
+      1963,
+      787
+     ],
+     [
+      2121,
+      2142,
+      621
+     ]
+    ],
+    "values": [
+     26,
+     19,
+     16,
+     7,
+     19,
+     11,
+     10,
+     7
+    ],
+    "vurgu": [
+     0,
+     4
+    ],
+    "sira": [
+     null,
+     3,
+     2,
+     1,
+     0,
+     null,
+     7,
+     6,
+     5,
+     4
+    ],
+    "bar_x0": 303,
+    "num_x": [
+     1150,
+     1316
+    ],
+    "row_x": [
+     110,
+     1330
+    ],
+    "bos_iz": [
+     923,
+     1118
+    ],
+    "logo": {
+     "img": "images/gs_logo.png",
+     "ovaller": [
+      [
+       158,
+       638,
+       252,
+       759
+      ],
+      [
+       158,
+       1479,
+       252,
+       1603
+      ]
+     ]
+    }
+   }
   },
   {
    "image": "images/s13.jpg",
    "start": null,
    "end": null,
    "lines": [
-    "Türkiye Kupası'nda 19.",
-    "Beşiktaş 11, Trabzonspor 10, Fenerbahçe 7."
+    "Bir sınıfta doğan hayal,",
+    "bugün milyonların tutkusu."
    ],
-   "big": "19",
-   "sub": "TÜRKİYE KUPASI",
+   "big": "1905",
+   "sub": "2026",
    "year": 2026,
    "label": "2026",
    "fx": [
@@ -327,31 +468,6 @@
     0.55,
     0.5,
     0.5
-   ]
-  },
-  {
-   "image": "images/s14.jpg",
-   "start": null,
-   "end": null,
-   "lines": [
-    "Bir lise sınıfında başlayan hayal,",
-    "bugün milyonların tutkusu."
-   ],
-   "big": "1905",
-   "sub": "2026",
-   "year": 2026,
-   "label": "2026",
-   "fx": [
-    "gold",
-    "dust"
-   ],
-   "kb": [
-    1.18,
-    1.04,
-    0.5,
-    0.5,
-    0.5,
-    0.55
    ]
   }
  ],
@@ -374,7 +490,7 @@
   {
    "name": "BUGÜN",
    "from": 10,
-   "to": 13
+   "to": 12
   }
  ],
  "outro_plan": {
@@ -397,20 +513,7 @@
    "title": "AVRUPA FETHİ"
   }
  ],
- "cards_plan": [
-  {
-   "scene": 11,
-   "value": 26,
-   "unit": "ŞAMPİYONLUK",
-   "small": "SÜPER LİG · TFF"
-  },
-  {
-   "scene": 12,
-   "value": 19,
-   "unit": "KUPA",
-   "small": "TÜRKİYE KUPASI"
-  }
- ],
+ "cards_plan": [],
  "music": {
   "booms": [
    0.3
