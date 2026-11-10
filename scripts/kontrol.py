@@ -304,6 +304,7 @@ def kurgu(slug, video=None):
         dr.rectangle([x, y, x + 40, y + 34], fill=(232, 196, 120)); dr.text((x + 20, y + 17), str(k + 1), font=F("sans9", 22), fill=(20, 15, 5), anchor="mm")
     yol = os.path.join(d, "kontrol", "kareler.jpg"); os.makedirs(os.path.dirname(yol), exist_ok=True); tablo.save(yol, quality=82)
     try:
+        if gemini._calisan: time.sleep(30)                   # az önce görsel kontrolü yapıldıysa ücretsiz kotanın dakika sınırına takılmasın
         cev = gemini.sor([gemini.resim_parca(yol, max_h=1600), KURGU_KURAL.format(n=len(kareler))], sure=180)
         for so in (cev.get("sorunlar") or [])[:6]:
             (R.hata if so.get("ciddiyet") == "hata" else R.uyari)(so.get("aciklama", "sorun"), so.get("kare"))
