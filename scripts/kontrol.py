@@ -186,24 +186,23 @@ def ses(slug):
 
 
 # ───────── 3. GÖRSEL ─────────
-GORSEL_KURAL = """Sen bir tarih belgeseli için görsel denetçisisin. Bu görsel dikey bir videonun {i}. sahnesinde kullanılacak.
-Sahne: yıl {yil}, başlık “{big}”, alt başlık “{sub}”. Anlatılan: “{cumle}”.
-Görselden istenen: {prompt}
-Proje notları: {notlar}
-Kontrol et:
-1) Görsel sahneye ve döneme uyuyor mu? Dönemine aykırı (anakronik) bir şey var mı (modern araç, modern bina, plastik, telefon vb.)?
+GORSEL_KURAL = """Sen bir tarih belgeseli için görsel denetçisisin. Aşağıda dikey bir videonun sahne görselleri var; her görselden önce
+sahnenin bilgisi yazıyor. Proje notları: {notlar}
+Her görsel için kontrol et:
+1) Sahneye ve döneme uyuyor mu? Dönemine aykırı (anakronik) bir şey var mı (modern araç, modern bina, telefon, plastik vb.)?
 2) Görselde okunabilir yazı, harf, logo, filigran ya da imza var mı?
 3) Bozuk el/yüz/beden, saçma birleşmiş nesne gibi yapay zeka hatası var mı?
 4) Türk bayrağı varsa doğru mu (kırmızı zemin, beyaz ay ve yıldız, yıldız ayın açık tarafında)? Başka bayraklar döneme uygun mu?
-5) Gerçek bir tarihi kişinin yüzü net şekilde tanınır biçimde çizilmiş mi? (Proje notları yasaklıyorsa ciddi sorun.)
+5) Gerçek bir tarihi kişinin yüzü net ve tanınır biçimde çizilmiş mi? (Proje notları yasaklıyorsa ciddi sorun.)
 6) Şiddet/kan gibi platform kurallarına takılacak bir şey var mı?
-Sadece şu JSON'u döndür: {{"uygun": true/false, "puan": 1-10, "sorunlar": [{{"ciddiyet": "hata" veya "uyari", "aciklama": "kısa Türkçe açıklama"}}]}}"""
+Küçük estetik kusurları yazma; sadece izleyicinin fark edeceği gerçek sorunları yaz.
+Sadece şu JSON'u döndür: {{"sahneler": [{{"sahne": numara, "puan": 1-10, "sorunlar": [{{"ciddiyet": "hata" veya "uyari", "aciklama": "kısa Türkçe açıklama"}}]}}]}}"""
 
 
 def gorsel(slug):
     d, sc, pj = yukle(slug); R = Rapor("gorsel"); S = sahneler(sc, pj)
     from PIL import Image, ImageStat
-    eksik, hashler, puanlar, ai_atla = [], {}, [], None
+    eksik, hashler, mevcut = [], {}, []
     notlar = ((sc or {}).get("kontrol_notlari") or "")
     if isinstance(notlar, list): notlar = " ".join(map(str, notlar))
     notlar = (notlar + " Atatürk ve gerçek kişilerin yüzleri yapay zekayla çizilmez; yalnızca arkadan/uzaktan siluet olabilir.")[:600]
@@ -219,18 +218,22 @@ def gorsel(slug):
         if ort < 14: R.uyari("görsel neredeyse tamamen karanlık", i)
         hb = "".join("1" if v > ort else "0" for v in g.tobytes())
         for j, hb2 in hashler.items():
-            if sum(a != b for a, b in zip(hb, hb2)) < 18: R.uyari(f"{j}. sahnedeki görselle neredeyse aynı", i)
-        hashler[i] = hb
-        if ai_atla is None or ai_atla is False:
-            try:
-                cev = gemini.sor([gemini.resim_parca(p), GORSEL_KURAL.format(i=i, yil=s.get("year", ""), big=s.get("big", ""), sub=s.get("sub", ""),
-                                  cumle=" ".join(s.get("lines", []))[:300], prompt=(s.get("prompt") or "")[:500], notlar=notlar)])
-                ai_atla = False; puanlar.append(cev.get("puan") or 0)
-                for so in (cev.get("sorunlar") or [])[:3]:
-                    (R.hata if so.get("ciddiyet") == "hata" else R.uyari)(so.get("aciklama", "sorun"), i)
-                time.sleep(4)   # ücretsiz kota: dakikada ~15 istek
-            except gemini.GeminiYok as e:
-                ai_atla = True; R.bilgi(f"yapay zeka incelemesi atlandı: {e}")
+            if sum(x != y for x, y in zip(hb, hb2)) < 18: R.uyari(f"{j}. sahnedeki görselle neredeyse aynı", i)
+        hashler[i] = hb; mevcut.append((i, s, p))
+    puanlar = []
+    for k in range(0, len(mevcut), 6):                       # tek istekte 6 görsel: hızlı ve ücretsiz kotaya uygun
+        grup = mevcut[k:k + 6]; parts = [GORSEL_KURAL.format(notlar=notlar)]
+        for i, s, p in grup:
+            parts += [f"SAHNE {i}: yıl {s.get('year', '')}, başlık “{s.get('big', '')}”, alt başlık “{s.get('sub', '')}”. Anlatılan: “{' '.join(s.get('lines', []))[:240]}”. "
+                      f"Görselden istenen: {(s.get('prompt') or '')[:350]}", gemini.resim_parca(p, max_h=720)]
+        try:
+            cev = gemini.sor(parts, sure=180)
+            for x in cev.get("sahneler") or []:
+                if x.get("puan"): puanlar.append(x["puan"])
+                for so in (x.get("sorunlar") or [])[:3]:
+                    (R.hata if so.get("ciddiyet") == "hata" else R.uyari)(so.get("aciklama", "sorun"), x.get("sahne"))
+        except gemini.GeminiYok as e:
+            R.bilgi(f"yapay zeka incelemesi atlandı: {e}"); break
     if eksik: R.hata(f"eksik görsel: sahne {', '.join(map(str, eksik))}")
     R.ek["eksik"] = eksik
     if puanlar: R.ek["ortalama_puan"] = round(sum(puanlar) / len(puanlar), 1)
@@ -301,7 +304,7 @@ def kurgu(slug, video=None):
         dr.rectangle([x, y, x + 40, y + 34], fill=(232, 196, 120)); dr.text((x + 20, y + 17), str(k + 1), font=F("sans9", 22), fill=(20, 15, 5), anchor="mm")
     yol = os.path.join(d, "kontrol", "kareler.jpg"); os.makedirs(os.path.dirname(yol), exist_ok=True); tablo.save(yol, quality=82)
     try:
-        cev = gemini.sor([gemini.resim_parca(yol, max_h=1600), KURGU_KURAL.format(n=len(kareler))])
+        cev = gemini.sor([gemini.resim_parca(yol, max_h=1600), KURGU_KURAL.format(n=len(kareler))], sure=180)
         for so in (cev.get("sorunlar") or [])[:6]:
             (R.hata if so.get("ciddiyet") == "hata" else R.uyari)(so.get("aciklama", "sorun"), so.get("kare"))
     except gemini.GeminiYok as e:
