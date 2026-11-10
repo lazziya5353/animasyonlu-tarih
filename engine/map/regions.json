@@ -43,5 +43,14 @@
   "k": 220,
   "clat": 39,
   "aciklama": "Malazgirt, Kurtuluş Savaşı"
+ },
+ "avrupa_genis": {
+  "lon0": -12,
+  "lon1": 46,
+  "lat0": 30,
+  "lat1": 60,
+  "k": 120,
+  "clat": 45,
+  "aciklama": "Batı Avrupa’dan Anadolu’ya"
  }
 }

@@ -8,6 +8,20 @@ STYLE = "cinematic film still, photorealistic, 35mm, dramatic natural light, epi
 CITIES = json.load(open(os.path.join(ROOT, "engine", "map", "cities.json")))
 REGIONS = json.load(open(os.path.join(ROOT, "engine", "map", "regions.json")))
 
+def proje_yaz(sc, d):
+    """script.json'dan motorun okuyacağı project.json'u üretir (zamanlar ses gelince hizalanır). Sohbette yazılan metinler için de kullanılır."""
+    scenes = []
+    for i, s in enumerate(sc["sahneler"]):
+        kb = [[1.04, 1.18, .5, .55, .5, .5], [1.18, 1.04, .5, .5, .5, .55]][i % 2]
+        scenes.append({"image": s["image"], "start": None, "end": None, "lines": s["lines"], "big": s.get("big"), "sub": s.get("sub"),
+                       "year": s.get("year"), "label": s.get("label", str(s.get("year", ""))), "fx": s.get("fx", []), "kb": kb,
+                       **({"effect": s["effect"]} if s.get("effect") in ("stamp", "type", "glow") else {}), **({"type_text": s["type_text"]} if s.get("type_text") else {})})
+    proj = {"title": sc.get("baslik", sc.get("konu", "")), "voice": "ses.wav", "voice_offset": 0.3, "hook": sc.get("hook"), "map_region": sc.get("map_region", "avrupa_ortadogu"),
+            "scenes": scenes, "eras": sc.get("eras", []), "outro_plan": sc.get("outro"), "maps_plan": sc.get("maps", []), "cards_plan": sc.get("cards", []),
+            "music": {"booms": [0.3]}, "finale": sc.get("finale", "")}
+    json.dump(proj, open(os.path.join(d, "project.json"), "w"), ensure_ascii=False, indent=1)
+
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--konu", required=True); ap.add_argument("--tarih", default=""); ap.add_argument("--not", dest="notlar", default="")
     ap.add_argument("--slug", default=""); a = ap.parse_args()
@@ -39,17 +53,7 @@ JSON şeması:
     sc["seslendirme_metni"] = "\n".join(l for s in sc["sahneler"] for l in s["lines"])
     for i, s in enumerate(sc["sahneler"]): s["prompt_tam"] = f"{s['prompt']}, {STYLE}"; s["image"] = f"images/s{i + 1:02d}.jpg"
     json.dump(sc, open(os.path.join(d, "script.json"), "w"), ensure_ascii=False, indent=1)
-    # motor için proje dosyası (zamanlar ses gelince hizalanır)
-    scenes = []
-    for i, s in enumerate(sc["sahneler"]):
-        kb = [[1.04, 1.18, .5, .55, .5, .5], [1.18, 1.04, .5, .5, .5, .55]][i % 2]
-        scenes.append({"image": s["image"], "start": None, "end": None, "lines": s["lines"], "big": s.get("big"), "sub": s.get("sub"),
-                       "year": s.get("year"), "label": s.get("label", str(s.get("year", ""))), "fx": s.get("fx", []), "kb": kb,
-                       **({"effect": s["effect"]} if s.get("effect") in ("stamp", "type", "glow") else {}), **({"type_text": s["type_text"]} if s.get("type_text") else {})})
-    proj = {"title": sc.get("baslik", a.konu), "voice": "ses.wav", "voice_offset": 0.3, "hook": sc.get("hook"), "map_region": sc.get("map_region", "avrupa_ortadogu"),
-            "scenes": scenes, "eras": sc.get("eras", []), "outro_plan": sc.get("outro"), "maps_plan": sc.get("maps", []), "cards_plan": sc.get("cards", []),
-            "music": {"booms": [0.3]}, "finale": sc.get("finale", "")}
-    json.dump(proj, open(os.path.join(d, "project.json"), "w"), ensure_ascii=False, indent=1)
+    proje_yaz(sc, d)
     set_status("senarist", "tamam", f"'{a.konu}' metni onay bekliyor", f"projects/{slug}/script.json")
     print(slug)
 

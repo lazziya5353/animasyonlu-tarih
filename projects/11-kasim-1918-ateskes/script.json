@@ -1,0 +1,320 @@
+{
+ "baslik": "11 Kasım 1918: Silahların Sustuğu Gün",
+ "konu": "Compiègne Ateşkesi ve Birinci Dünya Savaşı'nın sonu",
+ "tarih": "2026-11-11",
+ "slug": "11-kasim-1918-ateskes",
+ "hook": "SAAT 11.00",
+ "map_region": "avrupa_genis",
+ "durum": "onay-bekliyor",
+ "finale": "",
+ "maps": [
+  {
+   "scene": 0,
+   "cities": [
+    "Compiègne",
+    "Berlin",
+    "Londra"
+   ],
+   "title": "BATI CEPHESİ"
+  },
+  {
+   "scene": 8,
+   "route": [
+    "Mondros",
+    "Çanakkale",
+    "İstanbul"
+   ],
+   "cities": [
+    "Mondros",
+    "Çanakkale",
+    "İstanbul"
+   ],
+   "title": "İŞGALİN YOLU"
+  }
+ ],
+ "cards": [
+  {
+   "scene": 2,
+   "value": 10,
+   "unit": "MİLYON",
+   "small": "HAYATINI KAYBEDEN ASKER"
+  }
+ ],
+ "eras": [
+  {
+   "name": "BÜYÜK SAVAŞ",
+   "from": 0,
+   "to": 2
+  },
+  {
+   "name": "ATEŞKES",
+   "from": 3,
+   "to": 7
+  },
+  {
+   "name": "İŞGAL",
+   "from": 8,
+   "to": 9
+  },
+  {
+   "name": "UMUT",
+   "from": 10,
+   "to": 11
+  }
+ ],
+ "outro": {
+  "title": "11.11.1918",
+  "line": "Bir savaşın sonu, yeni bir destanın başı."
+ },
+ "aciklama": "11 Kasım 1918, saat 11.00: Dört yıl süren Büyük Savaş'ta silahlar sustu. Avrupa sokaklarda barışı kutlarken, İstanbul'un kapısında İtilaf donanması bekliyordu… Sizce Mondros olmasaydı tarih nasıl değişirdi? 👇",
+ "hashtagler": [
+  "#tarih",
+  "#tarihtebugün",
+  "#11kasım",
+  "#birincidünyasavaşı",
+  "#ateşkes",
+  "#compiègne",
+  "#mondros",
+  "#istanbulunişgali",
+  "#millimücadele",
+  "#animasyontarih",
+  "#reels",
+  "#keşfet"
+ ],
+ "kaynaklar": [
+  "https://www.britannica.com/event/armistice-World-War-I",
+  "https://en.wikipedia.org/wiki/Armistice_of_11_November_1918",
+  "https://www.britannica.com/event/Armistice-of-Mudros",
+  "https://en.wikipedia.org/wiki/Occupation_of_Istanbul"
+ ],
+ "kontrol_notlari": [
+  "Ateşkes 11 Kasım 1918 sabah 5 sularında Compiègne'de bir tren vagonunda imzalandı, saat 11.00'de yürürlüğe girdi (Britannica).",
+  "Mondros Ateşkesi 30 Ekim 1918 (Britannica). İtilaf donanması 13 Kasım 1918'de İstanbul'a girdi.",
+  "Ateşkes Avrupa’da 11 Kasım’dan itibaren anılıyor (Armistice Day / Remembrance Day).",
+  "Asker kaybı kaynaklara göre ~9-11 milyon; 'yaklaşık 10 milyon' kullanıldı.",
+  "Gerçek kişilerin yüzleri çizdirilmiyor; Foch dahil herkes arkadan/siluet."
+ ],
+ "sahneler": [
+  {
+   "lines": [
+    "11 Kasım 1918, Compiègne ormanı.",
+    "Bir tren vagonunda, Büyük Savaş'ın sonu yazılıyor."
+   ],
+   "big": "1918",
+   "sub": "COMPIÈGNE ORMANI",
+   "year": 1918,
+   "fx": [
+    "fog"
+   ],
+   "prompt": "A lone dark green 1918 railway dining carriage standing on rails in a misty autumn forest before dawn, warm lamp light glowing from its windows, wet fallen leaves, a few soldiers in WWI greatcoats standing guard far away seen from behind, quiet tense atmosphere",
+   "label": "1918",
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A lone dark green 1918 railway dining carriage standing on rails in a misty autumn forest before dawn, warm lamp light glowing from its windows, wet fallen leaves, a few soldiers in WWI greatcoats standing guard far away seen from behind, quiet tense atmosphere, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s01.jpg"
+  },
+  {
+   "lines": [
+    "1914'te başlayan savaş,",
+    "bütün dünyayı sarmıştı."
+   ],
+   "big": "1914",
+   "sub": "BÜYÜK SAVAŞ",
+   "year": 1914,
+   "fx": [
+    "ember_few",
+    "smoke"
+   ],
+   "prompt": "A 1914 European city street at dusk, crowds of men in straw boater hats and dark suits reading newspapers and cheering as soldiers march past, seen from behind and at a distance, smoke rising over rooftops on the horizon, ominous orange sky",
+   "label": "1914",
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A 1914 European city street at dusk, crowds of men in straw boater hats and dark suits reading newspapers and cheering as soldiers march past, seen from behind and at a distance, smoke rising over rooftops on the horizon, ominous orange sky, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s02.jpg"
+  },
+  {
+   "lines": [
+    "Siperlerde milyonlarca asker hayatını kaybetti."
+   ],
+   "big": "1916",
+   "sub": "SİPERLER",
+   "year": 1916,
+   "fx": [
+    "smoke",
+    "dust"
+   ],
+   "prompt": "A muddy WWI western front trench in grey rain, soldiers in steel helmets and greatcoats crouching along wooden duckboards, seen from behind, barbed wire and shell craters beyond the parapet, drifting smoke, no faces visible",
+   "label": "1916",
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A muddy WWI western front trench in grey rain, soldiers in steel helmets and greatcoats crouching along wooden duckboards, seen from behind, barbed wire and shell craters beyond the parapet, drifting smoke, no faces visible, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s03.jpg"
+  },
+  {
+   "lines": [
+    "Sabah 5 sularında ateşkes imzalandı."
+   ],
+   "big": "İMZA",
+   "sub": "SABAH 05.00",
+   "year": 1918,
+   "fx": [
+    "flicker"
+   ],
+   "effect": "stamp",
+   "prompt": "Interior of a 1918 wooden railway carriage at night, a long table with green cloth, maps, documents and fountain pens under warm oil lamps, officers in WWI uniforms standing around the table seen from behind and in silhouette, faces not visible",
+   "label": "1918",
+   "type_text": "",
+   "prompt_tam": "Interior of a 1918 wooden railway carriage at night, a long table with green cloth, maps, documents and fountain pens under warm oil lamps, officers in WWI uniforms standing around the table seen from behind and in silhouette, faces not visible, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s04.jpg"
+  },
+  {
+   "lines": [
+    "Silahlar, 11. ayın 11. gününün 11. saatinde susacaktı."
+   ],
+   "big": "11.11.11",
+   "sub": "11. AY · 11. GÜN · 11. SAAT",
+   "year": 1918,
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "effect": "glow",
+   "prompt": "Close-up of a WWI officer's brass pocket watch lying open on a muddy wooden crate in a trench, the hands showing a few minutes before eleven o'clock, soft morning light, shallow depth of field, plain watch face with no writing",
+   "label": "1918",
+   "type_text": "",
+   "prompt_tam": "Close-up of a WWI officer's brass pocket watch lying open on a muddy wooden crate in a trench, the hands showing a few minutes before eleven o'clock, soft morning light, shallow depth of field, plain watch face with no writing, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s05.jpg"
+  },
+  {
+   "lines": [
+    "Ama son dakikalara kadar çatışma sürdü."
+   ],
+   "big": "10.59",
+   "sub": "SON DAKİKALAR",
+   "year": 1918,
+   "fx": [
+    "smoke",
+    "ember_few"
+   ],
+   "effect": "type",
+   "type_text": "SAAT 10.59",
+   "prompt": "A misty WWI battlefield at morning, a single soldier silhouette running across no man's land between shell craters and barbed wire, seen from far away from behind, artillery smoke on the horizon, melancholic light",
+   "label": "1918",
+   "prompt_tam": "A misty WWI battlefield at morning, a single soldier silhouette running across no man's land between shell craters and barbed wire, seen from far away from behind, artillery smoke on the horizon, melancholic light, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s06.jpg"
+  },
+  {
+   "lines": [
+    "Saat 11'de cephe sustu.",
+    "Dört yıl sonra ilk kez, top sesi duyulmadı."
+   ],
+   "big": "11.00",
+   "sub": "SESSİZLİK",
+   "year": 1918,
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "prompt": "A quiet WWI trench at eleven in the morning, soldiers in helmets slowly climbing out and standing still on the parapet, seen from behind, fog lifting over a scarred empty battlefield, first sunlight breaking through clouds",
+   "label": "1918",
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A quiet WWI trench at eleven in the morning, soldiers in helmets slowly climbing out and standing still on the parapet, seen from behind, fog lifting over a scarred empty battlefield, first sunlight breaking through clouds, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s07.jpg"
+  },
+  {
+   "lines": [
+    "Paris ve Londra barışı kutladı."
+   ],
+   "big": "ZAFER",
+   "sub": "PARİS · LONDRA",
+   "year": 1918,
+   "fx": [
+    "gold",
+    "dust"
+   ],
+   "prompt": "Huge jubilant crowd celebrating the 1918 armistice on a wide Paris boulevard, people in period coats and hats waving French and British flags, soldiers lifted on shoulders, seen from behind and from a distance, confetti in the air, joyful golden light",
+   "label": "1918",
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Huge jubilant crowd celebrating the 1918 armistice on a wide Paris boulevard, people in period coats and hats waving French and British flags, soldiers lifted on shoulders, seen from behind and from a distance, confetti in the air, joyful golden light, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s08.jpg"
+  },
+  {
+   "lines": [
+    "Osmanlı için savaş, 30 Ekim'de Mondros'ta bitmişti.",
+    "Şartları çok ağırdı."
+   ],
+   "big": "MONDROS",
+   "sub": "30 EKİM 1918",
+   "year": 1918,
+   "fx": [
+    "fog"
+   ],
+   "prompt": "A grey British battleship anchored in a calm Aegean bay at dusk, a small launch boat approaching it, barren island hills behind, heavy clouds, somber atmosphere, 1918 naval scene",
+   "label": "1918",
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A grey British battleship anchored in a calm Aegean bay at dusk, a small launch boat approaching it, barren island hills behind, heavy clouds, somber atmosphere, 1918 naval scene, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s09.jpg"
+  },
+  {
+   "lines": [
+    "Compiègne'den 2 gün sonra,",
+    "İtilaf donanması İstanbul'a demirledi."
+   ],
+   "big": "13 KASIM",
+   "sub": "İSTANBUL",
+   "year": 1918,
+   "fx": [
+    "smoke",
+    "fog"
+   ],
+   "prompt": "A line of grey Allied warships steaming into the Bosphorus in November 1918, a white Ottoman palace on the waterfront and minarets of Istanbul in the misty background, small crowds watching silently from the shore seen from behind, cold grey light",
+   "label": "1918",
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A line of grey Allied warships steaming into the Bosphorus in November 1918, a white Ottoman palace on the waterfront and minarets of Istanbul in the misty background, small crowds watching silently from the shore seen from behind, cold grey light, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s10.jpg"
+  },
+  {
+   "lines": [
+    "Avrupa'da savaş bitmişti.",
+    "Anadolu'da ise yeni bir mücadele başlıyordu."
+   ],
+   "big": "1919",
+   "sub": "ANADOLU",
+   "year": 1919,
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "prompt": "A small old black steamship sailing on a calm Black Sea at sunrise, smoke from its funnel, golden light on the water, Anatolian coastline faintly visible ahead, hopeful cinematic mood",
+   "label": "1919",
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A small old black steamship sailing on a calm Black Sea at sunrise, smoke from its funnel, golden light on the water, Anatolian coastline faintly visible ahead, hopeful cinematic mood, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s11.jpg"
+  },
+  {
+   "lines": [
+    "Bugün birçok ülkede 11 Kasım'da,",
+    "savaşta ölenler saygıyla anılıyor."
+   ],
+   "big": "ANMA",
+   "sub": "11 KASIM",
+   "year": 2026,
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "prompt": "A vast WWI military cemetery with endless rows of white crosses and gravestones under a soft overcast sky, red poppies in the foreground grass, a few people standing in silence far away seen from behind",
+   "label": "2026",
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A vast WWI military cemetery with endless rows of white crosses and gravestones under a soft overcast sky, red poppies in the foreground grass, a few people standing in silence far away seen from behind, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s12.jpg"
+  }
+ ],
+ "seslendirme_metni": "On bir Kasım bin dokuz yüz on sekiz, Kompiyen ormanı.\nBir tren vagonunda, Büyük Savaş'ın sonu yazılıyor.\nBin dokuz yüz on dörtte başlayan savaş,\nbütün dünyayı sarmıştı.\nSiperlerde milyonlarca asker hayatını kaybetti.\nSabah beş sularında ateşkes imzalandı.\nSilahlar, on birinci ayın on birinci gününün on birinci saatinde susacaktı.\nAma son dakikalara kadar çatışma sürdü.\nSaat on birde cephe sustu.\nDört yıl sonra ilk kez, top sesi duyulmadı.\nParis ve Londra barışı kutladı.\nOsmanlı için savaş, otuz Ekim'de Mondros'ta bitmişti.\nŞartları çok ağırdı.\nKompiyen'den iki gün sonra,\nİtilaf donanması İstanbul'a demirledi.\nAvrupa'da savaş bitmişti.\nAnadolu'da ise yeni bir mücadele başlıyordu.\nBugün birçok ülkede on bir Kasım'da,\nsavaşta ölenler saygıyla anılıyor."
+}
