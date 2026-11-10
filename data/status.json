@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "10-kasim-1938-ataturk-u-saygi-ve-ozlemle-aniyoruz: ses hazır",
-  "cikti": "projects/10-kasim-1938-ataturk-u-saygi-ve-ozlemle-aniyoruz",
-  "zaman": "2026-11-09T09:28:08Z"
+  "mesaj": "11-kasim-1918-ateskes: ses hazır, görseller elle yüklenecek: Ücretsiz planda bu model kapalı (kota 0)",
+  "cikti": "projects/11-kasim-1918-ateskes",
+  "zaman": "2026-11-10T20:19:56Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -25,9 +25,9 @@
  },
  "kontrol": {
   "durum": "hata",
-  "mesaj": "11-kasim-1918-ateskes: senaryo ✓, ses ✗, gorsel ✗, kurgu ✗",
+  "mesaj": "11-kasim-1918-ateskes: gorsel ✗",
   "cikti": "projects/11-kasim-1918-ateskes/kontrol",
-  "zaman": "2026-11-10T20:13:48Z"
+  "zaman": "2026-11-10T20:26:38Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

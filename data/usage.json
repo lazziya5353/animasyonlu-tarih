@@ -41,6 +41,13 @@
    "servis": "gemini-ses",
    "usd": 0.0242,
    "detay": "Charon sesi"
+  },
+  {
+   "zaman": "2026-11-10T20:16:55Z",
+   "ajan": "ses",
+   "servis": "gemini-ses",
+   "usd": 0.0,
+   "detay": "Charon sesi (ücretsiz kota)"
   }
  ]
 }

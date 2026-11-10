@@ -1,12 +1,13 @@
 {
  "asama": "ses",
- "durum": "hata",
- "ozet": "Ses yok",
+ "durum": "tamam",
+ "ozet": "49 sn",
  "maddeler": [
   {
-   "seviye": "hata",
-   "mesaj": "ses dosyası yok"
+   "seviye": "bilgi",
+   "mesaj": "metin-ses karşılaştırması atlandı: Gemini yanıt vermedi (gemini-3.8-flash: The read operation timed out)"
   }
  ],
- "zaman": "2026-11-10T20:13:48Z"
+ "sure": 48.6,
+ "zaman": "2026-11-10T20:26:36Z"
 }
