@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "11-kasim-1918-ateskes: ses hazır, görseller elle yüklenecek: Ücretsiz planda bu model kapalı (kota 0)",
-  "cikti": "projects/11-kasim-1918-ateskes",
-  "zaman": "2026-11-10T20:19:56Z"
+  "mesaj": "galatasarayin-kurulusu-1905: ses hazır",
+  "cikti": "projects/galatasarayin-kurulusu-1905",
+  "zaman": "2026-11-10T21:24:53Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -25,9 +25,9 @@
  },
  "kontrol": {
   "durum": "tamam",
-  "mesaj": "11-kasim-1918-ateskes: senaryo ✓, ses ✓, gorsel !, kurgu ✓",
-  "cikti": "projects/11-kasim-1918-ateskes/kontrol",
-  "zaman": "2026-11-10T21:13:06Z"
+  "mesaj": "galatasarayin-kurulusu-1905: gorsel !",
+  "cikti": "projects/galatasarayin-kurulusu-1905/kontrol",
+  "zaman": "2026-11-10T21:35:07Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

@@ -1,0 +1,30 @@
+{
+ "asama": "gorsel",
+ "durum": "uyari",
+ "ozet": "12/12 görsel, ortalama puan 9.4/10",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "Defterdeki Osmanlıca metin okunabilir Arapça karakterler içeriyor, prompt'ta istenen 'okunabilir harf olmasın' kuralıyla hafif çelişiyor ancak döneme ve atmosfere son derece uygun.",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Arka plandaki kalabalıkta bazı yüzlerde ve ellerde yapay zeka çizim bozulmaları mevcut.",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Oyuncuların arkası dönük ve forma renkleri parçalı sarı-kırmızı olarak uyumlu fakat el/kupa tutuş pozisyonunda hafif yapay zeka anatomical uyumsuzluğu var.",
+   "sahne": 11
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Tribündeki bazı bayraklarda gerçek Galatasaray amblemini andıran ancak tam seçilemeyen bozuk amblem tarzı şekiller mevcut.",
+   "sahne": 12
+  }
+ ],
+ "eksik": [],
+ "ortalama_puan": 9.4,
+ "zaman": "2026-11-10T21:35:07Z"
+}
