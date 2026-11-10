@@ -21,6 +21,14 @@ LOGO = Image.open(_LOGO).convert("RGBA") if os.path.exists(_LOGO) else None
 GEZEN = [(540, 720), (700, 1000), (420, 880), (660, 1160), (540, 960)]
 UYARILAR = []  # kurgu kontrolcüsü için: sığmadığı için küçültülen yazılar
 
+def fit_size(txt, font, size, maxw=W - 90, min_size=40, spacing=0, glow=None):
+    """Son (animasyon bittiğindeki) harf aralığıyla sığan boyut; animasyon boyunca boyut sabit kalsın diye."""
+    s0 = size
+    while size > min_size and text(txt, font, size, (255, 255, 255), glow=glow, spacing=spacing).width > maxw: size -= 4
+    if size != s0 and txt not in UYARILAR: UYARILAR.append(txt)
+    return size
+
+
 def fit(txt, font, size, col, maxw=W - 90, min_size=40, **kw):
     """Yazıyı genişliğe sığana kadar küçültür; taşma imkânsız."""
     im = text(txt, font, size, col, **kw); s0 = size
@@ -141,9 +149,13 @@ class Project:
             sc = 1 + 1.2 * (1 - clamp(lt / 0.18)) ** 2; shake = (6 * math.sin(lt * 90) * clamp((0.45 - lt) / 0.3)) if lt < 0.45 else 0
             put(fr, fit(big, "serif", 150, GOLD, glow=GOLD, spacing=14), W / 2 + shake, 330, clamp(lt / .12) * out, sc)
         elif eff == "glow":
-            put(fr, fit(big, "serif", 160, (255, 222, 150), glow=(255, 200, 110), spacing=int(40 - 26 * p)), W / 2, 330, clamp(lt / .5) * out, 1 + 0.02 * math.sin(lt * 3))
+            sz = fit_size(big, "serif", 160, spacing=14, glow=(255, 200, 110)); sp = int(40 - 26 * p)
+            while sp > 14 and text(big, "serif", sz, (255, 222, 150), glow=(255, 200, 110), spacing=sp).width > W - 60: sp -= 4
+            put(fr, text(big, "serif", sz, (255, 222, 150), glow=(255, 200, 110), spacing=sp), W / 2, 330, clamp(lt / .5) * out, 1 + 0.02 * math.sin(lt * 3))
         else:
-            put(fr, fit(big, "serif", 150 if len(big) <= 4 else 118, GOLD, glow=GOLD, spacing=int(40 - 26 * p)), W / 2, 330, clamp(lt / .5) * out)
+            sz = fit_size(big, "serif", 150 if len(big) <= 4 else 118, spacing=14, glow=GOLD); sp = int(40 - 26 * p)
+            while sp > 14 and text(big, "serif", sz, GOLD, glow=GOLD, spacing=sp).width > W - 60: sp -= 4
+            put(fr, text(big, "serif", sz, GOLD, glow=GOLD, spacing=sp), W / 2, 330, clamp(lt / .5) * out)
         if eff == "type" and s.get("type_text"):
             full = s["type_text"]; n = int(clamp((lt - .3) / 1.4) * len(full)); st = full[:n] + ("▌" if (int(lt * 4) % 2 == 0 and n < len(full)) else "")
             sz = 36

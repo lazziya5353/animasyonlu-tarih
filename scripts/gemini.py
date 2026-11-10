@@ -3,9 +3,30 @@ Görsel ÜRETMEZ; sadece bakıp yorumlar. Anahtar yoksa ya da kota doluysa Gemin
 import os, json, base64, time, urllib.request, urllib.error, io
 
 API = "https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent"
-# İlk çalışan model kullanılır; Google model adlarını değiştirirse sıradaki denenir.
-MODELLER = [m for m in [os.environ.get("GEMINI_TEXT_MODEL"), "gemini-2.5-flash", "gemini-flash-latest", "gemini-2.0-flash"] if m]
+# İlk çalışan model kullanılır. Google model adlarını sık değiştirdiği için bulunamazsa mevcut modeller listesinden
+# en yeni "flash" modeli otomatik seçilir.
+MODELLER = [m for m in [os.environ.get("GEMINI_TEXT_MODEL"), "gemini-flash-latest", "gemini-2.5-flash"] if m]
 _calisan = None
+_kesfedildi = False
+
+
+def _kesfet():
+    """API'deki modelleri listeleyip metin+görsel anlayabilen en yeni flash modellerini döndürür."""
+    import re
+    try:
+        req = urllib.request.Request("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200", headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]})
+        ms = json.load(urllib.request.urlopen(req, timeout=60)).get("models", [])
+    except Exception as e:
+        print("Model listesi alınamadı:", e); return []
+    aday = []
+    for m in ms:
+        ad = m.get("name", "").split("/")[-1]
+        if "generateContent" not in m.get("supportedGenerationMethods", []) or re.search(r"tts|image|audio|live|native|thinking", ad): continue
+        r = re.fullmatch(r"gemini-(\d+(?:\.\d+)?)-flash(?:-preview(?:-[\w-]+)?)?", ad)
+        if r: aday.append((float(r.group(1)), "preview" not in ad, ad))
+    aday.sort(reverse=True)
+    print("Bulunan flash modelleri:", [a[2] for a in aday[:5]])
+    return [a[2] for a in aday[:4]]
 
 
 class GeminiYok(Exception):
@@ -28,8 +49,12 @@ def sor(parts, json_cevap=True, sicaklik=0.2):
     if not hazir(): raise GeminiYok("GEMINI_API_KEY tanımlı değil")
     body = {"contents": [{"parts": [p if isinstance(p, dict) else {"text": p} for p in parts]}],
             "generationConfig": {"temperature": sicaklik, **({"responseMimeType": "application/json"} if json_cevap else {})}}
+    global _kesfedildi
     son_hata = ""
-    for model in ([_calisan] if _calisan else []) + [m for m in MODELLER if m != _calisan]:
+    sira = ([_calisan] if _calisan else []) + [m for m in MODELLER if m != _calisan]
+    i = 0; bitis = time.time() + 240          # kontrol işi Gemini yüzünden uzamasın
+    while i < len(sira) and time.time() < bitis:
+        model = sira[i]; i += 1
         for deneme in range(3):
             try:
                 r = _post(model, body); _calisan = model
@@ -40,14 +65,17 @@ def sor(parts, json_cevap=True, sicaklik=0.2):
                     a, b = txt.find("{"), txt.rfind("}")
                     return json.loads(txt[a:b + 1]) if a >= 0 else {}
             except urllib.error.HTTPError as e:
-                son_hata = f"{e.code}: {e.read().decode()[:200]}"
-                if e.code == 404 or "limit: 0" in son_hata: break          # bu model yok/kapalı → sıradaki
-                if e.code in (429, 500, 503) and deneme < 2: time.sleep(20 * (deneme + 1)); continue
+                son_hata = f"{model} {e.code}: {e.read().decode()[:300]}"
+                print("Gemini:", son_hata[:200].replace("\n", " "))
+                if e.code == 404 or "limit: 0" in son_hata or "PerDay" in son_hata: break   # model yok / günlük kota bitti → sıradaki
+                if e.code in (429, 500, 503) and deneme < 2: time.sleep(15 * (deneme + 1)); continue
                 break
             except (urllib.error.URLError, TimeoutError) as e:
                 son_hata = str(e)
                 if deneme < 2: time.sleep(5); continue
                 break
+        if i == len(sira) and not _kesfedildi:                  # listedekiler bitti → API'den güncel modelleri bul
+            _kesfedildi = True; sira += [m for m in _kesfet() if m not in sira]
     raise GeminiYok(f"Gemini yanıt vermedi ({son_hata[:160]})")
 
 
