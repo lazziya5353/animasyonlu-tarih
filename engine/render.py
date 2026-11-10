@@ -234,12 +234,19 @@ class Project:
                 put(fr, self._wm2, x, y, 0.30 * clamp(q / .5) * clamp((2.2 - q) / .5))
 
     def audio(self):
+        """Varsayılan: sadece anlatıcının sesi (temizlenmiş, sabit seviyede). Müzik ancak project.json'da music.aktif=true ise eklenir."""
         out = os.path.join(self.dir, "out"); os.makedirs(out, exist_ok=True)
-        mus = os.path.join(out, "music.wav"); mix = os.path.join(out, "mix.wav"); mc = self.cfg.get("music", {})
-        MUSIC.make(mus, self.dur, booms=mc.get("booms", [self.off]), major_from=mc.get("major_from"), heartbeat=mc.get("heartbeat"), drone=mc.get("drone", False))
+        mus = os.path.join(out, "music.wav"); mix = os.path.join(out, "mix.wav"); mc = self.cfg.get("music", {}) or {}
         ms = int(self.off * 1000)
+        ses = (f"aresample=44100,adelay={ms}|{ms},apad=whole_dur={self.dur},highpass=f=70,afftdn=nf=-30,"
+               f"acompressor=threshold=-18dB:ratio=2.5:attack=8:release=150")
+        if not mc.get("aktif"):
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", self.voice, "-filter_complex",
+                            f"[0:a]{ses},loudnorm=I=-14:TP=-1.5,atrim=0:{self.dur}[o]", "-map", "[o]", "-ar", "44100", mix], check=True)
+            return mix
+        MUSIC.make(mus, self.dur, booms=mc.get("booms", [self.off]), major_from=mc.get("major_from"), heartbeat=mc.get("heartbeat"), drone=mc.get("drone", False))
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", mus, "-i", self.voice, "-filter_complex",
-                        f"[1:a]aresample=44100,adelay={ms}|{ms},apad=whole_dur={self.dur},highpass=f=70,afftdn=nf=-30,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=150[v];[v]asplit=2[v1][v2];"
+                        f"[1:a]{ses}[v];[v]asplit=2[v1][v2];"
                         f"[0:a]highpass=f=110,lowpass=f=7000,volume={mc.get('volume', 0.24)}[m];[m][v2]sidechaincompress=threshold=0.04:ratio=6:attack=15:release=450[md];"
                         f"[md][v1]amix=inputs=2:normalize=0:duration=longest,loudnorm=I=-14:TP=-1.5,atrim=0:{self.dur}[o]", "-map", "[o]", "-ar", "44100", mix], check=True)
         return mix
@@ -259,7 +266,8 @@ class Project:
         for c in self.cards: olay("efekt", "efekt", f"Sayaç kartı: {c.get('value')} {c.get('unit', '')}", slug=slug, t0=c["start"] + off, t1=c["end"] + off)
         for j in self.jumps: olay("efekt", "efekt", f"Zaman atlaması: +{j.get('value')} yıl", slug=slug, t0=j["t"] + off, t1=j["t"] + off + 1.4)
         if self.cfg.get("ayyildiz"): a = self.cfg["ayyildiz"]; olay("efekt", "efekt", "Ay yıldız finali", slug=slug, t0=a[0] + off, t1=a[3] + off)
-        O("muzik", "Müzik besteleniyor, sese göre kısılacak", t0=0, t1=self.dur)
+        if (self.cfg.get("music") or {}).get("aktif"): O("muzik", "Müzik besteleniyor, sese göre kısılacak", t0=0, t1=self.dur)
+        else: O("ses", "Müzik yok: sadece anlatıcı sesi, temizleniyor", t0=0, t1=self.dur)
         olay("efekt", "efekt", f"Filigran: {MARKA.get('handle', '')}", slug=slug, t0=1.0, t1=self.dur - 2.4)
 
     def render(self, out=None, crf=28):

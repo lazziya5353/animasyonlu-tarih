@@ -171,13 +171,13 @@ async function openProject(slug) {
   }
   const eksik = scenes.filter((s) => !P.gorseller.includes(s.image.split("/").pop())).length;
   h += `<h2>Sahneler <span class="mut" style="font-family:Mont;font-size:12px">· ${scenes.length - eksik}/${scenes.length} görsel</span></h2>`;
+  if (sc) h += `<div class="flex" style="margin-bottom:10px"><button class="gold" id="tumprompt">📋 Tüm promptları kopyala (${sc.sahneler.length})</button></div>`;
   h += `<div class="drop" id="drop"><b>Görselleri toplu yükle</b><span class="mut">Gemini'de ürettiğin görselleri buraya sürükle ya da dokunup hepsini birden seç</span><input type="file" accept="image/*" multiple id="toplu" hidden></div>`;
   h += `<div class="scenes">`;
   scenes.forEach((s, i) => { const has = P.gorseller.includes(s.image.split("/").pop()); const so = sahneSorun[i + 1];
     h += `<div class="sc" data-img="${has ? esc(s.image) : ""}" data-i="${i + 1}" title="${esc((so || []).map((m) => m.mesaj).join("\n"))}"><i>${i + 1}</i>${so ? `<em class="${so.some((m) => m.seviye === "hata") ? "e" : "w"}">!</em>` : ""}${has ? "" : "Yükle"}</div>`; });
   h += `</div><div class="mut" style="margin-top:6px">Tek bir görseli değiştirmek için karesine dokun.</div>`;
   if (sc) h += `<details class="card" style="margin-top:12px"><summary>Gemini promptları</summary>
-    <div class="flex"><button class="gold" id="tumprompt">Tüm promptları kopyala (${sc.sahneler.length})</button></div>
     ${sc.sahneler.map((s, i) => `<div class="flex" style="align-items:center"><span class="mut">${i + 1}</span><button data-copy="${esc(s.prompt_tam)}">${esc(s.big || "Sahne")} promptunu kopyala</button></div>`).join("")}</details>`;
   const hasVoice = P.dosyalar.includes("ses.wav");
   h += `<h2>Ses</h2><div class="card">${hasVoice ? `<audio id="aud" controls style="width:100%"></audio>` : `<span class="mut">Ses yok.</span>`}<div class="flex"><label class="btn">Ses yükle (.wav)<input type="file" accept="audio/wav" id="up-ses" hidden></label></div></div>`;

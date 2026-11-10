@@ -43,12 +43,12 @@ function zamanCizelgesi(P) {
     return { off, sc, cap: (tm.captions || []).map((c) => ({ ...c, start: c.start + off, end: c.end + off })),
       maps: (tm.maps || []).map((m) => ({ ...m, start: m.start + off, end: m.end + off })), cards: (tm.cards || []).map((c) => ({ ...c, start: c.start + off, end: c.end + off })),
       jumps: (tm.jumps || []).map((j) => ({ ...j, t: j.t + off })), ay: tm.ayyildiz ? tm.ayyildiz.map((x) => x + off) : null, eras: tm.eras || [],
-      dur: tm.duration || sc[sc.length - 1].end, tahmini: false };
+      dur: tm.duration || sc[sc.length - 1].end, tahmini: false, muzik: !!tm.music?.aktif };
   }
   // henüz kurgulanmadı: cümle uzunluklarından tahmini zamanlar
   const S = P.script?.sahneler || P.project?.scenes || []; let t = 0.3; const sc = [], cap = [];
   S.forEach((s) => { const st = t; for (const l of s.lines || []) { const d = Math.max(1.2, l.length / 11.3); cap.push({ start: t, end: t + d, text: l }); t += d + 0.35; } sc.push({ ...s, start: st, end: t }); });
-  return { off: 0.3, sc, cap, maps: [], cards: [], jumps: [], ay: null, eras: P.script?.eras || [], dur: t + 2, tahmini: true };
+  return { off: 0.3, sc, cap, maps: [], cards: [], jumps: [], ay: null, eras: P.script?.eras || [], dur: t + 2, tahmini: true, muzik: !!P.project?.music?.aktif };
 }
 
 // ───────── çizim ─────────
@@ -81,7 +81,7 @@ function hepsiniCiz() {
   T.jumps.forEach((j) => clip("efekt", j.t, j.t + 1.4, `+${esc(j.value)} yıl`));
   if (T.ay) clip("efekt", T.ay[0], T.ay[3], "ay yıldız");
   T.maps.forEach((m) => clip("harita", m.start, m.end, esc(m.title || "harita")));
-  clip("muzik", 0, T.dur, "♪ müzik · sese göre otomatik kısılır");
+  if (T.muzik) clip("muzik", 0, T.dur, "♪ müzik · sese göre otomatik kısılır");
   kontrolIsaretleri();
 }
 function kontrolIsaretleri() {
@@ -198,7 +198,7 @@ function sentetikOlaylar() { // hiç kayıt yoksa (eski projeler) zaman çizelge
   T.maps.forEach((m) => L.push({ ajan: "kurgucu", tur: "harita", mesaj: `Harita: ${m.title || ""}`, t0: m.start, t1: m.end }));
   T.cards.forEach((c) => L.push({ ajan: "efekt", tur: "efekt", mesaj: `Sayaç kartı: ${c.value} ${c.unit || ""}`, t0: c.start, t1: c.end }));
   if (T.ay) L.push({ ajan: "efekt", tur: "efekt", mesaj: "Ay yıldız finali", t0: T.ay[0], t1: T.ay[3] });
-  L.push({ ajan: "kurgucu", tur: "muzik", mesaj: "Müzik besteleniyor", t0: 0, t1: T.dur });
+  if (T.muzik) L.push({ ajan: "kurgucu", tur: "muzik", mesaj: "Müzik besteleniyor", t0: 0, t1: T.dur });
   for (let k = 0; k <= 10; k++) L.push({ ajan: "kurgucu", tur: "ilerleme", mesaj: `Kareler işleniyor %${k * 10}`, t0: (T.dur * k) / 10, yuzde: k * 10 });
   for (const [as, r] of Object.entries(P.kontrol || {})) for (const m of r?.maddeler || []) if (m.seviye !== "bilgi") L.push({ ajan: "kontrol", tur: "kontrol", mesaj: `${as}: ${m.mesaj.slice(0, 110)}`, sahne: m.sahne, seviye: m.seviye });
   L.push({ ajan: "kurgucu", tur: "bilgi", mesaj: "Video hazır ✓", yuzde: 100 });
