@@ -25,9 +25,9 @@
  },
  "kontrol": {
   "durum": "tamam",
-  "mesaj": "11-kasim-1918-ateskes: kurgu ✓",
+  "mesaj": "11-kasim-1918-ateskes: senaryo ✓, ses ✓, gorsel !, kurgu ✓",
   "cikti": "projects/11-kasim-1918-ateskes/kontrol",
-  "zaman": "2026-11-10T20:57:38Z"
+  "zaman": "2026-11-10T21:13:06Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

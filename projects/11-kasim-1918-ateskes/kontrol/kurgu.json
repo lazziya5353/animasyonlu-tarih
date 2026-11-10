@@ -5,15 +5,11 @@
  "maddeler": [
   {
    "seviye": "bilgi",
-   "mesaj": "sığmadığı için küçültüldü: “Bir savaşın sonu, yeni bir destanın başı.”"
-  },
-  {
-   "seviye": "bilgi",
-   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.8-flash 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. )"
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-2.5-flash 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your)"
   }
  ],
  "sure": 51.3,
  "lufs": -14.9,
  "senkron": "19/19",
- "zaman": "2026-11-10T20:57:38Z"
+ "zaman": "2026-11-10T21:13:06Z"
 }

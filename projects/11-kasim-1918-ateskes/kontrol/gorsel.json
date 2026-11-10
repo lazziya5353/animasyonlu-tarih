@@ -1,26 +1,18 @@
 {
  "asama": "gorsel",
- "durum": "hata",
- "ozet": "0/12 görsel",
+ "durum": "uyari",
+ "ozet": "12/12 görsel",
  "maddeler": [
   {
-   "seviye": "hata",
-   "mesaj": "eksik görsel: sahne 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12"
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 7
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka incelemesi atlandı: Gemini yanıt vermedi (gemini-2.5-flash 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your)"
   }
  ],
- "eksik": [
-  1,
-  2,
-  3,
-  4,
-  5,
-  6,
-  7,
-  8,
-  9,
-  10,
-  11,
-  12
- ],
- "zaman": "2026-11-10T20:26:38Z"
+ "eksik": [],
+ "zaman": "2026-11-10T21:09:41Z"
 }
