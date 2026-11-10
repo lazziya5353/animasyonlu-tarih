@@ -1,0 +1,12 @@
+{
+ "asama": "ses",
+ "durum": "hata",
+ "ozet": "Ses yok",
+ "maddeler": [
+  {
+   "seviye": "hata",
+   "mesaj": "ses dosyası yok"
+  }
+ ],
+ "zaman": "2026-11-10T20:13:48Z"
+}

@@ -1,0 +1,26 @@
+{
+ "asama": "gorsel",
+ "durum": "hata",
+ "ozet": "0/12 görsel",
+ "maddeler": [
+  {
+   "seviye": "hata",
+   "mesaj": "eksik görsel: sahne 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12"
+  }
+ ],
+ "eksik": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "zaman": "2026-11-10T20:13:48Z"
+}
