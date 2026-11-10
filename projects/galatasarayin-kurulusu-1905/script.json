@@ -1,0 +1,313 @@
+{
+ "baslik": "Galatasaray'ın Kuruluşu: Bir Sınıfta Doğan Kulüp",
+ "konu": "Galatasaray Spor Kulübü'nün 1905'te Galatasaray Lisesi'nde kuruluşu",
+ "tarih": "2026-11-11",
+ "slug": "galatasarayin-kurulusu-1905",
+ "hook": "BİR SINIFTA DOĞDU",
+ "map_region": "avrupa_genis",
+ "durum": "onay-bekliyor",
+ "finale": "",
+ "maps": [
+  {
+   "scene": 2,
+   "cities": [
+    "Londra",
+    "İstanbul"
+   ],
+   "route": [
+    "Londra",
+    "Paris",
+    "İstanbul"
+   ],
+   "title": "FUTBOLUN YOLU"
+  }
+ ],
+ "cards": [
+  {
+   "scene": 4,
+   "value": 889,
+   "unit": "NO",
+   "small": "ALİ SAMİ YEN'İN OKUL NUMARASI"
+  }
+ ],
+ "eras": [
+  {
+   "name": "OKUL",
+   "from": 0,
+   "to": 3
+  },
+  {
+   "name": "KURULUŞ",
+   "from": 4,
+   "to": 7
+  },
+  {
+   "name": "KİMLİK",
+   "from": 8,
+   "to": 9
+  },
+  {
+   "name": "ŞAMPİYONLUK",
+   "from": 10,
+   "to": 11
+  }
+ ],
+ "outro": {
+  "title": "1905",
+  "line": "Bir lise sınıfında doğan efsane."
+ },
+ "aciklama": "1905'te Galatasaray Lisesi'nde bir edebiyat dersi sırasında, Ali Sami Yen ve arkadaşları bir futbol kulübü kurmaya karar verdi. İsmini seyirciler, rengini ise yenilgiler belirledi… Sizce Gloria ya da Audace olsaydı nasıl olurdu? 👇",
+ "hashtagler": [
+  "#tarih",
+  "#galatasaray",
+  "#alisamiyen",
+  "#1905",
+  "#futboltarihi",
+  "#galatasaraylisesi",
+  "#istanbul",
+  "#türkfutbolu",
+  "#animasyontarih",
+  "#reels",
+  "#keşfet"
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/History_of_Galatasaray_S.K.",
+  "https://kureansiklopedi.com/tr/detay/galatasaray-spor-kulubu-ccb95",
+  "https://www.biyografiler.com/bilgi/galatasaray-spor-kulubu",
+  "https://beinsports.com.tr/haber/turk-sporunun-sari-kirmizili-cinari-galatasaray-120-yasinda"
+ ],
+ "kontrol_notlari": [
+  "Kuruluş: 1 Teşrin-i evvel 1321 = Ekim 1905; kesin gün tartışmalı (1/14/20/30 Ekim kaynaklarda geçiyor) → metinde sadece 'Ekim 1905'.",
+  "Edebiyat öğretmeni Mehmet Ata Bey'in dersi sırasında karar alındı (Ali Sami Yen, 'Ellinci Yıl').",
+  "Ali Sami Yen okulun 889 numaralı öğrencisi (biyografiler.com).",
+  "Amaç alıntısı: 'İngilizler gibi toplu bir halde oynamak, bir renge ve bir isme sahip olmak, Türk olmayan takımları yenmek' — metinde yumuşatıldı: 'yabancı takımları'.",
+  "Gloria/Audace önerileri; ilk maçlardan birinde 2-0 galibiyet sonrası 'Galata Sarayı Efendileri' (Cem Atabeyoğlu, Wikipedia).",
+  "Renkler: önce kırmızı-beyaz, sonra sarı-siyah; Baltalimanı'na 0-5 yenilgiden sonra uğursuz sayıldı; sonra sarı-kırmızı (Wikipedia, TFF).",
+  "1908-09 İstanbul Ligi şampiyonluğu: ligi kazanan ilk Türk takımı.",
+  "Okul kökeni 1481 Galata Sarayı Enderun Mektebi.",
+  "Gerçek kişilerin yüzleri çizdirilmiyor; arması/logosu kullanılmıyor."
+ ],
+ "sahneler": [
+  {
+   "lines": [
+    "İstanbul, 1905.",
+    "Bir lise sınıfında, büyük bir hikâye başlıyor."
+   ],
+   "big": "1905",
+   "sub": "İSTANBUL",
+   "year": 1905,
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "prompt": "Panoramic view of Istanbul in 1905 seen from the hills of Beyoglu at golden hour, Galata Tower, the Golden Horn with steamships and caiques, old wooden houses and mosques with minarets on the horizon, soft haze",
+   "label": "1905",
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Panoramic view of Istanbul in 1905 seen from the hills of Beyoglu at golden hour, Galata Tower, the Golden Horn with steamships and caiques, old wooden houses and mosques with minarets on the horizon, soft haze, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s01.jpg"
+  },
+  {
+   "lines": [
+    "Okulun kökleri 1481'e, Galata Sarayı'na uzanıyordu."
+   ],
+   "big": "1481",
+   "sub": "GALATA SARAYI",
+   "year": 1481,
+   "fx": [
+    "dust"
+   ],
+   "effect": "glow",
+   "prompt": "The grand ornate iron gate and stone facade of an old Ottoman imperial high school in Istanbul in 1905, students in dark school uniforms and red fez walking through the courtyard, autumn trees, morning light, seen from a distance",
+   "label": "1481",
+   "type_text": "",
+   "prompt_tam": "The grand ornate iron gate and stone facade of an old Ottoman imperial high school in Istanbul in 1905, students in dark school uniforms and red fez walking through the courtyard, autumn trees, morning light, seen from a distance, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s02.jpg"
+  },
+  {
+   "lines": [
+    "O yıllarda İstanbul'da futbolu",
+    "İngilizler ve Rumlar oynuyordu."
+   ],
+   "big": "FUTBOL",
+   "sub": "YABANCI TAKIMLAR",
+   "year": 1905,
+   "fx": [
+    "dust"
+   ],
+   "prompt": "An early 1900s football match on a dusty field in Istanbul, players in long shorts and striped shirts with a leather ball, a small crowd of men in bowler hats and fezzes watching along a rope, seen from a distance, vintage atmosphere",
+   "label": "1905",
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "An early 1900s football match on a dusty field in Istanbul, players in long shorts and striped shirts with a leather ball, a small crowd of men in bowler hats and fezzes watching along a rope, seen from a distance, vintage atmosphere, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s03.jpg"
+  },
+  {
+   "lines": [
+    "Türk gençleri ise",
+    "bu oyunu sadece kenardan izliyordu."
+   ],
+   "big": "KENARDAN",
+   "sub": "İZLEYEN GENÇLER",
+   "year": 1905,
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "prompt": "Three Ottoman teenage students in dark school uniforms and red fez standing behind a wooden fence watching a football match, seen from behind, sunlight, longing atmosphere, faces not visible",
+   "label": "1905",
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Three Ottoman teenage students in dark school uniforms and red fez standing behind a wooden fence watching a football match, seen from behind, sunlight, longing atmosphere, faces not visible, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s04.jpg"
+  },
+  {
+   "lines": [
+    "Ali Sami Yen, okulun 889 numaralı öğrencisiydi.",
+    "Ve aklında bir fikir vardı."
+   ],
+   "big": "ALİ SAMİ YEN",
+   "sub": "889 NUMARALI ÖĞRENCİ",
+   "year": 1905,
+   "fx": [
+    "flicker"
+   ],
+   "prompt": "A young Ottoman student in a dark school uniform and red fez sitting at a wooden school desk by a tall window, seen from behind, writing in an old notebook, warm afternoon light, books and an ink pot, faces not visible",
+   "label": "1905",
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A young Ottoman student in a dark school uniform and red fez sitting at a wooden school desk by a tall window, seen from behind, writing in an old notebook, warm afternoon light, books and an ink pot, faces not visible, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s05.jpg"
+  },
+  {
+   "lines": [
+    "Ekim 1905'te, bir edebiyat dersinde",
+    "birkaç arkadaş baş başa verdi ve kulübü kurdu."
+   ],
+   "big": "EKİM 1905",
+   "sub": "EDEBİYAT DERSİ",
+   "year": 1905,
+   "fx": [
+    "dust"
+   ],
+   "effect": "stamp",
+   "prompt": "Interior of an old Ottoman classroom in 1905, a few students in dark uniforms and red fez leaning their heads together over a desk and whispering, a teacher at the blackboard in the far background, warm window light, seen from behind, faces not visible",
+   "label": "1905",
+   "type_text": "",
+   "prompt_tam": "Interior of an old Ottoman classroom in 1905, a few students in dark uniforms and red fez leaning their heads together over a desk and whispering, a teacher at the blackboard in the far background, warm window light, seen from behind, faces not visible, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s06.jpg"
+  },
+  {
+   "lines": [
+    "Amaçları netti: bir isme, bir renge sahip olmak",
+    "ve yabancı takımları yenmek."
+   ],
+   "big": "AMAÇ",
+   "sub": "RENK · İSİM · ZAFER",
+   "year": 1905,
+   "fx": [
+    "rays"
+   ],
+   "prompt": "Close-up of an old handwritten notebook page in Ottoman script on a wooden school desk, a fountain pen and ink pot beside it, a worn leather football in soft focus in the background, warm candle-like light, no readable letters",
+   "label": "1905",
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Close-up of an old handwritten notebook page in Ottoman script on a wooden school desk, a fountain pen and ink pot beside it, a worn leather football in soft focus in the background, warm candle-like light, no readable letters, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s07.jpg"
+  },
+  {
+   "lines": [
+    "İsim için Gloria ve Audace önerildi.",
+    "Ama isim, sahada konacaktı."
+   ],
+   "big": "İSİM?",
+   "sub": "GLORIA · AUDACE",
+   "year": 1905,
+   "fx": [
+    "dust"
+   ],
+   "effect": "type",
+   "type_text": "GLORIA? AUDACE?",
+   "prompt": "A group of Ottoman students in school uniforms and fez sitting on a stone staircase of an old school courtyard debating, seen from behind and at a distance, autumn leaves, golden late afternoon light",
+   "label": "1905",
+   "prompt_tam": "A group of Ottoman students in school uniforms and fez sitting on a stone staircase of an old school courtyard debating, seen from behind and at a distance, autumn leaves, golden late afternoon light, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s08.jpg"
+  },
+  {
+   "lines": [
+    "İlk maçlardan birini 2-0 kazandılar.",
+    "Seyirciler onlara Galata Sarayı Efendileri dedi."
+   ],
+   "big": "2-0",
+   "sub": "GALATA SARAYI EFENDİLERİ",
+   "year": 1905,
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "prompt": "A joyful moment on an early 1900s football field in Istanbul, young players in plain white shirts celebrating a goal, spectators in fezzes and hats cheering behind a rope, dust in the air, seen from a distance, vintage film look",
+   "label": "1905",
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A joyful moment on an early 1900s football field in Istanbul, young players in plain white shirts celebrating a goal, spectators in fezzes and hats cheering behind a rope, dust in the air, seen from a distance, vintage film look, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s09.jpg"
+  },
+  {
+   "lines": [
+    "Renkler önce kırmızı-beyaz, sonra sarı-siyah oldu.",
+    "Ama ağır bir yenilgiden sonra uğursuz sayıldı."
+   ],
+   "big": "RENKLER",
+   "sub": "KIRMIZI-BEYAZ · SARI-SİYAH",
+   "year": 1907,
+   "fx": [
+    "smoke"
+   ],
+   "prompt": "Old football jerseys from the early 1900s hanging on wooden pegs in a dim changing room, one red and white, one yellow and black, a pair of worn leather boots on a bench, moody window light, no logos, no text",
+   "label": "1907",
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Old football jerseys from the early 1900s hanging on wooden pegs in a dim changing room, one red and white, one yellow and black, a pair of worn leather boots on a bench, moody window light, no logos, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s10.jpg"
+  },
+  {
+   "lines": [
+    "Sonunda sarı-kırmızıda karar kılındı.",
+    "1909'da İstanbul Ligi'ni kazanan ilk Türk takımı oldular."
+   ],
+   "big": "1909",
+   "sub": "İLK ŞAMPİYONLUK",
+   "year": 1909,
+   "fx": [
+    "gold",
+    "rays"
+   ],
+   "effect": "glow",
+   "prompt": "An early 1900s football team in plain yellow and red shirts posing proudly on a grass field with a small silver trophy, seen from behind and at a distance, golden sunset light, spectators applauding, no logos, no text",
+   "label": "1909",
+   "type_text": "",
+   "prompt_tam": "An early 1900s football team in plain yellow and red shirts posing proudly on a grass field with a small silver trophy, seen from behind and at a distance, golden sunset light, spectators applauding, no logos, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s11.jpg"
+  },
+  {
+   "lines": [
+    "Bir sınıfta doğan hayal,",
+    "bugün milyonların tutkusu."
+   ],
+   "big": "1905",
+   "sub": "BİR SINIFTA DOĞDU",
+   "year": 2026,
+   "fx": [
+    "gold",
+    "dust"
+   ],
+   "prompt": "A vast modern football stadium at night filled with fans waving yellow and red flags and scarves, flares glowing, seen from behind the crowd, epic atmosphere, no logos, no readable text",
+   "label": "2026",
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A vast modern football stadium at night filled with fans waving yellow and red flags and scarves, flares glowing, seen from behind the crowd, epic atmosphere, no logos, no readable text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s12.jpg"
+  }
+ ],
+ "seslendirme_metni": "İstanbul, bin dokuz yüz beş.\nBir lise sınıfında, büyük bir hikâye başlıyor.\nOkulun kökleri bin dört yüz seksen bire, Galata Sarayı'na uzanıyordu.\nO yıllarda İstanbul'da futbolu\nİngilizler ve Rumlar oynuyordu.\nTürk gençleri ise\nbu oyunu sadece kenardan izliyordu.\nAli Sami Yen, okulun sekiz yüz seksen dokuz numaralı öğrencisiydi.\nVe aklında bir fikir vardı.\nEkim bin dokuz yüz beşte, bir edebiyat dersinde\nbirkaç arkadaş baş başa verdi ve kulübü kurdu.\nAmaçları netti: bir isme, bir renge sahip olmak\nve yabancı takımları yenmek.\nİsim için Gloria ve Audace önerildi.\nAma isim, sahada konacaktı.\nİlk maçlardan birini iki sıfır kazandılar.\nSeyirciler onlara Galata Sarayı Efendileri dedi.\nRenkler önce kırmızı-beyaz, sonra sarı-siyah oldu.\nAma ağır bir yenilgiden sonra uğursuz sayıldı.\nSonunda sarı kırmızıda karar kılındı.\nBin dokuz yüz dokuzda İstanbul Ligi'ni kazanan ilk Türk takımı oldular.\nBir sınıfta doğan hayal,\nbugün milyonların tutkusu."
+}

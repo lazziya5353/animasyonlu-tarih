@@ -1,0 +1,361 @@
+{
+ "title": "Galatasaray'ın Kuruluşu: Bir Sınıfta Doğan Kulüp",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "BİR SINIFTA DOĞDU",
+ "map_region": "avrupa_genis",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "İstanbul, 1905.",
+    "Bir lise sınıfında, büyük bir hikâye başlıyor."
+   ],
+   "big": "1905",
+   "sub": "İSTANBUL",
+   "year": 1905,
+   "label": "1905",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Okulun kökleri 1481'e, Galata Sarayı'na uzanıyordu."
+   ],
+   "big": "1481",
+   "sub": "GALATA SARAYI",
+   "year": 1481,
+   "label": "1481",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "glow"
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "O yıllarda İstanbul'da futbolu",
+    "İngilizler ve Rumlar oynuyordu."
+   ],
+   "big": "FUTBOL",
+   "sub": "YABANCI TAKIMLAR",
+   "year": 1905,
+   "label": "1905",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Türk gençleri ise",
+    "bu oyunu sadece kenardan izliyordu."
+   ],
+   "big": "KENARDAN",
+   "sub": "İZLEYEN GENÇLER",
+   "year": 1905,
+   "label": "1905",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ali Sami Yen, okulun 889 numaralı öğrencisiydi.",
+    "Ve aklında bir fikir vardı."
+   ],
+   "big": "ALİ SAMİ YEN",
+   "sub": "889 NUMARALI ÖĞRENCİ",
+   "year": 1905,
+   "label": "1905",
+   "fx": [
+    "flicker"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ekim 1905'te, bir edebiyat dersinde",
+    "birkaç arkadaş baş başa verdi ve kulübü kurdu."
+   ],
+   "big": "EKİM 1905",
+   "sub": "EDEBİYAT DERSİ",
+   "year": 1905,
+   "label": "1905",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Amaçları netti: bir isme, bir renge sahip olmak",
+    "ve yabancı takımları yenmek."
+   ],
+   "big": "AMAÇ",
+   "sub": "RENK · İSİM · ZAFER",
+   "year": 1905,
+   "label": "1905",
+   "fx": [
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "İsim için Gloria ve Audace önerildi.",
+    "Ama isim, sahada konacaktı."
+   ],
+   "big": "İSİM?",
+   "sub": "GLORIA · AUDACE",
+   "year": 1905,
+   "label": "1905",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "type",
+   "type_text": "GLORIA? AUDACE?"
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "İlk maçlardan birini 2-0 kazandılar.",
+    "Seyirciler onlara Galata Sarayı Efendileri dedi."
+   ],
+   "big": "2-0",
+   "sub": "GALATA SARAYI EFENDİLERİ",
+   "year": 1905,
+   "label": "1905",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Renkler önce kırmızı-beyaz, sonra sarı-siyah oldu.",
+    "Ama ağır bir yenilgiden sonra uğursuz sayıldı."
+   ],
+   "big": "RENKLER",
+   "sub": "KIRMIZI-BEYAZ · SARI-SİYAH",
+   "year": 1907,
+   "label": "1907",
+   "fx": [
+    "smoke"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Sonunda sarı-kırmızıda karar kılındı.",
+    "1909'da İstanbul Ligi'ni kazanan ilk Türk takımı oldular."
+   ],
+   "big": "1909",
+   "sub": "İLK ŞAMPİYONLUK",
+   "year": 1909,
+   "label": "1909",
+   "fx": [
+    "gold",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "glow"
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bir sınıfta doğan hayal,",
+    "bugün milyonların tutkusu."
+   ],
+   "big": "1905",
+   "sub": "BİR SINIFTA DOĞDU",
+   "year": 2026,
+   "label": "2026",
+   "fx": [
+    "gold",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "OKUL",
+   "from": 0,
+   "to": 3
+  },
+  {
+   "name": "KURULUŞ",
+   "from": 4,
+   "to": 7
+  },
+  {
+   "name": "KİMLİK",
+   "from": 8,
+   "to": 9
+  },
+  {
+   "name": "ŞAMPİYONLUK",
+   "from": 10,
+   "to": 11
+  }
+ ],
+ "outro_plan": {
+  "title": "1905",
+  "line": "Bir lise sınıfında doğan efsane."
+ },
+ "maps_plan": [
+  {
+   "scene": 2,
+   "cities": [
+    "Londra",
+    "İstanbul"
+   ],
+   "route": [
+    "Londra",
+    "Paris",
+    "İstanbul"
+   ],
+   "title": "FUTBOLUN YOLU"
+  }
+ ],
+ "cards_plan": [
+  {
+   "scene": 4,
+   "value": 889,
+   "unit": "NO",
+   "small": "ALİ SAMİ YEN'İN OKUL NUMARASI"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": ""
+}
