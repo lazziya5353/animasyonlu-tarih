@@ -9,6 +9,8 @@ concurrency: { group: repo-yazma, cancel-in-progress: false }
 jobs:
   analiz:
     runs-on: ubuntu-latest
+    env:
+      PYTHONUNBUFFERED: "1"
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4

@@ -37,10 +37,10 @@ def hazir():
     return bool(os.environ.get("GEMINI_API_KEY"))
 
 
-def _post(model, body):
+def _post(model, body, timeout=120):
     req = urllib.request.Request(API.format(m=model), data=json.dumps(body).encode(),
                                  headers={"content-type": "application/json", "x-goog-api-key": os.environ["GEMINI_API_KEY"]})
-    return json.load(urllib.request.urlopen(req, timeout=180))
+    return json.load(urllib.request.urlopen(req, timeout=max(10, timeout)))
 
 
 def sor(parts, json_cevap=True, sicaklik=0.2):
@@ -56,8 +56,11 @@ def sor(parts, json_cevap=True, sicaklik=0.2):
     while i < len(sira) and time.time() < bitis:
         model = sira[i]; i += 1
         for deneme in range(3):
+            kalan = bitis - time.time()
+            if kalan < 10: break
             try:
-                r = _post(model, body); _calisan = model
+                t0 = time.time(); r = _post(model, body, timeout=min(120, kalan)); _calisan = model
+                print(f"Gemini: {model} yanıt verdi ({time.time() - t0:.0f} sn)")
                 txt = "".join(p.get("text", "") for c in r.get("candidates", []) for p in c.get("content", {}).get("parts", []))
                 if not json_cevap: return txt
                 try: return json.loads(txt)
@@ -70,10 +73,9 @@ def sor(parts, json_cevap=True, sicaklik=0.2):
                 if e.code == 404 or "limit: 0" in son_hata or "PerDay" in son_hata: break   # model yok / günlük kota bitti → sıradaki
                 if e.code in (429, 500, 503) and deneme < 2: time.sleep(15 * (deneme + 1)); continue
                 break
-            except (urllib.error.URLError, TimeoutError) as e:
-                son_hata = str(e)
-                if deneme < 2: time.sleep(5); continue
-                break
+            except (urllib.error.URLError, TimeoutError, OSError) as e:
+                son_hata = f"{model}: {e}"; print("Gemini:", son_hata[:200])
+                break                                    # zaman aşımında aynı modeli tekrar bekleme, sıradakine geç
         if i == len(sira) and not _kesfedildi:                  # listedekiler bitti → API'den güncel modelleri bul
             _kesfedildi = True; sira += [m for m in _kesfet() if m not in sira]
     raise GeminiYok(f"Gemini yanıt vermedi ({son_hata[:160]})")

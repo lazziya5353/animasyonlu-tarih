@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
+      PYTHONUNBUFFERED: "1"
       SLUG: ${{ inputs.slug }}
       ASAMA: ${{ inputs.asama }}
     steps:

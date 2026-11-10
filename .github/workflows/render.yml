@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
+      PYTHONUNBUFFERED: "1"
       SLUG: ${{ inputs.slug }}
     steps:
       - name: Proje adını kontrol et

@@ -12,6 +12,7 @@ jobs:
   uret:
     runs-on: ubuntu-latest
     env:
+      PYTHONUNBUFFERED: "1"
       SLUG: ${{ inputs.slug }}
     steps:
       - name: Proje adını kontrol et

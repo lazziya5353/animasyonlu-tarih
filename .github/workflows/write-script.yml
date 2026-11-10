@@ -11,6 +11,8 @@ concurrency: { group: repo-yazma, cancel-in-progress: false }
 jobs:
   metin:
     runs-on: ubuntu-latest
+    env:
+      PYTHONUNBUFFERED: "1"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
