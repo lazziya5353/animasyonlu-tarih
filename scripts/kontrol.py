@@ -169,7 +169,7 @@ def ses(slug):
     hedef = (sc or {}).get("seslendirme_metni") or " ".join(l for s in sahneler(sc, pj) for l in s.get("lines", []))
     benzerlik = None
     try:
-        txt = gemini.sor([gemini.ses_parca(voice), "Bu Türkçe ses kaydını kelimesi kelimesine, hiçbir şey eklemeden ve düzeltmeden yazıya dök. Sayıları duyduğun gibi yazıyla yaz. Sadece metni döndür."], json_cevap=False, sicaklik=0)
+        txt = gemini.sor([gemini.ses_parca(voice), "Bu Türkçe ses kaydını kelimesi kelimesine, hiçbir şey eklemeden ve düzeltmeden yazıya dök. Sayıları duyduğun gibi yazıyla yaz. Sadece metni döndür."], json_cevap=False, sicaklik=0, sure=200)
         a, b = kelimeler(hedef), kelimeler(txt)
         sm = difflib.SequenceMatcher(None, a, b, autojunk=False); benzerlik = sm.ratio()
         R.ek["benzerlik"] = round(benzerlik, 3); R.ek["dokum"] = txt.strip()[:4000]

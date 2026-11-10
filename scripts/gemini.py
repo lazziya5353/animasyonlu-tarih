@@ -43,23 +43,27 @@ def _post(model, body, timeout=120):
     return json.load(urllib.request.urlopen(req, timeout=max(10, timeout)))
 
 
-def sor(parts, json_cevap=True, sicaklik=0.2):
+_dusunme_kapali = True   # yeni modeller varsayılan olarak uzun "düşünüyor"; kontrol işleri için gereksiz ve yavaş
+
+
+def sor(parts, json_cevap=True, sicaklik=0.2, sure=120):
     """parts: metin ve/veya {"inline_data": {...}} listesi. JSON istenirse sözlük döner."""
-    global _calisan
+    global _calisan, _dusunme_kapali
     if not hazir(): raise GeminiYok("GEMINI_API_KEY tanımlı değil")
     body = {"contents": [{"parts": [p if isinstance(p, dict) else {"text": p} for p in parts]}],
             "generationConfig": {"temperature": sicaklik, **({"responseMimeType": "application/json"} if json_cevap else {})}}
+    if _dusunme_kapali: body["generationConfig"]["thinkingConfig"] = {"thinkingLevel": "low"}
     global _kesfedildi
     son_hata = ""
     sira = ([_calisan] if _calisan else []) + [m for m in MODELLER if m != _calisan]
-    i = 0; bitis = time.time() + 240          # kontrol işi Gemini yüzünden uzamasın
+    i = 0; bitis = time.time() + max(240, sure * 2)          # kontrol işi Gemini yüzünden uzamasın
     while i < len(sira) and time.time() < bitis:
         model = sira[i]; i += 1
         for deneme in range(3):
             kalan = bitis - time.time()
             if kalan < 10: break
             try:
-                t0 = time.time(); r = _post(model, body, timeout=min(120, kalan)); _calisan = model
+                t0 = time.time(); r = _post(model, body, timeout=min(sure, kalan)); _calisan = model
                 print(f"Gemini: {model} yanıt verdi ({time.time() - t0:.0f} sn)")
                 txt = "".join(p.get("text", "") for c in r.get("candidates", []) for p in c.get("content", {}).get("parts", []))
                 if not json_cevap: return txt
@@ -70,6 +74,8 @@ def sor(parts, json_cevap=True, sicaklik=0.2):
             except urllib.error.HTTPError as e:
                 son_hata = f"{model} {e.code}: {e.read().decode()[:300]}"
                 print("Gemini:", son_hata[:200].replace("\n", " "))
+                if e.code == 400 and "thinking" in son_hata.lower() and "thinkingConfig" in body["generationConfig"]:
+                    body["generationConfig"].pop("thinkingConfig"); _dusunme_kapali = False; continue   # bu model ayarı tanımıyor
                 if e.code == 404 or "limit: 0" in son_hata or "PerDay" in son_hata: break   # model yok / günlük kota bitti → sıradaki
                 if e.code in (429, 500, 503) and deneme < 2: time.sleep(15 * (deneme + 1)); continue
                 break
