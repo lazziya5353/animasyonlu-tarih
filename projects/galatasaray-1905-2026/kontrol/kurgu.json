@@ -1,0 +1,23 @@
+{
+ "asama": "kurgu",
+ "durum": "tamam",
+ "ozet": "70 sn, -14 LUFS, senkron 32/32",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “ALİ SAMİ YEN”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “UEFA KUPASI”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “Bir lise sınıfından Avrupa'nın zirvesine.”"
+  }
+ ],
+ "sure": 69.6,
+ "lufs": -14.0,
+ "senkron": "32/32",
+ "zaman": "2026-11-10T22:28:04Z"
+}

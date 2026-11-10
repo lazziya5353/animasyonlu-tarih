@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "11-kasim-1918-ateskes videosu hazır",
-  "cikti": "release:video-11-kasim-1918-ateskes",
-  "zaman": "2026-11-10T20:57:45Z"
+  "mesaj": "galatasaray-1905-2026 videosu hazır",
+  "cikti": "release:video-galatasaray-1905-2026",
+  "zaman": "2026-11-10T22:28:12Z"
  },
  "kontrol": {
-  "durum": "hata",
-  "mesaj": "galatasaray-1905-2026: gorsel ✗",
+  "durum": "tamam",
+  "mesaj": "galatasaray-1905-2026: kurgu ✓",
   "cikti": "projects/galatasaray-1905-2026/kontrol",
-  "zaman": "2026-11-10T22:14:06Z"
+  "zaman": "2026-11-10T22:28:04Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
