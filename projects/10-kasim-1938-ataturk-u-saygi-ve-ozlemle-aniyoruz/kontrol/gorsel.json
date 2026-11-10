@@ -1,0 +1,50 @@
+{
+ "asama": "gorsel",
+ "durum": "hata",
+ "ozet": "12/12 görsel, ortalama puan 8.7/10",
+ "maddeler": [
+  {
+   "seviye": "hata",
+   "mesaj": "Saat 09.05 yerine yaklaşık 09.15 veya 12.45'i göstermektedir; akrep ve yelkovanın konumu sahnenin ana teması olan 09.05 ile uyuşmuyor.",
+   "sahne": 1
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Görseldeki bina I. TBMM binasının mimarisini tam olarak yansıtmamakta, döneme uygun olsa da temsili bir yapı görünümündedir.",
+   "sahne": 3
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Sokakta asılı bazı bayraklarda hilal ve yıldızın yönleri/açıları ters veya orantısız şekilde resmedilmiştir.",
+   "sahne": 5
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Görseldeki yapı Anıtkabir tören meydanı ve kolonatlarını andırmaktadır; 1934 yılı için Anıtkabir anakroniktir (inşası 1944-1953).",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Anıtkabir Aslanlı Yol'daki aslan heykellerinin adedi ve tören meydanına açılış perspektifi mimari plana göre ufak yapay zeka serbestlikleri/sapmaları içermektedir.",
+   "sahne": 9
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Sahne yılı 2026 olarak belirtilmişken görseldeki insanların kıyafetleri (kasketler, eski trençkotlar), binalar ve deniz araçları tamamen 1930'lar-1940'lar dönemine aittir; günümüzü yansıtmamaktadır.",
+   "sahne": 10
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Arka plandaki bayrak direklerindeki bazı Türk bayraklarında hilal ve yıldız orantıları bozuk ve deforme görünmektedir.",
+   "sahne": 10
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Ana bayrak direğinin hemen yanında zeminden yükselen ikinci ve yarım kalmış gibi duran anlamsız bir direk/çubuk yapay zeka hatası olarak yer almaktadır.",
+   "sahne": 12
+  }
+ ],
+ "eksik": [],
+ "ortalama_puan": 8.7,
+ "zaman": "2026-11-10T00:44:42Z"
+}
