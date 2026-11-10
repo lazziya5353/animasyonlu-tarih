@@ -1,0 +1,361 @@
+{
+ "baslik": "Galatasaray: 1905'ten 2026'ya",
+ "konu": "Galatasaray'ın 1905'te kuruluşundan bugüne hikâyesi ve rakiplerle kupa karşılaştırması",
+ "tarih": "2026-11-11",
+ "slug": "galatasaray-1905-2026",
+ "hook": "BİR SINIFTAN AVRUPA'YA",
+ "map_region": "avrupa_genis",
+ "durum": "onay-bekliyor",
+ "finale": "",
+ "maps": [
+  {
+   "scene": 7,
+   "cities": [
+    "İstanbul",
+    "Kopenhag",
+    "Monako"
+   ],
+   "route": [
+    "İstanbul",
+    "Kopenhag",
+    "Monako"
+   ],
+   "title": "AVRUPA FETHİ"
+  }
+ ],
+ "cards": [
+  {
+   "scene": 11,
+   "value": 26,
+   "unit": "ŞAMPİYONLUK",
+   "small": "SÜPER LİG · TFF"
+  },
+  {
+   "scene": 12,
+   "value": 19,
+   "unit": "KUPA",
+   "small": "TÜRKİYE KUPASI"
+  }
+ ],
+ "eras": [
+  {
+   "name": "KURULUŞ",
+   "from": 0,
+   "to": 3
+  },
+  {
+   "name": "YÜKSELİŞ",
+   "from": 4,
+   "to": 6
+  },
+  {
+   "name": "AVRUPA",
+   "from": 7,
+   "to": 9
+  },
+  {
+   "name": "BUGÜN",
+   "from": 10,
+   "to": 13
+  }
+ ],
+ "outro": {
+  "title": "1905 — 2026",
+  "line": "Bir lise sınıfından Avrupa'nın zirvesine."
+ },
+ "aciklama": "1905'te bir lise sınıfında başlayan hikâye; 26 lig şampiyonluğu, 19 Türkiye Kupası ve Avrupa'da kupa kazanan ilk Türk takımı… (Sayılar TFF resmî verileridir.) Sizce Galatasaray tarihinin en büyük anı hangisi? 👇",
+ "hashtagler": [
+  "#galatasaray",
+  "#tarih",
+  "#alisamiyen",
+  "#uefakupası",
+  "#2000",
+  "#süperlig",
+  "#türkiyekupası",
+  "#futboltarihi",
+  "#cimbom",
+  "#animasyontarih",
+  "#reels",
+  "#keşfet"
+ ],
+ "kaynaklar": [
+  "https://www.tff.org/Default.aspx?pageID=545",
+  "https://www.tff.org/Resources/TamSaha/ZTK-Finali-2026/24-25/",
+  "https://en.wikipedia.org/wiki/History_of_Galatasaray_S.K.",
+  "https://www.fanatik.com.tr/futbol/turkiye-kupasini-en-cok-hangi-takim-aldi-en-cok-finali-kim-oynadi-2161289",
+  "https://www.bursahakimiyet.com.tr/spor/trabzonspor-un-kupa-zaferi-sonrasi-super-kupa-eslesmeleri-belli-oldu-1634336"
+ ],
+ "kontrol_notlari": [
+  "Lig: TFF resmî sayıları GS 26, FB 19, BJK 16 (1959 öncesi 2 şampiyonluk TFF Tahkim kararıyla dahil), TS 7 — 2025-26 sonrası. FB'nin kendi saydığı 28 TFF'ce tanınmıyor; videoda 'TFF verilerine göre' denildi.",
+  "Türkiye Kupası: GS 19, BJK 11, TS 10 (2025-26'da Konyaspor'u yenerek), FB 7 (TFF TamSaha 2026, haberler).",
+  "Türkiye Kupası'nın ilk 4 sezonunu (1962-63 → 1965-66) GS kazandı (Fanatik).",
+  "Ali Sami Yen Stadı 1964'te açıldı; 2011'de yeni stada taşınıldı.",
+  "1971-72-73 üst üste 3 şampiyonluk; 2022-23 → 2025-26 üst üste 4 şampiyonluk (TFF).",
+  "UEFA Kupası finali 17 Mayıs 2000, Kopenhag, Arsenal'e karşı penaltılarla; UEFA Süper Kupası Ağustos 2000 Monako, Real Madrid 2-1.",
+  "Süper Kupa sayıları kaynaklara göre farklı olduğu için kullanılmadı.",
+  "Gerçek kişilerin yüzleri ve kulüp armaları çizdirilmiyor."
+ ],
+ "sahneler": [
+  {
+   "lines": [
+    "İstanbul, 1905.",
+    "Bir lise sınıfında, büyük bir hikâye başlıyor."
+   ],
+   "big": "1905",
+   "sub": "İSTANBUL",
+   "year": 1905,
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "prompt": "Panoramic view of Istanbul in 1905 seen from the hills of Beyoglu at golden hour, Galata Tower, the Golden Horn with steamships and caiques, old wooden houses and mosques with minarets on the horizon, soft haze",
+   "label": "1905",
+   "effect": "",
+   "type_text": "",
+   "image": "images/s01.jpg",
+   "prompt_tam": "Panoramic view of Istanbul in 1905 seen from the hills of Beyoglu at golden hour, Galata Tower, the Golden Horn with steamships and caiques, old wooden houses and mosques with minarets on the horizon, soft haze, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Ali Sami Yen ve arkadaşları,",
+    "bir edebiyat dersinde kulübü kurdu."
+   ],
+   "big": "ALİ SAMİ YEN",
+   "sub": "GALATASARAY LİSESİ",
+   "year": 1905,
+   "fx": [
+    "dust"
+   ],
+   "effect": "stamp",
+   "prompt": "Interior of an old Ottoman classroom in 1905, a few students in dark uniforms and red fez leaning their heads together over a desk and whispering, a teacher at the blackboard in the far background, warm window light, seen from behind, faces not visible",
+   "label": "1905",
+   "type_text": "",
+   "image": "images/s02.jpg",
+   "prompt_tam": "Interior of an old Ottoman classroom in 1905, a few students in dark uniforms and red fez leaning their heads together over a desk and whispering, a teacher at the blackboard in the far background, warm window light, seen from behind, faces not visible, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Seyirciler onlara Galata Sarayı Efendileri dedi."
+   ],
+   "big": "SARI-KIRMIZI",
+   "sub": "GALATA SARAYI EFENDİLERİ",
+   "year": 1908,
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "prompt": "A joyful moment on an early 1900s football field in Istanbul, young players in plain white shirts celebrating a goal, spectators in fezzes and hats cheering behind a rope, dust in the air, seen from a distance, vintage film look",
+   "label": "1908",
+   "effect": "",
+   "type_text": "",
+   "image": "images/s03.jpg",
+   "prompt_tam": "A joyful moment on an early 1900s football field in Istanbul, young players in plain white shirts celebrating a goal, spectators in fezzes and hats cheering behind a rope, dust in the air, seen from a distance, vintage film look, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "1909'da İstanbul Ligi'ni kazanan",
+    "ilk Türk takımı oldular."
+   ],
+   "big": "1909",
+   "sub": "İLK ŞAMPİYONLUK",
+   "year": 1909,
+   "fx": [
+    "gold",
+    "rays"
+   ],
+   "effect": "glow",
+   "prompt": "An early 1900s football team in plain yellow and red shirts posing proudly on a grass field with a small silver trophy, seen from behind and at a distance, golden sunset light, spectators applauding, no logos, no text",
+   "label": "1909",
+   "type_text": "",
+   "image": "images/s04.jpg",
+   "prompt_tam": "An early 1900s football team in plain yellow and red shirts posing proudly on a grass field with a small silver trophy, seen from behind and at a distance, golden sunset light, spectators applauding, no logos, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Türkiye Kupası'nın ilk dört yılında",
+    "kupayı kimseye vermediler."
+   ],
+   "big": "4/4",
+   "sub": "İLK DÖRT TÜRKİYE KUPASI",
+   "year": 1963,
+   "fx": [
+    "gold",
+    "dust"
+   ],
+   "prompt": "A 1960s football team in plain yellow and red shirts lifting a large silver cup on a muddy stadium pitch, seen from behind, photographers with vintage cameras, cheering crowd in coats and hats, overcast light, no logos, no text",
+   "label": "1963",
+   "effect": "",
+   "type_text": "",
+   "image": "images/s05.jpg",
+   "prompt_tam": "A 1960s football team in plain yellow and red shirts lifting a large silver cup on a muddy stadium pitch, seen from behind, photographers with vintage cameras, cheering crowd in coats and hats, overcast light, no logos, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "1964'te Ali Sami Yen Stadı açıldı."
+   ],
+   "big": "1964",
+   "sub": "ALİ SAMİ YEN STADI",
+   "year": 1964,
+   "fx": [
+    "smoke",
+    "dust"
+   ],
+   "prompt": "A packed old 1960s concrete football stadium in Istanbul at dusk, steep stands full of fans waving yellow and red flags, red flares and smoke rising, floodlights, seen from the stands, no logos, no readable text",
+   "label": "1964",
+   "effect": "",
+   "type_text": "",
+   "image": "images/s06.jpg",
+   "prompt_tam": "A packed old 1960s concrete football stadium in Istanbul at dusk, steep stands full of fans waving yellow and red flags, red flares and smoke rising, floodlights, seen from the stands, no logos, no readable text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "1970'lerde üst üste üç şampiyonluk geldi."
+   ],
+   "big": "3'LÜ SERİ",
+   "sub": "1971 · 1972 · 1973",
+   "year": 1972,
+   "fx": [
+    "gold"
+   ],
+   "prompt": "1970s football fans in an old stadium celebrating a championship, holding yellow and red scarves and banners, confetti and paper streamers falling, vintage 1970s film colors, seen from behind, no logos, no text",
+   "label": "1972",
+   "effect": "",
+   "type_text": "",
+   "image": "images/s07.jpg",
+   "prompt_tam": "1970s football fans in an old stadium celebrating a championship, holding yellow and red scarves and banners, confetti and paper streamers falling, vintage 1970s film colors, seen from behind, no logos, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "17 Mayıs 2000, Kopenhag.",
+    "UEFA Kupası finali penaltılara gitti."
+   ],
+   "big": "17.05.2000",
+   "sub": "KOPENHAG",
+   "year": 2000,
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "effect": "type",
+   "type_text": "PENALTILAR",
+   "prompt": "A football penalty kick moment in a huge European stadium at night, a player in a yellow and red kit seen from behind standing before the ball at the penalty spot, goalkeeper blurred in the distance, tense atmosphere, stadium lights, no logos, no text, no faces",
+   "label": "2000",
+   "image": "images/s08.jpg",
+   "prompt_tam": "A football penalty kick moment in a huge European stadium at night, a player in a yellow and red kit seen from behind standing before the ball at the penalty spot, goalkeeper blurred in the distance, tense atmosphere, stadium lights, no logos, no text, no faces, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Ve Galatasaray, Avrupa'da kupa kazanan",
+    "ilk Türk takımı oldu."
+   ],
+   "big": "UEFA KUPASI",
+   "sub": "AVRUPA FATİHİ",
+   "year": 2000,
+   "fx": [
+    "gold",
+    "rays"
+   ],
+   "effect": "glow",
+   "prompt": "A large silver European football trophy held high in the air under stadium lights, golden confetti falling, joyful players in yellow and red shirts seen from behind, night sky, epic celebration, no logos, no text",
+   "label": "2000",
+   "type_text": "",
+   "image": "images/s09.jpg",
+   "prompt_tam": "A large silver European football trophy held high in the air under stadium lights, golden confetti falling, joyful players in yellow and red shirts seen from behind, night sky, epic celebration, no logos, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Üç ay sonra Monako'da Real Madrid'i yendi.",
+    "UEFA Süper Kupası da İstanbul'a geldi."
+   ],
+   "big": "SÜPER KUPA",
+   "sub": "MONAKO · 2000",
+   "year": 2000,
+   "fx": [
+    "gold",
+    "dust"
+   ],
+   "prompt": "A small seaside stadium in Monaco at night in August, mountains and harbor lights in the background, fans in yellow and red celebrating in the stands, fireworks in the sky, seen from behind, no logos, no text",
+   "label": "2000",
+   "effect": "",
+   "type_text": "",
+   "image": "images/s10.jpg",
+   "prompt_tam": "A small seaside stadium in Monaco at night in August, mountains and harbor lights in the background, fans in yellow and red celebrating in the stands, fireworks in the sky, seen from behind, no logos, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Son dört sezonda",
+    "üst üste dört şampiyonluk geldi."
+   ],
+   "big": "4 SERİ",
+   "sub": "2023 · 2024 · 2025 · 2026",
+   "year": 2026,
+   "fx": [
+    "gold",
+    "rays"
+   ],
+   "prompt": "A modern football stadium at night in Istanbul with a dramatic roof, a sea of fans waving yellow and red flags, golden confetti and fireworks after a championship, seen from behind the crowd, no logos, no readable text",
+   "label": "2026",
+   "effect": "",
+   "type_text": "",
+   "image": "images/s11.jpg",
+   "prompt_tam": "A modern football stadium at night in Istanbul with a dramatic roof, a sea of fans waving yellow and red flags, golden confetti and fireworks after a championship, seen from behind the crowd, no logos, no readable text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Bugün TFF verilerine göre ligde 26 şampiyonluk.",
+    "Fenerbahçe 19, Beşiktaş 16, Trabzonspor 7."
+   ],
+   "big": "26",
+   "sub": "SÜPER LİG ŞAMPİYONLUĞU",
+   "year": 2026,
+   "fx": [
+    "gold"
+   ],
+   "prompt": "A grand trophy room in a football museum with many shining silver league trophies on illuminated glass shelves, warm spotlights, rows of cups, no logos, no text",
+   "label": "2026",
+   "effect": "",
+   "type_text": "",
+   "image": "images/s12.jpg",
+   "prompt_tam": "A grand trophy room in a football museum with many shining silver league trophies on illuminated glass shelves, warm spotlights, rows of cups, no logos, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Türkiye Kupası'nda 19.",
+    "Beşiktaş 11, Trabzonspor 10, Fenerbahçe 7."
+   ],
+   "big": "19",
+   "sub": "TÜRKİYE KUPASI",
+   "year": 2026,
+   "fx": [
+    "gold",
+    "dust"
+   ],
+   "prompt": "Close-up of a row of polished silver football cups on a dark wooden shelf with yellow and red ribbons, dramatic museum lighting, shallow depth of field, no logos, no text",
+   "label": "2026",
+   "effect": "",
+   "type_text": "",
+   "image": "images/s13.jpg",
+   "prompt_tam": "Close-up of a row of polished silver football cups on a dark wooden shelf with yellow and red ribbons, dramatic museum lighting, shallow depth of field, no logos, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Bir lise sınıfında başlayan hayal,",
+    "bugün milyonların tutkusu."
+   ],
+   "big": "1905",
+   "sub": "2026",
+   "year": 2026,
+   "fx": [
+    "gold",
+    "dust"
+   ],
+   "prompt": "A vast modern football stadium at night filled with fans waving yellow and red flags and scarves, flares glowing, seen from behind the crowd, epic atmosphere, no logos, no readable text",
+   "label": "2026",
+   "effect": "",
+   "type_text": "",
+   "image": "images/s14.jpg",
+   "prompt_tam": "A vast modern football stadium at night filled with fans waving yellow and red flags and scarves, flares glowing, seen from behind the crowd, epic atmosphere, no logos, no readable text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark"
+  }
+ ],
+ "seslendirme_metni": "İstanbul, bin dokuz yüz beş.\nBir lise sınıfında, büyük bir hikâye başlıyor.\nAli Sami Yen ve arkadaşları,\nbir edebiyat dersinde kulübü kurdu.\nSeyirciler onlara Galata Sarayı Efendileri dedi.\nBin dokuz yüz dokuzda İstanbul Ligi'ni kazanan\nilk Türk takımı oldular.\nTürkiye Kupası'nın ilk dört yılında\nkupayı kimseye vermediler.\nBin dokuz yüz altmış dörtte Ali Sami Yen Stadı açıldı.\nBin dokuz yüz yetmişlerde üst üste üç şampiyonluk geldi.\nOn yedi Mayıs iki bin, Kopenhag.\nUEFA Kupası finali penaltılara gitti.\nVe Galatasaray, Avrupa'da kupa kazanan\nilk Türk takımı oldu.\nÜç ay sonra Monako'da Real Madrid'i yendi.\nUEFA Süper Kupası da İstanbul'a geldi.\nSon dört sezonda\nüst üste dört şampiyonluk geldi.\nBugün TFF verilerine göre ligde yirmi altı şampiyonluk.\nFenerbahçe on dokuz, Beşiktaş on altı, Trabzonspor yedi.\nTürkiye Kupası'nda on dokuz.\nBeşiktaş on bir, Trabzonspor on, Fenerbahçe yedi.\nBir lise sınıfında başlayan hayal,\nbugün milyonların tutkusu."
+}

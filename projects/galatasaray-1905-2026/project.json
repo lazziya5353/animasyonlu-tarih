@@ -1,0 +1,420 @@
+{
+ "title": "Galatasaray: 1905'ten 2026'ya",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "BİR SINIFTAN AVRUPA'YA",
+ "map_region": "avrupa_genis",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "İstanbul, 1905.",
+    "Bir lise sınıfında, büyük bir hikâye başlıyor."
+   ],
+   "big": "1905",
+   "sub": "İSTANBUL",
+   "year": 1905,
+   "label": "1905",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ali Sami Yen ve arkadaşları,",
+    "bir edebiyat dersinde kulübü kurdu."
+   ],
+   "big": "ALİ SAMİ YEN",
+   "sub": "GALATASARAY LİSESİ",
+   "year": 1905,
+   "label": "1905",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Seyirciler onlara Galata Sarayı Efendileri dedi."
+   ],
+   "big": "SARI-KIRMIZI",
+   "sub": "GALATA SARAYI EFENDİLERİ",
+   "year": 1908,
+   "label": "1908",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1909'da İstanbul Ligi'ni kazanan",
+    "ilk Türk takımı oldular."
+   ],
+   "big": "1909",
+   "sub": "İLK ŞAMPİYONLUK",
+   "year": 1909,
+   "label": "1909",
+   "fx": [
+    "gold",
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "glow"
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Türkiye Kupası'nın ilk dört yılında",
+    "kupayı kimseye vermediler."
+   ],
+   "big": "4/4",
+   "sub": "İLK DÖRT TÜRKİYE KUPASI",
+   "year": 1963,
+   "label": "1963",
+   "fx": [
+    "gold",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1964'te Ali Sami Yen Stadı açıldı."
+   ],
+   "big": "1964",
+   "sub": "ALİ SAMİ YEN STADI",
+   "year": 1964,
+   "label": "1964",
+   "fx": [
+    "smoke",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1970'lerde üst üste üç şampiyonluk geldi."
+   ],
+   "big": "3'LÜ SERİ",
+   "sub": "1971 · 1972 · 1973",
+   "year": 1972,
+   "label": "1972",
+   "fx": [
+    "gold"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "17 Mayıs 2000, Kopenhag.",
+    "UEFA Kupası finali penaltılara gitti."
+   ],
+   "big": "17.05.2000",
+   "sub": "KOPENHAG",
+   "year": 2000,
+   "label": "2000",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "type",
+   "type_text": "PENALTILAR"
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ve Galatasaray, Avrupa'da kupa kazanan",
+    "ilk Türk takımı oldu."
+   ],
+   "big": "UEFA KUPASI",
+   "sub": "AVRUPA FATİHİ",
+   "year": 2000,
+   "label": "2000",
+   "fx": [
+    "gold",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "glow"
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Üç ay sonra Monako'da Real Madrid'i yendi.",
+    "UEFA Süper Kupası da İstanbul'a geldi."
+   ],
+   "big": "SÜPER KUPA",
+   "sub": "MONAKO · 2000",
+   "year": 2000,
+   "label": "2000",
+   "fx": [
+    "gold",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Son dört sezonda",
+    "üst üste dört şampiyonluk geldi."
+   ],
+   "big": "4 SERİ",
+   "sub": "2023 · 2024 · 2025 · 2026",
+   "year": 2026,
+   "label": "2026",
+   "fx": [
+    "gold",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bugün TFF verilerine göre ligde 26 şampiyonluk.",
+    "Fenerbahçe 19, Beşiktaş 16, Trabzonspor 7."
+   ],
+   "big": "26",
+   "sub": "SÜPER LİG ŞAMPİYONLUĞU",
+   "year": 2026,
+   "label": "2026",
+   "fx": [
+    "gold"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s13.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Türkiye Kupası'nda 19.",
+    "Beşiktaş 11, Trabzonspor 10, Fenerbahçe 7."
+   ],
+   "big": "19",
+   "sub": "TÜRKİYE KUPASI",
+   "year": 2026,
+   "label": "2026",
+   "fx": [
+    "gold",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s14.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bir lise sınıfında başlayan hayal,",
+    "bugün milyonların tutkusu."
+   ],
+   "big": "1905",
+   "sub": "2026",
+   "year": 2026,
+   "label": "2026",
+   "fx": [
+    "gold",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "KURULUŞ",
+   "from": 0,
+   "to": 3
+  },
+  {
+   "name": "YÜKSELİŞ",
+   "from": 4,
+   "to": 6
+  },
+  {
+   "name": "AVRUPA",
+   "from": 7,
+   "to": 9
+  },
+  {
+   "name": "BUGÜN",
+   "from": 10,
+   "to": 13
+  }
+ ],
+ "outro_plan": {
+  "title": "1905 — 2026",
+  "line": "Bir lise sınıfından Avrupa'nın zirvesine."
+ },
+ "maps_plan": [
+  {
+   "scene": 7,
+   "cities": [
+    "İstanbul",
+    "Kopenhag",
+    "Monako"
+   ],
+   "route": [
+    "İstanbul",
+    "Kopenhag",
+    "Monako"
+   ],
+   "title": "AVRUPA FETHİ"
+  }
+ ],
+ "cards_plan": [
+  {
+   "scene": 11,
+   "value": 26,
+   "unit": "ŞAMPİYONLUK",
+   "small": "SÜPER LİG · TFF"
+  },
+  {
+   "scene": 12,
+   "value": 19,
+   "unit": "KUPA",
+   "small": "TÜRKİYE KUPASI"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": ""
+}
