@@ -1,0 +1,27 @@
+{
+ "asama": "kurgu",
+ "durum": "tamam",
+ "ozet": "75 sn, -14 LUFS, senkron 22/22",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “EMANET”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “SONSUZA DEK SAYGIYLA”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “Cumhuriyet bize emanet.”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8)"
+  }
+ ],
+ "sure": 75.5,
+ "lufs": -13.9,
+ "senkron": "22/22",
+ "zaman": "2026-11-10T00:05:04Z"
+}
