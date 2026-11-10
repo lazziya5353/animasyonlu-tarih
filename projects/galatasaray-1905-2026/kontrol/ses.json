@@ -1,0 +1,19 @@
+{
+ "asama": "ses",
+ "durum": "uyari",
+ "ozet": "67 sn, metinle %96 uyumlu",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "okunmamış/yanlış okunmuş olabilir: “galata sarayı”"
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "metinde olmayan bir şey okunmuş olabilir: “işte ses kaydının tam olarak yazıya dökülmüş hali”"
+  }
+ ],
+ "sure": 66.9,
+ "benzerlik": 0.956,
+ "dokum": "İşte ses kaydının tam olarak yazıya dökülmüş hali:\n\nyirmi altı şampiyonluk, on dokuz kupa, Avrupa'da iki zafer. Hepsi bin dokuz yüz beşte bir lise sınıfında başladı. Ali Sami Yen ve arkadaşları bir edebiyat dersinde kulübü kurdu. İlk maçlarından birini iki sıfır kazandılar. Seyirciler, Galatasaray Efendileri. Bin dokuz yüz dokuzda İstanbul Ligi'ni kazanan ilk Türk takımı oldular. İlk dört Türkiye Kupası da onların oldu. Bin dokuz yüz altmış dörtte Ali Sami Yen Stadı açıldı. Bin dokuz yüz yetmişlerde üst üste üç şampiyonluk geldi. On yedi Mayıs iki bin, Kopenhag. UEFA Kupası finali penaltılara gitti. Türkiye ilk Avrupa Kupasını Galatasaray'la kazandı. Üç ay sonra Monaco'da UEFA Süper Kupası da geldi. Son dört sezonun dördü de şampiyonlukla bitti. TFF verilerine göre lig şampiyonlukları: Trabzonspor yedi, Beşiktaş on altı, Fenerbahçe on dokuz, Galatasaray yirmi altı. Türkiye Kupası'nda: Fenerbahçe yedi, Trabzonspor on, Beşiktaş on bir, Galatasaray on dokuz. Bir sınıfta doğan hayal, bugün milyonların tutkusu.",
+ "zaman": "2026-11-10T22:10:25Z"
+}

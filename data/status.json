@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "galatasarayin-kurulusu-1905: ses hazır",
-  "cikti": "projects/galatasarayin-kurulusu-1905",
-  "zaman": "2026-11-10T21:24:53Z"
+  "mesaj": "galatasaray-1905-2026: ses hazır",
+  "cikti": "projects/galatasaray-1905-2026",
+  "zaman": "2026-11-10T22:08:03Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-10T20:57:45Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "galatasarayin-kurulusu-1905: gorsel !",
-  "cikti": "projects/galatasarayin-kurulusu-1905/kontrol",
-  "zaman": "2026-11-10T21:35:07Z"
+  "durum": "hata",
+  "mesaj": "galatasaray-1905-2026: gorsel ✗",
+  "cikti": "projects/galatasaray-1905-2026/kontrol",
+  "zaman": "2026-11-10T22:14:06Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
