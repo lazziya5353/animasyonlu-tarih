@@ -5,11 +5,19 @@
  "maddeler": [
   {
    "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “SONSUZA DEK SAYGIYLA”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “Cumhuriyet bize emanet.”"
+  },
+  {
+   "seviye": "bilgi",
    "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.8-flash: The read operation timed out)"
   }
  ],
  "sure": 75.5,
  "lufs": -13.9,
  "senkron": "22/22",
- "zaman": "2026-11-10T00:51:26Z"
+ "zaman": "2026-11-10T20:04:55Z"
 }
