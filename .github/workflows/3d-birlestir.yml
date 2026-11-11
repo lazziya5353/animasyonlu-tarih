@@ -1,0 +1,37 @@
+name: "4c · 3D birleştir (hazır karelerle)"
+# jobs/birlestir.json'a {"slug": "...", "run_id": "<render çalıştırmasının numarası>"} yazılınca, o çalıştırmanın karelerini alıp videoyu birleştirir.
+on:
+  push:
+    paths: ["jobs/birlestir.json"]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  birlestir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env: { GH_TOKEN: "${{ github.token }}", PYTHONUNBUFFERED: "1" }
+    steps:
+      - uses: actions/checkout@v4
+      - id: a
+        run: python3 -c "import json;j=json.load(open('jobs/birlestir.json'));print('slug='+j['slug']);print('run='+str(j['run_id']))" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Kurulum
+        timeout-minutes: 8
+        run: |
+          (which ffmpeg || (timeout 300 sudo apt-get install -y -qq ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)))
+          timeout 300 pip install -q -r requirements.txt
+      - uses: actions/download-artifact@v4
+        with: { pattern: "kare-*", path: kareler, merge-multiple: true, run-id: "${{ steps.a.outputs.run }}", github-token: "${{ github.token }}" }
+      - name: Sesle birleştir
+        timeout-minutes: 12
+        run: python scripts/uc_boyut_birlestir.py --proje "projects/${{ steps.a.outputs.slug }}" --kareler kareler --onizleme "projects/${{ steps.a.outputs.slug }}/onizleme.jpg"
+      - name: Yayınla
+        run: |
+          SLUG="${{ steps.a.outputs.slug }}"; TAG="video-$SLUG"
+          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --title "$SLUG" --notes "3D video"
+          gh release upload "$TAG" "projects/$SLUG/out/video.mp4" --clobber
+          git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
+          git add "projects/$SLUG/onizleme.jpg"; git commit -m "3D video: $SLUG" || exit 0
+          git pull --rebase && git push

@@ -45,12 +45,17 @@ jobs:
   birlestir:
     needs: [ayar, render]
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     env: { SLUG: "${{ needs.ayar.outputs.slug }}", GH_TOKEN: "${{ github.token }}", PYTHONUNBUFFERED: "1" }
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q -r requirements.txt
+      - name: Kurulum
+        timeout-minutes: 8
+        run: |
+          (which ffmpeg || (timeout 300 sudo apt-get install -y -qq ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)))
+          timeout 300 pip install -q -r requirements.txt
       - uses: actions/download-artifact@v4
         with: { pattern: "kare-*", path: kareler, merge-multiple: true }
       - name: Sesle birleştir
