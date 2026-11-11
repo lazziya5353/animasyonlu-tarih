@@ -31,6 +31,7 @@ jobs:
       - name: Üret
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          POLLINATIONS_KEY: ${{ secrets.POLLINATIONS_KEY }}
           ONLY: ${{ inputs.only }}
           SES: ${{ inputs.ses }}
         run: |

@@ -41,6 +41,44 @@ def image(prompt, out):
         log_usage("gorsel", "gemini-gorsel", IMG_USD, os.path.basename(out)); return True
     return False
 
+GEMINI_GORSEL_KAPALI = False
+
+def pollinations(prompt, out, sahne=0):
+    """Ücretsiz yedek çizer (Pollinations, FLUX). Anahtarsız da çalışır (15 sn'de 1 istek);
+    POLLINATIONS_KEY gizli anahtarı varsa sınır kalkar ve filigran olmaz."""
+    from urllib.parse import quote
+    key = os.environ.get("POLLINATIONS_KEY", "").strip()
+    url = (f"https://image.pollinations.ai/prompt/{quote(prompt[:900])}?width=1080&height=1920&model=flux"
+           f"&nologo=true&enhance=false&safe=false&seed={1000 + sahne}" + (f"&token={quote(key)}" if key else ""))
+    h = {"user-agent": "animasyonlu-tarih/1.0", "referer": "https://animasyonlu-tarih.netlify.app"}
+    if key: h["authorization"] = f"Bearer {key}"
+    for deneme in range(4):
+        try:
+            r = urllib.request.urlopen(urllib.request.Request(url, headers=h), timeout=240)
+            veri = r.read()
+            if not r.headers.get("content-type", "").startswith("image") or len(veri) < 15000:
+                raise GeminiError(f"Pollinations görsel yerine başka bir şey döndürdü ({len(veri)} bayt)")
+            tmp = out + ".raw"; open(tmp, "wb").write(veri)
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", tmp, "-q:v", "2", out], check=True); os.remove(tmp)
+            log_usage("gorsel", "pollinations-gorsel", 0.0, os.path.basename(out) + " (ücretsiz)"); return True
+        except urllib.error.HTTPError as e:
+            if e.code in (429, 500, 502, 503, 530) and deneme < 3: time.sleep(20 * (deneme + 1)); continue
+            raise GeminiError(f"Pollinations hatası {e.code}: {e.read().decode(errors='ignore')[:200]}")
+        except (urllib.error.URLError, TimeoutError) as e:
+            if deneme < 3: time.sleep(15); continue
+            raise GeminiError(f"Pollinations'a ulaşılamadı: {e}")
+    return False
+
+def ciz(prompt, out, sahne=0):
+    """Önce Gemini; Gemini'nin ücretsiz görsel kotası kapalıysa ücretsiz yedeğe (Pollinations) geçer. Dönüş: (ok, kaynak)"""
+    global GEMINI_GORSEL_KAPALI
+    if not GEMINI_GORSEL_KAPALI and os.environ.get("GORSEL_KAYNAK", "") != "pollinations":
+        try: return image(prompt, out), "Gemini"
+        except GeminiError as e:
+            print("Gemini görsel çizemedi, ücretsiz yedeğe geçiliyor:", e); GEMINI_GORSEL_KAPALI = True
+    if not os.environ.get("POLLINATIONS_KEY"): time.sleep(16)   # anahtarsız sınır: 15 sn'de 1 istek
+    return pollinations(prompt, out, sahne), "Pollinations"
+
 def voice(text, out, stil=None):
     style = stil or os.environ.get("GEMINI_SES_STIL") or "Derin sesli bir erkek belgesel anlatıcısı gibi sakin ve vakur ama akıcı, normal konuşma hızında oku. Cümle aralarında çok kısa duraksa, uzun sessizlik bırakma. Metin 60 saniyelik bir video için:\n"
     r = call(TTS_MODEL, {"contents": [{"parts": [{"text": style + text}]}],
@@ -103,15 +141,16 @@ def main():
         for k, (i, s, out) in enumerate(yap, 1):
             asama("gorsel", "calisiyor", f"Görsel {k}/{n} çiziliyor: Sahne {i}" + (f" · {s['big']}" if s.get("big") else ""), adim=k - 1, toplam=n, sahne=i)
             try:
-                ok = image(s["prompt_tam"], out); made += bool(ok); print("görsel", i, ok)
-                if ok: olay("gorsel", "gorsel", f"Sahne {i} çizildi ({k}/{n})", sahne=i, adim=k, toplam=n, onizleme=onizleme(out))
+                ok, kaynak = ciz(s["prompt_tam"], out, i); made += bool(ok); print("görsel", i, ok, kaynak)
+                if not ok: raise GeminiError("görsel boş döndü")
+                olay("gorsel", "gorsel", f"Sahne {i} çizildi ({k}/{n}) · {kaynak}", sahne=i, adim=k, toplam=n, onizleme=onizleme(out))
             except GeminiError as e:
                 print("GÖRSEL HATASI:", e); notes.append(f"görseller elle yüklenecek: {e}")
                 asama("gorsel", "hata", f"Görsel {k}/{n} çizilemedi: {e}", adim=k - 1, toplam=n); break
         else:
             if n: asama("gorsel", "bitti", f"{made} görsel hazır", adim=n, toplam=n)
         if made: notes.append(f"{made} görsel üretildi")
-    bad = any("üretilemedi" in n for n in notes)
+    bad = any(("üretilemedi" in x or "elle yüklenecek" in x) for x in notes)
     set_status("gorsel", "hata" if bad else "tamam", f"{a.slug}: " + ", ".join(notes or ["yapılacak bir şey yok"]), f"projects/{a.slug}")
 
 if __name__ == "__main__":
