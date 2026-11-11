@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#0d0f14">
 <title>Kurgu Stüdyosu · Animasyon Tarih</title>
 <link rel="icon" href="icon.svg">
-<link rel="stylesheet" href="studyo.css?v=2">
+<link rel="stylesheet" href="studyo.css?v=3">
 </head>
 <body>
 <header class="top">
@@ -17,11 +17,15 @@
   <button id="tekrar" title="Bütün süreci baştan hızlı izle">↺ Tekrar oynat</button>
   <span class="tc" id="tc">00:00.0</span>
 </header>
+<section class="hat" id="hat">
+  <div class="adimlar" id="adimlar"></div>
+  <div class="simdi"><div><b id="simdi">Durum yükleniyor…</b><span id="sonraki"></span></div><div class="bar" id="hbar"><i></i></div><button id="baslat" class="hide">▶ Sıradakini başlat</button></div>
+</section>
 <main class="grid">
   <section class="pane havuz"><div class="h">Medya havuzu</div><div class="pool" id="pool"></div></section>
   <section class="pane"><div class="h">Ajan akışı</div><div class="log" id="log"></div></section>
   <section class="pane mon"><div class="h">Program</div>
-    <div class="ekran" id="ekran"><video id="v" playsinline muted></video><img id="still" alt=""><div class="alt" id="alt"></div><div class="render-bar" id="rbar"><i></i><span></span></div></div>
+    <div class="ekran" id="ekran"><video id="v" playsinline muted></video><img id="still" alt=""><div class="alt" id="alt"></div><div class="cizim hide" id="cizim"><div class="pirilti"></div><b id="cizimyaz">🎨 Çiziliyor…</b></div><div class="render-bar" id="rbar"><i></i><span></span></div></div>
     <div class="ctrl"><button id="oynat">▶ Oynat</button><button id="ses" title="Sesi aç/kapat">🔇</button><span id="st">—</span></div></section>
   <section class="pane insp"><div class="h">Sahne denetçisi</div>
     <div class="big" id="ibig">—</div><div class="sub" id="isub"></div>
@@ -44,6 +48,6 @@
 </section>
 <div id="imlecler"></div>
 <div class="giris hide" id="giris"><div class="kutu"><b>Önce panele giriş yap</b><a href="./">Panele git →</a></div></div>
-<script src="studyo.js?v=2"></script>
+<script src="studyo.js?v=3"></script>
 </body>
 </html>

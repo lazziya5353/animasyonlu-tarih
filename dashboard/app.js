@@ -200,7 +200,7 @@ async function openProject(slug) {
   $("#main").classList.add("hide"); d.classList.remove("hide");
   const scenes = sc?.sahneler || (P.project?.scenes || []).map((s) => ({ image: s.image, big: s.big }));
   const sahneSorun = {}; for (const m of P.kontrol?.gorsel?.maddeler || []) if (m.sahne && m.seviye !== "bilgi") (sahneSorun[m.sahne] ||= []).push(m);
-  let h = `<div class="flex" style="justify-content:space-between;align-items:center"><button class="ghost" id="back">← Geri</button><a class="btn gold" href="studyo.html?p=${encodeURIComponent(slug)}${DEMO ? "&demo=1" : ""}">🎬 Kurgu Stüdyosu</a></div><h2 style="margin-top:14px">${esc(sc?.baslik || P.project?.title || slug)}</h2>`;
+  let h = `<div class="flex" style="justify-content:space-between;align-items:center"><button class="ghost" id="back">← Geri</button><a class="btn gold" href="studyo.html?p=${encodeURIComponent(slug)}${DEMO ? "&demo=1" : ""}">🎬 Canlı ilerleme</a></div><h2 style="margin-top:14px">${esc(sc?.baslik || P.project?.title || slug)}</h2>`;
   h += kontrolKart(P);
   if (sc) {
     const st = sc.durum === "onaylandi" ? `<span class="st ok">Onaylandı</span>` : `<span class="st wait">Onay bekliyor</span>`;

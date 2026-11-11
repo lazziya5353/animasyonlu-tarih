@@ -59,6 +59,19 @@ def voice(text, out, stil=None):
         log_usage("ses", "gemini-ses", usd if os.environ.get("GEMINI_UCRETLI") == "1" else 0.0, f"{VOICE} sesi" + ("" if os.environ.get("GEMINI_UCRETLI") == "1" else " (ücretsiz kota)")); return True
     return False
 
+def asama(ad, durum, mesaj, **k):
+    """Kurgu Stüdyosu'ndaki aşama çubuğu için: hangi iş yapılıyor, kaçıncı adımda."""
+    olay("gorsel" if ad == "gorsel" else "ses", "asama", mesaj, asama=ad, durum=durum, **k)
+
+def onizleme(yol):
+    """Stüdyoda canlı göstermek için görselin küçük jpeg hali (base64)."""
+    try:
+        from PIL import Image; import io
+        im = Image.open(yol).convert("RGB"); im.thumbnail((300, 534))
+        b = io.BytesIO(); im.save(b, "JPEG", quality=72); return base64.b64encode(b.getvalue()).decode()
+    except Exception as e:
+        print("(önizleme yapılamadı:", e, ")"); return None
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--slug", required=True); ap.add_argument("--only", type=int); ap.add_argument("--ses", action="store_true"); a = ap.parse_args()
     if not os.environ.get("GEMINI_API_KEY"):
@@ -69,22 +82,34 @@ def main():
     if a.ses or not a.only:  # önce ses: görseller kapalı olsa bile ses üretilsin
         if not os.path.exists(os.path.join(d, "ses.wav")) or a.ses:
             try:
+                asama("ses", "calisiyor", "Seslendirme yapılıyor")
                 olay("ses", "ses", f"Seslendirme başladı: {len(sc['seslendirme_metni'])} karakter, erkek anlatıcı")
                 print("ses", voice(sc["seslendirme_metni"], os.path.join(d, "ses.wav"), sc.get("ses_stil"))); notes.append("ses hazır")
                 sure = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", os.path.join(d, "ses.wav")], capture_output=True, text=True).stdout or 0)
                 olay("ses", "ses", f"Ses hazır: {sure:.0f} sn, duraklamalar kısaltıldı", t0=0, t1=sure)
-            except GeminiError as e: print("SES HATASI:", e); notes.append(f"ses üretilemedi ({e})")
+                asama("ses", "bitti", f"Ses hazır ({sure:.0f} sn)")
+            except GeminiError as e:
+                print("SES HATASI:", e); notes.append(f"ses üretilemedi ({e})"); asama("ses", "hata", f"Ses üretilemedi: {e}")
     if not a.ses:
-        made = 0
+        made = 0; yap = []
         for i, s in enumerate(sc["sahneler"], 1):
             if a.only and i != a.only: continue
             out = os.path.join(d, s["image"]); os.makedirs(os.path.dirname(out), exist_ok=True)
             if os.path.exists(out) and not a.only: continue
             if s.get("anim"): continue  # koddan çizilen animasyon sahnesi, görsel gerekmez
+            yap.append((i, s, out))
+        n = len(yap)
+        if n: asama("gorsel", "calisiyor", f"{n} görsel çizilecek", adim=0, toplam=n)
+        for k, (i, s, out) in enumerate(yap, 1):
+            asama("gorsel", "calisiyor", f"Görsel {k}/{n} çiziliyor: Sahne {i}" + (f" · {s['big']}" if s.get("big") else ""), adim=k - 1, toplam=n, sahne=i)
             try:
                 ok = image(s["prompt_tam"], out); made += bool(ok); print("görsel", i, ok)
+                if ok: olay("gorsel", "gorsel", f"Sahne {i} çizildi ({k}/{n})", sahne=i, adim=k, toplam=n, onizleme=onizleme(out))
             except GeminiError as e:
-                print("GÖRSEL HATASI:", e); notes.append(f"görseller elle yüklenecek: {e}"); break
+                print("GÖRSEL HATASI:", e); notes.append(f"görseller elle yüklenecek: {e}")
+                asama("gorsel", "hata", f"Görsel {k}/{n} çizilemedi: {e}", adim=k - 1, toplam=n); break
+        else:
+            if n: asama("gorsel", "bitti", f"{made} görsel hazır", adim=n, toplam=n)
         if made: notes.append(f"{made} görsel üretildi")
     bad = any("üretilemedi" in n for n in notes)
     set_status("gorsel", "hata" if bad else "tamam", f"{a.slug}: " + ", ".join(notes or ["yapılacak bir şey yok"]), f"projects/{a.slug}")

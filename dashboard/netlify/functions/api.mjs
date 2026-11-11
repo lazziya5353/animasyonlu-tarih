@@ -46,16 +46,19 @@ let failed = []; // basit kaba kuvvet koruması (sıcak fonksiyon örneği baş�
 const gecerliGh = new Map(); // doğrulanmış GitHub Actions anahtarları (10 dk)
 
 // Canlı olaylar (Kurgu Stüdyosu): Netlify Blobs'ta proje başına son 800 olay
-const AJANLAR = ["arastirmaci", "senarist", "ses", "kurgucu", "efekt", "kontrol", "yayinci", "sen"];
-const TURLER = ["yazi", "gorsel", "efekt", "harita", "ses", "muzik", "kontrol", "bilgi", "ilerleme"];
+const AJANLAR = ["arastirmaci", "senarist", "ses", "gorsel", "kurgucu", "efekt", "kontrol", "yayinci", "sen"];
+const TURLER = ["yazi", "gorsel", "efekt", "harita", "ses", "muzik", "kontrol", "bilgi", "ilerleme", "asama"];
 async function olayEkle(slug, liste) {
   const st = getStore("olaylar"); const key = validSlug(slug) ? slug : "_genel";
   const cur = (await st.get(key, { type: "json" })) || { n: 0, liste: [] };
   for (const o of liste.slice(0, 60)) {
     if (!AJANLAR.includes(o.ajan) || !TURLER.includes(o.tur)) continue;
     const temiz = { i: ++cur.n, ajan: o.ajan, tur: o.tur, mesaj: String(o.mesaj || "").slice(0, 200), z: Number(o.z) || Date.now() / 1000 };
-    for (const k of ["t0", "t1", "yuzde", "sahne"]) if (Number.isFinite(Number(o[k])) && o[k] !== null && o[k] !== undefined) temiz[k] = Number(o[k]);
+    for (const k of ["t0", "t1", "yuzde", "sahne", "adim", "toplam"]) if (Number.isFinite(Number(o[k])) && o[k] !== null && o[k] !== undefined) temiz[k] = Number(o[k]);
     for (const k of ["seviye", "asama", "durum"]) if (typeof o[k] === "string") temiz[k] = o[k].slice(0, 20);
+    if (typeof o.onizleme === "string" && o.onizleme.length < 300000 && temiz.sahne) { // canlı görsel önizlemesi (küçük jpeg)
+      await getStore("onizleme").set(`${key}/${temiz.sahne}`, o.onizleme); temiz.onz = 1;
+    }
     cur.liste.push(temiz);
   }
   cur.liste = cur.liste.slice(-800);
@@ -202,6 +205,12 @@ export default async (req) => {
       case "olay": { // panelden (senin) olayların: ör. toplu görsel yükleme
         if (!Array.isArray(b.olaylar)) return json({ hata: "Olay yok" }, 400);
         return json({ ok: true, n: await olayEkle(b.slug, b.olaylar.map((o) => ({ ...o, ajan: "sen" }))) });
+      }
+      case "onizleme": { // canlı stüdyo: ajanın az önce çizdiği görselin küçük hali
+        if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);
+        const d = await getStore("onizleme").get(`${b.slug}/${Number(b.sahne)}`);
+        if (!d) return json({ hata: "Önizleme yok" }, 404);
+        return new Response(Buffer.from(d, "base64"), { headers: { "content-type": "image/jpeg", "cache-control": "no-store" } });
       }
       case "olaylar": { // Kurgu Stüdyosu: belli bir sıradan sonraki olaylar
         if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);

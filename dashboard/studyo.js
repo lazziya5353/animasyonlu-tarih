@@ -9,7 +9,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const fmt = (t) => { t = Math.max(0, t || 0); const m = Math.floor(t / 60), s = (t % 60).toFixed(1).padStart(4, "0"); return `0${m}:${s}`; };
 
 const AJAN = {
-  arastirmaci: { ad: "araştırmacı", c: "#b6a6ff" }, senarist: { ad: "senarist", c: "#7fb4f5" }, ses: { ad: "ses", c: "#7fd6a4" },
+  arastirmaci: { ad: "araştırmacı", c: "#b6a6ff" }, senarist: { ad: "senarist", c: "#7fb4f5" }, ses: { ad: "ses", c: "#7fd6a4" }, gorsel: { ad: "görselci", c: "#9fd0ff" },
   kurgucu: { ad: "kurgucu", c: "#f0c46a" }, efekt: { ad: "efekt", c: "#ef8fb0" }, kontrol: { ad: "kontrolcü", c: "#ff7b86" },
   yayinci: { ad: "yayıncı", c: "#5fd0b0" }, sen: { ad: "sen", c: "#ffffff" },
 };
@@ -137,6 +137,78 @@ function chipCiz(aktif) {
 }
 
 // ───────── olay işleme ─────────
+// ───────── aşama çubuğu: hangi iş yapılıyor, sıradaki ne ─────────
+const ADIMLAR = [["senaryo", "Senaryo"], ["ses", "Ses"], ["gorsel", "Görseller"], ["kurgu", "Video (kurgu)"], ["kontrol", "Kontrol"]];
+const AS = {}; let sonAsamaZ = 0;
+function asamaBaslangic() {
+  const onceki = { ...AS }, taze = Date.now() / 1000 - sonOlayZ < 20 * 60;
+  const S = P.script?.sahneler || [];
+  const gerek = S.filter((s) => !s.anim).length, var_ = S.filter((s) => !s.anim && (P.gorseller || []).includes((s.image || "").split("/").pop())).length;
+  AS.senaryo = { durum: P.script ? "bitti" : "sirada" };
+  AS.ses = { durum: (P.dosyalar || []).includes("ses.wav") ? "bitti" : "sirada" };
+  AS.gorsel = { durum: gerek && var_ >= gerek ? "bitti" : "sirada", adim: var_, toplam: gerek };
+  AS.kurgu = { durum: P.video ? "bitti" : "sirada" };
+  AS.kontrol = { durum: P.kontrol?.kurgu ? "bitti" : "sirada" };
+  for (const k in onceki) if (taze && onceki[k].durum === "calisiyor" && AS[k].durum !== "bitti") AS[k] = onceki[k]; // süren iş varsa koru
+  asamaCiz();
+}
+function asamaOlay(o) {
+  const set = (k, d, ek = {}) => { AS[k] = { ...AS[k], durum: d, ...ek }; };
+  if (o.tur === "asama" && AS[o.asama]) set(o.asama, o.durum || "calisiyor", { adim: o.adim ?? AS[o.asama].adim, toplam: o.toplam ?? AS[o.asama].toplam, mesaj: o.mesaj, sahne: o.sahne });
+  else if (o.tur === "gorsel" && o.ajan === "gorsel") set("gorsel", o.adim >= o.toplam ? "bitti" : "calisiyor", { adim: o.adim, toplam: o.toplam, mesaj: o.mesaj });
+  else if (o.ajan === "ses" && o.tur === "ses") set("ses", /hazır/.test(o.mesaj) ? "bitti" : "calisiyor", { mesaj: o.mesaj });
+  else if (o.ajan === "kurgucu" || o.ajan === "efekt") set("kurgu", o.yuzde === 100 ? "bitti" : "calisiyor", { yuzde: o.yuzde ?? AS.kurgu.yuzde ?? 0, mesaj: o.yuzde != null ? `Kareler işleniyor %${o.yuzde}` : o.mesaj });
+  else if (o.ajan === "kontrol" && o.tur === "bilgi" && ["kurgu", "hepsi"].includes(o.asama)) set("kontrol", "bitti", { mesaj: o.mesaj });
+  if (o.tur === "asama" || o.ajan === "gorsel" || o.ajan === "kurgucu") sonAsamaZ = Math.max(sonAsamaZ, o.z || 0);
+  if (o.ajan === "gorsel" && o.onz) canliGorsel(o);
+  cizimGoster(o);
+  asamaCiz();
+}
+function yuzde(a) { if (!a) return 0; if (a.durum === "bitti") return 100; if (a.yuzde != null) return a.yuzde; return a.toplam ? Math.round((100 * (a.adim || 0)) / a.toplam) : 0; }
+function asamaCiz() {
+  if (!AS.senaryo) return;
+  const ik = { bitti: "✓", calisiyor: "⏳", hata: "✕", sirada: "○" };
+  $("#adimlar").innerHTML = ADIMLAR.map(([k, ad]) => {
+    const a = AS[k]; const ek = k === "gorsel" && a.toplam ? ` ${a.adim || 0}/${a.toplam}` : k === "kurgu" && a.durum === "calisiyor" ? ` %${yuzde(a)}` : "";
+    return `<span class="adim ${a.durum}"><i>${ik[a.durum] || "○"}</i>${ad}${ek}</span>`;
+  }).join("");
+  const eski = Date.now() / 1000 - sonOlayZ > 20 * 60;
+  const cal = ADIMLAR.find(([k]) => AS[k].durum === "calisiyor"), hata = ADIMLAR.find(([k]) => AS[k].durum === "hata");
+  const sira = ADIMLAR.find(([k]) => AS[k].durum !== "bitti" && (!cal || k !== cal[0]));
+  let simdi, bar = 0;
+  if (cal && !eski) { simdi = `Şu an: ${AS[cal[0]].mesaj || cal[1] + " yapılıyor"}`; bar = yuzde(AS[cal[0]]); }
+  else if (cal) simdi = `⚠ ${cal[1]} yarıda kalmış görünüyor (20 dk'dır ses yok)`;
+  else if (hata) simdi = `✕ ${AS[hata[0]].mesaj || hata[1] + " hata verdi"}`;
+  else if (!sira) { simdi = "Her şey hazır ✓"; bar = 100; }
+  else simdi = "Şu an çalışan iş yok";
+  $("#simdi").textContent = simdi; $("#hbar i").style.width = bar + "%"; $("#hbar").classList.toggle("hide", !(cal && !eski) && bar !== 100);
+  $("#sonraki").textContent = sira ? `Sıradaki: ${sira[1]}` : "";
+  const baslatilir = !(cal && !eski) && sira && ["ses", "gorsel", "kurgu"].includes(sira[0]) && !DEMO;
+  $("#baslat").classList.toggle("hide", !baslatilir);
+  if (baslatilir) { $("#baslat").textContent = sira[0] === "kurgu" ? "▶ Videoyu üret" : "▶ Görsel + Ses başlat"; $("#baslat").dataset.ajan = sira[0] === "kurgu" ? "kurgucu" : "gorsel"; }
+}
+$("#baslat").onclick = async () => {
+  const b = $("#baslat"); if (b.disabled) return; b.disabled = true; b.textContent = "Gönderiliyor…";
+  try { await api("run", { agent: b.dataset.ajan, inputs: { slug: SLUG } }); $("#simdi").textContent = "İş gönderildi, GitHub'da başlaması 10-30 sn sürer…"; b.classList.add("hide"); sonOlayZ = Date.now() / 1000; }
+  catch (e) { $("#simdi").textContent = "Başlatılamadı: " + e.message; }
+  b.disabled = false;
+};
+async function canliGorsel(o) { // görselci yeni bir sahne çizdi: küçük halini çek, ekranda göster
+  try {
+    const r = await fetch("/api", { method: "POST", headers: { "content-type": "application/json", "x-panel-token": TOKEN }, body: JSON.stringify({ action: "onizleme", slug: SLUG, sahne: o.sahne }) });
+    if (!r.ok) return; const u = URL.createObjectURL(await r.blob());
+    const p = $(`#pool [data-i="${o.sahne}"]`); if (p) p.style.backgroundImage = `url("${u}")`;
+    document.querySelectorAll(`.c-gorsel[data-sahne="${o.sahne}"]`).forEach((c) => (c.innerHTML = `<img src="${u}">`));
+    if (!P.video) { const st = $("#still"); st.classList.remove("hide", "yenigel"); void st.offsetWidth; st.src = u; st.classList.add("yenigel"); }
+  } catch {}
+}
+function cizimGoster(o) {
+  const g = AS.gorsel;
+  const ciziyor = g.durum === "calisiyor" && o.tur === "asama" && o.asama === "gorsel" && o.sahne && Date.now() / 1000 - (o.z || 0) < 600;
+  if (ciziyor) { $("#cizim").classList.remove("hide"); $("#cizimyaz").textContent = `🎨 Sahne ${o.sahne} çiziliyor… (${(g.adim || 0) + 1}/${g.toplam})`; }
+  else if (o.ajan === "gorsel" || g.durum !== "calisiyor") $("#cizim").classList.add("hide");
+}
+
 const kuyruk = []; let hiz = 1, isleniyor = false, sonI = 0, sonOlayZ = 0, aktifler = {};
 function logYaz(o) {
   const d = document.createElement("div"); const zt = o.z ? new Date(o.z * 1000).toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit", second: "2-digit" }) : "";
@@ -169,7 +241,7 @@ async function isle() {
     const [x, y] = hedef(o); im.style.transitionDuration = `${0.75 / hiz}s`; im.style.transform = `translate(${x}px,${y}px)`;
     await sleep(780 / hiz);
     im.classList.remove("tik"); void im.offsetWidth; im.classList.add("tik");
-    uygula(o); logYaz(o);
+    uygula(o); logYaz(o); asamaOlay(o);
     await sleep((kuyruk.length > 30 ? 120 : 260) / hiz);
   }
   isleniyor = false;
@@ -184,7 +256,7 @@ async function cek() {
     const r = await api("olaylar", { slug: SLUG, den: sonI });
     for (const o of r.olaylar) { sonI = Math.max(sonI, o.i); sonOlayZ = Math.max(sonOlayZ, o.z || 0); kuyruk.push(o); }
     if (r.olaylar.length) { hiz = kuyruk.length > 20 ? 3 : 1; isle(); }
-    if (r.olaylar.some((o) => o.yuzde === 100)) setTimeout(yenidenYukle, 6000);
+    if (r.olaylar.some((o) => o.yuzde === 100 || (o.tur === "asama" && o.durum === "bitti"))) setTimeout(yenidenYukle, 8000);
   } catch {}
   canliGoster();
 }
@@ -226,7 +298,7 @@ async function kur(ilk) {
     const ad = (s.image || "").split("/").pop();
     if ((P.gorseller || []).includes(ad)) fileUrl(`projects/${SLUG}/${s.image}`).then((u) => { if (u) { d.style.backgroundImage = `url("${u}")`; document.querySelectorAll(`.c-gorsel[data-sahne="${i + 1}"]`).forEach((c) => (c.innerHTML = `<img src="${u}">`)); if (i === cur && !P.video) $("#still").src = u; } });
   }
-  hepsiniCiz(); dalga(); sahneSec(0); anaGuncelle(0);
+  hepsiniCiz(); dalga(); sahneSec(0); anaGuncelle(0); asamaBaslangic();
   if (P.video && !DEMO) { const r = await api("video_url", { id: P.video.id }); $("#v").src = r.url; $("#v").classList.remove("hide"); $("#still").classList.add("hide"); }
   else { $("#v").classList.add("hide"); if ((P.dosyalar || []).includes("ses.wav")) fileUrl(`projects/${SLUG}/ses.wav`).then((u) => { if (u) sesEl = new Audio(u); }); }
   if (ilk && !DEMO) {
@@ -236,7 +308,7 @@ async function kur(ilk) {
     else r.olaylar.slice(-12).forEach(logYaz);
     setInterval(cek, 2500);
   }
-  canliGoster(); chipCiz({});
+  canliGoster(); chipCiz({}); asamaCiz();
 }
 $("#tekrar").onclick = tekrarOynat;
 $("#oynat").onclick = () => {
