@@ -1,0 +1,19 @@
+name: "Araç · İş tetikle (sohbetten)"
+# jobs/render.json'a {"slug": "..."} yazılıp push'lanınca Kurgucu'yu (render.yml) o proje için başlatır.
+on:
+  push:
+    paths: ["jobs/render.json"]
+permissions:
+  actions: write
+  contents: read
+jobs:
+  tetikle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          SLUG=$(python3 -c "import json;print(json.load(open('jobs/render.json'))['slug'])")
+          echo "$SLUG" | grep -Eq '^[a-z0-9-]{1,60}$' || (echo 'Geçersiz proje adı'; exit 1)
+          gh workflow run render.yml -f slug="$SLUG"
+          echo "Kurgucu başlatıldı: $SLUG"
