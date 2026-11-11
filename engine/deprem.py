@@ -29,6 +29,9 @@ def renk(t):
     return tuple(int(p[i] + (q[i] - p[i]) * u) for i in range(3))
 
 
+def tr_upper(s): return s.replace("i", "İ").replace("ı", "I").upper()
+
+
 def yuzde(v): return f"{v:.1f}".replace(".", ",")
 
 
@@ -150,7 +153,7 @@ class DepremAnim:
             q = (r0 - dist) / hiz; a = clamp(q / .25)
             nokta(fr, x, y, KIRMIZI, a, r=9, pulse=0.3 * (1 - clamp(q / .6)))
             yon = ll[2] if len(ll) > 2 else ("r" if x < W - 230 else "l")  # etiket yönü: r, l, u, d
-            im = text(ad.upper(), "sans9", 30, WHITE, spacing=2)
+            im = text(tr_upper(ad), "sans9", 30, WHITE, spacing=2)
             ox, oy = {"r": (im.width / 2 - 20, 0), "l": (-im.width / 2 + 20, 0), "u": (0, -44), "d": (0, 44)}[yon]
             put(fr, im, x + ox, y + oy - 2, a)
         # merkez rozeti
@@ -182,7 +185,7 @@ class DepremAnim:
             nab = .55 + .45 * (0.5 + 0.5 * math.sin(lt * 6)) if pb >= 1 else 1
             parlak_cizgi(fr, kismi(B, pb), AMBER, 9, glow=18, dash=26, a=nab)
         for ad, ll in c.get("sehirler", {}).items():
-            x, y = to(*ll); nokta(fr, x, y, GOLD, clamp(lt / .4), r=10); etiket(fr, ad.upper(), x, y - 46, clamp(lt / .4), 34)
+            x, y = to(*ll); nokta(fr, x, y, GOLD, clamp(lt / .4), r=10); etiket(fr, tr_upper(ad), x, y - 46, clamp(lt / .4), 34)
         if c.get("kirik_yazi") and pa > .6:
             x, y = A[len(A) // 2]; etiket(fr, c["kirik_yazi"], x, y + 64, clamp((lt - .9) / .4), 30, (255, 170, 160))
         if c.get("kirilmamis_yazi") and pb > .6:
@@ -251,7 +254,7 @@ class DepremAnim:
                 row = Image.new("RGBA", (W - 100, 76), (0, 0, 0, 0)); d = ImageDraw.Draw(row)
                 d.rounded_rectangle([0, 0, W - 101, 75], 16, fill=(255, 255, 255, 18), outline=col + (90,), width=2)
                 d.text((34, 38), str(j + 1), font=F("sans9", 34), fill=col + (255,), anchor="mm")
-                d.text((70, 38), ad.upper(), font=F("sans9", 34), fill=(255, 255, 255, 255), anchor="lm")
+                d.text((70, 38), tr_upper(ad), font=F("sans9", 34), fill=(255, 255, 255, 255), anchor="lm")
                 bx0, bx1 = 430, 790; d.rounded_rectangle([bx0, 28, bx1, 48], 10, fill=(255, 255, 255, 30))
                 d.rounded_rectangle([bx0, 28, bx0 + max(20, (bx1 - bx0) * v / mx * pb), 48], 10, fill=col + (255,))
                 d.text((W - 125, 38), f"%{yuzde(v * pb)}", font=F("sans9", 36), fill=(255, 255, 255, 255), anchor="rm")

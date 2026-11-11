@@ -104,6 +104,8 @@ VIG = _vignette(); BANDS = _bands(); GRAIN = _grain()
 
 def gold_card(fr, cx, cy, big, small, p, w=600, h=230):
     if p <= 0: return
+    # yazı sığmıyorsa kartı genişlet (en fazla ekran genişliği - 80)
+    w = int(min(W - 80, max(w, F("serif", 96).getlength(big) + 90, F("sans9", 30).getlength(small) + 70)))
     box = (int(cx - w / 2), int(cy - h / 2), int(cx + w / 2), int(cy + h / 2))
     reg = ImageEnhance.Brightness(fr.crop(box).filter(ImageFilter.GaussianBlur(22))).enhance(0.55)
     c = Image.new("RGBA", (w, h), (0, 0, 0, 0)); c.alpha_composite(reg.convert("RGBA")); c.alpha_composite(Image.new("RGBA", (w, h), (10, 8, 4, 90)))
