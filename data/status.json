@@ -21,13 +21,13 @@
   "durum": "tamam",
   "mesaj": "golcuk-depremi-istanbul-senaryosu videosu hazır",
   "cikti": "release:video-golcuk-depremi-istanbul-senaryosu",
-  "zaman": "2026-11-11T11:16:14Z"
+  "zaman": "2026-11-11T11:40:36Z"
  },
  "kontrol": {
-  "durum": "hata",
-  "mesaj": "golcuk-depremi-istanbul-senaryosu: kurgu ✗",
+  "durum": "tamam",
+  "mesaj": "golcuk-depremi-istanbul-senaryosu: kurgu ✓",
   "cikti": "projects/golcuk-depremi-istanbul-senaryosu/kontrol",
-  "zaman": "2026-11-11T11:16:08Z"
+  "zaman": "2026-11-11T11:40:30Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
