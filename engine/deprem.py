@@ -33,24 +33,48 @@ def yuzde(v): return f"{v:.1f}".replace(".", ",")
 
 
 class Harita:
-    _base = None
+    """Altlık: varsa uydu (Sentinel-2 cloudless 2016 + yakın plan için yüksek çözünürlüklü İstanbul), yoksa çizim altlık."""
+    _cache = {}
+    ATIF = "Uydu: Sentinel-2 cloudless 2016 · EOX · CC BY 4.0"
 
-    def __init__(self):
-        self.R = json.load(open(os.path.join(MAPDIR, "regions.json")))["marmara"]
-        if Harita._base is None: Harita._base = Image.open(os.path.join(MAPDIR, "basemap_marmara.jpg")).convert("RGB")
-        self.base = Harita._base; self.C = math.cos(math.radians(self.R["clat"]))
+    def __init__(self, stil="uydu"):
+        R = json.load(open(os.path.join(MAPDIR, "regions.json")))["marmara"]
+        self.C = math.cos(math.radians(R["clat"])); self.katman = []
+        uj = os.path.join(MAPDIR, "uydu.json")
+        if stil == "uydu" and os.path.exists(uj):
+            for ad, (lon0, lon1, lat0, lat1, k) in json.load(open(uj))["bolgeler"].items():
+                self.katman.append((self._yukle(f"uydu_{ad}.jpg", True), (lon0, lon1, lat0, lat1)))
+            self.katman.sort(key=lambda k: (k[1][1] - k[1][0]))  # en dar (en net) önce
+            self.uydu = True
+        else:
+            Rr = R; Wb = (Rr["lon1"] - Rr["lon0"]) * Rr["k"] * self.C
+            self.katman.append((self._yukle("basemap_marmara.jpg", False), (Rr["lon0"], Rr["lon1"], Rr["lat0"], Rr["lat1"])))
+            self.uydu = False
 
-    def P(self, lon, lat): return ((lon - self.R["lon0"]) * self.R["k"] * self.C, (self.R["lat1"] - lat) * self.R["k"])
+    def _yukle(self, ad, uydu):
+        if ad not in Harita._cache:
+            im = Image.open(os.path.join(MAPDIR, ad)).convert("RGB")
+            if uydu:  # videonun karanlık, sinematik tonuna uydur: biraz koyu, hafif soğuk gölgeler, az doygun
+                a = np.asarray(im).astype(np.float32) / 255.
+                lum = a @ np.array([.299, .587, .114], np.float32)
+                a = lum[..., None] + (a - lum[..., None]) * .85
+                a = np.clip((a - .04) * 1.12, 0, 1) ** 1.12 * .82
+                a[..., 2] = a[..., 2] * 1.04 + .015
+                im = Image.fromarray((np.clip(a, 0, 1) * 255).astype(np.uint8))
+            Harita._cache[ad] = im
+        return Harita._cache[ad]
 
     def kare(self, cam):
-        lon, lat, wdeg = cam; cw = wdeg * self.R["k"] * self.C; ch = cw * H / W
-        if ch > self.base.height: ch = self.base.height; cw = ch * W / H
-        if cw > self.base.width: cw = self.base.width; ch = cw * H / W
-        cx, cy = self.P(lon, lat)
-        x0 = min(max(cx - cw / 2, 0), self.base.width - cw); y0 = min(max(cy - ch / 2, 0), self.base.height - ch)
-        fr = self.base.resize((W, H), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + ch)).convert("RGBA"); s = W / cw
-        def to(lon, lat):
-            X, Y = self.P(lon, lat); return ((X - x0) * s, (Y - y0) * s)
+        lon, lat, wdeg = cam; hdeg = wdeg * H / W * self.C  # ekrandaki enlem aralığı
+        b = (lon - wdeg / 2, lon + wdeg / 2, lat - hdeg / 2, lat + hdeg / 2)
+        img, (L0, L1, A0, A1) = next(((i, bb) for i, bb in self.katman if bb[0] <= b[0] and b[1] <= bb[1] and bb[2] <= b[2] and b[3] <= bb[3]), self.katman[-1])
+        sx, sy = img.width / (L1 - L0), img.height / (A1 - A0)
+        x0, x1 = (b[0] - L0) * sx, (b[1] - L0) * sx; y0, y1 = (A1 - b[3]) * sy, (A1 - b[2]) * sy
+        dx = min(0, x0) or max(0, x1 - img.width); dy = min(0, y0) or max(0, y1 - img.height)
+        x0, x1, y0, y1 = x0 - dx, x1 - dx, y0 - dy, y1 - dy
+        fr = img.resize((W, H), Image.BILINEAR, box=(max(0, x0), max(0, y0), min(img.width, x1), min(img.height, y1))).convert("RGBA")
+        lonL = L0 + x0 / sx; latT = A1 - y0 / sy; s = W / (x1 - x0)
+        def to(lo, la): return ((lo - lonL) * sx * s, (latT - la) * sy * s)
         return fr, to, s
 
 
@@ -97,10 +121,13 @@ def baslik(fr, ust, alt, lt, out=1.0):
 
 class DepremAnim:
     def __init__(self, proje_dir, cfg):
-        self.c = cfg; self.h = Harita(); self._ilce = None
+        self.c = cfg; self.h = Harita(cfg.get("stil", "uydu")); self._ilce = None
 
     def frame(self, lt, dur):
-        return getattr(self, "_" + self.c["tur"])(lt, dur)
+        fr = getattr(self, "_" + self.c["tur"])(lt, dur)
+        if self.h.uydu and self.c["tur"] != "ilce_tablo":
+            put(fr, text(Harita.ATIF, "sans", 20, (230, 230, 230), spacing=1, shadow=True), W / 2, 1868, .75)
+        return fr
 
     # ── 1999: merkezden yayılan halkalar ──
     def _halka(self, lt, dur):
@@ -186,7 +213,7 @@ class DepremAnim:
             k = sira.index(ad) if ad in sira else 0; q = clamp((lt - 1.2 - k * 0.035) / 0.35)
             for poly in polys:
                 pts = [to(x, y) for x, y in poly[0]]
-                if v is not None and q > 0: df.polygon(pts, fill=renk((v - lo) / (hi - lo)) + (int(205 * q),))
+                if v is not None and q > 0: df.polygon(pts, fill=renk((v - lo) / (hi - lo)) + (int((150 if self.h.uydu else 205) * q),))
                 de.line(pts + [pts[0]], fill=(255, 236, 200, int(170 * clamp((lt - .5) / .6))), width=2)
         fr.alpha_composite(fill); fr.alpha_composite(edge)
         n = c.get("rozet", 5); ilce = {a: m for a, _, m in self._ilce_veri()}
