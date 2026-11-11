@@ -225,6 +225,12 @@ class Project:
         for cp in ([] if s.get("tablo") else self.caps):
             if cp["start"] - .1 <= tv < cp["end"] + .05:
                 put(fr, caption_img(cp["text"]), W / 2, 1500, clamp((tv - cp["start"] + .1) / .3) * clamp((cp["end"] + .05 - tv) / .25))
+        if c.get("seri"):  # dizi rozeti: ör. "PART 1/2" (sol üst, tüm video boyunca)
+            if not hasattr(self, "_seri"):
+                g = text(c["seri"], "sans9", 30, (255, 255, 255), spacing=6, shadow=False); pad = 18
+                b = Image.new("RGBA", (g.width - 40 + 2 * pad, 64), (0, 0, 0, 0)); ImageDraw.Draw(b).rounded_rectangle([0, 0, b.width - 1, 63], 14, fill=(170, 24, 24, 230))
+                b.alpha_composite(g, (pad - 40, (64 - g.height) // 2)); self._seri = b
+            put(fr, self._seri, 60 + self._seri.width / 2, 215, clamp((T - .3) / .4))
         sa = clamp(lt / .4) * clamp((s["end"] - tv) / .3)
         if s.get("etiket"):  # ör. "TEMSİLİ": yapay zekâ görseli gerçek fotoğraf sanılmasın
             put(fr, text(s["etiket"], "sans9", 24, (255, 255, 255), spacing=6), W - 150, 215, sa * .85)

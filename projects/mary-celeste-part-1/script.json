@@ -1,0 +1,113 @@
+{
+ "baslik": "Hayalet Gemi: Mary Celeste (Part 1)",
+ "konu": "1872'de Atlantik'te mürettebatsız bulunan Mary Celeste gemisi — Part 1",
+ "tarih": "2026-11-11",
+ "slug": "mary-celeste-part-1",
+ "hook": "BU GEMİDE KİMSE YOKTU",
+ "map_region": "akdeniz",
+ "durum": "onay-bekliyor",
+ "finale": "",
+ "seri": "PART 1/2",
+ "maps": [],
+ "cards": [],
+ "eras": [],
+ "outro": {
+  "title": "DEVAMI",
+  "line": "PART 2'DE"
+ },
+ "aciklama": "1872'de Atlantik'in ortasında bulunan Mary Celeste'de yük, erzak ve eşyalar yerindeydi; ama 10 kişilik mürettebattan kimse yoktu. Ambarda ne buldular? Part 2 yarın 👀 Sence ne oldu? 👇",
+ "hashtagler": [
+  "#maryceleste",
+  "#gizem",
+  "#tarih",
+  "#hayaletgemi",
+  "#çözülemeyengizemler",
+  "#animasyontarih",
+  "#reels",
+  "#keşfet"
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Mary_Celeste"
+ ],
+ "kontrol_notlari": [
+  "Dei Gratia gemisi Mary Celeste'yi 4 Aralık 1872'de Azorlar ile Portekiz arasında buldu.",
+  "Gemide 10 kişi vardı (kaptan Benjamin Briggs, eşi Sarah, 2 yaşındaki kızı Sophia ve 7 tayfa); filika kayıptı.",
+  "Yaklaşık 6 aylık yiyecek ve su yerindeydi; yük 1.701 varil alkoldü (Part 2).",
+  "'Masada sıcak yemek' efsanedir; Conan Doyle'un 1884 öyküsünden yayıldı (Part 2)."
+ ],
+ "sahneler": [
+  {
+   "lines": [
+    "4 Aralık 1872.",
+    "Atlantik'in ortasında bir gemi başıboş sürükleniyordu."
+   ],
+   "big": "04.12.1872",
+   "sub": "ATLANTİK OKYANUSU",
+   "effect": "stamp",
+   "fx": [
+    "fog"
+   ],
+   "prompt": "Vertical 9:16 cinematic photograph of a lone 19th-century two-masted brigantine sailing ship drifting on a grey stormy Atlantic ocean, some sails torn and loose, thick sea fog, overcast cold light, no people visible on deck, eerie and silent, wide shot from a distance, ultra detailed waves",
+   "year": 1872,
+   "label": "",
+   "timeline": false,
+   "image": "images/s01.jpg",
+   "prompt_tam": "Vertical 9:16 cinematic photograph of a lone 19th-century two-masted brigantine sailing ship drifting on a grey stormy Atlantic ocean, some sails torn and loose, thick sea fog, overcast cold light, no people visible on deck, eerie and silent, wide shot from a distance, ultra detailed waves, photorealistic, cinematic film still, 35mm, dark moody mystery atmosphere, cold desaturated teal color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Gemiye çıktılar.",
+    "Yük yerindeydi, altı aylık erzak duruyordu."
+   ],
+   "big": "",
+   "sub": "",
+   "fx": [
+    "fog"
+   ],
+   "prompt": "Vertical 9:16 cinematic photograph of the empty wooden deck of an 1870s sailing ship at sea, coiled ropes, an open hatch, wet planks, a lantern swinging, fog drifting over the deck, no people at all, eerie silence, cold grey morning light, ultra detailed textures",
+   "effect": "",
+   "year": 1872,
+   "label": "",
+   "timeline": false,
+   "image": "images/s02.jpg",
+   "prompt_tam": "Vertical 9:16 cinematic photograph of the empty wooden deck of an 1870s sailing ship at sea, coiled ropes, an open hatch, wet planks, a lantern swinging, fog drifting over the deck, no people at all, eerie silence, cold grey morning light, ultra detailed textures, photorealistic, cinematic film still, 35mm, dark moody mystery atmosphere, cold desaturated teal color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Kaptanın eşyaları kamaradaydı.",
+    "Ama on kişilik mürettebattan tek kişi yoktu."
+   ],
+   "big": "10 KİŞİ",
+   "sub": "İZ YOK",
+   "fx": [
+    "dust"
+   ],
+   "prompt": "Vertical 9:16 cinematic photograph inside a small 1870s ship captain's cabin, an open leather logbook and an inkwell on a wooden desk, a woman's sewing kit and a small child's toy left on a bunk, a brass oil lamp casting dim warm light, dust in the air, nobody there, eerie stillness, shallow depth of field, no readable writing",
+   "effect": "",
+   "year": 1872,
+   "label": "",
+   "timeline": false,
+   "image": "images/s03.jpg",
+   "prompt_tam": "Vertical 9:16 cinematic photograph inside a small 1870s ship captain's cabin, an open leather logbook and an inkwell on a wooden desk, a woman's sewing kit and a small child's toy left on a bunk, a brass oil lamp casting dim warm light, dust in the air, nobody there, eerie stillness, shallow depth of field, no readable writing, photorealistic, cinematic film still, 35mm, dark moody mystery atmosphere, cold desaturated teal color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Sonra ambara indiler…",
+    "ve bir şey fark ettiler."
+   ],
+   "big": "",
+   "sub": "",
+   "fx": [
+    "fog"
+   ],
+   "prompt": "Vertical 9:16 cinematic photograph of the dark cargo hold of a 19th-century sailing ship, rows of large wooden barrels stacked in shadow, a single beam of lantern light cutting through the darkness from an open hatch above, dust floating, suspenseful, very dark and atmospheric, no people",
+   "effect": "",
+   "year": 1872,
+   "label": "",
+   "timeline": false,
+   "image": "images/s04.jpg",
+   "prompt_tam": "Vertical 9:16 cinematic photograph of the dark cargo hold of a 19th-century sailing ship, rows of large wooden barrels stacked in shadow, a single beam of lantern light cutting through the darkness from an open hatch above, dust floating, suspenseful, very dark and atmospheric, no people, photorealistic, cinematic film still, 35mm, dark moody mystery atmosphere, cold desaturated teal color grade, vertical 9:16, no text, no watermark"
+  }
+ ],
+ "seslendirme_metni": "Dört Aralık bin sekiz yüz yetmiş iki.\nAtlantik'in ortasında bir gemi başıboş sürükleniyordu.\nGemiye çıktılar.\nYük yerindeydi, altı aylık erzak duruyordu.\nKaptanın eşyaları kamaradaydı.\nAma on kişilik mürettebattan tek kişi yoktu.\nSonra ambara indiler…\nve bir şey fark ettiler."
+}
