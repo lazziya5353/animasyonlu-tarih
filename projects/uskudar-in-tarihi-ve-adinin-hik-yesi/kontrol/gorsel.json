@@ -1,0 +1,12 @@
+{
+ "asama": "gorsel",
+ "durum": "hata",
+ "ozet": "Kontrol tamamlanamadı",
+ "maddeler": [
+  {
+   "seviye": "hata",
+   "mesaj": "kontrolcü çalışırken hata: No module named 'PIL'"
+  }
+ ],
+ "zaman": "2026-11-11T16:19:38Z"
+}

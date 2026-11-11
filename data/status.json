@@ -24,10 +24,10 @@
   "zaman": "2026-11-11T11:40:36Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "uskudar-in-tarihi-ve-adinin-hik-yesi: senaryo !",
+  "durum": "hata",
+  "mesaj": "uskudar-in-tarihi-ve-adinin-hik-yesi: gorsel ✗",
   "cikti": "projects/uskudar-in-tarihi-ve-adinin-hik-yesi/kontrol",
-  "zaman": "2026-11-11T15:08:40Z"
+  "zaman": "2026-11-11T16:19:38Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
