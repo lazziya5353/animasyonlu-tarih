@@ -24,10 +24,10 @@
   "zaman": "2026-11-11T08:09:40Z"
  },
  "kontrol": {
-  "durum": "hata",
-  "mesaj": "galatasaray-1905-2026: kurgu ✗",
+  "durum": "tamam",
+  "mesaj": "galatasaray-1905-2026: gorsel !",
   "cikti": "projects/galatasaray-1905-2026/kontrol",
-  "zaman": "2026-11-11T08:09:35Z"
+  "zaman": "2026-11-11T08:48:12Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

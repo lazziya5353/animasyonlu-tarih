@@ -1,35 +1,18 @@
 {
  "asama": "gorsel",
- "durum": "hata",
- "ozet": "13/13 görsel, ortalama puan 8.8/10",
+ "durum": "uyari",
+ "ozet": "13/13 görsel",
  "maddeler": [
   {
    "seviye": "uyari",
-   "mesaj": "Galata Kulesi'nin etrafındaki binalar ve silüet 1905 yılına kıyasla biraz fazla modern bir şehir dokusu sunuyor.",
-   "sahne": 1
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "Arkadaki tahtada Latif alfabesiyle yazılar var; 1905 yılı Osmanlı döneminde eğitimde Osmanlı Türkçesi (Arap alfabesi) kullanılıyordu.",
-   "sahne": 2
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "Futbolcunun forması Galatasaray'ın çubuklu klasik renklerine benzese de tam dönemin orijinal formasıyla ve penaltı atışı yapılan kale düzeniyle birebir aynı değil, yapay zeka jenerik tasarımı.",
-   "sahne": 8
-  },
-  {
-   "seviye": "hata",
-   "mesaj": "Görseldeki kupa UEFA Kupası'nın orijinal tasarımından farklı (UEFA Avrupa Ligi kupasına benzetilmeye çalışılmış fakat hatalı) ve oyuncuların sırtındaki isim/numaralar bozuk/anlamsız AI karakterleri içeriyor.",
+   "mesaj": "çözünürlük düşük (335×597), videoda bulanık görünebilir",
    "sahne": 9
   },
   {
-   "seviye": "uyari",
-   "mesaj": "İstenen görselde 'arkadan görünen tek bir öğrenci' belirtilmişken, görselde birden fazla öğrenci önden ve yandan yürürken görünmektedir.",
-   "sahne": 13
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka incelemesi atlandı: Gemini yanıt vermedi (gemini-3.8-flash: The read operation timed out)"
   }
  ],
  "eksik": [],
- "ortalama_puan": 8.8,
- "zaman": "2026-11-10T22:14:06Z"
+ "zaman": "2026-11-11T08:48:12Z"
 }
