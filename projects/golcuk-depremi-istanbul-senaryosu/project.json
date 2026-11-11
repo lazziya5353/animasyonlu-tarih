@@ -264,7 +264,8 @@
     0.5
    ],
    "effect": "glow",
-   "timeline": false
+   "timeline": false,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s06.jpg",
