@@ -1,12 +1,8 @@
 {
  "asama": "kurgu",
  "durum": "hata",
- "ozet": "70 sn, -14 LUFS, senkron 31/32",
+ "ozet": "70 sn, -14 LUFS, senkron 32/32",
  "maddeler": [
-  {
-   "seviye": "uyari",
-   "mesaj": "altyazı süresi okunuşa uymuyor (28 kar/sn): “17 Mayıs 2000, Kopenhag.”"
-  },
   {
    "seviye": "bilgi",
    "mesaj": "sığmadığı için küçültüldü: “ALİ SAMİ YEN”"
@@ -21,22 +17,17 @@
   },
   {
    "seviye": "uyari",
-   "mesaj": "Alt yazı ('1909'da İstanbul Ligi'ni kazanan') yarım kalmış veya eksik cümle içeriyor.",
-   "sahne": 4
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "Alt yazı ('Son dört sezonun dördü de') yarım kalmış görünüyor.",
-   "sahne": 11
+   "mesaj": "Alt kısımdaki Türkiye Kupası tablosunda yer alan kulüp isimleri ve sayıları koyu arka plan nedeniyle neredeyse tamamen okunaksız durumda.",
+   "sahne": 12
   },
   {
    "seviye": "hata",
-   "mesaj": "Üstte ve ortada tekrarlanan '1905' ve '1905 - 2026' başlıkları ile alt başlıklar üst üste yığılmış ve düzeni bozuk.",
+   "mesaj": "'BİR LİSE SINIFINDAN AVRUPA'NIN ZİRVESİNE.' yazısı sol kenardan taşmış ve kesilmiştir; ayrıca diğer karelerdeki standart üst başlık düzeniyle uyuşmamaktadır.",
    "sahne": 13
   }
  ],
  "sure": 69.6,
  "lufs": -14.0,
- "senkron": "31/32",
- "zaman": "2026-11-11T08:09:35Z"
+ "senkron": "32/32",
+ "zaman": "2026-11-11T09:04:01Z"
 }
