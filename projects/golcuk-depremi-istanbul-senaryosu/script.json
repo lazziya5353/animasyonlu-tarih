@@ -62,12 +62,12 @@
     "dust"
    ],
    "etiket": "TEMSİLİ",
-   "prompt": "Close-up of an old round wall clock stopped at exactly 3:02, hanging crooked on a cracked plaster wall inside a 1990s Turkish apartment at night, its glass cracked, fine dust floating in a beam of dim street light, dark and silent, no people",
+   "prompt": "Vertical 9:16 cinematic photograph, extreme close-up of an old round analog wall clock hanging crooked on a cracked plaster wall inside a 1990s Turkish apartment at night. The clock has stopped at exactly 3:02: the short hour hand points just past the 3, the long minute hand points at the second minute mark just after 12. Its glass face has a single diagonal crack. Fine plaster dust floats in a cold blue beam of street light coming through a window, deep shadows, shallow depth of field, shot on 50mm lens, ultra detailed textures of peeling paint and cracks, sharp focus on the clock, moody, silent, no people, no text, no watermark",
    "year": 1999,
    "label": "",
    "timeline": false,
    "image": "images/s01.jpg",
-   "prompt_tam": "Close-up of an old round wall clock stopped at exactly 3:02, hanging crooked on a cracked plaster wall inside a 1990s Turkish apartment at night, its glass cracked, fine dust floating in a beam of dim street light, dark and silent, no people, photorealistic, 35mm documentary photograph, natural light, muted color grade, vertical 9:16, no text, no watermark"
+   "prompt_tam": "Vertical 9:16 cinematic photograph, extreme close-up of an old round analog wall clock hanging crooked on a cracked plaster wall inside a 1990s Turkish apartment at night. The clock has stopped at exactly 3:02: the short hour hand points just past the 3, the long minute hand points at the second minute mark just after 12. Its glass face has a single diagonal crack. Fine plaster dust floats in a cold blue beam of street light coming through a window, deep shadows, shallow depth of field, shot on 50mm lens, ultra detailed textures of peeling paint and cracks, sharp focus on the clock, moody, silent, no people, no text, no watermark"
   },
   {
    "lines": [
@@ -169,13 +169,13 @@
     "dust"
    ],
    "etiket": "TEMSİLİ",
-   "prompt": "Dawn after a massive earthquake in a small Turkish coastal town in August 1999, dust hanging in the air, collapsed concrete apartment buildings in the distance, rescue workers and volunteers seen from far behind as small silhouettes standing on rubble, soft grey and orange light, somber and respectful, no injured people, no faces",
+   "prompt": "Vertical 9:16 documentary photograph at dawn, the morning after a massive earthquake in a small Turkish coastal town in August 1999. Thick dust hangs in the air, collapsed concrete apartment buildings and twisted rebar in the middle distance, rescue workers and volunteers seen from far behind as small dark silhouettes standing on a mound of rubble, soft grey and pale orange sunrise light breaking through the haze. Somber, respectful, photojournalism style, 35mm film grain, wide angle, sharp and highly detailed, no injured people, no bodies, no visible faces, no text, no watermark",
    "effect": "",
    "year": 1999,
    "label": "",
    "timeline": false,
    "image": "images/s03.jpg",
-   "prompt_tam": "Dawn after a massive earthquake in a small Turkish coastal town in August 1999, dust hanging in the air, collapsed concrete apartment buildings in the distance, rescue workers and volunteers seen from far behind as small silhouettes standing on rubble, soft grey and orange light, somber and respectful, no injured people, no faces, photorealistic, 35mm documentary photograph, natural light, muted color grade, vertical 9:16, no text, no watermark"
+   "prompt_tam": "Vertical 9:16 documentary photograph at dawn, the morning after a massive earthquake in a small Turkish coastal town in August 1999. Thick dust hangs in the air, collapsed concrete apartment buildings and twisted rebar in the middle distance, rescue workers and volunteers seen from far behind as small dark silhouettes standing on a mound of rubble, soft grey and pale orange sunrise light breaking through the haze. Somber, respectful, photojournalism style, 35mm film grain, wide angle, sharp and highly detailed, no injured people, no bodies, no visible faces, no text, no watermark"
   },
   {
    "lines": [
@@ -283,12 +283,12 @@
    "sub": "YA BURADA OLSAYDI?",
    "fx": [],
    "effect": "glow",
-   "prompt": "Istanbul at night seen from high above, the Bosphorus and the historic peninsula glowing with millions of city lights, dense apartment blocks stretching to the horizon, calm Sea of Marmara in the foreground, quiet and peaceful, cinematic aerial view",
+   "prompt": "Vertical 9:16 aerial night photograph of Istanbul from very high above, the Bosphorus strait curving through the frame with an illuminated suspension bridge, the historic peninsula with softly lit mosques and domes, millions of warm city lights stretching to the horizon, the calm dark Sea of Marmara with a few ship lights in the foreground. Clear night, crisp details, long exposure, cinematic blue and amber color grade, ultra sharp, peaceful mood, no text, no watermark",
    "year": 2019,
    "label": "",
    "timeline": false,
    "image": "images/s05.jpg",
-   "prompt_tam": "Istanbul at night seen from high above, the Bosphorus and the historic peninsula glowing with millions of city lights, dense apartment blocks stretching to the horizon, calm Sea of Marmara in the foreground, quiet and peaceful, cinematic aerial view, photorealistic, 35mm documentary photograph, natural light, muted color grade, vertical 9:16, no text, no watermark"
+   "prompt_tam": "Vertical 9:16 aerial night photograph of Istanbul from very high above, the Bosphorus strait curving through the frame with an illuminated suspension bridge, the historic peninsula with softly lit mosques and domes, millions of warm city lights stretching to the horizon, the calm dark Sea of Marmara with a few ship lights in the foreground. Clear night, crisp details, long exposure, cinematic blue and amber color grade, ultra sharp, peaceful mood, no text, no watermark"
   },
   {
    "lines": [
@@ -303,13 +303,13 @@
    ],
    "etiket": "TEMSİLİ",
    "kaynak": "Kaynak: İBB & Kandilli, 2019 olası deprem kayıp tahmini · tahmindir",
-   "prompt": "Aerial view of a dense Istanbul neighborhood at night during a sudden blackout, most city lights out, only a few car headlights and emergency lights glowing in the streets, dust haze in the air, tense and silent mood, no close-up destruction, no people",
+   "prompt": "Vertical 9:16 aerial night photograph looking down at a dense Istanbul residential district during a sudden city-wide power outage. Almost all windows and street lights are dark, only a few car headlights, flashing blue and red emergency lights and handheld flashlights glow in the narrow streets, a thin layer of dust haze drifts over the rooftops. Tense, silent, cinematic, cold moonlight, highly detailed rooftops and streets, no close-up destruction, no people visible, no text, no watermark",
    "effect": "",
    "year": 2019,
    "label": "",
    "timeline": false,
    "image": "images/s06.jpg",
-   "prompt_tam": "Aerial view of a dense Istanbul neighborhood at night during a sudden blackout, most city lights out, only a few car headlights and emergency lights glowing in the streets, dust haze in the air, tense and silent mood, no close-up destruction, no people, photorealistic, 35mm documentary photograph, natural light, muted color grade, vertical 9:16, no text, no watermark"
+   "prompt_tam": "Vertical 9:16 aerial night photograph looking down at a dense Istanbul residential district during a sudden city-wide power outage. Almost all windows and street lights are dark, only a few car headlights, flashing blue and red emergency lights and handheld flashlights glow in the narrow streets, a thin layer of dust haze drifts over the rooftops. Tense, silent, cinematic, cold moonlight, highly detailed rooftops and streets, no close-up destruction, no people visible, no text, no watermark"
   },
   {
    "lines": [
@@ -466,13 +466,13 @@
    ],
    "etiket": "TEMSİLİ",
    "kaynak": "Kaynak: İBB açık veri, bina envanteri (2017)",
-   "prompt": "Dense rows of aging 1980s and 1990s concrete apartment buildings in an Istanbul neighborhood, weathered facades, narrow streets, laundry on balconies, overcast daylight, seen from street level, no people",
+   "prompt": "Vertical 9:16 street-level photograph of dense rows of aging 1980s and 1990s six-story concrete apartment buildings in an Istanbul neighborhood, weathered facades with faded paint, small balconies with laundry and satellite dishes, buildings packed tightly together along a narrow sloping street, parked cars, overcast soft daylight. Documentary realism, 24mm lens, sharp focus, highly detailed textures, neutral muted colors, no people, no readable signs, no text, no watermark",
    "effect": "",
    "year": 2019,
    "label": "",
    "timeline": false,
    "image": "images/s09.jpg",
-   "prompt_tam": "Dense rows of aging 1980s and 1990s concrete apartment buildings in an Istanbul neighborhood, weathered facades, narrow streets, laundry on balconies, overcast daylight, seen from street level, no people, photorealistic, 35mm documentary photograph, natural light, muted color grade, vertical 9:16, no text, no watermark"
+   "prompt_tam": "Vertical 9:16 street-level photograph of dense rows of aging 1980s and 1990s six-story concrete apartment buildings in an Istanbul neighborhood, weathered facades with faded paint, small balconies with laundry and satellite dishes, buildings packed tightly together along a narrow sloping street, parked cars, overcast soft daylight. Documentary realism, 24mm lens, sharp focus, highly detailed textures, neutral muted colors, no people, no readable signs, no text, no watermark"
   },
   {
    "lines": [
@@ -482,13 +482,13 @@
    "big": "HAZIRLIK",
    "sub": "BİNA · ÇANTA · TOPLANMA ALANI",
    "fx": [],
-   "prompt": "An earthquake emergency backpack ready by an apartment front door, a flashlight, bottled water, a first aid kit and a whistle neatly placed beside it, warm hallway light, calm and practical mood, no text or logos on any item",
+   "prompt": "Vertical 9:16 photograph of an earthquake emergency backpack standing ready beside an apartment front door in a tidy hallway, next to it neatly arranged a flashlight, bottled water, a small first aid kit, a whistle, a portable radio and a pair of sturdy shoes. Warm soft hallway light, calm and practical mood, product-photography quality, sharp focus, realistic textures, plain unbranded items with no logos, no labels, no text, no watermark",
    "effect": "",
    "year": 2019,
    "label": "",
    "timeline": false,
    "image": "images/s10.jpg",
-   "prompt_tam": "An earthquake emergency backpack ready by an apartment front door, a flashlight, bottled water, a first aid kit and a whistle neatly placed beside it, warm hallway light, calm and practical mood, no text or logos on any item, photorealistic, 35mm documentary photograph, natural light, muted color grade, vertical 9:16, no text, no watermark"
+   "prompt_tam": "Vertical 9:16 photograph of an earthquake emergency backpack standing ready beside an apartment front door in a tidy hallway, next to it neatly arranged a flashlight, bottled water, a small first aid kit, a whistle, a portable radio and a pair of sturdy shoes. Warm soft hallway light, calm and practical mood, product-photography quality, sharp focus, realistic textures, plain unbranded items with no logos, no labels, no text, no watermark"
   },
   {
    "lines": [
@@ -500,13 +500,13 @@
    "fx": [
     "rays"
    ],
-   "prompt": "Sunrise over Istanbul, construction cranes above new reinforced apartment buildings, two workers in hard hats seen from behind on a scaffold beside a strengthened concrete column, hopeful golden light, the Bosphorus in the distance",
+   "prompt": "Vertical 9:16 cinematic photograph at golden sunrise over Istanbul, two construction workers in white hard hats and orange safety vests seen from behind standing on scaffolding beside a thick newly reinforced concrete column wrapped with steel rebar, tall construction cranes and new apartment buildings around them, the Bosphorus and a bridge glowing in the distance under a warm hazy sky. Hopeful and strong mood, sharp focus, rich detail, 35mm lens, no visible faces, no text, no watermark",
    "effect": "",
    "year": 2019,
    "label": "",
    "timeline": false,
    "image": "images/s11.jpg",
-   "prompt_tam": "Sunrise over Istanbul, construction cranes above new reinforced apartment buildings, two workers in hard hats seen from behind on a scaffold beside a strengthened concrete column, hopeful golden light, the Bosphorus in the distance, photorealistic, 35mm documentary photograph, natural light, muted color grade, vertical 9:16, no text, no watermark"
+   "prompt_tam": "Vertical 9:16 cinematic photograph at golden sunrise over Istanbul, two construction workers in white hard hats and orange safety vests seen from behind standing on scaffolding beside a thick newly reinforced concrete column wrapped with steel rebar, tall construction cranes and new apartment buildings around them, the Bosphorus and a bridge glowing in the distance under a warm hazy sky. Hopeful and strong mood, sharp focus, rich detail, 35mm lens, no visible faces, no text, no watermark"
   }
  ],
  "seslendirme_metni": "On yedi Ağustos bin dokuz yüz doksan dokuz, saat üçü iki geçe.\nGölcük'te yer kırk beş saniye sallandı.\nYedi nokta dört büyüklüğündeki sarsıntı\non altı milyon kişiyi etkiledi.\nResmî rakamlara göre\non yedi bin dört yüz seksen kişi hayatını kaybetti.\nFay o gece Marmara'nın doğusunda kırıldı.\nİstanbul'un önündeki parça ise hâlâ kırılmadı.\nPeki benzer bir deprem\nİstanbul'un dibinde olsaydı?\nİBB ve Kandilli'nin yedi buçukluk gece senaryosuna göre\nyaklaşık on dört bin can kaybı,\nkırk sekiz bin ağır hasarlı bina bekleniyor.\nAma risk her yerde aynı değil.\nEn ağır tablo Marmara kıyısında.\nEski binalar ve yumuşak zemin hasarı katlıyor.\nKuzeydeki sağlam zemin daha şanslı.\nYine de riskli ilçede oturmak,\nsenin binan çürük demek değil.\nİstanbul'daki binaların yaklaşık üçte ikisi\niki binden önce yapıldı.\nBinanı inceletmek, deprem çantası hazırlamak,\ntoplanma alanını bilmek hayat kurtarır.\nDepremi durduramayız.\nAma binaları güçlendirebiliriz."
