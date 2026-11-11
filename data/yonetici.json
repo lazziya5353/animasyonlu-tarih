@@ -121,7 +121,9 @@
    "islemler": [
     "uskudar-in-tarihi-ve-adinin-hik-yesi: 1. görsel yeniden çizilecek"
    ],
-   "hatalar": [],
+   "hatalar": [
+    "uskudar-in-tarihi-ve-adinin-hik-yesi: görsellerin bir kısmı çizilemedi (Canlı ilerleme'de ayrıntı var)"
+   ],
    "zaman": "2026-11-11T20:05:50Z"
   }
  ]
