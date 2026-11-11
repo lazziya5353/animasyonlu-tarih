@@ -27,6 +27,27 @@
    ],
    "hatalar": [],
    "zaman": "2026-11-11T15:06:22Z"
+  },
+  {
+   "kim": "sen",
+   "metin": "Tamam üsküdar videosu için görselleri ürettir. Onlar olduktan sonra videoya başlarsınız ben buralardayım",
+   "zaman": "2026-11-11T15:29:08Z"
+  },
+  {
+   "kim": "ajan",
+   "metin": "Tamamdır kral, Üsküdar'ın 10 sahnesinin görsellerini mevcut tariflerle üretiyorum. 🎨 Sesi de hazırlıyorum, çünkü henüz yok. Ses bitince video kendiliğinden başlayacak. Sen müsait olunca panelden bakarsın.",
+   "islemler": [
+    "uskudar-in-tarihi-ve-adinin-hik-yesi: 1. görsel yeniden üretilecek",
+    "uskudar-in-tarihi-ve-adinin-hik-yesi: 2. görsel yeniden üretilecek",
+    "uskudar-in-tarihi-ve-adinin-hik-yesi: 3. görsel yeniden üretilecek",
+    "uskudar-in-tarihi-ve-adinin-hik-yesi: 4. görsel yeniden üretilecek",
+    "uskudar-in-tarihi-ve-adinin-hik-yesi: 5. görsel yeniden üretilecek",
+    "uskudar-in-tarihi-ve-adinin-hik-yesi: 6. görsel yeniden üretilecek",
+    "uskudar-in-tarihi-ve-adinin-hik-yesi: 7. görsel yeniden üretilecek",
+    "uskudar-in-tarihi-ve-adinin-hik-yesi: 8. görsel yeniden üretilecek"
+   ],
+   "hatalar": [],
+   "zaman": "2026-11-11T15:29:19Z"
   }
  ]
 }
