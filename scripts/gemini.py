@@ -46,12 +46,15 @@ def _post(model, body, timeout=120):
 _dusunme_kapali = True   # yeni modeller varsayılan olarak uzun "düşünüyor"; kontrol işleri için gereksiz ve yavaş
 
 
-def sor(parts, json_cevap=True, sicaklik=0.2, sure=120):
-    """parts: metin ve/veya {"inline_data": {...}} listesi. JSON istenirse sözlük döner."""
+def sor(parts, json_cevap=True, sicaklik=0.2, sure=120, arama=False, sistem=None):
+    """parts: metin ve/veya {"inline_data": {...}} listesi. JSON istenirse sözlük döner.
+    arama=True: Google araması açık (güncel/doğrulanmış bilgi için); bu modda JSON metinden ayıklanır."""
     global _calisan, _dusunme_kapali
     if not hazir(): raise GeminiYok("GEMINI_API_KEY tanımlı değil")
     body = {"contents": [{"parts": [p if isinstance(p, dict) else {"text": p} for p in parts]}],
-            "generationConfig": {"temperature": sicaklik, **({"responseMimeType": "application/json"} if json_cevap else {})}}
+            "generationConfig": {"temperature": sicaklik, **({"responseMimeType": "application/json"} if json_cevap and not arama else {})}}
+    if arama: body["tools"] = [{"google_search": {}}]
+    if sistem: body["systemInstruction"] = {"parts": [{"text": sistem}]}
     if _dusunme_kapali: body["generationConfig"]["thinkingConfig"] = {"thinkingLevel": "low"}
     global _kesfedildi
     son_hata = ""

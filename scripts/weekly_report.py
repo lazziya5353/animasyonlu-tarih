@@ -2,7 +2,7 @@
 Çıktı: reports/<YIL>-W<HAFTA>.json ve reports/latest.json"""
 import os, json, datetime, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import claude, extract_json, set_status, ROOT
+from common import claude, yazar, extract_json, set_status, ROOT
 
 GUNLER = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"]
 
@@ -42,7 +42,7 @@ JSON şeması:
 {{"hafta":"{wk}","gunler":[{{"tarih":"YYYY-MM-DD","gun":"Pazartesi","olaylar":[{{"yil":1938,"baslik":"kısa başlık","ozet":"tek kısa cümle","yildiz":5,"neden":"en fazla 8 kelime","tur":"tarihte-bugun|savas|dunya","kaynak":"url"}}]}}],
 "savas_onerisi":{{"baslik":"","yil":0,"taraflar":"","sonuc":"","ozet":"","neden":"","harita_bolgesi":"avrupa_ortadogu|bati_avrupa|orta_asya|akdeniz|anadolu"}},
 "onerilen":[{{"baslik":"","tarih":"YYYY-MM-DD veya boş","tur":""}}]}}"""
-    txt = claude(system, user, "arastirmaci", max_tokens=16000, web_search=int(os.environ.get("ARAMA_SAYISI", "4")))
+    txt = yazar(system, user, "arastirmaci", max_tokens=16000, web_search=int(os.environ.get("ARAMA_SAYISI", "4")))
     rep = extract_json(txt, "arastirmaci"); rep["olusturma"] = datetime.datetime.utcnow().isoformat(timespec="seconds") + "Z"
     for d in rep.get("gunler", []):
         for o in d.get("olaylar", []): o.setdefault("durum", "bekliyor")

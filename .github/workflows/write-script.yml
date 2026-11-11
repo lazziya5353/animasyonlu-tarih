@@ -23,6 +23,7 @@ jobs:
       - name: Metni yaz
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
           KONU: ${{ inputs.konu }}
           TARIH: ${{ inputs.tarih }}

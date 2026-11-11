@@ -2,7 +2,7 @@
 Çıktı: projects/<slug>/script.json ve project.json (zamanlar ses gelince otomatik hizalanır)."""
 import os, json, sys, argparse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import claude, extract_json, set_status, slugify, ROOT
+from common import claude, yazar, extract_json, set_status, slugify, ROOT
 
 STYLE = "cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark"
 CITIES = json.load(open(os.path.join(ROOT, "engine", "map", "cities.json")))
@@ -49,7 +49,7 @@ JSON şeması:
 "maps":[{{"after_scene":2,"cities":["İstanbul","Viyana"],"route":["İstanbul","Belgrad","Viyana"],"title":"İSTANBUL — VİYANA"}}],
 "cards":[{{"scene":3,"value":53,"unit":"GÜN","small":"SÜREN KUŞATMA"}}],"eras":[{{"name":"","from":0,"to":3}}],"outro":{{"title":"","line":""}},
 "aciklama":"","hashtagler":[],"kaynaklar":[],"kontrol_notlari":[]}}"""
-    sc = extract_json(claude(system, user, "senarist", max_tokens=24000, web_search=int(os.environ.get("ARAMA_SAYISI", "3"))), "senarist")
+    sc = extract_json(yazar(system, user, "senarist", max_tokens=24000, web_search=int(os.environ.get("ARAMA_SAYISI", "3"))), "senarist")
     sc["konu"] = a.konu; sc["tarih"] = a.tarih; sc["slug"] = slug; sc["durum"] = "onay-bekliyor"
     sc["seslendirme_metni"] = "\n".join(l for s in sc["sahneler"] for l in s["lines"])
     for i, s in enumerate(sc["sahneler"]): s["prompt_tam"] = f"{s['prompt']}, {STYLE}"; s["image"] = f"images/s{i + 1:02d}.jpg"

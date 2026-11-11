@@ -61,3 +61,14 @@ def set_status(agent, durum, mesaj, cikti=None):
     if durum == "bekliyor" and eski.get("durum") == durum and eski.get("mesaj") == mesaj: return  # her gün aynı "bağlı değil" kaydıyla repo kirlenmesin
     data[agent] = {"durum": durum, "mesaj": mesaj, "cikti": cikti, "zaman": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
     json.dump(data, open(p, "w"), ensure_ascii=False, indent=1)
+
+
+def yazar(system, user, agent, max_tokens=6000, web_search=0):
+    """Metin yazan ajanlar için: varsayılan olarak Gemini (ücretsiz kota, Google aramalı). YAZAR=claude ise Claude API (ücretli)."""
+    if os.environ.get("YAZAR", "gemini") == "claude" and os.environ.get("ANTHROPIC_API_KEY"):
+        return claude(system, user, agent, max_tokens=max_tokens, web_search=web_search)
+    import gemini
+    txt = gemini.sor([user], json_cevap=False, sicaklik=0.5, sure=300, arama=bool(web_search), sistem=system)
+    try: log_usage(agent, "gemini-metin", 0.0, "Gemini ücretsiz kota")
+    except Exception: pass
+    return txt
