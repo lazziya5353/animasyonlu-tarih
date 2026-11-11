@@ -1,8 +1,12 @@
 {
  "asama": "kurgu",
- "durum": "tamam",
- "ozet": "70 sn, -14 LUFS, senkron 32/32",
+ "durum": "hata",
+ "ozet": "70 sn, -14 LUFS, senkron 31/32",
  "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı süresi okunuşa uymuyor (28 kar/sn): “17 Mayıs 2000, Kopenhag.”"
+  },
   {
    "seviye": "bilgi",
    "mesaj": "sığmadığı için küçültüldü: “ALİ SAMİ YEN”"
@@ -14,10 +18,25 @@
   {
    "seviye": "bilgi",
    "mesaj": "sığmadığı için küçültüldü: “Bir lise sınıfından Avrupa'nın zirvesine.”"
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Alt yazı ('1909'da İstanbul Ligi'ni kazanan') yarım kalmış veya eksik cümle içeriyor.",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Alt yazı ('Son dört sezonun dördü de') yarım kalmış görünüyor.",
+   "sahne": 11
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Üstte ve ortada tekrarlanan '1905' ve '1905 - 2026' başlıkları ile alt başlıklar üst üste yığılmış ve düzeni bozuk.",
+   "sahne": 13
   }
  ],
  "sure": 69.6,
  "lufs": -14.0,
- "senkron": "32/32",
- "zaman": "2026-11-10T22:28:04Z"
+ "senkron": "31/32",
+ "zaman": "2026-11-11T08:09:35Z"
 }

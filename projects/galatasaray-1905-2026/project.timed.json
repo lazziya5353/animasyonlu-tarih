@@ -8,7 +8,7 @@
   {
    "image": "images/s01.jpg",
    "start": 0.0,
-   "end": 2.88,
+   "end": 8.01,
    "lines": [
     "26 şampiyonluk, 19 kupa, Avrupa'da iki zafer.",
     "Hepsi 1905'te, bir lise sınıfında başladı."
@@ -32,8 +32,8 @@
   },
   {
    "image": "images/s02.jpg",
-   "start": 2.88,
-   "end": 6.06,
+   "start": 8.01,
+   "end": 12.41,
    "lines": [
     "Ali Sami Yen ve arkadaşları,",
     "bir edebiyat dersinde kulübü kurdu."
@@ -57,8 +57,8 @@
   },
   {
    "image": "images/s03.jpg",
-   "start": 6.06,
-   "end": 10.25,
+   "start": 12.41,
+   "end": 17.970000000000002,
    "lines": [
     "İlk maçlarından birini 2-0 kazandılar.",
     "Seyirciler: Galata Sarayı Efendileri!"
@@ -82,8 +82,8 @@
   },
   {
    "image": "images/s04.jpg",
-   "start": 10.25,
-   "end": 15.27,
+   "start": 17.970000000000002,
+   "end": 22.1,
    "lines": [
     "1909'da İstanbul Ligi'ni kazanan",
     "ilk Türk takımı oldular."
@@ -108,8 +108,8 @@
   },
   {
    "image": "images/s05.jpg",
-   "start": 15.27,
-   "end": 17.970000000000002,
+   "start": 22.1,
+   "end": 24.67,
    "lines": [
     "İlk dört Türkiye Kupası",
     "da onların oldu."
@@ -133,8 +133,8 @@
   },
   {
    "image": "images/s06.jpg",
-   "start": 17.970000000000002,
-   "end": 19.860000000000003,
+   "start": 24.67,
+   "end": 28.0,
    "lines": [
     "1964'te Ali Sami Yen Stadı açıldı."
    ],
@@ -157,8 +157,8 @@
   },
   {
    "image": "images/s07.jpg",
-   "start": 19.860000000000003,
-   "end": 22.1,
+   "start": 28.0,
+   "end": 31.5,
    "lines": [
     "1970'lerde üst üste üç şampiyonluk geldi."
    ],
@@ -180,8 +180,8 @@
   },
   {
    "image": "images/s08.jpg",
-   "start": 22.1,
-   "end": 28.0,
+   "start": 31.5,
+   "end": 36.14,
    "lines": [
     "17 Mayıs 2000, Kopenhag.",
     "UEFA Kupası finali penaltılara gitti."
@@ -207,8 +207,8 @@
   },
   {
    "image": "images/s09.jpg",
-   "start": 28.0,
-   "end": 31.5,
+   "start": 36.14,
+   "end": 39.58,
    "lines": [
     "Türkiye ilk Avrupa kupasını",
     "Galatasaray'la kazandı."
@@ -233,8 +233,8 @@
   },
   {
    "image": "images/s10.jpg",
-   "start": 31.5,
-   "end": 36.14,
+   "start": 39.58,
+   "end": 43.15,
    "lines": [
     "Üç ay sonra Monako'da",
     "UEFA Süper Kupası da geldi."
@@ -258,8 +258,8 @@
   },
   {
    "image": "images/s11.jpg",
-   "start": 36.14,
-   "end": 41.18,
+   "start": 43.15,
+   "end": 46.11,
    "lines": [
     "Son dört sezonun dördü de",
     "şampiyonlukla bitti."
@@ -283,7 +283,7 @@
   },
   {
    "image": "images/s12.jpg",
-   "start": 41.18,
+   "start": 46.11,
    "end": 63.33,
    "lines": [
     "TFF verilerine göre lig şampiyonlukları:",
@@ -444,14 +444,14 @@
      ]
     },
     "act_abs": [
+     53.84,
+     52.1,
      50.57,
      48.91,
-     46.26,
-     43.3,
+     61.64,
      60.16,
      58.54,
-     57.02,
-     55.67
+     57.02
     ]
    }
   },
@@ -532,8 +532,8 @@
  "finale": "",
  "maps": [
   {
-   "start": 22.1,
-   "end": 24.400000000000002,
+   "start": 31.5,
+   "end": 33.8,
    "cam_from": [
     18.2,
     48.345,
@@ -569,168 +569,168 @@
  "duration": 69.59,
  "jumps": [
   {
-   "t": 15.27,
+   "t": 22.1,
    "value": 54
   }
  ],
  "captions": [
   {
    "start": 0.0,
-   "end": 1.44,
+   "end": 4.26,
    "text": "26 şampiyonluk, 19 kupa, Avrupa'da iki zafer."
   },
   {
-   "start": 1.81,
-   "end": 2.67,
-   "text": "Hepsi 1905'te, bir lise sınıfında başladı."
-  },
-  {
-   "start": 3.03,
-   "end": 4.26,
-   "text": "Ali Sami Yen ve arkadaşları,"
-  },
-  {
    "start": 4.61,
-   "end": 6.21,
-   "text": "bir edebiyat dersinde kulübü kurdu."
-  },
-  {
-   "start": 6.21,
    "end": 7.81,
-   "text": "İlk maçlarından birini 2-0 kazandılar."
+   "text": "Hepsi 1905'te, bir lise sınıfında başladı."
   },
   {
    "start": 8.16,
    "end": 10.04,
-   "text": "Seyirciler: Galata Sarayı Efendileri!"
+   "text": "Ali Sami Yen ve arkadaşları,"
   },
   {
    "start": 10.4,
    "end": 12.21,
-   "text": "1909'da İstanbul Ligi'ni kazanan"
+   "text": "bir edebiyat dersinde kulübü kurdu."
   },
   {
    "start": 12.56,
    "end": 15.07,
-   "text": "ilk Türk takımı oldular."
+   "text": "İlk maçlarından birini 2-0 kazandılar."
   },
   {
    "start": 15.42,
-   "end": 16.04,
-   "text": "İlk dört Türkiye Kupası"
-  },
-  {
-   "start": 16.4,
    "end": 17.76,
-   "text": "da onların oldu."
+   "text": "Seyirciler: Galata Sarayı Efendileri!"
   },
   {
    "start": 18.12,
-   "end": 20.01,
-   "text": "1964'te Ali Sami Yen Stadı açıldı."
+   "end": 20.64,
+   "text": "1909'da İstanbul Ligi'ni kazanan"
   },
   {
-   "start": 20.01,
+   "start": 20.64,
    "end": 21.9,
-   "text": "1970'lerde üst üste üç şampiyonluk geldi."
+   "text": "ilk Türk takımı oldular."
   },
   {
    "start": 22.25,
+   "end": 23.52,
+   "text": "İlk dört Türkiye Kupası"
+  },
+  {
+   "start": 23.52,
    "end": 24.48,
-   "text": "17 Mayıs 2000, Kopenhag."
+   "text": "da onların oldu."
   },
   {
    "start": 24.82,
    "end": 27.79,
-   "text": "UEFA Kupası finali penaltılara gitti."
+   "text": "1964'te Ali Sami Yen Stadı açıldı."
   },
   {
    "start": 28.15,
-   "end": 29.72,
-   "text": "Türkiye ilk Avrupa kupasını"
-  },
-  {
-   "start": 29.72,
    "end": 31.28,
-   "text": "Galatasaray'la kazandı."
+   "text": "1970'lerde üst üste üç şampiyonluk geldi."
   },
   {
    "start": 31.65,
-   "end": 33.48,
-   "text": "Üç ay sonra Monako'da"
+   "end": 32.79,
+   "text": "17 Mayıs 2000, Kopenhag."
   },
   {
-   "start": 33.85,
+   "start": 33.04,
    "end": 35.93,
-   "text": "UEFA Süper Kupası da geldi."
+   "text": "UEFA Kupası finali penaltılara gitti."
   },
   {
    "start": 36.29,
+   "end": 38.05,
+   "text": "Türkiye ilk Avrupa kupasını"
+  },
+  {
+   "start": 38.22,
    "end": 39.37,
-   "text": "Son dört sezonun dördü de"
+   "text": "Galatasaray'la kazandı."
   },
   {
    "start": 39.73,
-   "end": 41.33,
-   "text": "şampiyonlukla bitti."
+   "end": 41.03,
+   "text": "Üç ay sonra Monako'da"
   },
   {
-   "start": 41.33,
+   "start": 41.25,
    "end": 42.93,
-   "text": "TFF verilerine göre lig şampiyonlukları:"
+   "text": "UEFA Süper Kupası da geldi."
   },
   {
    "start": 43.3,
+   "end": 44.68,
+   "text": "Son dört sezonun dördü de"
+  },
+  {
+   "start": 44.68,
    "end": 45.89,
-   "text": "Trabzonspor, 7."
+   "text": "şampiyonlukla bitti."
   },
   {
    "start": 46.26,
    "end": 48.56,
-   "text": "Beşiktaş, 16."
+   "text": "TFF verilerine göre lig şampiyonlukları:"
   },
   {
    "start": 48.91,
    "end": 50.24,
-   "text": "Fenerbahçe, 19."
+   "text": "Trabzonspor, 7."
   },
   {
    "start": 50.57,
+   "end": 51.84,
+   "text": "Beşiktaş, 16."
+  },
+  {
+   "start": 52.1,
    "end": 53.47,
-   "text": "Galatasaray, 26!"
+   "text": "Fenerbahçe, 19."
   },
   {
    "start": 53.84,
    "end": 55.3,
-   "text": "Türkiye Kupası'nda."
+   "text": "Galatasaray, 26!"
   },
   {
    "start": 55.67,
    "end": 56.65,
-   "text": "Fenerbahçe, 7."
+   "text": "Türkiye Kupası'nda."
   },
   {
    "start": 57.02,
    "end": 58.21,
-   "text": "Trabzonspor, 10."
+   "text": "Fenerbahçe, 7."
   },
   {
    "start": 58.54,
    "end": 59.85,
-   "text": "Beşiktaş, 11."
+   "text": "Trabzonspor, 10."
   },
   {
    "start": 60.16,
+   "end": 61.39,
+   "text": "Beşiktaş, 11."
+  },
+  {
+   "start": 61.64,
    "end": 63.11,
    "text": "Galatasaray, 19!"
   },
   {
    "start": 63.48,
-   "end": 65.18,
+   "end": 64.9,
    "text": "Bir sınıfta doğan hayal,"
   },
   {
-   "start": 65.18,
+   "start": 65.14,
    "end": 66.89,
    "text": "bugün milyonların tutkusu."
   }

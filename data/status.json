@@ -21,13 +21,13 @@
   "durum": "tamam",
   "mesaj": "galatasaray-1905-2026 videosu hazır",
   "cikti": "release:video-galatasaray-1905-2026",
-  "zaman": "2026-11-10T22:28:12Z"
+  "zaman": "2026-11-11T08:09:40Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "galatasaray-1905-2026: kurgu ✓",
+  "durum": "hata",
+  "mesaj": "galatasaray-1905-2026: kurgu ✗",
   "cikti": "projects/galatasaray-1905-2026/kontrol",
-  "zaman": "2026-11-10T22:28:04Z"
+  "zaman": "2026-11-11T08:09:35Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
