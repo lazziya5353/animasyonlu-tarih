@@ -1,13 +1,19 @@
 {
  "asama": "ses",
- "durum": "tamam",
- "ozet": "47 sn",
+ "durum": "uyari",
+ "ozet": "47 sn, metinle %92 uyumlu",
  "maddeler": [
   {
-   "seviye": "bilgi",
-   "mesaj": "metin-ses karşılaştırması atlandı: Gemini yanıt vermedi (gemini-3.7-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more info)"
+   "seviye": "uyari",
+   "mesaj": "ses metinle %92 uyuşuyor"
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "okunmamış/yanlış okunmuş olabilir: “chrysopolis milattan önce”"
   }
  ],
  "sure": 47.0,
- "zaman": "2026-11-11T18:45:01Z"
+ "benzerlik": 0.92,
+ "dokum": "Üsküdar'ın ilk adı Altınşehir demekti. Adı Hrisopolis'ti. MÖ 410'da Atinalılar buradan gemilerden vergi aldı. Bugünkü adı Roma dönemindeki Skutarion Kışlası'ndan geliyor olabilir. Bir görüş de Farsça ulak sözlüğünü gösterir. Orhan Gazi döneminde İstanbul'dan çok önce Osmanlı oldu. 29 Mayıs 1453'te İstanbul fethedildi. Üsküdar'a Türkler yerleşti. Ordular buradan Anadolu'ya geçerdi. Hacıların ilk durağı da burasıydı. 1548'de Mimar Sinan Mihrimah Sultan Camii'ni tamamladı. Kız Kulesi ise kıyının simgesi oldu. Şimdi şaşıracaksın. 324'te Konstantin rakibi Licinius'u Üsküdar'da yendi. Ardından Bizantion'u başkent yaptı. İstanbul'un başkent oluşu Üsküdar'daki zaferin ardından geldi.",
+ "zaman": "2026-11-11T18:59:44Z"
 }

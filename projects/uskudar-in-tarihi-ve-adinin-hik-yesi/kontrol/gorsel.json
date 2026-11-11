@@ -1,11 +1,16 @@
 {
  "asama": "gorsel",
  "durum": "hata",
- "ozet": "1/10 görsel, ortalama puan 7.0/10",
+ "ozet": "1/10 görsel, ortalama puan 6.0/10",
  "maddeler": [
   {
    "seviye": "hata",
-   "mesaj": "Görselin sağ alt köşesinde 'pollinations.ai' filigranı/yazısı bulunmaktadır.",
+   "mesaj": "Sağ alt köşede 'pollinations.ai' filigranı/yazısı bulunmaktadır.",
+   "sahne": 1
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Binaların mimari yapısı MÖ 410 Antik Yunan döneminden ziyade modern/yakın dönem Akdeniz kıyı kasabalarını andırmaktadır.",
    "sahne": 1
   },
   {
@@ -24,6 +29,6 @@
   9,
   10
  ],
- "ortalama_puan": 7.0,
- "zaman": "2026-11-11T18:49:31Z"
+ "ortalama_puan": 6.0,
+ "zaman": "2026-11-11T19:04:46Z"
 }
