@@ -109,6 +109,20 @@
     "uskudar-in-tarihi-ve-adinin-hik-yesi: görsellerin bir kısmı çizilemedi (Canlı ilerleme'de ayrıntı var)"
    ],
    "zaman": "2026-11-11T18:51:12Z"
+  },
+  {
+   "kim": "sen",
+   "metin": "[DÜZELT] Kontrolcülerin bulduğu şu sorunları düzelt, sonra gerekiyorsa yeniden üret ve kontrol ettir:\n- [gorsel] sahne 1: Binaların mimari yapısı MÖ 410 Antik Yunan döneminden ziyade modern/yakın dönem Akdeniz kıyı kasabalarını andırmaktadır.",
+   "zaman": "2026-11-11T20:05:42Z"
+  },
+  {
+   "kim": "ajan",
+   "metin": "Kral, bu mesajdaki tek sorun sahne 1'deki mimari, onu düzeltiyorum:\n• Sahne 1'in görselini yeniden çizdiriyorum. Beyaz badanalı, modern Akdeniz kasabasına benzeyen evleri çıkardım. Yerine MÖ 5. yüzyıla uygun, kaba kesme taş ve kerpiç yapılar, düz ya da alçak kiremit çatılar, sade bir Dor sütunlu liman yapısı ve ahşap iskele koydum. Yazı, filigran ve logo olmasın diye de tarife ekledim.\n• Sahne 2-10 görselleri hâlâ eksik görünüyor. Onları önceki mesajdaki üretim işine bıraktım, tekrar eklemedim.",
+   "islemler": [
+    "uskudar-in-tarihi-ve-adinin-hik-yesi: 1. görsel yeniden çizilecek"
+   ],
+   "hatalar": [],
+   "zaman": "2026-11-11T20:05:50Z"
   }
  ]
 }
