@@ -1,23 +1,13 @@
 {
  "asama": "ses",
- "durum": "uyari",
- "ozet": "43 sn, metinle %88 uyumlu",
+ "durum": "tamam",
+ "ozet": "43 sn",
  "maddeler": [
   {
-   "seviye": "uyari",
-   "mesaj": "ses metinle %88 uyuşuyor"
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "okunmamış/yanlış okunmuş olabilir: “skutarion kışlası”"
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "metinde olmayan bir şey okunmuş olabilir: “işte ses kaydının yazıya dökülmüş hali”"
+   "seviye": "bilgi",
+   "mesaj": "metin-ses karşılaştırması atlandı: Gemini yanıt vermedi (gemini-3.7-flash: The read operation timed out)"
   }
  ],
  "sure": 43.4,
- "benzerlik": 0.885,
- "dokum": "İşte ses kaydının yazıya dökülmüş hali:\n\nÜsküdar’ın ilk adı Altın Şehir demekti. Adı Chrysopolis’ti. Milattan önce dört yüz onda Atinalılar burada gemilerden vergi aldı. Bugünkü adı Roma dönemindeki Scutariom kışlasından geliyor olabilir. Bir görüş de Farsça ulak sözcüğünü gösterir. Orhan Gazi döneminde İstanbul’dan çok önce Osmanlı oldu. Yirmi dokuz Mayıs bin dört yüz elli üçte İstanbul fethedildi. Üsküdar’a Türkler yerleşti. Ordular buradan Anadolu’ya geçerdi. Hacıların ilk durağı da burasıydı. Bin beş yüz kırk sekizde Mimar Sinan Mihrimah Sultan Camii’ni tamamladı. Kız Kulesi ise kıyının simgesi oldu. Şimdi şaşıracaksın. Üç yüz yirmi dörttte Konstantin rakibi Licinius’u Üsküdar’da yendi. Ardından Bizantion’u başkent yaptı. İstanbul’un başkent oluşu Üsküdar’daki zaferin ardından geldi.",
- "zaman": "2026-11-11T20:02:09Z"
+ "zaman": "2026-11-11T20:16:49Z"
 }
