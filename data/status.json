@@ -15,7 +15,7 @@
   "durum": "hata",
   "mesaj": "uskudar-in-tarihi-ve-adinin-hik-yesi: görseller elle yüklenecek: Pollinations hatası 402: {\"status\":402,\"success\":false,\"error\":{\"code\":\"FREE_LIMIT\",\"message\":\"Free limit reached: 1 image every 45 seconds per IP. Retry after 24s, or get unlimited images with a pollen key at https://enter.p, 1 görsel üretildi",
   "cikti": "projects/uskudar-in-tarihi-ve-adinin-hik-yesi",
-  "zaman": "2026-11-11T19:57:45Z"
+  "zaman": "2026-11-11T20:10:07Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -27,7 +27,7 @@
   "durum": "hata",
   "mesaj": "uskudar-in-tarihi-ve-adinin-hik-yesi: gorsel ✗",
   "cikti": "projects/uskudar-in-tarihi-ve-adinin-hik-yesi/kontrol",
-  "zaman": "2026-11-11T20:05:12Z"
+  "zaman": "2026-11-11T20:19:14Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
