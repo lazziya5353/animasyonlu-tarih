@@ -113,11 +113,11 @@
    "detay": "4575 giriş / 1625 çıkış token, 0 arama"
   },
   {
-   "zaman": "2026-11-11T18:26:45Z",
-   "ajan": "yonetici",
-   "servis": "claude",
-   "usd": 0.0342,
-   "detay": "4720 giriş / 1337 çıkış token, 0 arama"
+   "zaman": "2026-11-11T18:26:06Z",
+   "ajan": "ses",
+   "servis": "gemini-ses",
+   "usd": 0.0,
+   "detay": "Charon sesi (ücretsiz kota)"
   }
  ]
 }
