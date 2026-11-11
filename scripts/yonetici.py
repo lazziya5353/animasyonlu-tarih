@@ -23,7 +23,9 @@ def kaydet(mesaj):
     if subprocess.run(["git", "diff", "--cached", "--quiet"]).returncode:
         sh("git", "commit", "-m", mesaj)
         for _ in range(3):
-            if subprocess.run(["git", "pull", "--rebase", "-q"]).returncode == 0 and subprocess.run(["git", "push", "-q"]).returncode == 0: return
+            if subprocess.run(["git", "pull", "--rebase", "-q"]).returncode != 0:
+                subprocess.run(["git", "rebase", "--abort"]); subprocess.run(["git", "pull", "--no-rebase", "--no-edit", "-X", "ours", "-q"])
+            if subprocess.run(["git", "push", "-q"]).returncode == 0: return
             time.sleep(3)
 
 

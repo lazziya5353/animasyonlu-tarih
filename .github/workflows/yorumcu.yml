@@ -32,4 +32,4 @@ jobs:
         run: |
           git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
           git add data; git commit -m "Yorum ajanı: $MOD" || exit 0
-          git pull --rebase && git push
+          (git pull --rebase || (git rebase --abort; git pull --no-rebase --no-edit -X ours)) && git push

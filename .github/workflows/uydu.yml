@@ -19,4 +19,4 @@ jobs:
         run: |
           git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
           git add engine/map/uydu_*.jpg engine/map/gece_marmara.jpg engine/map/uydu.json; git commit -m "Uydu altlıkları (Sentinel-2 cloudless 2016, NASA Black Marble)" || exit 0
-          git pull --rebase && git push
+          (git pull --rebase || (git rebase --abort; git pull --no-rebase --no-edit -X ours)) && git push

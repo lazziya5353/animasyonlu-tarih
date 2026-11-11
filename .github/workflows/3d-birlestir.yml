@@ -34,4 +34,4 @@ jobs:
           gh release upload "$TAG" "projects/$SLUG/out/video.mp4" --clobber
           git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
           git add "projects/$SLUG/onizleme.jpg"; git commit -m "3D video: $SLUG" || exit 0
-          git pull --rebase && git push
+          (git pull --rebase || (git rebase --abort; git pull --no-rebase --no-edit -X ours)) && git push
