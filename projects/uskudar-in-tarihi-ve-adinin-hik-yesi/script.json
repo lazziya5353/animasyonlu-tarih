@@ -11,14 +11,14 @@
    "sub": "İLK ADI",
    "year": -410,
    "label": "ANTİK ÇAĞ",
-   "prompt": "Ancient Greek harbor town on the Asian shore of the Bosphorus at golden sunset, whitewashed stone houses on a hillside, wooden trading boats on shimmering water, cinematic illustration, no text, no letters, no watermark, no logo, no signature anywhere in the image",
+   "prompt": "Ancient Greek harbor town of the 5th century BC on the Asian shore of the Bosphorus at golden sunset, simple stone and mudbrick houses with flat terracotta roofs on a hillside, a few doric columns near the quay, wooden triremes and small trading boats on shimmering water, cinematic vertical composition, no text, no letters, no watermark, no logo, no signature, no modern buildings",
    "fx": [
     "gold",
     "fog"
    ],
    "effect": "",
    "type_text": "",
-   "prompt_tam": "Ancient Greek harbor town on the Asian shore of the Bosphorus at golden sunset, whitewashed stone houses on a hillside, wooden trading boats on shimmering water, cinematic illustration, no text, no letters, no watermark, no logo, no signature anywhere in the image, cinematic film still, photorealistic, vertical 9:16, no text, no watermark",
+   "prompt_tam": "Ancient Greek harbor town of the 5th century BC on the Asian shore of the Bosphorus at golden sunset, simple stone and mudbrick houses with flat terracotta roofs on a hillside, a few doric columns near the quay, wooden triremes and small trading boats on shimmering water, cinematic vertical composition, no text, no letters, no watermark, no logo, no signature, no modern buildings, cinematic film still, photorealistic, vertical 9:16, no text, no watermark",
    "image": "images/s01.jpg"
   },
   {

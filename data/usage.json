@@ -146,6 +146,13 @@
    "servis": "pollinations-gorsel",
    "usd": 0.0,
    "detay": "s01.jpg (ücretsiz)"
+  },
+  {
+   "zaman": "2026-11-11T19:55:03Z",
+   "ajan": "yonetici",
+   "servis": "claude",
+   "usd": 0.0356,
+   "detay": "6014 giriş / 1173 çıkış token, 0 arama"
   }
  ]
 }
