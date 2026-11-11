@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "otel-13-part-1: ses hazır",
-  "cikti": "projects/otel-13-part-1",
-  "zaman": "2026-11-11T12:38:47Z"
+  "mesaj": "uskudar-in-tarihi-ve-adinin-hik-yesi: görseller elle yüklenecek: Ücretsiz planda bu model kapalı (kota 0)",
+  "cikti": "projects/uskudar-in-tarihi-ve-adinin-hik-yesi",
+  "zaman": "2026-11-11T18:29:45Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -27,7 +27,7 @@
   "durum": "hata",
   "mesaj": "uskudar-in-tarihi-ve-adinin-hik-yesi: gorsel ✗",
   "cikti": "projects/uskudar-in-tarihi-ve-adinin-hik-yesi/kontrol",
-  "zaman": "2026-11-11T16:19:38Z"
+  "zaman": "2026-11-11T18:29:45Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
