@@ -1,12 +1,24 @@
 {
  "asama": "gorsel",
  "durum": "hata",
- "ozet": "Kontrol tamamlanamadı",
+ "ozet": "0/10 görsel",
  "maddeler": [
   {
    "seviye": "hata",
-   "mesaj": "kontrolcü çalışırken hata: No module named 'PIL'"
+   "mesaj": "eksik görsel: sahne 1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
   }
  ],
- "zaman": "2026-11-11T16:19:38Z"
+ "eksik": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "zaman": "2026-11-11T18:28:44Z"
 }
