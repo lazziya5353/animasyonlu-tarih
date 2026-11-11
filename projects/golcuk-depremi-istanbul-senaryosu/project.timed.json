@@ -1,0 +1,679 @@
+{
+ "title": "Gölcük depremi İstanbul'da olsaydı?",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "YA İSTANBUL'DA OLSAYDI?",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": 0.0,
+   "end": 7.6899999999999995,
+   "lines": [
+    "17 Ağustos 1999, saat 03.02.",
+    "Gölcük'te yer 45 saniye sallandı."
+   ],
+   "big": "03.02",
+   "sub": "17 AĞUSTOS 1999",
+   "year": 1999,
+   "label": "",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "stamp",
+   "etiket": "TEMSİLİ",
+   "timeline": false
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": 7.6899999999999995,
+   "end": 12.31,
+   "lines": [
+    "7,4 büyüklüğündeki sarsıntı",
+    "16 milyon kişiyi etkiledi."
+   ],
+   "big": "",
+   "sub": "",
+   "year": 1999,
+   "label": "",
+   "fx": [],
+   "kb": [
+    1,
+    1,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "halka",
+    "merkez": [
+     29.864,
+     40.748
+    ],
+    "buyukluk": "7,4",
+    "sehirler": {
+     "İstanbul": [
+      28.98,
+      41.01,
+      "l"
+     ],
+     "Kocaeli": [
+      29.92,
+      40.77,
+      "u"
+     ],
+     "Sakarya": [
+      30.4,
+      40.78,
+      "r"
+     ],
+     "Yalova": [
+      29.27,
+      40.65,
+      "l"
+     ],
+     "Bursa": [
+      29.06,
+      40.18
+     ],
+     "Düzce": [
+      31.16,
+      40.84,
+      "u"
+     ],
+     "Eskişehir": [
+      30.52,
+      39.78
+     ],
+     "Zonguldak": [
+      31.79,
+      41.45
+     ]
+    },
+    "ust": "GÖLCÜK · 1999",
+    "alt": "45 SANİYE",
+    "sayac": [
+     16,
+     "MİLYON KİŞİ ETKİLENDİ"
+    ],
+    "cam": [
+     [
+      30.1,
+      40.95,
+      5.0
+     ],
+     [
+      30.0,
+      40.85,
+      4.6
+     ]
+    ]
+   },
+   "timeline": false
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": 12.31,
+   "end": 17.07,
+   "lines": [
+    "Resmî rakamlara göre",
+    "17 bin 480 kişi hayatını kaybetti."
+   ],
+   "big": "17.480",
+   "sub": "HAYATINI KAYBETTİ",
+   "year": 1999,
+   "label": "",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.5,
+    1.6,
+    0.5,
+    0.3,
+    0.55,
+    0.28
+   ],
+   "etiket": "TEMSİLİ",
+   "timeline": false
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": 17.07,
+   "end": 22.110000000000003,
+   "lines": [
+    "Fay o gece Marmara'nın doğusunda kırıldı.",
+    "İstanbul'un önündeki parça ise hâlâ kırılmadı."
+   ],
+   "big": "",
+   "sub": "",
+   "year": 1999,
+   "label": "",
+   "fx": [],
+   "kb": [
+    1,
+    1,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "fay",
+    "ust": "KUZEY ANADOLU FAYI",
+    "alt": "ŞEMATİK ÇİZİM",
+    "kirik": [
+     [
+      29.2,
+      40.73
+     ],
+     [
+      29.5,
+      40.72
+     ],
+     [
+      29.8,
+      40.71
+     ],
+     [
+      30.1,
+      40.72
+     ],
+     [
+      30.4,
+      40.72
+     ],
+     [
+      30.7,
+      40.73
+     ],
+     [
+      31.0,
+      40.76
+     ]
+    ],
+    "kirik_yazi": "1999'DA KIRILDI",
+    "kirilmamis": [
+     [
+      29.2,
+      40.76
+     ],
+     [
+      29.0,
+      40.83
+     ],
+     [
+      28.7,
+      40.86
+     ],
+     [
+      28.4,
+      40.87
+     ],
+     [
+      28.0,
+      40.83
+     ],
+     [
+      27.6,
+      40.8
+     ],
+     [
+      27.3,
+      40.73
+     ]
+    ],
+    "kirilmamis_yazi": "HÂLÂ KIRILMADI",
+    "sehirler": {
+     "İstanbul": [
+      28.98,
+      41.03
+     ]
+    }
+   },
+   "timeline": false
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": 22.110000000000003,
+   "end": 26.290000000000003,
+   "lines": [
+    "Peki benzer bir deprem",
+    "İstanbul'un dibinde olsaydı?"
+   ],
+   "big": "İSTANBUL",
+   "sub": "YA BURADA OLSAYDI?",
+   "year": 2019,
+   "label": "",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "glow",
+   "timeline": false,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": 26.290000000000003,
+   "end": 35.03,
+   "lines": [
+    "İBB ve Kandilli'nin 7,5'lik gece senaryosuna göre",
+    "yaklaşık 14 bin can kaybı,",
+    "48 bin ağır hasarlı bina bekleniyor."
+   ],
+   "big": "≈14 BİN",
+   "sub": "TAHMİNİ CAN KAYBI",
+   "year": 2019,
+   "label": "",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "etiket": "TEMSİLİ",
+   "kaynak": "Kaynak: İBB & Kandilli, 2019 olası deprem kayıp tahmini · tahmindir",
+   "timeline": false
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": 35.03,
+   "end": 39.15,
+   "lines": [
+    "Ama risk her yerde aynı değil.",
+    "En ağır tablo Marmara kıyısında."
+   ],
+   "big": "",
+   "sub": "",
+   "year": 2019,
+   "label": "",
+   "fx": [],
+   "kb": [
+    1,
+    1,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "ilce_harita",
+    "oran": {
+     "Adalar": 47.708,
+     "Şile": 4.487,
+     "Silivri": 18.607,
+     "Büyükçekmece": 27.745,
+     "Çatalca": 7.401,
+     "Tuzla": 25.153,
+     "Pendik": 13.478,
+     "Sultanbeyli": 13.878,
+     "Kartal": 13.597,
+     "Sancaktepe": 10.032,
+     "Çekmeköy": 5.422,
+     "Maltepe": 15.013,
+     "Kadıköy": 12.451,
+     "Ataşehir": 12.145,
+     "Üsküdar": 9.537,
+     "Ümraniye": 8.107,
+     "Beykoz": 6.469,
+     "Beyoğlu": 16.034,
+     "Beşiktaş": 8.131,
+     "Kağıthane": 7.202,
+     "Sarıyer": 5.983,
+     "Şişli": 6.201,
+     "Arnavutköy": 6.224,
+     "Avcılar": 26.302,
+     "Bahçelievler": 34.173,
+     "Bakırköy": 45.874,
+     "Bayrampaşa": 27.945,
+     "Bağcılar": 25.029,
+     "Başakşehir": 14.218,
+     "Beylikdüzü": 33.522,
+     "Esenler": 20.891,
+     "Esenyurt": 26.475,
+     "Eyüpsultan": 14.361,
+     "Fatih": 35.647,
+     "Gaziosmanpaşa": 9.589,
+     "Güngören": 30.786,
+     "Sultangazi": 6.216,
+     "Zeytinburnu": 33.338,
+     "Küçükçekmece": 31.976
+    },
+    "ust": "İSTANBUL · 7,5 SENARYOSU",
+    "alt": "ORTA VE ÜSTÜ HASAR GÖRECEK BİNA ORANI"
+   },
+   "kaynak": "Kaynak: İBB & Kandilli, 2019 olası deprem kayıp tahmini · tahmindir",
+   "timeline": false
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": 39.15,
+   "end": 47.99,
+   "lines": [
+    "Eski binalar ve yumuşak zemin hasarı katlıyor.",
+    "Kuzeydeki sağlam zemin daha şanslı.",
+    "Yine de riskli ilçede oturmak,",
+    "senin binan çürük demek değil."
+   ],
+   "big": "",
+   "sub": "",
+   "year": 2019,
+   "label": "",
+   "fx": [],
+   "kb": [
+    1,
+    1,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "ilce_tablo",
+    "oran": {
+     "Adalar": 47.708,
+     "Şile": 4.487,
+     "Silivri": 18.607,
+     "Büyükçekmece": 27.745,
+     "Çatalca": 7.401,
+     "Tuzla": 25.153,
+     "Pendik": 13.478,
+     "Sultanbeyli": 13.878,
+     "Kartal": 13.597,
+     "Sancaktepe": 10.032,
+     "Çekmeköy": 5.422,
+     "Maltepe": 15.013,
+     "Kadıköy": 12.451,
+     "Ataşehir": 12.145,
+     "Üsküdar": 9.537,
+     "Ümraniye": 8.107,
+     "Beykoz": 6.469,
+     "Beyoğlu": 16.034,
+     "Beşiktaş": 8.131,
+     "Kağıthane": 7.202,
+     "Sarıyer": 5.983,
+     "Şişli": 6.201,
+     "Arnavutköy": 6.224,
+     "Avcılar": 26.302,
+     "Bahçelievler": 34.173,
+     "Bakırköy": 45.874,
+     "Bayrampaşa": 27.945,
+     "Bağcılar": 25.029,
+     "Başakşehir": 14.218,
+     "Beylikdüzü": 33.522,
+     "Esenler": 20.891,
+     "Esenyurt": 26.475,
+     "Eyüpsultan": 14.361,
+     "Fatih": 35.647,
+     "Gaziosmanpaşa": 9.589,
+     "Güngören": 30.786,
+     "Sultangazi": 6.216,
+     "Zeytinburnu": 33.338,
+     "Küçükçekmece": 31.976
+    },
+    "n": 5,
+    "not": "Binaların orta ve üstü hasar görme oranı · İBB & Kandilli, 2019"
+   },
+   "timeline": false
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": 47.99,
+   "end": 52.730000000000004,
+   "lines": [
+    "İstanbul'daki binaların yaklaşık üçte ikisi",
+    "2000'den önce yapıldı."
+   ],
+   "big": "%69",
+   "sub": "2000 ÖNCESİ YAPILMIŞ BİNA",
+   "year": 2019,
+   "label": "",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "etiket": "TEMSİLİ",
+   "kaynak": "Kaynak: İBB açık veri, bina envanteri (2017)",
+   "timeline": false
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": 52.730000000000004,
+   "end": 57.95,
+   "lines": [
+    "Binanı inceletmek, deprem çantası hazırlamak,",
+    "toplanma alanını bilmek hayat kurtarır."
+   ],
+   "big": "HAZIRLIK",
+   "sub": "BİNA · ÇANTA · TOPLANMA ALANI",
+   "year": 2019,
+   "label": "",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "timeline": false
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": 57.95,
+   "end": 63.43175,
+   "lines": [
+    "Depremi durduramayız.",
+    "Ama binaları güçlendirebiliriz."
+   ],
+   "big": "",
+   "sub": "",
+   "year": 2019,
+   "label": "",
+   "fx": [
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "timeline": false
+  }
+ ],
+ "eras": [],
+ "outro_plan": {
+  "title": "17.08.1999",
+  "line": "Unutmadık. Hazırlıklı olalım."
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 5,
+   "value": 48,
+   "unit": "BİN BİNA",
+   "small": "AĞIR VE ÇOK AĞIR HASAR (TAHMİN)"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "cards": [
+  {
+   "start": 27.490000000000002,
+   "end": 34.730000000000004,
+   "value": 48,
+   "unit": "BİN BİNA",
+   "small": "AĞIR VE ÇOK AĞIR HASAR (TAHMİN)"
+  }
+ ],
+ "outro": {
+  "start": 57.95,
+  "title": "17.08.1999",
+  "line": "Unutmadık. Hazırlıklı olalım.",
+  "line_at": 60.031749999999995
+ },
+ "duration": 63.93,
+ "jumps": [],
+ "captions": [
+  {
+   "start": 0.0,
+   "end": 5.09,
+   "text": "17 Ağustos 1999, saat 03.02."
+  },
+  {
+   "start": 5.12,
+   "end": 7.76,
+   "text": "Gölcük'te yer 45 saniye sallandı."
+  },
+  {
+   "start": 7.84,
+   "end": 9.93,
+   "text": "7,4 büyüklüğündeki sarsıntı"
+  },
+  {
+   "start": 9.96,
+   "end": 11.84,
+   "text": "16 milyon kişiyi etkiledi."
+  },
+  {
+   "start": 12.46,
+   "end": 13.51,
+   "text": "Resmî rakamlara göre"
+  },
+  {
+   "start": 13.54,
+   "end": 16.44,
+   "text": "17 bin 480 kişi hayatını kaybetti."
+  },
+  {
+   "start": 17.22,
+   "end": 19.44,
+   "text": "Fay o gece Marmara'nın doğusunda kırıldı."
+  },
+  {
+   "start": 19.84,
+   "end": 22.23,
+   "text": "İstanbul'un önündeki parça ise hâlâ kırılmadı."
+  },
+  {
+   "start": 22.26,
+   "end": 24.36,
+   "text": "Peki benzer bir deprem"
+  },
+  {
+   "start": 24.64,
+   "end": 26.1,
+   "text": "İstanbul'un dibinde olsaydı?"
+  },
+  {
+   "start": 26.44,
+   "end": 29.88,
+   "text": "İBB ve Kandilli'nin 7,5'lik gece senaryosuna göre"
+  },
+  {
+   "start": 30.22,
+   "end": 31.96,
+   "text": "yaklaşık 14 bin can kaybı,"
+  },
+  {
+   "start": 32.28,
+   "end": 34.44,
+   "text": "48 bin ağır hasarlı bina bekleniyor."
+  },
+  {
+   "start": 35.18,
+   "end": 36.9,
+   "text": "Ama risk her yerde aynı değil."
+  },
+  {
+   "start": 37.32,
+   "end": 38.94,
+   "text": "En ağır tablo Marmara kıyısında."
+  },
+  {
+   "start": 39.3,
+   "end": 41.7,
+   "text": "Eski binalar ve yumuşak zemin hasarı katlıyor."
+  },
+  {
+   "start": 42.54,
+   "end": 44.46,
+   "text": "Kuzeydeki sağlam zemin daha şanslı."
+  },
+  {
+   "start": 44.98,
+   "end": 46.5,
+   "text": "Yine de riskli ilçede oturmak,"
+  },
+  {
+   "start": 46.84,
+   "end": 48.11,
+   "text": "senin binan çürük demek değil."
+  },
+  {
+   "start": 48.14,
+   "end": 50.9,
+   "text": "İstanbul'daki binaların yaklaşık üçte ikisi"
+  },
+  {
+   "start": 51.16,
+   "end": 52.24,
+   "text": "2000'den önce yapıldı."
+  },
+  {
+   "start": 52.88,
+   "end": 55.48,
+   "text": "Binanı inceletmek, deprem çantası hazırlamak,"
+  },
+  {
+   "start": 55.74,
+   "end": 57.62,
+   "text": "toplanma alanını bilmek hayat kurtarır."
+  },
+  {
+   "start": 58.1,
+   "end": 59.3,
+   "text": "Depremi durduramayız."
+  },
+  {
+   "start": 59.62,
+   "end": 61.12,
+   "text": "Ama binaları güçlendirebiliriz."
+  }
+ ]
+}

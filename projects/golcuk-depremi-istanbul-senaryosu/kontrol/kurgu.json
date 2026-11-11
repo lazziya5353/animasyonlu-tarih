@@ -1,0 +1,29 @@
+{
+ "asama": "kurgu",
+ "durum": "hata",
+ "ozet": "64 sn, -14 LUFS, senkron 25/25",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “İSTANBUL”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “Unutmadık. Hazırlıklı olalım.”"
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Üstteki '14 BİN' metninin solunda bozuk/tanımlanamayan bir karakter/kutu ikonu ([]) yer alıyor ve yazı taşması/bozulması oluşturuyor.",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Harita altındaki renk skalası/lejant yazıları (@animasyon.tarih ile çakışarak) ve en alttaki kaynak metni aşırı küçük ve güçlükle okunuyor.",
+   "sahne": 7
+  }
+ ],
+ "sure": 63.9,
+ "lufs": -14.0,
+ "senkron": "25/25",
+ "zaman": "2026-11-11T11:16:08Z"
+}

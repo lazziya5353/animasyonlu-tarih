@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "galatasaray-1905-2026 videosu hazır",
-  "cikti": "release:video-galatasaray-1905-2026",
-  "zaman": "2026-11-11T09:04:07Z"
+  "mesaj": "golcuk-depremi-istanbul-senaryosu videosu hazır",
+  "cikti": "release:video-golcuk-depremi-istanbul-senaryosu",
+  "zaman": "2026-11-11T11:16:14Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "golcuk-depremi-istanbul-senaryosu: gorsel !",
+  "durum": "hata",
+  "mesaj": "golcuk-depremi-istanbul-senaryosu: kurgu ✗",
   "cikti": "projects/golcuk-depremi-istanbul-senaryosu/kontrol",
-  "zaman": "2026-11-11T11:07:15Z"
+  "zaman": "2026-11-11T11:16:08Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
