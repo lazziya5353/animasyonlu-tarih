@@ -172,7 +172,11 @@ def asr_kelimeler(wav, ipucu=""):
         return None
     import os
     m = WhisperModel(os.environ.get("WHISPER_MODEL", "small"), device="cpu", compute_type="int8")
-    segs, _ = m.transcribe(wav, language="tr", word_timestamps=True, beam_size=5, initial_prompt=ipucu[:600] or None)
+    # sesi ffmpeg ile kendimiz çözüp diziyi veriyoruz (faster-whisper'ın PyAV ile dosya açması bazı sürümlerde hata veriyor)
+    import numpy as np
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", wav, "-ac", "1", "-ar", "16000", "-f", "s16le", "-"], capture_output=True).stdout
+    audio = np.frombuffer(raw, np.int16).astype(np.float32) / 32768.0
+    segs, _ = m.transcribe(audio, language="tr", word_timestamps=True, beam_size=5, initial_prompt=ipucu[:600] or None)
     return [(w.word, w.start, w.end) for s in segs for w in (s.words or [])]
 
 
