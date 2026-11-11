@@ -23,7 +23,9 @@
   },
   {
    "lines": [
-    "Adı Chrysopolis'ti. M.Ö. 410'da Atinalılar burada gemilerden vergi aldı."
+    "Adı Chrysopolis'ti.",
+    "M.Ö.",
+    "410'da Atinalılar burada gemilerden vergi aldı."
    ],
    "big": "M.Ö. 410",
    "sub": "CHRYSOPOLİS",
@@ -78,7 +80,8 @@
   },
   {
    "lines": [
-    "29 Mayıs 1453'te İstanbul fethedildi. Üsküdar'a Türkler yerleşti."
+    "29 Mayıs 1453'te İstanbul fethedildi.",
+    "Üsküdar'a Türkler yerleşti."
    ],
    "big": "1453",
    "sub": "İSTANBUL'UN FETHİ",
@@ -96,7 +99,8 @@
   },
   {
    "lines": [
-    "Ordular buradan Anadolu'ya geçerdi. Hacıların ilk durağı da burasıydı."
+    "Ordular buradan Anadolu'ya geçerdi.",
+    "Hacıların ilk durağı da burasıydı."
    ],
    "big": "HAC YOLU",
    "sub": "ANADOLU'NUN KAPISI",
@@ -150,7 +154,8 @@
   },
   {
    "lines": [
-    "Şimdi şaşıracaksın. 324'te Konstantin, rakibi Licinius'u Üsküdar'da yendi."
+    "Şimdi şaşıracaksın.",
+    "324'te Konstantin, rakibi Licinius'u Üsküdar'da yendi."
    ],
    "big": "324",
    "sub": "BÜYÜK SAVAŞ",
@@ -168,7 +173,8 @@
   },
   {
    "lines": [
-    "Ardından Byzantion'u başkent yaptı. İstanbul'un başkent oluşu, Üsküdar'daki zaferin ardından geldi."
+    "Ardından Byzantion'u başkent yaptı.",
+    "İstanbul'un başkent oluşu, Üsküdar'daki zaferin ardından geldi."
    ],
    "big": "BAŞKENT",
    "sub": "KONSTANTİNOPOLİS",
@@ -262,6 +268,6 @@
  "konu": "Üsküdar'ın tarihi ve adının hikâyesi",
  "tarih": "",
  "slug": "uskudar-in-tarihi-ve-adinin-hik-yesi",
- "durum": "onay-bekliyor",
- "seslendirme_metni": "Üsküdar'ın ilk adı, 'Altın Şehir' demekti.\nAdı Chrysopolis'ti. M.Ö. 410'da Atinalılar burada gemilerden vergi aldı.\nBugünkü ad, Roma dönemindeki Skutarion Kışlası'ndan geliyor olabilir.\nBir görüş de Farsça 'ulak' sözcüğünü gösterir.\nOrhan Gazi döneminde, İstanbul'dan çok önce Osmanlı oldu.\n29 Mayıs 1453'te İstanbul fethedildi. Üsküdar'a Türkler yerleşti.\nOrdular buradan Anadolu'ya geçerdi. Hacıların ilk durağı da burasıydı.\n1548'de Mimar Sinan, Mihrimah Sultan Camii'ni tamamladı.\nKız Kulesi ise kıyının simgesi oldu.\nŞimdi şaşıracaksın. 324'te Konstantin, rakibi Licinius'u Üsküdar'da yendi.\nArdından Byzantion'u başkent yaptı. İstanbul'un başkent oluşu, Üsküdar'daki zaferin ardından geldi."
+ "durum": "onaylandi",
+ "seslendirme_metni": "Üsküdar'ın ilk adı, 'Altın Şehir' demekti.\nAdı Chrysopolis'ti.\nM.Ö.\n410'da Atinalılar burada gemilerden vergi aldı.\nBugünkü ad, Roma dönemindeki Skutarion Kışlası'ndan geliyor olabilir.\nBir görüş de Farsça 'ulak' sözcüğünü gösterir.\nOrhan Gazi döneminde, İstanbul'dan çok önce Osmanlı oldu.\n29 Mayıs 1453'te İstanbul fethedildi.\nÜsküdar'a Türkler yerleşti.\nOrdular buradan Anadolu'ya geçerdi.\nHacıların ilk durağı da burasıydı.\n1548'de Mimar Sinan, Mihrimah Sultan Camii'ni tamamladı.\nKız Kulesi ise kıyının simgesi oldu.\nŞimdi şaşıracaksın.\n324'te Konstantin, rakibi Licinius'u Üsküdar'da yendi.\nArdından Byzantion'u başkent yaptı.\nİstanbul'un başkent oluşu, Üsküdar'daki zaferin ardından geldi."
 }

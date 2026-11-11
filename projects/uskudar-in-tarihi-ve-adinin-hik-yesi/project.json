@@ -34,7 +34,9 @@
    "start": null,
    "end": null,
    "lines": [
-    "Adı Chrysopolis'ti. M.Ö. 410'da Atinalılar burada gemilerden vergi aldı."
+    "Adı Chrysopolis'ti.",
+    "M.Ö.",
+    "410'da Atinalılar burada gemilerden vergi aldı."
    ],
    "big": "M.Ö. 410",
    "sub": "CHRYSOPOLİS",
@@ -107,7 +109,8 @@
    "start": null,
    "end": null,
    "lines": [
-    "29 Mayıs 1453'te İstanbul fethedildi. Üsküdar'a Türkler yerleşti."
+    "29 Mayıs 1453'te İstanbul fethedildi.",
+    "Üsküdar'a Türkler yerleşti."
    ],
    "big": "1453",
    "sub": "İSTANBUL'UN FETHİ",
@@ -132,7 +135,8 @@
    "start": null,
    "end": null,
    "lines": [
-    "Ordular buradan Anadolu'ya geçerdi. Hacıların ilk durağı da burasıydı."
+    "Ordular buradan Anadolu'ya geçerdi.",
+    "Hacıların ilk durağı da burasıydı."
    ],
    "big": "HAC YOLU",
    "sub": "ANADOLU'NUN KAPISI",
@@ -204,7 +208,8 @@
    "start": null,
    "end": null,
    "lines": [
-    "Şimdi şaşıracaksın. 324'te Konstantin, rakibi Licinius'u Üsküdar'da yendi."
+    "Şimdi şaşıracaksın.",
+    "324'te Konstantin, rakibi Licinius'u Üsküdar'da yendi."
    ],
    "big": "324",
    "sub": "BÜYÜK SAVAŞ",
@@ -228,7 +233,8 @@
    "start": null,
    "end": null,
    "lines": [
-    "Ardından Byzantion'u başkent yaptı. İstanbul'un başkent oluşu, Üsküdar'daki zaferin ardından geldi."
+    "Ardından Byzantion'u başkent yaptı.",
+    "İstanbul'un başkent oluşu, Üsküdar'daki zaferin ardından geldi."
    ],
    "big": "BAŞKENT",
    "sub": "KONSTANTİNOPOLİS",

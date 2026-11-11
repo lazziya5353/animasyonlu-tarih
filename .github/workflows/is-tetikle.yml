@@ -17,6 +17,7 @@ jobs:
           echo "$SLUG" | grep -Eq '^[a-z0-9-]{1,60}$' || (echo 'Geçersiz proje adı'; exit 1)
           IS=$(python3 -c "import json;print(json.load(open('jobs/render.json')).get('is','video'))")
           if [ "$IS" = "ses" ]; then gh workflow run generate-assets.yml -f slug="$SLUG" -f ses=1
+          elif [ "$IS" = "gorsel" ]; then gh workflow run generate-assets.yml -f slug="$SLUG"
           elif [ "$IS" = "yonetici" ]; then gh workflow run yonetici.yml -f mesaj="$(python3 -c "import json;print(json.load(open('jobs/render.json'))['mesaj'])")" -f slug=""
           else gh workflow run render.yml -f slug="$SLUG"; fi
           echo "Başlatıldı: $IS · $SLUG"
