@@ -11,6 +11,7 @@ concurrency: { group: repo-yazma, cancel-in-progress: false }
 jobs:
   uret:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     env:
       PYTHONUNBUFFERED: "1"
       GH_TOKEN: ${{ github.token }}   # canlı olaylar için (Kurgu Stüdyosu)
@@ -22,7 +23,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q numpy soundfile pillow
+      - name: ffmpeg kur
+        timeout-minutes: 10
+        run: bash scripts/ffmpeg_kur.sh
+      - timeout-minutes: 10
+        run: pip install -q numpy soundfile pillow
       - name: Üret
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}

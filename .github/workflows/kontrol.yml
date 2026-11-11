@@ -27,7 +27,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q -r requirements.txt
+      - name: ffmpeg kur
+        timeout-minutes: 10
+        run: bash scripts/ffmpeg_kur.sh
+      - timeout-minutes: 10
+        run: pip install -q -r requirements.txt
       - name: Videoyu indir (kurgu kontrolü için)
         if: inputs.asama == 'kurgu' || inputs.asama == 'hepsi'
         env: { GH_TOKEN: "${{ github.token }}" }
