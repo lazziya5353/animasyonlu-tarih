@@ -41,8 +41,8 @@ def image(prompt, out):
         log_usage("gorsel", "gemini-gorsel", IMG_USD, os.path.basename(out)); return True
     return False
 
-def voice(text, out):
-    style = os.environ.get("GEMINI_SES_STIL") or "Derin sesli bir erkek belgesel anlatıcısı gibi sakin ve vakur ama akıcı, normal konuşma hızında oku. Cümle aralarında çok kısa duraksa, uzun sessizlik bırakma. Metin 60 saniyelik bir video için:\n"
+def voice(text, out, stil=None):
+    style = stil or os.environ.get("GEMINI_SES_STIL") or "Derin sesli bir erkek belgesel anlatıcısı gibi sakin ve vakur ama akıcı, normal konuşma hızında oku. Cümle aralarında çok kısa duraksa, uzun sessizlik bırakma. Metin 60 saniyelik bir video için:\n"
     r = call(TTS_MODEL, {"contents": [{"parts": [{"text": style + text}]}],
                          "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": VOICE}}}}})
     for d in inline_parts(r):
@@ -70,7 +70,7 @@ def main():
         if not os.path.exists(os.path.join(d, "ses.wav")) or a.ses:
             try:
                 olay("ses", "ses", f"Seslendirme başladı: {len(sc['seslendirme_metni'])} karakter, erkek anlatıcı")
-                print("ses", voice(sc["seslendirme_metni"], os.path.join(d, "ses.wav"))); notes.append("ses hazır")
+                print("ses", voice(sc["seslendirme_metni"], os.path.join(d, "ses.wav"), sc.get("ses_stil"))); notes.append("ses hazır")
                 sure = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", os.path.join(d, "ses.wav")], capture_output=True, text=True).stdout or 0)
                 olay("ses", "ses", f"Ses hazır: {sure:.0f} sn, duraklamalar kısaltıldı", t0=0, t1=sure)
             except GeminiError as e: print("SES HATASI:", e); notes.append(f"ses üretilemedi ({e})")

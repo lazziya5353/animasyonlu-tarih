@@ -1,0 +1,49 @@
+{
+ "baslik": "13. Kat (Part 1)",
+ "konu": "Kurallı korku hikâyesi — 3D animasyon, 20 sn deneme",
+ "tarih": "2026-11-11",
+ "slug": "otel-13-part-1",
+ "durum": "onay-bekliyor",
+ "tur": "3d",
+ "sahne": "otel13",
+ "seri": "PART 1/2",
+ "sahneler": [
+  {
+   "lines": [
+    "Otelin kurallarında tek bir şey yazıyordu.",
+    "Saat üçte telefon çalarsa, kaç kişi olduğunu söyleme."
+   ],
+   "sahne": "koridor"
+  },
+  {
+   "lines": [
+    "Saat tam üçte telefon çaldı."
+   ],
+   "sahne": "oda"
+  },
+  {
+   "lines": [
+    "Odada yalnızdım… ama banyodan su sesi geliyordu."
+   ],
+   "sahne": "banyo"
+  },
+  {
+   "lines": [
+    "Sonra asansör kendiliğinden açıldı. On üçüncü kat."
+   ],
+   "sahne": "asansor"
+  }
+ ],
+ "seslendirme_metni": "Otelin kurallarında tek bir şey yazıyordu.\nSaat üçte telefon çalarsa, kaç kişi olduğunu söyleme.\nSaat tam üçte telefon çaldı.\nOdada yalnızdım… ama banyodan su sesi geliyordu.\nSonra asansör kendiliğinden açıldı. On üçüncü kat.",
+ "aciklama": "Otelin tek bir kuralı vardı… Sen olsan ne yapardın? 1 mi 2 mi? Yorumlara yaz, Part 2 çoğunluğa göre gelecek 👇",
+ "hashtagler": [
+  "#korkuhikayesi",
+  "#kurallar",
+  "#gerilim",
+  "#3danimasyon",
+  "#part1",
+  "#reels",
+  "#keşfet"
+ ],
+ "ses_stil": "Gerilim dolu bir korku hikâyesi anlatan genç bir erkek gibi, birinci ağızdan, alçak ve gergin bir sesle, yer yer fısıldar gibi oku. Acele etme ama uzun sessizlik de bırakma. Metin:\n"
+}
