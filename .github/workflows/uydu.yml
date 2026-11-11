@@ -1,0 +1,22 @@
+name: "Araç · Uydu altlığı indir"
+on:
+  workflow_dispatch:
+  push:
+    paths: ["jobs/uydu.json"]
+permissions:
+  contents: write
+jobs:
+  indir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q pillow
+      - run: python scripts/dev/uydu_altlik.py
+      - name: Kaydet
+        run: |
+          git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
+          git add engine/map/uydu_*.jpg engine/map/gece_marmara.jpg engine/map/uydu.json; git commit -m "Uydu altlıkları (Sentinel-2 cloudless 2016, NASA Black Marble)" || exit 0
+          git pull --rebase && git push
