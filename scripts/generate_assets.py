@@ -152,6 +152,7 @@ def main():
         if made: notes.append(f"{made} görsel üretildi")
     bad = any(("üretilemedi" in x or "elle yüklenecek" in x) for x in notes)
     set_status("gorsel", "hata" if bad else "tamam", f"{a.slug}: " + ", ".join(notes or ["yapılacak bir şey yok"]), f"projects/{a.slug}")
+    if bad: sys.exit(1)   # iş kırmızı görünsün; sonraki adım (video) eksik görselle başlamasın
 
 if __name__ == "__main__":
     main()

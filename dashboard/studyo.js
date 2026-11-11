@@ -109,7 +109,8 @@ function sahneSec(i) {
   $("#st").textContent = `Sahne ${i + 1} / ${T.sc.length}${s.year ? " · " + s.year : ""}`;
   const im = $(`#pool [data-i="${i + 1}"]`)?.style.backgroundImage; if (im && !P.video) $("#still").src = im.slice(5, -2);
   const md = Object.entries(P.kontrol || {}).flatMap(([as, r]) => (r?.maddeler || []).filter((m) => m.sahne === i + 1 && m.seviye !== "bilgi").map((m) => ({ ...m, as })));
-  $("#ikon").innerHTML = md.length ? md.map((m) => `<div class="${m.seviye}">• ${esc(m.mesaj)}</div>`).join("") : `<div class="yok">Sorun yok ✓</div>`;
+  $("#ikon").innerHTML = md.length ? md.map((m) => `<div class="${m.seviye}">• ${esc(m.mesaj)} <button class="duzelt" data-d='${esc(JSON.stringify([{ asama: m.as, sahne: m.sahne, mesaj: m.mesaj }]))}'>🔧 Düzelt</button></div>`).join("") : `<div class="yok">Sorun yok ✓</div>`;
+  $("#ikon").querySelectorAll("[data-d]").forEach((b) => (b.onclick = () => duzelt(b, JSON.parse(b.dataset.d))));
 }
 let oynuyor = false, sesEl = null;
 function zaman() { return P.video ? $("#v").currentTime : sesEl ? sesEl.currentTime + T.off : 0; }
@@ -156,7 +157,7 @@ function asamaOlay(o) {
   const set = (k, d, ek = {}) => { AS[k] = { ...AS[k], durum: d, ...ek }; };
   if (o.tur === "asama" && AS[o.asama]) set(o.asama, o.durum || "calisiyor", { adim: o.adim ?? AS[o.asama].adim, toplam: o.toplam ?? AS[o.asama].toplam, mesaj: o.mesaj, sahne: o.sahne });
   else if (o.tur === "gorsel" && o.ajan === "gorsel") set("gorsel", o.adim >= o.toplam ? "bitti" : "calisiyor", { adim: o.adim, toplam: o.toplam, mesaj: o.mesaj });
-  else if (o.ajan === "ses" && o.tur === "ses") set("ses", /hazır/.test(o.mesaj) ? "bitti" : "calisiyor", { mesaj: o.mesaj });
+  else if (o.ajan === "ses" && o.tur === "ses" && /^(Seslendirme başladı|Ses hazır)/.test(o.mesaj)) set("ses", /hazır/.test(o.mesaj) ? "bitti" : "calisiyor", { mesaj: o.mesaj });
   else if (o.ajan === "kurgucu" || o.ajan === "efekt") set("kurgu", o.yuzde === 100 ? "bitti" : "calisiyor", { yuzde: o.yuzde ?? AS.kurgu.yuzde ?? 0, mesaj: o.yuzde != null ? `Kareler işleniyor %${o.yuzde}` : o.mesaj });
   else if (o.ajan === "kontrol" && o.tur === "bilgi" && ["kurgu", "hepsi"].includes(o.asama)) set("kontrol", "bitti", { mesaj: o.mesaj });
   if (o.tur === "asama" || o.ajan === "gorsel" || o.ajan === "kurgucu") sonAsamaZ = Math.max(sonAsamaZ, o.z || 0);
@@ -177,16 +178,27 @@ function asamaCiz() {
   const sira = ADIMLAR.find(([k]) => AS[k].durum !== "bitti" && (!cal || k !== cal[0]));
   let simdi, bar = 0;
   if (cal && !eski) { simdi = `Şu an: ${AS[cal[0]].mesaj || cal[1] + " yapılıyor"}`; bar = yuzde(AS[cal[0]]); }
-  else if (cal) simdi = `⚠ ${cal[1]} yarıda kalmış görünüyor (20 dk'dır ses yok)`;
   else if (hata) simdi = `✕ ${AS[hata[0]].mesaj || hata[1] + " hata verdi"}`;
+  else if (cal) simdi = `⚠ ${cal[1]} yarıda kalmış görünüyor (20 dk'dır haber yok)`;
   else if (!sira) { simdi = "Her şey hazır ✓"; bar = 100; }
   else simdi = "Şu an çalışan iş yok";
   $("#simdi").textContent = simdi; $("#hbar i").style.width = bar + "%"; $("#hbar").classList.toggle("hide", !(cal && !eski) && bar !== 100);
   $("#sonraki").textContent = sira ? `Sıradaki: ${sira[1]}` : "";
+  const sorunVar = !(cal && !eski) && !DEMO && (hata || Object.values(P.kontrol || {}).some((r) => (r?.maddeler || []).some((m) => m.seviye === "hata")));
+  $("#duzeltB").classList.toggle("hide", !sorunVar);
   const baslatilir = !(cal && !eski) && sira && ["ses", "gorsel", "kurgu"].includes(sira[0]) && !DEMO;
   $("#baslat").classList.toggle("hide", !baslatilir);
   if (baslatilir) { $("#baslat").textContent = sira[0] === "kurgu" ? "▶ Videoyu üret" : "▶ Görsel + Ses başlat"; $("#baslat").dataset.ajan = sira[0] === "kurgu" ? "kurgucu" : "gorsel"; }
 }
+async function duzelt(b, maddeler) {
+  if (b.disabled) return; b.disabled = true; const eski = b.textContent; b.textContent = "Gönderiliyor…";
+  try { await api("duzelt", { slug: SLUG, maddeler }); b.textContent = "✓ Ajan düzeltiyor"; $("#simdi").textContent = "Yönetici ajan sorunu inceliyor, birazdan işler burada başlar…"; sonOlayZ = Date.now() / 1000; }
+  catch (e) { b.disabled = false; b.textContent = eski; $("#simdi").textContent = "Gönderilemedi: " + e.message; }
+}
+$("#duzeltB").onclick = () => {
+  const h = ADIMLAR.find(([k]) => AS[k].durum === "hata"); const md = Object.entries(P.kontrol || {}).flatMap(([as, r]) => (r?.maddeler || []).filter((m) => m.seviye === "hata" || m.seviye === "uyari").map((m) => ({ asama: as, sahne: m.sahne || 0, mesaj: m.mesaj })));
+  duzelt($("#duzeltB"), [...(h ? [{ asama: h[0], mesaj: AS[h[0]].mesaj || h[1] + " hata verdi" }] : []), ...md]);
+};
 $("#baslat").onclick = async () => {
   const b = $("#baslat"); if (b.disabled) return; b.disabled = true; b.textContent = "Gönderiliyor…";
   try { await api("run", { agent: b.dataset.ajan, inputs: { slug: SLUG } }); $("#simdi").textContent = "İş gönderildi, GitHub'da başlaması 10-30 sn sürer…"; b.classList.add("hide"); sonOlayZ = Date.now() / 1000; }

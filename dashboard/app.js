@@ -61,7 +61,7 @@ function render() {
     const run = O.runs[a.k], st = O.status[a.k]; const [c, l] = stOf(run, st);
     html += `<div class="card agent"><div class="ic">${a.ic}</div><h3>${a.ad}</h3><span class="st ${c}">${l}</span>
       <p>${esc(st?.mesaj || a.is)}</p><div class="mut" style="font-size:11.5px;margin-bottom:10px">Son çalışma: ${ago(run?.zaman || st?.zaman)}${a.ucret ? " · <span title='Claude API kredisi harcar'>💳</span>" : ""}</div>
-      <button data-run="${a.k}">${a.btn}</button></div>`;
+      <button data-run="${a.k}">${a.btn}</button>${c === "err" && /projects\/[a-z0-9-]+/.test(st?.cikti || st?.mesaj || "") ? ` <button class="duzelt" data-hduzelt="${esc((st.cikti || st.mesaj).match(/projects\/([a-z0-9-]+)/)[1])}" data-hmesaj="${esc(a.ad + ": " + (st.mesaj || ""))}">🔧 Düzelt</button>` : ""}</div>`;
   }
   html += `</div>`;
   html += renderYorumlar() + renderAnaliz();
@@ -85,6 +85,11 @@ function render() {
   html += `<h2>Son harcamalar</h2><div class="card">${(h.son || []).filter((x) => x.usd > 0).map((x) => `<div class="mut" style="display:flex;justify-content:space-between;padding:4px 0"><span>${esc(x.ajan)} · ${esc(x.detay)}</span><span>$${x.usd.toFixed(3)}</span></div>`).join("") || '<span class="mut">Kayıt yok</span>'}</div>`;
   $("#main").innerHTML = html;
   document.querySelectorAll("[data-run]").forEach((b) => (b.onclick = () => runAgent(b.dataset.run)));
+  document.querySelectorAll("[data-hduzelt]").forEach((b) => (b.onclick = async () => {
+    if (b.disabled) return; b.disabled = true; b.textContent = "Gönderiliyor…";
+    try { await api("duzelt", { slug: b.dataset.hduzelt, maddeler: [{ asama: "is", mesaj: b.dataset.hmesaj }] }); b.textContent = "✓ Ajan düzeltiyor"; toast("Yönetici ajan düzeltiyor, cevabı 'Ajana yaz' kutusunda"); }
+    catch (e) { b.disabled = false; b.textContent = "🔧 Düzelt"; toast(e.message || "Hata"); }
+  }));
   document.querySelectorAll("[data-karar]").forEach((b) => (b.onclick = () => decide(b.dataset.baslik, b.dataset.karar)));
   document.querySelectorAll("[data-p]").forEach((b) => (b.onclick = () => openProject(b.dataset.p)));
   document.querySelectorAll("[data-th]").forEach(async (d) => { const u = await fileUrl(`projects/${d.dataset.th}/images/${DEMO ? "img01.jpg" : "s01.jpg"}`); if (u) d.style.backgroundImage = `url(${u})`; });
@@ -254,6 +259,11 @@ async function openProject(slug) {
     if (eksik && !confirm(`${eksik} sahnenin görseli eksik. Yine de video üretilsin mi?`)) return;
     await guvenli(() => api("run", { agent: "kurgucu", inputs: { slug } }), "Kurgucu çalışıyor (5-10 dk), bitince kurgu kontrolü otomatik yapılır");
   };
+  d.querySelectorAll("[data-duzelt]").forEach((b) => (b.onclick = async (e) => {
+    e.preventDefault(); e.stopPropagation(); if (b.disabled) return; b.disabled = true; const eski = b.textContent; b.textContent = "Gönderiliyor…";
+    try { await api("duzelt", { slug, maddeler: JSON.parse(b.dataset.duzelt) }); b.textContent = "✓ Ajan düzeltiyor"; toast("Yönetici ajan düzeltiyor. Canlı ilerleme'den izleyebilirsin, cevabı 'Ajana yaz' kutusunda."); }
+    catch (er) { b.disabled = false; b.textContent = eski; toast(er.message || "Hata"); }
+  }));
   if ($("#rekontrol")) $("#rekontrol").onclick = () => guvenli(() => api("run", { agent: "kontrol", inputs: { slug, asama: "hepsi" } }), "Kontrolcüler çalışıyor (~2 dk)");
   d.querySelectorAll("[data-kk]").forEach(async (b) => { const u = await fileUrl(`projects/${slug}/kontrol/kareler.jpg`); if (u) { b.src = u; b.onclick = () => window.open(u); } });
   if (P.video) {
@@ -275,11 +285,13 @@ function kontrolKart(P) {
     const r = K[k]; if (!r) { h += `<div class="krow"><b>${ASAMA_AD[k]}</b>${pill()}<span class="mut">—</span></div>`; continue; }
     const md = (r.maddeler || []).filter((m) => m.seviye !== "bilgi"), bilgi = (r.maddeler || []).filter((m) => m.seviye === "bilgi");
     h += `<details class="krow"${r.durum === "hata" ? " open" : ""}><summary><b>${ASAMA_AD[k]}</b>${pill(r.durum)}<span class="mut">${esc(r.ozet)} · ${ago(r.zaman)}</span></summary>
-      ${md.length ? `<ul>${md.map((m) => `<li class="${m.seviye}">${m.sahne ? `<b>Sahne ${m.sahne}:</b> ` : ""}${esc(m.mesaj)}</li>`).join("")}</ul>` : `<div class="mut" style="padding:6px 0 4px">Sorun bulunmadı ✓</div>`}
+      ${md.length ? `<ul>${md.map((m) => `<li class="${m.seviye}">${m.sahne ? `<b>Sahne ${m.sahne}:</b> ` : ""}${esc(m.mesaj)} <button class="duzelt" data-duzelt='${esc(JSON.stringify([{ asama: k, sahne: m.sahne || 0, mesaj: m.mesaj }]))}'>🔧 Düzelt</button></li>`).join("")}</ul>` : `<div class="mut" style="padding:6px 0 4px">Sorun bulunmadı ✓</div>`}
       ${bilgi.length ? `<div class="mut" style="font-size:12px">${bilgi.map((m) => esc(m.mesaj)).join("<br>")}</div>` : ""}
       ${k === "kurgu" ? `<img data-kk class="kk" alt="Kontrol kareleri">` : ""}</details>`;
   }
-  return h + `<div class="flex"><button id="rekontrol">Hepsini yeniden kontrol et</button></div></div>`;
+  const tum = ["senaryo", "ses", "gorsel", "kurgu"].flatMap((k) => (K[k]?.maddeler || []).filter((m) => m.seviye === "hata" || m.seviye === "uyari").map((m) => ({ asama: k, sahne: m.sahne || 0, mesaj: m.mesaj })));
+  return h + `<div class="flex">${tum.length ? `<button class="gold" data-duzelt='${esc(JSON.stringify(tum))}'>🔧 Hepsini düzelt (${tum.length})</button>` : ""}<button id="rekontrol">Hepsini yeniden kontrol et</button></div>
+    <div class="mut" style="font-size:11.5px;margin-top:6px">Düzelt: yönetici ajan sorunu okur, gereken işi (metin, ses, görsel, video) sırayla yaptırır. Claude API'den birkaç kuruş harcar 💳</div></div>`;
 }
 
 function varsayilanMetin(sc) {

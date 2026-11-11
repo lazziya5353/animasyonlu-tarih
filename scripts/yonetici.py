@@ -37,8 +37,8 @@ def calistir(wf, **girdi):
 
 
 def bekle(wf, once):
-    """'once' zamanından sonra başlayan son çalıştırmanın bitmesini bekler (en fazla 25 dk)."""
-    for _ in range(150):
+    """'once' zamanından sonra başlayan son çalıştırmanın bitmesini bekler (en fazla 40 dk)."""
+    for _ in range(240):
         time.sleep(10)
         j = json.loads(sh("gh", "run", "list", "--workflow", WF[wf], "-L", "3", "--json", "databaseId,status,conclusion,createdAt"))
         j = [x for x in j if x["createdAt"] >= once]
@@ -67,8 +67,16 @@ def baglam(mesaj, slug):
     m = mesaj.lower(); ayrinti = []
     secili = [p for p in projeler if p["slug"] == slug or any(w in m for w in re.split(r"[-\s]", p["slug"]) if len(w) > 4)][:3] or projeler[:2]
     for p in secili:
-        _, sc, pj = proje_oku(p["slug"])
-        ayrinti.append({"slug": p["slug"], "baslik": sc.get("baslik"), "kapanis": sc.get("outro"), "aciklama": (sc.get("paylasim") or sc.get("aciklama") or "")[:300],
+        d, sc, pj = proje_oku(p["slug"])
+        kontrol = {}
+        for k in ("senaryo", "ses", "gorsel", "kurgu"):
+            f = os.path.join(d, "kontrol", f"{k}.json")
+            if os.path.exists(f):
+                r = json.load(open(f, encoding="utf-8")); kontrol[k] = {"durum": r.get("durum"), "sorunlar": [m for m in r.get("maddeler", []) if m.get("seviye") != "bilgi"][:10]}
+        S = sc.get("sahneler", [])
+        eksik = [i + 1 for i, s in enumerate(S) if not s.get("anim") and not os.path.exists(os.path.join(d, s.get("image", "x")))]
+        ayrinti.append({"slug": p["slug"], "dosyalar": {"ses": os.path.exists(os.path.join(d, "ses.wav")), "eksik_gorseller": eksik,
+                        "video": bool(pj and (pj.get("video") or pj.get("release")))}, "kontrol": kontrol, "baslik": sc.get("baslik"), "kapanis": sc.get("outro"), "aciklama": (sc.get("paylasim") or sc.get("aciklama") or "")[:300],
                         "sahneler": [{"no": i + 1, "metin": s.get("lines"), "buyuk_yazi": s.get("big"), "alt_yazi": s.get("sub"), "gorsel": (s.get("prompt") or "")[:160]}
                                      for i, s in enumerate(sc.get("sahneler", []))]})
     return projeler[:25], ayrinti
@@ -85,9 +93,18 @@ Sadece bu işlemleri kullanabilirsin; başka bir şey (silme, paylaşım, ayar) 
 - {"tip":"kapanis_duzenle","slug":"...","baslik":"...","satir":"..."}  → videonun sonundaki kapanış yazısı
 - {"tip":"aciklama_duzenle","slug":"...","metin":"..."}  → Instagram paylaşım açıklaması (hashtagler dahil)
 - {"tip":"gorsel_yenile","slug":"...","sahne":N,"prompt":"İngilizce yeni görsel tarifi (boşsa eskisi)"}  → o sahnenin görselini Gemini yeniden üretir
+- {"tip":"gorseller_uret","slug":"..."}  → eksik görsellerin hepsini çizer (sesi yoksa onu da yapar)
 - {"tip":"ses_uret","slug":"..."}   - {"tip":"video_uret","slug":"..."}   - {"tip":"kontrol","slug":"..."}
+Sıralama otomatik: ses → görseller → video sırayla ve bir öncekinin bitmesi beklenerek çalışır; aynı işi iki kez ekleme.
 Kurallar: metin_duzenle yaptıysan sesi yeniden üretmek gerekir; kullanıcı videoyu da istiyorsa "ardindan_video": true ekle (ses biter, video kendiliğinden üretilir).
 Yazı/kapanış/görsel değişikliğinden sonra video isteniyorsa video_uret ekle. Hangi proje kastedildiği belirsizse işlem yapma, sor.
+"[DÜZELT]" ile başlayan mesajlar paneldeki "Düzelt" düğmesinden gelir; her maddeyi gerçekten düzeltecek işlemleri seç:
+- eksik görsel → gorseller_uret · görselde yanlış dönem / yazı / anakronizm / alakasız içerik → gorsel_yenile (düzeltilmiş İngilizce prompt ile)
+- senaryoda bilgi hatası ya da kötü cümle → metin_duzenle (doğru bilgiyle; emin değilsen yumuşat) · ekrandaki yazı taşması/hatası → yazi_duzenle (kısalt/düzelt)
+- ses eksik/bozuk/çok uzun → ses_uret (uzunsa önce metni kısalt) · kurgu (altyazı kayması, kare hatası) → video_uret
+- video zaten varsa ya da kullanıcı videoyu bekliyorsa değişiklikten sonra video_uret ekle / ardindan_video true yap.
+- Senin düzeltemeyeceğin şeyleri (API anahtarı, kota, hesap ayarı) cevapta açıkça ve kısaca söyle; boşuna işlem ekleme.
+Cevabında hangi sorunu nasıl düzelttiğini madde madde kısaca yaz.
 Bilgi sorularında (ör. hangi videolar hazır) işlem listesi boş kalır, cevapta anlatırsın.
 Sadece şu JSON'u döndür: {"cevap":"...","islemler":[...],"ardindan_video":false}"""
 
@@ -106,7 +123,7 @@ def main():
         plan = extract_json(yazar(SISTEM, user, "yonetici", max_tokens=3000), "yonetici")
     except Exception as e:
         plan = {"cevap": f"Mesajını işleyemedim: {e}", "islemler": []}
-    yapilan, hatalar, ses_bekle, video_bekle = [], [], [], set()
+    yapilan, hatalar, ses_bekle, video_bekle, gorsel_bekle = [], [], [], set(), set()
     for op in (plan.get("islemler") or [])[:8]:
         try:
             tip = op.get("tip"); slug = op.get("slug", "")
@@ -144,7 +161,10 @@ def main():
                     p = str(op["prompt"])[:900]; sc["sahneler"][i]["prompt"] = p
                     sc["sahneler"][i]["prompt_tam"] = p + ", cinematic film still, photorealistic, vertical 9:16, no text, no watermark"
                     proje_yaz(d, sc, None)
-                yapilan.append(f"{slug}: {i + 1}. görsel yeniden üretilecek"); op["_gorsel"] = i + 1
+                f = os.path.join(d, sc["sahneler"][i].get("image", "x"))
+                if os.path.exists(f): os.remove(f)              # silinen görsel toplu işte yeniden çizilir
+                yapilan.append(f"{slug}: {i + 1}. görsel yeniden çizilecek"); gorsel_bekle.add(slug)
+            elif tip == "gorseller_uret": gorsel_bekle.add(slug); yapilan.append(f"{slug}: eksik görseller çizilecek")
             elif tip == "ses_uret": ses_bekle.append(slug)
             elif tip == "video_uret": video_bekle.add(slug)
             elif tip == "kontrol": op["_kontrol"] = True
@@ -155,19 +175,24 @@ def main():
     gec["mesajlar"] = gec["mesajlar"][-60:]
     json.dump(gec, open(GECMIS, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     kaydet(f"Yönetici: {a.mesaj[:60]}")              # değişiklikler repoya girsin, ajanlar güncel hâli görsün
-    ardindan = bool(plan.get("ardindan_video")); once_g = simdi()
-    for op in plan.get("islemler") or []:
-        if op.get("_gorsel"): calistir("gorsel", slug=op["slug"], only=str(op["_gorsel"]))
-        if op.get("_kontrol"): calistir("kontrol", slug=op["slug"], asama="hepsi")
-    for slug in dict.fromkeys(ses_bekle):
-        once = simdi(); calistir("ses", slug=slug, ses="1")
-        if ardindan or slug in video_bekle:
-            video_bekle.discard(slug)
-            if bekle("ses", once): calistir("video", slug=slug); yapilan.append(f"{slug}: ses bitti, video üretiliyor")
-            else: hatalar.append(f"{slug}: ses üretilemedi, video başlatılmadı")
-    if any(op.get("_gorsel") for op in plan.get("islemler") or []) and video_bekle:
-        bekle("gorsel", once_g)                         # görsel işi bitsin, sonra video
-    for slug in video_bekle: calistir("video", slug=slug); yapilan.append(f"{slug}: video üretiliyor")
+    ardindan = bool(plan.get("ardindan_video"))
+    kontrol_iste = {op["slug"] for op in plan.get("islemler") or [] if op.get("_kontrol")}
+    sluglar = list(dict.fromkeys(list(ses_bekle) + list(gorsel_bekle) + list(video_bekle) + list(kontrol_iste)))
+    for slug in sluglar:                                # her proje için sırayla: ses → görseller → video
+        ok = True
+        if slug in ses_bekle:
+            once = simdi(); calistir("ses", slug=slug, ses="1")
+            if not bekle("ses", once): ok = False; hatalar.append(f"{slug}: ses üretilemedi")
+            else: yapilan.append(f"{slug}: ses hazır")
+        if ok and slug in gorsel_bekle:
+            once = simdi(); calistir("gorsel", slug=slug)
+            if not bekle("gorsel", once): ok = False; hatalar.append(f"{slug}: görsellerin bir kısmı çizilemedi (Canlı ilerleme'de ayrıntı var)")
+            else: yapilan.append(f"{slug}: görseller hazır")
+        if ok and (slug in video_bekle or (ardindan and (slug in ses_bekle or slug in gorsel_bekle))):
+            calistir("video", slug=slug); yapilan.append(f"{slug}: video üretiliyor (bitince kurgu kontrolü kendiliğinden yapılır)")
+        elif slug in kontrol_iste and not (slug in ses_bekle or slug in gorsel_bekle):
+            calistir("kontrol", slug=slug, asama="hepsi"); yapilan.append(f"{slug}: kontrol çalışıyor")
+        elif not ok and (slug in video_bekle or ardindan): hatalar.append(f"{slug}: önceki adım bitmediği için video başlatılmadı")
     son = gec["mesajlar"][-1]; son["islemler"] = yapilan; son["hatalar"] = hatalar
     json.dump(gec, open(GECMIS, "w", encoding="utf-8"), ensure_ascii=False, indent=1); kaydet("Yönetici: sonuç")
     set_status("yonetici", "hata" if hatalar else "tamam", (plan.get("cevap") or "")[:140])

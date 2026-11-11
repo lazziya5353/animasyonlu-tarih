@@ -160,6 +160,14 @@ export default async (req) => {
         await dispatch("yonetici", { mesaj, slug: b.slug || "" });
         return json({ ok: true });
       }
+      case "duzelt": { // kontrolcünün / ajanın bulduğu hatayı yönetici ajana düzelttir
+        if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);
+        const M = (Array.isArray(b.maddeler) ? b.maddeler : []).slice(0, 12)
+          .map((m) => `- [${String(m.asama || "genel").slice(0, 12)}]${Number(m.sahne) ? ` sahne ${Number(m.sahne)}:` : ""} ${String(m.mesaj || "").slice(0, 300)}`);
+        if (!M.length) return json({ hata: "Düzeltilecek madde yok" }, 400);
+        await dispatch("yonetici", { mesaj: `[DÜZELT] Kontrolcülerin bulduğu şu sorunları düzelt, sonra gerekiyorsa yeniden üret ve kontrol ettir:\n${M.join("\n")}`.slice(0, 1500), slug: b.slug });
+        return json({ ok: true });
+      }
       case "komut_gecmis": {
         const g = (await readJson("data/yonetici.json")) || { mesajlar: [] };
         return json({ mesajlar: (g.mesajlar || []).slice(-20), durum: (await readJson("data/status.json"))?.yonetici || null });
