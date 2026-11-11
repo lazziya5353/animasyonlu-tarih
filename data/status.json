@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "mary-celeste-part-1: ses hazır",
-  "cikti": "projects/mary-celeste-part-1",
-  "zaman": "2026-11-11T12:14:52Z"
+  "mesaj": "otel-13-part-1: ses hazır",
+  "cikti": "projects/otel-13-part-1",
+  "zaman": "2026-11-11T12:38:47Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -25,9 +25,9 @@
  },
  "kontrol": {
   "durum": "hata",
-  "mesaj": "mary-celeste-part-1: gorsel ✗",
-  "cikti": "projects/mary-celeste-part-1/kontrol",
-  "zaman": "2026-11-11T12:21:33Z"
+  "mesaj": "otel-13-part-1: gorsel ✗",
+  "cikti": "projects/otel-13-part-1/kontrol",
+  "zaman": "2026-11-11T12:45:32Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
