@@ -1,5 +1,5 @@
 name: "Araç · İş tetikle (sohbetten)"
-# jobs/render.json'a {"slug": "..."} yazılıp push'lanınca Kurgucu'yu (render.yml) o proje için başlatır.
+# jobs/render.json'a {"slug": "...", "is": "video" | "ses"} yazılıp push'lanınca Kurgucu'yu (render.yml) o proje için başlatır.
 on:
   push:
     paths: ["jobs/render.json"]
@@ -15,5 +15,6 @@ jobs:
         run: |
           SLUG=$(python3 -c "import json;print(json.load(open('jobs/render.json'))['slug'])")
           echo "$SLUG" | grep -Eq '^[a-z0-9-]{1,60}$' || (echo 'Geçersiz proje adı'; exit 1)
-          gh workflow run render.yml -f slug="$SLUG"
-          echo "Kurgucu başlatıldı: $SLUG"
+          IS=$(python3 -c "import json;print(json.load(open('jobs/render.json')).get('is','video'))")
+          if [ "$IS" = "ses" ]; then gh workflow run generate-assets.yml -f slug="$SLUG" -f ses=1; else gh workflow run render.yml -f slug="$SLUG"; fi
+          echo "Başlatıldı: $IS · $SLUG"
