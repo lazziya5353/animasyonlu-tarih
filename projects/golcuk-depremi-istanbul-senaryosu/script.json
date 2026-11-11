@@ -1,0 +1,513 @@
+{
+ "baslik": "Gölcük depremi İstanbul'da olsaydı?",
+ "konu": "1999 Gölcük depremi ve İBB'nin olası İstanbul depremi senaryosu karşılaştırması",
+ "tarih": "2026-11-11",
+ "slug": "golcuk-depremi-istanbul-senaryosu",
+ "hook": "YA İSTANBUL'DA OLSAYDI?",
+ "map_region": "anadolu",
+ "durum": "onay-bekliyor",
+ "finale": "",
+ "maps": [],
+ "cards": [
+  {
+   "scene": 5,
+   "value": 48,
+   "unit": "BİN BİNA",
+   "small": "AĞIR VE ÇOK AĞIR HASAR (TAHMİN)"
+  }
+ ],
+ "eras": [],
+ "outro": {
+  "title": "17.08.1999",
+  "line": "Unutmadık. Hazırlıklı olalım."
+ },
+ "aciklama": "17 Ağustos 1999'da Gölcük'te 45 saniye süren deprem 17 bin 480 can aldı. Benzer bir deprem İstanbul'un dibinde olsaydı ne olurdu? Rakamlar İBB ve Kandilli'nin 2019 olası deprem kayıp tahmininden alınmıştır; bunlar tahmindir, kehanet değildir. Bu video bilgilendirme amaçlıdır. Binanızın durumunu öğrenmek ve toplanma alanınızı bulmak için e-Devlet ve AFAD'ı kullanabilirsiniz. Siz hazır mısınız? 👇",
+ "hashtagler": [
+  "#deprem",
+  "#17ağustos",
+  "#gölcük",
+  "#istanbuldepremi",
+  "#marmara",
+  "#afad",
+  "#depremehazırlık",
+  "#tarih",
+  "#animasyontarih",
+  "#reels",
+  "#keşfet"
+ ],
+ "kaynaklar": [
+  "https://depremzemin.ibb.istanbul/en/possible-earthquake-loss-estimates-district-booklets",
+  "https://data.ibb.gov.tr",
+  "https://pubs.usgs.gov/circ/c1193",
+  "https://catalog-beta.data.gov/dataset/august-1999-izmit-kocaeli-turkey-images"
+ ],
+ "kontrol_notlari": [
+  "1999: Mw 7.4, 17 Ağustos 03.02, ~45 sn (USGS Circular 1193, NOAA). Resmî can kaybı 17.480 (AA); USGS 17.127 der — Türkiye resmî rakamı kullanıldı.",
+  "16 milyon kişi etkilendi ve etkilenen iller: Anadolu Ajansı infografiği (2018).",
+  "İBB & KRDAE 2019, Mw 7.5 gece senaryosu, İBB açık veri mahalle tablosu toplamı: can kaybı 14.145, ağır+çok ağır 47.830, orta 146.512 bina.",
+  "İlçe oranı = (orta + ağır + çok ağır hasarlı bina) / 2017 bina envanteri; Bakırköy %45,9, Fatih %35,6, Zeytinburnu %33,3 İBB kitapçıklarıyla birebir.",
+  "2000 öncesi bina payı %69 (İBB açık veri 2017 bina envanteri: 806.295 / 1.165.936).",
+  "Fay çizimi şematiktir; deprem tarihi ya da olasılık yüzdesi verilmez. Siyasi/kurum suçlaması yok. Yaralı, ceset, yüz gösterilmez; yapay zekâ görsellerinde 'TEMSİLİ' etiketi var."
+ ],
+ "sahneler": [
+  {
+   "lines": [
+    "17 Ağustos 1999, saat 03.02.",
+    "Gölcük'te yer 45 saniye sallandı."
+   ],
+   "big": "03.02",
+   "sub": "17 AĞUSTOS 1999",
+   "effect": "stamp",
+   "fx": [
+    "dust"
+   ],
+   "etiket": "TEMSİLİ",
+   "prompt": "Close-up of an old round wall clock stopped at exactly 3:02, hanging crooked on a cracked plaster wall inside a 1990s Turkish apartment at night, its glass cracked, fine dust floating in a beam of dim street light, dark and silent, no people",
+   "year": 1999,
+   "label": "",
+   "timeline": false,
+   "image": "images/s01.jpg",
+   "prompt_tam": "Close-up of an old round wall clock stopped at exactly 3:02, hanging crooked on a cracked plaster wall inside a 1990s Turkish apartment at night, its glass cracked, fine dust floating in a beam of dim street light, dark and silent, no people, photorealistic, 35mm documentary photograph, natural light, muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "7,4 büyüklüğündeki sarsıntı",
+    "16 milyon kişiyi etkiledi."
+   ],
+   "big": "",
+   "sub": "",
+   "anim": {
+    "tur": "halka",
+    "merkez": [
+     29.864,
+     40.748
+    ],
+    "buyukluk": "7,4",
+    "sehirler": {
+     "İstanbul": [
+      28.98,
+      41.01,
+      "l"
+     ],
+     "Kocaeli": [
+      29.92,
+      40.77,
+      "u"
+     ],
+     "Sakarya": [
+      30.4,
+      40.78,
+      "r"
+     ],
+     "Yalova": [
+      29.27,
+      40.65,
+      "l"
+     ],
+     "Bursa": [
+      29.06,
+      40.18
+     ],
+     "Düzce": [
+      31.16,
+      40.84,
+      "u"
+     ],
+     "Eskişehir": [
+      30.52,
+      39.78
+     ],
+     "Zonguldak": [
+      31.79,
+      41.45
+     ]
+    },
+    "ust": "GÖLCÜK · 1999",
+    "alt": "45 SANİYE",
+    "sayac": [
+     16,
+     "MİLYON KİŞİ ETKİLENDİ"
+    ],
+    "cam": [
+     [
+      30.1,
+      40.95,
+      5.0
+     ],
+     [
+      30.0,
+      40.85,
+      4.6
+     ]
+    ]
+   },
+   "prompt": "ANİMASYON (koddan çizilir): deprem merkezi Gölcük, yayılan halkalar, etkilenen iller",
+   "effect": "",
+   "fx": [],
+   "year": 1999,
+   "label": "",
+   "timeline": false,
+   "image": "images/s02.jpg",
+   "prompt_tam": "ANİMASYON (koddan çizilir): deprem merkezi Gölcük, yayılan halkalar, etkilenen iller",
+   "kb": [
+    1,
+    1,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "lines": [
+    "Resmî rakamlara göre",
+    "17 bin 480 kişi hayatını kaybetti."
+   ],
+   "big": "17.480",
+   "sub": "HAYATINI KAYBETTİ",
+   "fx": [
+    "dust"
+   ],
+   "etiket": "TEMSİLİ",
+   "prompt": "Dawn after a massive earthquake in a small Turkish coastal town in August 1999, dust hanging in the air, collapsed concrete apartment buildings in the distance, rescue workers and volunteers seen from far behind as small silhouettes standing on rubble, soft grey and orange light, somber and respectful, no injured people, no faces",
+   "effect": "",
+   "year": 1999,
+   "label": "",
+   "timeline": false,
+   "image": "images/s03.jpg",
+   "prompt_tam": "Dawn after a massive earthquake in a small Turkish coastal town in August 1999, dust hanging in the air, collapsed concrete apartment buildings in the distance, rescue workers and volunteers seen from far behind as small silhouettes standing on rubble, soft grey and orange light, somber and respectful, no injured people, no faces, photorealistic, 35mm documentary photograph, natural light, muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Fay o gece Marmara'nın doğusunda kırıldı.",
+    "İstanbul'un önündeki parça ise hâlâ kırılmadı."
+   ],
+   "big": "",
+   "sub": "",
+   "anim": {
+    "tur": "fay",
+    "ust": "KUZEY ANADOLU FAYI",
+    "alt": "ŞEMATİK ÇİZİM",
+    "kirik": [
+     [
+      29.2,
+      40.73
+     ],
+     [
+      29.5,
+      40.72
+     ],
+     [
+      29.8,
+      40.71
+     ],
+     [
+      30.1,
+      40.72
+     ],
+     [
+      30.4,
+      40.72
+     ],
+     [
+      30.7,
+      40.73
+     ],
+     [
+      31.0,
+      40.76
+     ]
+    ],
+    "kirik_yazi": "1999'DA KIRILDI",
+    "kirilmamis": [
+     [
+      29.2,
+      40.76
+     ],
+     [
+      29.0,
+      40.83
+     ],
+     [
+      28.7,
+      40.86
+     ],
+     [
+      28.4,
+      40.87
+     ],
+     [
+      28.0,
+      40.83
+     ],
+     [
+      27.6,
+      40.8
+     ],
+     [
+      27.3,
+      40.73
+     ]
+    ],
+    "kirilmamis_yazi": "HÂLÂ KIRILMADI",
+    "sehirler": {
+     "İstanbul": [
+      28.98,
+      41.03
+     ]
+    }
+   },
+   "prompt": "ANİMASYON (koddan çizilir): Kuzey Anadolu Fayı'nın 1999'da kırılan ve Marmara'da kırılmamış parçası (şematik)",
+   "effect": "",
+   "fx": [],
+   "year": 1999,
+   "label": "",
+   "timeline": false,
+   "image": "images/s04.jpg",
+   "prompt_tam": "ANİMASYON (koddan çizilir): Kuzey Anadolu Fayı'nın 1999'da kırılan ve Marmara'da kırılmamış parçası (şematik)",
+   "kb": [
+    1,
+    1,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "lines": [
+    "Peki benzer bir deprem",
+    "İstanbul'un dibinde olsaydı?"
+   ],
+   "big": "İSTANBUL",
+   "sub": "YA BURADA OLSAYDI?",
+   "fx": [],
+   "effect": "glow",
+   "prompt": "Istanbul at night seen from high above, the Bosphorus and the historic peninsula glowing with millions of city lights, dense apartment blocks stretching to the horizon, calm Sea of Marmara in the foreground, quiet and peaceful, cinematic aerial view",
+   "year": 2019,
+   "label": "",
+   "timeline": false,
+   "image": "images/s05.jpg",
+   "prompt_tam": "Istanbul at night seen from high above, the Bosphorus and the historic peninsula glowing with millions of city lights, dense apartment blocks stretching to the horizon, calm Sea of Marmara in the foreground, quiet and peaceful, cinematic aerial view, photorealistic, 35mm documentary photograph, natural light, muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "İBB ve Kandilli'nin 7,5'lik gece senaryosuna göre",
+    "yaklaşık 14 bin can kaybı,",
+    "48 bin ağır hasarlı bina bekleniyor."
+   ],
+   "big": "≈14 BİN",
+   "sub": "TAHMİNİ CAN KAYBI",
+   "fx": [
+    "dust"
+   ],
+   "etiket": "TEMSİLİ",
+   "kaynak": "Kaynak: İBB & Kandilli, 2019 olası deprem kayıp tahmini · tahmindir",
+   "prompt": "Aerial view of a dense Istanbul neighborhood at night during a sudden blackout, most city lights out, only a few car headlights and emergency lights glowing in the streets, dust haze in the air, tense and silent mood, no close-up destruction, no people",
+   "effect": "",
+   "year": 2019,
+   "label": "",
+   "timeline": false,
+   "image": "images/s06.jpg",
+   "prompt_tam": "Aerial view of a dense Istanbul neighborhood at night during a sudden blackout, most city lights out, only a few car headlights and emergency lights glowing in the streets, dust haze in the air, tense and silent mood, no close-up destruction, no people, photorealistic, 35mm documentary photograph, natural light, muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Ama risk her yerde aynı değil.",
+    "En ağır tablo Marmara kıyısında."
+   ],
+   "big": "",
+   "sub": "",
+   "kaynak": "Kaynak: İBB & Kandilli, 2019 olası deprem kayıp tahmini · tahmindir",
+   "anim": {
+    "tur": "ilce_harita",
+    "oran": {
+     "Adalar": 47.708,
+     "Şile": 4.487,
+     "Silivri": 18.607,
+     "Büyükçekmece": 27.745,
+     "Çatalca": 7.401,
+     "Tuzla": 25.153,
+     "Pendik": 13.478,
+     "Sultanbeyli": 13.878,
+     "Kartal": 13.597,
+     "Sancaktepe": 10.032,
+     "Çekmeköy": 5.422,
+     "Maltepe": 15.013,
+     "Kadıköy": 12.451,
+     "Ataşehir": 12.145,
+     "Üsküdar": 9.537,
+     "Ümraniye": 8.107,
+     "Beykoz": 6.469,
+     "Beyoğlu": 16.034,
+     "Beşiktaş": 8.131,
+     "Kağıthane": 7.202,
+     "Sarıyer": 5.983,
+     "Şişli": 6.201,
+     "Arnavutköy": 6.224,
+     "Avcılar": 26.302,
+     "Bahçelievler": 34.173,
+     "Bakırköy": 45.874,
+     "Bayrampaşa": 27.945,
+     "Bağcılar": 25.029,
+     "Başakşehir": 14.218,
+     "Beylikdüzü": 33.522,
+     "Esenler": 20.891,
+     "Esenyurt": 26.475,
+     "Eyüpsultan": 14.361,
+     "Fatih": 35.647,
+     "Gaziosmanpaşa": 9.589,
+     "Güngören": 30.786,
+     "Sultangazi": 6.216,
+     "Zeytinburnu": 33.338,
+     "Küçükçekmece": 31.976
+    },
+    "ust": "İSTANBUL · 7,5 SENARYOSU",
+    "alt": "ORTA VE ÜSTÜ HASAR GÖRECEK BİNA ORANI"
+   },
+   "prompt": "ANİMASYON (koddan çizilir): İstanbul ilçe haritası, İBB 2019 orta ve üstü hasar oranına göre renklendirilmiş",
+   "effect": "",
+   "fx": [],
+   "year": 2019,
+   "label": "",
+   "timeline": false,
+   "image": "images/s07.jpg",
+   "prompt_tam": "ANİMASYON (koddan çizilir): İstanbul ilçe haritası, İBB 2019 orta ve üstü hasar oranına göre renklendirilmiş",
+   "kb": [
+    1,
+    1,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "lines": [
+    "Eski binalar ve yumuşak zemin hasarı katlıyor.",
+    "Kuzeydeki sağlam zemin daha şanslı.",
+    "Yine de riskli ilçede oturmak,",
+    "senin binan çürük demek değil."
+   ],
+   "big": "",
+   "sub": "",
+   "anim": {
+    "tur": "ilce_tablo",
+    "oran": {
+     "Adalar": 47.708,
+     "Şile": 4.487,
+     "Silivri": 18.607,
+     "Büyükçekmece": 27.745,
+     "Çatalca": 7.401,
+     "Tuzla": 25.153,
+     "Pendik": 13.478,
+     "Sultanbeyli": 13.878,
+     "Kartal": 13.597,
+     "Sancaktepe": 10.032,
+     "Çekmeköy": 5.422,
+     "Maltepe": 15.013,
+     "Kadıköy": 12.451,
+     "Ataşehir": 12.145,
+     "Üsküdar": 9.537,
+     "Ümraniye": 8.107,
+     "Beykoz": 6.469,
+     "Beyoğlu": 16.034,
+     "Beşiktaş": 8.131,
+     "Kağıthane": 7.202,
+     "Sarıyer": 5.983,
+     "Şişli": 6.201,
+     "Arnavutköy": 6.224,
+     "Avcılar": 26.302,
+     "Bahçelievler": 34.173,
+     "Bakırköy": 45.874,
+     "Bayrampaşa": 27.945,
+     "Bağcılar": 25.029,
+     "Başakşehir": 14.218,
+     "Beylikdüzü": 33.522,
+     "Esenler": 20.891,
+     "Esenyurt": 26.475,
+     "Eyüpsultan": 14.361,
+     "Fatih": 35.647,
+     "Gaziosmanpaşa": 9.589,
+     "Güngören": 30.786,
+     "Sultangazi": 6.216,
+     "Zeytinburnu": 33.338,
+     "Küçükçekmece": 31.976
+    },
+    "n": 5,
+    "not": "Binaların orta ve üstü hasar görme oranı · İBB & Kandilli, 2019"
+   },
+   "prompt": "ANİMASYON (koddan çizilir): en riskli ve en az riskli 5 ilçe tablosu",
+   "effect": "",
+   "fx": [],
+   "year": 2019,
+   "label": "",
+   "timeline": false,
+   "image": "images/s08.jpg",
+   "prompt_tam": "ANİMASYON (koddan çizilir): en riskli ve en az riskli 5 ilçe tablosu",
+   "kb": [
+    1,
+    1,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "lines": [
+    "İstanbul'daki binaların yaklaşık üçte ikisi",
+    "2000'den önce yapıldı."
+   ],
+   "big": "%69",
+   "sub": "2000 ÖNCESİ YAPILMIŞ BİNA",
+   "fx": [
+    "dust"
+   ],
+   "etiket": "TEMSİLİ",
+   "kaynak": "Kaynak: İBB açık veri, bina envanteri (2017)",
+   "prompt": "Dense rows of aging 1980s and 1990s concrete apartment buildings in an Istanbul neighborhood, weathered facades, narrow streets, laundry on balconies, overcast daylight, seen from street level, no people",
+   "effect": "",
+   "year": 2019,
+   "label": "",
+   "timeline": false,
+   "image": "images/s09.jpg",
+   "prompt_tam": "Dense rows of aging 1980s and 1990s concrete apartment buildings in an Istanbul neighborhood, weathered facades, narrow streets, laundry on balconies, overcast daylight, seen from street level, no people, photorealistic, 35mm documentary photograph, natural light, muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Binanı inceletmek, deprem çantası hazırlamak,",
+    "toplanma alanını bilmek hayat kurtarır."
+   ],
+   "big": "HAZIRLIK",
+   "sub": "BİNA · ÇANTA · TOPLANMA ALANI",
+   "fx": [],
+   "prompt": "An earthquake emergency backpack ready by an apartment front door, a flashlight, bottled water, a first aid kit and a whistle neatly placed beside it, warm hallway light, calm and practical mood, no text or logos on any item",
+   "effect": "",
+   "year": 2019,
+   "label": "",
+   "timeline": false,
+   "image": "images/s10.jpg",
+   "prompt_tam": "An earthquake emergency backpack ready by an apartment front door, a flashlight, bottled water, a first aid kit and a whistle neatly placed beside it, warm hallway light, calm and practical mood, no text or logos on any item, photorealistic, 35mm documentary photograph, natural light, muted color grade, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Depremi durduramayız.",
+    "Ama binaları güçlendirebiliriz."
+   ],
+   "big": "",
+   "sub": "",
+   "fx": [
+    "rays"
+   ],
+   "prompt": "Sunrise over Istanbul, construction cranes above new reinforced apartment buildings, two workers in hard hats seen from behind on a scaffold beside a strengthened concrete column, hopeful golden light, the Bosphorus in the distance",
+   "effect": "",
+   "year": 2019,
+   "label": "",
+   "timeline": false,
+   "image": "images/s11.jpg",
+   "prompt_tam": "Sunrise over Istanbul, construction cranes above new reinforced apartment buildings, two workers in hard hats seen from behind on a scaffold beside a strengthened concrete column, hopeful golden light, the Bosphorus in the distance, photorealistic, 35mm documentary photograph, natural light, muted color grade, vertical 9:16, no text, no watermark"
+  }
+ ],
+ "seslendirme_metni": "On yedi Ağustos bin dokuz yüz doksan dokuz, saat üçü iki geçe.\nGölcük'te yer kırk beş saniye sallandı.\nYedi nokta dört büyüklüğündeki sarsıntı\non altı milyon kişiyi etkiledi.\nResmî rakamlara göre\non yedi bin dört yüz seksen kişi hayatını kaybetti.\nFay o gece Marmara'nın doğusunda kırıldı.\nİstanbul'un önündeki parça ise hâlâ kırılmadı.\nPeki benzer bir deprem\nİstanbul'un dibinde olsaydı?\nİBB ve Kandilli'nin yedi buçukluk gece senaryosuna göre\nyaklaşık on dört bin can kaybı,\nkırk sekiz bin ağır hasarlı bina bekleniyor.\nAma risk her yerde aynı değil.\nEn ağır tablo Marmara kıyısında.\nEski binalar ve yumuşak zemin hasarı katlıyor.\nKuzeydeki sağlam zemin daha şanslı.\nYine de riskli ilçede oturmak,\nsenin binan çürük demek değil.\nİstanbul'daki binaların yaklaşık üçte ikisi\niki binden önce yapıldı.\nBinanı inceletmek, deprem çantası hazırlamak,\ntoplanma alanını bilmek hayat kurtarır.\nDepremi durduramayız.\nAma binaları güçlendirebiliriz."
+}

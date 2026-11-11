@@ -128,6 +128,11 @@ class Project:
         return len(self.S) - 1
     def scene_img(self, i, tv):
         s = self.S[i]
+        if s.get("anim"):  # koddan çizilen veri/harita animasyonu (engine/deprem.py)
+            if i not in self._tablo:
+                from deprem import DepremAnim
+                self._tablo[i] = DepremAnim(self.dir, s["anim"])
+            return self._tablo[i].frame(tv - s["start"], s["end"] - s["start"])
         if s.get("tablo"):
             if i not in self._tablo:
                 from tablo import Tablo
@@ -220,6 +225,11 @@ class Project:
         for cp in ([] if s.get("tablo") else self.caps):
             if cp["start"] - .1 <= tv < cp["end"] + .05:
                 put(fr, caption_img(cp["text"]), W / 2, 1500, clamp((tv - cp["start"] + .1) / .3) * clamp((cp["end"] + .05 - tv) / .25))
+        sa = clamp(lt / .4) * clamp((s["end"] - tv) / .3)
+        if s.get("etiket"):  # ör. "TEMSİLİ": yapay zekâ görseli gerçek fotoğraf sanılmasın
+            put(fr, text(s["etiket"], "sans9", 24, (255, 255, 255), spacing=6), W - 150, 215, sa * .85)
+        if s.get("kaynak"):
+            put(fr, text(s["kaynak"], "sans", 24, (225, 225, 225), spacing=1), W / 2, 1610, sa * .9)
         o = c.get("outro")
         if o is None or tv < o["start"] + 0.3: self.timeline(fr, i, lt, clamp(T / 1.0) * (clamp((o["start"] + 0.3 - tv) / .6) if o else 1))
         if o and tv >= o["start"]:

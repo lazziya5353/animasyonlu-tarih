@@ -114,7 +114,7 @@ def senaryo(slug):
         if sc:
             pr = s.get("prompt_tam") or s.get("prompt") or ""
             if not pr: R.hata("görsel promptu yok", i)
-            elif "no text" not in pr.lower(): R.uyari("promptta “no text” yok, görselde yazı çıkabilir", i)
+            elif "no text" not in pr.lower() and not s.get("anim"): R.uyari("promptta “no text” yok, görselde yazı çıkabilir", i)
             if re.search(r"(atat[uü]rk|mustafa kemal)", pr, re.I) and re.search(r"(face|portrait|close-?up of (him|atat))", pr, re.I):
                 R.hata("promptta Atatürk'ün yüzü isteniyor; yapay zekayla yüz çizdirmiyoruz", i)
         if not s.get("image"): R.hata("görsel dosya adı yok", i)

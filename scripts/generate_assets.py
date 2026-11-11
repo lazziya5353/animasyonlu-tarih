@@ -80,6 +80,7 @@ def main():
             if a.only and i != a.only: continue
             out = os.path.join(d, s["image"]); os.makedirs(os.path.dirname(out), exist_ok=True)
             if os.path.exists(out) and not a.only: continue
+            if s.get("anim"): continue  # koddan çizilen animasyon sahnesi, görsel gerekmez
             try:
                 ok = image(s["prompt_tam"], out); made += bool(ok); print("görsel", i, ok)
             except GeminiError as e:

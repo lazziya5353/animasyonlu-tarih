@@ -52,5 +52,14 @@
   "k": 120,
   "clat": 45,
   "aciklama": "Batı Avrupa’dan Anadolu’ya"
+ },
+ "marmara": {
+  "lon0": 26.0,
+  "lon1": 33.0,
+  "lat0": 37.0,
+  "lat1": 44.2,
+  "k": 520,
+  "clat": 40.7,
+  "aciklama": "Marmara, İstanbul ilçeleri (ayrıntılı kıyı)"
  }
 }
