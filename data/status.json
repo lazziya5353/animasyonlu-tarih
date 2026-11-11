@@ -7,9 +7,9 @@
  },
  "senarist": {
   "durum": "tamam",
-  "mesaj": "'10 Kasım 1938 – Atatürk'ü saygı ve özlemle anıyoruz' metni onay bekliyor",
-  "cikti": "projects/10-kasim-1938-ataturk-u-saygi-ve-ozlemle-aniyoruz/script.json",
-  "zaman": "2026-11-09T09:08:46Z"
+  "mesaj": "'Üsküdar'ın tarihi ve adının hikâyesi' metni onay bekliyor",
+  "cikti": "projects/uskudar-in-tarihi-ve-adinin-hik-yesi/script.json",
+  "zaman": "2026-11-11T15:08:39Z"
  },
  "gorsel": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-11T11:40:36Z"
  },
  "kontrol": {
-  "durum": "hata",
-  "mesaj": "otel-13-part-1: gorsel ✗",
-  "cikti": "projects/otel-13-part-1/kontrol",
-  "zaman": "2026-11-11T12:45:32Z"
+  "durum": "tamam",
+  "mesaj": "uskudar-in-tarihi-ve-adinin-hik-yesi: senaryo !",
+  "cikti": "projects/uskudar-in-tarihi-ve-adinin-hik-yesi/kontrol",
+  "zaman": "2026-11-11T15:08:40Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

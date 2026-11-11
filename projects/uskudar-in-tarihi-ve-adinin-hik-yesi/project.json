@@ -1,0 +1,294 @@
+{
+ "title": "Üsküdar: Altın Şehrin Hikâyesi",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "ALTIN ŞEHİR",
+ "map_region": "marmara",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Üsküdar'ın ilk adı, 'Altın Şehir' demekti."
+   ],
+   "big": "ALTIN",
+   "sub": "İLK ADI",
+   "year": -410,
+   "label": "ANTİK ÇAĞ",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Adı Chrysopolis'ti. M.Ö. 410'da Atinalılar burada gemilerden vergi aldı."
+   ],
+   "big": "M.Ö. 410",
+   "sub": "CHRYSOPOLİS",
+   "year": -410,
+   "label": "M.Ö. 410",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bugünkü ad, Roma dönemindeki Skutarion Kışlası'ndan geliyor olabilir.",
+    "Bir görüş de Farsça 'ulak' sözcüğünü gösterir."
+   ],
+   "big": "KALKAN",
+   "sub": "ADIN KÖKENİ",
+   "year": 1100,
+   "label": "12. YY",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Orhan Gazi döneminde, İstanbul'dan çok önce Osmanlı oldu."
+   ],
+   "big": "1352",
+   "sub": "FETİHTEN ÖNCE",
+   "year": 1352,
+   "label": "1352",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "29 Mayıs 1453'te İstanbul fethedildi. Üsküdar'a Türkler yerleşti."
+   ],
+   "big": "1453",
+   "sub": "İSTANBUL'UN FETHİ",
+   "year": 1453,
+   "label": "1453",
+   "fx": [
+    "smoke",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ordular buradan Anadolu'ya geçerdi. Hacıların ilk durağı da burasıydı."
+   ],
+   "big": "HAC YOLU",
+   "sub": "ANADOLU'NUN KAPISI",
+   "year": 1453,
+   "label": "FETİHTEN SONRA",
+   "fx": [
+    "dust",
+    "gold"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1548'de Mimar Sinan, Mihrimah Sultan Camii'ni tamamladı."
+   ],
+   "big": "1548",
+   "sub": "MİHRİMAH SULTAN CAMİİ",
+   "year": 1548,
+   "label": "1548",
+   "fx": [
+    "rays",
+    "gold"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Kız Kulesi ise kıyının simgesi oldu."
+   ],
+   "big": "KULE",
+   "sub": "KIZ KULESİ",
+   "year": 1832,
+   "label": "KIZ KULESİ",
+   "fx": [
+    "fog",
+    "gold"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Şimdi şaşıracaksın. 324'te Konstantin, rakibi Licinius'u Üsküdar'da yendi."
+   ],
+   "big": "324",
+   "sub": "BÜYÜK SAVAŞ",
+   "year": 324,
+   "label": "324",
+   "fx": [
+    "dust",
+    "smoke"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ardından Byzantion'u başkent yaptı. İstanbul'un başkent oluşu, Üsküdar'daki zaferin ardından geldi."
+   ],
+   "big": "BAŞKENT",
+   "sub": "KONSTANTİNOPOLİS",
+   "year": 324,
+   "label": "BAŞKENT",
+   "fx": [
+    "rays",
+    "gold"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "glow"
+  }
+ ],
+ "eras": [
+  {
+   "name": "ANTİK ÇAĞ VE ROMA",
+   "from": 0,
+   "to": 2
+  },
+  {
+   "name": "OSMANLI",
+   "from": 3,
+   "to": 7
+  },
+  {
+   "name": "KONSTANTİN",
+   "from": 8,
+   "to": 9
+  }
+ ],
+ "outro_plan": {
+  "title": "ÜSKÜDAR",
+  "line": "Altın Şehir'in hikâyesi hâlâ sürüyor."
+ },
+ "maps_plan": [
+  {
+   "after_scene": 3,
+   "cities": [
+    "Bursa",
+    "İstanbul"
+   ],
+   "route": [
+    "Bursa",
+    "İstanbul"
+   ],
+   "title": "BURSA — İSTANBUL"
+  }
+ ],
+ "cards_plan": [],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": ""
+}
