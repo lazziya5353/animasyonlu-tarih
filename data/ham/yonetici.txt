@@ -1,0 +1,14 @@
+```json
+{
+  "cevap": "Tamamdır kral, Üsküdar videosu için senariste konuyu iletiyorum. 35-40 saniyelik, kısa cümleli bir metin yazacak. Yazınca panelden onayına düşecek. 🎬",
+  "islemler": [
+    {
+      "tip": "yeni_video",
+      "konu": "Üsküdar'ın tarihi ve adının hikâyesi",
+      "notlar": "Süre 35-40 saniye. Kısa cümleler, sıkmayan akıcı ve merak uyandıran bir ton. İçerik: 1) İlk adı Chrysopolis ve anlamı (Altın Şehir). 2) 'Üsküdar' adının kökeni (Scutarion/Skutari ve Üsküdar'a dönüşmesi). 3) Osmanlı'ya geçişi: İstanbul'un fethinden önce, Orhan Bey döneminde (1338 civarı, tarih doğrulanacak). 4) Birkaç önemli yapı (ör. Kız Kulesi, Mihrimah Sultan Camii, Şemsi Paşa Camii, Yeni Valide Camii gibi). 5) İzleyiciye 'vay be' dedirtecek bir bilgi, mümkünse sona yakın. Kapanışta etkileşim çağrısı olsun.",
+      "tarih": ""
+    }
+  ],
+  "ardindan_video": false
+}
+```

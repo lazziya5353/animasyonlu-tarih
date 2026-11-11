@@ -1,0 +1,18 @@
+{
+ "mesajlar": [
+  {
+   "kim": "sen",
+   "metin": "Üsküdar'ın tarihini ve adının hikâyesini anlatan 35-40 saniyelik kısa bir video yap. İlk adı ve anlamı (Chrysopolis), 'Üsküdar' adının nereden geldiği, Osmanlı'ya ne zaman geçtiği (İstanbul'un fethinden önce), birkaç önemli yapı ve izleyicide 'vay be' dedirtecek bir bilgi olsun. Sıkmadan, kısa cümlelerle.",
+   "zaman": "2026-11-11T15:03:31Z"
+  },
+  {
+   "kim": "ajan",
+   "metin": "Tamamdır kral, Üsküdar videosu için senariste konuyu iletiyorum. 35-40 saniyelik, kısa cümleli bir metin yazacak. Yazınca panelden onayına düşecek. 🎬",
+   "islemler": [
+    "Senarist çalıştı: Üsküdar'ın tarihi ve adının hikâyesi"
+   ],
+   "hatalar": [],
+   "zaman": "2026-11-11T15:03:41Z"
+  }
+ ]
+}
