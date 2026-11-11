@@ -1,0 +1,35 @@
+{
+ "asama": "gorsel",
+ "durum": "uyari",
+ "ozet": "11/11 görsel, ortalama puan 9.5/10",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "Görselin en altında küçük kaynak/telif yazısı (Sentinel-2, EOX vb.) bulunmaktadır.",
+   "sahne": 2
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Görselin en altında küçük telif/kaynak metni bulunmaktadır.",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Boğaziçi Köprüsü ve Tarihi Yarımada coğrafi/morfolojik olarak yapay zeka tarafından harmanlanmış, gerçek İstanbul coğrafyasına tam olarak uymuyor.",
+   "sahne": 5
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Harita infografiğinin altında 'Uydu: Sentinel-2 cloudless 2016 · EOX · CC BY 4.0' kaynakça metni yer alıyor.",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Proje notlarında en riskli ilçeler arasında Zeytinburnu (%33,3) belirtilirken tabloda 5. sırada Beylikdüzü (%33,5) listelenmiştir; veri kaynağıyla ufak bir sıralama tutarsızlığı bulunuyor.",
+   "sahne": 8
+  }
+ ],
+ "eksik": [],
+ "ortalama_puan": 9.5,
+ "zaman": "2026-11-11T11:07:15Z"
+}
