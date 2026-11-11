@@ -1,0 +1,67 @@
+name: "4b · 3D Kurgucu (Blender)"
+# jobs/blender.json'a {"slug": "...", "sahne": "otel13"} yazılıp push'lanınca çalışır; kareler 12 parçaya bölünüp paralel render edilir.
+on:
+  workflow_dispatch:
+    inputs:
+      slug: { description: "Proje klasörü", required: true }
+      sahne: { description: "engine/blender/<sahne>.py", required: true }
+  push:
+    paths: ["jobs/blender.json"]
+permissions:
+  contents: write
+jobs:
+  ayar:
+    runs-on: ubuntu-latest
+    outputs: { slug: "${{ steps.a.outputs.slug }}", sahne: "${{ steps.a.outputs.sahne }}", w: "${{ steps.a.outputs.w }}", h: "${{ steps.a.outputs.h }}", samples: "${{ steps.a.outputs.samples }}" }
+    steps:
+      - uses: actions/checkout@v4
+      - id: a
+        env: { IN_SLUG: "${{ inputs.slug }}", IN_SAHNE: "${{ inputs.sahne }}" }
+        run: |
+          python3 - <<'P' >> "$GITHUB_OUTPUT"
+          import json, os, re
+          j = json.load(open("jobs/blender.json")) if os.path.exists("jobs/blender.json") else {}
+          slug = os.environ.get("IN_SLUG") or j["slug"]; sahne = os.environ.get("IN_SAHNE") or j["sahne"]
+          assert re.fullmatch(r"[a-z0-9-]{1,60}", slug) and re.fullmatch(r"[a-z0-9_]{1,40}", sahne)
+          print(f"slug={slug}"); print(f"sahne={sahne}")
+          print(f"w={j.get('w', 720)}"); print(f"h={j.get('h', 1280)}"); print(f"samples={j.get('samples', 24)}")
+          P
+  render:
+    needs: ayar
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy: { matrix: { parca: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.13" }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq libxi6 libxxf86vm1 libxfixes3 libxrender1 libgl1 libxkbcommon0 libsm6 && pip install -q bpy
+      - name: Kareleri render et
+        run: |
+          N=480; P=${{ matrix.parca }}; A=$(( P * N / 12 + 1 )); B=$(( (P + 1) * N / 12 ))
+          python engine/blender/${{ needs.ayar.outputs.sahne }}.py -- --out kareler --w ${{ needs.ayar.outputs.w }} --h ${{ needs.ayar.outputs.h }} --samples ${{ needs.ayar.outputs.samples }} --kare $A-$B | grep -E "^kare|Error|Traceback"
+      - uses: actions/upload-artifact@v4
+        with: { name: "kare-${{ matrix.parca }}", path: kareler, retention-days: 2 }
+  birlestir:
+    needs: [ayar, render]
+    runs-on: ubuntu-latest
+    env: { SLUG: "${{ needs.ayar.outputs.slug }}", GH_TOKEN: "${{ github.token }}", PYTHONUNBUFFERED: "1" }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q -r requirements.txt
+      - uses: actions/download-artifact@v4
+        with: { pattern: "kare-*", path: kareler, merge-multiple: true }
+      - name: Sesle birleştir
+        run: python scripts/uc_boyut_birlestir.py --proje "projects/$SLUG" --kareler kareler --onizleme "projects/$SLUG/onizleme.jpg"
+      - name: Yayınla
+        run: |
+          TAG="video-$SLUG"
+          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --title "$SLUG" --notes "3D video"
+          gh release upload "$TAG" "projects/$SLUG/out/video.mp4" --clobber
+      - name: Kaydet
+        run: |
+          git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
+          git add "projects/$SLUG/onizleme.jpg"; git commit -m "3D video: $SLUG" || exit 0
+          git pull --rebase && git push
