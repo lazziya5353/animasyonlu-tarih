@@ -1,0 +1,22 @@
+{
+ "bolgeler": {
+  "marmara": [
+   26.0,
+   33.0,
+   37.0,
+   44.2,
+   520
+  ],
+  "istanbul": [
+   27.8,
+   30.0,
+   40.55,
+   41.75,
+   2000
+  ]
+ },
+ "eox_katman": "s2cloudless",
+ "eox_baslik": "Sentinel-2 cloudless layer for 2016 by EOX - 4326",
+ "atif": "Sentinel-2 cloudless - https://s2maps.eu by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016 & 2017)",
+ "gece": "NASA Black Marble (kamu malı)"
+}
