@@ -1,6 +1,0 @@
-Tamamdır kral, kontrolcülerin bulduğu maddeleri tek tek düzeltiyorum:
-
-- **Altyazı taşmaları (sahne 2, 3, 4, 5, 6, 9, 10):** Cümleleri kısaltıp anlamı koruyarak yeniden yazıyorum. Sahne 5'te "Üsküdar'a Türkler yerleşti" cümlesi de biraz havada kalıyordu, onu daha sağlam bir ifadeyle değiştirdim. Sahne 9'da Licinius adını çıkardım, "324" zaten ekranda büyük yazıyla duruyor.
-- **"Skutarion Kışlası" okunuşu (sahne 3):** Sahne 3'ten bu zor adı çıkardım, böylece yanlış okunma riski kalmıyor. Cümle artık "Adı, Roma kışlasından gelebilir. Ya da Farsça 'ulak'." diyor.
-- **Ses uyuşması (%93):** Metinler değiştiği için sesi baştan üretiyorum, uyuşma da düzelmeli.
-- **Eksik görseller (sahne 1-10):** Görsellerin h
