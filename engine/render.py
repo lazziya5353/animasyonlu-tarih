@@ -239,7 +239,7 @@ class Project:
             if o.get("title"): put(fr, fit(o["title"], "serif", 70, GOLD, glow=GOLD, spacing=6), W / 2, 760, ta)
             if o.get("line"):
                 put(fr, fit(o["line"], "serif", 76, WHITE, maxw=W - 110, glow=GOLD, spacing=4), W / 2, 900, la)
-        self.watermark(fr, T, kose=not s.get("tablo"))
+        self.watermark(fr, T, kose=not (s.get("tablo") or s.get("anim")))
         if T < .5: fr.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, int(255 * (1 - T / .5)))))
         return fr.convert("RGB")
 
