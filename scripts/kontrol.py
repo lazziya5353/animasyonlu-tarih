@@ -281,11 +281,17 @@ def kurgu(slug, video=None):
     tf = os.path.join(d, "project.timed.json"); voice = os.path.join(d, (pj or {}).get("voice", "ses.wav"))
     if os.path.exists(tf) and os.path.exists(voice):
         T = json.load(open(tf)); off = T.get("voice_offset", 0.3); sil = sessizlikler(voice, -38, 0.25)
-        kotu = 0
-        for c in T.get("captions", []):
+        kotu = 0; caps = T.get("captions", [])
+        try:  # okunan metin: hız testi için (rakamlar yazıyla)
+            sp = [x for x in json.load(open(os.path.join(d, "script.json"))).get("seslendirme_metni", "").split("\n") if x.strip()]
+        except Exception: sp = []
+        for i, c in enumerate(caps):
             a, b = c["start"], c["end"]; L = max(0.01, b - a)
             sessiz = sum(max(0, min(b, y) - max(a, x)) for x, y in sil)
+            okunan = sp[i] if len(sp) == len(caps) else c["text"]
+            hiz = len(okunan) / L  # karakter/sn; doğal Türkçe anlatım ~12–21
             if sessiz / L > 0.6: kotu += 1; R.uyari(f"altyazı sesle örtüşmüyor olabilir: “{c['text'][:40]}”")
+            elif hiz > 27 or hiz < 8: kotu += 1; R.uyari(f"altyazı süresi okunuşa uymuyor ({hiz:.0f} kar/sn): “{c['text'][:40]}”")
         R.ek["senkron"] = f"{len(T.get('captions', [])) - kotu}/{len(T.get('captions', []))}"
     uy = os.path.join(d, "out", "uyarilar.json")
     if os.path.exists(uy):

@@ -2,3 +2,4 @@ numpy
 pillow
 scipy
 soundfile
+faster-whisper

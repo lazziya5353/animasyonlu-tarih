@@ -63,7 +63,13 @@ class Project:
         c = self.cfg; sents = []; owner = []
         for i, s in enumerate(c["scenes"]):
             for ln in s.get("lines", []): sents.append(ln); owner.append(i)
-        segs, dur = align(self.voice, sents)
+        spoken = None
+        try:  # okunan metin (rakamlar yazıyla) varsa süre tahmini ve tanıma eşleşmesi ondan yapılır
+            sp = json.load(open(os.path.join(self.dir, "script.json"), encoding="utf-8")).get("seslendirme_metni", "").split("\n")
+            sp = [x for x in sp if x.strip()]
+            if len(sp) == len(sents): spoken = sp
+        except Exception: pass
+        segs, dur = align(self.voice, sents, spoken)
         for i, s in enumerate(c["scenes"]):
             mine = [g for g, o in zip(segs, owner) if o == i]
             if mine: s["start"], s["end"] = mine[0]["start"], mine[-1]["end"]
