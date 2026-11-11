@@ -1,16 +1,16 @@
 {
  "asama": "gorsel",
  "durum": "hata",
- "ozet": "1/10 görsel, ortalama puan 6.0/10",
+ "ozet": "1/10 görsel, ortalama puan 3.0/10",
  "maddeler": [
   {
    "seviye": "hata",
-   "mesaj": "Sağ alt köşede 'pollinations.ai' filigranı/yazısı bulunmaktadır.",
+   "mesaj": "Görselin sağ alt köşesinde 'pollinations.ai' yazısı/filigranı yer alıyor.",
    "sahne": 1
   },
   {
-   "seviye": "uyari",
-   "mesaj": "Binaların mimari yapısı MÖ 410 Antik Yunan döneminden ziyade modern/yakın dönem Akdeniz kıyı kasabalarını andırmaktadır.",
+   "seviye": "hata",
+   "mesaj": "M.Ö. 5. yüzyıl Antik Yunan limanı ve kadırgaları yerine modern tekneler, modern iskeleler ve döneme uygun olmayan bina yapıları görünmektedir (anakronizma).",
    "sahne": 1
   },
   {
@@ -29,6 +29,6 @@
   9,
   10
  ],
- "ortalama_puan": 6.0,
- "zaman": "2026-11-11T19:04:46Z"
+ "ortalama_puan": 3.0,
+ "zaman": "2026-11-11T20:05:12Z"
 }
