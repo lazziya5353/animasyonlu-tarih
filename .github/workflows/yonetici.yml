@@ -1,0 +1,26 @@
+name: "0 · Yönetici (panelden mesaj)"
+on:
+  workflow_dispatch:
+    inputs:
+      mesaj: { description: "Panelden yazılan mesaj", required: true }
+      slug: { description: "Panelde açık proje (isteğe bağlı)", required: false, default: "" }
+permissions:
+  contents: write
+  actions: write
+concurrency: { group: yonetici, cancel-in-progress: false }
+jobs:
+  yonet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      PYTHONUNBUFFERED: "1"
+      GH_TOKEN: ${{ github.token }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      MESAJ: ${{ inputs.mesaj }}
+      SLUG: ${{ inputs.slug }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python scripts/yonetici.py --mesaj "$MESAJ" --slug "$SLUG"

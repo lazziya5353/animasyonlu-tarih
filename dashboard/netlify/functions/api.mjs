@@ -14,6 +14,7 @@ const WORKFLOWS = {
   yayinci: "yayinci.yml",
   analist: "analist.yml",
   yorumcu: "yorumcu.yml",
+  yonetici: "yonetici.yml",
 };
 const ASAMALAR = ["senaryo", "ses", "gorsel", "kurgu", "hepsi"];
 const b64 = (o) => Buffer.from(JSON.stringify(o, null, 1)).toString("base64");
@@ -148,6 +149,17 @@ export default async (req) => {
         if (b.agent === "yorumcu" && inputs.mod && !["topla", "gonder"].includes(inputs.mod)) return json({ hata: "Geçersiz mod" }, 400);
         await dispatch(b.agent, inputs);
         return json({ ok: true });
+      }
+      case "komut": { // "Ajana yaz": serbest mesaj → yönetici ajan
+        const mesaj = String(b.mesaj || "").trim().slice(0, 1500);
+        if (mesaj.length < 2) return json({ hata: "Mesaj boş" }, 400);
+        if (b.slug && !validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);
+        await dispatch("yonetici", { mesaj, slug: b.slug || "" });
+        return json({ ok: true });
+      }
+      case "komut_gecmis": {
+        const g = (await readJson("data/yonetici.json")) || { mesajlar: [] };
+        return json({ mesajlar: (g.mesajlar || []).slice(-20), durum: (await readJson("data/status.json"))?.yonetici || null });
       }
       case "save_text": { // onaydan önce paneldeki metin düzenlemelerini kaydet
         if (!validSlug(b.slug) || !Array.isArray(b.sahneler)) return json({ hata: "Geçersiz istek" }, 400);

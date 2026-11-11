@@ -54,7 +54,7 @@ async function load() {
 function render() {
   const h = O.harcama, pct = Math.min(100, (h.aylik / h.butce) * 100);
   const srv = Object.entries(h.servis || {}).filter(([, v]) => v > 0).map(([k, v]) => `<span class="tag">${esc(k)} $${v.toFixed(2)}</span>`).join("");
-  let html = `<div class="card spend"><div class="row"><span class="mut">Bu ay harcama (Claude API)</span><span class="mut">Bütçe $${h.butce}</span></div>
+  let html = komutKart() + `<div class="card spend"><div class="row"><span class="mut">Bu ay harcama (Claude API)</span><span class="mut">Bütçe $${h.butce}</span></div>
     <b>$${h.aylik.toFixed(2)}</b><div class="bar"><i style="width:${pct}%"></i></div><div class="chips">${srv || '<span class="mut">Henüz harcama yok</span>'}</div></div>
     <h2>Ajanlar</h2><div class="agents">`;
   for (const a of AGENTS) {
@@ -88,7 +88,49 @@ function render() {
   document.querySelectorAll("[data-karar]").forEach((b) => (b.onclick = () => decide(b.dataset.baslik, b.dataset.karar)));
   document.querySelectorAll("[data-p]").forEach((b) => (b.onclick = () => openProject(b.dataset.p)));
   document.querySelectorAll("[data-th]").forEach(async (d) => { const u = await fileUrl(`projects/${d.dataset.th}/images/${DEMO ? "img01.jpg" : "s01.jpg"}`); if (u) d.style.backgroundImage = `url(${u})`; });
-  baglaYorumlar();
+  baglaYorumlar(); baglaKomut();
+}
+
+// ───────── "Ajana yaz": serbest mesajla yönetici ajan ─────────
+let KOMUT_BEKLE = null;
+function komutKart() {
+  return `<div class="card" id="komut"><div class="row"><b>🤖 Ajana yaz</b><span class="mut" style="font-size:11.5px">Ne istediğini yaz, ajanlar ona göre çalışsın · 💳 mesaj başı birkaç kuruş</span></div>
+    <div id="kmsg" style="max-height:300px;overflow:auto;margin:10px 0;display:flex;flex-direction:column;gap:8px"><span class="mut">Yükleniyor…</span></div>
+    <textarea id="kin" rows="3" style="width:100%;box-sizing:border-box;border-radius:12px;padding:10px;background:rgba(255,255,255,.05);color:inherit;border:1px solid rgba(255,255,255,.12);font:inherit"
+      placeholder="Ör: Üsküdar'ın adının hikâyesini 35 saniyelik kısa video yap · Galatasaray videosunun kapanışını değiştir · 3. sahnenin görselini daha karanlık yap"></textarea>
+    <div class="row" style="margin-top:8px"><span class="mut" id="kdurum" style="font-size:12px"></span><button class="gold" id="kgo">Gönder</button></div></div>`;
+}
+function komutCiz(m) {
+  const box = $("#kmsg"); if (!box) return;
+  if (!m.length) { box.innerHTML = `<span class="mut">Henüz mesaj yok. İlk isteğini yaz.</span>`; return; }
+  box.innerHTML = m.map((x) => {
+    const sen = x.kim === "sen";
+    const ek = sen ? "" : [...(x.islemler || []).map((i) => `✅ ${esc(i)}`), ...(x.hatalar || []).map((h) => `⚠️ ${esc(h)}`)].join("<br>");
+    return `<div style="align-self:${sen ? "flex-end" : "flex-start"};max-width:88%;padding:9px 12px;border-radius:14px;background:${sen ? "rgba(232,196,120,.18)" : "rgba(255,255,255,.06)"};white-space:pre-wrap">${esc(x.metin)}${ek ? `<div class="mut" style="font-size:12px;margin-top:6px">${ek}</div>` : ""}<div class="mut" style="font-size:10.5px;margin-top:4px">${ago(x.zaman)}</div></div>`;
+  }).join("");
+  box.scrollTop = box.scrollHeight;
+}
+async function komutYukle() {
+  try {
+    const r = await api("komut_gecmis"); komutCiz(r.mesajlar || []);
+    const son = (r.mesajlar || []).slice(-1)[0];
+    if (KOMUT_BEKLE && son && son.kim === "ajan" && new Date(son.zaman) >= KOMUT_BEKLE) { KOMUT_BEKLE = null; $("#kdurum").textContent = ""; toast("Ajan cevap verdi"); }
+    if (KOMUT_BEKLE) { $("#kdurum").textContent = "⏳ Ajan düşünüyor… (yaklaşık 30-60 sn)"; setTimeout(komutYukle, 8000); }
+  } catch (e) { const b = $("#kmsg"); if (b) b.innerHTML = `<span class="mut">${esc(e.message)}</span>`; }
+}
+function baglaKomut() {
+  const go = $("#kgo"); if (!go) return;
+  go.onclick = async () => {
+    const mesaj = $("#kin").value.trim(); if (!mesaj) return;
+    go.disabled = true;
+    try {
+      await guvenli(() => api("komut", { mesaj }), "Mesaj ajana gitti");
+      $("#kin").value = ""; KOMUT_BEKLE = new Date(Date.now() - 5000);
+      const box = $("#kmsg"); box.insertAdjacentHTML("beforeend", `<div style="align-self:flex-end;max-width:88%;padding:9px 12px;border-radius:14px;background:rgba(232,196,120,.18);white-space:pre-wrap">${esc(mesaj)}</div>`); box.scrollTop = box.scrollHeight;
+      setTimeout(komutYukle, 10000); $("#kdurum").textContent = "⏳ Ajan düşünüyor… (yaklaşık 30-60 sn)";
+    } finally { go.disabled = false; }
+  };
+  komutYukle();
 }
 function evRow(o) {
   const stars = "★".repeat(o.yildiz || 0) + "☆".repeat(5 - (o.yildiz || 0));
