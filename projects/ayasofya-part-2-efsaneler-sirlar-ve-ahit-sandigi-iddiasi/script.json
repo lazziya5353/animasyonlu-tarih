@@ -12,14 +12,16 @@
    "year": 537,
    "label": "537",
    "prompt": "A heavy ancient wooden door slowly opening in the center of a vast Byzantine brick and stone vault, revealing a dim underground passage with worn stone steps and a warm amber glow beyond, a small lone figure in a plain hooded cloak seen from far behind, mysterious and respectful mood, vertical 9:16 composition, main subject centered, empty space in the top and bottom thirds, no text, no inscriptions, no symbols on the door",
-   "fx": [
-    "fog",
-    "dust"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "A heavy ancient wooden door slowly opening in the center of a vast Byzantine brick and stone vault, revealing a dim underground passage with worn stone steps and a warm amber glow beyond, a small lone figure in a plain hooded cloak seen from far behind, mysterious and respectful mood, vertical 9:16 composition, main subject centered, empty space in the top and bottom thirds, no text, no inscriptions, no symbols on the door, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s01.jpg"
+   "image": "images/s01.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_184824_bdadea20-c70b-4bdb-ada3-7cc737babf0c.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -31,14 +33,16 @@
    "year": 537,
    "label": "537",
    "prompt": "Silhouette of a 6th-century Byzantine emperor in heavy purple and gold ceremonial robes and a jeweled crown, seen from far behind, standing in the immense nave of Hagia Sophia and gazing up at the vast central dome, golden shafts of light pouring through the dome windows, grand and solemn atmosphere, vertical 9:16 composition, subject centered, empty space at top and bottom, no faces visible, no text, no inscriptions, no mosaics with letters",
-   "fx": [
-    "rays",
-    "gold"
-   ],
+   "fx": [],
    "effect": "stamp",
    "type_text": "",
    "prompt_tam": "Silhouette of a 6th-century Byzantine emperor in heavy purple and gold ceremonial robes and a jeweled crown, seen from far behind, standing in the immense nave of Hagia Sophia and gazing up at the vast central dome, golden shafts of light pouring through the dome windows, grand and solemn atmosphere, vertical 9:16 composition, subject centered, empty space at top and bottom, no faces visible, no text, no inscriptions, no mosaics with letters, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s02.jpg"
+   "image": "images/s02.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_184824_bdadea20-c70b-4bdb-ada3-7cc737babf0c.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -50,14 +54,16 @@
    "year": 537,
    "label": "RİVAYET",
    "prompt": "Ornate gilded Byzantine reliquary boxes and a simple silver cross resting on a stone altar inside a dim ancient church, soft candlelight, deep shadows under marble arches, reverent atmosphere, vertical 9:16 composition, main subject centered, empty space at top and bottom, no people, no text, no inscriptions, no letters on objects",
-   "fx": [
-    "flicker",
-    "dust"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Ornate gilded Byzantine reliquary boxes and a simple silver cross resting on a stone altar inside a dim ancient church, soft candlelight, deep shadows under marble arches, reverent atmosphere, vertical 9:16 composition, main subject centered, empty space at top and bottom, no people, no text, no inscriptions, no letters on objects, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s03.jpg"
+   "image": "images/s03.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_190252_f4642ea1-6886-4087-86f3-91c4775d17b5.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -68,14 +74,16 @@
    "year": 537,
    "label": "İDDİA",
    "prompt": "A gold-covered ancient wooden chest with two winged golden figures on its lid, resting alone in a dark underground stone chamber under massive brick arches, a single beam of pale light falling on it, floating dust, mysterious and respectful mood, vertical 9:16 composition, chest centered, empty space at top and bottom, no people, no text, no inscriptions, no symbols",
-   "fx": [
-    "rays",
-    "dust"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "A gold-covered ancient wooden chest with two winged golden figures on its lid, resting alone in a dark underground stone chamber under massive brick arches, a single beam of pale light falling on it, floating dust, mysterious and respectful mood, vertical 9:16 composition, chest centered, empty space at top and bottom, no people, no text, no inscriptions, no symbols, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s04.jpg"
+   "image": "images/s04.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_190252_f4642ea1-6886-4087-86f3-91c4775d17b5.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -87,14 +95,16 @@
    "year": 537,
    "label": "İDDİA",
    "prompt": "An empty dark underground stone chamber with massive aged brick arches and a bare dusty floor, a single soft beam of light falling on an empty spot in the center, quiet and questioning mood, nothing on the floor, vertical 9:16 composition, subject centered, empty space at top and bottom, no people, no text, no inscriptions",
-   "fx": [
-    "fog",
-    "dust"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "An empty dark underground stone chamber with massive aged brick arches and a bare dusty floor, a single soft beam of light falling on an empty spot in the center, quiet and questioning mood, nothing on the floor, vertical 9:16 composition, subject centered, empty space at top and bottom, no people, no text, no inscriptions, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s05.jpg"
+   "image": "images/s05.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_190252_f4642ea1-6886-4087-86f3-91c4775d17b5.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -106,13 +116,16 @@
    "year": 537,
    "label": "RİVAYET",
    "prompt": "Vast underground Byzantine cistern with rows of ancient marble columns reflected in perfectly still dark water, a narrow arched brick tunnel entrance glowing faintly in the distance, soft amber lighting and light mist, vertical 9:16 composition, central perspective, empty space at top and bottom, no people, no text, no inscriptions",
-   "fx": [
-    "fog"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vast underground Byzantine cistern with rows of ancient marble columns reflected in perfectly still dark water, a narrow arched brick tunnel entrance glowing faintly in the distance, soft amber lighting and light mist, vertical 9:16 composition, central perspective, empty space at top and bottom, no people, no text, no inscriptions, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s06.jpg"
+   "image": "images/s06.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_184824_bdadea20-c70b-4bdb-ada3-7cc737babf0c.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -124,14 +137,16 @@
    "year": 537,
    "label": "RİVAYET",
    "prompt": "Close view of a square marble column covered with a worn bronze plate, with a smooth thumb-sized hole at hand height, a visitor's hand with thumb pressed into the hole (no face visible), the stone surface slightly damp and glistening, dim warm light inside a great historic church, vertical 9:16 composition, column centered, empty space at top and bottom, no text, no inscriptions",
-   "fx": [
-    "flicker",
-    "dust"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Close view of a square marble column covered with a worn bronze plate, with a smooth thumb-sized hole at hand height, a visitor's hand with thumb pressed into the hole (no face visible), the stone surface slightly damp and glistening, dim warm light inside a great historic church, vertical 9:16 composition, column centered, empty space at top and bottom, no text, no inscriptions, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s07.jpg"
+   "image": "images/s07.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_184824_bdadea20-c70b-4bdb-ada3-7cc737babf0c.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -143,13 +158,16 @@
    "year": 537,
    "label": "RİVAYET",
    "prompt": "A clay water jug and a cloth pouch of pale earth in the foreground, behind them a great stone half-dome of an ancient church surrounded by wooden scaffolding at dusk, tiny worker silhouettes far in the distance, warm golden light, respectful historical mood, vertical 9:16 composition, foreground objects centered, empty space at top and bottom, no faces, no text, no inscriptions",
-   "fx": [
-    "dust"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "A clay water jug and a cloth pouch of pale earth in the foreground, behind them a great stone half-dome of an ancient church surrounded by wooden scaffolding at dusk, tiny worker silhouettes far in the distance, warm golden light, respectful historical mood, vertical 9:16 composition, foreground objects centered, empty space at top and bottom, no faces, no text, no inscriptions, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s08.jpg"
+   "image": "images/s08.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_184824_bdadea20-c70b-4bdb-ada3-7cc737babf0c.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -161,14 +179,16 @@
    "year": 1453,
    "label": "RİVAYET",
    "prompt": "A softly glowing green and gold luminous silhouette of a robed wanderer seen from far behind, standing in the vast nave of Hagia Sophia beneath the great dome, light radiating gently around, plain walls with no calligraphy, reverent and mystical mood, vertical 9:16 composition, figure centered, empty space at top and bottom, no face visible, no text, no inscriptions, no flags",
-   "fx": [
-    "rays",
-    "gold"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "A softly glowing green and gold luminous silhouette of a robed wanderer seen from far behind, standing in the vast nave of Hagia Sophia beneath the great dome, light radiating gently around, plain walls with no calligraphy, reverent and mystical mood, vertical 9:16 composition, figure centered, empty space at top and bottom, no face visible, no text, no inscriptions, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s09.jpg"
+   "image": "images/s09.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_190252_f4642ea1-6886-4087-86f3-91c4775d17b5.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -180,14 +200,16 @@
    "year": 1453,
    "label": "BUGÜN",
    "prompt": "Wide dusk view of the Hagia Sophia dome and its four minarets rising above a misty Istanbul skyline silhouette, golden-orange sky, soft light on the dome, calm and reverent atmosphere, vertical 9:16 composition, building centered, empty space at top and bottom, no people, no text, no flags, no inscriptions",
-   "fx": [
-    "fog",
-    "gold"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Wide dusk view of the Hagia Sophia dome and its four minarets rising above a misty Istanbul skyline silhouette, golden-orange sky, soft light on the dome, calm and reverent atmosphere, vertical 9:16 composition, building centered, empty space at top and bottom, no people, no text, no flags, no inscriptions, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s10.jpg"
+   "image": "images/s10.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_190252_f4642ea1-6886-4087-86f3-91c4775d17b5.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
   }
  ],
  "outro": {

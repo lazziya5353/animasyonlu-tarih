@@ -2,7 +2,7 @@
  "title": "Ayasofya Part 2: Efsaneler ve Sırlar",
  "voice": "ses.wav",
  "voice_offset": 0.3,
- "hook": "KAPININ ARDINDA NE VAR?",
+ "hook": "AYASOFYA'NIN ALTINDA NE SAKLI?",
  "map_region": "avrupa_ortadogu",
  "scenes": [
   {
@@ -16,10 +16,7 @@
    "sub": "KAPININ ARDINDAKİ SIRLAR",
    "year": 537,
    "label": "537",
-   "fx": [
-    "fog",
-    "dust"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -27,7 +24,12 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_184824_bdadea20-c70b-4bdb-ada3-7cc737babf0c.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s02.jpg",
@@ -41,10 +43,7 @@
    "sub": "SÜLEYMAN, SENİ GEÇTİM",
    "year": 537,
    "label": "537",
-   "fx": [
-    "rays",
-    "gold"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -53,7 +52,12 @@
     0.5,
     0.55
    ],
-   "effect": "stamp"
+   "effect": "stamp",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_184824_bdadea20-c70b-4bdb-ada3-7cc737babf0c.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s03.jpg",
@@ -67,10 +71,7 @@
    "sub": "KUTSAL EMANETLER",
    "year": 537,
    "label": "RİVAYET",
-   "fx": [
-    "flicker",
-    "dust"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -78,7 +79,12 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_190252_f4642ea1-6886-4087-86f3-91c4775d17b5.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s04.jpg",
@@ -91,10 +97,7 @@
    "sub": "AHİT SANDIĞI İDDİASI",
    "year": 537,
    "label": "İDDİA",
-   "fx": [
-    "rays",
-    "dust"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -102,7 +105,12 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_190252_f4642ea1-6886-4087-86f3-91c4775d17b5.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s05.jpg",
@@ -116,10 +124,7 @@
    "sub": "TARİHÎ KANIT YOK",
    "year": 537,
    "label": "İDDİA",
-   "fx": [
-    "fog",
-    "dust"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -127,7 +132,12 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_190252_f4642ea1-6886-4087-86f3-91c4775d17b5.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s06.jpg",
@@ -141,9 +151,7 @@
    "sub": "SARNIÇLAR VE TÜNELLER",
    "year": 537,
    "label": "RİVAYET",
-   "fx": [
-    "fog"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -151,7 +159,12 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_184824_bdadea20-c70b-4bdb-ada3-7cc737babf0c.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s07.jpg",
@@ -165,10 +178,7 @@
    "sub": "TERLEYEN SÜTUN",
    "year": 537,
    "label": "RİVAYET",
-   "fx": [
-    "flicker",
-    "dust"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -176,7 +186,12 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_184824_bdadea20-c70b-4bdb-ada3-7cc737babf0c.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s08.jpg",
@@ -190,9 +205,7 @@
    "sub": "HARÇ RİVAYETİ",
    "year": 537,
    "label": "RİVAYET",
-   "fx": [
-    "dust"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -200,7 +213,12 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_184824_bdadea20-c70b-4bdb-ada3-7cc737babf0c.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s09.jpg",
@@ -214,10 +232,7 @@
    "sub": "KUBBE VE HIZIR ANLATISI",
    "year": 1453,
    "label": "RİVAYET",
-   "fx": [
-    "rays",
-    "gold"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -225,24 +240,26 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_190252_f4642ea1-6886-4087-86f3-91c4775d17b5.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s10.jpg",
    "start": null,
    "end": null,
    "lines": [
-    "Bu duvarlarda Hristiyan ve İslam anlatıları iç içe yaşıyor.",
-    "Hangisine inanıyorsun? Yorumlara yaz."
+    "Bu duvarlar 1.500 yıldır sırlarını saklıyor.",
+    "Bu sırlardan hangisini daha önce duymuştun? Yorumlara yaz."
    ],
    "big": "SEN?",
    "sub": "HANGİSİNE İNANIYORSUN?",
    "year": 1453,
    "label": "BUGÜN",
-   "fx": [
-    "fog",
-    "gold"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -250,7 +267,12 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_190252_f4642ea1-6886-4087-86f3-91c4775d17b5.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
   }
  ],
  "eras": [],
@@ -265,5 +287,6 @@
    0.3
   ]
  },
- "finale": ""
+ "finale": "",
+ "sade": true
 }
