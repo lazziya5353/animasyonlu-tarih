@@ -10,56 +10,27 @@
    "start": null,
    "end": null,
    "lines": [
-    "1348. Cenevizliler, Galata'nın tepesine bir kule dikiyor."
+    "1348. Cenevizliler, Galata'nın tepesine bir kule dikiyor.",
+    "Duvarları tabanda neredeyse 4 metre kalınlığında.",
+    "Taş taş, sıra sıra yükseliyor."
    ],
    "big": "1348",
    "sub": "CENEVİZLİLER",
    "year": 1348,
    "label": "1348",
-   "fx": [
-    "dust"
-   ],
+   "fx": [],
    "kb": [
-    1.5,
-    1.66,
-    0.52,
-    0.66,
-    0.52,
-    0.63
-   ],
-   "etiket": "TEMSİLİ"
-  },
-  {
-   "image": "images/s03.jpg",
-   "start": null,
-   "end": null,
-   "lines": [
-    "Duvarları tabanda neredeyse 4 metre kalınlığında.",
-    "Taş taş, sıra sıra yükseliyor."
-   ],
-   "big": "4 METRE",
-   "sub": "DUVAR KALINLIĞI",
-   "year": 1348,
-   "label": "1348",
-   "fx": [
-    "dust"
-   ],
-   "kb": [
-    1.03,
-    1.05,
+    1.04,
+    1.18,
     0.5,
-    0.48,
+    0.55,
     0.5,
-    0.48
+    0.5
    ],
-   "insa": {
-    "tur": "ins",
-    "onceki": "images/s03_bos.jpg",
-    "maske": "images/m03.png",
-    "bas": 0.3,
-    "sure": 3.2,
-    "giris": "flas"
-   },
+   "video": "videos/k1.mp4",
+   "v_bas": 0,
+   "v_son": 7.3,
+   "sfx": "tas",
    "etiket": "TEMSİLİ"
   },
   {
@@ -74,19 +45,48 @@
    "sub": "CHRISTEA TURRIS",
    "year": 1348,
    "label": "1348",
-   "fx": [
-    "gold"
-   ],
+   "fx": [],
    "kb": [
-    1.05,
-    1.065,
+    1.18,
+    1.04,
     0.5,
-    0.48,
     0.5,
-    0.48
+    0.5,
+    0.55
    ],
-   "insa": {
-    "tur": "dur"
+   "video": "videos/k1.mp4",
+   "v_bas": 7.3,
+   "v_son": 8.04,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1453. İstanbul fethediliyor.",
+    "Galata, savaşmadan Osmanlı'ya geçiyor."
+   ],
+   "big": "1453",
+   "sub": "OSMANLI",
+   "year": 1453,
+   "label": "1453",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k2.mp4",
+   "v_bas": 0,
+   "v_son": 4.5,
+   "sfx": {
+    "tur": "tas",
+    "bas": 0,
+    "son": 0.7
    },
    "etiket": "TEMSİLİ"
   },
@@ -95,34 +95,55 @@
    "start": null,
    "end": null,
    "lines": [
-    "1453. İstanbul fethediliyor.",
-    "Galata, savaşmadan Osmanlı'ya geçiyor.",
     "1509'da büyük deprem kuleyi yaralıyor. 1 yıl sonra onarılıyor."
    ],
-   "big": "1453",
-   "sub": "OSMANLI",
-   "year": 1453,
-   "label": "1453",
-   "fx": [
-    "fog"
-   ],
+   "big": "1509",
+   "sub": "BÜYÜK DEPREM",
+   "year": 1509,
+   "label": "1509",
+   "fx": [],
    "kb": [
-    1.065,
-    1.08,
+    1.18,
+    1.04,
     0.5,
-    0.48,
     0.5,
-    0.48
+    0.5,
+    0.55
    ],
-   "insa": {
-    "tur": "sok",
-    "onceki": "images/s03.jpg",
-    "maske": "images/m04.png",
-    "bas": 0.35,
-    "sure": 1.0,
-    "dis": true,
-    "sira": 22
+   "video": "videos/k2.mp4",
+   "v_bas": 4.5,
+   "v_son": 11.04,
+   "sfx": {
+    "tur": "deprem",
+    "bas": 0.05,
+    "son": 0.6
    },
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1794 ve 1831. İki büyük yangın."
+   ],
+   "big": "1794 · 1831",
+   "sub": "İKİ BÜYÜK YANGIN",
+   "year": 1794,
+   "label": "1794",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k3.mp4",
+   "v_bas": 0,
+   "v_son": 2.5,
+   "sfx": "yangin",
    "etiket": "TEMSİLİ"
   },
   {
@@ -130,34 +151,51 @@
    "start": null,
    "end": null,
    "lines": [
-    "1794 ve 1831. İki büyük yangın.",
     "II. Mahmud kuleye 2 kat ve sivri bir külah ekletiyor."
    ],
    "big": "1832",
    "sub": "II. MAHMUD",
    "year": 1832,
    "label": "1832",
-   "fx": [
-    "ember_few"
-   ],
+   "fx": [],
    "kb": [
-    1.08,
-    1.095,
+    1.18,
+    1.04,
     0.5,
-    0.48,
     0.5,
-    0.48
+    0.5,
+    0.55
    ],
-   "insa": {
-    "tur": "ins",
-    "onceki": "images/s04.jpg",
-    "maske": "images/m05.png",
-    "bas": 2.6,
-    "bas_satir": 1,
-    "bas_ek": 0.2,
-    "sure": 2.0,
-    "dis": true
-   },
+   "video": "videos/k3.mp4",
+   "v_bas": 2.5,
+   "v_son": 8,
+   "sfx": "tas",
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1875. Bir fırtına külahı devirip götürüyor."
+   ],
+   "big": "1875",
+   "sub": "FIRTINA",
+   "year": 1875,
+   "label": "1875",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k3.mp4",
+   "v_bas": 8,
+   "v_son": 13,
+   "sfx": "ruzgar",
    "etiket": "TEMSİLİ"
   },
   {
@@ -165,28 +203,50 @@
    "start": null,
    "end": null,
    "lines": [
-    "1875. Bir fırtına külahı devirip götürüyor.",
     "Kule yaklaşık 90 yıl külahsız kalıyor."
    ],
-   "big": "1875",
-   "sub": "KÜLAHSIZ YILLAR",
+   "big": "90 YIL",
+   "sub": "KÜLAHSIZ",
    "year": 1875,
    "label": "1875",
    "fx": [],
    "kb": [
-    1.095,
-    1.11,
+    1.18,
+    1.04,
     0.5,
-    0.48,
     0.5,
-    0.48
+    0.5,
+    0.55
    ],
-   "insa": {
-    "tur": "ucur",
-    "onceki": "images/s05.jpg",
-    "maske": "images/m06.png",
-    "bas": 0.45
-   },
+   "video": "videos/k3.mp4",
+   "v_bas": 13,
+   "v_son": 15.5,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1967. Külah geri dönüyor."
+   ],
+   "big": "1967",
+   "sub": "KÜLAH GERİ DÖNÜYOR",
+   "year": 1967,
+   "label": "1967",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k3.mp4",
+   "v_bas": 15.5,
+   "v_son": 18.5,
+   "sfx": "tas",
    "etiket": "TEMSİLİ"
   },
   {
@@ -194,7 +254,6 @@
    "start": null,
    "end": null,
    "lines": [
-    "1967. Külah geri dönüyor.",
     "Bugün 678 yaşında.",
     "Ve hâlâ İstanbul'u izliyor."
    ],
@@ -202,21 +261,18 @@
    "sub": "BUGÜN",
    "year": 2026,
    "label": "BUGÜN",
-   "fx": [
-    "gold"
-   ],
+   "fx": [],
    "kb": [
+    1.18,
     1.04,
-    1.14,
     0.5,
     0.5,
     0.5,
-    0.5
+    0.55
    ],
-   "insa": {
-    "tur": "dur",
-    "giris": "flas"
-   },
+   "video": "videos/k3.mp4",
+   "v_bas": 18.5,
+   "v_son": 26.04,
    "etiket": "TEMSİLİ"
   }
  ],
@@ -224,17 +280,17 @@
   {
    "name": "CENEVİZ",
    "from": 0,
-   "to": 2
+   "to": 1
   },
   {
    "name": "OSMANLI",
-   "from": 3,
-   "to": 5
+   "from": 2,
+   "to": 7
   },
   {
-   "name": "BUGÜN",
-   "from": 6,
-   "to": 6
+   "name": "CUMHURİYET",
+   "from": 8,
+   "to": 9
   }
  ],
  "outro_plan": {

@@ -288,6 +288,19 @@ class Project:
         ms = int(self.off * 1000)
         ses = (f"aresample=44100,adelay={ms}|{ms},apad=whole_dur={self.dur},highpass=f=70,afftdn=nf=-30,"
                f"acompressor=threshold=-18dB:ratio=2.5:attack=8:release=150")
+        ol = []
+        for sn in self.S:   # sahnelerdeki hafif efekt sesleri (engine/sfx.py)
+            x = sn.get("sfx")
+            if not x: continue
+            x = x if isinstance(x, dict) else {"tur": x}; d = sn["end"] - sn["start"]
+            ol.append((x["tur"], self.off + sn["start"] + d * x.get("bas", 0), self.off + sn["start"] + d * x.get("son", 1)))
+        if ol and not mc.get("aktif"):
+            import sfx as SFX
+            ef = os.path.join(out, "sfx.wav"); SFX.make(ef, self.dur, ol)
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", self.voice, "-i", ef, "-filter_complex",
+                            f"[0:a]{ses}[v];[1:a]volume={self.cfg.get('sfx_seviye', 0.22)}[e];"
+                            f"[v][e]amix=inputs=2:normalize=0:duration=longest,loudnorm=I=-14:TP=-1.5,atrim=0:{self.dur}[o]", "-map", "[o]", "-ar", "44100", mix], check=True)
+            return mix
         if not mc.get("aktif"):
             subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", self.voice, "-filter_complex",
                             f"[0:a]{ses},loudnorm=I=-14:TP=-1.5,atrim=0:{self.dur}[o]", "-map", "[o]", "-ar", "44100", mix], check=True)

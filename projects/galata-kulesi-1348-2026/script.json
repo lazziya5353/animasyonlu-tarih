@@ -12,17 +12,17 @@
   {
    "name": "CENEVİZ",
    "from": 0,
-   "to": 2
+   "to": 1
   },
   {
    "name": "OSMANLI",
-   "from": 3,
-   "to": 5
+   "from": 2,
+   "to": 7
   },
   {
-   "name": "BUGÜN",
-   "from": 6,
-   "to": 6
+   "name": "CUMHURİYET",
+   "from": 8,
+   "to": 9
   }
  ],
  "outro": {
@@ -46,71 +46,32 @@
   "https://www.thebyzantinelegacy.com/galata-tower"
  ],
  "kontrol_notlari": [
-  "Görseller Gemini uygulamasında elle üretildi; hepsi temsili canlandırma.",
-  "Taş taş inşa, söküm ve külahın uçması koddan çizilir (engine/insa.py); s03_bos.jpg ve m0X.png dosyaları scripts/dev/galata_maske.py ile üretildi.",
+  "Videolar Higgsfield (Seedance 2.5) ile üretildi, temsili canlandırma; Kurgucu klipleri cümle sürelerine uydurur (engine/klip.py).",
+  "Arka plandaki taş, deprem, rüzgâr ve yangın sesleri koddan üretilir (engine/sfx.py), kısık.",
   "Külahsız dönem 1875-1967 (92 yıl); metinde 'yaklaşık 90 yıl'."
  ],
  "sahneler": [
   {
    "lines": [
-    "1348. Cenevizliler, Galata'nın tepesine bir kule dikiyor."
+    "1348. Cenevizliler, Galata'nın tepesine bir kule dikiyor.",
+    "Duvarları tabanda neredeyse 4 metre kalınlığında.",
+    "Taş taş, sıra sıra yükseliyor."
    ],
    "big": "1348",
    "sub": "CENEVİZLİLER",
    "year": 1348,
    "label": "1348",
-   "prompt": "Galata Tower foundation ring, first stone courses, 1348, stonemasons",
-   "fx": [
-    "dust"
-   ],
+   "prompt": "",
+   "prompt_tam": "",
+   "fx": [],
    "effect": "",
    "type_text": "",
-   "prompt_tam": "Galata Tower foundation ring, first stone courses, 1348, stonemasons, same aerial camera, golden hour, cinematic film still, photorealistic, vertical 9:16, no text, no watermark",
    "image": "images/s01.jpg",
-   "kb": [
-    1.5,
-    1.66,
-    0.52,
-    0.66,
-    0.52,
-    0.63
-   ],
-   "etiket": "TEMSİLİ"
-  },
-  {
-   "lines": [
-    "Duvarları tabanda neredeyse 4 metre kalınlığında.",
-    "Taş taş, sıra sıra yükseliyor."
-   ],
-   "big": "4 METRE",
-   "sub": "DUVAR KALINLIĞI",
-   "year": 1348,
-   "label": "1348",
-   "prompt": "Completed Genoese Galata Tower 1348, crenellated top, wooden cone with cross, attached walls",
-   "fx": [
-    "dust"
-   ],
-   "effect": "",
-   "type_text": "",
-   "prompt_tam": "Completed Genoese Galata Tower 1348, crenellated top, wooden cone with cross, attached walls, same aerial camera, golden hour, cinematic film still, photorealistic, vertical 9:16, no text, no watermark",
-   "image": "images/s03.jpg",
-   "kb": [
-    1.03,
-    1.05,
-    0.5,
-    0.48,
-    0.5,
-    0.48
-   ],
+   "video": "videos/k1.mp4",
+   "v_bas": 0,
+   "v_son": 7.3,
    "etiket": "TEMSİLİ",
-   "insa": {
-    "tur": "ins",
-    "onceki": "images/s03_bos.jpg",
-    "maske": "images/m03.png",
-    "bas": 0.3,
-    "sure": 3.2,
-    "giris": "flas"
-   }
+   "sfx": "tas"
   },
   {
    "lines": [
@@ -121,135 +82,167 @@
    "sub": "CHRISTEA TURRIS",
    "year": 1348,
    "label": "1348",
-   "prompt": "Completed Genoese Galata Tower 1348, crenellated top, wooden cone with cross, attached walls",
-   "fx": [
-    "gold"
-   ],
+   "prompt": "",
+   "prompt_tam": "",
+   "fx": [],
    "effect": "",
    "type_text": "",
-   "prompt_tam": "Completed Genoese Galata Tower 1348, crenellated top, wooden cone with cross, attached walls, same aerial camera, golden hour, cinematic film still, photorealistic, vertical 9:16, no text, no watermark",
    "image": "images/s03.jpg",
-   "kb": [
-    1.05,
-    1.065,
-    0.5,
-    0.48,
-    0.5,
-    0.48
-   ],
-   "etiket": "TEMSİLİ",
-   "insa": {
-    "tur": "dur"
-   }
+   "video": "videos/k1.mp4",
+   "v_bas": 7.3,
+   "v_son": 8.04,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
     "1453. İstanbul fethediliyor.",
-    "Galata, savaşmadan Osmanlı'ya geçiyor.",
-    "1509'da büyük deprem kuleyi yaralıyor. 1 yıl sonra onarılıyor."
+    "Galata, savaşmadan Osmanlı'ya geçiyor."
    ],
    "big": "1453",
    "sub": "OSMANLI",
    "year": 1453,
    "label": "1453",
-   "prompt": "Galata Tower in the 16th century Ottoman period, cross removed, repaired top, cypress trees",
-   "fx": [
-    "fog"
-   ],
+   "prompt": "",
+   "prompt_tam": "",
+   "fx": [],
    "effect": "",
    "type_text": "",
-   "prompt_tam": "Galata Tower in the 16th century Ottoman period, cross removed, repaired top, cypress trees, same aerial camera, golden hour, cinematic film still, photorealistic, vertical 9:16, no text, no watermark",
-   "image": "images/s04.jpg",
-   "kb": [
-    1.065,
-    1.08,
-    0.5,
-    0.48,
-    0.5,
-    0.48
-   ],
+   "image": "images/s03.jpg",
+   "video": "videos/k2.mp4",
+   "v_bas": 0,
+   "v_son": 4.5,
    "etiket": "TEMSİLİ",
-   "insa": {
-    "tur": "sok",
-    "onceki": "images/s03.jpg",
-    "maske": "images/m04.png",
-    "bas": 0.35,
-    "sure": 1.0,
-    "dis": true,
-    "sira": 22
+   "sfx": {
+    "tur": "tas",
+    "bas": 0,
+    "son": 0.7
    }
   },
   {
    "lines": [
-    "1794 ve 1831. İki büyük yangın.",
+    "1509'da büyük deprem kuleyi yaralıyor. 1 yıl sonra onarılıyor."
+   ],
+   "big": "1509",
+   "sub": "BÜYÜK DEPREM",
+   "year": 1509,
+   "label": "1509",
+   "prompt": "",
+   "prompt_tam": "",
+   "fx": [],
+   "effect": "",
+   "type_text": "",
+   "image": "images/s04.jpg",
+   "video": "videos/k2.mp4",
+   "v_bas": 4.5,
+   "v_son": 11.04,
+   "etiket": "TEMSİLİ",
+   "sfx": {
+    "tur": "deprem",
+    "bas": 0.05,
+    "son": 0.6
+   }
+  },
+  {
+   "lines": [
+    "1794 ve 1831. İki büyük yangın."
+   ],
+   "big": "1794 · 1831",
+   "sub": "İKİ BÜYÜK YANGIN",
+   "year": 1794,
+   "label": "1794",
+   "prompt": "",
+   "prompt_tam": "",
+   "fx": [],
+   "effect": "",
+   "type_text": "",
+   "image": "images/s04.jpg",
+   "video": "videos/k3.mp4",
+   "v_bas": 0,
+   "v_son": 2.5,
+   "etiket": "TEMSİLİ",
+   "sfx": "yangin"
+  },
+  {
+   "lines": [
     "II. Mahmud kuleye 2 kat ve sivri bir külah ekletiyor."
    ],
    "big": "1832",
    "sub": "II. MAHMUD",
    "year": 1832,
    "label": "1832",
-   "prompt": "Galata Tower around 1850, two added upper storeys and tall lead conical roof, ruined walls",
-   "fx": [
-    "ember_few"
-   ],
-   "effect": "",
-   "type_text": "",
-   "prompt_tam": "Galata Tower around 1850, two added upper storeys and tall lead conical roof, ruined walls, same aerial camera, golden hour, cinematic film still, photorealistic, vertical 9:16, no text, no watermark",
-   "image": "images/s05.jpg",
-   "kb": [
-    1.08,
-    1.095,
-    0.5,
-    0.48,
-    0.5,
-    0.48
-   ],
-   "etiket": "TEMSİLİ",
-   "insa": {
-    "tur": "ins",
-    "onceki": "images/s04.jpg",
-    "maske": "images/m05.png",
-    "bas": 2.6,
-    "bas_satir": 1,
-    "bas_ek": 0.2,
-    "sure": 2.0,
-    "dis": true
-   }
-  },
-  {
-   "lines": [
-    "1875. Bir fırtına külahı devirip götürüyor.",
-    "Kule yaklaşık 90 yıl külahsız kalıyor."
-   ],
-   "big": "1875",
-   "sub": "KÜLAHSIZ YILLAR",
-   "year": 1875,
-   "label": "1875",
-   "prompt": "Galata Tower around 1900 without cone, two wooden polygonal storeys and flagpole",
+   "prompt": "",
+   "prompt_tam": "",
    "fx": [],
    "effect": "",
    "type_text": "",
-   "prompt_tam": "Galata Tower around 1900 without cone, two wooden polygonal storeys and flagpole, same aerial camera, golden hour, cinematic film still, photorealistic, vertical 9:16, no text, no watermark",
-   "image": "images/s06.jpg",
-   "kb": [
-    1.095,
-    1.11,
-    0.5,
-    0.48,
-    0.5,
-    0.48
-   ],
+   "image": "images/s05.jpg",
+   "video": "videos/k3.mp4",
+   "v_bas": 2.5,
+   "v_son": 8,
    "etiket": "TEMSİLİ",
-   "insa": {
-    "tur": "ucur",
-    "onceki": "images/s05.jpg",
-    "maske": "images/m06.png",
-    "bas": 0.45
-   }
+   "sfx": "tas"
   },
   {
    "lines": [
-    "1967. Külah geri dönüyor.",
+    "1875. Bir fırtına külahı devirip götürüyor."
+   ],
+   "big": "1875",
+   "sub": "FIRTINA",
+   "year": 1875,
+   "label": "1875",
+   "prompt": "",
+   "prompt_tam": "",
+   "fx": [],
+   "effect": "",
+   "type_text": "",
+   "image": "images/s05.jpg",
+   "video": "videos/k3.mp4",
+   "v_bas": 8,
+   "v_son": 13,
+   "etiket": "TEMSİLİ",
+   "sfx": "ruzgar"
+  },
+  {
+   "lines": [
+    "Kule yaklaşık 90 yıl külahsız kalıyor."
+   ],
+   "big": "90 YIL",
+   "sub": "KÜLAHSIZ",
+   "year": 1875,
+   "label": "1875",
+   "prompt": "",
+   "prompt_tam": "",
+   "fx": [],
+   "effect": "",
+   "type_text": "",
+   "image": "images/s06.jpg",
+   "video": "videos/k3.mp4",
+   "v_bas": 13,
+   "v_son": 15.5,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "lines": [
+    "1967. Külah geri dönüyor."
+   ],
+   "big": "1967",
+   "sub": "KÜLAH GERİ DÖNÜYOR",
+   "year": 1967,
+   "label": "1967",
+   "prompt": "",
+   "prompt_tam": "",
+   "fx": [],
+   "effect": "",
+   "type_text": "",
+   "image": "images/s06.jpg",
+   "video": "videos/k3.mp4",
+   "v_bas": 15.5,
+   "v_son": 18.5,
+   "etiket": "TEMSİLİ",
+   "sfx": "tas"
+  },
+  {
+   "lines": [
     "Bugün 678 yaşında.",
     "Ve hâlâ İstanbul'u izliyor."
    ],
@@ -257,27 +250,16 @@
    "sub": "BUGÜN",
    "year": 2026,
    "label": "BUGÜN",
-   "prompt": "Galata Tower today, aerial view over modern Beyoğlu and the Golden Horn",
-   "fx": [
-    "gold"
-   ],
+   "prompt": "",
+   "prompt_tam": "",
+   "fx": [],
    "effect": "",
    "type_text": "",
-   "prompt_tam": "Galata Tower today, aerial view over modern Beyoğlu and the Golden Horn, same aerial camera, golden hour, cinematic film still, photorealistic, vertical 9:16, no text, no watermark",
    "image": "images/s07.jpg",
-   "kb": [
-    1.04,
-    1.14,
-    0.5,
-    0.5,
-    0.5,
-    0.5
-   ],
-   "etiket": "TEMSİLİ",
-   "insa": {
-    "tur": "dur",
-    "giris": "flas"
-   }
+   "video": "videos/k3.mp4",
+   "v_bas": 18.5,
+   "v_son": 26.04,
+   "etiket": "TEMSİLİ"
   }
  ],
  "seslendirme_metni": "Bin üç yüz kırk sekiz. Cenevizliler, Galata'nın tepesine bir kule dikiyor.\nDuvarları tabanda neredeyse dört metre kalınlığında.\nTaş taş, sıra sıra yükseliyor.\nAdı: Kristea Turris.\nYani İsa Kulesi.\nBin dört yüz elli üç. İstanbul fethediliyor.\nGalata, savaşmadan Osmanlı'ya geçiyor.\nBin beş yüz dokuzda büyük deprem kuleyi yaralıyor. Bir yıl sonra onarılıyor.\nBin yedi yüz doksan dört ve bin sekiz yüz otuz bir. İki büyük yangın.\nİkinci Mahmud kuleye iki kat ve sivri bir külah ekletiyor.\nBin sekiz yüz yetmiş beş. Bir fırtına külahı devirip götürüyor.\nKule yaklaşık doksan yıl külahsız kalıyor.\nBin dokuz yüz altmış yedi. Külah geri dönüyor.\nBugün altı yüz yetmiş sekiz yaşında.\nVe hâlâ İstanbul'u izliyor."
