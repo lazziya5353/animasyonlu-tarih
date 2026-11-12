@@ -1,0 +1,36 @@
+{
+ "asama": "gorsel",
+ "durum": "hata",
+ "ozet": "1/12 görsel, ortalama puan 6.0/10",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "Görsel, istemde belirtilen 'yüksek havadan tepeden bakış (high aerial top-down view)' ve 'deniz kenarında bir tepe üzerinde konumlanmış bina' konseptine uymamaktadır; iç mekan/avlu benzeri yakın bir açı sunmaktadır.",
+   "sahne": 1
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Sağ alt köşede filigran/logo ('pollinations.ai') bulunmaktadır.",
+   "sahne": 1
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "eksik görsel: sahne 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12"
+  }
+ ],
+ "eksik": [
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "ortalama_puan": 6.0,
+ "zaman": "2026-11-12T18:44:13Z"
+}

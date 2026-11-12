@@ -12,10 +12,10 @@
   "zaman": "2026-11-12T17:53:27Z"
  },
  "gorsel": {
-  "durum": "tamam",
-  "mesaj": "kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti: ses hazır",
-  "cikti": "projects/kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti",
-  "zaman": "2026-11-12T14:39:14Z"
+  "durum": "hata",
+  "mesaj": "ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle: ses hazır, görseller elle yüklenecek: Pollinations hatası 402: {\"status\":402,\"success\":false,\"error\":{\"code\":\"FREE_LIMIT\",\"message\":\"Free limit reached: 1 image every 45 seconds per IP. Retry after 23s, or get unlimited images with a pollen key at https://enter.p, 1 görsel üretildi",
+  "cikti": "projects/ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle",
+  "zaman": "2026-11-12T18:34:46Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-12T18:04:47Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle: senaryo !",
+  "durum": "hata",
+  "mesaj": "ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle: gorsel ✗",
   "cikti": "projects/ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle/kontrol",
-  "zaman": "2026-11-12T17:53:27Z"
+  "zaman": "2026-11-12T18:44:13Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
