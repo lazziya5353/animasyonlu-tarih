@@ -218,8 +218,9 @@ class Project:
             mv = self.mapr.frame(cam, ml, m["end"] - m["start"], m.get("routes", []), m.get("cities", []), m.get("title"), {k: tuple(v) for k, v in m.get("labels", {}).items()})
             fr = Image.blend(fr, mv, clamp(ml / .35) * clamp((m["end"] - tv) / .4))
         if self.ay: self.ay.draw(fr, tv)
-        fr.alpha_composite(Image.new("RGBA", (W, H), (60, 35, 10, 16))); fr.alpha_composite(BANDS); fr.alpha_composite(VIG)
-        fr.alpha_composite(GRAIN[int(T * 24) % len(GRAIN)])
+        if not c.get("sade"):   # "sade": true -> film filtresi yok (kahverengi ton, kararan kenarlar, kumlanma); hazır video kliplerde renkler olduğu gibi kalır
+            fr.alpha_composite(Image.new("RGBA", (W, H), (60, 35, 10, 16))); fr.alpha_composite(BANDS); fr.alpha_composite(VIG)
+            fr.alpha_composite(GRAIN[int(T * 24) % len(GRAIN)])
         if c.get("hook") and T < 3.2: put(fr, fit(c["hook"], "sans9", 40, WHITE, min_size=24, spacing=8), W / 2, 150, clamp(T / .5) * clamp((3.2 - T) / .5))
         if not m or (tv - m["start"]) > (m["end"] - m["start"]) - 0.2:
             self.titles(fr, i, tv, lt)

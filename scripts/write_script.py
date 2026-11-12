@@ -19,7 +19,7 @@ def proje_yaz(sc, d):
                        **{k: s[k] for k in ("anim", "insa", "video", "v_bas", "v_son", "sfx", "etiket", "kaynak", "timeline") if k in s}, **({"kb": s["kb"]} if s.get("kb") else {})})
     proj = {"title": sc.get("baslik", sc.get("konu", "")), "voice": "ses.wav", "voice_offset": 0.3, "hook": sc.get("hook"), "map_region": sc.get("map_region", "avrupa_ortadogu"),
             "scenes": scenes, "eras": sc.get("eras", []), "outro_plan": sc.get("outro"), "maps_plan": sc.get("maps", []), "cards_plan": sc.get("cards", []),
-            "music": {"booms": [0.3]}, "finale": sc.get("finale", ""), **({"seri": sc["seri"]} if sc.get("seri") else {})}
+            "music": {"booms": [0.3]}, "finale": sc.get("finale", ""), **({"sade": True} if sc.get("sade") else {}), **({"seri": sc["seri"]} if sc.get("seri") else {})}
     json.dump(proj, open(os.path.join(d, "project.json"), "w"), ensure_ascii=False, indent=1)
 
 
