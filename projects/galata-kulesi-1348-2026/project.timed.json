@@ -8,7 +8,7 @@
   {
    "image": "images/s01.jpg",
    "start": 0.0,
-   "end": 10.43,
+   "end": 10.41,
    "lines": [
     "1348. Cenevizliler, Galata'nın tepesine bir kule dikiyor.",
     "Duvarları tabanda neredeyse 4 metre kalınlığında.",
@@ -35,7 +35,7 @@
   },
   {
    "image": "images/s03.jpg",
-   "start": 10.43,
+   "start": 10.41,
    "end": 14.27,
    "lines": [
     "Adı: Christea Turris.",
@@ -149,7 +149,7 @@
   {
    "image": "images/s05.jpg",
    "start": 28.85,
-   "end": 32.17,
+   "end": 32.21,
    "lines": [
     "II. Mahmud kuleye 2 kat ve sivri bir külah ekletiyor."
    ],
@@ -174,8 +174,8 @@
   },
   {
    "image": "images/s05.jpg",
-   "start": 32.17,
-   "end": 36.71,
+   "start": 32.21,
+   "end": 36.690000000000005,
    "lines": [
     "1875. Bir fırtına külahı devirip götürüyor."
    ],
@@ -200,7 +200,7 @@
   },
   {
    "image": "images/s06.jpg",
-   "start": 36.71,
+   "start": 36.690000000000005,
    "end": 39.65,
    "lines": [
     "Kule yaklaşık 90 yıl külahsız kalıyor."
@@ -305,6 +305,7 @@
   ]
  },
  "finale": "",
+ "sade": true,
  "outro": {
   "start": 43.463,
   "title": "GALATA KULESİ",
@@ -346,12 +347,12 @@
    "text": "Duvarları tabanda neredeyse 4 metre kalınlığında."
   },
   {
-   "start": 8.2,
-   "end": 10.16,
+   "start": 8.16,
+   "end": 10.18,
    "text": "Taş taş, sıra sıra yükseliyor."
   },
   {
-   "start": 10.58,
+   "start": 10.56,
    "end": 12.24,
    "text": "Adı: Christea Turris."
   },
@@ -367,7 +368,7 @@
   },
   {
    "start": 17.14,
-   "end": 19.58,
+   "end": 19.6,
    "text": "Galata, savaşmadan Osmanlı'ya geçiyor."
   },
   {
@@ -386,12 +387,12 @@
    "text": "II. Mahmud kuleye 2 kat ve sivri bir külah ekletiyor."
   },
   {
-   "start": 32.32,
+   "start": 32.36,
    "end": 36.5,
    "text": "1875. Bir fırtına külahı devirip götürüyor."
   },
   {
-   "start": 36.86,
+   "start": 36.84,
    "end": 39.4,
    "text": "Kule yaklaşık 90 yıl külahsız kalıyor."
   },
