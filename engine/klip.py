@@ -1,8 +1,7 @@
 """Video klipli sahneler: hazır bir video (ör. Higgsfield) sahnenin süresine, yani anlatıcının cümlelerine uydurulur.
 
 project.json sahnesinde:  "video": "videos/k1.mp4", "v_bas": 0.0, "v_son": 8.0   (klibin kullanılacak aralığı, saniye; yoksa tamamı)
-Parça sahne süresine yayılır: cümle kısaysa hızlanır, uzunsa yavaşlar. En fazla 1,5 kat yavaşlar (daha fazlası takılır);
-süre yine de yetmezse son karede bekler. Yavaşlatırken ara kareler karıştırılarak yumuşatılır.
+Parça sahne süresine yayılır: cümle kısaysa hızlanır, uzunsa yavaşlar. Cümle parçadan çok uzunsa görüntü donmaz: giderek yavaşlar ve son kareye cümleyle birlikte varır; ayrıca hafif bir yakınlaşma sürer. Yavaşlatırken ara kareler karıştırılarak yumuşatılır.
 """
 import os, glob, subprocess, tempfile
 from PIL import Image
@@ -29,9 +28,10 @@ class Klip:
         return self._c[i]
 
     def frame(self, lt, dur):
-        n = self.n; sure = n / 30.0; lt = max(0., lt)
-        if dur > sure * EN_YAVAS: pos = min(lt * 30 / EN_YAVAS, n - 1)      # çok uzun cümle: 1,5 kat yavaş oynat, sonra son karede bekle
-        else: pos = clamp(lt / max(.1, dur)) * (n - 1)                      # parçayı sahne süresine tam yay
+        n = self.n; sure = n / 30.0; lt = max(0., lt); u = clamp(lt / max(.1, dur)); r = dur / sure
+        if r <= EN_YAVAS: pos = u * (n - 1)                                 # parçayı sahne süresine tam yay
+        else: pos = (n - 1) * (1 - (1 - u) ** (r / 1.25))                   # çok uzun cümle: donmak yerine giderek yavaşlar, son kareye cümleyle birlikte varır
         i = int(pos); f = pos - i; a = self._al(i)
         if f > .05 and i + 1 < n: a = Image.blend(a, self._al(i + 1), f)
-        return a.convert("RGBA")
+        z = 1 + .07 * u; bw, bh = W / z, H / z                              # hafif, kesintisiz yakınlaşma: görüntü hiçbir an tam durmaz
+        return a.resize((W, H), Image.BILINEAR, box=((W - bw) / 2, (H - bh) / 2, (W + bw) / 2, (H + bh) / 2)).convert("RGBA")
