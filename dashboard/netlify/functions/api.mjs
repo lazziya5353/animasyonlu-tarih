@@ -147,7 +147,7 @@ export default async (req) => {
         const servis = {};
         kayit.filter((x) => x.zaman.startsWith(ay)).forEach((x) => (servis[x.servis] = (servis[x.servis] || 0) + x.usd));
         const projeler = (list || []).filter((x) => x.type === "dir").map((x) => x.name);
-        return json({ status: status || {}, runs, report, projeler, basliklar: await basliklar(projeler).catch(() => ({})), analiz,
+        return json({ status: status || {}, runs, report, projeler, basliklar: await basliklar(projeler).catch(() => ({})), arsiv: ((await getStore("ayar").get("arsiv", { type: "json" })) || []).filter((x) => projeler.includes(x)), analiz,
           yorumlar: { bekleyen: (yorumlar?.yorumlar || []).filter((y) => y.durum === "yeni").slice(0, 40), fikirler: (yorumlar?.fikirler || []).slice(-8).reverse() },
           harcama: { aylik, servis, butce: Number(process.env.AYLIK_BUTCE_USD || 15), son: kayit.slice(-8).reverse() } });
       }
@@ -246,6 +246,12 @@ export default async (req) => {
         if (b.onay !== b.slug) return json({ hata: "Onay tutmadı" }, 400);
         await dispatch("sil", { slug: b.slug, tur: b.tur });
         return json({ ok: true });
+      }
+      case "arsiv": { // bitmiş videoyu arşive at / arşivden çıkar (hiçbir dosya silinmez)
+        if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);
+        const st = getStore("ayar"); let A = (await st.get("arsiv", { type: "json" })) || [];
+        A = A.filter((x) => x !== b.slug); if (!b.cikar) A.unshift(b.slug);
+        await st.setJSON("arsiv", A); return json({ ok: true, arsiv: A });
       }
       case "push_anahtar": return json({ anahtar: (await vapid()).publicKey });
       case "push_abone": { // bu cihazı bildirim listesine ekle / çıkar

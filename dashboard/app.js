@@ -48,7 +48,11 @@ async function start() { $("#login").classList.add("hide"); $("#app").classList.
 const projeAdi = (p) => { if (O?.basliklar?.[p]) return O.basliklar[p]; const t = String(p).replace(/-/g, " ").trim(); return t.charAt(0).toLocaleUpperCase("tr") + t.slice(1); };
 // ajan mesajlarındaki klasör adlarını (uskudar-in-tarihi-...) okunur başlıkla değiştir
 const adlandir = (t) => { let x = String(t || ""); for (const p of [...(O?.projeler || [])].sort((a, b) => b.length - a.length)) if (x.includes(p)) x = x.split("projects/" + p).join(projeAdi(p)).split(p).join(projeAdi(p)); return x; };
-let O = null, CUR = null; const GIZLI = new Set(); // silinmekte olan projeler (iş bitene kadar listede görünmesin)
+let O = null, CUR = null, ARSIV_ACIK = false;
+async function arsivle(slug, cikar) {
+  try { const r = await api("arsiv", { slug, cikar }); O.arsiv = r.arsiv; toast(cikar ? `"${projeAdi(slug)}" arşivden çıktı` : `"${projeAdi(slug)}" arşive atıldı 📦`); if (CUR === slug) openProject(slug, true); else render(); }
+  catch (e) { toast(e.message || "Hata"); }
+} const GIZLI = new Set(); // silinmekte olan projeler (iş bitene kadar listede görünmesin)
 async function load() {
   try { O = await api("overview"); O.projeler = O.projeler.filter((p) => !GIZLI.has(p)); render();
     if (!load.ilk) { load.ilk = 1; const m = location.hash.match(/^#p=(.+)/);   // sayfa #p=... ile açıldıysa (ör. Canlı ilerleme'den geri dönüş) o projeyi aç
@@ -86,7 +90,10 @@ function render() {
   const fk = O.yorumlar?.fikirler || [];
   if (fk.length) html += `<div class="card" style="margin-top:12px"><div class="d" style="color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.08em">💡 İZLEYİCİ ÖNERİLERİ</div>${fk.map((f) => `<div class="mut" style="padding:5px 0">${esc(f.konu)} · <span style="opacity:.7">${esc(f.kaynak)}</span></div>`).join("")}</div>`;
   html += `<h2>Projeler</h2>`;
-  html += O.projeler.length ? O.projeler.map((p) => `<div class="card proj" data-p="${esc(p)}"><div class="th" data-th="${esc(p)}"></div><div class="ad"><b>${esc(projeAdi(p))}</b><span class="mut">Aç →</span></div><button class="cop" data-cop="${esc(p)}" title="Projeyi sil" aria-label="Projeyi sil">🗑</button></div>`).join("") : `<div class="card mut">Henüz proje yok.</div>`;
+  const ARS = new Set(O.arsiv || []), aktif = O.projeler.filter((p) => !ARS.has(p)), arsivde = (O.arsiv || []).filter((p) => O.projeler.includes(p));
+  const kart = (p, ars) => `<div class="card proj" data-p="${esc(p)}"><div class="th" data-th="${esc(p)}"></div><div class="ad"><b>${esc(projeAdi(p))}</b><span class="mut">Aç →</span></div><button class="cop ars" data-ars="${esc(p)}" data-cikar="${ars ? 1 : ""}" title="${ars ? "Arşivden çıkar" : "Arşive at"}">${ars ? "↩" : "📦"}</button><button class="cop" data-cop="${esc(p)}" title="Projeyi sil" aria-label="Projeyi sil">🗑</button></div>`;
+  html += aktif.length ? aktif.map((p) => kart(p, false)).join("") : `<div class="card mut">${arsivde.length ? "Aktif proje yok, hepsi arşivde." : "Henüz proje yok."}</div>`;
+  if (arsivde.length) html += `<details class="arsiv" ${ARSIV_ACIK ? "open" : ""}><summary><h2 style="display:inline">📦 Arşiv <span class="mut" style="font-size:14px">(${arsivde.length})</span></h2></summary>${arsivde.map((p) => kart(p, true)).join("")}</details>`;
   html += `<h2>Son harcamalar</h2><div class="card">${(h.son || []).filter((x) => x.usd > 0).map((x) => `<div class="mut" style="display:flex;justify-content:space-between;padding:4px 0"><span>${esc(x.ajan)} · ${esc(x.detay)}</span><span>$${x.usd.toFixed(3)}</span></div>`).join("") || '<span class="mut">Kayıt yok</span>'}</div>`;
   $("#main").innerHTML = html;
   document.querySelectorAll("[data-run]").forEach((b) => (b.onclick = () => runAgent(b.dataset.run)));
@@ -98,6 +105,8 @@ function render() {
   }));
   document.querySelectorAll("[data-karar]").forEach((b) => (b.onclick = () => decide(b.dataset.baslik, b.dataset.karar)));
   document.querySelectorAll("[data-p]").forEach((b) => (b.onclick = () => openProject(b.dataset.p)));
+  const ad = document.querySelector("details.arsiv"); if (ad) ad.ontoggle = () => (ARSIV_ACIK = ad.open);
+  document.querySelectorAll("[data-ars]").forEach((b) => (b.onclick = (e) => { e.stopPropagation(); arsivle(b.dataset.ars, !!b.dataset.cikar); }));
   document.querySelectorAll("[data-cop]").forEach((b) => (b.onclick = async (e) => {
     e.stopPropagation(); const slug = b.dataset.cop;
     if (!confirm(`"${projeAdi(slug)}" projesi tamamen silinsin mi?\n\nMetin, görseller, ses ve video gider. Geri alınamaz.`)) return;
@@ -246,7 +255,7 @@ async function openProject(slug, gecmisten) {
   $("#main").classList.add("hide"); d.classList.remove("hide");
   const scenes = sc?.sahneler || (P.project?.scenes || []).map((s) => ({ image: s.image, big: s.big }));
   const sahneSorun = {}; for (const m of P.kontrol?.gorsel?.maddeler || []) if (m.sahne && m.seviye !== "bilgi") (sahneSorun[m.sahne] ||= []).push(m);
-  let h = `<div class="flex" style="justify-content:space-between;align-items:center"><button class="ghost" id="back">← Geri</button><a class="btn gold" href="studyo.html?p=${encodeURIComponent(slug)}${DEMO ? "&demo=1" : ""}">🎬 Canlı ilerleme</a></div><h2 style="margin-top:14px">${esc(sc?.baslik || P.project?.title || slug)}</h2>`;
+  let h = `<div class="flex" style="justify-content:space-between;align-items:center"><button class="ghost" id="back">← Geri</button><button class="ghost" id="arsB">${(O?.arsiv || []).includes(slug) ? "↩ Arşivden çıkar" : "📦 Arşive at"}</button><a class="btn gold" href="studyo.html?p=${encodeURIComponent(slug)}${DEMO ? "&demo=1" : ""}">🎬 Canlı ilerleme</a></div><h2 style="margin-top:14px">${esc(sc?.baslik || P.project?.title || slug)}</h2>`;
   h += kontrolKart(P);
   if (sc) {
     const st = sc.durum === "onaylandi" ? `<span class="st ok">Onaylandı</span>` : `<span class="st wait">Onay bekliyor</span>`;
@@ -278,6 +287,7 @@ async function openProject(slug, gecmisten) {
   window.scrollTo(0, 0);
   $("#back").onclick = () => (history.state?.p ? history.back() : projeKapat());
   if ($("#filtre")) $("#filtre").onclick = async (e) => { e.target.disabled = true; try { const r = await api("ayar", { slug, sade: !P.project?.sade }); toast(r.sade ? "Filtre kapatıldı. Görmek için videoyu yeniden üret." : "Filtre açıldı. Görmek için videoyu yeniden üret."); openProject(slug, true); } catch (err) { e.target.disabled = false; toast(err.message || "Hata"); } };
+  if ($("#arsB")) $("#arsB").onclick = () => arsivle(slug, (O?.arsiv || []).includes(slug));
   d.querySelectorAll("[data-sil]").forEach((b) => (b.onclick = async () => {
     const hepsi = b.dataset.sil === "hepsi", ad = sc?.baslik || slug;
     if (!confirm(hepsi ? `"${ad}" projesi tamamen silinsin mi?\n\nMetin, görseller, ses ve video gider. Geri alınamaz.` : `"${ad}" videosu silinsin mi?\n\nMetin, görseller ve ses kalır; istersen videoyu yeniden üretebilirsin.`)) return;
