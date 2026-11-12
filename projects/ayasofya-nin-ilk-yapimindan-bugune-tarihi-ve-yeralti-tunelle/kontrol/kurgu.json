@@ -1,24 +1,19 @@
 {
  "asama": "kurgu",
- "durum": "hata",
- "ozet": "70 sn, -15 LUFS, senkron 18/19",
+ "durum": "tamam",
+ "ozet": "70 sn, -15 LUFS, senkron 19/19",
  "maddeler": [
-  {
-   "seviye": "uyari",
-   "mesaj": "altyazı süresi okunuşa uymuyor (38 kar/sn): “404'te çıkan yangın ilk yapıyı yok etti.”"
-  },
   {
    "seviye": "bilgi",
    "mesaj": "sığmadığı için küçültüldü: “Part 2: efsaneler ve sırlar”"
   },
   {
-   "seviye": "hata",
-   "mesaj": "Ortadaki altyazı arka plan ile aynı koyu tonlarda olduğundan ve kontursuz/gölgesiz yazıldığından tamamen okunmaz durumdadır.",
-   "sahne": 6
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.6-flash: The read operation timed out)"
   }
  ],
  "sure": 70.1,
  "lufs": -14.6,
- "senkron": "18/19",
- "zaman": "2026-11-12T18:58:47Z"
+ "senkron": "19/19",
+ "zaman": "2026-11-12T19:23:49Z"
 }

@@ -8,7 +8,7 @@
   {
    "image": "images/s01.jpg",
    "start": 0.0,
-   "end": 10.639999999999999,
+   "end": 9.03,
    "lines": [
     "Ayasofya'nın altında, henüz tamamen keşfedilmemiş bir dünya var.",
     "Ama önce yukarıdan başlayalım: 360'ta ahşap çatılı ilk bazilika."
@@ -29,12 +29,12 @@
    "video": "videos/k1.mp4",
    "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_175211_2a288a04-4c8a-470e-9eda-47d17dcbb33f.mp4",
    "v_bas": 0,
-   "v_son": 5,
+   "v_son": 6.5,
    "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s02.jpg",
-   "start": 10.639999999999999,
+   "start": 9.03,
    "end": 12.03,
    "lines": [
     "404'te çıkan yangın ilk yapıyı yok etti."
@@ -54,14 +54,14 @@
    ],
    "video": "videos/k1.mp4",
    "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_175211_2a288a04-4c8a-470e-9eda-47d17dcbb33f.mp4",
-   "v_bas": 5,
+   "v_bas": 6.5,
    "v_son": 9,
    "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s03.jpg",
    "start": 12.03,
-   "end": 15.66,
+   "end": 15.67,
    "lines": [
     "415'te II. Theodosius ikinci kiliseyi yaptırdı."
    ],
@@ -86,8 +86,8 @@
   },
   {
    "image": "images/s04.jpg",
-   "start": 15.66,
-   "end": 18.860000000000003,
+   "start": 15.67,
+   "end": 18.85,
    "lines": [
     "532'deki Nika isyanında ise o da yandı."
    ],
@@ -112,8 +112,8 @@
   },
   {
    "image": "images/s05.jpg",
-   "start": 18.860000000000003,
-   "end": 25.87,
+   "start": 18.85,
+   "end": 25.450000000000003,
    "lines": [
     "İmparator Justinianus 537'de bugünkü yapıyı tamamladı.",
     "Devasa kubbesi çağının dünyasını şaşırttı."
@@ -140,8 +140,8 @@
   },
   {
    "image": "images/s06.jpg",
-   "start": 25.87,
-   "end": 30.860000000000003,
+   "start": 25.450000000000003,
+   "end": 31.05,
    "lines": [
     "558'de deprem kubbeyi yıktı.",
     "Kubbe daha yüksek biçimde yeniden yapıldı."
@@ -167,8 +167,8 @@
   },
   {
    "image": "images/s07.jpg",
-   "start": 30.860000000000003,
-   "end": 37.45,
+   "start": 31.05,
+   "end": 37.410000000000004,
    "lines": [
     "1453'te İstanbul fethedildi.",
     "Ayasofya camiye dönüştü, sonraki yüzyıllarda minareler eklendi."
@@ -195,8 +195,8 @@
   },
   {
    "image": "images/s08.jpg",
-   "start": 37.45,
-   "end": 39.31,
+   "start": 37.410000000000004,
+   "end": 42.47,
    "lines": [
     "1847-1849'da mimar Fossati büyük bir onarım yaptı."
    ],
@@ -216,13 +216,13 @@
    "video": "videos/k2.mp4",
    "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_183038_549f6128-a09c-4d22-995a-4af168565660.mp4",
    "v_bas": 6,
-   "v_son": 8.5,
+   "v_son": 8,
    "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s09.jpg",
-   "start": 39.31,
-   "end": 42.18,
+   "start": 42.47,
+   "end": 45.99,
    "lines": [
     "1934'te Ayasofya'nın müzeye çevrilmesine karar verildi."
    ],
@@ -241,14 +241,14 @@
    ],
    "video": "videos/k2.mp4",
    "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_183038_549f6128-a09c-4d22-995a-4af168565660.mp4",
-   "v_bas": 8.5,
+   "v_bas": 8,
    "v_son": 11,
    "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s10.jpg",
-   "start": 42.18,
-   "end": 46.050000000000004,
+   "start": 45.99,
+   "end": 49.190000000000005,
    "lines": [
     "2020'de yeniden cami olarak ibadete açıldı."
    ],
@@ -269,13 +269,13 @@
    "video": "videos/k2.mp4",
    "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_183038_549f6128-a09c-4d22-995a-4af168565660.mp4",
    "v_bas": 11,
-   "v_son": 16,
+   "v_son": 14,
    "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s11.jpg",
-   "start": 46.050000000000004,
-   "end": 54.85,
+   "start": 49.190000000000005,
+   "end": 56.550000000000004,
    "lines": [
     "Bugün restorasyon sürüyor.",
     "Tünellerden, su kanallarından ve mahzenlerden yaklaşık 3 bin ton çamur ve moloz çıkarıldı."
@@ -295,13 +295,13 @@
    ],
    "video": "videos/k2.mp4",
    "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_183038_549f6128-a09c-4d22-995a-4af168565660.mp4",
-   "v_bas": 16,
-   "v_son": 21,
+   "v_bas": 14,
+   "v_son": 19.5,
    "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s12.jpg",
-   "start": 54.85,
+   "start": 56.550000000000004,
    "end": 69.57375,
    "lines": [
     "Bakan Ersoy, uygun bölümlerin ziyarete açılmasını hedeflediklerini söyledi.",
@@ -323,7 +323,7 @@
    ],
    "video": "videos/k2.mp4",
    "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_183038_549f6128-a09c-4d22-995a-4af168565660.mp4",
-   "v_bas": 21,
+   "v_bas": 19.5,
    "v_son": 25,
    "etiket": "TEMSİLİ"
   }
@@ -377,8 +377,8 @@
  "sade": true,
  "cards": [
   {
-   "start": 47.25000000000001,
-   "end": 54.550000000000004,
+   "start": 50.39000000000001,
+   "end": 56.25000000000001,
    "value": 3000,
    "unit": "TON",
    "small": "ÇAMUR VE MOLOZ ÇIKARILDI"
@@ -393,119 +393,119 @@
  "duration": 70.07,
  "jumps": [
   {
-   "t": 15.66,
+   "t": 15.67,
    "value": 117
   },
   {
-   "t": 30.860000000000003,
+   "t": 31.05,
    "value": 895
   },
   {
-   "t": 37.45,
+   "t": 37.410000000000004,
    "value": 394
   },
   {
-   "t": 39.31,
+   "t": 42.47,
    "value": 87
   },
   {
-   "t": 42.18,
+   "t": 45.99,
    "value": 86
   }
  ],
  "captions": [
   {
-   "start": 0.25,
-   "end": 6.01,
+   "start": 0.0,
+   "end": 4.04,
    "text": "Ayasofya'nın altında, henüz tamamen keşfedilmemiş bir dünya var."
   },
   {
-   "start": 6.37,
-   "end": 10.62,
+   "start": 4.42,
+   "end": 8.8,
    "text": "Ama önce yukarıdan başlayalım: 360'ta ahşap çatılı ilk bazilika."
   },
   {
-   "start": 10.79,
-   "end": 11.83,
+   "start": 9.18,
+   "end": 11.72,
    "text": "404'te çıkan yangın ilk yapıyı yok etti."
   },
   {
    "start": 12.18,
-   "end": 15.45,
+   "end": 15.42,
    "text": "415'te II. Theodosius ikinci kiliseyi yaptırdı."
   },
   {
-   "start": 15.81,
-   "end": 18.67,
+   "start": 15.82,
+   "end": 18.68,
    "text": "532'deki Nika isyanında ise o da yandı."
   },
   {
-   "start": 19.01,
-   "end": 22.63,
+   "start": 19.0,
+   "end": 22.52,
    "text": "İmparator Justinianus 537'de bugünkü yapıyı tamamladı."
   },
   {
-   "start": 22.97,
-   "end": 25.65,
+   "start": 22.98,
+   "end": 25.57,
    "text": "Devasa kubbesi çağının dünyasını şaşırttı."
   },
   {
-   "start": 26.02,
-   "end": 28.12,
+   "start": 25.6,
+   "end": 28.1,
    "text": "558'de deprem kubbeyi yıktı."
   },
   {
-   "start": 28.47,
-   "end": 30.66,
+   "start": 28.4,
+   "end": 30.58,
    "text": "Kubbe daha yüksek biçimde yeniden yapıldı."
   },
   {
-   "start": 31.01,
+   "start": 31.2,
    "end": 33.12,
    "text": "1453'te İstanbul fethedildi."
   },
   {
    "start": 33.46,
-   "end": 37.24,
+   "end": 37.16,
    "text": "Ayasofya camiye dönüştü, sonraki yüzyıllarda minareler eklendi."
   },
   {
-   "start": 37.6,
-   "end": 39.46,
+   "start": 37.56,
+   "end": 41.96,
    "text": "1847-1849'da mimar Fossati büyük bir onarım yaptı."
   },
   {
-   "start": 39.46,
-   "end": 41.98,
+   "start": 42.62,
+   "end": 45.82,
    "text": "1934'te Ayasofya'nın müzeye çevrilmesine karar verildi."
   },
   {
-   "start": 42.33,
-   "end": 45.84,
+   "start": 46.14,
+   "end": 48.94,
    "text": "2020'de yeniden cami olarak ibadete açıldı."
   },
   {
-   "start": 46.2,
-   "end": 49.04,
+   "start": 49.34,
+   "end": 50.59,
    "text": "Bugün restorasyon sürüyor."
   },
   {
-   "start": 49.4,
-   "end": 55.0,
+   "start": 50.62,
+   "end": 56.38,
    "text": "Tünellerden, su kanallarından ve mahzenlerden yaklaşık 3 bin ton çamur ve moloz çıkarıldı."
   },
   {
-   "start": 55.0,
+   "start": 56.7,
    "end": 60.6,
    "text": "Bakan Ersoy, uygun bölümlerin ziyarete açılmasını hedeflediklerini söyledi."
   },
   {
-   "start": 60.97,
-   "end": 62.63,
+   "start": 60.92,
+   "end": 62.54,
    "text": "Kesin bir tarih ise henüz yok."
   },
   {
-   "start": 62.99,
+   "start": 62.96,
    "end": 67.2,
    "text": "Efsaneleri, sırları ve Ahit Sandığı iddiası için Part 2'yi izleyin."
   }
