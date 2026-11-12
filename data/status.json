@@ -7,9 +7,9 @@
  },
  "senarist": {
   "durum": "tamam",
-  "mesaj": "'İshak Paşa Sarayı'nın tarihi' metni onay bekliyor",
-  "cikti": "projects/ishak-pasa-sarayinin-tarihi/script.json",
-  "zaman": "2026-11-12T20:23:15Z"
+  "mesaj": "'Fatih Sultan Mehmet ve Kazıklı Voyvoda Part 2: 1462 Eflak seferi ve Gece Baskını' metni onay bekliyor",
+  "cikti": "projects/fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef/script.json",
+  "zaman": "2026-11-12T22:46:57Z"
  },
  "gorsel": {
   "durum": "tamam",
@@ -25,9 +25,9 @@
  },
  "kontrol": {
   "durum": "tamam",
-  "mesaj": "ishak-pasa-sarayinin-tarihi: senaryo !",
-  "cikti": "projects/ishak-pasa-sarayinin-tarihi/kontrol",
-  "zaman": "2026-11-12T20:23:16Z"
+  "mesaj": "fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef: senaryo !",
+  "cikti": "projects/fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef/kontrol",
+  "zaman": "2026-11-12T22:46:58Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

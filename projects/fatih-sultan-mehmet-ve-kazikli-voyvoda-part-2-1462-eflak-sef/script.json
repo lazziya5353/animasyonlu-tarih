@@ -1,0 +1,279 @@
+{
+ "baslik": "Fatih ve Kazıklı Voyvoda Part 2: 1462 Gece Baskını",
+ "hook": "1 GECE, 1 HEDEF: FATİH'İN ÇADIRI",
+ "map_region": "avrupa_ortadogu",
+ "sahneler": [
+  {
+   "lines": [
+    "Haziran 1462'nin başında Osmanlı ordusu, Eflak direnişine rağmen Tuna'yı geçti. Ama asıl tehlike karanlıkta bekliyordu."
+   ],
+   "big": "TUNA",
+   "sub": "TUNA GEÇİLDİ",
+   "year": 1462,
+   "label": "1462",
+   "prompt": "Vertical 9:16 cinematic wide shot of a wide river at dawn, many wooden boats and pontoon crossings carrying distant 15th-century Ottoman soldiers and horses to the far bank, misty reeds in the foreground, army shown only as small distant silhouettes, no flags, no text, main subject centered, empty sky space at the top and calm empty water space at the bottom",
+   "fx": [
+    "fog"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 cinematic wide shot of a wide river at dawn, many wooden boats and pontoon crossings carrying distant 15th-century Ottoman soldiers and horses to the far bank, misty reeds in the foreground, army shown only as small distant silhouettes, no flags, no text, main subject centered, empty sky space at the top and calm empty water space at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s01.jpg"
+  },
+  {
+   "lines": [
+    "Osmanlı ordusu ilerliyor, ama karşısında ordu yok. Vlad geri çekilerek direniyor."
+   ],
+   "big": "SESSİZ",
+   "sub": "KARŞIDA ORDU YOK",
+   "year": 1462,
+   "label": "1462",
+   "prompt": "Vertical 9:16 cinematic shot of an empty misty plain and dark forest edge in medieval Wallachia, a long column of a 15th-century army visible only as tiny distant silhouettes on a dirt road, lonely and tense mood, no text, no flags, main subject centered, open sky at the top, empty foreground at the bottom",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 cinematic shot of an empty misty plain and dark forest edge in medieval Wallachia, a long column of a 15th-century army visible only as tiny distant silhouettes on a dirt road, lonely and tense mood, no text, no flags, main subject centered, open sky at the top, empty foreground at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s02.jpg"
+  },
+  {
+   "lines": [
+    "17 Haziran 1462 gecesi, Târgoviște yakınlarında Vlad ordugâha baskın düzenliyor."
+   ],
+   "big": "1462",
+   "sub": "17 HAZİRAN GECESİ",
+   "year": 1462,
+   "label": "17 Haziran 1462",
+   "prompt": "Vertical 9:16 dramatic night scene, a group of horsemen with burning torches galloping across a dark field toward a large army camp of tents in the far distance, riders shown only as dark silhouettes from far away, glowing torchlight and drifting sparks, no faces, no text, no flags, main subject centered, dark sky space at the top, dark ground space at the bottom",
+   "fx": [
+    "ember",
+    "smoke"
+   ],
+   "effect": "stamp",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 dramatic night scene, a group of horsemen with burning torches galloping across a dark field toward a large army camp of tents in the far distance, riders shown only as dark silhouettes from far away, glowing torchlight and drifting sparks, no faces, no text, no flags, main subject centered, dark sky space at the top, dark ground space at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s03.jpg"
+  },
+  {
+   "lines": [
+    "Hedefi bizzat Sultan Mehmed'di. Meşale taşıyan süvariler uyuyan ordugâha daldı."
+   ],
+   "big": "HEDEF",
+   "sub": "SULTANIN ÇADIRI",
+   "year": 1462,
+   "label": "1462",
+   "prompt": "Vertical 9:16 night view of a large ornate 15th-century Ottoman royal tent glowing from within at the center of a camp, seen from a distance and from behind, torch-bearing horsemen as dark silhouettes approaching through smoke, chaotic but non-violent atmosphere, no blood, no faces, no text, no flags, main subject centered, space at the top and at the bottom",
+   "fx": [
+    "flicker",
+    "smoke",
+    "ember_few"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 night view of a large ornate 15th-century Ottoman royal tent glowing from within at the center of a camp, seen from a distance and from behind, torch-bearing horsemen as dark silhouettes approaching through smoke, chaotic but non-violent atmosphere, no blood, no faces, no text, no flags, main subject centered, space at the top and at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s04.jpg"
+  },
+  {
+   "lines": [
+    "Baskın amacına ulaşamadı. Sultan sağ kurtuldu; sabah Osmanlı birlikleri Eflaklıları takip etti."
+   ],
+   "big": "SAĞ",
+   "sub": "SULTAN KURTULDU",
+   "year": 1462,
+   "label": "1462",
+   "prompt": "Vertical 9:16 gray dawn light over a quiet Ottoman camp after a night raid, scattered tents and smoldering torches, rows of Janissaries in tall white felt hats standing in formation as distant silhouettes seen from behind, calm and tense mood, no blood, no bodies, no faces, no text, no flags, main subject centered, pale sky space at the top, empty ground at the bottom",
+   "fx": [
+    "smoke",
+    "fog"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 gray dawn light over a quiet Ottoman camp after a night raid, scattered tents and smoldering torches, rows of Janissaries in tall white felt hats standing in formation as distant silhouettes seen from behind, calm and tense mood, no blood, no bodies, no faces, no text, no flags, main subject centered, pale sky space at the top, empty ground at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s05.jpg"
+  },
+  {
+   "lines": [
+    "Ordu başkent Târgoviște'ye vardığında şehir terk edilmişti. Dönemin anlatılarına göre çevrede kazıklar ormanı vardı."
+   ],
+   "big": "BAŞKENT",
+   "sub": "ŞEHİR BOŞALTILMIŞ",
+   "year": 1462,
+   "label": "1462",
+   "prompt": "Vertical 9:16 eerie foggy view of an abandoned medieval Wallachian town with its gates wide open and empty, in the far distance a faint forest of tall thin wooden poles as dim silhouettes in heavy mist, only vertical poles, no bodies, no blood, no people, no text, no flags, main subject centered, grey sky space at the top, misty empty road at the bottom",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 eerie foggy view of an abandoned medieval Wallachian town with its gates wide open and empty, in the far distance a faint forest of tall thin wooden poles as dim silhouettes in heavy mist, only vertical poles, no bodies, no blood, no people, no text, no flags, main subject centered, grey sky space at the top, misty empty road at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s06.jpg"
+  },
+  {
+   "lines": [
+    "Fatih, Vlad'ın kardeşi Radu'yu Eflak tahtına geçirip ordusuyla ayrıldı. Boyarların çoğu Radu'ya geçti."
+   ],
+   "big": "RADU",
+   "sub": "YENİ VOYVODA",
+   "year": 1462,
+   "label": "1462",
+   "prompt": "Vertical 9:16 interior of a dim medieval Wallachian court hall with stone arches and a simple carved wooden throne at the center, a young nobleman in 15th-century Eastern European noble robes seen only from behind as a silhouette, a few boyars in fur-trimmed caftans as distant shadowy figures, warm candlelight, no faces, no text, no flags, main subject centered, dark ceiling space at the top, stone floor space at the bottom",
+   "fx": [
+    "flicker",
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 interior of a dim medieval Wallachian court hall with stone arches and a simple carved wooden throne at the center, a young nobleman in 15th-century Eastern European noble robes seen only from behind as a silhouette, a few boyars in fur-trimmed caftans as distant shadowy figures, warm candlelight, no faces, no text, no flags, main subject centered, dark ceiling space at the top, stone floor space at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s07.jpg"
+  },
+  {
+   "lines": [
+    "Vlad Macaristan'a sığındı; Kral Corvinus onu tutuklattı. Yıllarca tutsak kaldı."
+   ],
+   "big": "KAÇIŞ",
+   "sub": "MACARİSTAN'A SIĞINDI",
+   "year": 1462,
+   "label": "1462",
+   "prompt": "Vertical 9:16 cold dusk scene, a lone rider in a dark cloak and fur hat seen far away as a silhouette on a mountain path heading toward snowy Carpathian peaks, on the horizon a distant stone castle on a hill above a wide river bend, no faces, no text, no flags, main subject centered, twilight sky at the top, snowy path at the bottom",
+   "fx": [
+    "snow",
+    "fog"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 cold dusk scene, a lone rider in a dark cloak and fur hat seen far away as a silhouette on a mountain path heading toward snowy Carpathian peaks, on the horizon a distant stone castle on a hill above a wide river bend, no faces, no text, no flags, main subject centered, twilight sky at the top, snowy path at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s08.jpg"
+  },
+  {
+   "lines": [
+    "1476'da Macar ve Boğdan desteğiyle yeniden tahta çıktı, ama kısa süre sonra savaşta öldü."
+   ],
+   "big": "1476",
+   "sub": "SON SAVAŞ",
+   "year": 1476,
+   "label": "1476",
+   "prompt": "Vertical 9:16 cold winter battlefield at dawn in thick fog, far-off silhouettes of cavalry and spears barely visible in the mist, bare trees and frozen ground, somber and quiet mood, no blood, no bodies, no faces, no text, no flags, main subject centered, pale sky space at the top, empty snowy ground at the bottom",
+   "fx": [
+    "fog",
+    "snow"
+   ],
+   "effect": "stamp",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 cold winter battlefield at dawn in thick fog, far-off silhouettes of cavalry and spears barely visible in the mist, bare trees and frozen ground, somber and quiet mood, no blood, no bodies, no faces, no text, no flags, main subject centered, pale sky space at the top, empty snowy ground at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s09.jpg"
+  },
+  {
+   "lines": [
+    "Asıl efsane sonradan doğdu: 1897'de Bram Stoker, Dracula romanını yayımladı. Vampir kurgu, Vlad ise gerçekti."
+   ],
+   "big": "1897",
+   "sub": "DRAKULA ROMANI",
+   "year": 1897,
+   "label": "1897",
+   "prompt": "Vertical 9:16 gothic fantasy scene, a lone dark castle on a high cliff in the Carpathian mountains under a huge full moon, bats flying across the sky, swirling mist below, completely empty of people, no text, no flags, main subject centered, moonlit sky space at the top, dark misty valley at the bottom",
+   "fx": [
+    "fog",
+    "flicker"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 gothic fantasy scene, a lone dark castle on a high cliff in the Carpathian mountains under a huge full moon, bats flying across the sky, swirling mist below, completely empty of people, no text, no flags, main subject centered, moonlit sky space at the top, dark misty valley at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s10.jpg"
+  }
+ ],
+ "finale": "",
+ "maps": [],
+ "cards": [
+  {
+   "scene": 8,
+   "value": 14,
+   "unit": "YIL",
+   "small": "BASKINDAN ÖLÜME"
+  }
+ ],
+ "eras": [
+  {
+   "name": "EFLAK SEFERİ",
+   "from": 0,
+   "to": 5
+  },
+  {
+   "name": "SONRASI",
+   "from": 6,
+   "to": 8
+  },
+  {
+   "name": "EFSANE",
+   "from": 9,
+   "to": 9
+  }
+ ],
+ "outro": {
+  "title": "ANİMASYON TARİH",
+  "line": "Bir sonraki hikâyede görüşmek üzere."
+ },
+ "aciklama": "Drakula'yı filmlerden tanıyorsun ama gerçek Vlad'ın bir sultanın ordugâhına gece baskını yaptığını biliyor muydun? 17 Haziran 1462'de Târgoviște yakınlarında olan bu baskının hedefi Fatih'ti. Sonuna kadar izle.\n\n📌 Kaydet / arkadaşına gönder\n(Görseller temsilidir.) (Rivayetler tarihî belge değildir.)",
+ "kanca_alternatifleri": [
+  "SULTANI UYURKEN YAKALAMAYA ÇALIŞTI",
+  "17 HAZİRAN 1462: KARANLIKTA SULTANA BASKIN",
+  "TÂRGOVİŞTE BASKINI'NDAN 14 YIL SONRA ÖLDÜ",
+  "GERÇEK DRAKULA SULTANA GECE BASKINI YAPTI"
+ ],
+ "aciklama_alternatifleri": [
+  "Bir voyvoda, devrin en güçlü sultanının ordugâhına gece daldı. Peki baskın amacına ulaştı mı? Vlad'ın 1462 hikâyesini sonuna kadar izle.\n\n📌 Kaydet / arkadaşına gönder\n(Görseller temsilidir.) (Rivayetler tarihî belge değildir.)",
+  "14 yıl: Târgoviște baskınından Vlad'ın ölümüne geçen süre. Bu sürede tahtını kaybetti, tutsak kaldı ve geri döndü. Sonuna kadar izle.\n\n📌 Kaydet / arkadaşına gönder\n(Görseller temsilidir.) (Rivayetler tarihî belge değildir.)"
+ ],
+ "hashtagler": [
+  "#tarih",
+  "#keşfet",
+  "#reels",
+  "#fatihsultanmehmet",
+  "#kazıklıvoyvoda",
+  "#drakula",
+  "#eflakseferi",
+  "#osmanlıtarihi",
+  "#gecebaskını",
+  "#tarihbilgisi",
+  "#tarihhikayeleri",
+  "#animasyontarih"
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Night_attack_at_T%C3%A2rgovi%C8%99te",
+  "https://tr.wikipedia.org/wiki/T%C3%A2rgovi%C5%9Fte_gece_bask%C4%B1n%C4%B1",
+  "https://en.wikipedia.org/wiki/Vlad_the_Impaler",
+  "https://en.wikipedia.org/wiki/Radu_the_Handsome",
+  "https://en.wikipedia.org/wiki/Battle_of_Turnu",
+  "https://en.wikipedia.org/wiki/Turnu_Fortress",
+  "https://dergipark.org.tr/en/pub/abad/issue/80570/1343458",
+  "https://www.sabah.com.tr/yazarlar/erhan-afyoncu/2023/01/08/zalimlikte-sinir-tanimayan-kazikli-voyvoda-basindan-oldu",
+  "https://www.medievalists.net/2022/10/vlad-impaler-timeline/",
+  "https://www.medievalists.net/2025/12/impalings-vlad-the-impaler/",
+  "https://evrimagaci.org/blog/fatih-sultan-mehmed-ve-kazikli-voyvoda-drakula-23188",
+  "https://tarihkultur.com/fatih-sultan-mehmet-vs-vlad-tepes-kardeslikten-dusmanliga-h2701"
+ ],
+ "kontrol_notlari": [
+  "Metin 124 kelime. Sistem yönergesi 130-150, ek not 120-130 istiyordu; ek notun aralığı seçildi. Yıllar rakamla yazıldı.",
+  "Gece Baskını 17 Haziran 1462 (Târgoviște yakını): en.wikipedia (Night attack at Târgoviște), tr.wikipedia, Ekşi Şeyler ve Evrim Ağacı aynı tarihi veriyor. Bazı kaynaklar 16-17 Haziran gecesi diyor, bu yüzden 'gecesi' denildi.",
+  "Baskının hedefi Sultan'dı ve Sultan sağ kurtuldu: en.wikipedia, tr.wikipedia ve romaniabattles ile uyumlu. Ertesi sabah Mihaloğlu Ali Bey komutasındaki birliklerin Eflaklıları takip etmesi Erhan Afyoncu (Sabah) ve tr.wikipedia'da var.",
+  "Baskının sonucu kaynaklarda değişiyor: tr.wikipedia 'Osmanlı zaferi', en.wikipedia 'sonuçsuz' diyor. Bu yüzden metinde zafer ya da yenilgi iddiası yok, sadece 'amacına ulaşamadı' deniyor.",
+  "Tuna geçişi: Battle of Turnu (3/4 Haziran 1462, Yeniçerilerin gece geçişi) ve Turnu Fortress sayfalarında var. Kaynakların çoğu ikincil olduğu için tarih 'Haziran başı' diye genel tutuldu. Yayından önce birincil ya da akademik bir kaynakla teyit edilmesi iyi olur.",
+  "Vlad'ın açık meydan savaşı yerine geri çekilme taktiği kullanması: DergiPark makalesi (Anadolu ve Balkan Araştırmaları Dergisi) ve Afyoncu. Osmanlı ordusunun günlerce düşmanla karşılaşmaması da Afyoncu'da var.",
+  "Târgoviște'nin terk edilmiş ve kapılarının açık bulunması: Afyoncu ve tr.wikipedia/Wikiwand. Kazıklar ormanı anlatısı (Halkokondiles'e dayanan anlatı, Evrim Ağacı, Tarih Kültür) 'dönemin anlatılarına göre' diye verildi. Kazık sayıları ve uzunluk rakamları kaynaklarda tartışmalı olduğu için yazılmadı. Görselde yalnızca uzak, sisli ince direk siluetleri var, ceset ve kan yok.",
+  "Radu'nun tahta geçirilmesi: tr.wikipedia, en.wikipedia (Radu the Handsome), Medievalists.net ve Afyoncu. Mehmed'in Radu'yu Brăila'da bırakıp ayrılması ve boyarların çoğunun Radu'ya geçmesi en.wikipedia'da var.",
+  "Vlad'ın Macaristan'a sığınıp Corvinus tarafından tutuklanması (1462 sonu): en.wikipedia, Medievalists.net timeline ve Ekşi Şeyler uyumlu. Esaret süresi kaynaklarda değişiyor (en.wikipedia 1463-1475, Medievalists yaklaşık sekiz ya da on dört yıl). Bu yüzden metinde 'yıllarca' denildi, süre yazılmadı.",
+  "Ölüm: 1476 sonu ya da 1477 başı, Snagov yakınında savaşta. en.wikipedia, Medievalists.net ve Justina Szilágyi sayfası uyumlu. Kesin gün belirsiz olduğu için sadece 'yıl 1476' kullanıldı. 1476'da yeniden tahta çıkışta Macar ve Boğdan desteği en.wikipedia'da var.",
+  "Bram Stoker, Dracula, 1897: genel kabul görmüş bir bilgi. Bu araştırmada bu bilgiye özel ikinci bir kaynak sayfası açılmadı. Ekşi Şeyler ve tr.wikipedia yalnızca Stoker uyarlaması filmden söz ediyor. Yayından önce bir ansiklopedi kaydıyla (ör. Britannica) teyit edilmesi önerilir. Metin 'Vampir kurgu, Vlad gerçekti' diyerek efsane ile tarihi ayırıyor.",
+  "'14 YIL' kartı: 1462 (baskın) ile 1476 (ölüm) arasındaki fark. Kesin yıl farkıdır, ölüm tarihi belirsizliği ay düzeyindedir.",
+  "Bilinçli olarak yazılmayanlar: Vlad ile Mehmed arasındaki dostluk iddiası (belgelenmemiş), ölü sayıları (tartışmalı), Fatih'in korkup geri çekildiği rivayeti, uydurma sözler.",
+  "Haritalar kullanılmadı, çünkü izin verilen şehir listesinde Târgoviște ve Tuna hattı yok ve rota yanıltıcı olurdu.",
+  "Efektler: 'stamp' 2 sahnede (17 Haziran 1462 ve 1476). Finale yok, çünkü konu Türk zaferiyle bitmiyor."
+ ],
+ "konu": "Fatih Sultan Mehmet ve Kazıklı Voyvoda Part 2: 1462 Eflak seferi ve Gece Baskını",
+ "tarih": "",
+ "slug": "fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef",
+ "durum": "onay-bekliyor",
+ "seslendirme_metni": "Haziran bin dört yüz altmış ikinin başında Osmanlı ordusu, Eflak direnişine rağmen Tuna'yı geçti. Ama asıl tehlike karanlıkta bekliyordu.\nOsmanlı ordusu ilerliyor, ama karşısında ordu yok. Vlad geri çekilerek direniyor.\non yedi Haziran bin dört yüz altmış iki gecesi, Târgoviște yakınlarında Vlad ordugâha baskın düzenliyor.\nHedefi bizzat Sultan Mehmed'di. Meşale taşıyan süvariler uyuyan ordugâha daldı.\nBaskın amacına ulaşamadı. Sultan sağ kurtuldu; sabah Osmanlı birlikleri Eflaklıları takip etti.\nOrdu başkent Târgoviște'ye vardığında şehir terk edilmişti. Dönemin anlatılarına göre çevrede kazıklar ormanı vardı.\nFatih, Vlad'ın kardeşi Radu'yu Eflak tahtına geçirip ordusuyla ayrıldı. Boyarların çoğu Radu'ya geçti.\nVlad Macaristan'a sığındı; Kral Corvinus onu tutuklattı. Yıllarca tutsak kaldı.\nbin dört yüz yetmiş altıda Macar ve Boğdan desteğiyle yeniden tahta çıktı, ama kısa süre sonra savaşta öldü.\nAsıl efsane sonradan doğdu: bin sekiz yüz doksan yedide Bram Stoker, Dracula romanını yayımladı. Vampir kurgu, Vlad ise gerçekti."
+}

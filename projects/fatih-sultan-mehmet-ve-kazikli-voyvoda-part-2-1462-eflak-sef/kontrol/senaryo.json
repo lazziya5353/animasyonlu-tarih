@@ -1,0 +1,59 @@
+{
+ "asama": "senaryo",
+ "durum": "uyari",
+ "ozet": "10 sahne, tahmini 72 sn · 10 not",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 4 satıra taşıyor, kısaltılabilir: “Haziran 1462'nin başında Osmanlı ordusu, Eflak direnişine ra…”",
+   "sahne": 1
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Osmanlı ordusu ilerliyor, ama karşısında ordu yok. Vlad geri…”",
+   "sahne": 2
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “17 Haziran 1462 gecesi, Târgoviște yakınlarında Vlad ordugâh…”",
+   "sahne": 3
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Hedefi bizzat Sultan Mehmed'di. Meşale taşıyan süvariler uyu…”",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Baskın amacına ulaşamadı. Sultan sağ kurtuldu; sabah Osmanlı…”",
+   "sahne": 5
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 4 satıra taşıyor, kısaltılabilir: “Ordu başkent Târgoviște'ye vardığında şehir terk edilmişti. …”",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 4 satıra taşıyor, kısaltılabilir: “Fatih, Vlad'ın kardeşi Radu'yu Eflak tahtına geçirip ordusuy…”",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Vlad Macaristan'a sığındı; Kral Corvinus onu tutuklattı. Yıl…”",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “1476'da Macar ve Boğdan desteğiyle yeniden tahta çıktı, ama …”",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 4 satıra taşıyor, kısaltılabilir: “Asıl efsane sonradan doğdu: 1897'de Bram Stoker, Dracula rom…”",
+   "sahne": 10
+  }
+ ],
+ "tahmini_sure": 71.7,
+ "zaman": "2026-11-12T22:46:58Z"
+}

@@ -1,0 +1,287 @@
+{
+ "title": "Fatih ve Kazıklı Voyvoda Part 2: 1462 Gece Baskını",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "1 GECE, 1 HEDEF: FATİH'İN ÇADIRI",
+ "map_region": "avrupa_ortadogu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Haziran 1462'nin başında Osmanlı ordusu, Eflak direnişine rağmen Tuna'yı geçti. Ama asıl tehlike karanlıkta bekliyordu."
+   ],
+   "big": "TUNA",
+   "sub": "TUNA GEÇİLDİ",
+   "year": 1462,
+   "label": "1462",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Osmanlı ordusu ilerliyor, ama karşısında ordu yok. Vlad geri çekilerek direniyor."
+   ],
+   "big": "SESSİZ",
+   "sub": "KARŞIDA ORDU YOK",
+   "year": 1462,
+   "label": "1462",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "17 Haziran 1462 gecesi, Târgoviște yakınlarında Vlad ordugâha baskın düzenliyor."
+   ],
+   "big": "1462",
+   "sub": "17 HAZİRAN GECESİ",
+   "year": 1462,
+   "label": "17 Haziran 1462",
+   "fx": [
+    "ember",
+    "smoke"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Hedefi bizzat Sultan Mehmed'di. Meşale taşıyan süvariler uyuyan ordugâha daldı."
+   ],
+   "big": "HEDEF",
+   "sub": "SULTANIN ÇADIRI",
+   "year": 1462,
+   "label": "1462",
+   "fx": [
+    "flicker",
+    "smoke",
+    "ember_few"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Baskın amacına ulaşamadı. Sultan sağ kurtuldu; sabah Osmanlı birlikleri Eflaklıları takip etti."
+   ],
+   "big": "SAĞ",
+   "sub": "SULTAN KURTULDU",
+   "year": 1462,
+   "label": "1462",
+   "fx": [
+    "smoke",
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ordu başkent Târgoviște'ye vardığında şehir terk edilmişti. Dönemin anlatılarına göre çevrede kazıklar ormanı vardı."
+   ],
+   "big": "BAŞKENT",
+   "sub": "ŞEHİR BOŞALTILMIŞ",
+   "year": 1462,
+   "label": "1462",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Fatih, Vlad'ın kardeşi Radu'yu Eflak tahtına geçirip ordusuyla ayrıldı. Boyarların çoğu Radu'ya geçti."
+   ],
+   "big": "RADU",
+   "sub": "YENİ VOYVODA",
+   "year": 1462,
+   "label": "1462",
+   "fx": [
+    "flicker",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Vlad Macaristan'a sığındı; Kral Corvinus onu tutuklattı. Yıllarca tutsak kaldı."
+   ],
+   "big": "KAÇIŞ",
+   "sub": "MACARİSTAN'A SIĞINDI",
+   "year": 1462,
+   "label": "1462",
+   "fx": [
+    "snow",
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1476'da Macar ve Boğdan desteğiyle yeniden tahta çıktı, ama kısa süre sonra savaşta öldü."
+   ],
+   "big": "1476",
+   "sub": "SON SAVAŞ",
+   "year": 1476,
+   "label": "1476",
+   "fx": [
+    "fog",
+    "snow"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Asıl efsane sonradan doğdu: 1897'de Bram Stoker, Dracula romanını yayımladı. Vampir kurgu, Vlad ise gerçekti."
+   ],
+   "big": "1897",
+   "sub": "DRAKULA ROMANI",
+   "year": 1897,
+   "label": "1897",
+   "fx": [
+    "fog",
+    "flicker"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "EFLAK SEFERİ",
+   "from": 0,
+   "to": 5
+  },
+  {
+   "name": "SONRASI",
+   "from": 6,
+   "to": 8
+  },
+  {
+   "name": "EFSANE",
+   "from": 9,
+   "to": 9
+  }
+ ],
+ "outro_plan": {
+  "title": "ANİMASYON TARİH",
+  "line": "Bir sonraki hikâyede görüşmek üzere."
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 8,
+   "value": 14,
+   "unit": "YIL",
+   "small": "BASKINDAN ÖLÜME"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": ""
+}
