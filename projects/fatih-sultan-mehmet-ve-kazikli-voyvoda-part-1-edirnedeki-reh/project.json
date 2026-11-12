@@ -16,10 +16,7 @@
    "sub": "EDİRNE'DE BİR ÇOCUK",
    "year": 1442,
    "label": "1442",
-   "fx": [
-    "fog",
-    "dust"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -27,7 +24,12 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_223655_f0c40b37-32d9-4c72-a54a-4421397402db.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s02.jpg",
@@ -40,10 +42,7 @@
    "sub": "İKİ KARDEŞ EDİRNE'DE",
    "year": 1442,
    "label": "1442",
-   "fx": [
-    "dust",
-    "rays"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -52,7 +51,12 @@
     0.5,
     0.55
    ],
-   "effect": "stamp"
+   "effect": "stamp",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_223655_f0c40b37-32d9-4c72-a54a-4421397402db.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s03.jpg",
@@ -65,10 +69,7 @@
    "sub": "EJDERİN OĞLU",
    "year": 1442,
    "label": "1442",
-   "fx": [
-    "flicker",
-    "dust"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -76,7 +77,12 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_223655_f0c40b37-32d9-4c72-a54a-4421397402db.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s04.jpg",
@@ -89,10 +95,7 @@
    "sub": "İKİ FARKLI YOL",
    "year": 1444,
    "label": "1444",
-   "fx": [
-    "rays",
-    "dust"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -100,7 +103,12 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_223655_f0c40b37-32d9-4c72-a54a-4421397402db.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s05.jpg",
@@ -113,9 +121,7 @@
    "sub": "KISA SÜREN İLK TAHT",
    "year": 1448,
    "label": "1448",
-   "fx": [
-    "fog"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -123,7 +129,12 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_223655_f0c40b37-32d9-4c72-a54a-4421397402db.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s06.jpg",
@@ -136,10 +147,7 @@
    "sub": "EFLAK VOYVODASI",
    "year": 1456,
    "label": "1456",
-   "fx": [
-    "rays",
-    "dust"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -148,7 +156,12 @@
     0.5,
     0.55
    ],
-   "effect": "stamp"
+   "effect": "stamp",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_230359_7a11a86d-8b7a-47eb-8056-63fee62d2657.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s07.jpg",
@@ -161,10 +174,7 @@
    "sub": "VERGİ KESİLDİ",
    "year": 1459,
    "label": "~1459",
-   "fx": [
-    "flicker",
-    "smoke"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -172,7 +182,12 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_230359_7a11a86d-8b7a-47eb-8056-63fee62d2657.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s08.jpg",
@@ -185,10 +200,7 @@
    "sub": "BELGE DEĞİL, ANLATI",
    "year": 1459,
    "label": "~1459",
-   "fx": [
-    "flicker",
-    "smoke"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -196,7 +208,12 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_230359_7a11a86d-8b7a-47eb-8056-63fee62d2657.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s09.jpg",
@@ -209,10 +226,7 @@
    "sub": "SESSİZ BİR UYARI",
    "year": 1462,
    "label": "1462",
-   "fx": [
-    "fog",
-    "smoke"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -220,7 +234,12 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_230359_7a11a86d-8b7a-47eb-8056-63fee62d2657.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s10.jpg",
@@ -233,11 +252,7 @@
    "sub": "TUNA'YI GEÇİYORLAR",
    "year": 1462,
    "label": "1462",
-   "fx": [
-    "fog",
-    "rays",
-    "dust"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -246,7 +261,12 @@
     0.5,
     0.55
    ],
-   "effect": "stamp"
+   "effect": "stamp",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_230359_7a11a86d-8b7a-47eb-8056-63fee62d2657.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
   }
  ],
  "eras": [

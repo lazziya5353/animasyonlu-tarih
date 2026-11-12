@@ -12,14 +12,16 @@
    "year": 1442,
    "label": "1442",
    "prompt": "A small boy in a plain 15th-century tunic seen from behind, standing alone in a vast stone courtyard of an Ottoman palace in Edirne at dusk, arched colonnades and tall cypress trees, the boy small and centered, empty sky space at the top and empty ground space at the bottom, vertical 9:16, no text, no writing, no flags",
-   "fx": [
-    "fog",
-    "dust"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "A small boy in a plain 15th-century tunic seen from behind, standing alone in a vast stone courtyard of an Ottoman palace in Edirne at dusk, arched colonnades and tall cypress trees, the boy small and centered, empty sky space at the top and empty ground space at the bottom, vertical 9:16, no text, no writing, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s01.jpg"
+   "image": "images/s01.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_223655_f0c40b37-32d9-4c72-a54a-4421397402db.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -30,14 +32,16 @@
    "year": 1442,
    "label": "1442",
    "prompt": "Two young boys in 15th-century Wallachian tunics seen from behind, standing in an arched palace gateway in Edirne, a distant silhouette of a rider with a small escort leaving along a dusty road at sunset, boys centered, empty space at top and bottom, vertical 9:16, no text, no writing, no flags",
-   "fx": [
-    "dust",
-    "rays"
-   ],
+   "fx": [],
    "effect": "stamp",
    "type_text": "",
    "prompt_tam": "Two young boys in 15th-century Wallachian tunics seen from behind, standing in an arched palace gateway in Edirne, a distant silhouette of a rider with a small escort leaving along a dusty road at sunset, boys centered, empty space at top and bottom, vertical 9:16, no text, no writing, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s02.jpg"
+   "image": "images/s02.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_223655_f0c40b37-32d9-4c72-a54a-4421397402db.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -48,14 +52,16 @@
    "year": 1442,
    "label": "1442",
    "prompt": "Two boys seen from behind sitting at a low wooden table with blank manuscript pages and a lit candle in a quiet Ottoman palace study room, an ornamental carved dragon motif on a stone arch above them, warm candlelight, subjects centered, empty space at top and bottom, vertical 9:16, no readable writing, no text, no flags",
-   "fx": [
-    "flicker",
-    "dust"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Two boys seen from behind sitting at a low wooden table with blank manuscript pages and a lit candle in a quiet Ottoman palace study room, an ornamental carved dragon motif on a stone arch above them, warm candlelight, subjects centered, empty space at top and bottom, vertical 9:16, no readable writing, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s03.jpg"
+   "image": "images/s03.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_223655_f0c40b37-32d9-4c72-a54a-4421397402db.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -66,14 +72,16 @@
    "year": 1444,
    "label": "1444",
    "prompt": "In a sunlit palace garden in an Ottoman court, a younger boy in a simple tunic walks beside a taller young prince in a silk kaftan, both seen from behind and far away, while a second older boy stands apart by a stone wall as a silhouette looking at the horizon, centered composition, empty space at top and bottom, vertical 9:16, no faces in close-up, no text, no flags",
-   "fx": [
-    "rays",
-    "dust"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "In a sunlit palace garden in an Ottoman court, a younger boy in a simple tunic walks beside a taller young prince in a silk kaftan, both seen from behind and far away, while a second older boy stands apart by a stone wall as a silhouette looking at the horizon, centered composition, empty space at top and bottom, vertical 9:16, no faces in close-up, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s04.jpg"
+   "image": "images/s04.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_223655_f0c40b37-32d9-4c72-a54a-4421397402db.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -84,13 +92,16 @@
    "year": 1448,
    "label": "1448",
    "prompt": "A lone young man in a dark travel cloak seen from behind on horseback at a Carpathian mountain pass at dawn, a small escort following far behind, thick mist over pine forests, rider centered, empty sky space at top and empty foreground at bottom, vertical 9:16, no text, no banners, no flags",
-   "fx": [
-    "fog"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "A lone young man in a dark travel cloak seen from behind on horseback at a Carpathian mountain pass at dawn, a small escort following far behind, thick mist over pine forests, rider centered, empty sky space at top and empty foreground at bottom, vertical 9:16, no text, no banners, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s05.jpg"
+   "image": "images/s05.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_223655_f0c40b37-32d9-4c72-a54a-4421397402db.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -101,14 +112,16 @@
    "year": 1456,
    "label": "1456",
    "prompt": "A young prince in 15th-century medieval armor and a long cloak seen from far away as a dark silhouette, riding at the head of a column toward a hilltop stone-and-timber fortress in Wallachia at summer sunrise, golden light, rider centered, empty space at top and bottom, vertical 9:16, no text, no flags, no banners",
-   "fx": [
-    "rays",
-    "dust"
-   ],
+   "fx": [],
    "effect": "stamp",
    "type_text": "",
    "prompt_tam": "A young prince in 15th-century medieval armor and a long cloak seen from far away as a dark silhouette, riding at the head of a column toward a hilltop stone-and-timber fortress in Wallachia at summer sunrise, golden light, rider centered, empty space at top and bottom, vertical 9:16, no text, no flags, no banners, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s06.jpg"
+   "image": "images/s06.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_230359_7a11a86d-8b7a-47eb-8056-63fee62d2657.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -119,14 +132,16 @@
    "year": 1459,
    "label": "~1459",
    "prompt": "A closed iron-bound wooden chest and a heavy leather coin pouch left untouched on the stone floor in front of an empty carved wooden throne in a dim Wallachian hall, a lone ruler silhouette seen from behind standing by a narrow window, torchlight, chest centered, empty space at top and bottom, vertical 9:16, no text, no writing, no flags",
-   "fx": [
-    "flicker",
-    "smoke"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "A closed iron-bound wooden chest and a heavy leather coin pouch left untouched on the stone floor in front of an empty carved wooden throne in a dim Wallachian hall, a lone ruler silhouette seen from behind standing by a narrow window, torchlight, chest centered, empty space at top and bottom, vertical 9:16, no text, no writing, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s07.jpg"
+   "image": "images/s07.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_230359_7a11a86d-8b7a-47eb-8056-63fee62d2657.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -137,14 +152,16 @@
    "year": 1459,
    "label": "~1459",
    "prompt": "In a torch-lit stone throne hall, a row of Ottoman envoys in tall white turbans and long robes seen from behind as silhouettes, standing before a distant throne where a ruler sits in deep shadow, long dramatic shadows on the floor, tense stillness, no violence, no blood, subjects centered, empty space at top and bottom, vertical 9:16, no readable writing, no text, no flags",
-   "fx": [
-    "flicker",
-    "smoke"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "In a torch-lit stone throne hall, a row of Ottoman envoys in tall white turbans and long robes seen from behind as silhouettes, standing before a distant throne where a ruler sits in deep shadow, long dramatic shadows on the floor, tense stillness, no violence, no blood, subjects centered, empty space at top and bottom, vertical 9:16, no readable writing, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s08.jpg"
+   "image": "images/s08.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_230359_7a11a86d-8b7a-47eb-8056-63fee62d2657.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -155,14 +172,16 @@
    "year": 1462,
    "label": "1462",
    "prompt": "A misty field at dawn with a distant dark silhouette of countless tall thin poles standing like a bare forest on the horizon, heavy fog covering the ground, no bodies, no blood, in the foreground a lone commander on horseback seen from behind looking toward the horizon, commander centered, empty space at top and bottom, vertical 9:16, no text, no flags",
-   "fx": [
-    "fog",
-    "smoke"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "A misty field at dawn with a distant dark silhouette of countless tall thin poles standing like a bare forest on the horizon, heavy fog covering the ground, no bodies, no blood, in the foreground a lone commander on horseback seen from behind looking toward the horizon, commander centered, empty space at top and bottom, vertical 9:16, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s09.jpg"
+   "image": "images/s09.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_230359_7a11a86d-8b7a-47eb-8056-63fee62d2657.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -173,15 +192,16 @@
    "year": 1462,
    "label": "1462",
    "prompt": "A vast Ottoman army of spearmen and horsemen seen from far away as silhouettes, crossing a wide river on pontoon bridges at summer dawn, a commander on horseback seen from behind at the center of the riverbank, river mist and golden sunrise, empty space at top and bottom, vertical 9:16, no text, no banners, no flags",
-   "fx": [
-    "fog",
-    "rays",
-    "dust"
-   ],
+   "fx": [],
    "effect": "stamp",
    "type_text": "",
    "prompt_tam": "A vast Ottoman army of spearmen and horsemen seen from far away as silhouettes, crossing a wide river on pontoon bridges at summer dawn, a commander on horseback seen from behind at the center of the riverbank, river mist and golden sunrise, empty space at top and bottom, vertical 9:16, no text, no banners, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s10.jpg"
+   "image": "images/s10.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_230359_7a11a86d-8b7a-47eb-8056-63fee62d2657.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
   }
  ],
  "finale": "",
