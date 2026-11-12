@@ -1,24 +1,19 @@
 {
  "asama": "kurgu",
- "durum": "hata",
- "ozet": "68 sn, -14 LUFS, senkron 17/18",
+ "durum": "tamam",
+ "ozet": "59 sn, -15 LUFS, senkron 18/18",
  "maddeler": [
-  {
-   "seviye": "uyari",
-   "mesaj": "altyazı süresi okunuşa uymuyor (57 kar/sn): “Yılanlı prenses ve Leandros hikâyeleri i”"
-  },
   {
    "seviye": "bilgi",
    "mesaj": "sığmadığı için küçültüldü: “Taşın tarihi belgeli, aşkın hikâyesi rivayet.”"
   },
   {
-   "seviye": "hata",
-   "mesaj": "Görsel üzerindeki başlık metinleri (\"SIRADAKİ KULE\", \"KIZ KULESİ\", \"TAŞIN TARİHİ BELGELİ...\") üst üste binmiş ve okunmaz durumdadır.",
-   "sahne": 10
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.8-flash: The read operation timed out)"
   }
  ],
- "sure": 68.0,
- "lufs": -13.6,
- "senkron": "17/18",
- "zaman": "2026-11-12T14:22:22Z"
+ "sure": 59.2,
+ "lufs": -14.6,
+ "senkron": "18/18",
+ "zaman": "2026-11-12T17:44:49Z"
 }

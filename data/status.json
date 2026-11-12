@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "uskudar-in-tarihi-ve-adinin-hik-yesi: proje tamamen silindi",
-  "cikti": null,
-  "zaman": "2026-11-12T15:34:32Z"
+  "mesaj": "kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti videosu hazır",
+  "cikti": "release:video-kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti",
+  "zaman": "2026-11-12T17:44:54Z"
  },
  "kontrol": {
   "durum": "tamam",
-  "mesaj": "kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti: gorsel !",
+  "mesaj": "kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti: kurgu ✓",
   "cikti": "projects/kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti/kontrol",
-  "zaman": "2026-11-12T14:48:33Z"
+  "zaman": "2026-11-12T17:44:49Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
