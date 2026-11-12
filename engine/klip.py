@@ -17,8 +17,11 @@ class Klip:
             import urllib.request; os.makedirs(os.path.dirname(yol), exist_ok=True)
             urllib.request.urlretrieve(s["video_url"], yol)
         arg = ["ffmpeg", "-v", "error", "-y"]
-        if s.get("v_bas"): arg += ["-ss", str(s["v_bas"])]
-        if s.get("v_son") is not None: arg += ["-t", str(s["v_son"] - (s.get("v_bas") or 0))]
+        # sahne sınırlarında 0,3 sn pay: yapay zekâ klibindeki gerçek kesim tam saniyede olmayabilir, komşu sahneden kare sızmasın
+        vb = (s.get("v_bas") or 0) + (0.3 if s.get("v_bas") else 0); vs = s.get("v_son")
+        if vs is not None and not s.get("v_son_tam"): vs = vs - 0.3
+        if vb: arg += ["-ss", str(vb)]
+        if vs is not None: arg += ["-t", str(max(0.5, vs - vb))]
         arg += ["-i", yol, "-vf", f"fps=30,scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H}", "-q:v", "3", os.path.join(self.dir, "%05d.jpg")]
         subprocess.run(arg, check=True)
         self.k = sorted(glob.glob(os.path.join(self.dir, "*.jpg"))); self.n = len(self.k); self._c = {}
