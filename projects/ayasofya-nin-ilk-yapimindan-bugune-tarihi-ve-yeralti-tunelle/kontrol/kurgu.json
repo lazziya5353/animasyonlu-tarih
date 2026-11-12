@@ -1,19 +1,25 @@
 {
  "asama": "kurgu",
- "durum": "tamam",
- "ozet": "70 sn, -15 LUFS, senkron 19/19",
+ "durum": "uyari",
+ "ozet": "66 sn, -14 LUFS, senkron 19/19",
  "maddeler": [
   {
    "seviye": "bilgi",
    "mesaj": "sığmadığı için küçültüldü: “Part 2: efsaneler ve sırlar”"
   },
   {
-   "seviye": "bilgi",
-   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.6-flash: The read operation timed out)"
+   "seviye": "uyari",
+   "mesaj": "Ortadaki filigran/logo (@animasyon.tarih) yanan yapının tam üzerine binerek görsel detayını kapatıyor.",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Ortadaki '3000 TON' kutusu arka plandaki yapının büyük bir bölümünü kapatıyor.",
+   "sahne": 11
   }
  ],
- "sure": 70.1,
- "lufs": -14.6,
+ "sure": 66.5,
+ "lufs": -13.9,
  "senkron": "19/19",
- "zaman": "2026-11-12T19:23:49Z"
+ "zaman": "2026-11-12T20:10:40Z"
 }

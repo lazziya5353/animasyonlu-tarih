@@ -8,7 +8,7 @@
   {
    "image": "images/s01.jpg",
    "start": 0.0,
-   "end": 9.03,
+   "end": 8.41,
    "lines": [
     "Ayasofya'nın altında, henüz tamamen keşfedilmemiş bir dünya var.",
     "Ama önce yukarıdan başlayalım: 360'ta ahşap çatılı ilk bazilika."
@@ -34,8 +34,8 @@
   },
   {
    "image": "images/s02.jpg",
-   "start": 9.03,
-   "end": 12.03,
+   "start": 8.41,
+   "end": 11.31,
    "lines": [
     "404'te çıkan yangın ilk yapıyı yok etti."
    ],
@@ -60,8 +60,8 @@
   },
   {
    "image": "images/s03.jpg",
-   "start": 12.03,
-   "end": 15.67,
+   "start": 11.31,
+   "end": 14.93,
    "lines": [
     "415'te II. Theodosius ikinci kiliseyi yaptırdı."
    ],
@@ -86,8 +86,8 @@
   },
   {
    "image": "images/s04.jpg",
-   "start": 15.67,
-   "end": 18.85,
+   "start": 14.93,
+   "end": 17.970000000000002,
    "lines": [
     "532'deki Nika isyanında ise o da yandı."
    ],
@@ -112,8 +112,8 @@
   },
   {
    "image": "images/s05.jpg",
-   "start": 18.85,
-   "end": 25.450000000000003,
+   "start": 17.970000000000002,
+   "end": 24.650000000000002,
    "lines": [
     "İmparator Justinianus 537'de bugünkü yapıyı tamamladı.",
     "Devasa kubbesi çağının dünyasını şaşırttı."
@@ -140,8 +140,8 @@
   },
   {
    "image": "images/s06.jpg",
-   "start": 25.450000000000003,
-   "end": 31.05,
+   "start": 24.650000000000002,
+   "end": 29.610000000000003,
    "lines": [
     "558'de deprem kubbeyi yıktı.",
     "Kubbe daha yüksek biçimde yeniden yapıldı."
@@ -167,8 +167,8 @@
   },
   {
    "image": "images/s07.jpg",
-   "start": 31.05,
-   "end": 37.410000000000004,
+   "start": 29.610000000000003,
+   "end": 35.95,
    "lines": [
     "1453'te İstanbul fethedildi.",
     "Ayasofya camiye dönüştü, sonraki yüzyıllarda minareler eklendi."
@@ -195,8 +195,8 @@
   },
   {
    "image": "images/s08.jpg",
-   "start": 37.410000000000004,
-   "end": 42.47,
+   "start": 35.95,
+   "end": 40.410000000000004,
    "lines": [
     "1847-1849'da mimar Fossati büyük bir onarım yaptı."
    ],
@@ -221,8 +221,8 @@
   },
   {
    "image": "images/s09.jpg",
-   "start": 42.47,
-   "end": 45.99,
+   "start": 40.410000000000004,
+   "end": 44.03,
    "lines": [
     "1934'te Ayasofya'nın müzeye çevrilmesine karar verildi."
    ],
@@ -247,8 +247,8 @@
   },
   {
    "image": "images/s10.jpg",
-   "start": 45.99,
-   "end": 49.190000000000005,
+   "start": 44.03,
+   "end": 47.07,
    "lines": [
     "2020'de yeniden cami olarak ibadete açıldı."
    ],
@@ -274,8 +274,8 @@
   },
   {
    "image": "images/s11.jpg",
-   "start": 49.190000000000005,
-   "end": 56.550000000000004,
+   "start": 47.07,
+   "end": 53.59,
    "lines": [
     "Bugün restorasyon sürüyor.",
     "Tünellerden, su kanallarından ve mahzenlerden yaklaşık 3 bin ton çamur ve moloz çıkarıldı."
@@ -301,8 +301,8 @@
   },
   {
    "image": "images/s12.jpg",
-   "start": 56.550000000000004,
-   "end": 69.57375,
+   "start": 53.59,
+   "end": 66.020167,
    "lines": [
     "Bakan Ersoy, uygun bölümlerin ziyarete açılmasını hedeflediklerini söyledi.",
     "Kesin bir tarih ise henüz yok.",
@@ -377,136 +377,136 @@
  "sade": true,
  "cards": [
   {
-   "start": 50.39000000000001,
-   "end": 56.25000000000001,
+   "start": 48.27,
+   "end": 53.290000000000006,
    "value": 3000,
    "unit": "TON",
    "small": "ÇAMUR VE MOLOZ ÇIKARILDI"
   }
  ],
  "outro": {
-  "start": 63.87375,
+  "start": 60.320167,
   "title": "AYASOFYA",
   "line": "Part 2: efsaneler ve sırlar",
-  "line_at": 66.17375
+  "line_at": 62.620166999999995
  },
- "duration": 70.07,
+ "duration": 66.52,
  "jumps": [
   {
-   "t": 15.67,
+   "t": 14.93,
    "value": 117
   },
   {
-   "t": 31.05,
+   "t": 29.610000000000003,
    "value": 895
   },
   {
-   "t": 37.410000000000004,
+   "t": 35.95,
    "value": 394
   },
   {
-   "t": 42.47,
+   "t": 40.410000000000004,
    "value": 87
   },
   {
-   "t": 45.99,
+   "t": 44.03,
    "value": 86
   }
  ],
  "captions": [
   {
    "start": 0.0,
-   "end": 4.04,
+   "end": 3.64,
    "text": "Ayasofya'nın altında, henüz tamamen keşfedilmemiş bir dünya var."
   },
   {
-   "start": 4.42,
-   "end": 8.8,
+   "start": 3.98,
+   "end": 8.14,
    "text": "Ama önce yukarıdan başlayalım: 360'ta ahşap çatılı ilk bazilika."
   },
   {
-   "start": 9.18,
-   "end": 11.72,
+   "start": 8.56,
+   "end": 11.06,
    "text": "404'te çıkan yangın ilk yapıyı yok etti."
   },
   {
-   "start": 12.18,
-   "end": 15.42,
+   "start": 11.46,
+   "end": 14.68,
    "text": "415'te II. Theodosius ikinci kiliseyi yaptırdı."
   },
   {
-   "start": 15.82,
-   "end": 18.68,
+   "start": 15.08,
+   "end": 17.78,
    "text": "532'deki Nika isyanında ise o da yandı."
   },
   {
-   "start": 19.0,
-   "end": 22.52,
+   "start": 18.12,
+   "end": 21.48,
    "text": "İmparator Justinianus 537'de bugünkü yapıyı tamamladı."
   },
   {
-   "start": 22.98,
-   "end": 25.57,
+   "start": 21.96,
+   "end": 24.48,
    "text": "Devasa kubbesi çağının dünyasını şaşırttı."
   },
   {
-   "start": 25.6,
-   "end": 28.1,
+   "start": 24.8,
+   "end": 27.01,
    "text": "558'de deprem kubbeyi yıktı."
   },
   {
-   "start": 28.4,
-   "end": 30.58,
+   "start": 27.04,
+   "end": 29.4,
    "text": "Kubbe daha yüksek biçimde yeniden yapıldı."
   },
   {
-   "start": 31.2,
-   "end": 33.12,
+   "start": 29.76,
+   "end": 31.9,
    "text": "1453'te İstanbul fethedildi."
   },
   {
-   "start": 33.46,
-   "end": 37.16,
+   "start": 32.18,
+   "end": 35.68,
    "text": "Ayasofya camiye dönüştü, sonraki yüzyıllarda minareler eklendi."
   },
   {
-   "start": 37.56,
-   "end": 41.96,
+   "start": 36.1,
+   "end": 40.22,
    "text": "1847-1849'da mimar Fossati büyük bir onarım yaptı."
   },
   {
-   "start": 42.62,
-   "end": 45.82,
+   "start": 40.56,
+   "end": 43.9,
    "text": "1934'te Ayasofya'nın müzeye çevrilmesine karar verildi."
   },
   {
-   "start": 46.14,
-   "end": 48.94,
+   "start": 44.18,
+   "end": 46.82,
    "text": "2020'de yeniden cami olarak ibadete açıldı."
   },
   {
-   "start": 49.34,
-   "end": 50.59,
+   "start": 47.22,
+   "end": 48.42,
    "text": "Bugün restorasyon sürüyor."
   },
   {
-   "start": 50.62,
-   "end": 56.38,
+   "start": 48.86,
+   "end": 53.71,
    "text": "Tünellerden, su kanallarından ve mahzenlerden yaklaşık 3 bin ton çamur ve moloz çıkarıldı."
   },
   {
-   "start": 56.7,
-   "end": 60.6,
+   "start": 53.74,
+   "end": 57.84,
    "text": "Bakan Ersoy, uygun bölümlerin ziyarete açılmasını hedeflediklerini söyledi."
   },
   {
-   "start": 60.92,
-   "end": 62.54,
+   "start": 58.14,
+   "end": 59.6,
    "text": "Kesin bir tarih ise henüz yok."
   },
   {
-   "start": 62.96,
-   "end": 67.2,
+   "start": 60.0,
+   "end": 63.74,
    "text": "Efsaneleri, sırları ve Ahit Sandığı iddiası için Part 2'yi izleyin."
   }
  ]
