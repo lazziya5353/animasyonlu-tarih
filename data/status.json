@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "golcuk-depremi-istanbul-senaryosu videosu hazır",
-  "cikti": "release:video-golcuk-depremi-istanbul-senaryosu",
-  "zaman": "2026-11-11T11:40:36Z"
+  "mesaj": "galata-kulesi-1348-2026 videosu hazır",
+  "cikti": "release:video-galata-kulesi-1348-2026",
+  "zaman": "2026-11-12T12:10:35Z"
  },
  "kontrol": {
   "durum": "tamam",
-  "mesaj": "galata-kulesi-1348-2026: gorsel !",
+  "mesaj": "galata-kulesi-1348-2026: kurgu !",
   "cikti": "projects/galata-kulesi-1348-2026/kontrol",
-  "zaman": "2026-11-12T11:39:42Z"
+  "zaman": "2026-11-12T12:10:29Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

@@ -1,0 +1,27 @@
+{
+ "asama": "kurgu",
+ "durum": "uyari",
+ "ozet": "50 sn, -15 LUFS, senkron 14/15",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı süresi okunuşa uymuyor (59 kar/sn): “II. Mahmud kuleye 2 kat ve sivri bir kül”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “678 YAŞINDA”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “678 yıldır İstanbul'u izliyor.”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.7-flash: The read operation timed out)"
+  }
+ ],
+ "sure": 49.6,
+ "lufs": -14.7,
+ "senkron": "14/15",
+ "zaman": "2026-11-12T12:10:29Z"
+}
