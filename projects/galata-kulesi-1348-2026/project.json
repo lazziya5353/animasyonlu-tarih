@@ -20,16 +20,17 @@
     "dust"
    ],
    "kb": [
-    1.04,
-    1.18,
-    0.5,
-    0.55,
-    0.5,
-    0.5
-   ]
+    1.5,
+    1.66,
+    0.52,
+    0.66,
+    0.52,
+    0.63
+   ],
+   "etiket": "TEMSİLİ"
   },
   {
-   "image": "images/s02.jpg",
+   "image": "images/s03.jpg",
    "start": null,
    "end": null,
    "lines": [
@@ -44,13 +45,22 @@
     "dust"
    ],
    "kb": [
-    1.18,
-    1.04,
+    1.03,
+    1.05,
     0.5,
+    0.48,
     0.5,
-    0.5,
-    0.55
-   ]
+    0.48
+   ],
+   "insa": {
+    "tur": "ins",
+    "onceki": "images/s03_bos.jpg",
+    "maske": "images/m03.png",
+    "bas": 0.3,
+    "sure": 3.2,
+    "giris": "flas"
+   },
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s03.jpg",
@@ -68,13 +78,17 @@
     "gold"
    ],
    "kb": [
-    1.04,
-    1.18,
+    1.05,
+    1.065,
     0.5,
-    0.55,
+    0.48,
     0.5,
-    0.5
-   ]
+    0.48
+   ],
+   "insa": {
+    "tur": "dur"
+   },
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s04.jpg",
@@ -93,13 +107,23 @@
     "fog"
    ],
    "kb": [
-    1.18,
-    1.04,
+    1.065,
+    1.08,
     0.5,
+    0.48,
     0.5,
-    0.5,
-    0.55
-   ]
+    0.48
+   ],
+   "insa": {
+    "tur": "sok",
+    "onceki": "images/s03.jpg",
+    "maske": "images/m04.png",
+    "bas": 0.35,
+    "sure": 1.0,
+    "dis": true,
+    "sira": 22
+   },
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s05.jpg",
@@ -114,16 +138,27 @@
    "year": 1832,
    "label": "1832",
    "fx": [
-    "gold"
+    "ember_few"
    ],
    "kb": [
-    1.04,
-    1.18,
+    1.08,
+    1.095,
     0.5,
-    0.55,
+    0.48,
     0.5,
-    0.5
-   ]
+    0.48
+   ],
+   "insa": {
+    "tur": "ins",
+    "onceki": "images/s04.jpg",
+    "maske": "images/m05.png",
+    "bas": 2.6,
+    "bas_satir": 1,
+    "bas_ek": 0.2,
+    "sure": 2.0,
+    "dis": true
+   },
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s06.jpg",
@@ -137,17 +172,22 @@
    "sub": "KÜLAHSIZ YILLAR",
    "year": 1875,
    "label": "1875",
-   "fx": [
-    "fog"
-   ],
+   "fx": [],
    "kb": [
-    1.18,
-    1.04,
+    1.095,
+    1.11,
     0.5,
+    0.48,
     0.5,
-    0.5,
-    0.55
-   ]
+    0.48
+   ],
+   "insa": {
+    "tur": "ucur",
+    "onceki": "images/s05.jpg",
+    "maske": "images/m06.png",
+    "bas": 0.45
+   },
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s07.jpg",
@@ -167,12 +207,17 @@
    ],
    "kb": [
     1.04,
-    1.18,
+    1.14,
     0.5,
-    0.55,
+    0.5,
     0.5,
     0.5
-   ]
+   ],
+   "insa": {
+    "tur": "dur",
+    "giris": "flas"
+   },
+   "etiket": "TEMSİLİ"
   }
  ],
  "eras": [

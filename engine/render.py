@@ -73,6 +73,7 @@ class Project:
         for i, s in enumerate(c["scenes"]):
             mine = [g for g, o in zip(segs, owner) if o == i]
             if mine: s["start"], s["end"] = mine[0]["start"], mine[-1]["end"]
+            if mine and s.get("insa"): s["satir_abs"] = [g["start"] for g in mine]
             if s.get("tablo") and mine:
                 # her cümle bir satırı yakar: satır, okunduğu cümlenin başladığı an yanar
                 act = [None] * len(s["tablo"]["rows"])
@@ -132,6 +133,11 @@ class Project:
             if i not in self._tablo:
                 from deprem import DepremAnim
                 self._tablo[i] = DepremAnim(self.dir, s["anim"])
+            return self._tablo[i].frame(tv - s["start"], s["end"] - s["start"])
+        if s.get("insa"):  # taş taş inşa / söküm / uçma (engine/insa.py); kamera kesintisiz sürer
+            if i not in self._tablo:
+                from insa import Insa
+                self._tablo[i] = Insa(self.dir, s)
             return self._tablo[i].frame(tv - s["start"], s["end"] - s["start"])
         if s.get("tablo"):
             if i not in self._tablo:
@@ -198,7 +204,7 @@ class Project:
     def frame(self, T):
         c = self.cfg; tv = T - self.off; i = self.scene_at(tv); s = self.S[i]; lt = tv - s["start"]
         fr = self.scene_img(i, tv); atmos(fr, s.get("fx"), tv)
-        if i > 0 and lt < 0.5:
+        if i > 0 and lt < 0.5 and not s.get("insa"):
             pv = self.scene_img(i - 1, tv); atmos(pv, self.S[i - 1].get("fx"), tv); fr = Image.blend(pv, fr, inout(lt / 0.5))
         m = next((m for m in self.maps if m["start"] <= tv < m["end"]), None)
         if m:
