@@ -196,18 +196,17 @@
  },
  "aciklama": "Terleyen sütun, harca katılan zemzem, Hızır anlatısı ve Ahit Sandığı iddiası… 🕯️ Ayasofya hakkında yüzyıllardır anlatılan sırları Part 2'de topladık. Hangisi gerçek, hangisi rivayet? Sonuna kadar izle.\n\n📌 Part 1'i izlemediysen profilde.\n(Görseller temsilidir. Rivayetler tarihî belge değildir.)",
  "hashtagler": [
-  "#Ayasofya",
-  "#AyasofyaEfsaneleri",
-  "#TerleyenSütun",
-  "#AhitSandığı",
-  "#Justinianus",
-  "#Bizans",
-  "#İstanbul",
-  "#TarihTürkiye",
-  "#Animasyon",
-  "#AnimasyonTarih",
-  "#Efsaneler",
-  "#Hızır"
+  "#ayasofya",
+  "#istanbul",
+  "#tarih",
+  "#keşfet",
+  "#reels",
+  "#efsane",
+  "#ahitsandığı",
+  "#gizem",
+  "#istanbultarihi",
+  "#tarihbilgisi",
+  "#animasyontarih"
  ],
  "kaynaklar": [
   "https://www.haberturk.com/kultur-sanat/haber/603540-iste-ayasofya-efsaneleri",
@@ -241,5 +240,14 @@
  "durum": "onaylandi",
  "seslendirme_metni": "Kapının ardında yüzyıllardır anlatılan sırlar var.\nBeş yüz otuz yedide açılışta Justinianus'un 'Süleyman, seni geçtim' dediği aktarılır.\nBu söz, sonraki anlatılarda yer alır.\nBizans döneminde buraya kutsal emanetler getirildiği anlatılır.\nBunların bir kısmının akıbeti belirsizdir.\nİddia edilene göre Ahit Sandığı da Ayasofya'nın altında saklı.\nAncak bunu destekleyen hiçbir tarihî kanıt yok.\nBu, yalnızca bir iddia olarak kalıyor.\nYeraltı sarnıçları ve tünellerle ilgili anlatılar da dolaşır.\nKimi tünellerin uzaklara uzandığı söylenir, ama bunlar belgelenmiş değil.\nYukarıda ise rivayete göre kuzeybatıdaki sütun hiç kurumaz.\nZiyaretçiler başparmağını deliğe sokup çevirir, dilek diler.\nEvliya Çelebi'ye göre harca Mekke toprağı ve zemzem katılmış.\nBilim ise nemi taşın gözenekli yapısına bağlar.\nKubbenin altında bir Hızır anlatısı da yaşar.\nYapıyı kıbleye çevirdiği söylenir.\nBu duvarlar bin beş yüz yıldır sırlarını saklıyor.\nBu sırlardan hangisini daha önce duymuştun? Yorumlara yaz.",
  "sade": true,
- "ses_stil": "Derin sesli bir erkek belgesel anlatıcısı gibi, gizemli ama akıcı ve tempolu oku, cümleler arasında uzun durma, kelimeleri uzatma:\n"
+ "ses_stil": "Derin sesli bir erkek belgesel anlatıcısı gibi, gizemli ama akıcı ve tempolu oku, cümleler arasında uzun durma, kelimeleri uzatma:\n",
+ "kanca_alternatifleri": [
+  "AHİT SANDIĞI AYASOFYA'DA MI?",
+  "AYASOFYA'NIN TERLEYEN SÜTUNU",
+  "HARCINA ZEMZEM KATILAN YAPI"
+ ],
+ "aciklama_alternatifleri": [
+  "Ayasofya'da hiç kurumayan bir sütun var ve insanlar yüzyıllardır parmağını onun deliğinde çeviriyor 👆 Peki diğer sırlar? Ahit Sandığı iddiası, zemzemli harç, Hızır anlatısı…\n\n📌 Kaydet, Part 1 profilde.\n(Görseller temsilidir. Rivayetler tarihî belge değildir.)",
+  "Ahit Sandığı'nın Ayasofya'nın altında saklandığı iddia ediliyor 🕯️ Peki bunun bir kanıtı var mı? Ayasofya'nın 7 sırrı bu videoda.\n\n📌 Kaydet, merak eden arkadaşına gönder.\n(Görseller temsilidir. Rivayetler tarihî belge değildir.)"
+ ]
 }

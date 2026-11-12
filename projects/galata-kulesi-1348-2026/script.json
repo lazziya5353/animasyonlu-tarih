@@ -31,14 +31,17 @@
  },
  "aciklama": "Galata Kulesi'ni her gün görüyorsun ama 90 yıl külahsız kaldığını biliyor muydun? 🏰\n1348'de Cenevizlilerin taş taş ördüğü kule; deprem, iki büyük yangın ve bir fırtınadan sonra bugünkü haline geldi. Sonuna kadar izle, son halini tanıyamayacaksın.\n\n📌 Kaydet, İstanbul'a gelen arkadaşına gönder.\n(Görseller temsilidir.)",
  "hashtagler": [
-  "#GalataKulesi",
-  "#İstanbul",
-  "#Tarih",
-  "#OsmanlıTarihi",
-  "#Cenevizliler",
-  "#İstanbulTarihi",
-  "#AnimasyonluTarih",
-  "#Reels"
+  "#galatakulesi",
+  "#istanbul",
+  "#tarih",
+  "#keşfet",
+  "#reels",
+  "#beyoğlu",
+  "#cenevizliler",
+  "#osmanlıtarihi",
+  "#istanbultarihi",
+  "#tarihbilgisi",
+  "#animasyontarih"
  ],
  "kaynaklar": [
   "https://istanbul.ktb.gov.tr/EN-307578/galata-kulesi.html",
@@ -262,5 +265,14 @@
    "etiket": "TEMSİLİ"
   }
  ],
- "seslendirme_metni": "Bin üç yüz kırk sekiz. Cenevizliler, Galata'nın tepesine bir kule dikiyor.\nDuvarları tabanda neredeyse dört metre kalınlığında.\nTaş taş, sıra sıra yükseliyor.\nAdı: Kristea Turris.\nYani İsa Kulesi.\nBin dört yüz elli üç. İstanbul fethediliyor.\nGalata, savaşmadan Osmanlı'ya geçiyor.\nBin beş yüz dokuzda büyük deprem kuleyi yaralıyor. Bir yıl sonra onarılıyor.\nBin yedi yüz doksan dört ve bin sekiz yüz otuz bir. İki büyük yangın.\nİkinci Mahmud kuleye iki kat ve sivri bir külah ekletiyor.\nBin sekiz yüz yetmiş beş. Bir fırtına külahı devirip götürüyor.\nKule yaklaşık doksan yıl külahsız kalıyor.\nBin dokuz yüz altmış yedi. Külah geri dönüyor.\nBugün altı yüz yetmiş sekiz yaşında.\nVe hâlâ İstanbul'u izliyor."
+ "seslendirme_metni": "Bin üç yüz kırk sekiz. Cenevizliler, Galata'nın tepesine bir kule dikiyor.\nDuvarları tabanda neredeyse dört metre kalınlığında.\nTaş taş, sıra sıra yükseliyor.\nAdı: Kristea Turris.\nYani İsa Kulesi.\nBin dört yüz elli üç. İstanbul fethediliyor.\nGalata, savaşmadan Osmanlı'ya geçiyor.\nBin beş yüz dokuzda büyük deprem kuleyi yaralıyor. Bir yıl sonra onarılıyor.\nBin yedi yüz doksan dört ve bin sekiz yüz otuz bir. İki büyük yangın.\nİkinci Mahmud kuleye iki kat ve sivri bir külah ekletiyor.\nBin sekiz yüz yetmiş beş. Bir fırtına külahı devirip götürüyor.\nKule yaklaşık doksan yıl külahsız kalıyor.\nBin dokuz yüz altmış yedi. Külah geri dönüyor.\nBugün altı yüz yetmiş sekiz yaşında.\nVe hâlâ İstanbul'u izliyor.",
+ "kanca_alternatifleri": [
+  "GALATA KULESİ 90 YIL KÜLAHSIZ KALDI",
+  "BU KULENİN TEPESİNİ FIRTINA UÇURDU",
+  "1348'DEN BUGÜNE GALATA 60 SANİYEDE"
+ ],
+ "aciklama_alternatifleri": [
+  "Bir fırtına Galata Kulesi'nin külahını alıp götürdü ve kule 92 yıl öyle kaldı 🌪️ 1348'den bugüne bütün değişimini 1 dakikada izle.\n\n📌 Kaydet, İstanbul'a gelen arkadaşına gönder.\n(Görseller temsilidir.)",
+  "678 yıl, 1 deprem, 2 büyük yangın, 1 fırtına 🏰 Galata Kulesi'nin bugünkü hali aslında kaçıncı hali? Sonuna kadar izle.\n\n📌 Kaydet, sonra tekrar bak.\n(Görseller temsilidir.)"
+ ]
 }

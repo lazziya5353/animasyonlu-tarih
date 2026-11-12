@@ -290,6 +290,8 @@ async function openProject(slug, gecmisten) {
     } catch (e) { b.disabled = false; b.textContent = hepsi ? "🗑 Projeyi tamamen sil" : "🗑 Sadece videoyu sil"; toast(e.message || "Hata"); }
   }));
   d.querySelectorAll("[data-copy]").forEach((b) => (b.onclick = () => { navigator.clipboard.writeText(b.dataset.copy); toast("Kopyalandı"); }));
+  d.querySelectorAll("[data-kopya]").forEach((b) => (b.onclick = () => { navigator.clipboard.writeText(b.dataset.kopya); toast("Kopyalandı"); }));
+  d.querySelectorAll("[data-acik]").forEach((b) => (b.onclick = () => { const L = [sc.aciklama, ...(sc.aciklama_alternatifleri || [])].filter(Boolean); const t = $("#caption"); if (!t) return; t.value = L[+b.dataset.acik] + ((sc.hashtagler || []).length ? "\n\n" + sc.hashtagler.join(" ") : ""); t.scrollIntoView({ behavior: "smooth", block: "center" }); toast("Açıklama kutuya geldi, beğendiysen Kaydet"); }));
   d.querySelectorAll(".sc").forEach(async (el) => {
     if (el.dataset.img) { const u = await fileUrl(`projects/${slug}/${el.dataset.img}`); if (u) el.style.backgroundImage = `url(${u})`; }
     el.onclick = () => { const inp = document.createElement("input"); inp.type = "file"; inp.accept = "image/*"; inp.onchange = () => topluSecim(slug, scenes, P, [...inp.files], Number(el.dataset.i)); inp.click(); };
@@ -362,6 +364,13 @@ function paylasimKart(P, sc) {
   let h = `<h2>Paylaşım</h2><div class="card"><div class="mut" style="margin-bottom:6px">Instagram açıklaması (düzenleyebilirsin)</div>
     <textarea id="caption" rows="9" class="full">${esc(varsayilanMetin(sc))}</textarea>
     <div class="flex"><button id="capkaydet">Kaydet</button><button id="capkopya">Kopyala</button></div>`;
+  const kancalar = [sc.hook, ...(sc.kanca_alternatifleri || [])].filter(Boolean), aciklamalar = [sc.aciklama, ...(sc.aciklama_alternatifleri || [])].filter(Boolean);
+  if (kancalar.length > 1 || aciklamalar.length > 1) {
+    h += `<div class="sep"></div><b style="font-size:14px">💡 Öneriler</b><div class="mut" style="font-size:12px;margin:4px 0 8px">Açıklamaya dokununca yukarıdaki kutuya gelir (etiketler eklenir), sonra Kaydet. Kancaya dokununca kopyalanır.</div>`;
+    if (kancalar.length) h += `<div class="mut" style="font-size:12px">Kanca başlıklar</div>` + kancalar.map((x, i) => `<button class="oneri" data-kopya="${esc(x)}">${i === 0 ? "⭐ " : ""}${esc(x)}</button>`).join("");
+    if (aciklamalar.length) h += `<div class="mut" style="font-size:12px;margin-top:8px">Açıklamalar</div>` + aciklamalar.map((x, i) => `<button class="oneri uzun" data-acik="${i}">${i === 0 ? "⭐ " : ""}${esc(x)}</button>`).join("");
+    if ((sc.hashtagler || []).length) h += `<div class="mut" style="font-size:12px;margin-top:8px">Etiketler</div><button class="oneri" data-kopya="${esc(sc.hashtagler.join(" "))}">${esc(sc.hashtagler.join(" "))}</button>`;
+  }
   h += `<div class="sep"></div><b style="font-size:14px">📸 Instagram</b>`;
   if (ig) h += `<div style="margin-top:8px"><span class="st ok">Yayında</span> <a href="${esc(ig.permalink)}" target="_blank" rel="noopener">Gönderiyi aç ↗</a> <span class="mut">· ${ig.zaman ? tarihTR(ig.zaman) : ""}</span></div>`;
   else {
