@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "mary-celeste-part-1: proje tamamen silindi",
-  "cikti": null,
-  "zaman": "2026-11-12T18:04:47Z"
+  "mesaj": "ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle videosu hazır",
+  "cikti": "release:video-ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle",
+  "zaman": "2026-11-12T18:58:52Z"
  },
  "kontrol": {
   "durum": "hata",
-  "mesaj": "ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle: gorsel ✗",
+  "mesaj": "ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle: kurgu ✗",
   "cikti": "projects/ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle/kontrol",
-  "zaman": "2026-11-12T18:44:13Z"
+  "zaman": "2026-11-12T18:58:47Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
