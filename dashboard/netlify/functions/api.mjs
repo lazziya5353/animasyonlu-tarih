@@ -169,6 +169,40 @@ export default async (req) => {
         await dispatch("yonetici", { mesaj: `[DÜZELT] Kontrolcülerin bulduğu şu sorunları düzelt, sonra gerekiyorsa yeniden üret ve kontrol ettir:\n${M.join("\n")}`.slice(0, 1500), slug: b.slug });
         return json({ ok: true });
       }
+      case "ajan_detay": { // ajanın son çalışmaları + açık/devre dışı durumu
+        const wf = WORKFLOWS[b.k]; if (!wf || b.k === "sil") return json({ hata: "Bilinmeyen ajan" }, 400);
+        const [w, r] = await Promise.all([ghJson(`/repos/${REPO}/actions/workflows/${wf}`), ghJson(`/repos/${REPO}/actions/workflows/${wf}/runs?per_page=15`)]);
+        return json({ aktif: w.state === "active", calismalar: (r.workflow_runs || []).map((x) => ({ id: x.id, durum: x.status, sonuc: x.conclusion, zaman: x.created_at, sure: Math.max(0, Math.round((new Date(x.updated_at) - new Date(x.run_started_at || x.created_at)) / 1000)), url: x.html_url })) });
+      }
+      case "ajan_durdur": { // çalışan ya da sırada bekleyen işlerini iptal et
+        const wf = WORKFLOWS[b.k]; if (!wf) return json({ hata: "Bilinmeyen ajan" }, 400);
+        const r = await ghJson(`/repos/${REPO}/actions/workflows/${wf}/runs?per_page=20`);
+        const canli = (r.workflow_runs || []).filter((x) => x.status !== "completed");
+        await Promise.all(canli.map((x) => gh(`/repos/${REPO}/actions/runs/${x.id}/cancel`, { method: "POST" })));
+        return json({ ok: true, n: canli.length });
+      }
+      case "ajan_mod": { // devre dışı bırak / yeniden aç (zamanlanmış çalışmalar da durur)
+        const wf = WORKFLOWS[b.k]; if (!wf || b.k === "sil") return json({ hata: "Bilinmeyen ajan" }, 400);
+        const r = await gh(`/repos/${REPO}/actions/workflows/${wf}/${b.aktif ? "enable" : "disable"}`, { method: "PUT" });
+        if (!r.ok) return json({ hata: `GitHub ${r.status}: anahtarın 'Actions: write' yetkisi olmalı` }, 400);
+        return json({ ok: true, aktif: !!b.aktif });
+      }
+      case "ajan_kayit_sil": { // çalışma kaydını sil: id varsa tek kayıt, yoksa bitmiş kayıtların hepsi (proje dosyalarına dokunmaz)
+        const wf = WORKFLOWS[b.k]; if (!wf) return json({ hata: "Bilinmeyen ajan" }, 400);
+        const r = await ghJson(`/repos/${REPO}/actions/workflows/${wf}/runs?per_page=30`);
+        const hedef = (r.workflow_runs || []).filter((x) => x.status === "completed" && (!b.id || String(x.id) === String(b.id)));
+        const s = await Promise.all(hedef.map((x) => gh(`/repos/${REPO}/actions/runs/${x.id}`, { method: "DELETE" })));
+        return json({ ok: true, n: s.filter((x) => x.ok).length });
+      }
+      case "ayar": { // proje ayarı: film filtresi (sade = filtre kapalı)
+        if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);
+        for (const f of ["script.json", "project.json"]) {
+          const j = await readJson(`projects/${b.slug}/${f}`); if (!j) continue;
+          if (b.sade) j.sade = true; else delete j.sade;
+          await writeFile(`projects/${b.slug}/${f}`, b64(j), `Film filtresi ${b.sade ? "kapatıldı" : "açıldı"}: ${b.slug}`);
+        }
+        return json({ ok: true, sade: !!b.sade });
+      }
       case "sil": { // panelden silme: video = sadece hazır video, hepsi = projeyi tamamen
         if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);
         if (!["video", "hepsi"].includes(b.tur)) return json({ hata: "Geçersiz silme türü" }, 400);

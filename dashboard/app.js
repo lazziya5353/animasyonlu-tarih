@@ -64,7 +64,7 @@ function render() {
     const run = O.runs[a.k], st = O.status[a.k]; const [c, l] = stOf(run, st);
     html += `<div class="card agent"><div class="ic">${a.ic}</div><h3>${a.ad}</h3><span class="st ${c}">${l}</span>
       <p>${esc(st?.mesaj || a.is)}</p><div class="mut" style="font-size:11.5px;margin-bottom:10px">Son çalışma: ${ago(run?.zaman || st?.zaman)}${a.ucret ? " · <span title='Claude API kredisi harcar'>💳</span>" : ""}</div>
-      <button data-run="${a.k}">${a.btn}</button>${c === "err" && /projects\/[a-z0-9-]+/.test(st?.cikti || st?.mesaj || "") ? ` <button class="duzelt" data-hduzelt="${esc((st.cikti || st.mesaj).match(/projects\/([a-z0-9-]+)/)[1])}" data-hmesaj="${esc(a.ad + ": " + (st.mesaj || ""))}">🔧 Düzelt</button>` : ""}</div>`;
+      <button data-run="${a.k}">${a.btn}</button> <button class="ghost" data-detay="${a.k}">Detay</button>${c === "err" && /projects\/[a-z0-9-]+/.test(st?.cikti || st?.mesaj || "") ? ` <button class="duzelt" data-hduzelt="${esc((st.cikti || st.mesaj).match(/projects\/([a-z0-9-]+)/)[1])}" data-hmesaj="${esc(a.ad + ": " + (st.mesaj || ""))}">🔧 Düzelt</button>` : ""}</div>`;
   }
   html += `</div>`;
   html += renderYorumlar() + renderAnaliz();
@@ -88,6 +88,7 @@ function render() {
   html += `<h2>Son harcamalar</h2><div class="card">${(h.son || []).filter((x) => x.usd > 0).map((x) => `<div class="mut" style="display:flex;justify-content:space-between;padding:4px 0"><span>${esc(x.ajan)} · ${esc(x.detay)}</span><span>$${x.usd.toFixed(3)}</span></div>`).join("") || '<span class="mut">Kayıt yok</span>'}</div>`;
   $("#main").innerHTML = html;
   document.querySelectorAll("[data-run]").forEach((b) => (b.onclick = () => runAgent(b.dataset.run)));
+  document.querySelectorAll("[data-detay]").forEach((b) => (b.onclick = () => ajanDetay(b.dataset.detay)));
   document.querySelectorAll("[data-hduzelt]").forEach((b) => (b.onclick = async () => {
     if (b.disabled) return; b.disabled = true; b.textContent = "Gönderiliyor…";
     try { await api("duzelt", { slug: b.dataset.hduzelt, maddeler: [{ asama: "is", mesaj: b.dataset.hmesaj }] }); b.textContent = "✓ Ajan düzeltiyor"; toast("Yönetici ajan düzeltiyor, cevabı 'Ajana yaz' kutusunda"); }
@@ -159,6 +160,29 @@ async function decide(baslik, karar) {
   await guvenli(() => api("decide", { baslik, karar, api: apiIle }), karar === "yap" ? (apiIle ? "Senarist çalışmaya başladı" : "Yapılacak olarak işaretlendi") : "Geçildi");
   load();
 }
+// ───────── Ajan detayı: ne yaptı, durdur, devre dışı bırak, kayıt sil ─────────
+async function ajanDetay(k) {
+  const a = AGENTS.find((x) => x.k === k); let m = $("#ajanm");
+  if (!m) { m = document.createElement("div"); m.id = "ajanm"; m.className = "modal"; document.body.append(m); m.onclick = (e) => { if (e.target === m) m.remove(); }; }
+  m.innerHTML = `<div class="kutu"><div class="mut">Yükleniyor…</div></div>`;
+  let D; try { D = await api("ajan_detay", { k }); } catch (e) { m.innerHTML = `<div class="kutu"><b>${esc(a.ad)}</b><p style="color:var(--err)">${esc(e.message)}</p><button id="mk">Kapat</button></div>`; $("#mk").onclick = () => m.remove(); return; }
+  const canli = D.calismalar.filter((x) => x.durum !== "completed").length;
+  const etiket = (x) => x.durum !== "completed" ? ["run", x.durum === "queued" ? "Sırada" : "Çalışıyor"] : x.sonuc === "success" ? ["ok", "Tamamlandı"] : x.sonuc === "cancelled" ? ["wait", "Durduruldu"] : ["err", "Hata"];
+  const sure = (n) => n >= 60 ? `${Math.floor(n / 60)} dk ${n % 60} sn` : `${n} sn`;
+  m.innerHTML = `<div class="kutu"><div class="flex" style="justify-content:space-between;align-items:center"><b style="font-size:16px">${a.ic} ${esc(a.ad)}</b><button class="ghost" id="mk">✕</button></div>
+    <div class="mut" style="margin:6px 0 12px">${esc(a.is)} · <b style="color:var(--${D.aktif ? "ok" : "err"})">${D.aktif ? "Açık" : "Devre dışı"}</b></div>
+    <div class="flex" style="flex-wrap:wrap;gap:8px"><button id="mdur" ${canli ? "" : "disabled"}>⏹ Durdur${canli ? ` (${canli})` : ""}</button><button id="mmod">${D.aktif ? "⏸ Devre dışı bırak" : "▶ Yeniden aç"}</button><button class="silb" id="mhepsi" ${D.calismalar.some((x) => x.durum === "completed") ? "" : "disabled"}>🗑 Tüm kayıtları sil</button></div>
+    <h3 style="margin:16px 0 6px;font-size:13px">Son çalışmalar</h3>
+    ${D.calismalar.map((x) => { const [c, l] = etiket(x); return `<div class="kayit"><span class="st ${c}">${l}</span><span class="mut">${ago(x.zaman)} · ${sure(x.sure)}</span><a href="${esc(x.url)}" target="_blank" rel="noopener">Ayrıntı</a>${x.durum === "completed" ? `<button class="cop" data-ksil="${x.id}" title="Bu kaydı sil">🗑</button>` : "<span></span>"}</div>`; }).join("") || '<div class="mut">Henüz çalışma yok.</div>'}
+    <div class="mut" style="font-size:11.5px;margin-top:10px">Kayıt silmek sadece çalışma geçmişini temizler; projelere, videolara dokunmaz.</div></div>`;
+  const is = async (btn, fn, ok) => { btn.disabled = true; try { const r = await fn(); toast(typeof ok === "function" ? ok(r) : ok); setTimeout(() => { ajanDetay(k); load(); }, 1500); } catch (e) { btn.disabled = false; toast(e.message || "Hata"); } };
+  $("#mk").onclick = () => m.remove();
+  $("#mdur").onclick = (e) => is(e.target, () => api("ajan_durdur", { k }), (r) => r.n ? `${r.n} iş durduruldu` : "Çalışan iş yoktu");
+  $("#mmod").onclick = (e) => { if (D.aktif && !confirm(`${a.ad} devre dışı kalsın mı?\n\nYeniden açana kadar ne elle ne de otomatik çalışır.`)) return; is(e.target, () => api("ajan_mod", { k, aktif: !D.aktif }), D.aktif ? "Devre dışı bırakıldı" : "Yeniden açıldı"); };
+  $("#mhepsi").onclick = (e) => { if (!confirm(`${a.ad} ajanının bitmiş tüm çalışma kayıtları silinsin mi?`)) return; is(e.target, () => api("ajan_kayit_sil", { k }), (r) => `${r.n} kayıt silindi`); };
+  m.querySelectorAll("[data-ksil]").forEach((b) => (b.onclick = () => is(b, () => api("ajan_kayit_sil", { k, id: b.dataset.ksil }), "Kayıt silindi")));
+}
+
 async function runAgent(k) {
   let inputs = {};
   const a = AGENTS.find((x) => x.k === k);
@@ -243,13 +267,14 @@ async function openProject(slug, gecmisten) {
   const hasVoice = P.dosyalar.includes("ses.wav");
   h += `<h2>Ses</h2><div class="card">${hasVoice ? `<audio id="aud" controls style="width:100%"></audio>` : `<span class="mut">Ses yok.</span>`}<div class="flex"><label class="btn">Ses yükle (.wav)<input type="file" accept="audio/wav" id="up-ses" hidden></label></div></div>`;
   h += `<h2>Video</h2><div class="card">${P.video ? `<video id="vid" controls playsinline></video><div class="mut" style="margin-top:8px">${(P.video.boyut / 1e6).toFixed(1)} MB · ${ago(P.video.zaman)}</div>` : `<span class="mut">Henüz video yok.</span>`}
-    <div class="flex"><button class="gold" id="render">${P.video ? "Videoyu yeniden üret" : "Videoyu üret"}</button>${P.video ? `<button id="dl">İndir</button>` : ""}</div></div>`;
+    <div class="flex"><button id="filtre" title="Kahverengi ton, kararan kenarlar ve kumlanma">${P.project?.sade ? "Film filtresi: kapalı" : "Film filtresi: açık"}</button><button class="gold" id="render">${P.video ? "Videoyu yeniden üret" : "Videoyu üret"}</button>${P.video ? `<button id="dl">İndir</button>` : ""}</div></div>`;
   if (sc) h += paylasimKart(P, sc);
   h += `<h2>Sil</h2><div class="card sil"><div class="mut" style="font-size:12.5px;margin-bottom:8px">Silinen geri gelmez. Instagram'da paylaşılmış gönderiye dokunmaz, onu Instagram'dan silmen gerekir.</div>
     <div class="flex">${P.video ? `<button class="silb" data-sil="video">🗑 Sadece videoyu sil</button>` : ""}<button class="silb kirmizi" data-sil="hepsi">🗑 Projeyi tamamen sil</button></div></div>`;
   d.innerHTML = h;
   window.scrollTo(0, 0);
   $("#back").onclick = () => (history.state?.p ? history.back() : projeKapat());
+  if ($("#filtre")) $("#filtre").onclick = async (e) => { e.target.disabled = true; try { const r = await api("ayar", { slug, sade: !P.project?.sade }); toast(r.sade ? "Filtre kapatıldı. Görmek için videoyu yeniden üret." : "Filtre açıldı. Görmek için videoyu yeniden üret."); openProject(slug, true); } catch (err) { e.target.disabled = false; toast(err.message || "Hata"); } };
   d.querySelectorAll("[data-sil]").forEach((b) => (b.onclick = async () => {
     const hepsi = b.dataset.sil === "hepsi", ad = sc?.baslik || slug;
     if (!confirm(hepsi ? `"${ad}" projesi tamamen silinsin mi?\n\nMetin, görseller, ses ve video gider. Geri alınamaz.` : `"${ad}" videosu silinsin mi?\n\nMetin, görseller ve ses kalır; istersen videoyu yeniden üretebilirsin.`)) return;
