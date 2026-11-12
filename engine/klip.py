@@ -23,6 +23,9 @@ class Klip:
         subprocess.run(arg, check=True)
         self.k = sorted(glob.glob(os.path.join(self.dir, "*.jpg"))); self.n = len(self.k); self._c = {}
         if not self.n: raise RuntimeError(f"Videodan kare çıkmadı: {yol}")
+        kapak = os.path.join(d, s.get("image") or "")                       # panelde sahne görseli görünsün: klibin ortasından bir kare
+        if s.get("image") and not os.path.exists(kapak):
+            os.makedirs(os.path.dirname(kapak), exist_ok=True); Image.open(self.k[self.n // 2]).convert("RGB").save(kapak, quality=85)
 
     def _al(self, i):
         if i not in self._c:

@@ -1,17 +1,11 @@
 {
  "asama": "gorsel",
  "durum": "hata",
- "ozet": "1/12 görsel, ortalama puan 6.0/10",
+ "ozet": "1/12 görsel",
  "maddeler": [
   {
-   "seviye": "uyari",
-   "mesaj": "Görsel, istemde belirtilen 'yüksek havadan tepeden bakış (high aerial top-down view)' ve 'deniz kenarında bir tepe üzerinde konumlanmış bina' konseptine uymamaktadır; iç mekan/avlu benzeri yakın bir açı sunmaktadır.",
-   "sahne": 1
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "Sağ alt köşede filigran/logo ('pollinations.ai') bulunmaktadır.",
-   "sahne": 1
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka incelemesi atlandı: Gemini yanıt vermedi (gemini-3.5-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more info)"
   },
   {
    "seviye": "hata",
@@ -31,6 +25,5 @@
   11,
   12
  ],
- "ortalama_puan": 6.0,
- "zaman": "2026-11-12T18:44:13Z"
+ "zaman": "2026-11-12T19:46:45Z"
 }
