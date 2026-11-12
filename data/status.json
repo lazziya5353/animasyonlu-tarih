@@ -21,13 +21,13 @@
   "durum": "tamam",
   "mesaj": "galata-kulesi-1348-2026 videosu hazır",
   "cikti": "release:video-galata-kulesi-1348-2026",
-  "zaman": "2026-11-12T12:10:35Z"
+  "zaman": "2026-11-12T13:29:04Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "galata-kulesi-1348-2026: kurgu !",
+  "durum": "hata",
+  "mesaj": "galata-kulesi-1348-2026: kurgu ✗",
   "cikti": "projects/galata-kulesi-1348-2026/kontrol",
-  "zaman": "2026-11-12T12:10:29Z"
+  "zaman": "2026-11-12T13:28:59Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
