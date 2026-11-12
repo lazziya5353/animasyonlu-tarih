@@ -1,0 +1,281 @@
+{
+ "title": "Fatih ve Kazıklı Voyvoda Part 1: Edirne'deki Rehin Çocuktan Eflak Voyvodasına",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "2 KARDEŞ, 1 SARAY, 2 FARKLI YOL",
+ "map_region": "avrupa_ortadogu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Drakula'nın ilham kaynağı, bir zamanlar Edirne'de rehin bir çocuktu."
+   ],
+   "big": "REHİN",
+   "sub": "EDİRNE'DE BİR ÇOCUK",
+   "year": 1442,
+   "label": "1442",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1442 ile 1444 arasında, II. Murad döneminde, Eflak voyvodası II. Vlad oğulları Vlad ve Radu'yu Edirne'ye rehin bıraktı."
+   ],
+   "big": "1442",
+   "sub": "İKİ KARDEŞ EDİRNE'DE",
+   "year": 1442,
+   "label": "1442",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Babasının lakabı Dracul'du; Drakula, 'Dracul'un oğlu' demekti. Oğullar zindanda değil, sarayda yetiştiler."
+   ],
+   "big": "DRAKULA",
+   "sub": "EJDERİN OĞLU",
+   "year": 1442,
+   "label": "1442",
+   "fx": [
+    "flicker",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Küçük kardeş Radu bu dünyaya alıştı ve genç Mehmed'e yakınlaştı. Vlad ise esaretten hoşnut değildi."
+   ],
+   "big": "RADU",
+   "sub": "İKİ FARKLI YOL",
+   "year": 1444,
+   "label": "1444",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Babası ölünce, 1448'de Osmanlı desteğiyle kısa süreliğine tahta çıktı; ama tahtı kaybetti."
+   ],
+   "big": "1448",
+   "sub": "KISA SÜREN İLK TAHT",
+   "year": 1448,
+   "label": "1448",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1456 yazında bu kez Macar desteğiyle döndü ve Eflak voyvodası oldu."
+   ],
+   "big": "1456",
+   "sub": "EFLAK VOYVODASI",
+   "year": 1456,
+   "label": "1456",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Sonra Osmanlı'ya ödenen yıllık haracı göndermeyi bıraktı. Tarihçiler bu kopuşun zamanını farklı verir."
+   ],
+   "big": "HARAÇ",
+   "sub": "VERGİ KESİLDİ",
+   "year": 1459,
+   "label": "~1459",
+   "fx": [
+    "flicker",
+    "smoke"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Rivayete göre Fatih'in elçileri başlarındaki sarığı çıkarmayınca, voyvoda sarıkları başlarına çivilettirdi. Bu anlatı belgelenmiş değildir."
+   ],
+   "big": "RİVAYET",
+   "sub": "BELGE DEĞİL, ANLATI",
+   "year": 1459,
+   "label": "~1459",
+   "fx": [
+    "flicker",
+    "smoke"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Haraç da, itaat de bitmişti. Sultan Mehmed bu meydan okumayı cevapsız bırakmayacaktı."
+   ],
+   "big": "MEYDAN",
+   "sub": "SESSİZ BİR UYARI",
+   "year": 1462,
+   "label": "1462",
+   "fx": [
+    "fog",
+    "smoke"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1462 yazında Fatih, ordusuyla Tuna'yı geçiyor. Devamı Part 2'de."
+   ],
+   "big": "1462",
+   "sub": "TUNA'YI GEÇİYORLAR",
+   "year": 1462,
+   "label": "1462",
+   "fx": [
+    "fog",
+    "rays",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp"
+  }
+ ],
+ "eras": [
+  {
+   "name": "REHİNLİK",
+   "from": 0,
+   "to": 3
+  },
+  {
+   "name": "TAHT",
+   "from": 4,
+   "to": 5
+  },
+  {
+   "name": "MEYDAN OKUMA",
+   "from": 6,
+   "to": 9
+  }
+ ],
+ "outro_plan": {
+  "title": "PART 2",
+  "line": "Tuna'nın ötesinde Fatih'i ne bekliyordu? Devamı Part 2'de."
+ },
+ "maps_plan": [],
+ "cards_plan": [],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": ""
+}

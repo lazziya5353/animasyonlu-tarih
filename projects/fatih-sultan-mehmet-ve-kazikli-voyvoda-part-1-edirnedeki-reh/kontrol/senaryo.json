@@ -1,0 +1,54 @@
+{
+ "asama": "senaryo",
+ "durum": "uyari",
+ "ozet": "10 sahne, tahmini 65 sn · 9 not",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Drakula'nın ilham kaynağı, bir zamanlar Edirne'de rehin bir …”",
+   "sahne": 1
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 4 satıra taşıyor, kısaltılabilir: “1442 ile 1444 arasında, II. Murad döneminde, Eflak voyvodası…”",
+   "sahne": 2
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 4 satıra taşıyor, kısaltılabilir: “Babasının lakabı Dracul'du; Drakula, 'Dracul'un oğlu' demekt…”",
+   "sahne": 3
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 4 satıra taşıyor, kısaltılabilir: “Küçük kardeş Radu bu dünyaya alıştı ve genç Mehmed'e yakınla…”",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Babası ölünce, 1448'de Osmanlı desteğiyle kısa süreliğine ta…”",
+   "sahne": 5
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “1456 yazında bu kez Macar desteğiyle döndü ve Eflak voyvodas…”",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 4 satıra taşıyor, kısaltılabilir: “Sonra Osmanlı'ya ödenen yıllık haracı göndermeyi bıraktı. Ta…”",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 5 satıra taşıyor, kısaltılabilir: “Rivayete göre Fatih'in elçileri başlarındaki sarığı çıkarmay…”",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Haraç da, itaat de bitmişti. Sultan Mehmed bu meydan okumayı…”",
+   "sahne": 9
+  }
+ ],
+ "tahmini_sure": 65.4,
+ "zaman": "2026-11-12T20:21:10Z"
+}

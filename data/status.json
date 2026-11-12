@@ -7,9 +7,9 @@
  },
  "senarist": {
   "durum": "tamam",
-  "mesaj": "'Ayasofya Part 2: efsaneler, sırlar ve Ahit Sandığı iddiası' metni onay bekliyor",
-  "cikti": "projects/ayasofya-part-2-efsaneler-sirlar-ve-ahit-sandigi-iddiasi/script.json",
-  "zaman": "2026-11-12T18:50:28Z"
+  "mesaj": "'Fatih Sultan Mehmet ve Kazıklı Voyvoda Part 1: Edirne'deki rehine çocuktan Eflak voyvodasına' metni onay bekliyor",
+  "cikti": "projects/fatih-sultan-mehmet-ve-kazikli-voyvoda-part-1-edirnedeki-reh/script.json",
+  "zaman": "2026-11-12T20:21:09Z"
  },
  "gorsel": {
   "durum": "tamam",
@@ -25,9 +25,9 @@
  },
  "kontrol": {
   "durum": "tamam",
-  "mesaj": "ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle: kurgu !",
-  "cikti": "projects/ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle/kontrol",
-  "zaman": "2026-11-12T20:10:40Z"
+  "mesaj": "fatih-sultan-mehmet-ve-kazikli-voyvoda-part-1-edirnedeki-reh: senaryo !",
+  "cikti": "projects/fatih-sultan-mehmet-ve-kazikli-voyvoda-part-1-edirnedeki-reh/kontrol",
+  "zaman": "2026-11-12T20:21:10Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
