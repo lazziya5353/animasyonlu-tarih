@@ -1,0 +1,287 @@
+{
+ "title": "Göbekli Tepe: Tarihin Sıfır Noktası",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "STONEHENGE'DEN 6 BİN YIL ÖNCE DİKİLDİ",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Stonehenge'den 6 bin yıldan fazla önce, Anadolu'da devasa taşlar dikildi."
+   ],
+   "big": "6 BİN",
+   "sub": "STONEHENGE'DEN ESKİ",
+   "year": -9600,
+   "label": "MÖ 9600",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Yer, Şanlıurfa'daki Göbekli Tepe. Tarihlemesi yaklaşık MÖ 9600 olarak veriliyor."
+   ],
+   "big": "MÖ 9600",
+   "sub": "GÖBEKLİ TEPE",
+   "year": -9600,
+   "label": "MÖ 9600",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Mısır piramitlerinden de binlerce yıl daha eski.",
+    "Dünyanın ilk anıtsal mimari örneklerinden biri sayılıyor."
+   ],
+   "big": "PİRAMİT",
+   "sub": "BİNLERCE YIL DAHA ESKİ",
+   "year": -9600,
+   "label": "MÖ 9600",
+   "fx": [
+    "dust",
+    "gold"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Onu çiftçiler değil, tarım öncesi avcı-toplayıcılar inşa etti.",
+    "Bu, 'önce tarım, sonra anıt' fikrini sorgulattı."
+   ],
+   "big": "AVCILAR",
+   "sub": "TARIM ÖNCESİ TOPLULUK",
+   "year": -9600,
+   "label": "MÖ 9600",
+   "fx": [
+    "dust",
+    "smoke"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Dikilitaşlar T biçiminde; bazıları metrelerce yüksek.",
+    "Üzerlerinde tilki, yılan ve yaban domuzu kabartmaları var."
+   ],
+   "big": "T TAŞLAR",
+   "sub": "HAYVAN KABARTMALARI",
+   "year": -9600,
+   "label": "MÖ 9600",
+   "fx": [
+    "dust",
+    "flicker"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bazı araştırmacılara göre yapılar kasıtlı olarak toprakla gömüldü.",
+    "Bu hâlâ tartışılıyor."
+   ],
+   "big": "GÖMÜLDÜ?",
+   "sub": "HÂLÂ TARTIŞILIYOR",
+   "year": -8000,
+   "label": "MÖ 8000",
+   "fx": [
+    "dust",
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1995'te Alman arkeolog Klaus Schmidt kazıları başlattı ve alanı dünyaya tanıttı."
+   ],
+   "big": "1995",
+   "sub": "KLAUS SCHMIDT KAZILARI",
+   "year": 1995,
+   "label": "1995",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Göbekli Tepe, 2018'de UNESCO Dünya Mirası Listesi'ne girdi."
+   ],
+   "big": "2018",
+   "sub": "UNESCO DÜNYA MİRASI",
+   "year": 2018,
+   "label": "2018",
+   "fx": [
+    "rays",
+    "gold"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "2025'te Taş Tepeler projesindeki Karahantepe'de, insan yüzü işlenmiş ilk T biçimli dikilitaş bulundu.",
+    "Bakanlık, bunun bir ilk olduğunu duyurdu."
+   ],
+   "big": "2025",
+   "sub": "KARAHANTEPE: İNSAN YÜZLÜ TAŞ",
+   "year": 2025,
+   "label": "2025",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "glow"
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bu alanlar yalnızca ritüel için mi, yoksa yaşam yeri miydi?",
+    "Kazılar sürüyor."
+   ],
+   "big": "SORULAR",
+   "sub": "KAZILAR SÜRÜYOR",
+   "year": 2026,
+   "label": "2026",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "NEOLİTİK",
+   "from": 0,
+   "to": 5
+  },
+  {
+   "name": "KEŞİF",
+   "from": 6,
+   "to": 7
+  },
+  {
+   "name": "GÜNCEL",
+   "from": 8,
+   "to": 9
+  }
+ ],
+ "outro_plan": {
+  "title": "GÖBEKLİ TEPE",
+  "line": "Taşlar sessiz, kazılar devam ediyor. Takipte kal."
+ },
+ "maps_plan": [],
+ "cards_plan": [],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": ""
+}
