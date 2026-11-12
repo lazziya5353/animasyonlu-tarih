@@ -18,10 +18,10 @@
   "zaman": "2026-11-12T11:26:57Z"
  },
  "kurgucu": {
-  "durum": "tamam",
-  "mesaj": "golcuk-depremi-istanbul-senaryosu videosu hazır",
-  "cikti": "release:video-golcuk-depremi-istanbul-senaryosu",
-  "zaman": "2026-11-11T11:40:36Z"
+  "durum": "calisiyor",
+  "mesaj": "galata-kulesi-1348-2026 videosu üretiliyor",
+  "cikti": null,
+  "zaman": "2026-11-12T11:46:51Z"
  },
  "kontrol": {
   "durum": "tamam",
