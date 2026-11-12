@@ -1,0 +1,302 @@
+{
+ "baslik": "İshak Paşa Sarayı: Ağrı Dağı'nın Karşısındaki 99 Yıllık Saray",
+ "hook": "99 YILDA YAPILAN SARAYIN KAPISI NEREDE?",
+ "map_region": "avrupa_ortadogu",
+ "sahneler": [
+  {
+   "lines": [
+    "Bu saray Türkiye'de. Hem de Ağrı Dağı'nın karşısında."
+   ],
+   "big": "AĞRI",
+   "sub": "TÜRKİYE'NİN DOĞUSU",
+   "year": 1685,
+   "label": "1685",
+   "prompt": "Vertical 9:16 wide establishing shot of a hilltop Ottoman stone palace with domes and a slender minaret at dawn, snow-capped Mount Ararat rising huge behind it, golden light on pale and dark stone, palace centered in frame, open misty sky in the top third for a title, empty dark foreground in the bottom third for subtitles, no text, no lettering, no flags, no people",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 wide establishing shot of a hilltop Ottoman stone palace with domes and a slender minaret at dawn, snow-capped Mount Ararat rising huge behind it, golden light on pale and dark stone, palace centered in frame, open misty sky in the top third for a title, empty dark foreground in the bottom third for subtitles, no text, no lettering, no flags, no people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s01.jpg"
+  },
+  {
+   "lines": [
+    "Doğubayazıt'ta, İran sınırına yakın bir tepede yükseliyor. Alanı yaklaşık 7.600 metrekare."
+   ],
+   "big": "SINIR",
+   "sub": "DOĞUBAYAZIT, AĞRI",
+   "year": 1685,
+   "label": "1685",
+   "prompt": "Vertical 9:16 aerial view of a large stone palace complex with two courtyards on a rocky spur above a wide plain, rugged eastern Anatolian mountains in the distance, palace centered, clear sky at top for a title, plain ground at bottom for captions, no text, no flags, no people",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 aerial view of a large stone palace complex with two courtyards on a rocky spur above a wide plain, rugged eastern Anatolian mountains in the distance, palace centered, clear sky at top for a title, plain ground at bottom for captions, no text, no flags, no people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s02.jpg"
+  },
+  {
+   "lines": [
+    "İnşaatı 1685'te Çolak Abdi Paşa başlattı."
+   ],
+   "big": "1685",
+   "sub": "İNŞAAT BAŞLADI",
+   "year": 1685,
+   "label": "1685",
+   "prompt": "Vertical 9:16 17th-century stone construction site on a rocky hilltop, stonemasons in period Ottoman work clothes and turbans seen only from behind and far away, simple wooden scaffolds, ox carts hauling stone blocks, silhouette of a nobleman in a long robe seen from behind watching the work, Mount Ararat faint in misty background, main scene centered, empty space at top and bottom, no text, no flags, no faces",
+   "fx": [
+    "dust",
+    "fog"
+   ],
+   "effect": "stamp",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 17th-century stone construction site on a rocky hilltop, stonemasons in period Ottoman work clothes and turbans seen only from behind and far away, simple wooden scaffolds, ox carts hauling stone blocks, silhouette of a nobleman in a long robe seen from behind watching the work, Mount Ararat faint in misty background, main scene centered, empty space at top and bottom, no text, no flags, no faces, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s03.jpg"
+  },
+  {
+   "lines": [
+    "Çıldıroğulları ailesi nesiller boyu çalıştı. Taşlar çevre köylerden ve Ağrı Dağı'ndan taşındı. Saray yaklaşık 100 yılda tamamlandı."
+   ],
+   "big": "99 YIL",
+   "sub": "NESİLLER BOYU İNŞAAT",
+   "year": 1784,
+   "label": "1784",
+   "prompt": "Vertical 9:16 long caravan of mules and oxen carrying white and black stone blocks along a mountain path toward a half-built palace on a hill, tiny distant figures in period clothing seen from behind, changing seasons feeling with light snow, palace centered, empty sky at top for title and empty ground at bottom for captions, no text, no flags, no faces",
+   "fx": [
+    "dust",
+    "snow"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 long caravan of mules and oxen carrying white and black stone blocks along a mountain path toward a half-built palace on a hill, tiny distant figures in period clothing seen from behind, changing seasons feeling with light snow, palace centered, empty sky at top for title and empty ground at bottom for captions, no text, no flags, no faces, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s04.jpg"
+  },
+  {
+   "lines": [
+    "Harem kapısının kitabesi, yapının İshak Paşa döneminde tamamlandığını bildirir."
+   ],
+   "big": "1784",
+   "sub": "KİTABEDEKİ TARİH",
+   "year": 1784,
+   "label": "1784",
+   "prompt": "Vertical 9:16 close view of an ornate carved stone doorway in a palace courtyard, rows of abstract geometric and floral reliefs, an empty smooth stone panel above the door with only abstract carved lines and no readable letters, warm torch glow on the stone, doorway centered, empty space above and below, no text, no calligraphy, no flags, no people",
+   "fx": [
+    "flicker",
+    "dust"
+   ],
+   "effect": "type",
+   "type_text": "KİTABE · 1199 HİCRÎ · 1784",
+   "prompt_tam": "Vertical 9:16 close view of an ornate carved stone doorway in a palace courtyard, rows of abstract geometric and floral reliefs, an empty smooth stone panel above the door with only abstract carved lines and no readable letters, warm torch glow on the stone, doorway centered, empty space above and below, no text, no calligraphy, no flags, no people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s05.jpg"
+  },
+  {
+   "lines": [
+    "Mimarisinde Osmanlı, Selçuklu ve İran izleri iç içe.",
+    "Bazı kaynaklar Gürcü ve Ermeni etkisini de anar."
+   ],
+   "big": "MİMARİ",
+   "sub": "FARKLI ÜSLUPLAR",
+   "year": 1784,
+   "label": "1784",
+   "prompt": "Vertical 9:16 richly carved stone portal with dense geometric and vegetal reliefs, a cone-shaped Seljuk-style tomb dome and an Ottoman dome side by side in the background, soft golden light, portal centered, clear space at top and bottom, only abstract ornament and no readable writing, no flags, no people",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 richly carved stone portal with dense geometric and vegetal reliefs, a cone-shaped Seljuk-style tomb dome and an Ottoman dome side by side in the background, soft golden light, portal centered, clear space at top and bottom, only abstract ornament and no readable writing, no flags, no people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s06.jpg"
+  },
+  {
+   "lines": [
+    "Duvar boşlukları, sarayda merkezî ısıtma sistemi olduğuna işaret ediyor.",
+    "Bu, 18. yüzyıl için dikkat çekici bir ayrıntı."
+   ],
+   "big": "ISITMA",
+   "sub": "DUVARLARDA GİZLİ SİSTEM",
+   "year": 1784,
+   "label": "1784",
+   "prompt": "Vertical 9:16 cutaway-style view of a thick stone palace wall with narrow hidden channels and small openings, warm orange glow and soft steam drifting through the channels, cozy chamber with stone fireplace, wall centered, empty space at top and bottom, no text, no people, no flags",
+   "fx": [
+    "smoke",
+    "flicker"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 cutaway-style view of a thick stone palace wall with narrow hidden channels and small openings, warm orange glow and soft steam drifting through the channels, cozy chamber with stone fireplace, wall centered, empty space at top and bottom, no text, no people, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s07.jpg"
+  },
+  {
+   "lines": [
+    "Altın kaplamalı denen kapısı, 1877-1878 Rus işgalinde söküldü ve Rusya'ya götürüldü."
+   ],
+   "big": "1877",
+   "sub": "KAPI SÖKÜLDÜ",
+   "year": 1877,
+   "label": "1877",
+   "prompt": "Vertical 9:16 dusk scene, far-away silhouettes of 19th-century soldiers in long dark greatcoats seen from behind pulling a cart carrying a large ornate wooden gate away from a hilltop palace along a snowy road, thick fog, palace silhouette small in background, no weapons drawn, no blood, no faces, scene centered, empty sky at top and empty ground at bottom, no text, no flags",
+   "fx": [
+    "fog",
+    "snow"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 dusk scene, far-away silhouettes of 19th-century soldiers in long dark greatcoats seen from behind pulling a cart carrying a large ornate wooden gate away from a hilltop palace along a snowy road, thick fog, palace silhouette small in background, no weapons drawn, no blood, no faces, scene centered, empty sky at top and empty ground at bottom, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s08.jpg"
+  },
+  {
+   "lines": [
+    "Sarayı 1840 depremi ve savaşlar yıprattı. Bugün restorasyonlarla ayakta."
+   ],
+   "big": "RESTORE",
+   "sub": "AYAKTA TUTULUYOR",
+   "year": 2011,
+   "label": "RESTORASYON",
+   "prompt": "Vertical 9:16 partially restored stone palace wall with light wooden scaffolding, restoration craftsmen in modern work clothes seen only from behind and far away, cracked old stone beside freshly repaired sections, palace centered, soft morning light, open sky at top and plain ground at bottom, no text, no flags, no faces",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 partially restored stone palace wall with light wooden scaffolding, restoration craftsmen in modern work clothes seen only from behind and far away, cracked old stone beside freshly repaired sections, palace centered, soft morning light, open sky at top and plain ground at bottom, no text, no flags, no faces, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s09.jpg"
+  },
+  {
+   "lines": [
+    "Bugün Ağrı Dağı'na bakan saray, UNESCO Dünya Mirası Geçici Listesi'nde."
+   ],
+   "big": "ARARAT",
+   "sub": "UNESCO GEÇİCİ LİSTE",
+   "year": 2026,
+   "label": "BUGÜN",
+   "prompt": "Vertical 9:16 majestic sunset panorama of the stone palace on its hill glowing in gold, snow-capped Mount Ararat in the background turning pink and orange, a lone distant visitor silhouette seen from behind on the path, palace centered, calm sky at top for title and dark foreground at bottom for captions, no text, no flags",
+   "fx": [
+    "gold",
+    "rays"
+   ],
+   "effect": "glow",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 majestic sunset panorama of the stone palace on its hill glowing in gold, snow-capped Mount Ararat in the background turning pink and orange, a lone distant visitor silhouette seen from behind on the path, palace centered, calm sky at top for title and dark foreground at bottom for captions, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s10.jpg"
+  }
+ ],
+ "finale": "",
+ "maps": [
+  {
+   "after_scene": 1,
+   "cities": [
+    "Erzurum",
+    "Tebriz"
+   ],
+   "route": [
+    "Erzurum",
+    "Tebriz"
+   ],
+   "title": "DOĞU SINIRI: ERZURUM — TEBRİZ"
+  }
+ ],
+ "cards": [
+  {
+   "scene": 1,
+   "value": 7600,
+   "unit": "M²",
+   "small": "YAKLAŞIK SARAY ALANI"
+  },
+  {
+   "scene": 3,
+   "value": 99,
+   "unit": "YIL",
+   "small": "SÜREN İNŞAAT"
+  }
+ ],
+ "eras": [
+  {
+   "name": "İNŞA",
+   "from": 0,
+   "to": 4
+  },
+  {
+   "name": "MİMARİ",
+   "from": 5,
+   "to": 6
+  },
+  {
+   "name": "KAYIP VE ONARIM",
+   "from": 7,
+   "to": 8
+  },
+  {
+   "name": "BUGÜN",
+   "from": 9,
+   "to": 9
+  }
+ ],
+ "outro": {
+  "title": "İSHAK PAŞA SARAYI",
+  "line": "Bir sonraki durak için takipte kal."
+ },
+ "aciklama": "Osmanlı sarayı deyince İstanbul'u düşünürsün ama bu saray Ağrı'da, İran sınırına yakın bir tepede ve yapımı 99 yıl sürdü. 1685'te başlayan inşaat 1784 dolaylarında tamamlandı; kapısının hikâyesi ise hâlâ merak konusu. Sonuna kadar izle 🏰\n\n📌 Kaydet / arkadaşına gönder\n\n(Görseller temsilidir.) (Rivayetler tarihî belge değildir.)",
+ "kanca_alternatifleri": [
+  "ARARAT'A BAKAN SARAY: 99 YILLIK İNŞAAT",
+  "1685'TE BAŞLADI, 1784'TE BİTTİ: KİM YAPTI?",
+  "DUVARLARINDA ISITMA SİSTEMİ OLAN 18. YÜZYIL SARAYI"
+ ],
+ "aciklama_alternatifleri": [
+  "İran sınırındaki bir tepede, Ağrı Dağı'nın karşısında bir Osmanlı sarayı var. Kapısı neden artık orada değil? Sonuna kadar izle 🏰\n\n📌 Kaydet / arkadaşına gönder\n\n(Görseller temsilidir.) (Rivayetler tarihî belge değildir.)",
+  "99 yılda tamamlanan, yaklaşık 7.600 metrekarelik bir saray düşün. Üstelik duvarlarında ısıtma sistemine işaret eden boşluklar var. Sonuna kadar izle 🏰\n\n📌 Kaydet / arkadaşına gönder\n\n(Görseller temsilidir.) (Rivayetler tarihî belge değildir.)"
+ ],
+ "hashtagler": [
+  "#tarih",
+  "#keşfet",
+  "#reels",
+  "#İshakPaşaSarayı",
+  "#Doğubayazıt",
+  "#Ağrı",
+  "#AğrıDağı",
+  "#ÇolakAbdiPaşa",
+  "#osmanlımimarisi",
+  "#tarihbilgisi",
+  "#doğuanadolu",
+  "#animasyontarih"
+ ],
+ "kaynaklar": [
+  "https://islamansiklopedisi.org.tr/ishak-pasa-sarayi",
+  "https://www.turkishmuseums.com/museum/detail/1934-agri-ishak-pasha-palace/1934/4",
+  "https://www.dailysabah.com/travel/2016/12/29/ishak-pasha-palace-eternalizes-glorious-days-of-ottoman-empire-welcomes-visitors-throughout-the-year",
+  "https://turkisharchaeonews.net/site/ishak-pasha-palace",
+  "https://nomadicniko.com/turkey/dogubayazit/",
+  "https://theturkiyeguide.com/city/eastern-turkey/dogubayazit/",
+  "https://ozhanozturk.com/2021/11/17/ishak-pasa-sarayi-agri/",
+  "https://geziotesi.com/ishak-pasa-sarayi-osmanlinin-son-sarayi/",
+  "https://dogubayazitgazetesi.com/haber/240-yillik-sir-dogubayazittaki-ishak-pasa-sarayinin-kayip-altin-kapisi-nereye-goturuldu-39183",
+  "https://www.timelessturkey.com/ishak-pasa-sarayi/",
+  "https://kureansiklopedi.com/tr/cocuk-detay/ishak-pasa-sarayi-4d233"
+ ],
+ "kontrol_notlari": [
+  "Metin yaklaşık 123 kelime, 10 sahne. Yıllar rakamla yazıldı (sizin ek notunuza göre). Sistem kuralı olan 130-150 kelime ve yazıyla yıl, ek notunuzla çeliştiği için ek not esas alındı.",
+  "Kaynak durumu: Britannica ve Romen tarihçilerin çalışmaları aramada çıkmadı. Romen kaynaklar bu konuyla zaten pek ilgili değil. Bu yüzden doğrulama TDV İslâm Ansiklopedisi, Türkiye Kültür Portalı/müze kayıtları ve Daily Sabah/AA ile yapıldı. Yayından önce Semavi Eyice'nin TDV maddesini (c. 22, 2000) ve Hamza Gündoğdu'nun çalışmalarını elle kontrol etmenizi öneririm.",
+  "Başlangıç 1685, Çolak Abdi Paşa: Turkish Museums, Daily Sabah/AA, Turkish Archaeo News, Öztürk ve Doğubayazıt Gazetesi aynı bilgiyi veriyor (birden fazla kaynak, doğrulandı). Turkish Archaeo News bu tarihi 'yaklaşık 1685' diye veriyor.",
+  "Tamamlanış: Harem kapısı kitabesi 1199 Hicrî. TDV bunu 1785 olarak çeviriyor, Turkish Museums ve Daily Sabah 1784 diyor, Turkish Archaeo News '1784-1785' yazıyor. 1199 Hicrî iki miladi yıla yayıldığı için metinde 'kitabe' ve 'İshak Paşa dönemi' denildi, ekranda 1784 kullanıldı. Dilerseniz 1784/85 yazabilirsiniz.",
+  "'99 yıl / yaklaşık 100 yıl': 1685 ile 1784 arası. Turkish Museums, Daily Sabah ve Doğubayazıt Gazetesi bu süreyi veriyor (doğrulandı).",
+  "Alan yaklaşık 7.600 m²: Daily Sabah, Nomadic Niko, Türkiye Guide ve madeinturkeytours aynı rakamı veriyor. Oda sayısı 360 ile 366 arasında değiştiği için (Kültür Turizm Bakanlığı 360, diğerleri 366) metinde oda sayısı kullanılmadı.",
+  "Bani/aile: Kaynaklarda Çolak Abdi Paşa'nın oğlu, torunu veya yeğeni gibi akrabalık ilişkileri birbirinden farklı aktarılıyor. Bu yüzden metinde yalnızca 'Çıldıroğulları ailesi nesiller boyu' denildi. Kesin soy bağı için TDV maddesine bakılmalı. Turkish Archaeo News ayrıca Hasan Paşa'nın oğlu bir İshak Paşa'dan ve aynı adı taşıyan başka bir İshak'tan söz ediyor.",
+  "Mimari etkiler: Osmanlı, Selçuklu ve İran etkisi birçok kaynakta ortak (Turkish Museums, Daily Sabah, Ararat Trek). Gürcü ve Ermeni etkisi yalnızca Türkiye Guide, Nomadic Niko ve Ararat Trek gibi turizm kaynaklarında geçiyor. Bu yüzden metinde 'bazı kaynaklar' diye verildi, kesin bilgi gibi sunulmadı.",
+  "Isıtma: Turkish Museums, taş duvardaki boşlukların bütün yapıda merkezî ısıtma sistemi olduğunu gösterdiğini yazıyor. 'Dünyanın ilk kaloriferli yapısı' iddiası yalnızca popüler haber sitelerinde var ve doğrulanamadığı için kullanılmadı. Metinde 'işaret ediyor' ifadesi seçildi.",
+  "Kapı: Rus işgali sırasında (1877-1878) sökülüp götürülmesi Türkiye Guide, Öztürk, Geziotesi ve Doğubayazıt Gazetesi'nde ortak. Kapının 'som altın' olduğu rivayet olarak kaldı, bu yüzden metinde 'altın kaplamalı denen' denildi. Bugünkü yeri kaynaklarda değişiyor: Hermitage (St. Petersburg), 'Moskova'daki bir müze' veya belirsiz. Bu yüzden metinde müze adı verilmedi. Bazı turizm sitelerinde 1917 tarihi geçiyor ama çoğu kaynak 1877-78 diyor. Sarayın girişindeki kapı ahşap bir kopya.",
+  "Hasar ve onarım: 1840 depremi ve 1828, 1877-78 Rus işgallerindeki hasar Nomadic Niko, Geziotesi ve Türkiye Guide'da var. Restorasyon yılları kaynaklarda net değil (Öztürk 2004 ve 2011 diyor, Yeni Asır 2011'den sonra turizme kazandırıldığını yazıyor). Bu yüzden zaman çizelgesinde 'RESTORASYON' etiketiyle 2011 kullanıldı, metinde yıl verilmedi. İsterseniz T.C. Kültür ve Turizm Bakanlığı kaydından teyit edin.",
+  "UNESCO: Saray Dünya Mirası Geçici Listesi'nde (Küre Ansiklopedi, madeinturkeytours). Madeinturkeytours listeye giriş tarihini Şubat 2000 veriyor ama başka bir kaynakla teyit edilemedi, bu yüzden yıl kullanılmadı.",
+  "Harita: Doğubayazıt izin verilen şehirler listesinde yok. Bu yüzden bölgeyi temsilen yakın şehir olan Erzurum ve Tebriz seçildi. İstemezseniz 'maps' alanını silebilirsiniz.",
+  "Şiddet: 'Kazıklar ormanı' gibi şiddet unsurları bu konuyla ilgili değil, kullanılmadı. Kapının sökülmesi sahnesi kan ve silahsız, uzaktan, sisli siluetlerle yazıldı. İshak Paşa'nın gözden düşüp sürgünde ölmesi rivayeti tek ve zayıf bir kaynakta geçtiği için dahil edilmedi."
+ ],
+ "konu": "İshak Paşa Sarayı'nın tarihi",
+ "tarih": "",
+ "slug": "ishak-pasa-sarayinin-tarihi",
+ "durum": "onay-bekliyor",
+ "seslendirme_metni": "Bu saray Türkiye'de. Hem de Ağrı Dağı'nın karşısında.\nDoğubayazıt'ta, İran sınırına yakın bir tepede yükseliyor. Alanı yaklaşık 7.600 metrekare.\nİnşaatı 1685'te Çolak Abdi Paşa başlattı.\nÇıldıroğulları ailesi nesiller boyu çalıştı. Taşlar çevre köylerden ve Ağrı Dağı'ndan taşındı. Saray yaklaşık 100 yılda tamamlandı.\nHarem kapısının kitabesi, yapının İshak Paşa döneminde tamamlandığını bildirir.\nMimarisinde Osmanlı, Selçuklu ve İran izleri iç içe.\nBazı kaynaklar Gürcü ve Ermeni etkisini de anar.\nDuvar boşlukları, sarayda merkezî ısıtma sistemi olduğuna işaret ediyor.\nBu, 18. yüzyıl için dikkat çekici bir ayrıntı.\nAltın kaplamalı denen kapısı, 1877-1878 Rus işgalinde söküldü ve Rusya'ya götürüldü.\nSarayı 1840 depremi ve savaşlar yıprattı. Bugün restorasyonlarla ayakta.\nBugün Ağrı Dağı'na bakan saray, UNESCO Dünya Mirası Geçici Listesi'nde."
+}

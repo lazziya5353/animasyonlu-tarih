@@ -1,0 +1,44 @@
+{
+ "asama": "senaryo",
+ "durum": "uyari",
+ "ozet": "10 sahne, tahmini 59 sn · 7 not",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Doğubayazıt'ta, İran sınırına yakın bir tepede yükseliyor. A…”",
+   "sahne": 2
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 4 satıra taşıyor, kısaltılabilir: “Çıldıroğulları ailesi nesiller boyu çalıştı. Taşlar çevre kö…”",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Harem kapısının kitabesi, yapının İshak Paşa döneminde tamam…”",
+   "sahne": 5
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Duvar boşlukları, sarayda merkezî ısıtma sistemi olduğuna iş…”",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Altın kaplamalı denen kapısı, 1877-1878 Rus işgalinde söküld…”",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Sarayı 1840 depremi ve savaşlar yıprattı. Bugün restorasyonl…”",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Bugün Ağrı Dağı'na bakan saray, UNESCO Dünya Mirası Geçici L…”",
+   "sahne": 10
+  }
+ ],
+ "tahmini_sure": 58.6,
+ "zaman": "2026-11-12T20:23:16Z"
+}

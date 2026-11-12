@@ -7,9 +7,9 @@
  },
  "senarist": {
   "durum": "tamam",
-  "mesaj": "'Ayasofya Part 2: efsaneler, sırlar ve Ahit Sandığı iddiası' metni onay bekliyor",
-  "cikti": "projects/ayasofya-part-2-efsaneler-sirlar-ve-ahit-sandigi-iddiasi/script.json",
-  "zaman": "2026-11-12T18:50:28Z"
+  "mesaj": "'İshak Paşa Sarayı'nın tarihi' metni onay bekliyor",
+  "cikti": "projects/ishak-pasa-sarayinin-tarihi/script.json",
+  "zaman": "2026-11-12T20:23:15Z"
  },
  "gorsel": {
   "durum": "tamam",
@@ -25,9 +25,9 @@
  },
  "kontrol": {
   "durum": "tamam",
-  "mesaj": "ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle: kurgu !",
-  "cikti": "projects/ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle/kontrol",
-  "zaman": "2026-11-12T20:10:40Z"
+  "mesaj": "ishak-pasa-sarayinin-tarihi: senaryo !",
+  "cikti": "projects/ishak-pasa-sarayinin-tarihi/kontrol",
+  "zaman": "2026-11-12T20:23:16Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

@@ -1,0 +1,315 @@
+{
+ "title": "İshak Paşa Sarayı: Ağrı Dağı'nın Karşısındaki 99 Yıllık Saray",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "99 YILDA YAPILAN SARAYIN KAPISI NEREDE?",
+ "map_region": "avrupa_ortadogu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bu saray Türkiye'de. Hem de Ağrı Dağı'nın karşısında."
+   ],
+   "big": "AĞRI",
+   "sub": "TÜRKİYE'NİN DOĞUSU",
+   "year": 1685,
+   "label": "1685",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Doğubayazıt'ta, İran sınırına yakın bir tepede yükseliyor. Alanı yaklaşık 7.600 metrekare."
+   ],
+   "big": "SINIR",
+   "sub": "DOĞUBAYAZIT, AĞRI",
+   "year": 1685,
+   "label": "1685",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "İnşaatı 1685'te Çolak Abdi Paşa başlattı."
+   ],
+   "big": "1685",
+   "sub": "İNŞAAT BAŞLADI",
+   "year": 1685,
+   "label": "1685",
+   "fx": [
+    "dust",
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Çıldıroğulları ailesi nesiller boyu çalıştı. Taşlar çevre köylerden ve Ağrı Dağı'ndan taşındı. Saray yaklaşık 100 yılda tamamlandı."
+   ],
+   "big": "99 YIL",
+   "sub": "NESİLLER BOYU İNŞAAT",
+   "year": 1784,
+   "label": "1784",
+   "fx": [
+    "dust",
+    "snow"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Harem kapısının kitabesi, yapının İshak Paşa döneminde tamamlandığını bildirir."
+   ],
+   "big": "1784",
+   "sub": "KİTABEDEKİ TARİH",
+   "year": 1784,
+   "label": "1784",
+   "fx": [
+    "flicker",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "type",
+   "type_text": "KİTABE · 1199 HİCRÎ · 1784"
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Mimarisinde Osmanlı, Selçuklu ve İran izleri iç içe.",
+    "Bazı kaynaklar Gürcü ve Ermeni etkisini de anar."
+   ],
+   "big": "MİMARİ",
+   "sub": "FARKLI ÜSLUPLAR",
+   "year": 1784,
+   "label": "1784",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Duvar boşlukları, sarayda merkezî ısıtma sistemi olduğuna işaret ediyor.",
+    "Bu, 18. yüzyıl için dikkat çekici bir ayrıntı."
+   ],
+   "big": "ISITMA",
+   "sub": "DUVARLARDA GİZLİ SİSTEM",
+   "year": 1784,
+   "label": "1784",
+   "fx": [
+    "smoke",
+    "flicker"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Altın kaplamalı denen kapısı, 1877-1878 Rus işgalinde söküldü ve Rusya'ya götürüldü."
+   ],
+   "big": "1877",
+   "sub": "KAPI SÖKÜLDÜ",
+   "year": 1877,
+   "label": "1877",
+   "fx": [
+    "fog",
+    "snow"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Sarayı 1840 depremi ve savaşlar yıprattı. Bugün restorasyonlarla ayakta."
+   ],
+   "big": "RESTORE",
+   "sub": "AYAKTA TUTULUYOR",
+   "year": 2011,
+   "label": "RESTORASYON",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bugün Ağrı Dağı'na bakan saray, UNESCO Dünya Mirası Geçici Listesi'nde."
+   ],
+   "big": "ARARAT",
+   "sub": "UNESCO GEÇİCİ LİSTE",
+   "year": 2026,
+   "label": "BUGÜN",
+   "fx": [
+    "gold",
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "glow"
+  }
+ ],
+ "eras": [
+  {
+   "name": "İNŞA",
+   "from": 0,
+   "to": 4
+  },
+  {
+   "name": "MİMARİ",
+   "from": 5,
+   "to": 6
+  },
+  {
+   "name": "KAYIP VE ONARIM",
+   "from": 7,
+   "to": 8
+  },
+  {
+   "name": "BUGÜN",
+   "from": 9,
+   "to": 9
+  }
+ ],
+ "outro_plan": {
+  "title": "İSHAK PAŞA SARAYI",
+  "line": "Bir sonraki durak için takipte kal."
+ },
+ "maps_plan": [
+  {
+   "after_scene": 1,
+   "cities": [
+    "Erzurum",
+    "Tebriz"
+   ],
+   "route": [
+    "Erzurum",
+    "Tebriz"
+   ],
+   "title": "DOĞU SINIRI: ERZURUM — TEBRİZ"
+  }
+ ],
+ "cards_plan": [
+  {
+   "scene": 1,
+   "value": 7600,
+   "unit": "M²",
+   "small": "YAKLAŞIK SARAY ALANI"
+  },
+  {
+   "scene": 3,
+   "value": 99,
+   "unit": "YIL",
+   "small": "SÜREN İNŞAAT"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": ""
+}
