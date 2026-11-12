@@ -29,7 +29,7 @@
    "video": "videos/k1.mp4",
    "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_175211_2a288a04-4c8a-470e-9eda-47d17dcbb33f.mp4",
    "v_bas": 0,
-   "v_son": 5,
+   "v_son": 6.5,
    "etiket": "TEMSİLİ"
   },
   {
@@ -54,7 +54,7 @@
    ],
    "video": "videos/k1.mp4",
    "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_175211_2a288a04-4c8a-470e-9eda-47d17dcbb33f.mp4",
-   "v_bas": 5,
+   "v_bas": 6.5,
    "v_son": 9,
    "etiket": "TEMSİLİ"
   },
@@ -216,7 +216,7 @@
    "video": "videos/k2.mp4",
    "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_183038_549f6128-a09c-4d22-995a-4af168565660.mp4",
    "v_bas": 6,
-   "v_son": 8.5,
+   "v_son": 8,
    "etiket": "TEMSİLİ"
   },
   {
@@ -241,7 +241,7 @@
    ],
    "video": "videos/k2.mp4",
    "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_183038_549f6128-a09c-4d22-995a-4af168565660.mp4",
-   "v_bas": 8.5,
+   "v_bas": 8,
    "v_son": 11,
    "etiket": "TEMSİLİ"
   },
@@ -269,7 +269,7 @@
    "video": "videos/k2.mp4",
    "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_183038_549f6128-a09c-4d22-995a-4af168565660.mp4",
    "v_bas": 11,
-   "v_son": 16,
+   "v_son": 14,
    "etiket": "TEMSİLİ"
   },
   {
@@ -295,8 +295,8 @@
    ],
    "video": "videos/k2.mp4",
    "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_183038_549f6128-a09c-4d22-995a-4af168565660.mp4",
-   "v_bas": 16,
-   "v_son": 21,
+   "v_bas": 14,
+   "v_son": 19.5,
    "etiket": "TEMSİLİ"
   },
   {
@@ -323,7 +323,7 @@
    ],
    "video": "videos/k2.mp4",
    "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_183038_549f6128-a09c-4d22-995a-4af168565660.mp4",
-   "v_bas": 21,
+   "v_bas": 19.5,
    "v_son": 25,
    "etiket": "TEMSİLİ"
   }
