@@ -7,9 +7,9 @@
  },
  "senarist": {
   "durum": "tamam",
-  "mesaj": "'Ayasofya'nın ilk yapımından bugüne tarihi ve yeraltı tünelleri' metni onay bekliyor",
-  "cikti": "projects/ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle/script.json",
-  "zaman": "2026-11-12T17:53:27Z"
+  "mesaj": "'Ayasofya Part 2: efsaneler, sırlar ve Ahit Sandığı iddiası' metni onay bekliyor",
+  "cikti": "projects/ayasofya-part-2-efsaneler-sirlar-ve-ahit-sandigi-iddiasi/script.json",
+  "zaman": "2026-11-12T18:50:28Z"
  },
  "gorsel": {
   "durum": "hata",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-12T18:04:47Z"
  },
  "kontrol": {
-  "durum": "hata",
-  "mesaj": "ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle: gorsel ✗",
-  "cikti": "projects/ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle/kontrol",
-  "zaman": "2026-11-12T18:44:13Z"
+  "durum": "tamam",
+  "mesaj": "ayasofya-part-2-efsaneler-sirlar-ve-ahit-sandigi-iddiasi: senaryo !",
+  "cikti": "projects/ayasofya-part-2-efsaneler-sirlar-ve-ahit-sandigi-iddiasi/kontrol",
+  "zaman": "2026-11-12T18:50:29Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

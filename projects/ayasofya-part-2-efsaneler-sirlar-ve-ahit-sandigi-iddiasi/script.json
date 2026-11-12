@@ -1,0 +1,243 @@
+{
+ "baslik": "Ayasofya Part 2: Efsaneler ve Sırlar",
+ "hook": "KAPININ ARDINDA NE VAR?",
+ "map_region": "avrupa_ortadogu",
+ "sahneler": [
+  {
+   "lines": [
+    "Kapının ardında yüzyıllardır anlatılan sırlar var."
+   ],
+   "big": "KAPI",
+   "sub": "KAPININ ARDINDAKİ SIRLAR",
+   "year": 537,
+   "label": "537",
+   "prompt": "A heavy ancient wooden door slowly opening in the center of a vast Byzantine brick and stone vault, revealing a dim underground passage with worn stone steps and a warm amber glow beyond, a small lone figure in a plain hooded cloak seen from far behind, mysterious and respectful mood, vertical 9:16 composition, main subject centered, empty space in the top and bottom thirds, no text, no inscriptions, no symbols on the door",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A heavy ancient wooden door slowly opening in the center of a vast Byzantine brick and stone vault, revealing a dim underground passage with worn stone steps and a warm amber glow beyond, a small lone figure in a plain hooded cloak seen from far behind, mysterious and respectful mood, vertical 9:16 composition, main subject centered, empty space in the top and bottom thirds, no text, no inscriptions, no symbols on the door, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s01.jpg"
+  },
+  {
+   "lines": [
+    "537'de açılışta Justinianus'un 'Süleyman, seni geçtim' dediği aktarılır.",
+    "Bu söz, sonraki anlatılarda yer alır."
+   ],
+   "big": "537",
+   "sub": "SÜLEYMAN, SENİ GEÇTİM",
+   "year": 537,
+   "label": "537",
+   "prompt": "Silhouette of a 6th-century Byzantine emperor in heavy purple and gold ceremonial robes and a jeweled crown, seen from far behind, standing in the immense nave of Hagia Sophia and gazing up at the vast central dome, golden shafts of light pouring through the dome windows, grand and solemn atmosphere, vertical 9:16 composition, subject centered, empty space at top and bottom, no faces visible, no text, no inscriptions, no mosaics with letters",
+   "fx": [
+    "rays",
+    "gold"
+   ],
+   "effect": "stamp",
+   "type_text": "",
+   "prompt_tam": "Silhouette of a 6th-century Byzantine emperor in heavy purple and gold ceremonial robes and a jeweled crown, seen from far behind, standing in the immense nave of Hagia Sophia and gazing up at the vast central dome, golden shafts of light pouring through the dome windows, grand and solemn atmosphere, vertical 9:16 composition, subject centered, empty space at top and bottom, no faces visible, no text, no inscriptions, no mosaics with letters, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s02.jpg"
+  },
+  {
+   "lines": [
+    "Bizans döneminde buraya kutsal emanetler getirildiği anlatılır.",
+    "Bunların bir kısmının akıbeti belirsizdir."
+   ],
+   "big": "EMANET",
+   "sub": "KUTSAL EMANETLER",
+   "year": 537,
+   "label": "RİVAYET",
+   "prompt": "Ornate gilded Byzantine reliquary boxes and a simple silver cross resting on a stone altar inside a dim ancient church, soft candlelight, deep shadows under marble arches, reverent atmosphere, vertical 9:16 composition, main subject centered, empty space at top and bottom, no people, no text, no inscriptions, no letters on objects",
+   "fx": [
+    "flicker",
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Ornate gilded Byzantine reliquary boxes and a simple silver cross resting on a stone altar inside a dim ancient church, soft candlelight, deep shadows under marble arches, reverent atmosphere, vertical 9:16 composition, main subject centered, empty space at top and bottom, no people, no text, no inscriptions, no letters on objects, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s03.jpg"
+  },
+  {
+   "lines": [
+    "İddia edilene göre Ahit Sandığı da Ayasofya'nın altında saklı."
+   ],
+   "big": "SANDIK",
+   "sub": "AHİT SANDIĞI İDDİASI",
+   "year": 537,
+   "label": "İDDİA",
+   "prompt": "A gold-covered ancient wooden chest with two winged golden figures on its lid, resting alone in a dark underground stone chamber under massive brick arches, a single beam of pale light falling on it, floating dust, mysterious and respectful mood, vertical 9:16 composition, chest centered, empty space at top and bottom, no people, no text, no inscriptions, no symbols",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A gold-covered ancient wooden chest with two winged golden figures on its lid, resting alone in a dark underground stone chamber under massive brick arches, a single beam of pale light falling on it, floating dust, mysterious and respectful mood, vertical 9:16 composition, chest centered, empty space at top and bottom, no people, no text, no inscriptions, no symbols, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s04.jpg"
+  },
+  {
+   "lines": [
+    "Ancak bunu destekleyen hiçbir tarihî kanıt yok.",
+    "Bu, yalnızca bir iddia olarak kalıyor."
+   ],
+   "big": "KANIT?",
+   "sub": "TARİHÎ KANIT YOK",
+   "year": 537,
+   "label": "İDDİA",
+   "prompt": "An empty dark underground stone chamber with massive aged brick arches and a bare dusty floor, a single soft beam of light falling on an empty spot in the center, quiet and questioning mood, nothing on the floor, vertical 9:16 composition, subject centered, empty space at top and bottom, no people, no text, no inscriptions",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "An empty dark underground stone chamber with massive aged brick arches and a bare dusty floor, a single soft beam of light falling on an empty spot in the center, quiet and questioning mood, nothing on the floor, vertical 9:16 composition, subject centered, empty space at top and bottom, no people, no text, no inscriptions, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s05.jpg"
+  },
+  {
+   "lines": [
+    "Yeraltı sarnıçları ve tünellerle ilgili anlatılar da dolaşır.",
+    "Kimi tünellerin uzaklara uzandığı söylenir, ama bunlar belgelenmiş değil."
+   ],
+   "big": "TÜNEL",
+   "sub": "SARNIÇLAR VE TÜNELLER",
+   "year": 537,
+   "label": "RİVAYET",
+   "prompt": "Vast underground Byzantine cistern with rows of ancient marble columns reflected in perfectly still dark water, a narrow arched brick tunnel entrance glowing faintly in the distance, soft amber lighting and light mist, vertical 9:16 composition, central perspective, empty space at top and bottom, no people, no text, no inscriptions",
+   "fx": [
+    "fog"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vast underground Byzantine cistern with rows of ancient marble columns reflected in perfectly still dark water, a narrow arched brick tunnel entrance glowing faintly in the distance, soft amber lighting and light mist, vertical 9:16 composition, central perspective, empty space at top and bottom, no people, no text, no inscriptions, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s06.jpg"
+  },
+  {
+   "lines": [
+    "Yukarıda ise rivayete göre kuzeybatıdaki sütun hiç kurumaz.",
+    "Ziyaretçiler başparmağını deliğe sokup çevirir, dilek diler."
+   ],
+   "big": "DİLEK",
+   "sub": "TERLEYEN SÜTUN",
+   "year": 537,
+   "label": "RİVAYET",
+   "prompt": "Close view of a square marble column covered with a worn bronze plate, with a smooth thumb-sized hole at hand height, a visitor's hand with thumb pressed into the hole (no face visible), the stone surface slightly damp and glistening, dim warm light inside a great historic church, vertical 9:16 composition, column centered, empty space at top and bottom, no text, no inscriptions",
+   "fx": [
+    "flicker",
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Close view of a square marble column covered with a worn bronze plate, with a smooth thumb-sized hole at hand height, a visitor's hand with thumb pressed into the hole (no face visible), the stone surface slightly damp and glistening, dim warm light inside a great historic church, vertical 9:16 composition, column centered, empty space at top and bottom, no text, no inscriptions, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s07.jpg"
+  },
+  {
+   "lines": [
+    "Evliya Çelebi'ye göre harca Mekke toprağı ve zemzem katılmış.",
+    "Bilim ise nemi taşın gözenekli yapısına bağlar."
+   ],
+   "big": "ZEMZEM",
+   "sub": "HARÇ RİVAYETİ",
+   "year": 537,
+   "label": "RİVAYET",
+   "prompt": "A clay water jug and a cloth pouch of pale earth in the foreground, behind them a great stone half-dome of an ancient church surrounded by wooden scaffolding at dusk, tiny worker silhouettes far in the distance, warm golden light, respectful historical mood, vertical 9:16 composition, foreground objects centered, empty space at top and bottom, no faces, no text, no inscriptions",
+   "fx": [
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A clay water jug and a cloth pouch of pale earth in the foreground, behind them a great stone half-dome of an ancient church surrounded by wooden scaffolding at dusk, tiny worker silhouettes far in the distance, warm golden light, respectful historical mood, vertical 9:16 composition, foreground objects centered, empty space at top and bottom, no faces, no text, no inscriptions, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s08.jpg"
+  },
+  {
+   "lines": [
+    "Kubbenin altında bir Hızır anlatısı da yaşar.",
+    "Yapıyı kıbleye çevirdiği söylenir."
+   ],
+   "big": "HIZIR",
+   "sub": "KUBBE VE HIZIR ANLATISI",
+   "year": 1453,
+   "label": "RİVAYET",
+   "prompt": "A softly glowing green and gold luminous silhouette of a robed wanderer seen from far behind, standing in the vast nave of Hagia Sophia beneath the great dome, light radiating gently around, plain walls with no calligraphy, reverent and mystical mood, vertical 9:16 composition, figure centered, empty space at top and bottom, no face visible, no text, no inscriptions, no flags",
+   "fx": [
+    "rays",
+    "gold"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A softly glowing green and gold luminous silhouette of a robed wanderer seen from far behind, standing in the vast nave of Hagia Sophia beneath the great dome, light radiating gently around, plain walls with no calligraphy, reverent and mystical mood, vertical 9:16 composition, figure centered, empty space at top and bottom, no face visible, no text, no inscriptions, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s09.jpg"
+  },
+  {
+   "lines": [
+    "Bu duvarlarda Hristiyan ve İslam anlatıları iç içe yaşıyor.",
+    "Hangisine inanıyorsun? Yorumlara yaz."
+   ],
+   "big": "SEN?",
+   "sub": "HANGİSİNE İNANIYORSUN?",
+   "year": 1453,
+   "label": "BUGÜN",
+   "prompt": "Wide dusk view of the Hagia Sophia dome and its four minarets rising above a misty Istanbul skyline silhouette, golden-orange sky, soft light on the dome, calm and reverent atmosphere, vertical 9:16 composition, building centered, empty space at top and bottom, no people, no text, no flags, no inscriptions",
+   "fx": [
+    "fog",
+    "gold"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Wide dusk view of the Hagia Sophia dome and its four minarets rising above a misty Istanbul skyline silhouette, golden-orange sky, soft light on the dome, calm and reverent atmosphere, vertical 9:16 composition, building centered, empty space at top and bottom, no people, no text, no flags, no inscriptions, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s10.jpg"
+  }
+ ],
+ "outro": {
+  "title": "AYASOFYA",
+  "line": "Rivayetler yaşar, tarih konuşur."
+ },
+ "aciklama": "Ayasofya'nın kapısından içeri girdik: terleyen sütun, harç rivayeti, Hızır anlatısı ve Ahit Sandığı iddiası. Bunların hepsi rivayettir. Ahit Sandığı için ise bilinen hiçbir tarihî kanıt yok. Hristiyan ve İslam anlatıları bu duvarlarda iç içe yaşıyor. Sen hangisine inanıyorsun?",
+ "hashtagler": [
+  "#Ayasofya",
+  "#AyasofyaEfsaneleri",
+  "#TerleyenSütun",
+  "#AhitSandığı",
+  "#Justinianus",
+  "#Bizans",
+  "#İstanbul",
+  "#TarihTürkiye",
+  "#Animasyon",
+  "#AnimasyonTarih",
+  "#Efsaneler",
+  "#Hızır"
+ ],
+ "kaynaklar": [
+  "https://www.haberturk.com/kultur-sanat/haber/603540-iste-ayasofya-efsaneleri",
+  "https://www.milliyet.com.tr/cadde/1500-yillik-efsaneler-1426447",
+  "https://www.gzt.com/tarih/ayasofyanin-bilinmeyen-efsanesi-terleyen-sutun-3512309",
+  "https://akinci944.com/bir-dunya-mirasi-ayasofya-2/",
+  "https://www.hurriyetdailynews.com/the-many-legends-of-the-hagia-sophia-72796",
+  "https://www.metmuseum.org/exhibitions/listings/2012/byzantium-and-islam/blog/where-in-the-world/posts/hagia-sophia",
+  "https://orthodoxwiki.org/Hagia_Sophia_(Constantinople)",
+  "https://turkinform.com.tr/ahit-sandigi-nedir-icinde-ne-var-ahit-sandigi-bulunursa-ne-olur",
+  "https://unluisilay.wixsite.com/islysjournal/post/erhan-altunay-ayasofya"
+ ],
+ "kontrol_notlari": [
+  "Metin yaklaşık 126 kelime ve 10 sahne. Bu, sizin 120-130 kelime / 50-55 sn isteğinize uygun. Sistem varsayılanı olan 130-150 kelime yerine sizin ek notunuz esas alındı.",
+  "Yıl ve tarihler rakamla yazıldı (537, 1453). Sistem kuralındaki 'yazıyla' ifadesi ile sizin 'rakamla' talimatınız çelişiyordu. Sonraki talimata göre rakam kullanıldı. Seslendirme yapay zekası okumayı yanlış yaparsa 537'yi 'beş yüz otuz yedi' olarak değiştirebilirsiniz.",
+  "Doğrulandı: Ayasofya, 532-537 arasında Justinianus'un gözetiminde bugünkü biçimiyle yeniden inşa edildi. Açılış 27 Aralık 537 tarihlidir (OrthodoxWiki; Met Museum; Quillette).",
+  "Doğrulandı: 'Süleyman, seni geçtim' sözü Met Museum, OrthodoxWiki ve Hürriyet Daily News'te 'söylediği rivayet edilir / aktarılır' diye geçer. Bu yüzden metinde kesin ifade yerine 'aktarılır' kullanıldı.",
+  "Doğrulandı: Terler Direk'e başparmağı sokup çevirerek dilek dileme geleneği Habertürk ve Milliyet'te geçer. Sütun için Meryem'in gözyaşı ve Aziz Georgios gibi farklı anlatılar vardır. Kaynaklar bunları efsane olarak aktarır.",
+  "Doğrulandı: Mekke toprağı ve zemzemli harç anlatısı Evliya Çelebi'ye atfedilir (Akıncı944). Bazı anlatımlarda Hz. Muhammed'in tükürüğü de eklenir (Akıncı944; Hürriyet Daily News). Dini hassasiyet nedeniyle metne alınmadı.",
+  "Doğrulandı: Sütunun nemi, gözenekli taşın rutubeti emip bırakmasıyla açıklanır (Akıncı944; İnisiyasyon). Metinde bilimsel açıklama olarak, rivayetin yanında kısaca verildi.",
+  "Doğrulandı: Hızır'ın sütuna parmağını sokup yapıyı kıbleye çevirdiği anlatısı Akşemseddin'e atfedilen aktarımda ve Habertürk, Milliyet'te geçer. Tamamı rivayettir, tarihî olgu olarak sunulmadı.",
+  "Ahit Sandığı: Ayasofya'nın altında saklı olduğuna dair arkeolojik ya da tarihî kanıt yoktur (TürkInform: 'bilimsel bir delil mevcut değildir'). Sandığın akıbeti bilinmiyor. Etiyopya/Aksum anlatısı da kanıtlanmış değil (NTV). Metinde açıkça 'tarihî kanıt yok' denildi.",
+  "Bizans döneminde Ayasofya'ya kutsal emanetler getirildiği anlatısı kaynaklarda geçer, ancak tek tek emanet ve rakam verilmedi. 'Akıbeti belirsiz' ifadesi genel ve temkinlidir. Yayın öncesi istenirse Bizans emanet listeleri için akademik kaynakla ayrıca teyit edilmelidir.",
+  "Yeraltı sarnıçları ve tünel anlatıları için güvenilir, belgelenmiş bir kaynak bulunamadı. Bu nedenle bu kısım sadece 'anlatılır / belgelenmiş değil' diye verildi ve hiçbir rakam ya da güzergâh yazılmadı.",
+  "Kaçınılanlar: tartışmalı rakamlar, CIA 'uzaktan görüş' iddiaları ve komplo teorileri. Gerçek kişilerin yüzü görsellerde gösterilmiyor (arkadan ve siluet). Görsellerde yazı, hat, tuğra ve bayrak yok.",
+  "Harita ve sayaç kartı eklenmedi. Elimizde bu kurgu için kesin ve doğrulanabilir bir rakam ya da güzergâh yok. Tarihî dönüm noktası olarak yalnızca 537 sahnesinde 'stamp' efekti kullanıldı."
+ ],
+ "konu": "Ayasofya Part 2: efsaneler, sırlar ve Ahit Sandığı iddiası",
+ "tarih": "",
+ "slug": "ayasofya-part-2-efsaneler-sirlar-ve-ahit-sandigi-iddiasi",
+ "durum": "onay-bekliyor",
+ "seslendirme_metni": "Kapının ardında yüzyıllardır anlatılan sırlar var.\n537'de açılışta Justinianus'un 'Süleyman, seni geçtim' dediği aktarılır.\nBu söz, sonraki anlatılarda yer alır.\nBizans döneminde buraya kutsal emanetler getirildiği anlatılır.\nBunların bir kısmının akıbeti belirsizdir.\nİddia edilene göre Ahit Sandığı da Ayasofya'nın altında saklı.\nAncak bunu destekleyen hiçbir tarihî kanıt yok.\nBu, yalnızca bir iddia olarak kalıyor.\nYeraltı sarnıçları ve tünellerle ilgili anlatılar da dolaşır.\nKimi tünellerin uzaklara uzandığı söylenir, ama bunlar belgelenmiş değil.\nYukarıda ise rivayete göre kuzeybatıdaki sütun hiç kurumaz.\nZiyaretçiler başparmağını deliğe sokup çevirir, dilek diler.\nEvliya Çelebi'ye göre harca Mekke toprağı ve zemzem katılmış.\nBilim ise nemi taşın gözenekli yapısına bağlar.\nKubbenin altında bir Hızır anlatısı da yaşar.\nYapıyı kıbleye çevirdiği söylenir.\nBu duvarlarda Hristiyan ve İslam anlatıları iç içe yaşıyor.\nHangisine inanıyorsun? Yorumlara yaz."
+}

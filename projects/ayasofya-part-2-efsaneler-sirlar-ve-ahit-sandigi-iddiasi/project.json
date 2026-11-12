@@ -1,0 +1,269 @@
+{
+ "title": "Ayasofya Part 2: Efsaneler ve Sırlar",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "KAPININ ARDINDA NE VAR?",
+ "map_region": "avrupa_ortadogu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Kapının ardında yüzyıllardır anlatılan sırlar var."
+   ],
+   "big": "KAPI",
+   "sub": "KAPININ ARDINDAKİ SIRLAR",
+   "year": 537,
+   "label": "537",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "537'de açılışta Justinianus'un 'Süleyman, seni geçtim' dediği aktarılır.",
+    "Bu söz, sonraki anlatılarda yer alır."
+   ],
+   "big": "537",
+   "sub": "SÜLEYMAN, SENİ GEÇTİM",
+   "year": 537,
+   "label": "537",
+   "fx": [
+    "rays",
+    "gold"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bizans döneminde buraya kutsal emanetler getirildiği anlatılır.",
+    "Bunların bir kısmının akıbeti belirsizdir."
+   ],
+   "big": "EMANET",
+   "sub": "KUTSAL EMANETLER",
+   "year": 537,
+   "label": "RİVAYET",
+   "fx": [
+    "flicker",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "İddia edilene göre Ahit Sandığı da Ayasofya'nın altında saklı."
+   ],
+   "big": "SANDIK",
+   "sub": "AHİT SANDIĞI İDDİASI",
+   "year": 537,
+   "label": "İDDİA",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ancak bunu destekleyen hiçbir tarihî kanıt yok.",
+    "Bu, yalnızca bir iddia olarak kalıyor."
+   ],
+   "big": "KANIT?",
+   "sub": "TARİHÎ KANIT YOK",
+   "year": 537,
+   "label": "İDDİA",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Yeraltı sarnıçları ve tünellerle ilgili anlatılar da dolaşır.",
+    "Kimi tünellerin uzaklara uzandığı söylenir, ama bunlar belgelenmiş değil."
+   ],
+   "big": "TÜNEL",
+   "sub": "SARNIÇLAR VE TÜNELLER",
+   "year": 537,
+   "label": "RİVAYET",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Yukarıda ise rivayete göre kuzeybatıdaki sütun hiç kurumaz.",
+    "Ziyaretçiler başparmağını deliğe sokup çevirir, dilek diler."
+   ],
+   "big": "DİLEK",
+   "sub": "TERLEYEN SÜTUN",
+   "year": 537,
+   "label": "RİVAYET",
+   "fx": [
+    "flicker",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Evliya Çelebi'ye göre harca Mekke toprağı ve zemzem katılmış.",
+    "Bilim ise nemi taşın gözenekli yapısına bağlar."
+   ],
+   "big": "ZEMZEM",
+   "sub": "HARÇ RİVAYETİ",
+   "year": 537,
+   "label": "RİVAYET",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Kubbenin altında bir Hızır anlatısı da yaşar.",
+    "Yapıyı kıbleye çevirdiği söylenir."
+   ],
+   "big": "HIZIR",
+   "sub": "KUBBE VE HIZIR ANLATISI",
+   "year": 1453,
+   "label": "RİVAYET",
+   "fx": [
+    "rays",
+    "gold"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bu duvarlarda Hristiyan ve İslam anlatıları iç içe yaşıyor.",
+    "Hangisine inanıyorsun? Yorumlara yaz."
+   ],
+   "big": "SEN?",
+   "sub": "HANGİSİNE İNANIYORSUN?",
+   "year": 1453,
+   "label": "BUGÜN",
+   "fx": [
+    "fog",
+    "gold"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  }
+ ],
+ "eras": [],
+ "outro_plan": {
+  "title": "AYASOFYA",
+  "line": "Rivayetler yaşar, tarih konuşur."
+ },
+ "maps_plan": [],
+ "cards_plan": [],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": ""
+}
