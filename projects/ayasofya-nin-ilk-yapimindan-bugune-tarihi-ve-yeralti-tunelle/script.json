@@ -1,0 +1,305 @@
+{
+ "baslik": "Ayasofya'nın Altında Ne Var? 360'tan Bugüne",
+ "hook": "ALTINDA NE VAR?",
+ "map_region": "marmara",
+ "sahneler": [
+  {
+   "lines": [
+    "Ayasofya'nın altında, henüz tamamen keşfedilmemiş bir dünya var.",
+    "Ama önce yukarıdan başlayalım: 360'ta ahşap çatılı ilk bazilika."
+   ],
+   "big": "360",
+   "sub": "İLK BAZİLİKA",
+   "year": 360,
+   "label": "360",
+   "prompt": "Static high aerial top-down view of an early Byzantine timber-roofed basilica, long rectangular hall with a pitched wooden roof and a columned courtyard, centered on a hilltop by the sea in ancient Constantinople, soft dawn light, empty courtyard, no people, no text, no lettering, no flags, vertical 9:16 composition with empty space at the top for a title and empty space at the bottom for subtitles",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Static high aerial top-down view of an early Byzantine timber-roofed basilica, long rectangular hall with a pitched wooden roof and a columned courtyard, centered on a hilltop by the sea in ancient Constantinople, soft dawn light, empty courtyard, no people, no text, no lettering, no flags, vertical 9:16 composition with empty space at the top for a title and empty space at the bottom for subtitles, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s01.jpg"
+  },
+  {
+   "lines": [
+    "404'te çıkan yangın ilk yapıyı yok etti."
+   ],
+   "big": "404",
+   "sub": "İLK YANGIN",
+   "year": 404,
+   "label": "404",
+   "prompt": "Static high aerial view of an early Byzantine timber basilica engulfed in fire at dusk, thick smoke rising over ancient Constantinople rooftops, no people visible, no gore, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom",
+   "fx": [
+    "smoke",
+    "ember"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Static high aerial view of an early Byzantine timber basilica engulfed in fire at dusk, thick smoke rising over ancient Constantinople rooftops, no people visible, no gore, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s02.jpg"
+  },
+  {
+   "lines": [
+    "415'te II. Theodosius ikinci kiliseyi yaptırdı."
+   ],
+   "big": "415",
+   "sub": "İKİNCİ KİLİSE",
+   "year": 415,
+   "label": "415",
+   "prompt": "Static high aerial view of a newly built early fifth-century Byzantine basilica with a pale stone facade, a monumental columned porch and a wooden roof, in a spacious marble courtyard, centered, clear morning light, no people, no text, no lettering, no flags, vertical 9:16 composition with empty space at the top and empty space at the bottom",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Static high aerial view of a newly built early fifth-century Byzantine basilica with a pale stone facade, a monumental columned porch and a wooden roof, in a spacious marble courtyard, centered, clear morning light, no people, no text, no lettering, no flags, vertical 9:16 composition with empty space at the top and empty space at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s03.jpg"
+  },
+  {
+   "lines": [
+    "532'deki Nika isyanında ise o da yandı."
+   ],
+   "big": "532",
+   "sub": "NİKA İSYANI",
+   "year": 532,
+   "label": "532",
+   "prompt": "Static high aerial view of a large Byzantine basilica burning at night, flames and heavy smoke over the city of Constantinople, distant hippodrome silhouette, no people visible, no gore, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom",
+   "fx": [
+    "smoke",
+    "ember",
+    "flicker"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Static high aerial view of a large Byzantine basilica burning at night, flames and heavy smoke over the city of Constantinople, distant hippodrome silhouette, no people visible, no gore, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s04.jpg"
+  },
+  {
+   "lines": [
+    "İmparator Justinianus 537'de bugünkü yapıyı tamamladı.",
+    "Devasa kubbesi çağının dünyasını şaşırttı."
+   ],
+   "big": "537",
+   "sub": "BUGÜNKÜ AYASOFYA",
+   "year": 537,
+   "label": "537",
+   "prompt": "Static high aerial view of the Hagia Sophia in the sixth century, newly completed Byzantine cathedral with a huge central dome and semi-domes, no minarets, pale stone and lead roofs, golden sunrise light, centered in a clear paved precinct, no people, no text, no lettering, no flags, vertical 9:16 composition with empty space at the top and empty space at the bottom",
+   "fx": [
+    "rays",
+    "gold"
+   ],
+   "effect": "glow",
+   "type_text": "",
+   "prompt_tam": "Static high aerial view of the Hagia Sophia in the sixth century, newly completed Byzantine cathedral with a huge central dome and semi-domes, no minarets, pale stone and lead roofs, golden sunrise light, centered in a clear paved precinct, no people, no text, no lettering, no flags, vertical 9:16 composition with empty space at the top and empty space at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s05.jpg"
+  },
+  {
+   "lines": [
+    "558'de deprem kubbeyi yıktı.",
+    "Kubbe daha yüksek biçimde yeniden yapıldı."
+   ],
+   "big": "558",
+   "sub": "KUBBE ÇÖKTÜ",
+   "year": 558,
+   "label": "558",
+   "prompt": "Static high aerial view of the sixth-century Hagia Sophia with its central dome partly collapsed after an earthquake, fallen masonry and dust clouds inside the roofline, wooden scaffolding being prepared, no people visible, no gore, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom",
+   "fx": [
+    "dust",
+    "smoke"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Static high aerial view of the sixth-century Hagia Sophia with its central dome partly collapsed after an earthquake, fallen masonry and dust clouds inside the roofline, wooden scaffolding being prepared, no people visible, no gore, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s06.jpg"
+  },
+  {
+   "lines": [
+    "1453'te İstanbul fethedildi.",
+    "Ayasofya camiye dönüştü, sonraki yüzyıllarda minareler eklendi."
+   ],
+   "big": "1453",
+   "sub": "CAMİYE DÖNÜŞÜM",
+   "year": 1453,
+   "label": "1453",
+   "prompt": "Static high aerial view of Hagia Sophia in the late fifteenth century just after becoming a mosque, large central dome, a single early slender minaret beside it, warm evening sky over Istanbul, empty courtyard, no people, no calligraphy, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "effect": "stamp",
+   "type_text": "",
+   "prompt_tam": "Static high aerial view of Hagia Sophia in the late fifteenth century just after becoming a mosque, large central dome, a single early slender minaret beside it, warm evening sky over Istanbul, empty courtyard, no people, no calligraphy, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s07.jpg"
+  },
+  {
+   "lines": [
+    "1847-1849'da mimar Fossati büyük bir onarım yaptı."
+   ],
+   "big": "1847",
+   "sub": "FOSSATİ ONARIMI",
+   "year": 1847,
+   "label": "1847",
+   "prompt": "Static high aerial view of Hagia Sophia in the nineteenth century with wooden scaffolding around the dome and four minarets, tiny distant silhouettes of workers far below, soft overcast daylight over Istanbul, no calligraphy, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom",
+   "fx": [
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Static high aerial view of Hagia Sophia in the nineteenth century with wooden scaffolding around the dome and four minarets, tiny distant silhouettes of workers far below, soft overcast daylight over Istanbul, no calligraphy, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s08.jpg"
+  },
+  {
+   "lines": [
+    "1934'te Ayasofya'nın müzeye çevrilmesine karar verildi."
+   ],
+   "big": "1934",
+   "sub": "MÜZE KARARI",
+   "year": 1934,
+   "label": "1934",
+   "prompt": "Static high aerial view of Hagia Sophia in the 1930s as a quiet museum, four minarets, large dome, clean empty square with trimmed lawns and a few small distant silhouettes, black-and-white photograph feeling with soft tones, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom",
+   "fx": [
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Static high aerial view of Hagia Sophia in the 1930s as a quiet museum, four minarets, large dome, clean empty square with trimmed lawns and a few small distant silhouettes, black-and-white photograph feeling with soft tones, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s09.jpg"
+  },
+  {
+   "lines": [
+    "2020'de yeniden cami olarak ibadete açıldı."
+   ],
+   "big": "2020",
+   "sub": "YENİDEN CAMİ",
+   "year": 2020,
+   "label": "2020",
+   "prompt": "Static high aerial view of Hagia Sophia at golden hour, four minarets, large dome and semi-domes, spacious plaza with tiny distant silhouettes of visitors, clear warm sky over Istanbul, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom",
+   "fx": [
+    "rays",
+    "gold"
+   ],
+   "effect": "stamp",
+   "type_text": "",
+   "prompt_tam": "Static high aerial view of Hagia Sophia at golden hour, four minarets, large dome and semi-domes, spacious plaza with tiny distant silhouettes of visitors, clear warm sky over Istanbul, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s10.jpg"
+  },
+  {
+   "lines": [
+    "Bugün restorasyon sürüyor.",
+    "Tünellerden, su kanallarından ve mahzenlerden yaklaşık 3 bin ton çamur ve moloz çıkarıldı."
+   ],
+   "big": "YERALTI",
+   "sub": "3 BİN TON MOLOZ",
+   "year": 2026,
+   "label": "2026",
+   "prompt": "Static high aerial view of Hagia Sophia at dusk with restoration scaffolding on the dome, four minarets, faint warm light glowing from small openings at ground level around the building suggesting hidden chambers below, no people, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Static high aerial view of Hagia Sophia at dusk with restoration scaffolding on the dome, four minarets, faint warm light glowing from small openings at ground level around the building suggesting hidden chambers below, no people, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s11.jpg"
+  },
+  {
+   "lines": [
+    "Bakan Ersoy, uygun bölümlerin ziyarete açılmasını hedeflediklerini söyledi.",
+    "Kesin bir tarih ise henüz yok."
+   ],
+   "big": "HEDEF",
+   "sub": "TARİH AÇIKLANMADI",
+   "year": 2026,
+   "label": "2026",
+   "prompt": "Static high aerial view of Hagia Sophia at blue hour, softly illuminated dome and minarets, calm empty plaza, subtle golden glow seeping from the ground around the building, no people, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Static high aerial view of Hagia Sophia at blue hour, softly illuminated dome and minarets, calm empty plaza, subtle golden glow seeping from the ground around the building, no people, no text, no lettering, no flags, building centered, vertical 9:16 composition with empty space at the top and empty space at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s12.jpg"
+  }
+ ],
+ "finale": "",
+ "maps": [],
+ "cards": [
+  {
+   "scene": 10,
+   "value": 3000,
+   "unit": "TON",
+   "small": "ÇAMUR VE MOLOZ ÇIKARILDI"
+  }
+ ],
+ "eras": [
+  {
+   "name": "İLK YAPILAR",
+   "from": 0,
+   "to": 3
+  },
+  {
+   "name": "JUSTİNİANUS",
+   "from": 4,
+   "to": 5
+  },
+  {
+   "name": "OSMANLI",
+   "from": 6,
+   "to": 7
+  },
+  {
+   "name": "CUMHURİYET",
+   "from": 8,
+   "to": 9
+  },
+  {
+   "name": "BUGÜN",
+   "from": 10,
+   "to": 11
+  }
+ ],
+ "outro": {
+  "title": "AYASOFYA",
+  "line": "Altındaki sırlar yavaş yavaş açılıyor."
+ },
+ "aciklama": "Ayasofya 360'tan bugüne yandı, yıkıldı, yeniden doğdu. Şimdi de yer altı tünelleri, su kanalları ve mahzenleri gün ışığına çıkarılıyor. Bakan Ersoy uygun bölümlerin ziyarete açılmasını hedeflediklerini söyledi, ancak kesin bir tarih açıklanmadı. Sence Ayasofya'nın altından ne çıkacak?",
+ "hashtagler": [
+  "#Ayasofya",
+  "#Istanbul",
+  "#TarihiYapılar",
+  "#Bizans",
+  "#Osmanlı",
+  "#Justinianus",
+  "#Fetih1453",
+  "#YeraltıTünelleri",
+  "#TarihBilgisi",
+  "#AnimasyonTarih"
+ ],
+ "kaynaklar": [
+  "https://tr.euronews.com/2026/11/03/bakan-ersoy-ayasofyanin-yer-altindaki-tarihi-tuneller-ziyarete-acilabilir",
+  "https://www.memurlar.net/haber/1178423/bakan-ersoy-duyurdu-ayasofya-nin-yer-alti-dehlizleri-ziyarete-acilabilir.html",
+  "https://www.dogayidinle.com/turizm-ve-kultur/ayasofyanin-altindaki-tunellerde-yeni-asama-guvenli-bolumler-ziyarete-acilabilir/8590",
+  "https://ankahaber.net/haber/kultur-ve-turizm-bakani-ersoy-ayasofya-nin-tarihi-yer-alti-tunelleri-ziyarete-acilabilecek-d3d2e80a",
+  "https://istanbulticaretgazetesi.com/ayasofyanin-yer-alti-mekanlari-ziyarete-acilacak-bakan-ersoy-halkimizla-bulusturmayi-hedefliyoruz",
+  "https://www.turkiyeturizm.com/ayasofyanintunelleri-celikle-guclendirildi-ziyarete-acilacak-81870h.htm"
+ ],
+ "kontrol_notlari": [
+  "TÜNEL HABERİ KISMEN DOĞRULANDI: '2026'da açılacak' iddiası doğrulanamadı, bu yüzden metne yazılmadı. Kültür ve Turizm Bakanı Ersoy, 17 Eylül 2026 ve 1-3 Kasım 2026 tarihli açıklamalarında uygun ve güvenli bölümlerin, çalışmalar bittikten sonra ziyarete açılabileceğini ve açılmasının hedeflendiğini söyledi (Euronews, Memurlar.net, Anka). Kesin bir açılış tarihi yok. Dogayidinle.com bu yüzden 'açıldı' veya 'şu tarihte açılacak' bilgisine henüz doğru denemeyeceğini yazıyor.",
+  "Euronews'e göre Ersoy, alanların önce basın mensuplarına tanıtılmasının planlandığını söyledi. Hangi alanların açılacağına bilimsel incelemeler ve güvenlik koşulları karar verecek. Bu yüzden metinde 'hedefliyoruz' ve 'kesin tarih yok' ifadeleri kullanıldı.",
+  "'Yaklaşık 3 bin ton çamur ve moloz' rakamı Bakan Ersoy'un açıklamasından alındı (Anka, Mirathaber, Yenialanya). Bakanlık rakamı olduğu için 'yaklaşık' ifadesiyle kullanıldı.",
+  "Çıkarılanlar: '9 km tünel ağı' bilgisi. Ersoy bunu 'yaklaşık 9 kilometreye kadar uzanan bölümlerden söz ediliyor' diye söyledi ve belli bir noktadan sonra çökmeler olduğunu ekledi. Kesin bir ölçüm olmadığı için metne ve kartlara alınmadı. Anka haberindeki '2027'de ilk etapları açmayı hedefliyoruz' sözü Antalya'daki bir projeyle ilgili, Ayasofya tünelleriyle değil. Bu yüzden 2027 hiçbir yerde kullanılmadı. Dört odalı yer altı mezarı (hipoje) bilgisi süre nedeniyle metne alınmadı.",
+  "Tarihî yıllar (360, 404, 415, 532, 537, 558, 1453, 1847-1849, 1934, 2020) bu aramada ayrıca kaynakla doğrulanmadı, standart tarih bilgisine dayanıyor. Yayından önce Britannica, UNESCO ve Ayasofya müze/Diyanet kaynaklarından kontrol edilmesini öneririm.",
+  "Dikkat edilen ayrıntılar: 1934, müzeye çevirme kararının yılı. Halka açılış 1935'te oldu, bu yüzden cümle 'karar verildi' diye yazıldı. 558'de kubbe çöktü ve yeniden yapıldı, sonraki yeniden açılışın yılı (562) metne yazılmadı. 1453'te yalnızca minarelerin sonradan eklendiği söylendi, hangi sultan döneminde eklendiği yazılmadı. Fossati'nin adı yalnızca soyadıyla geçti.",
+  "Metinde yazar, kişi ve kelime sınırı için not: Brief 120-130 kelime ve 50-55 saniye istedi, sistem kuralı ise 130-150 kelime ve 60-65 saniye. Metin yaklaşık 123 kelime ve 12 sahne, brief'e göre yazıldı. Yıllar brief'teki gibi rakamla yazıldı, sistem kuralındaki 'yazıyla' kuralı uygulanmadı. Ses yapay zekası yılları yanlış okursa sahne 'lines' alanları yazıyla değiştirilebilir.",
+  "Görsel promptlarında gerçek kişi yüzü, yazı, hat, tuğra ve bayrak yok. Kan ve vahşet sahnesi yok, yangın ve deprem sahneleri insansız kurgulandı. Harita geçişi kullanılmadı."
+ ],
+ "konu": "Ayasofya'nın ilk yapımından bugüne tarihi ve yeraltı tünelleri",
+ "tarih": "",
+ "slug": "ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle",
+ "durum": "onay-bekliyor",
+ "seslendirme_metni": "Ayasofya'nın altında, henüz tamamen keşfedilmemiş bir dünya var.\nAma önce yukarıdan başlayalım: 360'ta ahşap çatılı ilk bazilika.\n404'te çıkan yangın ilk yapıyı yok etti.\n415'te II. Theodosius ikinci kiliseyi yaptırdı.\n532'deki Nika isyanında ise o da yandı.\nİmparator Justinianus 537'de bugünkü yapıyı tamamladı.\nDevasa kubbesi çağının dünyasını şaşırttı.\n558'de deprem kubbeyi yıktı.\nKubbe daha yüksek biçimde yeniden yapıldı.\n1453'te İstanbul fethedildi.\nAyasofya camiye dönüştü, sonraki yüzyıllarda minareler eklendi.\n1847-1849'da mimar Fossati büyük bir onarım yaptı.\n1934'te Ayasofya'nın müzeye çevrilmesine karar verildi.\n2020'de yeniden cami olarak ibadete açıldı.\nBugün restorasyon sürüyor.\nTünellerden, su kanallarından ve mahzenlerden yaklaşık 3 bin ton çamur ve moloz çıkarıldı.\nBakan Ersoy, uygun bölümlerin ziyarete açılmasını hedeflediklerini söyledi.\nKesin bir tarih ise henüz yok."
+}

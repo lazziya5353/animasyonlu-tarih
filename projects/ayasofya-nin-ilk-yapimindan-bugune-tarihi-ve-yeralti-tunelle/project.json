@@ -1,0 +1,351 @@
+{
+ "title": "Ayasofya'nın Altında Ne Var? 360'tan Bugüne",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "ALTINDA NE VAR?",
+ "map_region": "marmara",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ayasofya'nın altında, henüz tamamen keşfedilmemiş bir dünya var.",
+    "Ama önce yukarıdan başlayalım: 360'ta ahşap çatılı ilk bazilika."
+   ],
+   "big": "360",
+   "sub": "İLK BAZİLİKA",
+   "year": 360,
+   "label": "360",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "404'te çıkan yangın ilk yapıyı yok etti."
+   ],
+   "big": "404",
+   "sub": "İLK YANGIN",
+   "year": 404,
+   "label": "404",
+   "fx": [
+    "smoke",
+    "ember"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "415'te II. Theodosius ikinci kiliseyi yaptırdı."
+   ],
+   "big": "415",
+   "sub": "İKİNCİ KİLİSE",
+   "year": 415,
+   "label": "415",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "532'deki Nika isyanında ise o da yandı."
+   ],
+   "big": "532",
+   "sub": "NİKA İSYANI",
+   "year": 532,
+   "label": "532",
+   "fx": [
+    "smoke",
+    "ember",
+    "flicker"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "İmparator Justinianus 537'de bugünkü yapıyı tamamladı.",
+    "Devasa kubbesi çağının dünyasını şaşırttı."
+   ],
+   "big": "537",
+   "sub": "BUGÜNKÜ AYASOFYA",
+   "year": 537,
+   "label": "537",
+   "fx": [
+    "rays",
+    "gold"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "glow"
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "558'de deprem kubbeyi yıktı.",
+    "Kubbe daha yüksek biçimde yeniden yapıldı."
+   ],
+   "big": "558",
+   "sub": "KUBBE ÇÖKTÜ",
+   "year": 558,
+   "label": "558",
+   "fx": [
+    "dust",
+    "smoke"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1453'te İstanbul fethedildi.",
+    "Ayasofya camiye dönüştü, sonraki yüzyıllarda minareler eklendi."
+   ],
+   "big": "1453",
+   "sub": "CAMİYE DÖNÜŞÜM",
+   "year": 1453,
+   "label": "1453",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1847-1849'da mimar Fossati büyük bir onarım yaptı."
+   ],
+   "big": "1847",
+   "sub": "FOSSATİ ONARIMI",
+   "year": 1847,
+   "label": "1847",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1934'te Ayasofya'nın müzeye çevrilmesine karar verildi."
+   ],
+   "big": "1934",
+   "sub": "MÜZE KARARI",
+   "year": 1934,
+   "label": "1934",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "2020'de yeniden cami olarak ibadete açıldı."
+   ],
+   "big": "2020",
+   "sub": "YENİDEN CAMİ",
+   "year": 2020,
+   "label": "2020",
+   "fx": [
+    "rays",
+    "gold"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bugün restorasyon sürüyor.",
+    "Tünellerden, su kanallarından ve mahzenlerden yaklaşık 3 bin ton çamur ve moloz çıkarıldı."
+   ],
+   "big": "YERALTI",
+   "sub": "3 BİN TON MOLOZ",
+   "year": 2026,
+   "label": "2026",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bakan Ersoy, uygun bölümlerin ziyarete açılmasını hedeflediklerini söyledi.",
+    "Kesin bir tarih ise henüz yok."
+   ],
+   "big": "HEDEF",
+   "sub": "TARİH AÇIKLANMADI",
+   "year": 2026,
+   "label": "2026",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "İLK YAPILAR",
+   "from": 0,
+   "to": 3
+  },
+  {
+   "name": "JUSTİNİANUS",
+   "from": 4,
+   "to": 5
+  },
+  {
+   "name": "OSMANLI",
+   "from": 6,
+   "to": 7
+  },
+  {
+   "name": "CUMHURİYET",
+   "from": 8,
+   "to": 9
+  },
+  {
+   "name": "BUGÜN",
+   "from": 10,
+   "to": 11
+  }
+ ],
+ "outro_plan": {
+  "title": "AYASOFYA",
+  "line": "Altındaki sırlar yavaş yavaş açılıyor."
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 10,
+   "value": 3000,
+   "unit": "TON",
+   "small": "ÇAMUR VE MOLOZ ÇIKARILDI"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": ""
+}

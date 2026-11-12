@@ -1,0 +1,24 @@
+{
+ "asama": "senaryo",
+ "durum": "uyari",
+ "ozet": "12 sahne, tahmini 62 sn · 3 not",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Ayasofya'nın altında, henüz tamamen keşfedilmemiş bir dünya …”",
+   "sahne": 1
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Tünellerden, su kanallarından ve mahzenlerden yaklaşık 3 bin…”",
+   "sahne": 11
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Bakan Ersoy, uygun bölümlerin ziyarete açılmasını hedefledik…”",
+   "sahne": 12
+  }
+ ],
+ "tahmini_sure": 61.9,
+ "zaman": "2026-11-12T17:53:27Z"
+}

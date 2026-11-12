@@ -188,6 +188,13 @@
    "servis": "gemini-ses",
    "usd": 0.0,
    "detay": "Charon sesi (ücretsiz kota)"
+  },
+  {
+   "zaman": "2026-11-12T17:53:27Z",
+   "ajan": "senarist",
+   "servis": "claude",
+   "usd": 0.2474,
+   "detay": "31135 giriş / 8930 çıkış token, 2 arama"
   }
  ]
 }

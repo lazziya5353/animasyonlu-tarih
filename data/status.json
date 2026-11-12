@@ -7,9 +7,9 @@
  },
  "senarist": {
   "durum": "tamam",
-  "mesaj": "'Kız Kulesi'nin tarihi ve Galata Kulesi ile aşk rivayeti' metni onay bekliyor",
-  "cikti": "projects/kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti/script.json",
-  "zaman": "2026-11-12T13:33:07Z"
+  "mesaj": "'Ayasofya'nın ilk yapımından bugüne tarihi ve yeraltı tünelleri' metni onay bekliyor",
+  "cikti": "projects/ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle/script.json",
+  "zaman": "2026-11-12T17:53:27Z"
  },
  "gorsel": {
   "durum": "tamam",
@@ -25,9 +25,9 @@
  },
  "kontrol": {
   "durum": "tamam",
-  "mesaj": "kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti: kurgu ✓",
-  "cikti": "projects/kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti/kontrol",
-  "zaman": "2026-11-12T17:44:49Z"
+  "mesaj": "ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle: senaryo !",
+  "cikti": "projects/ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle/kontrol",
+  "zaman": "2026-11-12T17:53:27Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
