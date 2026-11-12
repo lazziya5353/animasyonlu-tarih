@@ -55,3 +55,4 @@ details.krow{display:block}.krow b{min-width:78px;font-size:14px}.krow summary .
 a.btn{text-decoration:none;display:inline-block}
 
 button.duzelt{padding:3px 9px;font-size:11.5px;margin-left:6px;border-radius:14px;background:#2a2414;border:1px solid #e8c47888;color:#e8c478;vertical-align:middle}button.duzelt:disabled{opacity:.7}
+.silb{background:transparent;border:1px solid #5a3a3f;color:#e8a0a8}.silb.kirmizi{border-color:#a8444f;color:#ff7b86}.silb:disabled{opacity:.6}

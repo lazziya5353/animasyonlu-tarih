@@ -1,0 +1,29 @@
+name: "Araç · Sil (panelden)"
+on:
+  workflow_dispatch:
+    inputs:
+      slug: { description: "Proje", required: true }
+      tur: { description: "video = sadece videoyu sil, hepsi = projeyi tamamen sil", required: true, default: "video" }
+permissions:
+  contents: write
+concurrency: { group: repo-yazma, cancel-in-progress: false }
+jobs:
+  sil:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      SLUG: ${{ inputs.slug }}
+      TUR: ${{ inputs.tur }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Sil
+        run: python scripts/sil.py --slug "$SLUG" --tur "$TUR"
+      - name: Kaydet
+        run: |
+          git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
+          git add -A projects data
+          git diff --cached --quiet || git commit -m "Sil: $SLUG ($TUR)"
+          for i in 1 2 3; do (git pull --rebase -q || (git rebase --abort; git pull --no-rebase --no-edit -X ours -q)) && git push -q && break; sleep 3; done

@@ -45,9 +45,9 @@ $("#pw").addEventListener("keydown", (e) => { if (e.key === "Enter") $("#go").cl
 $("#refresh").onclick = () => (CUR ? openProject(CUR) : load());
 
 async function start() { $("#login").classList.add("hide"); $("#app").classList.remove("hide"); load(); }
-let O = null, CUR = null;
+let O = null, CUR = null; const GIZLI = new Set(); // silinmekte olan projeler (iş bitene kadar listede görünmesin)
 async function load() {
-  try { O = await api("overview"); render(); } catch (e) { $("#main").innerHTML = `<div class="card" style="color:var(--err)">${esc(e.message)}</div>`; }
+  try { O = await api("overview"); O.projeler = O.projeler.filter((p) => !GIZLI.has(p)); render(); } catch (e) { $("#main").innerHTML = `<div class="card" style="color:var(--err)">${esc(e.message)}</div>`; }
 }
 
 // ───────── ana sayfa ─────────
@@ -231,9 +231,22 @@ async function openProject(slug) {
   h += `<h2>Video</h2><div class="card">${P.video ? `<video id="vid" controls playsinline></video><div class="mut" style="margin-top:8px">${(P.video.boyut / 1e6).toFixed(1)} MB · ${ago(P.video.zaman)}</div>` : `<span class="mut">Henüz video yok.</span>`}
     <div class="flex"><button class="gold" id="render">${P.video ? "Videoyu yeniden üret" : "Videoyu üret"}</button>${P.video ? `<button id="dl">İndir</button>` : ""}</div></div>`;
   if (sc) h += paylasimKart(P, sc);
+  h += `<h2>Sil</h2><div class="card sil"><div class="mut" style="font-size:12.5px;margin-bottom:8px">Silinen geri gelmez. Instagram'da paylaşılmış gönderiye dokunmaz, onu Instagram'dan silmen gerekir.</div>
+    <div class="flex">${P.video ? `<button class="silb" data-sil="video">🗑 Sadece videoyu sil</button>` : ""}<button class="silb kirmizi" data-sil="hepsi">🗑 Projeyi tamamen sil</button></div></div>`;
   d.innerHTML = h;
   window.scrollTo(0, 0);
   $("#back").onclick = () => { CUR = null; d.classList.add("hide"); $("#main").classList.remove("hide"); load(); };
+  d.querySelectorAll("[data-sil]").forEach((b) => (b.onclick = async () => {
+    const hepsi = b.dataset.sil === "hepsi", ad = sc?.baslik || slug;
+    if (!confirm(hepsi ? `"${ad}" projesi tamamen silinsin mi?\n\nMetin, görseller, ses ve video gider. Geri alınamaz.` : `"${ad}" videosu silinsin mi?\n\nMetin, görseller ve ses kalır; istersen videoyu yeniden üretebilirsin.`)) return;
+    b.disabled = true; b.textContent = "Siliniyor…";
+    try {
+      await api("sil", { slug, tur: b.dataset.sil, onay: slug });
+      toast(hepsi ? "Proje siliniyor, 30 sn içinde listeden kalkar" : "Video siliniyor, 30 sn sürer");
+      if (hepsi) { GIZLI.add(slug); CUR = null; d.classList.add("hide"); $("#main").classList.remove("hide"); load(); setTimeout(load, 40000); }
+      else setTimeout(() => CUR === slug && openProject(slug), 40000);
+    } catch (e) { b.disabled = false; b.textContent = hepsi ? "🗑 Projeyi tamamen sil" : "🗑 Sadece videoyu sil"; toast(e.message || "Hata"); }
+  }));
   d.querySelectorAll("[data-copy]").forEach((b) => (b.onclick = () => { navigator.clipboard.writeText(b.dataset.copy); toast("Kopyalandı"); }));
   d.querySelectorAll(".sc").forEach(async (el) => {
     if (el.dataset.img) { const u = await fileUrl(`projects/${slug}/${el.dataset.img}`); if (u) el.style.backgroundImage = `url(${u})`; }

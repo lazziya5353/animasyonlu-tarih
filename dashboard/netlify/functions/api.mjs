@@ -6,6 +6,7 @@ import { getStore } from "@netlify/blobs";
 const REPO = process.env.GITHUB_REPO || "lazziya5353/animasyonlu-tarih";
 const GH = "https://api.github.com";
 const WORKFLOWS = {
+  sil: "sil.yml",
   arastirmaci: "weekly-report.yml",
   senarist: "write-script.yml",
   gorsel: "generate-assets.yml",
@@ -166,6 +167,13 @@ export default async (req) => {
           .map((m) => `- [${String(m.asama || "genel").slice(0, 12)}]${Number(m.sahne) ? ` sahne ${Number(m.sahne)}:` : ""} ${String(m.mesaj || "").slice(0, 300)}`);
         if (!M.length) return json({ hata: "Düzeltilecek madde yok" }, 400);
         await dispatch("yonetici", { mesaj: `[DÜZELT] Kontrolcülerin bulduğu şu sorunları düzelt, sonra gerekiyorsa yeniden üret ve kontrol ettir:\n${M.join("\n")}`.slice(0, 1500), slug: b.slug });
+        return json({ ok: true });
+      }
+      case "sil": { // panelden silme: video = sadece hazır video, hepsi = projeyi tamamen
+        if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);
+        if (!["video", "hepsi"].includes(b.tur)) return json({ hata: "Geçersiz silme türü" }, 400);
+        if (b.onay !== b.slug) return json({ hata: "Onay tutmadı" }, 400);
+        await dispatch("sil", { slug: b.slug, tur: b.tur });
         return json({ ok: true });
       }
       case "komut_gecmis": {
