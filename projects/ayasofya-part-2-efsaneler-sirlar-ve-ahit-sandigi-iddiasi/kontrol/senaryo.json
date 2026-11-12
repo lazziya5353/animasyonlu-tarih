@@ -1,0 +1,19 @@
+{
+ "asama": "senaryo",
+ "durum": "uyari",
+ "ozet": "10 sahne, tahmini 66 sn · 2 not",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “537'de açılışta Justinianus'un 'Süleyman, seni geçtim' dediğ…”",
+   "sahne": 2
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Kimi tünellerin uzaklara uzandığı söylenir, ama bunlar belge…”",
+   "sahne": 6
+  }
+ ],
+ "tahmini_sure": 66.5,
+ "zaman": "2026-11-12T18:50:29Z"
+}
