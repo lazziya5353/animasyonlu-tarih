@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "galata-kulesi-1348-2026 videosu hazır",
-  "cikti": "release:video-galata-kulesi-1348-2026",
-  "zaman": "2026-11-12T13:29:04Z"
+  "mesaj": "kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti videosu hazır",
+  "cikti": "release:video-kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti",
+  "zaman": "2026-11-12T14:22:29Z"
  },
  "kontrol": {
   "durum": "hata",
-  "mesaj": "kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti: gorsel ✗",
+  "mesaj": "kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti: kurgu ✗",
   "cikti": "projects/kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti/kontrol",
-  "zaman": "2026-11-12T13:42:32Z"
+  "zaman": "2026-11-12T14:22:22Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

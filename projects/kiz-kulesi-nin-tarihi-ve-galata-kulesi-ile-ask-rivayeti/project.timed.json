@@ -1,0 +1,436 @@
+{
+ "title": "Kız Kulesi'nin Gerçek Tarihi ve Galata Kulesi Rivayeti",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "İKİ KULE, BİR BOĞAZ",
+ "map_region": "marmara",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": 0.0,
+   "end": 7.369999999999999,
+   "lines": [
+    "Rivayete göre Kız Kulesi ile Galata Kulesi yüzyıllardır birbirine âşık.",
+    "Ama aralarında Boğaz var."
+   ],
+   "big": "RİVAYET",
+   "sub": "BİR ŞEHİR SÖYLENCESİ",
+   "year": -410,
+   "label": "RİVAYET",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "v_bas": 0,
+   "v_son": 4.97,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": 7.369999999999999,
+   "end": 17.700000000000003,
+   "lines": [
+    "Oysa kulenin belgelenmiş tarihi bambaşka.",
+    "MÖ 410 dolaylarında Atinalı komutan Alkibiades'in burada bir gümrük noktası kurduğu aktarılır."
+   ],
+   "big": "MÖ 410",
+   "sub": "ANTİK GÜMRÜK NOKTASI",
+   "year": -410,
+   "label": "MÖ 410",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "v_bas": 5.05,
+   "v_son": 9.98,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": 17.700000000000003,
+   "end": 29.32,
+   "lines": [
+    "12. yüzyılda Bizans, adaya taş bir kule yaptı.",
+    "İmparator Manuel Komnenos döneminde kıyıyla kule arasına zincir gerildi."
+   ],
+   "big": "BİZANS",
+   "sub": "KULE VE ZİNCİR",
+   "year": 1143,
+   "label": "12. YY",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "v_bas": 10.06,
+   "v_son": 14.99,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": 29.32,
+   "end": 33.35,
+   "lines": [
+    "1453'ten sonra kule Osmanlı'ya geçti.",
+    "Fener olarak gemilere yol gösterdi."
+   ],
+   "big": "1453",
+   "sub": "OSMANLI DÖNEMİ",
+   "year": 1453,
+   "label": "1453",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp",
+   "video": "videos/k1.mp4",
+   "v_bas": 15.07,
+   "v_son": 19.99,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": 33.35,
+   "end": 38.46,
+   "lines": [
+    "1719'da fenerden çıkan yangın ahşap kuleyi yaktı.",
+    "1725'te kule yeniden yapıldı."
+   ],
+   "big": "1719",
+   "sub": "YANGIN VE ONARIM",
+   "year": 1719,
+   "label": "1719",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "v_bas": 20.07,
+   "v_son": 25.0,
+   "sfx": "yangin",
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": 38.46,
+   "end": 48.61,
+   "lines": [
+    "1830'larda kolera salgını yüzünden karantina hastanesi oldu.",
+    "II. Mahmud'un onarımıyla bugünkü biçimini aldı."
+   ],
+   "big": "1830'LAR",
+   "sub": "KARANTİNA VE ONARIM",
+   "year": 1830,
+   "label": "1830'LAR",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k2.mp4",
+   "v_bas": 0,
+   "v_son": 4.97,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": 48.61,
+   "end": 50.02,
+   "lines": [
+    "Yılanlı prenses ve Leandros hikâyeleri ise efsaneden ibaret."
+   ],
+   "big": "EFSANE",
+   "sub": "TARİH DEĞİL, HİKÂYE",
+   "year": 1833,
+   "label": "EFSANE",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k2.mp4",
+   "v_bas": 5.05,
+   "v_son": 9.98,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": 50.02,
+   "end": 57.08,
+   "lines": [
+    "2021'de başlayan restorasyon bitti.",
+    "Kule, 11 Mayıs 2023'te lazer gösterisiyle yeniden açıldı."
+   ],
+   "big": "2023",
+   "sub": "YENİDEN AÇILIŞ",
+   "year": 2023,
+   "label": "2023",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "glow",
+   "video": "videos/k2.mp4",
+   "v_bas": 10.06,
+   "v_son": 14.99,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": 57.08,
+   "end": 62.22,
+   "lines": [
+    "Rivayet yaşıyor.",
+    "Hezarfen Galata'dan Üsküdar'a uçarken mektupları taşımış."
+   ],
+   "big": "HEZARFEN",
+   "sub": "GALATA'DAN ÜSKÜDAR'A",
+   "year": 2023,
+   "label": "HEZARFEN",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k2.mp4",
+   "v_bas": 15.07,
+   "v_son": 19.99,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": 62.22,
+   "end": 67.49900000000001,
+   "lines": [
+    "Galata Kulesi'nin gerçek hikâyesi için o videoya bakın."
+   ],
+   "big": "GALATA",
+   "sub": "SIRADAKİ KULE",
+   "year": 2023,
+   "label": "GALATA",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k2.mp4",
+   "v_bas": 20.07,
+   "v_son": 25.0,
+   "etiket": "TEMSİLİ"
+  }
+ ],
+ "eras": [
+  {
+   "name": "ANTİK VE BİZANS",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "name": "OSMANLI",
+   "from": 3,
+   "to": 5
+  },
+  {
+   "name": "YENİDEN AÇILIŞ",
+   "from": 7,
+   "to": 7
+  }
+ ],
+ "outro_plan": {
+  "title": "KIZ KULESİ",
+  "line": "Taşın tarihi belgeli, aşkın hikâyesi rivayet."
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 7,
+   "value": 2,
+   "unit": "YIL",
+   "small": "SÜREN RESTORASYON"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "cards": [
+  {
+   "start": 51.220000000000006,
+   "end": 56.78,
+   "value": 2,
+   "unit": "YIL",
+   "small": "SÜREN RESTORASYON"
+  }
+ ],
+ "outro": {
+  "start": 62.22,
+  "title": "KIZ KULESİ",
+  "line": "Taşın tarihi belgeli, aşkın hikâyesi rivayet.",
+  "line_at": 64.099
+ },
+ "duration": 68.0,
+ "jumps": [
+  {
+   "t": 17.700000000000003,
+   "value": 1553
+  },
+  {
+   "t": 29.32,
+   "value": 310
+  },
+  {
+   "t": 33.35,
+   "value": 266
+  },
+  {
+   "t": 38.46,
+   "value": 111
+  },
+  {
+   "t": 50.02,
+   "value": 190
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.21,
+   "end": 5.22,
+   "text": "Rivayete göre Kız Kulesi ile Galata Kulesi yüzyıllardır birbirine âşık."
+  },
+  {
+   "start": 5.58,
+   "end": 7.16,
+   "text": "Ama aralarında Boğaz var."
+  },
+  {
+   "start": 7.52,
+   "end": 10.25,
+   "text": "Oysa kulenin belgelenmiş tarihi bambaşka."
+  },
+  {
+   "start": 10.61,
+   "end": 17.5,
+   "text": "MÖ 410 dolaylarında Atinalı komutan Alkibiades'in burada bir gümrük noktası kurduğu aktarılır."
+  },
+  {
+   "start": 17.85,
+   "end": 21.03,
+   "text": "12. yüzyılda Bizans, adaya taş bir kule yaptı."
+  },
+  {
+   "start": 21.38,
+   "end": 29.1,
+   "text": "İmparator Manuel Komnenos döneminde kıyıyla kule arasına zincir gerildi."
+  },
+  {
+   "start": 29.47,
+   "end": 31.42,
+   "text": "1453'ten sonra kule Osmanlı'ya geçti."
+  },
+  {
+   "start": 31.78,
+   "end": 33.5,
+   "text": "Fener olarak gemilere yol gösterdi."
+  },
+  {
+   "start": 33.5,
+   "end": 35.5,
+   "text": "1719'da fenerden çıkan yangın ahşap kuleyi yaktı."
+  },
+  {
+   "start": 35.86,
+   "end": 38.25,
+   "text": "1725'te kule yeniden yapıldı."
+  },
+  {
+   "start": 38.61,
+   "end": 42.65,
+   "text": "1830'larda kolera salgını yüzünden karantina hastanesi oldu."
+  },
+  {
+   "start": 43.0,
+   "end": 48.6,
+   "text": "II. Mahmud'un onarımıyla bugünkü biçimini aldı."
+  },
+  {
+   "start": 48.76,
+   "end": 49.82,
+   "text": "Yılanlı prenses ve Leandros hikâyeleri ise efsaneden ibaret."
+  },
+  {
+   "start": 50.17,
+   "end": 52.62,
+   "text": "2021'de başlayan restorasyon bitti."
+  },
+  {
+   "start": 52.99,
+   "end": 56.87,
+   "text": "Kule, 11 Mayıs 2023'te lazer gösterisiyle yeniden açıldı."
+  },
+  {
+   "start": 57.23,
+   "end": 58.33,
+   "text": "Rivayet yaşıyor."
+  },
+  {
+   "start": 58.69,
+   "end": 62.01,
+   "text": "Hezarfen Galata'dan Üsküdar'a uçarken mektupları taşımış."
+  },
+  {
+   "start": 62.37,
+   "end": 65.3,
+   "text": "Galata Kulesi'nin gerçek hikâyesi için o videoya bakın."
+  }
+ ]
+}
