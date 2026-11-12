@@ -1,6 +1,6 @@
 {
  "baslik": "Ayasofya Part 2: Efsaneler ve Sırlar",
- "hook": "KAPININ ARDINDA NE VAR?",
+ "hook": "AYASOFYA'NIN ALTINDA NE SAKLI?",
  "map_region": "avrupa_ortadogu",
  "sahneler": [
   {
@@ -172,8 +172,8 @@
   },
   {
    "lines": [
-    "Bu duvarlarda Hristiyan ve İslam anlatıları iç içe yaşıyor.",
-    "Hangisine inanıyorsun? Yorumlara yaz."
+    "Bu duvarlar 1.500 yıldır sırlarını saklıyor.",
+    "Bu sırlardan hangisini daha önce duymuştun? Yorumlara yaz."
    ],
    "big": "SEN?",
    "sub": "HANGİSİNE İNANIYORSUN?",
@@ -194,7 +194,7 @@
   "title": "AYASOFYA",
   "line": "Rivayetler yaşar, tarih konuşur."
  },
- "aciklama": "Ayasofya'nın kapısından içeri girdik: terleyen sütun, harç rivayeti, Hızır anlatısı ve Ahit Sandığı iddiası. Bunların hepsi rivayettir. Ahit Sandığı için ise bilinen hiçbir tarihî kanıt yok. Hristiyan ve İslam anlatıları bu duvarlarda iç içe yaşıyor. Sen hangisine inanıyorsun?",
+ "aciklama": "Terleyen sütun, harca katılan zemzem, Hızır anlatısı ve Ahit Sandığı iddiası… 🕯️ Ayasofya hakkında yüzyıllardır anlatılan sırları Part 2'de topladık. Hangisi gerçek, hangisi rivayet? Sonuna kadar izle.\n\n📌 Part 1'i izlemediysen profilde.\n(Görseller temsilidir. Rivayetler tarihî belge değildir.)",
  "hashtagler": [
   "#Ayasofya",
   "#AyasofyaEfsaneleri",
@@ -239,7 +239,7 @@
  "tarih": "",
  "slug": "ayasofya-part-2-efsaneler-sirlar-ve-ahit-sandigi-iddiasi",
  "durum": "onaylandi",
- "seslendirme_metni": "Kapının ardında yüzyıllardır anlatılan sırlar var.\nBeş yüz otuz yedide açılışta Justinianus'un 'Süleyman, seni geçtim' dediği aktarılır.\nBu söz, sonraki anlatılarda yer alır.\nBizans döneminde buraya kutsal emanetler getirildiği anlatılır.\nBunların bir kısmının akıbeti belirsizdir.\nİddia edilene göre Ahit Sandığı da Ayasofya'nın altında saklı.\nAncak bunu destekleyen hiçbir tarihî kanıt yok.\nBu, yalnızca bir iddia olarak kalıyor.\nYeraltı sarnıçları ve tünellerle ilgili anlatılar da dolaşır.\nKimi tünellerin uzaklara uzandığı söylenir, ama bunlar belgelenmiş değil.\nYukarıda ise rivayete göre kuzeybatıdaki sütun hiç kurumaz.\nZiyaretçiler başparmağını deliğe sokup çevirir, dilek diler.\nEvliya Çelebi'ye göre harca Mekke toprağı ve zemzem katılmış.\nBilim ise nemi taşın gözenekli yapısına bağlar.\nKubbenin altında bir Hızır anlatısı da yaşar.\nYapıyı kıbleye çevirdiği söylenir.\nBu duvarlarda Hristiyan ve İslam anlatıları iç içe yaşıyor.\nHangisine inanıyorsun? Yorumlara yaz.",
+ "seslendirme_metni": "Kapının ardında yüzyıllardır anlatılan sırlar var.\nBeş yüz otuz yedide açılışta Justinianus'un 'Süleyman, seni geçtim' dediği aktarılır.\nBu söz, sonraki anlatılarda yer alır.\nBizans döneminde buraya kutsal emanetler getirildiği anlatılır.\nBunların bir kısmının akıbeti belirsizdir.\nİddia edilene göre Ahit Sandığı da Ayasofya'nın altında saklı.\nAncak bunu destekleyen hiçbir tarihî kanıt yok.\nBu, yalnızca bir iddia olarak kalıyor.\nYeraltı sarnıçları ve tünellerle ilgili anlatılar da dolaşır.\nKimi tünellerin uzaklara uzandığı söylenir, ama bunlar belgelenmiş değil.\nYukarıda ise rivayete göre kuzeybatıdaki sütun hiç kurumaz.\nZiyaretçiler başparmağını deliğe sokup çevirir, dilek diler.\nEvliya Çelebi'ye göre harca Mekke toprağı ve zemzem katılmış.\nBilim ise nemi taşın gözenekli yapısına bağlar.\nKubbenin altında bir Hızır anlatısı da yaşar.\nYapıyı kıbleye çevirdiği söylenir.\nBu duvarlar bin beş yüz yıldır sırlarını saklıyor.\nBu sırlardan hangisini daha önce duymuştun? Yorumlara yaz.",
  "sade": true,
  "ses_stil": "Derin sesli bir erkek belgesel anlatıcısı gibi, gizemli ama akıcı ve tempolu oku, cümleler arasında uzun durma, kelimeleri uzatma:\n"
 }
