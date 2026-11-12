@@ -13,6 +13,9 @@ EN_YAVAS = 1.5
 class Klip:
     def __init__(self, d, s):
         yol = os.path.join(d, s["video"]); self.dir = tempfile.mkdtemp(prefix="klip_")
+        if not os.path.exists(yol) and s.get("video_url"):   # klip repoda yoksa (ör. Higgsfield adresi) sunucuda indirilir
+            import urllib.request; os.makedirs(os.path.dirname(yol), exist_ok=True)
+            urllib.request.urlretrieve(s["video_url"], yol)
         arg = ["ffmpeg", "-v", "error", "-y"]
         if s.get("v_bas"): arg += ["-ss", str(s["v_bas"])]
         if s.get("v_son") is not None: arg += ["-t", str(s["v_son"] - (s.get("v_bas") or 0))]
