@@ -2,6 +2,8 @@
 // Ortam değişkenleri: GITHUB_TOKEN (repo + workflow yetkili), GITHUB_REPO (sahip/repo), PANEL_SIFRE, AYLIK_BUTCE_USD (isteğe bağlı)
 import crypto from "node:crypto";
 import { getStore } from "@netlify/blobs";
+import * as wpMod from "web-push";
+const webpush = wpMod.default || wpMod;
 
 const REPO = process.env.GITHUB_REPO || "lazziya5353/animasyonlu-tarih";
 const GH = "https://api.github.com";
@@ -49,6 +51,35 @@ const gecerliGh = new Map(); // doğrulanmış GitHub Actions anahtarları (10 d
 // Canlı olaylar (Kurgu Stüdyosu): Netlify Blobs'ta proje başına son 800 olay
 const AJANLAR = ["arastirmaci", "senarist", "ses", "gorsel", "kurgucu", "efekt", "kontrol", "yayinci", "sen"];
 const TURLER = ["yazi", "gorsel", "efekt", "harita", "ses", "muzik", "kontrol", "bilgi", "ilerleme", "asama"];
+// ───────── proje adları: klasör adı yerine metindeki başlık (önbellekli) ─────────
+async function basliklar(sluglar) {
+  const st = getStore("ayar"); const B = (await st.get("basliklar", { type: "json" })) || {};
+  const eksik = sluglar.filter((s) => !B[s]);
+  if (eksik.length) {
+    await Promise.all(eksik.map(async (s) => { const sc = await readJson(`projects/${s}/script.json`); if (sc?.baslik) B[s] = String(sc.baslik).slice(0, 90); }));
+    await st.setJSON("basliklar", B);
+  }
+  return Object.fromEntries(sluglar.filter((s) => B[s]).map((s) => [s, B[s]]));
+}
+async function baslikYaz(slug, baslik) { const st = getStore("ayar"); const B = (await st.get("basliklar", { type: "json" })) || {}; B[slug] = String(baslik).slice(0, 90); await st.setJSON("basliklar", B); }
+
+// ───────── telefona bildirim (Web Push). Anahtarlar ilk kullanımda üretilip Netlify'da saklanır ─────────
+async function vapid() {
+  const st = getStore("ayar"); let v = await st.get("vapid", { type: "json" });
+  if (!v) { v = webpush.generateVAPIDKeys(); await st.setJSON("vapid", v); }
+  webpush.setVapidDetails("https://animasyonlu-tarih.netlify.app", v.publicKey, v.privateKey); return v;
+}
+async function bildirimGonder(baslik, metin, url = "/") {
+  await vapid(); const st = getStore("ayar"); const A = (await st.get("abonelikler", { type: "json" })) || [];
+  const kalan = []; let n = 0;
+  await Promise.all(A.map(async (a) => {
+    try { await webpush.sendNotification(a, JSON.stringify({ baslik: String(baslik).slice(0, 80), metin: String(metin).slice(0, 180), url }), { TTL: 86400 }); kalan.push(a); n++; }
+    catch (e) { if (![404, 410].includes(e.statusCode)) kalan.push(a); } // süresi dolan abonelikleri sil
+  }));
+  if (kalan.length !== A.length) await st.setJSON("abonelikler", kalan);
+  return n;
+}
+
 async function olayEkle(slug, liste) {
   const st = getStore("olaylar"); const key = validSlug(slug) ? slug : "_genel";
   const cur = (await st.get(key, { type: "json" })) || { n: 0, liste: [] };
@@ -78,12 +109,17 @@ export default async (req) => {
     if (!same(String(b.sifre || "").trim(), process.env.PANEL_SIFRE.trim())) { failed.push(now); return json({ hata: "Şifre yanlış" }, 401); }
     return json({ token: token() });
   }
-  if (b.action === "olay" && req.headers.get("x-gh-token")) { // ajanlardan canlı olay: GitHub Actions anahtarı bu repoya erişebiliyor mu?
+  if ((b.action === "olay" || b.action === "bildirim") && req.headers.get("x-gh-token")) { // ajanlardan canlı olay: GitHub Actions anahtarı bu repoya erişebiliyor mu?
     const t = req.headers.get("x-gh-token"); const k = crypto.createHash("sha256").update(t).digest("hex");
     if (!(gecerliGh.get(k) > Date.now())) {
       const r = await fetch(`${GH}/repos/${REPO}`, { headers: { authorization: `Bearer ${t}`, accept: "application/vnd.github+json" } });
       if (!r.ok) return json({ hata: "Yetkisiz" }, 401);
       gecerliGh.set(k, Date.now() + 10 * 60e3);
+    }
+    if (b.bildirim) { // ajan: "video hazır" gibi telefona bildirim
+      const sl = validSlug(b.slug) ? b.slug : null; const ad = sl ? (await basliklar([sl]))[sl] || sl : "";
+      try { return json({ ok: true, n: await bildirimGonder(b.bildirim.baslik || "Animasyon Tarih", (b.bildirim.metin || "").replace("{ad}", ad), sl ? `/#p=${encodeURIComponent(sl)}` : "/") }); }
+      catch (e) { return json({ hata: String(e.message || e) }, 500); }
     }
     if (!Array.isArray(b.olaylar)) return json({ hata: "Olay yok" }, 400);
     try { return json({ ok: true, n: await olayEkle(b.slug, b.olaylar) }); } catch (e) { return json({ hata: String(e.message || e) }, 500); }
@@ -110,7 +146,8 @@ export default async (req) => {
         const aylik = kayit.filter((x) => x.zaman.startsWith(ay)).reduce((s, x) => s + x.usd, 0);
         const servis = {};
         kayit.filter((x) => x.zaman.startsWith(ay)).forEach((x) => (servis[x.servis] = (servis[x.servis] || 0) + x.usd));
-        return json({ status: status || {}, runs, report, projeler: (list || []).filter((x) => x.type === "dir").map((x) => x.name), analiz,
+        const projeler = (list || []).filter((x) => x.type === "dir").map((x) => x.name);
+        return json({ status: status || {}, runs, report, projeler, basliklar: await basliklar(projeler).catch(() => ({})), analiz,
           yorumlar: { bekleyen: (yorumlar?.yorumlar || []).filter((y) => y.durum === "yeni").slice(0, 40), fikirler: (yorumlar?.fikirler || []).slice(-8).reverse() },
           harcama: { aylik, servis, butce: Number(process.env.AYLIK_BUTCE_USD || 15), son: kayit.slice(-8).reverse() } });
       }
@@ -210,6 +247,15 @@ export default async (req) => {
         await dispatch("sil", { slug: b.slug, tur: b.tur });
         return json({ ok: true });
       }
+      case "push_anahtar": return json({ anahtar: (await vapid()).publicKey });
+      case "push_abone": { // bu cihazı bildirim listesine ekle / çıkar
+        const a = b.abonelik; if (!a?.endpoint || !/^https:\/\//.test(a.endpoint) || !a.keys?.p256dh || !a.keys?.auth) return json({ hata: "Geçersiz abonelik" }, 400);
+        const st = getStore("ayar"); let A = (await st.get("abonelikler", { type: "json" })) || [];
+        A = A.filter((x) => x.endpoint !== a.endpoint); if (!b.cik) A.push({ endpoint: a.endpoint, keys: { p256dh: a.keys.p256dh, auth: a.keys.auth } });
+        await st.setJSON("abonelikler", A.slice(-10));
+        if (!b.cik) await bildirimGonder("🔔 Bildirimler açık", "Video bitince, hata çıkınca buraya haber gelecek.");
+        return json({ ok: true });
+      }
       case "komut_gecmis": {
         const g = (await readJson("data/yonetici.json")) || { mesajlar: [] };
         return json({ mesajlar: (g.mesajlar || []).slice(-20), durum: (await readJson("data/status.json"))?.yonetici || null });
@@ -226,6 +272,7 @@ export default async (req) => {
         const pj = await readJson(`projects/${b.slug}/project.json`);
         if (pj?.scenes) clean.forEach((l, i) => { if (pj.scenes[i]) { pj.scenes[i].lines = l; pj.scenes[i].start = null; pj.scenes[i].end = null; } });
         await writeFile(`projects/${b.slug}/script.json`, Buffer.from(JSON.stringify(sc, null, 1)).toString("base64"), `Metin düzenlendi: ${b.slug}`);
+        if (sc.baslik) await baslikYaz(b.slug, sc.baslik).catch(() => {});
         if (pj) await writeFile(`projects/${b.slug}/project.json`, Buffer.from(JSON.stringify(pj, null, 1)).toString("base64"), `Sahne metinleri: ${b.slug}`);
         await dispatch("kontrol", { slug: b.slug, asama: "senaryo" }).catch(() => {});
         return json({ ok: true });
@@ -253,7 +300,12 @@ export default async (req) => {
         return json({ ok: true });
       }
       case "olay": { // panelden (senin) olayların: ör. toplu görsel yükleme
-        if (!Array.isArray(b.olaylar)) return json({ hata: "Olay yok" }, 400);
+        if (b.bildirim) { // ajan: "video hazır" gibi telefona bildirim
+      const sl = validSlug(b.slug) ? b.slug : null; const ad = sl ? (await basliklar([sl]))[sl] || sl : "";
+      try { return json({ ok: true, n: await bildirimGonder(b.bildirim.baslik || "Animasyon Tarih", (b.bildirim.metin || "").replace("{ad}", ad), sl ? `/#p=${encodeURIComponent(sl)}` : "/") }); }
+      catch (e) { return json({ hata: String(e.message || e) }, 500); }
+    }
+    if (!Array.isArray(b.olaylar)) return json({ hata: "Olay yok" }, 400);
         return json({ ok: true, n: await olayEkle(b.slug, b.olaylar.map((o) => ({ ...o, ajan: "sen" }))) });
       }
       case "onizleme": { // canlı stüdyo: ajanın az önce çizdiği görselin küçük hali

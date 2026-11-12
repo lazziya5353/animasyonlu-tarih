@@ -45,7 +45,9 @@ $("#pw").addEventListener("keydown", (e) => { if (e.key === "Enter") $("#go").cl
 $("#refresh").onclick = () => (CUR ? openProject(CUR) : load());
 
 async function start() { $("#login").classList.add("hide"); $("#app").classList.remove("hide"); load(); }
-const projeAdi = (p) => { const t = String(p).replace(/-/g, " ").trim(); return t.charAt(0).toLocaleUpperCase("tr") + t.slice(1); };
+const projeAdi = (p) => { if (O?.basliklar?.[p]) return O.basliklar[p]; const t = String(p).replace(/-/g, " ").trim(); return t.charAt(0).toLocaleUpperCase("tr") + t.slice(1); };
+// ajan mesajlarındaki klasör adlarını (uskudar-in-tarihi-...) okunur başlıkla değiştir
+const adlandir = (t) => { let x = String(t || ""); for (const p of [...(O?.projeler || [])].sort((a, b) => b.length - a.length)) if (x.includes(p)) x = x.split("projects/" + p).join(projeAdi(p)).split(p).join(projeAdi(p)); return x; };
 let O = null, CUR = null; const GIZLI = new Set(); // silinmekte olan projeler (iş bitene kadar listede görünmesin)
 async function load() {
   try { O = await api("overview"); O.projeler = O.projeler.filter((p) => !GIZLI.has(p)); render();
@@ -63,7 +65,7 @@ function render() {
   for (const a of AGENTS) {
     const run = O.runs[a.k], st = O.status[a.k]; const [c, l] = stOf(run, st);
     html += `<div class="card agent"><div class="ic">${a.ic}</div><h3>${a.ad}</h3><span class="st ${c}">${l}</span>
-      <p>${esc(st?.mesaj || a.is)}</p><div class="mut" style="font-size:11.5px;margin-bottom:10px">Son çalışma: ${ago(run?.zaman || st?.zaman)}${a.ucret ? " · <span title='Claude API kredisi harcar'>💳</span>" : ""}</div>
+      <p>${esc(adlandir(st?.mesaj) || a.is)}</p><div class="mut" style="font-size:11.5px;margin-bottom:10px">Son çalışma: ${ago(run?.zaman || st?.zaman)}${a.ucret ? " · <span title='Claude API kredisi harcar'>💳</span>" : ""}</div>
       <button data-run="${a.k}">${a.btn}</button> <button class="ghost" data-detay="${a.k}">Detay</button>${c === "err" && /projects\/[a-z0-9-]+/.test(st?.cikti || st?.mesaj || "") ? ` <button class="duzelt" data-hduzelt="${esc((st.cikti || st.mesaj).match(/projects\/([a-z0-9-]+)/)[1])}" data-hmesaj="${esc(a.ad + ": " + (st.mesaj || ""))}">🔧 Düzelt</button>` : ""}</div>`;
   }
   html += `</div>`;
@@ -121,7 +123,7 @@ function komutCiz(m) {
   if (!m.length) { box.innerHTML = `<span class="mut">Henüz mesaj yok. İlk isteğini yaz.</span>`; return; }
   box.innerHTML = m.map((x) => {
     const sen = x.kim === "sen";
-    const ek = sen ? "" : [...(x.islemler || []).map((i) => `✅ ${esc(i)}`), ...(x.hatalar || []).map((h) => `⚠️ ${esc(h)}`)].join("<br>");
+    const ek = sen ? "" : [...(x.islemler || []).map((i) => `✅ ${esc(adlandir(i))}`), ...(x.hatalar || []).map((h) => `⚠️ ${esc(adlandir(h))}`)].join("<br>");
     return `<div style="align-self:${sen ? "flex-end" : "flex-start"};max-width:88%;padding:9px 12px;border-radius:14px;background:${sen ? "rgba(232,196,120,.18)" : "rgba(255,255,255,.06)"};white-space:pre-wrap">${esc(x.metin)}${ek ? `<div class="mut" style="font-size:12px;margin-top:6px">${ek}</div>` : ""}<div class="mut" style="font-size:10.5px;margin-top:4px">${ago(x.zaman)}</div></div>`;
   }).join("");
   box.scrollTop = box.scrollHeight;
@@ -190,7 +192,8 @@ async function runAgent(k) {
     const konu = prompt("Konu? (ör. Mohaç Meydan Muharebesi 1526)\n\nNot: Claude API ile yazar, ~$0,30 kredi harcar."); if (!konu) return; inputs = { konu };
   }
   if (k === "arastirmaci" && !confirm("Araştırmacı Claude API kredisi harcar (~$0,30). Devam edilsin mi?")) return;
-  if (["gorsel", "kurgucu", "kontrol"].includes(k)) { const slug = prompt("Hangi proje?\n" + O.projeler.join("\n"), O.projeler[0] || ""); if (!slug) return; inputs = { slug }; if (k === "kontrol") inputs.asama = "hepsi"; }
+  if (["gorsel", "kurgucu", "kontrol"].includes(k)) { const L = O.projeler; const c = prompt("Hangi proje? Numarasını yaz:\n\n" + L.map((p, i) => `${i + 1}. ${projeAdi(p)}`).join("\n"), "1"); if (!c) return;
+    const slug = L[Number(c) - 1] || L.find((p) => p === c.trim() || projeAdi(p).toLocaleLowerCase("tr") === c.trim().toLocaleLowerCase("tr")); if (!slug) return toast("Böyle bir proje yok"); inputs = { slug }; if (k === "kontrol") inputs.asama = "hepsi"; }
   if (k === "yayinci") inputs = { test: "1" };
   if (k === "yorumcu") inputs = { mod: "topla" };
   await guvenli(() => api("run", { agent: k, inputs }), `${a.ad} çalıştırıldı`); setTimeout(load, 5000);
@@ -478,3 +481,28 @@ function demo(action) {
 
 if (DEMO || TOKEN) start(); else showLogin();
 if ("serviceWorker" in navigator && !DEMO) navigator.serviceWorker.register("sw.js").catch(() => {});
+
+// ───────── 🔔 telefona bildirim: video bitince, iş hata verince ─────────
+const b64u = (s) => { const p = "=".repeat((4 - (s.length % 4)) % 4); const r = atob((s + p).replace(/-/g, "+").replace(/_/g, "/")); return Uint8Array.from([...r].map((c) => c.charCodeAt(0))); };
+async function zilDurum() {
+  const z = $("#zil"); if (!z) return;
+  if (!("serviceWorker" in navigator) || !("PushManager" in window)) { z.textContent = "🔕"; return; }
+  const reg = await navigator.serviceWorker.ready; const ab = await reg.pushManager.getSubscription();
+  z.textContent = ab && Notification.permission === "granted" ? "🔔" : "🔕"; z.title = ab ? "Bildirimler açık (kapatmak için dokun)" : "Bildirimleri aç";
+}
+async function zilTikla() {
+  const ios = /iphone|ipad|ipod/i.test(navigator.userAgent), kurulu = matchMedia("(display-mode: standalone)").matches || navigator.standalone;
+  if (!("PushManager" in window) || !("serviceWorker" in navigator)) return alert(ios && !kurulu
+    ? "iPhone'da bildirim için siteyi ana ekrana eklemen lazım:\n\n1. Safari'de alttaki Paylaş (□↑) düğmesine bas\n2. 'Ana Ekrana Ekle'ye bas\n3. Ana ekrandaki Animasyon Tarih simgesinden aç, sonra 🔕'ye dokun"
+    : "Bu tarayıcı bildirim desteklemiyor. Chrome ya da Safari ile dene.");
+  const reg = await navigator.serviceWorker.ready; const ab = await reg.pushManager.getSubscription();
+  if (ab) { if (!confirm("Bildirimler kapatılsın mı?")) return; await api("push_abone", { abonelik: ab.toJSON(), cik: true }).catch(() => {}); await ab.unsubscribe(); toast("Bildirimler kapandı"); return zilDurum(); }
+  if ((await Notification.requestPermission()) !== "granted") return alert("Bildirim izni verilmedi. Telefon ayarlarından bu site için bildirimlere izin verip tekrar dene.");
+  try {
+    const { anahtar } = await api("push_anahtar");
+    const yeni = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64u(anahtar) });
+    await api("push_abone", { abonelik: yeni.toJSON() }); toast("🔔 Bildirimler açık, deneme bildirimi gönderildi");
+  } catch (e) { alert("Bildirim açılamadı: " + (e.message || e)); }
+  zilDurum();
+}
+if (!DEMO && $("#zil")) { $("#zil").onclick = zilTikla; setTimeout(zilDurum, 1500); }

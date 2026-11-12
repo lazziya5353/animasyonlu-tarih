@@ -51,8 +51,11 @@ def extract_json(txt, agent="ajan"):
         return out
 
 def slugify(s):
+    import unicodedata
     tr = str.maketrans("çğıöşüÇĞİÖŞÜ", "cgiosuCGIOSU")
-    return re.sub(r"[^a-z0-9]+", "-", s.translate(tr).lower()).strip("-")[:60]
+    s = unicodedata.normalize("NFKD", s.translate(tr)).encode("ascii", "ignore").decode()   # â→a, î→i, û→u ("hikâyesi" bölünmesin)
+    s = re.sub(r"['’`]", "", s)                                                              # "Üsküdar'ın" → uskudarin
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")[:60].strip("-")
 
 def set_status(agent, durum, mesaj, cikti=None):
     p = os.path.join(ROOT, "data", "status.json"); os.makedirs(os.path.dirname(p), exist_ok=True)
