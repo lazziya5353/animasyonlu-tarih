@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "fatih-sultan-mehmet-ve-kazikli-voyvoda-part-1-edirnedeki-reh: ses hazır",
-  "cikti": "projects/fatih-sultan-mehmet-ve-kazikli-voyvoda-part-1-edirnedeki-reh",
-  "zaman": "2026-11-12T22:37:44Z"
+  "mesaj": "fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef: ses hazır",
+  "cikti": "projects/fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef",
+  "zaman": "2026-11-12T23:04:39Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-12T20:10:44Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef: senaryo !",
+  "durum": "hata",
+  "mesaj": "fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef: gorsel ✗",
   "cikti": "projects/fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef/kontrol",
-  "zaman": "2026-11-12T22:46:58Z"
+  "zaman": "2026-11-12T23:11:22Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

@@ -1,0 +1,17 @@
+{
+ "asama": "ses",
+ "durum": "uyari",
+ "ozet": "67 sn",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "seste patlama (clipping) olabilir"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "metin-ses karşılaştırması atlandı: Gemini yanıt vermedi (gemini-3.7-flash: The read operation timed out)"
+  }
+ ],
+ "sure": 66.7,
+ "zaman": "2026-11-12T23:11:21Z"
+}
