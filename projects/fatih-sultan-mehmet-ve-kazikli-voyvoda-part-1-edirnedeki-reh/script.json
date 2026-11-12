@@ -1,0 +1,272 @@
+{
+ "baslik": "Fatih ve Kazıklı Voyvoda Part 1: Edirne'deki Rehin Çocuktan Eflak Voyvodasına",
+ "hook": "2 KARDEŞ, 1 SARAY, 2 FARKLI YOL",
+ "map_region": "avrupa_ortadogu",
+ "sahneler": [
+  {
+   "lines": [
+    "Drakula'nın ilham kaynağı, bir zamanlar Edirne'de rehin bir çocuktu."
+   ],
+   "big": "REHİN",
+   "sub": "EDİRNE'DE BİR ÇOCUK",
+   "year": 1442,
+   "label": "1442",
+   "prompt": "A small boy in a plain 15th-century tunic seen from behind, standing alone in a vast stone courtyard of an Ottoman palace in Edirne at dusk, arched colonnades and tall cypress trees, the boy small and centered, empty sky space at the top and empty ground space at the bottom, vertical 9:16, no text, no writing, no flags",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A small boy in a plain 15th-century tunic seen from behind, standing alone in a vast stone courtyard of an Ottoman palace in Edirne at dusk, arched colonnades and tall cypress trees, the boy small and centered, empty sky space at the top and empty ground space at the bottom, vertical 9:16, no text, no writing, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s01.jpg"
+  },
+  {
+   "lines": [
+    "1442 ile 1444 arasında, II. Murad döneminde, Eflak voyvodası II. Vlad oğulları Vlad ve Radu'yu Edirne'ye rehin bıraktı."
+   ],
+   "big": "1442",
+   "sub": "İKİ KARDEŞ EDİRNE'DE",
+   "year": 1442,
+   "label": "1442",
+   "prompt": "Two young boys in 15th-century Wallachian tunics seen from behind, standing in an arched palace gateway in Edirne, a distant silhouette of a rider with a small escort leaving along a dusty road at sunset, boys centered, empty space at top and bottom, vertical 9:16, no text, no writing, no flags",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "effect": "stamp",
+   "type_text": "",
+   "prompt_tam": "Two young boys in 15th-century Wallachian tunics seen from behind, standing in an arched palace gateway in Edirne, a distant silhouette of a rider with a small escort leaving along a dusty road at sunset, boys centered, empty space at top and bottom, vertical 9:16, no text, no writing, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s02.jpg"
+  },
+  {
+   "lines": [
+    "Babasının lakabı Dracul'du; Drakula, 'Dracul'un oğlu' demekti. Oğullar zindanda değil, sarayda yetiştiler."
+   ],
+   "big": "DRAKULA",
+   "sub": "EJDERİN OĞLU",
+   "year": 1442,
+   "label": "1442",
+   "prompt": "Two boys seen from behind sitting at a low wooden table with blank manuscript pages and a lit candle in a quiet Ottoman palace study room, an ornamental carved dragon motif on a stone arch above them, warm candlelight, subjects centered, empty space at top and bottom, vertical 9:16, no readable writing, no text, no flags",
+   "fx": [
+    "flicker",
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Two boys seen from behind sitting at a low wooden table with blank manuscript pages and a lit candle in a quiet Ottoman palace study room, an ornamental carved dragon motif on a stone arch above them, warm candlelight, subjects centered, empty space at top and bottom, vertical 9:16, no readable writing, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s03.jpg"
+  },
+  {
+   "lines": [
+    "Küçük kardeş Radu bu dünyaya alıştı ve genç Mehmed'e yakınlaştı. Vlad ise esaretten hoşnut değildi."
+   ],
+   "big": "RADU",
+   "sub": "İKİ FARKLI YOL",
+   "year": 1444,
+   "label": "1444",
+   "prompt": "In a sunlit palace garden in an Ottoman court, a younger boy in a simple tunic walks beside a taller young prince in a silk kaftan, both seen from behind and far away, while a second older boy stands apart by a stone wall as a silhouette looking at the horizon, centered composition, empty space at top and bottom, vertical 9:16, no faces in close-up, no text, no flags",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "In a sunlit palace garden in an Ottoman court, a younger boy in a simple tunic walks beside a taller young prince in a silk kaftan, both seen from behind and far away, while a second older boy stands apart by a stone wall as a silhouette looking at the horizon, centered composition, empty space at top and bottom, vertical 9:16, no faces in close-up, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s04.jpg"
+  },
+  {
+   "lines": [
+    "Babası ölünce, 1448'de Osmanlı desteğiyle kısa süreliğine tahta çıktı; ama tahtı kaybetti."
+   ],
+   "big": "1448",
+   "sub": "KISA SÜREN İLK TAHT",
+   "year": 1448,
+   "label": "1448",
+   "prompt": "A lone young man in a dark travel cloak seen from behind on horseback at a Carpathian mountain pass at dawn, a small escort following far behind, thick mist over pine forests, rider centered, empty sky space at top and empty foreground at bottom, vertical 9:16, no text, no banners, no flags",
+   "fx": [
+    "fog"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A lone young man in a dark travel cloak seen from behind on horseback at a Carpathian mountain pass at dawn, a small escort following far behind, thick mist over pine forests, rider centered, empty sky space at top and empty foreground at bottom, vertical 9:16, no text, no banners, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s05.jpg"
+  },
+  {
+   "lines": [
+    "1456 yazında bu kez Macar desteğiyle döndü ve Eflak voyvodası oldu."
+   ],
+   "big": "1456",
+   "sub": "EFLAK VOYVODASI",
+   "year": 1456,
+   "label": "1456",
+   "prompt": "A young prince in 15th-century medieval armor and a long cloak seen from far away as a dark silhouette, riding at the head of a column toward a hilltop stone-and-timber fortress in Wallachia at summer sunrise, golden light, rider centered, empty space at top and bottom, vertical 9:16, no text, no flags, no banners",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "effect": "stamp",
+   "type_text": "",
+   "prompt_tam": "A young prince in 15th-century medieval armor and a long cloak seen from far away as a dark silhouette, riding at the head of a column toward a hilltop stone-and-timber fortress in Wallachia at summer sunrise, golden light, rider centered, empty space at top and bottom, vertical 9:16, no text, no flags, no banners, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s06.jpg"
+  },
+  {
+   "lines": [
+    "Sonra Osmanlı'ya ödenen yıllık haracı göndermeyi bıraktı. Tarihçiler bu kopuşun zamanını farklı verir."
+   ],
+   "big": "HARAÇ",
+   "sub": "VERGİ KESİLDİ",
+   "year": 1459,
+   "label": "~1459",
+   "prompt": "A closed iron-bound wooden chest and a heavy leather coin pouch left untouched on the stone floor in front of an empty carved wooden throne in a dim Wallachian hall, a lone ruler silhouette seen from behind standing by a narrow window, torchlight, chest centered, empty space at top and bottom, vertical 9:16, no text, no writing, no flags",
+   "fx": [
+    "flicker",
+    "smoke"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A closed iron-bound wooden chest and a heavy leather coin pouch left untouched on the stone floor in front of an empty carved wooden throne in a dim Wallachian hall, a lone ruler silhouette seen from behind standing by a narrow window, torchlight, chest centered, empty space at top and bottom, vertical 9:16, no text, no writing, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s07.jpg"
+  },
+  {
+   "lines": [
+    "Rivayete göre Fatih'in elçileri başlarındaki sarığı çıkarmayınca, voyvoda sarıkları başlarına çivilettirdi. Bu anlatı belgelenmiş değildir."
+   ],
+   "big": "RİVAYET",
+   "sub": "BELGE DEĞİL, ANLATI",
+   "year": 1459,
+   "label": "~1459",
+   "prompt": "In a torch-lit stone throne hall, a row of Ottoman envoys in tall white turbans and long robes seen from behind as silhouettes, standing before a distant throne where a ruler sits in deep shadow, long dramatic shadows on the floor, tense stillness, no violence, no blood, subjects centered, empty space at top and bottom, vertical 9:16, no readable writing, no text, no flags",
+   "fx": [
+    "flicker",
+    "smoke"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "In a torch-lit stone throne hall, a row of Ottoman envoys in tall white turbans and long robes seen from behind as silhouettes, standing before a distant throne where a ruler sits in deep shadow, long dramatic shadows on the floor, tense stillness, no violence, no blood, subjects centered, empty space at top and bottom, vertical 9:16, no readable writing, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s08.jpg"
+  },
+  {
+   "lines": [
+    "Haraç da, itaat de bitmişti. Sultan Mehmed bu meydan okumayı cevapsız bırakmayacaktı."
+   ],
+   "big": "MEYDAN",
+   "sub": "SESSİZ BİR UYARI",
+   "year": 1462,
+   "label": "1462",
+   "prompt": "A misty field at dawn with a distant dark silhouette of countless tall thin poles standing like a bare forest on the horizon, heavy fog covering the ground, no bodies, no blood, in the foreground a lone commander on horseback seen from behind looking toward the horizon, commander centered, empty space at top and bottom, vertical 9:16, no text, no flags",
+   "fx": [
+    "fog",
+    "smoke"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "A misty field at dawn with a distant dark silhouette of countless tall thin poles standing like a bare forest on the horizon, heavy fog covering the ground, no bodies, no blood, in the foreground a lone commander on horseback seen from behind looking toward the horizon, commander centered, empty space at top and bottom, vertical 9:16, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s09.jpg"
+  },
+  {
+   "lines": [
+    "1462 yazında Fatih, ordusuyla Tuna'yı geçiyor. Devamı Part 2'de."
+   ],
+   "big": "1462",
+   "sub": "TUNA'YI GEÇİYORLAR",
+   "year": 1462,
+   "label": "1462",
+   "prompt": "A vast Ottoman army of spearmen and horsemen seen from far away as silhouettes, crossing a wide river on pontoon bridges at summer dawn, a commander on horseback seen from behind at the center of the riverbank, river mist and golden sunrise, empty space at top and bottom, vertical 9:16, no text, no banners, no flags",
+   "fx": [
+    "fog",
+    "rays",
+    "dust"
+   ],
+   "effect": "stamp",
+   "type_text": "",
+   "prompt_tam": "A vast Ottoman army of spearmen and horsemen seen from far away as silhouettes, crossing a wide river on pontoon bridges at summer dawn, a commander on horseback seen from behind at the center of the riverbank, river mist and golden sunrise, empty space at top and bottom, vertical 9:16, no text, no banners, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s10.jpg"
+  }
+ ],
+ "finale": "",
+ "maps": [],
+ "cards": [],
+ "eras": [
+  {
+   "name": "REHİNLİK",
+   "from": 0,
+   "to": 3
+  },
+  {
+   "name": "TAHT",
+   "from": 4,
+   "to": 5
+  },
+  {
+   "name": "MEYDAN OKUMA",
+   "from": 6,
+   "to": 9
+  }
+ ],
+ "outro": {
+  "title": "PART 2",
+  "line": "Tuna'nın ötesinde Fatih'i ne bekliyordu? Devamı Part 2'de."
+ },
+ "aciklama": "Kazıklı Voyvoda'yı korku hikâyelerinden tanıyorsun ama o, bir zamanlar Edirne'de rehin büyüyen bir çocuktu. Vlad ile kardeşi Radu'nun Osmanlı sarayındaki yıllarını ve Eflak tahtına uzanan yolu anlattım. Sonuna kadar izle, Part 2'de Fatih Tuna'yı geçiyor.\n\n📌 Kaydet / arkadaşına gönder\n\n(Görseller temsilidir.) (Rivayetler tarihî belge değildir.)",
+ "kanca_alternatifleri": [
+  "DRAKULA ADI BABASININ EJDER LAKABINDAN GELİYOR",
+  "SARIKLARI ÇİVİLETEN VOYVODA RİVAYETİ GERÇEK Mİ?",
+  "1442'DE REHİN BIRAKILAN ÇOCUK: DRAKULA"
+ ],
+ "aciklama_alternatifleri": [
+  "Bir rehin çocuk, Osmanlı sarayında yetişip nasıl Osmanlı'ya meydan okuyan voyvoda oldu? Vlad ile Radu'nun ayrılan yollarını anlattım. Sonuna kadar izle, Part 2 çok daha sert.\n\n📌 Kaydet / arkadaşına gönder\n\n(Görseller temsilidir.) (Rivayetler tarihî belge değildir.)",
+  "1442 ile 1444 arasında Edirne'ye rehin bırakılan iki kardeşten biri Osmanlı dünyasına yakınlaştı, diğeri 1456'da Eflak tahtına çıkıp haracı kesti. Bu zıt yolları ve sarık rivayetini anlattım. Sonuna kadar izle, hikâye Part 2'de sürüyor.\n\n📌 Kaydet / arkadaşına gönder\n\n(Görseller temsilidir.) (Rivayetler tarihî belge değildir.)"
+ ],
+ "hashtagler": [
+  "#tarih",
+  "#keşfet",
+  "#reels",
+  "#kazıklıvoyvoda",
+  "#drakula",
+  "#fatihsultanmehmed",
+  "#eflak",
+  "#vladtepeş",
+  "#osmanlıtarihi",
+  "#balkantarihi",
+  "#tarihbilgisi",
+  "#animasyontarih"
+ ],
+ "kaynaklar": [
+  "https://islamansiklopedisi.org.tr/eflak",
+  "https://dergipark.org.tr/en/pub/abad/issue/80570/1343458",
+  "https://en.wikipedia.org/wiki/Vlad_the_Impaler",
+  "https://en.wikipedia.org/wiki/Radu_the_Handsome",
+  "https://en.wikipedia.org/wiki/Vlad_II_Dracul",
+  "https://en.wikipedia.org/wiki/Vladislav_II_of_Wallachia",
+  "https://tr.wikipedia.org/wiki/III._Vlad",
+  "https://www.livescience.com/40843-real-dracula-vlad-the-impaler.html",
+  "https://www.nbcnews.com/sciencemain/vlad-impaler-real-dracula-was-absolutely-vicious-8c11505315",
+  "https://www.thecollector.com/vlad-vs-mehmed/",
+  "https://www.zmescience.com/science/vlad-the-impaler-history/"
+ ],
+ "kontrol_notlari": [
+  "ÖNEMLİ SINIR: Bu turda Britannica'nın Vlad maddesi, TDV'nin ayrı Vlad Tepeş maddesi ve Romen tarihçilerin (Cazacu, Treptow, Florescu-McNally) metinleri doğrudan açılamadı. Aşağıdaki doğrulamalar TDV 'Eflak' maddesi, bir hakemli Türkçe makale (DergiPark/ABAD) ve ikincil kaynaklarla yapıldı. Yayından önce Britannica ve Cazacu/McNally ile çapraz kontrol önerilir.",
+  "Metin 126 kelimedir. Ek notundaki 120-130 kelime ve 50-55 sn hedefi esas alındı. Yıllar rakamla yazıldı.",
+  "Rehinlik (1442): Vlad ve Radu'nun babası II. Vlad'ın Edirne'ye çağrılıp oğullarını bıraktığı çoğu kaynakta 1442 olarak geçer (Wikipedia 'Vlad the Impaler', Live Science, The Collector). Wikipedia 'Radu the Handsome', Cazacu'ya atıfla rehin teslimini Nisan 1444 olarak verir ve 1442 ya da 1444 seçeneğini anar. Bu çelişki yüzünden metinde '1442 ile 1444 arasında' denildi.",
+  "Rehinlik süresi: DergiPark makalesi '6 yıl' der. Diğer kaynaklarda net süre yok, bu yüzden metne süre yazılmadı.",
+  "II. Murad dönemi: Rehin bırakma Sultan II. Murad zamanında oldu (Wikipedia 'Vlad II Dracul', 'Radu the Handsome', Live Science).",
+  "Eğitim ve statü: Çocuklar mahkûm gibi tutulmadı, eğitim aldı (The Collector, Live Science, NBC). Türkçe öğrendikleri başka bir ikincil kaynakta (History Collection) geçer. Bu kısım ikincil kaynaklara dayanır, akademik kaynakla teyit edilmeli.",
+  "Radu ve Mehmed: Radu'nun genç Mehmed'in gözdesi olduğu Wikipedia ve The Collector'da geçer. Radu'nun Osmanlı tarafına geçtiği Live Science'ta da yazar. Vlad'ın rehinlikten rahatsız olduğu Live Science'ta bir tarihçi yorumu olarak geçer, bu yüzden 'hoşnut değildi' diye yumuşatıldı.",
+  "Vlad ile Mehmed arasında yakın dostluk veya birlikte büyüme iddiası (The Collector: 'birlikte yetiştiler') belgelenmiş görülmedi. Bu yüzden metne dostluk yazılmadı, yalnızca Radu'nun yakınlığı verildi. Part 2'de de abartılmamalı.",
+  "Drakula adı: Babası II. Vlad, Ejder Tarikatı üyeliğinden dolayı 'Dracul' (ejder) lakabını aldı. Oğlu 'Dracula', yani 'Dracul'un oğlu' (NBC, History Collection, Dünya Bizim). Modern Rumencede 'dracul' kelimesinin 'şeytan' anlamı da var, o yüzden bu anlam kullanılmadı.",
+  "Doğum tarihi: 1428 ile 1431 arasında tartışmalı (Wikipedia, TR Vikipedi, DergiPark 1431). Metne doğum yılı ve yaş yazılmadı.",
+  "İlk saltanat (1448): Osmanlı desteğiyle kısa süre voyvoda oldu, sonra Vladislav II geri döndü (DergiPark/ABAD, TR Vikipedi, Dünya Bizim, Wikipedia 'Vlad the Impaler': Ekim 1448).",
+  "Asıl saltanat (1456): Macar desteğiyle döndü (Wikipedia 'Vlad the Impaler', Wikipedia 'Basarab the Old'). TDV 'Eflak' maddesi saltanatı 1456-1462 verir. Başlangıç tarihi Wikipedia'da 20 Ağustos 1456 olarak geçer, bu yüzden 'yaz' denildi.",
+  "Haracı bırakma: TDV (Eflak) ve DergiPark makalesi Vlad'ın Osmanlı'ya haraç göndermediğini doğrular. Kesilme zamanı kaynaklarda farklı: bazıları 1456'da hemen kestiğini (Portals to the Past, Today in History), bazıları 1459 civarındaki elçi talebini (Wikipedia/Fandom), The Collector ise 1461-62'yi verir. Bu yüzden sahnede 'zamanı farklı verir' ve '~1459' denildi, kesin yıl yazılmadı. Haraç rakamları (10.000 duka, 500/1.000 genç) kaynaklar arasında değiştiği için kullanılmadı.",
+  "Elçi/sarık olayı: RİVAYET. Birçok popüler kaynakta anlatılır ama çağdaş belgeyle doğrulanmış değil. The Warrior Index 'bazıları abartı, bazıları Osmanlı propagandası der' diye kayıt düşer, ZME Science ise 'halk hikâyesi' der. Anlatımlar da farklı: Wikipedia elçilerin kazığa geçirildiğini yazar, diğerleri sarığın çivilendiğini. Metin 'Rivayete göre... belgelenmiş değildir' biçiminde verildi. Görselde çivileme gösterilmedi, yalnızca silüet ve gölge kullanıldı.",
+  "Son sahne: Fatih'in 1462 Haziran'ında Eflak seferine çıktığı Wikipedia 'Radu the Handsome' ve TDV 'Eflak' maddesinde geçer. 'Tuna'yı geçme' ayrıntısı bu turda ayrı bir kaynakla doğrulanmadı. Part 2 yazılmadan önce geçiş tarihi ve yeri (Osmanlı/Romen kaynakları) kontrol edilmeli.",
+  "Kazıklar ormanı: Sahne 9'da yalnızca uzaktan sisli silüet olarak ima edildi. Bu görüntü Part 2'deki Târgoviște rivayetiyle ilişkilidir ve ayrıca doğrulanmalıdır. Part 1 metninde kazık sahnesi anlatılmadı.",
+  "Sayaç kartı ve harita eklenmedi: Haritadaki şehir listesinde Eflak/Târgoviște yok, kesin rakamlar da (rehinlik süresi, haraç miktarı) kaynaklarda çelişiyor."
+ ],
+ "konu": "Fatih Sultan Mehmet ve Kazıklı Voyvoda Part 1: Edirne'deki rehine çocuktan Eflak voyvodasına",
+ "tarih": "",
+ "slug": "fatih-sultan-mehmet-ve-kazikli-voyvoda-part-1-edirnedeki-reh",
+ "durum": "onay-bekliyor",
+ "seslendirme_metni": "Drakula'nın ilham kaynağı, bir zamanlar Edirne'de rehin bir çocuktu.\n1442 ile 1444 arasında, II. Murad döneminde, Eflak voyvodası II. Vlad oğulları Vlad ve Radu'yu Edirne'ye rehin bıraktı.\nBabasının lakabı Dracul'du; Drakula, 'Dracul'un oğlu' demekti. Oğullar zindanda değil, sarayda yetiştiler.\nKüçük kardeş Radu bu dünyaya alıştı ve genç Mehmed'e yakınlaştı. Vlad ise esaretten hoşnut değildi.\nBabası ölünce, 1448'de Osmanlı desteğiyle kısa süreliğine tahta çıktı; ama tahtı kaybetti.\n1456 yazında bu kez Macar desteğiyle döndü ve Eflak voyvodası oldu.\nSonra Osmanlı'ya ödenen yıllık haracı göndermeyi bıraktı. Tarihçiler bu kopuşun zamanını farklı verir.\nRivayete göre Fatih'in elçileri başlarındaki sarığı çıkarmayınca, voyvoda sarıkları başlarına çivilettirdi. Bu anlatı belgelenmiş değildir.\nHaraç da, itaat de bitmişti. Sultan Mehmed bu meydan okumayı cevapsız bırakmayacaktı.\n1462 yazında Fatih, ordusuyla Tuna'yı geçiyor. Devamı Part 2'de."
+}
