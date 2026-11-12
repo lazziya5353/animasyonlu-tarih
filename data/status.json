@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef: ses hazır",
-  "cikti": "projects/fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef",
-  "zaman": "2026-11-12T23:04:39Z"
+  "mesaj": "ishak-pasa-sarayinin-tarihi: ses hazır",
+  "cikti": "projects/ishak-pasa-sarayinin-tarihi",
+  "zaman": "2026-11-12T23:31:51Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -25,9 +25,9 @@
  },
  "kontrol": {
   "durum": "hata",
-  "mesaj": "fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef: gorsel ✗",
-  "cikti": "projects/fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef/kontrol",
-  "zaman": "2026-11-12T23:11:22Z"
+  "mesaj": "ishak-pasa-sarayinin-tarihi: gorsel ✗",
+  "cikti": "projects/ishak-pasa-sarayinin-tarihi/kontrol",
+  "zaman": "2026-11-12T23:35:32Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
