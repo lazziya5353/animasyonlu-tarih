@@ -15,7 +15,7 @@
   "durum": "tamam",
   "mesaj": "kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti: ses hazır",
   "cikti": "projects/kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti",
-  "zaman": "2026-11-12T13:38:59Z"
+  "zaman": "2026-11-12T14:39:14Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-12T14:22:29Z"
  },
  "kontrol": {
-  "durum": "hata",
-  "mesaj": "kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti: kurgu ✗",
+  "durum": "tamam",
+  "mesaj": "kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti: gorsel !",
   "cikti": "projects/kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti/kontrol",
-  "zaman": "2026-11-12T14:22:22Z"
+  "zaman": "2026-11-12T14:48:33Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

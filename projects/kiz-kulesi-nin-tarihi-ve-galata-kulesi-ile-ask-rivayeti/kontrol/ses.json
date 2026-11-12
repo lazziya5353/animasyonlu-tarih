@@ -1,19 +1,23 @@
 {
  "asama": "ses",
  "durum": "uyari",
- "ozet": "65 sn, metinle %93 uyumlu",
+ "ozet": "56 sn, metinle %86 uyumlu",
  "maddeler": [
   {
    "seviye": "uyari",
-   "mesaj": "ses metinle %93 uyuşuyor"
+   "mesaj": "ses metinle %86 uyuşuyor"
   },
   {
    "seviye": "uyari",
-   "mesaj": "metinde olmayan bir şey okunmuş olabilir: “sıfır sıfır sıfır rewayete”"
+   "mesaj": "metinde olmayan bir şey okunmuş olabilir: “sıfır sıfır sıfır altı”"
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "metinde olmayan bir şey okunmuş olabilir: “sıfır altı sıfır on beş”"
   }
  ],
- "sure": 65.3,
- "benzerlik": 0.928,
- "dokum": "00:00.000 Rewayete göre Kız Kulesi ile Galata Kulesi yüzyıllardır birbirine aşık, ama aralarında boğaz var. Oysa kulenin belgelenmiş tarihi bambaşka. Milattan önce dört yüz dolaylarında Atinalı komutan Alkibiades’in burada bir gümrük noktası kurduğu aktarılır. On ikinci yüzyılda Bizans, adaya taş bir kule yaptı. İmparator Manuel Komnenos döneminde kıyı ile kule arasına zincir gerildi. Bin dört yüz elli üçten sonra kule Osmanlı’ya geçti. Fener olarak gemilere yol gösterdi. Bin yedi yüz on dokuzda fenerden çıkan yangın ahşap kuleyi yaktı. Bin yedi yüz yirmi beste kule yeniden yapıldı. Bin sekiz yüz otuzlarda kolera salgını yüzünden karantina hastanesi oldu. İkinci Mahmut’un onarımıyla bugünkü biçimini aldı. Yılanlı Prenses ve Leandros hikayeleri ise efsaneden ibaret. İki bin yirmi birde başlayan restorasyon bitti. Kule on bir Mayıs iki bin yirmi üçte lazer gösterisiyle yeniden açıldı. Rivayet yaşıyor. Hezarfen Galata’dan Üsküdar’a uçarken mektupları taşımış. Galata Kulesi’nin gerçek hikayesi için o videoya bakın.",
- "zaman": "2026-11-12T13:42:31Z"
+ "sure": 56.5,
+ "benzerlik": 0.855,
+ "dokum": "00:00 - 00:06: Rivayete göre Kız Kulesi'yle Galata Kulesi yüzyıllardır birbirine aşık. Ama aralarında Boğaz var.\n00:06 - 00:15: Oysa kulenin belgelenmiş tarihi bambaşka. Milattan önce dört yüz on dolaylarında Atinalı komutan Alcibiades'in burada bir gümrük noktası kurduğu aktarılır.\n00:15 - 00:22: On ikinci yüzyılda Bizans adaya taş bir kule yaptı. İmparator Manuel Komnenos döneminde kıyı ile kule arasına zincir gerildi.\n00:22 - 00:30: Bin dört yüz elli üçten sonra kule Osmanlı'ya geçti. Fener olarak gemilere yol gösterdi. Bin yedi yüz on dokuzda fenerden çıkan yangın ahşap kuleyi yaktı.\n00:30 - 00:39: Bin yedi yüz yirmi beste kule yeniden yapıldı. Bin sekiz yüz otuzlarda kolera salgını yüzünden karantina hastanesi oldu. İkinci Mahmut'un onarımıyla bugünkü biçimini aldı.\n00:39 - 00:49: Yılanlı Prenses ve Leandros hikayeleri ise efsaneden ibaret. İki bin yirmi birde başlayan restorasyon bitti. Kule on bir Mayıs iki bin yirmi üçte lazer gösterisiyle yeniden açıldı.\n00:49 - 00:57: Rivayet yaşıyor. Hezarfen Galata'dan Üsküdar'a uçarken mektupları taşımış. Galata Kulesi'nin gerçek hikayesi için o videoya bakın.",
+ "zaman": "2026-11-12T14:44:13Z"
 }
