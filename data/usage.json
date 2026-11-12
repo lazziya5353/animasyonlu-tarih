@@ -244,6 +244,13 @@
    "servis": "claude",
    "usd": 0.3582,
    "detay": "37981 giriş / 14286 çıkış token, 3 arama"
+  },
+  {
+   "zaman": "2026-11-12T22:37:44Z",
+   "ajan": "ses",
+   "servis": "gemini-ses",
+   "usd": 0.0,
+   "detay": "Charon sesi (ücretsiz kota)"
   }
  ]
 }
