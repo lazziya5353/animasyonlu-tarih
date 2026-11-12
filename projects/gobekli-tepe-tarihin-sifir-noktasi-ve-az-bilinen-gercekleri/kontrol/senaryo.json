@@ -1,0 +1,29 @@
+{
+ "asama": "senaryo",
+ "durum": "uyari",
+ "ozet": "10 sahne, tahmini 69 sn · 4 not",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Stonehenge'den 6 bin yıldan fazla önce, Anadolu'da devasa ta…”",
+   "sahne": 1
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Yer, Şanlıurfa'daki Göbekli Tepe. Tarihlemesi yaklaşık MÖ 96…”",
+   "sahne": 2
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “1995'te Alman arkeolog Klaus Schmidt kazıları başlattı ve al…”",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 4 satıra taşıyor, kısaltılabilir: “2025'te Taş Tepeler projesindeki Karahantepe'de, insan yüzü …”",
+   "sahne": 9
+  }
+ ],
+ "tahmini_sure": 69.4,
+ "zaman": "2026-11-12T23:39:03Z"
+}

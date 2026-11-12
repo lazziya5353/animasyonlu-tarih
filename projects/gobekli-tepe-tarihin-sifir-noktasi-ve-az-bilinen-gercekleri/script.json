@@ -1,0 +1,272 @@
+{
+ "baslik": "Göbekli Tepe: Tarihin Sıfır Noktası",
+ "hook": "STONEHENGE'DEN 6 BİN YIL ÖNCE DİKİLDİ",
+ "map_region": "anadolu",
+ "sahneler": [
+  {
+   "lines": [
+    "Stonehenge'den 6 bin yıldan fazla önce, Anadolu'da devasa taşlar dikildi."
+   ],
+   "big": "6 BİN",
+   "sub": "STONEHENGE'DEN ESKİ",
+   "year": -9600,
+   "label": "MÖ 9600",
+   "prompt": "Vertical 9:16 composition, massive T-shaped limestone pillars arranged in a circle on a rocky hilltop in southeastern Anatolia at dawn, main subject centered, empty sky at top for a title, empty ground at bottom for subtitles, tiny Neolithic figures in animal hides seen only as distant silhouettes from behind, no text, no inscriptions, no faces",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 composition, massive T-shaped limestone pillars arranged in a circle on a rocky hilltop in southeastern Anatolia at dawn, main subject centered, empty sky at top for a title, empty ground at bottom for subtitles, tiny Neolithic figures in animal hides seen only as distant silhouettes from behind, no text, no inscriptions, no faces, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s01.jpg"
+  },
+  {
+   "lines": [
+    "Yer, Şanlıurfa'daki Göbekli Tepe. Tarihlemesi yaklaşık MÖ 9600 olarak veriliyor."
+   ],
+   "big": "MÖ 9600",
+   "sub": "GÖBEKLİ TEPE",
+   "year": -9600,
+   "label": "MÖ 9600",
+   "prompt": "Vertical 9:16, high aerial view of a rocky hilltop in the Şanlıurfa region with circular stone enclosures at center, dry plain stretching below, warm golden morning light, empty space at top and bottom for text overlays, no text, no people",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "effect": "stamp",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, high aerial view of a rocky hilltop in the Şanlıurfa region with circular stone enclosures at center, dry plain stretching below, warm golden morning light, empty space at top and bottom for text overlays, no text, no people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s02.jpg"
+  },
+  {
+   "lines": [
+    "Mısır piramitlerinden de binlerce yıl daha eski.",
+    "Dünyanın ilk anıtsal mimari örneklerinden biri sayılıyor."
+   ],
+   "big": "PİRAMİT",
+   "sub": "BİNLERCE YIL DAHA ESKİ",
+   "year": -9600,
+   "label": "MÖ 9600",
+   "prompt": "Vertical 9:16, an ancient circle of tall standing stones in sharp focus at center foreground, far behind on a hazy horizon the faint silhouette of Egyptian pyramids, suggesting the older age of the stones, dusk sky, empty top and bottom areas for text, no text, no people",
+   "fx": [
+    "dust",
+    "gold"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, an ancient circle of tall standing stones in sharp focus at center foreground, far behind on a hazy horizon the faint silhouette of Egyptian pyramids, suggesting the older age of the stones, dusk sky, empty top and bottom areas for text, no text, no people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s03.jpg"
+  },
+  {
+   "lines": [
+    "Onu çiftçiler değil, tarım öncesi avcı-toplayıcılar inşa etti.",
+    "Bu, 'önce tarım, sonra anıt' fikrini sorgulattı."
+   ],
+   "big": "AVCILAR",
+   "sub": "TARIM ÖNCESİ TOPLULUK",
+   "year": -9600,
+   "label": "MÖ 9600",
+   "prompt": "Vertical 9:16, silhouettes of Neolithic hunter-gatherers seen from behind wearing animal hides, using ropes and wooden levers to move a huge limestone slab, wild grassland with distant gazelles, central action, empty top and bottom bands for text, no text, no faces, no blood",
+   "fx": [
+    "dust",
+    "smoke"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, silhouettes of Neolithic hunter-gatherers seen from behind wearing animal hides, using ropes and wooden levers to move a huge limestone slab, wild grassland with distant gazelles, central action, empty top and bottom bands for text, no text, no faces, no blood, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s04.jpg"
+  },
+  {
+   "lines": [
+    "Dikilitaşlar T biçiminde; bazıları metrelerce yüksek.",
+    "Üzerlerinde tilki, yılan ve yaban domuzu kabartmaları var."
+   ],
+   "big": "T TAŞLAR",
+   "sub": "HAYVAN KABARTMALARI",
+   "year": -9600,
+   "label": "MÖ 9600",
+   "prompt": "Vertical 9:16, close view of a T-shaped limestone pillar centered in frame with carved relief of a fox, a snake and a wild boar, dramatic side light, weathered stone texture, empty top and bottom areas for text, no letters, no symbols that look like writing, no people",
+   "fx": [
+    "dust",
+    "flicker"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, close view of a T-shaped limestone pillar centered in frame with carved relief of a fox, a snake and a wild boar, dramatic side light, weathered stone texture, empty top and bottom areas for text, no letters, no symbols that look like writing, no people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s05.jpg"
+  },
+  {
+   "lines": [
+    "Bazı araştırmacılara göre yapılar kasıtlı olarak toprakla gömüldü.",
+    "Bu hâlâ tartışılıyor."
+   ],
+   "big": "GÖMÜLDÜ?",
+   "sub": "HÂLÂ TARTIŞILIYOR",
+   "year": -8000,
+   "label": "MÖ 8000",
+   "prompt": "Vertical 9:16, a circular stone enclosure with T-shaped pillars partly buried under rubble and earth, tops of pillars emerging from soil, soft dusk light, centered subject, empty top and bottom for text, no text, no people, no faces",
+   "fx": [
+    "dust",
+    "fog"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, a circular stone enclosure with T-shaped pillars partly buried under rubble and earth, tops of pillars emerging from soil, soft dusk light, centered subject, empty top and bottom for text, no text, no people, no faces, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s06.jpg"
+  },
+  {
+   "lines": [
+    "1995'te Alman arkeolog Klaus Schmidt kazıları başlattı ve alanı dünyaya tanıttı."
+   ],
+   "big": "1995",
+   "sub": "KLAUS SCHMIDT KAZILARI",
+   "year": 1995,
+   "label": "1995",
+   "prompt": "Vertical 9:16, 1990s archaeological excavation on a hilltop with trenches, wooden scaffolding and canvas tents, one researcher seen as a small silhouette from far behind, sunrise haze, central trench with uncovered pillar tops, empty top and bottom for text, no text, no visible faces",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, 1990s archaeological excavation on a hilltop with trenches, wooden scaffolding and canvas tents, one researcher seen as a small silhouette from far behind, sunrise haze, central trench with uncovered pillar tops, empty top and bottom for text, no text, no visible faces, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s07.jpg"
+  },
+  {
+   "lines": [
+    "Göbekli Tepe, 2018'de UNESCO Dünya Mirası Listesi'ne girdi."
+   ],
+   "big": "2018",
+   "sub": "UNESCO DÜNYA MİRASI",
+   "year": 2018,
+   "label": "2018",
+   "prompt": "Vertical 9:16, modern protective canopy over the excavated stone enclosures of Göbekli Tepe at golden hour, wooden visitor walkways, central view of pillars under the roof, empty top and bottom for text, no signs, no text, no people",
+   "fx": [
+    "rays",
+    "gold"
+   ],
+   "effect": "stamp",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, modern protective canopy over the excavated stone enclosures of Göbekli Tepe at golden hour, wooden visitor walkways, central view of pillars under the roof, empty top and bottom for text, no signs, no text, no people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s08.jpg"
+  },
+  {
+   "lines": [
+    "2025'te Taş Tepeler projesindeki Karahantepe'de, insan yüzü işlenmiş ilk T biçimli dikilitaş bulundu.",
+    "Bakanlık, bunun bir ilk olduğunu duyurdu."
+   ],
+   "big": "2025",
+   "sub": "KARAHANTEPE: İNSAN YÜZLÜ TAŞ",
+   "year": 2025,
+   "label": "2025",
+   "prompt": "Vertical 9:16, a T-shaped limestone pillar with a stylized carved face (simple nose and brow ridge, carved stone only) emerging from an excavation trench at Karahantepe, archaeologists only as tiny silhouettes far away seen from behind, warm sunrise light, central subject, empty top and bottom for text, no text, no writing",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "effect": "glow",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, a T-shaped limestone pillar with a stylized carved face (simple nose and brow ridge, carved stone only) emerging from an excavation trench at Karahantepe, archaeologists only as tiny silhouettes far away seen from behind, warm sunrise light, central subject, empty top and bottom for text, no text, no writing, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s09.jpg"
+  },
+  {
+   "lines": [
+    "Bu alanlar yalnızca ritüel için mi, yoksa yaşam yeri miydi?",
+    "Kazılar sürüyor."
+   ],
+   "big": "SORULAR",
+   "sub": "KAZILAR SÜRÜYOR",
+   "year": 2026,
+   "label": "2026",
+   "prompt": "Vertical 9:16, wide view of the Şanlıurfa plain at sunrise with several distant hills dotted with small excavation tents and shelters, central hill with a stone circle in the middle ground, empty top and bottom for text, no text, no close-up people",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, wide view of the Şanlıurfa plain at sunrise with several distant hills dotted with small excavation tents and shelters, central hill with a stone circle in the middle ground, empty top and bottom for text, no text, no close-up people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s10.jpg"
+  }
+ ],
+ "finale": "",
+ "maps": [],
+ "cards": [],
+ "eras": [
+  {
+   "name": "NEOLİTİK",
+   "from": 0,
+   "to": 5
+  },
+  {
+   "name": "KEŞİF",
+   "from": 6,
+   "to": 7
+  },
+  {
+   "name": "GÜNCEL",
+   "from": 8,
+   "to": 9
+  }
+ ],
+ "outro": {
+  "title": "GÖBEKLİ TEPE",
+  "line": "Taşlar sessiz, kazılar devam ediyor. Takipte kal."
+ },
+ "aciklama": "Stonehenge'i ve piramitleri herkes bilir ama Anadolu'da onlardan binlerce yıl eski bir taş anıt olduğunu biliyor muydun? Göbekli Tepe'den 2025'te Karahantepe'de bulunan insan yüzlü dikilitaşa kadar hikâyeyi sonuna kadar izle. 🏺\n\n📌 Kaydet / arkadaşına gönder\n\n(Görseller temsilidir.)",
+ "kanca_alternatifleri": [
+  "PİRAMİTLERDEN BİNLERCE YIL ESKİ TAŞ ANIT",
+  "12 BİN YILLIK TAŞTA İLK İNSAN YÜZÜ ÇIKTI",
+  "ÇİFTÇİLERDEN ÖNCE DİKİLEN T BİÇİMLİ DEV TAŞLAR"
+ ],
+ "aciklama_alternatifleri": [
+  "Tarım başlamadan önce insanlar dev taşlardan anıt dikebilir miydi? Göbekli Tepe bu soruyu 1995'ten beri tartıştırıyor. Sonuna kadar izle. 🏺\n\n📌 Kaydet / arkadaşına gönder\n\n(Görseller temsilidir.)",
+  "6 bin yıldan fazla: Göbekli Tepe, Stonehenge'den bu kadar eski. Karahantepe'deki son buluntuyla hikâye değişiyor, sonuna kadar izle. 🏺\n\n📌 Kaydet / arkadaşına gönder\n\n(Görseller temsilidir.)"
+ ],
+ "hashtagler": [
+  "#tarih",
+  "#keşfet",
+  "#reels",
+  "#göbeklitepe",
+  "#şanlıurfa",
+  "#taştepeler",
+  "#karahantepe",
+  "#neolitik",
+  "#arkeoloji",
+  "#tarihbilgisi",
+  "#anadolutarihi",
+  "#animasyontarih"
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe",
+  "https://en.wikipedia.org/wiki/Ta%C5%9F_Tepeler",
+  "https://www.turkiyetoday.com/culture/12000-year-old-human-faced-pillar-unearthed-in-karahantepe-marks-a-new-chapter-in-arc-3208024",
+  "https://www.turkiyetoday.com/culture/turkiyes-karahantepe-ranks-among-2025s-top-archaeological-discoveries-3211797",
+  "https://blog.turkishairlines.com/en/karahantepe-settlement-site/",
+  "https://www.anatolianarchaeology.net/gobeklitepe-exhibition-to-open-in-berlins-museum-island-with-96-artifacts-in-2026/",
+  "https://kureansiklopedi.com/tr/detay/gobeklitepe-08d5f",
+  "https://thedebrief.org/gobekli-tepe-remains-an-11600-year-old-enigma-and-a-new-discovery-is-challenging-past-views-on-its-mysterious-purpose/",
+  "https://atlasanatolia.com/stories/gobekli-tepe-rectangular-buildings-2026"
+ ],
+ "kontrol_notlari": [
+  "ÖNEMLİ: Aranan DAI, UNESCO ve Kültür ve Turizm Bakanlığı sayfalarına doğrudan ulaşamadım. Tek tek iki bağımsız birincil kaynakla doğrulama yapılamadı. Yayından önce whc.unesco.org ve dainst.org üzerinden kontrol et.",
+  "Kural çakışması: Sistem talimatı 130-150 kelime ve 60-65 sn istiyordu. Senin notun 120-130 kelime ve 50-55 sn istediği için notu izledim. Metin yaklaşık 124 kelime ve 10 sahne. Yıllar senin notuna göre rakamla yazıldı.",
+  "<cite index=\"3-3\">Göbekli Tepe 2018'de UNESCO Dünya Mirası olarak tescillendi.</cite> Bu bilgi tek kaynakta doğrulandı, UNESCO sayfasıyla teyit et.",
+  "<cite index=\"18-1,18-3\">İnsan yüzlü T biçimli dikilitaş, Kültür ve Turizm Bakanı tarafından 6 Ekim 2025'te duyuruldu ve 12.000 yıllık olarak tanıtıldı.</cite> <cite index=\"11-2\">Türk Hava Yolları blogu da bu buluntunun 2025 sezonunda çıkarıldığını ve türünün ilk örneği olduğunu yazıyor.</cite> Bir kaynak 11.000 yıl diyor, o yüzden metinde yaş vermedim, 'ilk' ifadesini Bakanlığa atfettim.",
+  "<cite index=\"17-1\">Karahantepe, Archaeology dergisinin 2025 değerlendirmesinde yer aldı ve dergi kapağına çıktı.</cite> Videoya koymadım, istersen açıklamaya eklenebilir.",
+  "Stonehenge (yaklaşık MÖ 3000) ve Giza piramitleri (yaklaşık MÖ 2600) tarihleri genel bilgidir, arama sonuçlarından teyit edilmedi. 'Binlerce yıl' ve '6 bin yıldan fazla' ifadeleri bu yüzden temkinli seçildi. Göbekli Tepe'nin MÖ 9600 tarihlemesi 'yaklaşık' olarak verildi, tek bir akademik yayınla teyit et.",
+  "Klaus Schmidt ve 1995 kazıları arama sonuçlarında doğrulanmadı. Bilgi genel bilgiye dayanıyor, DAI sayfasından teyit et.",
+  "Kasıtlı gömülme tartışmalı bir yorum. Metinde 'bazı araştırmacılara göre' ve 'hâlâ tartışılıyor' diye yazıldı. Sahne 6'daki MÖ 8000 yılı yaklaşık bir terk tarihi, kesin bir gömülme tarihi değil.",
+  "<cite index=\"20-4,20-5\">PLOS One'daki Clare ve Gresky çalışması, alanda ilk doğrulanmış insan mezarlarını (yaklaşık MÖ 8700-8000) bildiriyor.</cite> Tek kaynakta kaldığı için metne koymadım. Bir ikinci kaynakla teyit edersen eklenebilir.",
+  "<cite index=\"9-9\">Ağustos 2026'da Necmi Karul'un Anadolu Ajansı'na dikdörtgen yapılar hakkında konuştuğu bildirildi.</cite> Bu bilgi yalnızca ikincil bir bloga dayanıyor, AA'nın orijinal haberini bul. <cite index=\"3-2\">Konutlara dair bulgular ise 2019'da yayımlanan çalışmalarda da geçiyor.</cite> Bu yüzden 'yaşam yeri miydi?' sorusu metinde açık bırakıldı.",
+  "<cite index=\"6-1\">Berlin'deki James Simon Galeri sergisi 11 Şubat 2026'da açıldı.</cite> <cite index=\"4-2\">Serginin Şubat 2026'da açılacağı daha önce duyurulmuştu.</cite> Süre sınırı nedeniyle videoya koymadım.",
+  "Takvim ve asteroit teorileri (Sweatman) ile Trypillia karşılaştırması bilimsel olarak tartışmalı. Metinde kullanılmadı, spekülasyon sayılır.",
+  "'Dünyanın ilk tapınağı' ifadesi kullanılmadı, kazı ekibi bu tanımı tartışmalı buluyor. Bu bilgi tek bir sitede (tastepeler.net) geçtiği için ek doğrulama gerekir."
+ ],
+ "konu": "Göbekli Tepe: tarihin sıfır noktası ve az bilinen gerçekleri",
+ "tarih": "",
+ "slug": "gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri",
+ "durum": "onay-bekliyor",
+ "seslendirme_metni": "Stonehenge'den altı bin yıldan fazla önce, Anadolu'da devasa taşlar dikildi.\nYer, Şanlıurfa'daki Göbekli Tepe. Tarihlemesi yaklaşık Milattan önce dokuz bin altı yüz olarak veriliyor.\nMısır piramitlerinden de binlerce yıl daha eski.\nDünyanın ilk anıtsal mimari örneklerinden biri sayılıyor.\nOnu çiftçiler değil, tarım öncesi avcı-toplayıcılar inşa etti.\nBu, 'önce tarım, sonra anıt' fikrini sorgulattı.\nDikilitaşlar T biçiminde; bazıları metrelerce yüksek.\nÜzerlerinde tilki, yılan ve yaban domuzu kabartmaları var.\nBazı araştırmacılara göre yapılar kasıtlı olarak toprakla gömüldü.\nBu hâlâ tartışılıyor.\nbin dokuz yüz doksan beşte Alman arkeolog Klaus Schmidt kazıları başlattı ve alanı dünyaya tanıttı.\nGöbekli Tepe, iki bin on sekizde UNESCO Dünya Mirası Listesi'ne girdi.\niki bin yirmi beşte Taş Tepeler projesindeki Karahantepe'de, insan yüzü işlenmiş ilk T biçimli dikilitaş bulundu.\nBakanlık, bunun bir ilk olduğunu duyurdu.\nBu alanlar yalnızca ritüel için mi, yoksa yaşam yeri miydi?\nKazılar sürüyor."
+}

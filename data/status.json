@@ -7,9 +7,9 @@
  },
  "senarist": {
   "durum": "tamam",
-  "mesaj": "'Fatih Sultan Mehmet ve Kazıklı Voyvoda Part 2: 1462 Eflak seferi ve Gece Baskını' metni onay bekliyor",
-  "cikti": "projects/fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef/script.json",
-  "zaman": "2026-11-12T22:46:57Z"
+  "mesaj": "'Göbekli Tepe: tarihin sıfır noktası ve az bilinen gerçekleri' metni onay bekliyor",
+  "cikti": "projects/gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri/script.json",
+  "zaman": "2026-11-12T23:39:02Z"
  },
  "gorsel": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-12T20:10:44Z"
  },
  "kontrol": {
-  "durum": "hata",
-  "mesaj": "ishak-pasa-sarayinin-tarihi: gorsel ✗",
-  "cikti": "projects/ishak-pasa-sarayinin-tarihi/kontrol",
-  "zaman": "2026-11-12T23:35:32Z"
+  "durum": "tamam",
+  "mesaj": "gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri: senaryo !",
+  "cikti": "projects/gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri/kontrol",
+  "zaman": "2026-11-12T23:39:03Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
