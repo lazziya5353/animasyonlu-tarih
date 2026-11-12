@@ -14,7 +14,11 @@ SES="aeıioöuü"
 def _ek(soz, ek):
     # ekin ünlüsünü sözcüğün son ünlüsüne uydurur; ek zaten uyumluysa olduğu gibi bırakılır (yaklaşık ama okunuş için yeterli)
     return soz + ek
+SIRA={"bir":"birinci","iki":"ikinci","üç":"üçüncü","dört":"dördüncü","beş":"beşinci","altı":"altıncı","yedi":"yedinci","sekiz":"sekizinci","dokuz":"dokuzuncu","on":"onuncu","yirmi":"yirminci","otuz":"otuzuncu","kırk":"kırkıncı","elli":"ellinci","altmış":"altmışıncı","yetmiş":"yetmişinci","seksen":"sekseninci","doksan":"doksanıncı","yüz":"yüzüncü","bin":"bininci"}
+def sira(n):
+    w=yaz(n).split(); w[-1]=SIRA.get(w[-1],w[-1]); return " ".join(w)
 def metni_yaziya(t):
+    t=re.sub(r"\b(\d+)\. (?=[a-zçğıöşü])", lambda m: sira(int(m.group(1)))+" ", t)
     t=re.sub(r"\bII\. ", "İkinci ", t); t=re.sub(r"\bIII\. ", "Üçüncü ", t); t=re.sub(r"\bIV\. ", "Dördüncü ", t)
     t=re.sub(r"\bMÖ ", "Milattan önce ", t); t=re.sub(r"\bMS ", "Milattan sonra ", t)
     def r(m):
