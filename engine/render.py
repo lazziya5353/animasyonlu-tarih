@@ -134,6 +134,11 @@ class Project:
                 from deprem import DepremAnim
                 self._tablo[i] = DepremAnim(self.dir, s["anim"])
             return self._tablo[i].frame(tv - s["start"], s["end"] - s["start"])
+        if s.get("video"):  # hazır video klip, sahne süresine uydurulur (engine/klip.py)
+            if i not in self._tablo:
+                from klip import Klip
+                self._tablo[i] = Klip(self.dir, s)
+            return self._tablo[i].frame(tv - s["start"], s["end"] - s["start"])
         if s.get("insa"):  # taş taş inşa / söküm / uçma (engine/insa.py); kamera kesintisiz sürer
             if i not in self._tablo:
                 from insa import Insa
@@ -204,7 +209,7 @@ class Project:
     def frame(self, T):
         c = self.cfg; tv = T - self.off; i = self.scene_at(tv); s = self.S[i]; lt = tv - s["start"]
         fr = self.scene_img(i, tv); atmos(fr, s.get("fx"), tv)
-        if i > 0 and lt < 0.5 and not s.get("insa"):
+        if i > 0 and lt < 0.5 and not s.get("insa") and not (s.get("video") and s.get("video") == self.S[i - 1].get("video")):  # aynı klibin devamıysa karıştırma
             pv = self.scene_img(i - 1, tv); atmos(pv, self.S[i - 1].get("fx"), tv); fr = Image.blend(pv, fr, inout(lt / 0.5))
         m = next((m for m in self.maps if m["start"] <= tv < m["end"]), None)
         if m:
