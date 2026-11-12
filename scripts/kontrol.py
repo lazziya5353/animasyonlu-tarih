@@ -213,7 +213,9 @@ def gorsel(slug):
     notlar = (notlar + " Atatürk ve gerçek kişilerin yüzleri yapay zekayla çizilmez; yalnızca arkadan/uzaktan siluet olabilir.")[:600]
     for i, s in enumerate(S, 1):
         p = os.path.join(d, s.get("image", f"images/s{i:02d}.jpg"))
-        if not os.path.exists(p): eksik.append(i); continue
+        if not os.path.exists(p):
+            if s.get("video"): R.bilgi("video klipli sahne (görsel gerekmez)", i); continue
+            eksik.append(i); continue
         try: im = Image.open(p); im.load()
         except Exception: R.hata("görsel açılamıyor (bozuk dosya)", i); continue
         w, h = im.size
@@ -223,7 +225,7 @@ def gorsel(slug):
         if ort < 14: R.uyari("görsel neredeyse tamamen karanlık", i)
         hb = "".join("1" if v > ort else "0" for v in g.tobytes())
         for j, hb2 in hashler.items():
-            if sum(x != y for x, y in zip(hb, hb2)) < 18: R.uyari(f"{j}. sahnedeki görselle neredeyse aynı", i)
+            if sum(x != y for x, y in zip(hb, hb2)) < 18 and not s.get("video"): R.uyari(f"{j}. sahnedeki görselle neredeyse aynı", i)
         hashler[i] = hb; mevcut.append((i, s, p))
     puanlar = []
     for k in range(0, len(mevcut), 6):                       # tek istekte 6 görsel: hızlı ve ücretsiz kotaya uygun
