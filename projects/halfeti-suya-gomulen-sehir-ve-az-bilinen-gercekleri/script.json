@@ -1,0 +1,287 @@
+{
+ "baslik": "Halfeti: Suya Gömülen Şehir",
+ "hook": "26 YIL SONRA SU ÇEKİLDİ, HALFETİ GÖRÜNDÜ",
+ "map_region": "anadolu",
+ "sahneler": [
+  {
+   "lines": [
+    "Bir şehir 26 yıl suyun altında kaldı, sonra yeniden göründü."
+   ],
+   "big": "26 YIL",
+   "sub": "SUYUN ALTINDAKİ ŞEHİR",
+   "year": 2026,
+   "label": "2026",
+   "prompt": "Vertical 9:16 wide shot of an old stone Anatolian riverside town half emerging from calm green-blue reservoir water at dawn, rows of honey-colored stone houses with exposed lower walls, a lone minaret in the distance, main subject centered, empty sky space at top for a title, empty water space at bottom for subtitles, no people, no text",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 wide shot of an old stone Anatolian riverside town half emerging from calm green-blue reservoir water at dawn, rows of honey-colored stone houses with exposed lower walls, a lone minaret in the distance, main subject centered, empty sky space at top for a title, empty water space at bottom for subtitles, no people, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s01.jpg"
+  },
+  {
+   "lines": [
+    "Burası Şanlıurfa'nın Halfeti ilçesi. 2000 yılında Birecik Barajı su tutmaya başladı."
+   ],
+   "big": "2000",
+   "sub": "BİRECİK BARAJI",
+   "year": 2000,
+   "label": "2000",
+   "prompt": "Vertical 9:16 aerial view of a large concrete dam on the Euphrates river in southeastern Turkey, calm reservoir behind it, dry hills around, dam centered, open sky at top, empty lower area for captions, no people, no text, no flags",
+   "fx": [
+    "dust"
+   ],
+   "effect": "stamp",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 aerial view of a large concrete dam on the Euphrates river in southeastern Turkey, calm reservoir behind it, dry hills around, dam centered, open sky at top, empty lower area for captions, no people, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s02.jpg"
+  },
+  {
+   "lines": [
+    "Eski Halfeti'de su yaklaşık 50 metre yükseldi. Halk, 10 kilometre yukarıdaki yeni Halfeti'ye taşındı."
+   ],
+   "big": "50 M",
+   "sub": "SU YÜKSELDİ, HALK TAŞINDI",
+   "year": 2000,
+   "label": "TAŞINMA",
+   "prompt": "Vertical 9:16 view from above of rising dark-blue water slowly covering stone houses and narrow lanes of an old Anatolian town, rooftops still visible, a new small town with modern buildings far up on a hillside in the distance, main subject centered, empty sky at top, empty bottom space for subtitles, no people, no text",
+   "fx": [
+    "fog"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 view from above of rising dark-blue water slowly covering stone houses and narrow lanes of an old Anatolian town, rooftops still visible, a new small town with modern buildings far up on a hillside in the distance, main subject centered, empty sky at top, empty bottom space for subtitles, no people, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s03.jpg"
+  },
+  {
+   "lines": [
+    "Savaşan köyünde bir caminin minaresi hâlâ sudan yükseliyor. Tekneler tam oradan geçiyor."
+   ],
+   "big": "MİNARE",
+   "sub": "SUDAN YÜKSELEN MİNARE",
+   "year": 2000,
+   "label": "SAVAŞAN",
+   "prompt": "Vertical 9:16 a stone mosque minaret rising alone from calm turquoise river water, a small wooden tour boat passing at a distance seen from behind as a tiny silhouette, golden morning light, minaret centered, open sky at top, empty water at bottom for captions, no readable text, no calligraphy",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 a stone mosque minaret rising alone from calm turquoise river water, a small wooden tour boat passing at a distance seen from behind as a tiny silhouette, golden morning light, minaret centered, open sky at top, empty water at bottom for captions, no readable text, no calligraphy, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s04.jpg"
+  },
+  {
+   "lines": [
+    "Rumkale, Ermenice adıyla Hromgla, bir dönem Ermeni katolikoslarının merkeziydi. Bugün tekne turunun durağı."
+   ],
+   "big": "HROMGLA",
+   "sub": "RUMKALE · ERMENİ KATOLİKOSLUK MERKEZİ",
+   "year": 1150,
+   "label": "12. YY",
+   "prompt": "Vertical 9:16 medieval fortress on a steep rocky peninsula surrounded by the Euphrates river, thick stone walls and towers climbing the cliff, soft haze, fortress centered, open sky at top, river space at bottom for subtitles, no people, no text, no flags",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 medieval fortress on a steep rocky peninsula surrounded by the Euphrates river, thick stone walls and towers climbing the cliff, soft haze, fortress centered, open sky at top, river space at bottom for subtitles, no people, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s05.jpg"
+  },
+  {
+   "lines": [
+    "Halfeti'nin karagülü de ünlü. Yalnızca burada yetiştiği söylenir; rengini toprağa ve suya bağlarlar."
+   ],
+   "big": "KARAGÜL",
+   "sub": "SİYAH GÜL İDDİASI",
+   "year": 2000,
+   "label": "KARAGÜL",
+   "prompt": "Vertical 9:16 close-up still life of deep crimson-black roses with dew drops in a greenhouse bed, soft window light, blurred green hills and river behind, roses centered, empty space at top for title and bottom for subtitles, no people, no text",
+   "fx": [
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 close-up still life of deep crimson-black roses with dew drops in a greenhouse bed, soft window light, blurred green hills and river behind, roses centered, empty space at top for title and bottom for subtitles, no people, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s06.jpg"
+  },
+  {
+   "lines": [
+    "2013'te Halfeti, Cittaslow yani sakin şehir ağına katıldı. 2026'da 1 milyondan fazla ziyaretçi bekleniyordu."
+   ],
+   "big": "2013",
+   "sub": "SAKİN ŞEHİR · CITTASLOW",
+   "year": 2013,
+   "label": "2013",
+   "prompt": "Vertical 9:16 peaceful riverside promenade of a small Anatolian town at sunset, stone houses, moored wooden tour boats on calm water, tiny distant visitors seen only as small silhouettes from far away, boats centered, open sky at top, empty foreground at bottom for subtitles, no readable signs, no text",
+   "fx": [
+    "rays",
+    "gold"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 peaceful riverside promenade of a small Anatolian town at sunset, stone houses, moored wooden tour boats on calm water, tiny distant visitors seen only as small silhouettes from far away, boats centered, open sky at top, empty foreground at bottom for subtitles, no readable signs, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s07.jpg"
+  },
+  {
+   "lines": [
+    "29 Ekim 2026'da Birecik Barajı'nda kontrollü tahliye başladı. Su yer yer yaklaşık 10 metre düştü."
+   ],
+   "big": "29 EKİM",
+   "sub": "KONTROLLÜ TAHLİYE BAŞLADI",
+   "year": 2026,
+   "label": "29 EKİM",
+   "prompt": "Vertical 9:16 reservoir with visibly lowered water level, pale exposed shoreline band along the banks, wet stone walls and old garden terraces emerging, a few tour boats resting on the mud seen from far away, main scene centered, open sky at top, empty lower space for captions, no people, no text",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "effect": "type",
+   "type_text": "29 EKİM 2026 · BİRECİK BARAJI",
+   "prompt_tam": "Vertical 9:16 reservoir with visibly lowered water level, pale exposed shoreline band along the banks, wet stone walls and old garden terraces emerging, a few tour boats resting on the mud seen from far away, main scene centered, open sky at top, empty lower space for captions, no people, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s08.jpg"
+  },
+  {
+   "lines": [
+    "Ulu Cami, eski evler ve bahçeler yeniden göründü. Halfetililer eski evlerini ziyaret etti."
+   ],
+   "big": "ULU CAMİ",
+   "sub": "26 YIL SONRA GÜN YÜZÜNDE",
+   "year": 2026,
+   "label": "ULU CAMİ",
+   "prompt": "Vertical 9:16 an old stone mosque and surrounding ruined stone houses emerging from receding water, muddy ground with stone steps, a few tiny figures walking far away seen as small silhouettes from behind, warm golden evening light, mosque centered, open sky at top, empty ground at bottom for subtitles, no text, no calligraphy",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "effect": "glow",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 an old stone mosque and surrounding ruined stone houses emerging from receding water, muddy ground with stone steps, a few tiny figures walking far away seen as small silhouettes from behind, warm golden evening light, mosque centered, open sky at top, empty ground at bottom for subtitles, no text, no calligraphy, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s09.jpg"
+  },
+  {
+   "lines": [
+    "Bakım bitince su eski seviyesine dönecek. Yani bu manzara geçici. Eski Halfeti yine sessizce sulara karışacak."
+   ],
+   "big": "GEÇİCİ",
+   "sub": "SU YENİDEN YÜKSELECEK",
+   "year": 2026,
+   "label": "KASIM",
+   "prompt": "Vertical 9:16 dusk over the Euphrates river, water slowly rising back around old stone houses and a mosque minaret, lone silhouette on far shore from behind, soft purple-blue sky with mist, scene centered, open sky at top, empty water at bottom for captions, no people faces, no text",
+   "fx": [
+    "fog"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16 dusk over the Euphrates river, water slowly rising back around old stone houses and a mosque minaret, lone silhouette on far shore from behind, soft purple-blue sky with mist, scene centered, open sky at top, empty water at bottom for captions, no people faces, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s10.jpg"
+  }
+ ],
+ "finale": "",
+ "maps": [],
+ "cards": [
+  {
+   "scene": 0,
+   "value": 26,
+   "unit": "YIL",
+   "small": "SULAR ALTINDA"
+  },
+  {
+   "scene": 2,
+   "value": 50,
+   "unit": "METRE",
+   "small": "YAKLAŞIK SU YÜKSELMESİ"
+  },
+  {
+   "scene": 7,
+   "value": 10,
+   "unit": "METRE",
+   "small": "YER YER DÜŞEN SU"
+  }
+ ],
+ "eras": [
+  {
+   "name": "SUYA GÖMÜLÜŞ",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "name": "HALFETİ'NİN MİRASI",
+   "from": 4,
+   "to": 6
+  },
+  {
+   "name": "SULAR ÇEKİLDİ",
+   "from": 7,
+   "to": 9
+  }
+ ],
+ "outro": {
+  "title": "HALFETİ",
+  "line": "Suyun altındaki şehir sessizce bekliyor."
+ },
+ "aciklama": "Halfeti'yi \"batık şehir\" diye duydun ama suyun 26 yıl sonra yer yer yaklaşık 10 metre çekildiğini biliyor muydun? Birecik Barajı'nın sularına gömülen eski Halfeti, 2026'da yeniden göründü. Sonuna kadar izle.\n\n📌 Kaydet / arkadaşına gönder\n\n(Görseller temsilidir.)",
+ "kanca_alternatifleri": [
+  "50 METRE SUYUN ALTINDAKİ ŞEHİR YÜZE ÇIKTI",
+  "26 YIL SONRA ULU CAMİ YENİDEN GÖRÜNDÜ",
+  "2000 YILINDA SUYA GÖMÜLEN İLÇE: HALFETİ"
+ ],
+ "aciklama_alternatifleri": [
+  "Bir şehir 26 yıl suyun altında kaldıktan sonra neden yeniden göründü? Halfeti'nin hikâyesi baraj, taşınma ve sudan yükselen bir minareyle dolu. Sonuna kadar izle.\n\n📌 Kaydet / arkadaşına gönder\n\n(Görseller temsilidir.)",
+  "50 metre yükselen su, bir ilçenin eski yerleşimini yuttu. Halfeti'nin hikâyesi ve 2026'da su çekilince ortaya çıkanlar için sonuna kadar izle.\n\n📌 Kaydet / arkadaşına gönder\n\n(Görseller temsilidir.)"
+ ],
+ "hashtagler": [
+  "#tarih",
+  "#keşfet",
+  "#reels",
+  "#halfeti",
+  "#batıkşehir",
+  "#birecikbarajı",
+  "#rumkale",
+  "#şanlıurfa",
+  "#sakinşehir",
+  "#karagül",
+  "#tarihbilgisi",
+  "#animasyontarih"
+ ],
+ "kaynaklar": [
+  "https://www.haberler.com/kultur-sanat/halfeti-de-su-seviyesi-10-metreye-kadar-dusunce-20419911-haberi/",
+  "https://www.bursadabugun.com/haber/26-yil-sonra-su-cekildi-altindaki-tarih-gun-yuzune-cikti-1962823.html",
+  "https://www.trtv.net/2026/11/09/halfeti-26-yil-sonra-tarihi-yapilar-ortaya-cikti/",
+  "https://rayhaber.com/2026/11/halfetide-26-yil-sonra-sular-cekildi-tarihi-yerlesim-alanlari-yeniden-ortaya-cikti/",
+  "https://www.nefes.com.tr/gercek-halfeti-ortaya-cikti-gizemli-oykuleri-olan-sehir-163418",
+  "https://amidahaber.com/sanliurfa/26-yil-sonra-su-cekildi-halfeti-gun-yuzune-cikti-240288h",
+  "https://www.urfagap.com/halfetide-sular-cekildi-26-yil-once-batan-evler-gorundu",
+  "https://www.haberler.com/kultur-sanat/halfeti-ye-ziyaretci-akini-1-milyonu-gecmesi-bekleniyor-19844345-haberi/",
+  "https://www.gazeteci63.com/gundem/halfeti-de-hedef-1-milyon-turist-16844",
+  "https://www.haberler.com/kultur-sanat/halfeti-bozkirin-ortasinda-sakin-sehir-buyusu-19903366-haberi/",
+  "https://en.wikipedia.org/wiki/Halfeti",
+  "https://turkarkeolojienstitusu.org/en/yayinlar/rumkale-fromt-the-medieval-period-to-the-present-day/",
+  "https://yolcu360.com/blog/halfeti/"
+ ],
+ "kontrol_notlari": [
+  "DOĞRULANDI (çok kaynaklı): Birecik Barajı 2000 yılında su tutmaya başladı ve Halfeti'nin büyük bölümü su altında kaldı. Aynı bilgi RayHaber'de ve Nefes'te da var.",
+  "DOĞRULANDI: Kaymakamın verdiği bilgiye göre su seviyesi yaklaşık 50 metre yükseldi. Halk yaklaşık 10 kilometre yukarıdaki yeni Halfeti'ye taşındı. Aynı rakamlar Bursadabugun/AA haberinde da geçiyor. Rakamlar yaklaşıktır, metinde 'yaklaşık' diye geçer.",
+  "DOĞRULANDI: Savaşan Mahallesi'nde baraj suları üzerinde kalan cami minaresi ve Ulu Cami ortaya çıktı. Tekne turlarıyla su altında kalan caminin minaresi görülebiliyor.",
+  "DOĞRULANDI (GÜNCEL): Kaymakamlık, 29 Ekim-15 Kasım 2026 arasında Birecik rezervuarının günlük 50 cm'yi geçmeyecek şekilde düşürüleceğini ve 377 metre kotunda tutulacağını açıkladı. Su yaklaşık 10 metre düşürüldü. Yaklaşık bir ay düşük tutulacak, bakım bitince eski seviyesine çıkarılacak. Dikkat: Reels'i 15 Kasım 2026 sonrasında paylaşırsan 8. ve 10. sahneleri güncelle. Su seviyesi eski haline dönmüş olabilir.",
+  "Sızıntı kontrolü gerekçesi birden fazla haberde var (Birecik ve Atatürk barajlarında çatlak ve kaçak sızıntı bakımı). Metinde 'bakım' ve 'kontrollü tahliye' diye geçer, spekülasyon yok. 'Su yer yer yaklaşık 10 metre düştü' ifadesi kaynaklarda aynıdır.",
+  "DOĞRULANDI: Cittaslow Uluslararası Koordinasyon Komitesi, Halfeti'yi 2013'te sakin şehir ağına dahil etti. Wikipedia da 2013'te Cittaslow ağına katılmayı yazıyor.",
+  "TURİZM (GÜNCEL): AA kaynaklı haberde 2026'da 1 milyondan fazla ziyaretçi bekleniyordu (15 Mayıs 2026). Metinde 'bekleniyordu' denir, gerçekleşmiş rakam diye sunulmaz. Gerçekleşen sayı için resmî açıklama bulunamadı.",
+  "UYARI, RUMKALE/HROMGLA: Bu aramada Ermeni katolikosluk merkezi dönemini doğrulayan sonuç çıkmadı. 5. sahnedeki cümle genel tarih bilgisine dayanıyor (12. yüzyıl ortasından 13. yüzyıl sonuna kadar katolikosluk merkezi olduğu bilinir). Yayından önce en az iki akademik veya ansiklopedik kaynakla doğrula. Sahnenin 'year' alanı yaklaşık 1150 olarak girildi, kesin bir yıl değil. Kesin yıl istersen kaynakla doğrulayıp güncelle.",
+  "UYARI, KARAGÜL: AA kaynaklı haber, karagülün dünyada sadece Halfeti'de yetiştiğini yazıyor. Başka bir kaynak, çiçeğin başka yere taşınınca rengini değiştirdiğini söylüyor. Bu bir iddiadır, bilimsel doğrulama bulunamadı. Metinde bu yüzden 'söylenir' ve 'bağlarlar' ifadeleri kullanıldı. Toprak-su açıklaması için ikinci bir bilimsel kaynak bulunamadı. İstersen bu cümleyi çıkarabilirsin.",
+  "RUMKALE KAZI/RESTORASYON: Sonuçlar karışık. Barşavma Manastırı ve Kuzey Surları restorasyonu için 31 Mart 2020'de 5,7 milyon TL'lik sözleşme imzalandı. Türk Arkeoloji ve Kültürel Miras Enstitüsü ise şimdiye dek bilimsel bir arkeoloji projesi yürütülmediğini belirtiyor. gaziantepsabah.com'daki '23 Ağustos 2026' tarihli haber eski bir haber (2007 hedefinden söz ediyor), tarihi yanlış olduğu için kullanılmadı. Rumkale'de 2026 güncel kazı haberi doğrulanamadığı için metne eklenmedi.",
+  "SUALTI ÇALIŞMALARI: Güvenilir ve güncel bir sualtı arkeoloji veya dalış çalışması haberi bulunamadı (arama kotası doldu). Metne eklenmedi. memurlar.net'te Çekem Mahallesi'nin havadan ve su altından görüntülendiği geçiyor ama bu eski ve tek kaynaklı bir haber.",
+  "Kullanılmayanlar: eniyiyer.com'daki 'Smart-Water 5G' iddiası ve ücretsiz internet söylentisi güvenilir bulunmadı. Tekne turu fiyatları kaynaklar arasında çelişiyor (300 TL ve 450-850 TL), metne konmadı. Rumkale'de İncil çoğaltıldığı rivayeti tarihî belge olmadığı için metne konmadı.",
+  "HARİTA: Şehir listesinde Halfeti veya Şanlıurfa olmadığı için harita geçişi eklenmedi.",
+  "SÜRE/KELİME: Anlatım 131 kelime. Hem 130-150 kelime kuralına hem de senin 120-130 notuna yakın. Süre yaklaşık 52-58 sn. 50-55 sn hedefi için ses hızı biraz yüksek tutulabilir.",
+  "Not: Bu cevapta atıf etiketleri sadece kontrol notlarında var. Anlatım ve diğer alanlar sade tutuldu ki JSON bozulmasın."
+ ],
+ "konu": "Halfeti: suya gömülen şehir ve az bilinen gerçekleri",
+ "tarih": "",
+ "slug": "halfeti-suya-gomulen-sehir-ve-az-bilinen-gercekleri",
+ "durum": "onay-bekliyor",
+ "seslendirme_metni": "Bir şehir yirmi altı yıl suyun altında kaldı, sonra yeniden göründü.\nBurası Şanlıurfa'nın Halfeti ilçesi. iki bin yılında Birecik Barajı su tutmaya başladı.\nEski Halfeti'de su yaklaşık elli metre yükseldi. Halk, on kilometre yukarıdaki yeni Halfeti'ye taşındı.\nSavaşan köyünde bir caminin minaresi hâlâ sudan yükseliyor. Tekneler tam oradan geçiyor.\nRumkale, Ermenice adıyla Hromgla, bir dönem Ermeni katolikoslarının merkeziydi. Bugün tekne turunun durağı.\nHalfeti'nin karagülü de ünlü. Yalnızca burada yetiştiği söylenir; rengini toprağa ve suya bağlarlar.\niki bin on üçte Halfeti, Cittaslow yani sakin şehir ağına katıldı. iki bin yirmi altıda bir milyondan fazla ziyaretçi bekleniyordu.\nyirmi dokuz Ekim iki bin yirmi altıda Birecik Barajı'nda kontrollü tahliye başladı. Su yer yer yaklaşık on metre düştü.\nUlu Cami, eski evler ve bahçeler yeniden göründü. Halfetililer eski evlerini ziyaret etti.\nBakım bitince su eski seviyesine dönecek. Yani bu manzara geçici. Eski Halfeti yine sessizce sulara karışacak."
+}

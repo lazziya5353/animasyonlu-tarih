@@ -1,0 +1,297 @@
+{
+ "title": "Halfeti: Suya Gömülen Şehir",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "26 YIL SONRA SU ÇEKİLDİ, HALFETİ GÖRÜNDÜ",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bir şehir 26 yıl suyun altında kaldı, sonra yeniden göründü."
+   ],
+   "big": "26 YIL",
+   "sub": "SUYUN ALTINDAKİ ŞEHİR",
+   "year": 2026,
+   "label": "2026",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Burası Şanlıurfa'nın Halfeti ilçesi. 2000 yılında Birecik Barajı su tutmaya başladı."
+   ],
+   "big": "2000",
+   "sub": "BİRECİK BARAJI",
+   "year": 2000,
+   "label": "2000",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Eski Halfeti'de su yaklaşık 50 metre yükseldi. Halk, 10 kilometre yukarıdaki yeni Halfeti'ye taşındı."
+   ],
+   "big": "50 M",
+   "sub": "SU YÜKSELDİ, HALK TAŞINDI",
+   "year": 2000,
+   "label": "TAŞINMA",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Savaşan köyünde bir caminin minaresi hâlâ sudan yükseliyor. Tekneler tam oradan geçiyor."
+   ],
+   "big": "MİNARE",
+   "sub": "SUDAN YÜKSELEN MİNARE",
+   "year": 2000,
+   "label": "SAVAŞAN",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Rumkale, Ermenice adıyla Hromgla, bir dönem Ermeni katolikoslarının merkeziydi. Bugün tekne turunun durağı."
+   ],
+   "big": "HROMGLA",
+   "sub": "RUMKALE · ERMENİ KATOLİKOSLUK MERKEZİ",
+   "year": 1150,
+   "label": "12. YY",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Halfeti'nin karagülü de ünlü. Yalnızca burada yetiştiği söylenir; rengini toprağa ve suya bağlarlar."
+   ],
+   "big": "KARAGÜL",
+   "sub": "SİYAH GÜL İDDİASI",
+   "year": 2000,
+   "label": "KARAGÜL",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "2013'te Halfeti, Cittaslow yani sakin şehir ağına katıldı. 2026'da 1 milyondan fazla ziyaretçi bekleniyordu."
+   ],
+   "big": "2013",
+   "sub": "SAKİN ŞEHİR · CITTASLOW",
+   "year": 2013,
+   "label": "2013",
+   "fx": [
+    "rays",
+    "gold"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "29 Ekim 2026'da Birecik Barajı'nda kontrollü tahliye başladı. Su yer yer yaklaşık 10 metre düştü."
+   ],
+   "big": "29 EKİM",
+   "sub": "KONTROLLÜ TAHLİYE BAŞLADI",
+   "year": 2026,
+   "label": "29 EKİM",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "type",
+   "type_text": "29 EKİM 2026 · BİRECİK BARAJI"
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ulu Cami, eski evler ve bahçeler yeniden göründü. Halfetililer eski evlerini ziyaret etti."
+   ],
+   "big": "ULU CAMİ",
+   "sub": "26 YIL SONRA GÜN YÜZÜNDE",
+   "year": 2026,
+   "label": "ULU CAMİ",
+   "fx": [
+    "rays",
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "glow"
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bakım bitince su eski seviyesine dönecek. Yani bu manzara geçici. Eski Halfeti yine sessizce sulara karışacak."
+   ],
+   "big": "GEÇİCİ",
+   "sub": "SU YENİDEN YÜKSELECEK",
+   "year": 2026,
+   "label": "KASIM",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "SUYA GÖMÜLÜŞ",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "name": "HALFETİ'NİN MİRASI",
+   "from": 4,
+   "to": 6
+  },
+  {
+   "name": "SULAR ÇEKİLDİ",
+   "from": 7,
+   "to": 9
+  }
+ ],
+ "outro_plan": {
+  "title": "HALFETİ",
+  "line": "Suyun altındaki şehir sessizce bekliyor."
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 0,
+   "value": 26,
+   "unit": "YIL",
+   "small": "SULAR ALTINDA"
+  },
+  {
+   "scene": 2,
+   "value": 50,
+   "unit": "METRE",
+   "small": "YAKLAŞIK SU YÜKSELMESİ"
+  },
+  {
+   "scene": 7,
+   "value": 10,
+   "unit": "METRE",
+   "small": "YER YER DÜŞEN SU"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": ""
+}
