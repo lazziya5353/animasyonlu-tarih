@@ -1,0 +1,207 @@
+{
+ "title": "Galata Kulesi: 678 Yılın Hikâyesi",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "GALATA KULESİ",
+ "map_region": "marmara",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1348. Cenevizliler, Galata'nın tepesine bir kule dikiyor."
+   ],
+   "big": "1348",
+   "sub": "CENEVİZLİLER",
+   "year": 1348,
+   "label": "1348",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Duvarları tabanda neredeyse 4 metre kalınlığında.",
+    "Taş taş, sıra sıra yükseliyor."
+   ],
+   "big": "4 METRE",
+   "sub": "DUVAR KALINLIĞI",
+   "year": 1348,
+   "label": "1348",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Adı: Christea Turris.",
+    "Yani İsa Kulesi."
+   ],
+   "big": "İSA KULESİ",
+   "sub": "CHRISTEA TURRIS",
+   "year": 1348,
+   "label": "1348",
+   "fx": [
+    "gold"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1453. İstanbul fethediliyor.",
+    "Galata, savaşmadan Osmanlı'ya geçiyor.",
+    "1509'da büyük deprem kuleyi yaralıyor. 1 yıl sonra onarılıyor."
+   ],
+   "big": "1453",
+   "sub": "OSMANLI",
+   "year": 1453,
+   "label": "1453",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1794 ve 1831. İki büyük yangın.",
+    "II. Mahmud kuleye 2 kat ve sivri bir külah ekletiyor."
+   ],
+   "big": "1832",
+   "sub": "II. MAHMUD",
+   "year": 1832,
+   "label": "1832",
+   "fx": [
+    "gold"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1875. Bir fırtına külahı devirip götürüyor.",
+    "Kule yaklaşık 90 yıl külahsız kalıyor."
+   ],
+   "big": "1875",
+   "sub": "KÜLAHSIZ YILLAR",
+   "year": 1875,
+   "label": "1875",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1967. Külah geri dönüyor.",
+    "Bugün 678 yaşında.",
+    "Ve hâlâ İstanbul'u izliyor."
+   ],
+   "big": "678 YAŞINDA",
+   "sub": "BUGÜN",
+   "year": 2026,
+   "label": "BUGÜN",
+   "fx": [
+    "gold"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "CENEVİZ",
+   "from": 0,
+   "to": 2
+  },
+  {
+   "name": "OSMANLI",
+   "from": 3,
+   "to": 5
+  },
+  {
+   "name": "BUGÜN",
+   "from": 6,
+   "to": 6
+  }
+ ],
+ "outro_plan": {
+  "title": "GALATA KULESİ",
+  "line": "678 yıldır İstanbul'u izliyor."
+ },
+ "maps_plan": [],
+ "cards_plan": [],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": ""
+}
