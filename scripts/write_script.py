@@ -52,6 +52,10 @@ JSON şeması:
     sc = extract_json(yazar(system, user, "senarist", max_tokens=24000, web_search=int(os.environ.get("ARAMA_SAYISI", "3"))), "senarist")
     sc["konu"] = a.konu; sc["tarih"] = a.tarih; sc["slug"] = slug; sc["durum"] = "onay-bekliyor"
     sc["seslendirme_metni"] = "\n".join(l for s in sc["sahneler"] for l in s["lines"])
+    try:   # ders: rakamla yazılan yıllar konuşma tanımayı bozuyor, altyazı kayıyor; seslendirmede sayılar yazıyla (ekranda rakam kalır)
+        from sayi_yazi import metni_yaziya
+        sc["seslendirme_metni"] = metni_yaziya(sc["seslendirme_metni"])
+    except Exception as e: print("sayı-yazı çevirisi atlandı:", e)
     for i, s in enumerate(sc["sahneler"]): s["prompt_tam"] = f"{s['prompt']}, {STYLE}"; s["image"] = f"images/s{i + 1:02d}.jpg"
     json.dump(sc, open(os.path.join(d, "script.json"), "w"), ensure_ascii=False, indent=1)
     proje_yaz(sc, d)
