@@ -1,0 +1,23 @@
+{
+ "asama": "kurgu",
+ "durum": "tamam",
+ "ozet": "65 sn, -15 LUFS, senkron 18/18",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “AYASOFYA'NIN ALTINDA NE SAKLI?”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “Rivayetler yaşar, tarih konuşur.”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.5-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more info)"
+  }
+ ],
+ "sure": 65.4,
+ "lufs": -15.4,
+ "senkron": "18/18",
+ "zaman": "2026-11-12T19:51:19Z"
+}

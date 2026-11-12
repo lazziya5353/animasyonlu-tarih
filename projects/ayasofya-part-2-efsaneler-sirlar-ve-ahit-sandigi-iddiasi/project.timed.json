@@ -1,0 +1,397 @@
+{
+ "title": "Ayasofya Part 2: Efsaneler ve Sırlar",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "AYASOFYA'NIN ALTINDA NE SAKLI?",
+ "map_region": "avrupa_ortadogu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": 0.0,
+   "end": 3.71,
+   "lines": [
+    "Kapının ardında yüzyıllardır anlatılan sırlar var."
+   ],
+   "big": "KAPI",
+   "sub": "KAPININ ARDINDAKİ SIRLAR",
+   "year": 537,
+   "label": "537",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_184824_bdadea20-c70b-4bdb-ada3-7cc737babf0c.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": 3.71,
+   "end": 12.34,
+   "lines": [
+    "537'de açılışta Justinianus'un 'Süleyman, seni geçtim' dediği aktarılır.",
+    "Bu söz, sonraki anlatılarda yer alır."
+   ],
+   "big": "537",
+   "sub": "SÜLEYMAN, SENİ GEÇTİM",
+   "year": 537,
+   "label": "537",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_184824_bdadea20-c70b-4bdb-ada3-7cc737babf0c.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": 12.34,
+   "end": 18.89,
+   "lines": [
+    "Bizans döneminde buraya kutsal emanetler getirildiği anlatılır.",
+    "Bunların bir kısmının akıbeti belirsizdir."
+   ],
+   "big": "EMANET",
+   "sub": "KUTSAL EMANETLER",
+   "year": 537,
+   "label": "RİVAYET",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_190252_f4642ea1-6886-4087-86f3-91c4775d17b5.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": 18.89,
+   "end": 23.080000000000002,
+   "lines": [
+    "İddia edilene göre Ahit Sandığı da Ayasofya'nın altında saklı."
+   ],
+   "big": "SANDIK",
+   "sub": "AHİT SANDIĞI İDDİASI",
+   "year": 537,
+   "label": "İDDİA",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_190252_f4642ea1-6886-4087-86f3-91c4775d17b5.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": 23.080000000000002,
+   "end": 28.59,
+   "lines": [
+    "Ancak bunu destekleyen hiçbir tarihî kanıt yok.",
+    "Bu, yalnızca bir iddia olarak kalıyor."
+   ],
+   "big": "KANIT?",
+   "sub": "TARİHÎ KANIT YOK",
+   "year": 537,
+   "label": "İDDİA",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_190252_f4642ea1-6886-4087-86f3-91c4775d17b5.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": 28.59,
+   "end": 36.61,
+   "lines": [
+    "Yeraltı sarnıçları ve tünellerle ilgili anlatılar da dolaşır.",
+    "Kimi tünellerin uzaklara uzandığı söylenir, ama bunlar belgelenmiş değil."
+   ],
+   "big": "TÜNEL",
+   "sub": "SARNIÇLAR VE TÜNELLER",
+   "year": 537,
+   "label": "RİVAYET",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_184824_bdadea20-c70b-4bdb-ada3-7cc737babf0c.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": 36.61,
+   "end": 43.38,
+   "lines": [
+    "Yukarıda ise rivayete göre kuzeybatıdaki sütun hiç kurumaz.",
+    "Ziyaretçiler başparmağını deliğe sokup çevirir, dilek diler."
+   ],
+   "big": "DİLEK",
+   "sub": "TERLEYEN SÜTUN",
+   "year": 537,
+   "label": "RİVAYET",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_184824_bdadea20-c70b-4bdb-ada3-7cc737babf0c.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": 43.38,
+   "end": 51.26,
+   "lines": [
+    "Evliya Çelebi'ye göre harca Mekke toprağı ve zemzem katılmış.",
+    "Bilim ise nemi taşın gözenekli yapısına bağlar."
+   ],
+   "big": "ZEMZEM",
+   "sub": "HARÇ RİVAYETİ",
+   "year": 537,
+   "label": "RİVAYET",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_184824_bdadea20-c70b-4bdb-ada3-7cc737babf0c.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": 51.26,
+   "end": 56.22,
+   "lines": [
+    "Kubbenin altında bir Hızır anlatısı da yaşar.",
+    "Yapıyı kıbleye çevirdiği söylenir."
+   ],
+   "big": "HIZIR",
+   "sub": "KUBBE VE HIZIR ANLATISI",
+   "year": 1453,
+   "label": "RİVAYET",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_190252_f4642ea1-6886-4087-86f3-91c4775d17b5.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": 56.22,
+   "end": 64.93816699999999,
+   "lines": [
+    "Bu duvarlar 1.500 yıldır sırlarını saklıyor.",
+    "Bu sırlardan hangisini daha önce duymuştun? Yorumlara yaz."
+   ],
+   "big": "SEN?",
+   "sub": "HANGİSİNE İNANIYORSUN?",
+   "year": 1453,
+   "label": "BUGÜN",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_190252_f4642ea1-6886-4087-86f3-91c4775d17b5.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
+  }
+ ],
+ "eras": [],
+ "outro_plan": {
+  "title": "AYASOFYA",
+  "line": "Rivayetler yaşar, tarih konuşur."
+ },
+ "maps_plan": [],
+ "cards_plan": [],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true,
+ "outro": {
+  "start": 59.238167,
+  "title": "AYASOFYA",
+  "line": "Rivayetler yaşar, tarih konuşur.",
+  "line_at": 61.538166999999994
+ },
+ "duration": 65.44,
+ "jumps": [
+  {
+   "t": 51.26,
+   "value": 916
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.21,
+   "end": 3.5,
+   "text": "Kapının ardında yüzyıllardır anlatılan sırlar var."
+  },
+  {
+   "start": 3.86,
+   "end": 9.57,
+   "text": "537'de açılışta Justinianus'un 'Süleyman, seni geçtim' dediği aktarılır."
+  },
+  {
+   "start": 9.91,
+   "end": 12.14,
+   "text": "Bu söz, sonraki anlatılarda yer alır."
+  },
+  {
+   "start": 12.49,
+   "end": 15.99,
+   "text": "Bizans döneminde buraya kutsal emanetler getirildiği anlatılır."
+  },
+  {
+   "start": 16.34,
+   "end": 18.69,
+   "text": "Bunların bir kısmının akıbeti belirsizdir."
+  },
+  {
+   "start": 19.04,
+   "end": 22.87,
+   "text": "İddia edilene göre Ahit Sandığı da Ayasofya'nın altında saklı."
+  },
+  {
+   "start": 23.23,
+   "end": 25.87,
+   "text": "Ancak bunu destekleyen hiçbir tarihî kanıt yok."
+  },
+  {
+   "start": 26.24,
+   "end": 28.38,
+   "text": "Bu, yalnızca bir iddia olarak kalıyor."
+  },
+  {
+   "start": 28.74,
+   "end": 32.09,
+   "text": "Yeraltı sarnıçları ve tünellerle ilgili anlatılar da dolaşır."
+  },
+  {
+   "start": 32.45,
+   "end": 36.4,
+   "text": "Kimi tünellerin uzaklara uzandığı söylenir, ama bunlar belgelenmiş değil."
+  },
+  {
+   "start": 36.76,
+   "end": 40.42,
+   "text": "Yukarıda ise rivayete göre kuzeybatıdaki sütun hiç kurumaz."
+  },
+  {
+   "start": 40.78,
+   "end": 43.33,
+   "text": "Ziyaretçiler başparmağını deliğe sokup çevirir, dilek diler."
+  },
+  {
+   "start": 43.53,
+   "end": 48.02,
+   "text": "Evliya Çelebi'ye göre harca Mekke toprağı ve zemzem katılmış."
+  },
+  {
+   "start": 48.38,
+   "end": 51.06,
+   "text": "Bilim ise nemi taşın gözenekli yapısına bağlar."
+  },
+  {
+   "start": 51.41,
+   "end": 53.88,
+   "text": "Kubbenin altında bir Hızır anlatısı da yaşar."
+  },
+  {
+   "start": 54.24,
+   "end": 56.03,
+   "text": "Yapıyı kıbleye çevirdiği söylenir."
+  },
+  {
+   "start": 56.37,
+   "end": 58.88,
+   "text": "Bu duvarlar 1.500 yıldır sırlarını saklıyor."
+  },
+  {
+   "start": 59.22,
+   "end": 62.5,
+   "text": "Bu sırlardan hangisini daha önce duymuştun? Yorumlara yaz."
+  }
+ ]
+}
