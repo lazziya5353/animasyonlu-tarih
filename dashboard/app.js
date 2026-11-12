@@ -45,9 +45,12 @@ $("#pw").addEventListener("keydown", (e) => { if (e.key === "Enter") $("#go").cl
 $("#refresh").onclick = () => (CUR ? openProject(CUR) : load());
 
 async function start() { $("#login").classList.add("hide"); $("#app").classList.remove("hide"); load(); }
+const projeAdi = (p) => { const t = String(p).replace(/-/g, " ").trim(); return t.charAt(0).toLocaleUpperCase("tr") + t.slice(1); };
 let O = null, CUR = null; const GIZLI = new Set(); // silinmekte olan projeler (iş bitene kadar listede görünmesin)
 async function load() {
-  try { O = await api("overview"); O.projeler = O.projeler.filter((p) => !GIZLI.has(p)); render(); } catch (e) { $("#main").innerHTML = `<div class="card" style="color:var(--err)">${esc(e.message)}</div>`; }
+  try { O = await api("overview"); O.projeler = O.projeler.filter((p) => !GIZLI.has(p)); render();
+    if (!load.ilk) { load.ilk = 1; const m = location.hash.match(/^#p=(.+)/);   // sayfa #p=... ile açıldıysa (ör. Canlı ilerleme'den geri dönüş) o projeyi aç
+      if (m) { const p = decodeURIComponent(m[1]); if (O.projeler.includes(p)) { history.replaceState({ p }, "", location.hash); openProject(p, true); } else history.replaceState(null, "", location.pathname + location.search); } } } catch (e) { $("#main").innerHTML = `<div class="card" style="color:var(--err)">${esc(e.message)}</div>`; }
 }
 
 // ───────── ana sayfa ─────────
@@ -81,7 +84,7 @@ function render() {
   const fk = O.yorumlar?.fikirler || [];
   if (fk.length) html += `<div class="card" style="margin-top:12px"><div class="d" style="color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.08em">💡 İZLEYİCİ ÖNERİLERİ</div>${fk.map((f) => `<div class="mut" style="padding:5px 0">${esc(f.konu)} · <span style="opacity:.7">${esc(f.kaynak)}</span></div>`).join("")}</div>`;
   html += `<h2>Projeler</h2>`;
-  html += O.projeler.length ? O.projeler.map((p) => `<div class="card proj" data-p="${esc(p)}"><div class="th" data-th="${esc(p)}"></div><div><b>${esc(p)}</b><span class="mut">Aç →</span></div></div>`).join("") : `<div class="card mut">Henüz proje yok.</div>`;
+  html += O.projeler.length ? O.projeler.map((p) => `<div class="card proj" data-p="${esc(p)}"><div class="th" data-th="${esc(p)}"></div><div class="ad"><b>${esc(projeAdi(p))}</b><span class="mut">Aç →</span></div><button class="cop" data-cop="${esc(p)}" title="Projeyi sil" aria-label="Projeyi sil">🗑</button></div>`).join("") : `<div class="card mut">Henüz proje yok.</div>`;
   html += `<h2>Son harcamalar</h2><div class="card">${(h.son || []).filter((x) => x.usd > 0).map((x) => `<div class="mut" style="display:flex;justify-content:space-between;padding:4px 0"><span>${esc(x.ajan)} · ${esc(x.detay)}</span><span>$${x.usd.toFixed(3)}</span></div>`).join("") || '<span class="mut">Kayıt yok</span>'}</div>`;
   $("#main").innerHTML = html;
   document.querySelectorAll("[data-run]").forEach((b) => (b.onclick = () => runAgent(b.dataset.run)));
@@ -92,6 +95,13 @@ function render() {
   }));
   document.querySelectorAll("[data-karar]").forEach((b) => (b.onclick = () => decide(b.dataset.baslik, b.dataset.karar)));
   document.querySelectorAll("[data-p]").forEach((b) => (b.onclick = () => openProject(b.dataset.p)));
+  document.querySelectorAll("[data-cop]").forEach((b) => (b.onclick = async (e) => {
+    e.stopPropagation(); const slug = b.dataset.cop;
+    if (!confirm(`"${projeAdi(slug)}" projesi tamamen silinsin mi?\n\nMetin, görseller, ses ve video gider. Geri alınamaz.`)) return;
+    b.disabled = true; b.textContent = "…";
+    try { await api("sil", { slug, tur: "hepsi", onay: slug }); GIZLI.add(slug); toast("Proje siliniyor, 30 sn içinde tamamen kalkar"); load(); setTimeout(load, 40000); }
+    catch (err) { b.disabled = false; b.textContent = "🗑"; toast(err.message || "Hata"); }
+  }));
   document.querySelectorAll("[data-th]").forEach(async (d) => { const u = await fileUrl(`projects/${d.dataset.th}/images/${DEMO ? "img01.jpg" : "s01.jpg"}`); if (u) d.style.backgroundImage = `url(${u})`; });
   baglaYorumlar(); baglaKomut();
 }
@@ -199,7 +209,11 @@ async function fileUrl(path, taze) {
 }
 
 // ───────── proje sayfası ─────────
-async function openProject(slug) {
+function projeKapat() { CUR = null; $("#detail").classList.add("hide"); $("#main").classList.remove("hide"); load(); }
+// Telefonun/tarayıcının geri tuşu proje sayfasından panele döner (siteden çıkmaz)
+window.addEventListener("popstate", (e) => { const p = e.state?.p; if (p) openProject(p, true); else if (CUR) projeKapat(); });
+async function openProject(slug, gecmisten) {
+  if (!gecmisten && history.state?.p !== slug) history.pushState({ p: slug }, "", "#p=" + encodeURIComponent(slug));
   CUR = slug;
   const P = await api("project", { slug }); const sc = P.script; const d = $("#detail");
   $("#main").classList.add("hide"); d.classList.remove("hide");
@@ -235,7 +249,7 @@ async function openProject(slug) {
     <div class="flex">${P.video ? `<button class="silb" data-sil="video">🗑 Sadece videoyu sil</button>` : ""}<button class="silb kirmizi" data-sil="hepsi">🗑 Projeyi tamamen sil</button></div></div>`;
   d.innerHTML = h;
   window.scrollTo(0, 0);
-  $("#back").onclick = () => { CUR = null; d.classList.add("hide"); $("#main").classList.remove("hide"); load(); };
+  $("#back").onclick = () => (history.state?.p ? history.back() : projeKapat());
   d.querySelectorAll("[data-sil]").forEach((b) => (b.onclick = async () => {
     const hepsi = b.dataset.sil === "hepsi", ad = sc?.baslik || slug;
     if (!confirm(hepsi ? `"${ad}" projesi tamamen silinsin mi?\n\nMetin, görseller, ses ve video gider. Geri alınamaz.` : `"${ad}" videosu silinsin mi?\n\nMetin, görseller ve ses kalır; istersen videoyu yeniden üretebilirsin.`)) return;
@@ -243,7 +257,7 @@ async function openProject(slug) {
     try {
       await api("sil", { slug, tur: b.dataset.sil, onay: slug });
       toast(hepsi ? "Proje siliniyor, 30 sn içinde listeden kalkar" : "Video siliniyor, 30 sn sürer");
-      if (hepsi) { GIZLI.add(slug); CUR = null; d.classList.add("hide"); $("#main").classList.remove("hide"); load(); setTimeout(load, 40000); }
+      if (hepsi) { GIZLI.add(slug); history.replaceState(null, "", location.pathname + location.search); projeKapat(); setTimeout(load, 40000); }
       else setTimeout(() => CUR === slug && openProject(slug), 40000);
     } catch (e) { b.disabled = false; b.textContent = hepsi ? "🗑 Projeyi tamamen sil" : "🗑 Sadece videoyu sil"; toast(e.message || "Hata"); }
   }));

@@ -56,3 +56,5 @@ a.btn{text-decoration:none;display:inline-block}
 
 button.duzelt{padding:3px 9px;font-size:11.5px;margin-left:6px;border-radius:14px;background:#2a2414;border:1px solid #e8c47888;color:#e8c478;vertical-align:middle}button.duzelt:disabled{opacity:.7}
 .silb{background:transparent;border:1px solid #5a3a3f;color:#e8a0a8}.silb.kirmizi{border-color:#a8444f;color:#ff7b86}.silb:disabled{opacity:.6}
+
+.proj .ad{min-width:0;flex:1}.proj .ad b{overflow-wrap:anywhere;line-height:1.3}.proj .cop{flex:none;background:none;border:1px solid rgba(220,90,90,.35);color:#e07a7a;border-radius:10px;padding:9px 11px;font-size:16px;line-height:1;cursor:pointer}.proj .cop:hover{background:rgba(220,90,90,.12)}
