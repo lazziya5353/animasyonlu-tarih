@@ -15,7 +15,7 @@
   "durum": "tamam",
   "mesaj": "ayasofya-part-2-efsaneler-sirlar-ve-ahit-sandigi-iddiasi: ses hazır",
   "cikti": "projects/ayasofya-part-2-efsaneler-sirlar-ve-ahit-sandigi-iddiasi",
-  "zaman": "2026-11-12T19:03:46Z"
+  "zaman": "2026-11-12T19:29:41Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-12T19:23:53Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle: kurgu ✓",
-  "cikti": "projects/ayasofya-nin-ilk-yapimindan-bugune-tarihi-ve-yeralti-tunelle/kontrol",
-  "zaman": "2026-11-12T19:23:49Z"
+  "durum": "hata",
+  "mesaj": "ayasofya-part-2-efsaneler-sirlar-ve-ahit-sandigi-iddiasi: gorsel ✗",
+  "cikti": "projects/ayasofya-part-2-efsaneler-sirlar-ve-ahit-sandigi-iddiasi/kontrol",
+  "zaman": "2026-11-12T19:32:10Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
