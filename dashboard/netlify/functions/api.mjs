@@ -53,7 +53,7 @@ const AJANLAR = ["arastirmaci", "senarist", "ses", "gorsel", "kurgucu", "efekt",
 const TURLER = ["yazi", "gorsel", "efekt", "harita", "ses", "muzik", "kontrol", "bilgi", "ilerleme", "asama"];
 // ───────── proje adları: klasör adı yerine metindeki başlık (önbellekli) ─────────
 async function basliklar(sluglar) {
-  const st = getStore("ayar"); const B = (await st.get("basliklar", { type: "json" })) || {};
+  const st = getStore({ name: "ayar", consistency: "strong" }); const B = (await st.get("basliklar", { type: "json" })) || {};
   const eksik = sluglar.filter((s) => !B[s]);
   if (eksik.length) {
     await Promise.all(eksik.map(async (s) => { const sc = await readJson(`projects/${s}/script.json`); if (sc?.baslik) B[s] = String(sc.baslik).slice(0, 90); }));
@@ -61,16 +61,16 @@ async function basliklar(sluglar) {
   }
   return Object.fromEntries(sluglar.filter((s) => B[s]).map((s) => [s, B[s]]));
 }
-async function baslikYaz(slug, baslik) { const st = getStore("ayar"); const B = (await st.get("basliklar", { type: "json" })) || {}; B[slug] = String(baslik).slice(0, 90); await st.setJSON("basliklar", B); }
+async function baslikYaz(slug, baslik) { const st = getStore({ name: "ayar", consistency: "strong" }); const B = (await st.get("basliklar", { type: "json" })) || {}; B[slug] = String(baslik).slice(0, 90); await st.setJSON("basliklar", B); }
 
 // ───────── telefona bildirim (Web Push). Anahtarlar ilk kullanımda üretilip Netlify'da saklanır ─────────
 async function vapid() {
-  const st = getStore("ayar"); let v = await st.get("vapid", { type: "json" });
+  const st = getStore({ name: "ayar", consistency: "strong" }); let v = await st.get("vapid", { type: "json" });
   if (!v) { v = webpush.generateVAPIDKeys(); await st.setJSON("vapid", v); }
   webpush.setVapidDetails("https://animasyonlu-tarih.netlify.app", v.publicKey, v.privateKey); return v;
 }
 async function bildirimGonder(baslik, metin, url = "/") {
-  await vapid(); const st = getStore("ayar"); const A = (await st.get("abonelikler", { type: "json" })) || [];
+  await vapid(); const st = getStore({ name: "ayar", consistency: "strong" }); const A = (await st.get("abonelikler", { type: "json" })) || [];
   const kalan = []; let n = 0;
   await Promise.all(A.map(async (a) => {
     try { await webpush.sendNotification(a, JSON.stringify({ baslik: String(baslik).slice(0, 80), metin: String(metin).slice(0, 180), url }), { TTL: 86400 }); kalan.push(a); n++; }
@@ -147,7 +147,7 @@ export default async (req) => {
         const servis = {};
         kayit.filter((x) => x.zaman.startsWith(ay)).forEach((x) => (servis[x.servis] = (servis[x.servis] || 0) + x.usd));
         const projeler = (list || []).filter((x) => x.type === "dir").map((x) => x.name);
-        return json({ status: status || {}, runs, report, projeler, basliklar: await basliklar(projeler).catch(() => ({})), arsiv: ((await getStore("ayar").get("arsiv", { type: "json" })) || []).filter((x) => projeler.includes(x)), analiz,
+        return json({ status: status || {}, runs, report, projeler, basliklar: await basliklar(projeler).catch(() => ({})), arsiv: ((await getStore({ name: "ayar", consistency: "strong" }).get("arsiv", { type: "json" })) || []).filter((x) => projeler.includes(x)), analiz,
           yorumlar: { bekleyen: (yorumlar?.yorumlar || []).filter((y) => y.durum === "yeni").slice(0, 40), fikirler: (yorumlar?.fikirler || []).slice(-8).reverse() },
           harcama: { aylik, servis, butce: Number(process.env.AYLIK_BUTCE_USD || 15), son: kayit.slice(-8).reverse() } });
       }
@@ -249,14 +249,15 @@ export default async (req) => {
       }
       case "arsiv": { // bitmiş videoyu arşive at / arşivden çıkar (hiçbir dosya silinmez)
         if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);
-        const st = getStore("ayar"); let A = (await st.get("arsiv", { type: "json" })) || [];
+        const st = getStore({ name: "ayar", consistency: "strong" }); let A = (await st.get("arsiv", { type: "json" })) || [];
+        if (Array.isArray(b.liste)) A = [...new Set([...b.liste.filter(validSlug), ...A])]; // panelin bildiği tam liste (hızlı art arda basınca kaybolmasın)
         A = A.filter((x) => x !== b.slug); if (!b.cikar) A.unshift(b.slug);
         await st.setJSON("arsiv", A); return json({ ok: true, arsiv: A });
       }
       case "push_anahtar": return json({ anahtar: (await vapid()).publicKey });
       case "push_abone": { // bu cihazı bildirim listesine ekle / çıkar
         const a = b.abonelik; if (!a?.endpoint || !/^https:\/\//.test(a.endpoint) || !a.keys?.p256dh || !a.keys?.auth) return json({ hata: "Geçersiz abonelik" }, 400);
-        const st = getStore("ayar"); let A = (await st.get("abonelikler", { type: "json" })) || [];
+        const st = getStore({ name: "ayar", consistency: "strong" }); let A = (await st.get("abonelikler", { type: "json" })) || [];
         A = A.filter((x) => x.endpoint !== a.endpoint); if (!b.cik) A.push({ endpoint: a.endpoint, keys: { p256dh: a.keys.p256dh, auth: a.keys.auth } });
         await st.setJSON("abonelikler", A.slice(-10));
         if (!b.cik) await bildirimGonder("🔔 Bildirimler açık", "Video bitince, hata çıkınca buraya haber gelecek.");

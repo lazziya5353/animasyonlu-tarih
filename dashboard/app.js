@@ -50,7 +50,8 @@ const projeAdi = (p) => { if (O?.basliklar?.[p]) return O.basliklar[p]; const t 
 const adlandir = (t) => { let x = String(t || ""); for (const p of [...(O?.projeler || [])].sort((a, b) => b.length - a.length)) if (x.includes(p)) x = x.split("projects/" + p).join(projeAdi(p)).split(p).join(projeAdi(p)); return x; };
 let O = null, CUR = null, ARSIV_ACIK = false;
 async function arsivle(slug, cikar) {
-  try { const r = await api("arsiv", { slug, cikar }); O.arsiv = r.arsiv; toast(cikar ? `"${projeAdi(slug)}" arşivden çıktı` : `"${projeAdi(slug)}" arşive atıldı 📦`); if (CUR === slug) openProject(slug, true); else render(); }
+  const once = (O.arsiv || []).filter((x) => x !== slug); O.arsiv = cikar ? once : [slug, ...once]; if (CUR !== slug) render(); // hemen göster
+  try { const r = await api("arsiv", { slug, cikar, liste: once }); O.arsiv = r.arsiv; toast(cikar ? `"${projeAdi(slug)}" arşivden çıktı` : `"${projeAdi(slug)}" arşive atıldı 📦`); if (CUR === slug) openProject(slug, true); else render(); }
   catch (e) { toast(e.message || "Hata"); }
 } const GIZLI = new Set(); // silinmekte olan projeler (iş bitene kadar listede görünmesin)
 async function load() {
