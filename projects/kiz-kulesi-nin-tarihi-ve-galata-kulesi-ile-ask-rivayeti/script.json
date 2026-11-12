@@ -13,14 +13,15 @@
    "year": -410,
    "label": "RİVAYET",
    "prompt": "Vertical 9:16, the Maiden's Tower on its small rocky islet centered in the calm Bosphorus at blue-hour dusk, a tiny faint Galata Tower silhouette far away on the distant shore, soft golden reflections on the water, empty sky above and empty water below for text, no people, no text, no flags",
-   "fx": [
-    "fog",
-    "gold"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, the Maiden's Tower on its small rocky islet centered in the calm Bosphorus at blue-hour dusk, a tiny faint Galata Tower silhouette far away on the distant shore, soft golden reflections on the water, empty sky above and empty water below for text, no people, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s01.jpg"
+   "image": "images/s01.jpg",
+   "video": "videos/k1.mp4",
+   "v_bas": 0,
+   "v_son": 4.97,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -32,14 +33,15 @@
    "year": -410,
    "label": "MÖ 410",
    "prompt": "Vertical 9:16, ancient Greek trireme with a single square sail passing a tiny rocky islet topped by a small simple stone watchpost in the Bosphorus, 5th century BC, a lone figure in a chiton seen from behind on the islet, centered composition, clear sky above and calm sea below, no text, no flags",
-   "fx": [
-    "dust",
-    "rays"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, ancient Greek trireme with a single square sail passing a tiny rocky islet topped by a small simple stone watchpost in the Bosphorus, 5th century BC, a lone figure in a chiton seen from behind on the islet, centered composition, clear sky above and calm sea below, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s02.jpg"
+   "image": "images/s02.jpg",
+   "video": "videos/k1.mp4",
+   "v_bas": 5.05,
+   "v_son": 9.98,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -51,14 +53,15 @@
    "year": 1143,
    "label": "12. YY",
    "prompt": "Vertical 9:16, medieval Byzantine stone fortress tower on a small islet in the Bosphorus, a thick iron chain stretching from the tower across the water toward the distant shore, tower centered, moody overcast sky above, dark water below, no people, no text, no flags, no banners",
-   "fx": [
-    "fog",
-    "dust"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, medieval Byzantine stone fortress tower on a small islet in the Bosphorus, a thick iron chain stretching from the tower across the water toward the distant shore, tower centered, moody overcast sky above, dark water below, no people, no text, no flags, no banners, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s03.jpg"
+   "image": "images/s03.jpg",
+   "video": "videos/k1.mp4",
+   "v_bas": 10.06,
+   "v_son": 14.99,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -70,14 +73,15 @@
    "year": 1453,
    "label": "1453",
    "prompt": "Vertical 9:16, small Ottoman-era stone tower on a rocky islet with a glowing lantern at its top guiding wooden caiques at twilight, Bosphorus, tower centered, deep blue sky above, dark water below, no people, no text, no flags",
-   "fx": [
-    "rays",
-    "gold"
-   ],
+   "fx": [],
    "effect": "stamp",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, small Ottoman-era stone tower on a rocky islet with a glowing lantern at its top guiding wooden caiques at twilight, Bosphorus, tower centered, deep blue sky above, dark water below, no people, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s04.jpg"
+   "image": "images/s04.jpg",
+   "video": "videos/k1.mp4",
+   "v_bas": 15.07,
+   "v_son": 19.99,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -89,15 +93,16 @@
    "year": 1719,
    "label": "1719",
    "prompt": "Vertical 9:16, 18th-century stone tower on a Bosphorus islet at night with fire glowing in the top lantern room and smoke rising into the dark sky, small boats keeping their distance, tower centered, dark space above and below, no people, no text, no flags, no gore",
-   "fx": [
-    "smoke",
-    "ember",
-    "flicker"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, 18th-century stone tower on a Bosphorus islet at night with fire glowing in the top lantern room and smoke rising into the dark sky, small boats keeping their distance, tower centered, dark space above and below, no people, no text, no flags, no gore, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s05.jpg"
+   "image": "images/s05.jpg",
+   "video": "videos/k1.mp4",
+   "v_bas": 20.07,
+   "v_son": 25.0,
+   "etiket": "TEMSİLİ",
+   "sfx": "yangin"
   },
   {
    "lines": [
@@ -109,14 +114,15 @@
    "year": 1830,
    "label": "1830'LAR",
    "prompt": "Vertical 9:16, 1830s Ottoman-era tower with a scalloped lead dome and bare flagpole on a Bosphorus islet, a small rowboat approaching at misty dawn with two men in period fezzes and long robes seen from behind, tower centered, pale sky above, calm water below, no text, no flags",
-   "fx": [
-    "fog",
-    "dust"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, 1830s Ottoman-era tower with a scalloped lead dome and bare flagpole on a Bosphorus islet, a small rowboat approaching at misty dawn with two men in period fezzes and long robes seen from behind, tower centered, pale sky above, calm water below, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s06.jpg"
+   "image": "images/s06.jpg",
+   "video": "videos/k2.mp4",
+   "v_bas": 0,
+   "v_son": 4.97,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -127,14 +133,15 @@
    "year": 1833,
    "label": "EFSANE",
    "prompt": "Vertical 9:16, dreamlike painterly scene of the Maiden's Tower wrapped in mist under a starry night sky, a tiny distant swimmer silhouette far in the water, mythic atmosphere, tower centered, empty sky above and dark sea below, no text, no flags",
-   "fx": [
-    "fog",
-    "gold"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, dreamlike painterly scene of the Maiden's Tower wrapped in mist under a starry night sky, a tiny distant swimmer silhouette far in the water, mythic atmosphere, tower centered, empty sky above and dark sea below, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s07.jpg"
+   "image": "images/s07.jpg",
+   "video": "videos/k2.mp4",
+   "v_bas": 5.05,
+   "v_son": 9.98,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -146,14 +153,15 @@
    "year": 2023,
    "label": "2023",
    "prompt": "Vertical 9:16, the restored Maiden's Tower at night with colorful laser and light-show beams rising from it over the Bosphorus, a small crowd silhouetted from behind on the shore far below, tower centered, dark sky above and reflective water below, no text, no logos, no flags",
-   "fx": [
-    "rays",
-    "gold"
-   ],
+   "fx": [],
    "effect": "glow",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, the restored Maiden's Tower at night with colorful laser and light-show beams rising from it over the Bosphorus, a small crowd silhouetted from behind on the shore far below, tower centered, dark sky above and reflective water below, no text, no logos, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s08.jpg"
+   "image": "images/s08.jpg",
+   "video": "videos/k2.mp4",
+   "v_bas": 10.06,
+   "v_son": 14.99,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -165,14 +173,15 @@
    "year": 2023,
    "label": "HEZARFEN",
    "prompt": "Vertical 9:16, a man in 17th-century Ottoman clothing with large wooden wings gliding over the Bosphorus at golden sunset, seen from behind as a small silhouette, distant Galata Tower behind him and Maiden's Tower ahead, glider centered, open sky above and water below, no text, no flags",
-   "fx": [
-    "rays",
-    "gold"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, a man in 17th-century Ottoman clothing with large wooden wings gliding over the Bosphorus at golden sunset, seen from behind as a small silhouette, distant Galata Tower behind him and Maiden's Tower ahead, glider centered, open sky above and water below, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s09.jpg"
+   "image": "images/s09.jpg",
+   "video": "videos/k2.mp4",
+   "v_bas": 15.07,
+   "v_son": 19.99,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -183,14 +192,15 @@
    "year": 2023,
    "label": "GALATA",
    "prompt": "Vertical 9:16, Galata Tower with its conical cap rising above old Istanbul rooftops at golden hour, tower centered, soft warm sky above and rooftops fading into haze below, no people, no text, no flags",
-   "fx": [
-    "gold",
-    "rays"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, Galata Tower with its conical cap rising above old Istanbul rooftops at golden hour, tower centered, soft warm sky above and rooftops fading into haze below, no people, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s10.jpg"
+   "image": "images/s10.jpg",
+   "video": "videos/k2.mp4",
+   "v_bas": 20.07,
+   "v_son": 25.0,
+   "etiket": "TEMSİLİ"
   }
  ],
  "finale": "",

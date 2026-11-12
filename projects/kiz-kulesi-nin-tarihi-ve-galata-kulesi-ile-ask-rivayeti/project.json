@@ -17,10 +17,7 @@
    "sub": "BİR ŞEHİR SÖYLENCESİ",
    "year": -410,
    "label": "RİVAYET",
-   "fx": [
-    "fog",
-    "gold"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -28,7 +25,11 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "v_bas": 0,
+   "v_son": 4.97,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s02.jpg",
@@ -42,10 +43,7 @@
    "sub": "ANTİK GÜMRÜK NOKTASI",
    "year": -410,
    "label": "MÖ 410",
-   "fx": [
-    "dust",
-    "rays"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -53,7 +51,11 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "v_bas": 5.05,
+   "v_son": 9.98,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s03.jpg",
@@ -67,10 +69,7 @@
    "sub": "KULE VE ZİNCİR",
    "year": 1143,
    "label": "12. YY",
-   "fx": [
-    "fog",
-    "dust"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -78,7 +77,11 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "v_bas": 10.06,
+   "v_son": 14.99,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s04.jpg",
@@ -92,10 +95,7 @@
    "sub": "OSMANLI DÖNEMİ",
    "year": 1453,
    "label": "1453",
-   "fx": [
-    "rays",
-    "gold"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -104,7 +104,11 @@
     0.5,
     0.55
    ],
-   "effect": "stamp"
+   "effect": "stamp",
+   "video": "videos/k1.mp4",
+   "v_bas": 15.07,
+   "v_son": 19.99,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s05.jpg",
@@ -118,11 +122,7 @@
    "sub": "YANGIN VE ONARIM",
    "year": 1719,
    "label": "1719",
-   "fx": [
-    "smoke",
-    "ember",
-    "flicker"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -130,7 +130,12 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "v_bas": 20.07,
+   "v_son": 25.0,
+   "sfx": "yangin",
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s06.jpg",
@@ -144,10 +149,7 @@
    "sub": "KARANTİNA VE ONARIM",
    "year": 1830,
    "label": "1830'LAR",
-   "fx": [
-    "fog",
-    "dust"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -155,7 +157,11 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "v_bas": 0,
+   "v_son": 4.97,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s07.jpg",
@@ -168,10 +174,7 @@
    "sub": "TARİH DEĞİL, HİKÂYE",
    "year": 1833,
    "label": "EFSANE",
-   "fx": [
-    "fog",
-    "gold"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -179,7 +182,11 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "v_bas": 5.05,
+   "v_son": 9.98,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s08.jpg",
@@ -193,10 +200,7 @@
    "sub": "YENİDEN AÇILIŞ",
    "year": 2023,
    "label": "2023",
-   "fx": [
-    "rays",
-    "gold"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -205,7 +209,11 @@
     0.5,
     0.55
    ],
-   "effect": "glow"
+   "effect": "glow",
+   "video": "videos/k2.mp4",
+   "v_bas": 10.06,
+   "v_son": 14.99,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s09.jpg",
@@ -219,10 +227,7 @@
    "sub": "GALATA'DAN ÜSKÜDAR'A",
    "year": 2023,
    "label": "HEZARFEN",
-   "fx": [
-    "rays",
-    "gold"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -230,7 +235,11 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "v_bas": 15.07,
+   "v_son": 19.99,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s10.jpg",
@@ -243,10 +252,7 @@
    "sub": "SIRADAKİ KULE",
    "year": 2023,
    "label": "GALATA",
-   "fx": [
-    "gold",
-    "rays"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -254,7 +260,11 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "v_bas": 20.07,
+   "v_son": 25.0,
+   "etiket": "TEMSİLİ"
   }
  ],
  "eras": [
