@@ -1,0 +1,23 @@
+{
+ "asama": "kurgu",
+ "durum": "tamam",
+ "ozet": "70 sn, -14 LUFS, senkron 10/10",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “2 KARDEŞ, 1 SARAY, 2 FARKLI YOL”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “Tuna'nın ötesinde Fatih'i ne bekliyordu? Devamı Part 2'de.”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.6-flash: The read operation timed out)"
+  }
+ ],
+ "sure": 69.7,
+ "lufs": -13.9,
+ "senkron": "10/10",
+ "zaman": "2026-11-12T23:42:14Z"
+}
