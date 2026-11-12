@@ -1,0 +1,19 @@
+{
+ "asama": "senaryo",
+ "durum": "uyari",
+ "ozet": "10 sahne, tahmini 62 sn · 2 not",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “MÖ 410 dolaylarında Atinalı komutan Alkibiades'in burada bir…”",
+   "sahne": 2
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “İmparator Manuel Komnenos döneminde kıyıyla kule arasına zin…”",
+   "sahne": 3
+  }
+ ],
+ "tahmini_sure": 62.3,
+ "zaman": "2026-11-12T13:33:08Z"
+}

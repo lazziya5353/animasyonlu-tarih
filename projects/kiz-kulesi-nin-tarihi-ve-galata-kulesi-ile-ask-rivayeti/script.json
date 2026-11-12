@@ -1,0 +1,269 @@
+{
+ "baslik": "Kız Kulesi'nin Gerçek Tarihi ve Galata Kulesi Rivayeti",
+ "hook": "İKİ KULE, BİR BOĞAZ",
+ "map_region": "marmara",
+ "sahneler": [
+  {
+   "lines": [
+    "Rivayete göre Kız Kulesi ile Galata Kulesi yüzyıllardır birbirine âşık.",
+    "Ama aralarında Boğaz var."
+   ],
+   "big": "RİVAYET",
+   "sub": "BİR ŞEHİR SÖYLENCESİ",
+   "year": -410,
+   "label": "RİVAYET",
+   "prompt": "Vertical 9:16, the Maiden's Tower on its small rocky islet centered in the calm Bosphorus at blue-hour dusk, a tiny faint Galata Tower silhouette far away on the distant shore, soft golden reflections on the water, empty sky above and empty water below for text, no people, no text, no flags",
+   "fx": [
+    "fog",
+    "gold"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, the Maiden's Tower on its small rocky islet centered in the calm Bosphorus at blue-hour dusk, a tiny faint Galata Tower silhouette far away on the distant shore, soft golden reflections on the water, empty sky above and empty water below for text, no people, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s01.jpg"
+  },
+  {
+   "lines": [
+    "Oysa kulenin belgelenmiş tarihi bambaşka.",
+    "MÖ 410 dolaylarında Atinalı komutan Alkibiades'in burada bir gümrük noktası kurduğu aktarılır."
+   ],
+   "big": "MÖ 410",
+   "sub": "ANTİK GÜMRÜK NOKTASI",
+   "year": -410,
+   "label": "MÖ 410",
+   "prompt": "Vertical 9:16, ancient Greek trireme with a single square sail passing a tiny rocky islet topped by a small simple stone watchpost in the Bosphorus, 5th century BC, a lone figure in a chiton seen from behind on the islet, centered composition, clear sky above and calm sea below, no text, no flags",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, ancient Greek trireme with a single square sail passing a tiny rocky islet topped by a small simple stone watchpost in the Bosphorus, 5th century BC, a lone figure in a chiton seen from behind on the islet, centered composition, clear sky above and calm sea below, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s02.jpg"
+  },
+  {
+   "lines": [
+    "12. yüzyılda Bizans, adaya taş bir kule yaptı.",
+    "İmparator Manuel Komnenos döneminde kıyıyla kule arasına zincir gerildi."
+   ],
+   "big": "BİZANS",
+   "sub": "KULE VE ZİNCİR",
+   "year": 1143,
+   "label": "12. YY",
+   "prompt": "Vertical 9:16, medieval Byzantine stone fortress tower on a small islet in the Bosphorus, a thick iron chain stretching from the tower across the water toward the distant shore, tower centered, moody overcast sky above, dark water below, no people, no text, no flags, no banners",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, medieval Byzantine stone fortress tower on a small islet in the Bosphorus, a thick iron chain stretching from the tower across the water toward the distant shore, tower centered, moody overcast sky above, dark water below, no people, no text, no flags, no banners, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s03.jpg"
+  },
+  {
+   "lines": [
+    "1453'ten sonra kule Osmanlı'ya geçti.",
+    "Fener olarak gemilere yol gösterdi."
+   ],
+   "big": "1453",
+   "sub": "OSMANLI DÖNEMİ",
+   "year": 1453,
+   "label": "1453",
+   "prompt": "Vertical 9:16, small Ottoman-era stone tower on a rocky islet with a glowing lantern at its top guiding wooden caiques at twilight, Bosphorus, tower centered, deep blue sky above, dark water below, no people, no text, no flags",
+   "fx": [
+    "rays",
+    "gold"
+   ],
+   "effect": "stamp",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, small Ottoman-era stone tower on a rocky islet with a glowing lantern at its top guiding wooden caiques at twilight, Bosphorus, tower centered, deep blue sky above, dark water below, no people, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s04.jpg"
+  },
+  {
+   "lines": [
+    "1719'da fenerden çıkan yangın ahşap kuleyi yaktı.",
+    "1725'te kule yeniden yapıldı."
+   ],
+   "big": "1719",
+   "sub": "YANGIN VE ONARIM",
+   "year": 1719,
+   "label": "1719",
+   "prompt": "Vertical 9:16, 18th-century stone tower on a Bosphorus islet at night with fire glowing in the top lantern room and smoke rising into the dark sky, small boats keeping their distance, tower centered, dark space above and below, no people, no text, no flags, no gore",
+   "fx": [
+    "smoke",
+    "ember",
+    "flicker"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, 18th-century stone tower on a Bosphorus islet at night with fire glowing in the top lantern room and smoke rising into the dark sky, small boats keeping their distance, tower centered, dark space above and below, no people, no text, no flags, no gore, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s05.jpg"
+  },
+  {
+   "lines": [
+    "1830'larda kolera salgını yüzünden karantina hastanesi oldu.",
+    "II. Mahmud'un onarımıyla bugünkü biçimini aldı."
+   ],
+   "big": "1830'LAR",
+   "sub": "KARANTİNA VE ONARIM",
+   "year": 1830,
+   "label": "1830'LAR",
+   "prompt": "Vertical 9:16, 1830s Ottoman-era tower with a scalloped lead dome and bare flagpole on a Bosphorus islet, a small rowboat approaching at misty dawn with two men in period fezzes and long robes seen from behind, tower centered, pale sky above, calm water below, no text, no flags",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, 1830s Ottoman-era tower with a scalloped lead dome and bare flagpole on a Bosphorus islet, a small rowboat approaching at misty dawn with two men in period fezzes and long robes seen from behind, tower centered, pale sky above, calm water below, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s06.jpg"
+  },
+  {
+   "lines": [
+    "Yılanlı prenses ve Leandros hikâyeleri ise efsaneden ibaret."
+   ],
+   "big": "EFSANE",
+   "sub": "TARİH DEĞİL, HİKÂYE",
+   "year": 1833,
+   "label": "EFSANE",
+   "prompt": "Vertical 9:16, dreamlike painterly scene of the Maiden's Tower wrapped in mist under a starry night sky, a tiny distant swimmer silhouette far in the water, mythic atmosphere, tower centered, empty sky above and dark sea below, no text, no flags",
+   "fx": [
+    "fog",
+    "gold"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, dreamlike painterly scene of the Maiden's Tower wrapped in mist under a starry night sky, a tiny distant swimmer silhouette far in the water, mythic atmosphere, tower centered, empty sky above and dark sea below, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s07.jpg"
+  },
+  {
+   "lines": [
+    "2021'de başlayan restorasyon bitti.",
+    "Kule, 11 Mayıs 2023'te lazer gösterisiyle yeniden açıldı."
+   ],
+   "big": "2023",
+   "sub": "YENİDEN AÇILIŞ",
+   "year": 2023,
+   "label": "2023",
+   "prompt": "Vertical 9:16, the restored Maiden's Tower at night with colorful laser and light-show beams rising from it over the Bosphorus, a small crowd silhouetted from behind on the shore far below, tower centered, dark sky above and reflective water below, no text, no logos, no flags",
+   "fx": [
+    "rays",
+    "gold"
+   ],
+   "effect": "glow",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, the restored Maiden's Tower at night with colorful laser and light-show beams rising from it over the Bosphorus, a small crowd silhouetted from behind on the shore far below, tower centered, dark sky above and reflective water below, no text, no logos, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s08.jpg"
+  },
+  {
+   "lines": [
+    "Rivayet yaşıyor.",
+    "Hezarfen Galata'dan Üsküdar'a uçarken mektupları taşımış."
+   ],
+   "big": "HEZARFEN",
+   "sub": "GALATA'DAN ÜSKÜDAR'A",
+   "year": 2023,
+   "label": "HEZARFEN",
+   "prompt": "Vertical 9:16, a man in 17th-century Ottoman clothing with large wooden wings gliding over the Bosphorus at golden sunset, seen from behind as a small silhouette, distant Galata Tower behind him and Maiden's Tower ahead, glider centered, open sky above and water below, no text, no flags",
+   "fx": [
+    "rays",
+    "gold"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, a man in 17th-century Ottoman clothing with large wooden wings gliding over the Bosphorus at golden sunset, seen from behind as a small silhouette, distant Galata Tower behind him and Maiden's Tower ahead, glider centered, open sky above and water below, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s09.jpg"
+  },
+  {
+   "lines": [
+    "Galata Kulesi'nin gerçek hikâyesi için o videoya bakın."
+   ],
+   "big": "GALATA",
+   "sub": "SIRADAKİ KULE",
+   "year": 2023,
+   "label": "GALATA",
+   "prompt": "Vertical 9:16, Galata Tower with its conical cap rising above old Istanbul rooftops at golden hour, tower centered, soft warm sky above and rooftops fading into haze below, no people, no text, no flags",
+   "fx": [
+    "gold",
+    "rays"
+   ],
+   "effect": "",
+   "type_text": "",
+   "prompt_tam": "Vertical 9:16, Galata Tower with its conical cap rising above old Istanbul rooftops at golden hour, tower centered, soft warm sky above and rooftops fading into haze below, no people, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s10.jpg"
+  }
+ ],
+ "finale": "",
+ "maps": [],
+ "cards": [
+  {
+   "scene": 7,
+   "value": 2,
+   "unit": "YIL",
+   "small": "SÜREN RESTORASYON"
+  }
+ ],
+ "eras": [
+  {
+   "name": "ANTİK VE BİZANS",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "name": "OSMANLI",
+   "from": 3,
+   "to": 5
+  },
+  {
+   "name": "YENİDEN AÇILIŞ",
+   "from": 7,
+   "to": 7
+  }
+ ],
+ "outro": {
+  "title": "KIZ KULESİ",
+  "line": "Taşın tarihi belgeli, aşkın hikâyesi rivayet."
+ },
+ "aciklama": "Kız Kulesi'nin Galata'ya âşık olduğu rivayeti çok güzel ama bir söylence. Kulenin belgelenmiş tarihi ise antik gümrük noktasından Bizans zincirine, Osmanlı feneri ve karantinasından 2023'teki yeniden açılışa uzanıyor. Siz hangi kule hikâyesini daha çok seviyorsunuz, rivayeti mi gerçeği mi?",
+ "hashtagler": [
+  "#KızKulesi",
+  "#GalataKulesi",
+  "#İstanbul",
+  "#Hezarfen",
+  "#İstanbulTarihi",
+  "#Boğaz",
+  "#TarihHikâyeleri",
+  "#Efsane",
+  "#Reels",
+  "#AnimasyonTarih"
+ ],
+ "kaynaklar": [
+  "https://tr.wikipedia.org/wiki/K%C4%B1z_Kulesi",
+  "https://www.aa.com.tr/tr/kultur/kiz-kulesi-isik-ve-lazer-sovuyla-acildi/2894533",
+  "https://www.hurriyet.com.tr/gundem/yeniden-merhaba-kiz-kulesi-42266325",
+  "https://www.arkitera.com/haber/kiz-kulesi-11-mayista-aciliyor/",
+  "https://10haber.net/kultur-sanat/kiz-kulesi-restorasyon-sonrasi-kapilarini-ziyarete-acti-183921/",
+  "http://www.istanbuldelisi.net/kiz-kulesi/",
+  "https://www.orkmes.com/konu/kiz-kulesi.175/",
+  "https://www.seyyahca.com/kiz-kulesi/",
+  "https://www.haberturk.com/bu-kuleye-sevdigiyle-cikan-evleniyor-peki-bu-ne-kadar-dogru-istanbul-un-gozdesi-galata-kulesi-nin-efsaneleri-hangileri-gercek-hangileri-mit-3833699"
+ ],
+ "kontrol_notlari": [
+  "Kural çatışması: sistem kuralında 60-65 sn/130-150 kelime ve yıllar yazıyla isteniyor. Senin notundaki 45-50 sn, yaklaşık 110-125 kelime ve yıllar rakamla isteğini uyguladım. Metin yaklaşık 120 kelime. Sahne sayısı 10; hem 8-10 hem 10-14 aralığına uyuyor.",
+  "Alkibiades dönemi: kaynaklar MÖ 410 (Wikipedia, 10haber, Habertürk) ile MÖ 408 arasında ayrılıyor. Bu yüzden 'MÖ 410 dolaylarında' ve 'aktarılır' dedim. Kesin tarih gibi sunmadım.",
+  "Bizans dönemi: bazı kaynaklar 1110 yılını veriyor. Manuel Komnenos ise 1143-1180 arasında hüküm sürdü, yani bu iki bilgi çelişiyor. Kesin yıl vermeden '12. yüzyıl' ve 'Manuel Komnenos döneminde' yazdım. Zaman çizelgesi için 1143 kullandım. Mangana tarafıyla kule arasına zincir gerilmesi birden çok kaynakta aynı.",
+  "Yangın: 1719 yangını ve 1725 onarımı birkaç kaynakta tutarlı (orkmes, istanbuldelisi, Tonguç). Bir kaynak 1721 yazıyor, onu kullanmadım.",
+  "Karantina: kaynaklar 1829 ya da 1830-1831 diyor. Bu yüzden '1830'larda' yazdım. Kolera nedeni birden çok kaynakta var. II. Mahmud onarımı 1832-33, kulenin bugünkü biçimi o dönemin.",
+  "Fener: 1857'de Fransız şirketinin yaptığı fener ayrı bir bilgi. Metne almadım. Osmanlı döneminde fener işlevi birkaç kaynakta geçiyor, fenerin eklendiği yıl (1509/1510 depremi sonrası) kaynaklarda net değil, o yüzden yıl vermedim.",
+  "Restorasyon: 2021'de Kültür ve Turizm Bakanlığı başlattı. Açılış 11 Mayıs 2023 akşamı saat 21.00'de ışık ve lazer gösterisiyle yapıldı (AA, Hürriyet, Arkitera). Restorasyon yaklaşık 2 yıl sürdü. İstersen sahne 8'de 21.00 saatini de gösterebilirsin.",
+  "Aşk rivayeti: kaynaklarda tarihsel bir belge ya da ilk anlatım tarihi bulamadım. Bu yüzden 'rivayete göre' ve 'söylence' dedim. Hürriyet, 2023 açılış lazer gösterisinin bu hikâyeyi senaryolaştırdığını yazıyor, yani anlatı bugün de canlı tutuluyor.",
+  "Hezarfen: mektup taşıma kısmı sonradan eklenmiş bir halk anlatısı. Habertürk, uçuşun gerçekliğinin tam kanıtlanmadığını belirtiyor. Evliya Çelebi'nin anlatısına dayanıyor. Metinde uçuşu 'olmuş' diye değil, mektup kısmını rivayet olarak verdim.",
+  "Yılanlı prenses ve Leandros: tek cümlede efsane olarak geçti, detaya girilmedi.",
+  "Yüz kuralı: sahnelerde gerçek kişi yüzü yok, figürler arkadan ya da siluet. Bayrak, yazı ve tuğra yok. Bayrak direği çıplak bırakıldı."
+ ],
+ "konu": "Kız Kulesi'nin tarihi ve Galata Kulesi ile aşk rivayeti",
+ "tarih": "",
+ "slug": "kiz-kulesi-nin-tarihi-ve-galata-kulesi-ile-ask-rivayeti",
+ "durum": "onay-bekliyor",
+ "seslendirme_metni": "Rivayete göre Kız Kulesi ile Galata Kulesi yüzyıllardır birbirine âşık.\nAma aralarında Boğaz var.\nOysa kulenin belgelenmiş tarihi bambaşka.\nMÖ 410 dolaylarında Atinalı komutan Alkibiades'in burada bir gümrük noktası kurduğu aktarılır.\n12. yüzyılda Bizans, adaya taş bir kule yaptı.\nİmparator Manuel Komnenos döneminde kıyıyla kule arasına zincir gerildi.\n1453'ten sonra kule Osmanlı'ya geçti.\nFener olarak gemilere yol gösterdi.\n1719'da fenerden çıkan yangın ahşap kuleyi yaktı.\n1725'te kule yeniden yapıldı.\n1830'larda kolera salgını yüzünden karantina hastanesi oldu.\nII. Mahmud'un onarımıyla bugünkü biçimini aldı.\nYılanlı prenses ve Leandros hikâyeleri ise efsaneden ibaret.\n2021'de başlayan restorasyon bitti.\nKule, 11 Mayıs 2023'te lazer gösterisiyle yeniden açıldı.\nRivayet yaşıyor.\nHezarfen Galata'dan Üsküdar'a uçarken mektupları taşımış.\nGalata Kulesi'nin gerçek hikâyesi için o videoya bakın."
+}
