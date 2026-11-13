@@ -19,7 +19,11 @@
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 wide establishing shot of a hilltop Ottoman stone palace with domes and a slender minaret at dawn, snow-capped Mount Ararat rising huge behind it, golden light on pale and dark stone, palace centered in frame, open misty sky in the top third for a title, empty dark foreground in the bottom third for subtitles, no text, no lettering, no flags, no people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s01.jpg"
+   "image": "images/s01.jpg",
+   "video": "videos/v01.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -37,7 +41,11 @@
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 aerial view of a large stone palace complex with two courtyards on a rocky spur above a wide plain, rugged eastern Anatolian mountains in the distance, palace centered, clear sky at top for a title, plain ground at bottom for captions, no text, no flags, no people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s02.jpg"
+   "image": "images/s02.jpg",
+   "video": "videos/v02.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -55,7 +63,11 @@
    "effect": "stamp",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 17th-century stone construction site on a rocky hilltop, stonemasons in period Ottoman work clothes and turbans seen only from behind and far away, simple wooden scaffolds, ox carts hauling stone blocks, silhouette of a nobleman in a long robe seen from behind watching the work, Mount Ararat faint in misty background, main scene centered, empty space at top and bottom, no text, no flags, no faces, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s03.jpg"
+   "image": "images/s03.jpg",
+   "video": "videos/v03.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -73,7 +85,11 @@
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 long caravan of mules and oxen carrying white and black stone blocks along a mountain path toward a half-built palace on a hill, tiny distant figures in period clothing seen from behind, changing seasons feeling with light snow, palace centered, empty sky at top for title and empty ground at bottom for captions, no text, no flags, no faces, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s04.jpg"
+   "image": "images/s04.jpg",
+   "video": "videos/v04.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -91,7 +107,11 @@
    "effect": "type",
    "type_text": "KİTABE · 1199 HİCRÎ · 1784",
    "prompt_tam": "Vertical 9:16 close view of an ornate carved stone doorway in a palace courtyard, rows of abstract geometric and floral reliefs, an empty smooth stone panel above the door with only abstract carved lines and no readable letters, warm torch glow on the stone, doorway centered, empty space above and below, no text, no calligraphy, no flags, no people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s05.jpg"
+   "image": "images/s05.jpg",
+   "video": "videos/v05.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -110,7 +130,11 @@
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 richly carved stone portal with dense geometric and vegetal reliefs, a cone-shaped Seljuk-style tomb dome and an Ottoman dome side by side in the background, soft golden light, portal centered, clear space at top and bottom, only abstract ornament and no readable writing, no flags, no people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s06.jpg"
+   "image": "images/s06.jpg",
+   "video": "videos/v06.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -129,7 +153,11 @@
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 cutaway-style view of a thick stone palace wall with narrow hidden channels and small openings, warm orange glow and soft steam drifting through the channels, cozy chamber with stone fireplace, wall centered, empty space at top and bottom, no text, no people, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s07.jpg"
+   "image": "images/s07.jpg",
+   "video": "videos/v07.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -147,7 +175,11 @@
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 dusk scene, far-away silhouettes of 19th-century soldiers in long dark greatcoats seen from behind pulling a cart carrying a large ornate wooden gate away from a hilltop palace along a snowy road, thick fog, palace silhouette small in background, no weapons drawn, no blood, no faces, scene centered, empty sky at top and empty ground at bottom, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s08.jpg"
+   "image": "images/s08.jpg",
+   "video": "videos/v08.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -165,7 +197,11 @@
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 partially restored stone palace wall with light wooden scaffolding, restoration craftsmen in modern work clothes seen only from behind and far away, cracked old stone beside freshly repaired sections, palace centered, soft morning light, open sky at top and plain ground at bottom, no text, no flags, no faces, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s09.jpg"
+   "image": "images/s09.jpg",
+   "video": "videos/v09.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -183,7 +219,11 @@
    "effect": "glow",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 majestic sunset panorama of the stone palace on its hill glowing in gold, snow-capped Mount Ararat in the background turning pink and orange, a lone distant visitor silhouette seen from behind on the path, palace centered, calm sky at top for title and dark foreground at bottom for captions, no text, no flags, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s10.jpg"
+   "image": "images/s10.jpg",
+   "video": "videos/v10.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   }
  ],
  "finale": "",
