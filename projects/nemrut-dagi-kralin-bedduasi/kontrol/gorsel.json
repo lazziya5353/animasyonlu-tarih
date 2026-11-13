@@ -1,0 +1,65 @@
+{
+ "asama": "gorsel",
+ "durum": "hata",
+ "ozet": "10/11 görsel",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 2
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 3
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 4
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 5
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 6
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 7
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 8
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 9
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 10
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 11
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "eksik görsel: sahne 1"
+  }
+ ],
+ "eksik": [
+  1
+ ],
+ "zaman": "2026-11-13T18:18:28Z"
+}

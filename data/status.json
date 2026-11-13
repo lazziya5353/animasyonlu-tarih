@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "topkapi-sarayi-harem-ve-cinler-koridoru: ses hazır",
-  "cikti": "projects/topkapi-sarayi-harem-ve-cinler-koridoru",
-  "zaman": "2026-11-13T15:33:34Z"
+  "mesaj": "nemrut-dagi-kralin-bedduasi: ses hazır",
+  "cikti": "projects/nemrut-dagi-kralin-bedduasi",
+  "zaman": "2026-11-13T18:15:35Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-13T18:06:11Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "ishak-pasa-sarayinin-tarihi: kurgu !",
-  "cikti": "projects/ishak-pasa-sarayinin-tarihi/kontrol",
-  "zaman": "2026-11-13T18:06:06Z"
+  "durum": "hata",
+  "mesaj": "nemrut-dagi-kralin-bedduasi: gorsel ✗",
+  "cikti": "projects/nemrut-dagi-kralin-bedduasi/kontrol",
+  "zaman": "2026-11-13T18:18:28Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
