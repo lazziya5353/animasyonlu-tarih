@@ -1,6 +1,6 @@
 {
  "asama": "kurgu",
- "durum": "hata",
+ "durum": "uyari",
  "ozet": "69 sn, -15 LUFS, senkron 14/14",
  "maddeler": [
   {
@@ -12,13 +12,18 @@
    "mesaj": "sığmadığı için küçültüldü: “Bir sonraki durak için takipte kal.”"
   },
   {
-   "seviye": "hata",
-   "mesaj": "Üst taraftaki harita etiketi ('DOĞU SINIRI') sol kenardan kadraj dışına taşmış ve kesilmiştir.",
+   "seviye": "uyari",
+   "mesaj": "Üstteki '1685' başlığı ile arkadaki inşaat iskelesi çakışmakta ve okunabilirliği azaltmaktadır.",
    "sahne": 3
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Alt kısımdaki altyazı metni arka plandaki alev ve detaylar nedeniyle düşük kontrasta sahiptir ve okunması zorlaşmaktadır.",
+   "sahne": 7
   }
  ],
  "sure": 68.9,
  "lufs": -14.8,
  "senkron": "14/14",
- "zaman": "2026-11-13T13:28:30Z"
+ "zaman": "2026-11-13T18:06:06Z"
 }

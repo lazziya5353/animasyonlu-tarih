@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "cennet-ve-cehennem-obruklari videosu hazır",
-  "cikti": "release:video-cennet-ve-cehennem-obruklari",
-  "zaman": "2026-11-13T17:15:18Z"
+  "mesaj": "ishak-pasa-sarayinin-tarihi videosu hazır",
+  "cikti": "release:video-ishak-pasa-sarayinin-tarihi",
+  "zaman": "2026-11-13T18:06:11Z"
  },
  "kontrol": {
-  "durum": "hata",
-  "mesaj": "cennet-ve-cehennem-obruklari: kurgu ✗",
-  "cikti": "projects/cennet-ve-cehennem-obruklari/kontrol",
-  "zaman": "2026-11-13T17:15:12Z"
+  "durum": "tamam",
+  "mesaj": "ishak-pasa-sarayinin-tarihi: kurgu !",
+  "cikti": "projects/ishak-pasa-sarayinin-tarihi/kontrol",
+  "zaman": "2026-11-13T18:06:06Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
