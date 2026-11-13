@@ -1,0 +1,383 @@
+{
+ "title": "Piramitleri Kim Yaptı?",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "PİRAMİTLERİ KÖLELER Mİ YAPTI?",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Hep öyle anlatıldı: piramitleri kölelere kırbaçla yaptırdılar.",
+    "Ama 2013'te bulunan bir günlük, bambaşka bir hikâye anlatıyor."
+   ],
+   "big": "PİRAMİTLER",
+   "sub": "KÖLELER Mİ YAPTI?",
+   "year": null,
+   "label": "GİZA",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     30,
+     30,
+     70
+    ],
+    "to": [
+     31.132,
+     29.978,
+     0.12
+    ],
+    "zoom_sure": 5.5,
+    "etiketler": [
+     [
+      "MISIR",
+      29.5,
+      26.5
+     ],
+     [
+      "NİL",
+      31.3,
+      27.2
+     ]
+    ],
+    "hedef": [
+     31.134,
+     29.979,
+     "GİZA PİRAMİTLERİ"
+    ]
+   }
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Burası Giza. Büyük Piramit, Firavun Keops için yapıldı.",
+    "Yaklaşık dört bin altı yüz yıl önce."
+   ],
+   "big": "KEOPS",
+   "sub": "BÜYÜK PİRAMİT",
+   "year": null,
+   "label": "MÖ 2560",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Yaklaşık 2,3 milyon taş bloktan oluşuyor."
+   ],
+   "big": "2,3 MİLYON",
+   "sub": "TAŞ BLOK",
+   "year": null,
+   "label": "KEOPS",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "glow",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "2013'te Kızıldeniz kıyısındaki bir mağarada papirüsler bulundu.",
+    "Bugüne kadar bulunan en eski papirüsler."
+   ],
+   "big": "2013",
+   "sub": "WADİ EL-CERF",
+   "year": null,
+   "label": "KEŞİF",
+   "fx": [
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bunlar, Merer adında bir ustabaşının günlüğüydü.",
+    "Piramidin yapımını yazan tek görgü tanığı."
+   ],
+   "big": "MERER",
+   "sub": "USTABAŞININ GÜNLÜĞÜ",
+   "year": null,
+   "label": "KEŞİF",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "type",
+   "type_text": "MERER · 4.600 YILLIK GÜNLÜK",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Merer, ekibiyle Tura'daki taş ocaklarından",
+    "kireç taşını teknelerle Giza'ya taşıdığını gün gün yazmış."
+   ],
+   "big": "NİL",
+   "sub": "TAŞLAR TEKNEYLE GELDİ",
+   "year": null,
+   "label": "TURA",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Yani taşlar, kanallar ve Nil üzerinden taşındı."
+   ],
+   "big": "KANALLAR",
+   "sub": "SU YOLU",
+   "year": null,
+   "label": "NİL",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Peki işçiler kimdi?",
+    "Arkeologlar piramitlerin hemen yanında bir işçi kenti buldu."
+   ],
+   "big": "İŞÇİ KENTİ",
+   "sub": "GİZA",
+   "year": null,
+   "label": "LEHNER",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Yaklaşık yirmi bin kişinin yaşayabileceği kadar büyük.",
+    "Fırınlar, ekmek ve et kemikleri: işçiler iyi besleniyordu."
+   ],
+   "big": "20.000",
+   "sub": "KİŞİLİK KENT",
+   "year": null,
+   "label": "İŞÇİLER",
+   "fx": [
+    "smoke"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "glow",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Yani piramitler kırbaçla değil,",
+    "organize, beslenen işçilerle yükseldi."
+   ],
+   "big": "GERÇEK",
+   "sub": "KÖLE DEĞİL, İŞÇİ",
+   "year": null,
+   "label": "SONUÇ",
+   "fx": [
+    "gold"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Sence piramitler hakkında başka hangi efsane yanlış?",
+    "Yorumlara yaz."
+   ],
+   "big": "SENCE?",
+   "sub": "HANGİ EFSANE YANLIŞ?",
+   "year": null,
+   "label": "BUGÜN",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  }
+ ],
+ "eras": [
+  {
+   "name": "EFSANE",
+   "from": 0,
+   "to": 2
+  },
+  {
+   "name": "GÜNLÜK",
+   "from": 3,
+   "to": 6
+  },
+  {
+   "name": "İŞÇİLER",
+   "from": 7,
+   "to": 10
+  }
+ ],
+ "outro_plan": {
+  "title": "HANGİ EFSANE YANLIŞ?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 8,
+   "value": 20000,
+   "unit": "KİŞİ",
+   "small": "İŞÇİ KENTİNİN KAPASİTESİ (YAKLAŞIK)"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true
+}

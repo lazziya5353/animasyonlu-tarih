@@ -1,0 +1,312 @@
+{
+ "baslik": "Piramitleri Kim Yaptı?",
+ "hook": "PİRAMİTLERİ KÖLELER Mİ YAPTI?",
+ "map_region": "anadolu",
+ "sahneler": [
+  {
+   "lines": [
+    "Hep öyle anlatıldı: piramitleri kölelere kırbaçla yaptırdılar.",
+    "Ama 2013'te bulunan bir günlük, bambaşka bir hikâye anlatıyor."
+   ],
+   "big": "PİRAMİTLER",
+   "sub": "KÖLELER Mİ YAPTI?",
+   "label": "GİZA",
+   "fx": [],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     30,
+     30,
+     70
+    ],
+    "to": [
+     31.132,
+     29.978,
+     0.12
+    ],
+    "zoom_sure": 5.5,
+    "etiketler": [
+     [
+      "MISIR",
+      29.5,
+      26.5
+     ],
+     [
+      "NİL",
+      31.3,
+      27.2
+     ]
+    ],
+    "hedef": [
+     31.134,
+     29.979,
+     "GİZA PİRAMİTLERİ"
+    ]
+   },
+   "image": "images/s01.jpg",
+   "prompt": "Giza",
+   "prompt_tam": "Giza"
+  },
+  {
+   "lines": [
+    "Burası Giza. Büyük Piramit, Firavun Keops için yapıldı.",
+    "Yaklaşık dört bin altı yüz yıl önce."
+   ],
+   "big": "KEOPS",
+   "sub": "BÜYÜK PİRAMİT",
+   "label": "MÖ 2560",
+   "fx": [
+    "dust"
+   ],
+   "image": "images/s02.jpg",
+   "prompt": "Giza",
+   "prompt_tam": "Giza",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "lines": [
+    "Yaklaşık 2,3 milyon taş bloktan oluşuyor."
+   ],
+   "big": "2,3 MİLYON",
+   "sub": "TAŞ BLOK",
+   "label": "KEOPS",
+   "fx": [
+    "dust"
+   ],
+   "effect": "glow",
+   "image": "images/s03.jpg",
+   "prompt": "Giza",
+   "prompt_tam": "Giza",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "lines": [
+    "2013'te Kızıldeniz kıyısındaki bir mağarada papirüsler bulundu.",
+    "Bugüne kadar bulunan en eski papirüsler."
+   ],
+   "big": "2013",
+   "sub": "WADİ EL-CERF",
+   "label": "KEŞİF",
+   "fx": [
+    "rays"
+   ],
+   "effect": "stamp",
+   "image": "images/s04.jpg",
+   "prompt": "Giza",
+   "prompt_tam": "Giza",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "lines": [
+    "Bunlar, Merer adında bir ustabaşının günlüğüydü.",
+    "Piramidin yapımını yazan tek görgü tanığı."
+   ],
+   "big": "MERER",
+   "sub": "USTABAŞININ GÜNLÜĞÜ",
+   "label": "KEŞİF",
+   "fx": [
+    "dust"
+   ],
+   "effect": "type",
+   "type_text": "MERER · 4.600 YILLIK GÜNLÜK",
+   "image": "images/s05.jpg",
+   "prompt": "Giza",
+   "prompt_tam": "Giza",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "lines": [
+    "Merer, ekibiyle Tura'daki taş ocaklarından",
+    "kireç taşını teknelerle Giza'ya taşıdığını gün gün yazmış."
+   ],
+   "big": "NİL",
+   "sub": "TAŞLAR TEKNEYLE GELDİ",
+   "label": "TURA",
+   "fx": [
+    "fog"
+   ],
+   "image": "images/s06.jpg",
+   "prompt": "Giza",
+   "prompt_tam": "Giza",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  },
+  {
+   "lines": [
+    "Yani taşlar, kanallar ve Nil üzerinden taşındı."
+   ],
+   "big": "KANALLAR",
+   "sub": "SU YOLU",
+   "label": "NİL",
+   "fx": [
+    "fog"
+   ],
+   "image": "images/s07.jpg",
+   "prompt": "Giza",
+   "prompt_tam": "Giza",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "lines": [
+    "Peki işçiler kimdi?",
+    "Arkeologlar piramitlerin hemen yanında bir işçi kenti buldu."
+   ],
+   "big": "İŞÇİ KENTİ",
+   "sub": "GİZA",
+   "label": "LEHNER",
+   "fx": [
+    "dust"
+   ],
+   "image": "images/s08.jpg",
+   "prompt": "Giza",
+   "prompt_tam": "Giza",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "lines": [
+    "Yaklaşık yirmi bin kişinin yaşayabileceği kadar büyük.",
+    "Fırınlar, ekmek ve et kemikleri: işçiler iyi besleniyordu."
+   ],
+   "big": "20.000",
+   "sub": "KİŞİLİK KENT",
+   "label": "İŞÇİLER",
+   "fx": [
+    "smoke"
+   ],
+   "effect": "glow",
+   "image": "images/s09.jpg",
+   "prompt": "Giza",
+   "prompt_tam": "Giza",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "lines": [
+    "Yani piramitler kırbaçla değil,",
+    "organize, beslenen işçilerle yükseldi."
+   ],
+   "big": "GERÇEK",
+   "sub": "KÖLE DEĞİL, İŞÇİ",
+   "label": "SONUÇ",
+   "fx": [
+    "gold"
+   ],
+   "image": "images/s10.jpg",
+   "prompt": "Giza",
+   "prompt_tam": "Giza",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "lines": [
+    "Sence piramitler hakkında başka hangi efsane yanlış?",
+    "Yorumlara yaz."
+   ],
+   "big": "SENCE?",
+   "sub": "HANGİ EFSANE YANLIŞ?",
+   "label": "BUGÜN",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "image": "images/s11.jpg",
+   "prompt": "Giza",
+   "prompt_tam": "Giza",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  }
+ ],
+ "finale": "",
+ "maps": [],
+ "cards": [
+  {
+   "scene": 8,
+   "value": 20000,
+   "unit": "KİŞİ",
+   "small": "İŞÇİ KENTİNİN KAPASİTESİ (YAKLAŞIK)"
+  }
+ ],
+ "eras": [
+  {
+   "name": "EFSANE",
+   "from": 0,
+   "to": 2
+  },
+  {
+   "name": "GÜNLÜK",
+   "from": 3,
+   "to": 6
+  },
+  {
+   "name": "İŞÇİLER",
+   "from": 7,
+   "to": 10
+  }
+ ],
+ "outro": {
+  "title": "HANGİ EFSANE YANLIŞ?",
+  "line": "Yorumlara yaz"
+ },
+ "aciklama": "Piramitleri köleler mi yaptı? 👀 2013'te bulunan 4.600 yıllık bir günlük bambaşka bir şey anlatıyor.\n\nUstabaşı Merer, taşları Tura'dan teknelerle Giza'ya taşıdıklarını gün gün yazmış. Arkeologlar piramitlerin yanında ~20.000 kişilik bir işçi kenti buldu.\n\n💬 Sence piramitler hakkında hangi efsane yanlış?\n📤 Bunu bilmeyen bir arkadaşına gönder.\n🔔 Takip et @animasyon.tarih\n📍 Giza, Mısır\n\n(Görseller temsilidir. Uydu: Sentinel-2 cloudless 2016, EOX)",
+ "kanca_alternatifleri": [
+  "PİRAMİTLERİ KÖLELER Mİ YAPTI?",
+  "4.600 YILLIK GÜNLÜK BULUNDU",
+  "PİRAMİTİN TEK GÖRGÜ TANIĞI"
+ ],
+ "aciklama_alternatifleri": [],
+ "hashtagler": [
+  "#tarih",
+  "#keşfet",
+  "#reels",
+  "#piramitler",
+  "#mısır",
+  "#giza",
+  "#antikmısır",
+  "#arkeoloji",
+  "#efsane",
+  "#tarihbilgisi",
+  "#animasyontarih"
+ ],
+ "kaynaklar": [
+  "https://bigthink.com/robby-berman/a-just-discovered-papyrus-reveals-how-the-great-pyramid-was-built",
+  "https://www.freethink.com/culture/papyrus-reveals-great-pyramid?amp=1",
+  "https://www.world-archaeology.com/features/records-of-the-pyramid-builders/"
+ ],
+ "kontrol_notlari": [
+  "Merer papirüsü 2013, en eski papirüs, tek görgü tanığı: Big Think/Freethink.",
+  "İşçi kenti ~20.000 kişi: Lehner (Freethink).",
+  "2,3 milyon blok: Big Think."
+ ],
+ "konu": "Piramitleri Kim Yaptı",
+ "tarih": "",
+ "slug": "piramitleri-kim-yapti",
+ "durum": "onaylandi",
+ "sade": true,
+ "seslendirme_metni": "Hep öyle anlatıldı: piramitleri kölelere kırbaçla yaptırdılar.\nAma iki bin on üçte bulunan bir günlük, bambaşka bir hikâye anlatıyor.\nBurası Giza. Büyük Piramit, Firavun Keops için yapıldı.\nYaklaşık dört bin altı yüz yıl önce.\nYaklaşık iki virgül üç milyon taş bloktan oluşuyor.\nİki bin on üçte Kızıldeniz kıyısındaki bir mağarada papirüsler bulundu.\nBugüne kadar bulunan en eski papirüsler.\nBunlar, Merer adında bir ustabaşının günlüğüydü.\nPiramidin yapımını yazan tek görgü tanığı.\nMerer, ekibiyle Tura'daki taş ocaklarından\nkireç taşını teknelerle Giza'ya taşıdığını gün gün yazmış.\nYani taşlar, kanallar ve Nil üzerinden taşındı.\nPeki işçiler kimdi?\nArkeologlar piramitlerin hemen yanında bir işçi kenti buldu.\nYaklaşık yirmi bin kişinin yaşayabileceği kadar büyük.\nFırınlar, ekmek ve et kemikleri: işçiler iyi besleniyordu.\nYani piramitler kırbaçla değil,\norganize, beslenen işçilerle yükseldi.\nSence piramitler hakkında başka hangi efsane yanlış?\nYorumlara yaz."
+}
