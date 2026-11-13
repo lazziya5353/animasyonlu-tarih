@@ -1,0 +1,25 @@
+{
+ "asama": "kurgu",
+ "durum": "uyari",
+ "ozet": "57 sn, -14 LUFS, senkron 19/19",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “TOPKAPI'DA CİNLERİN TOPLANDIĞI KORİDOR”"
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Üstteki altın renkli başlık yazısı ('GERÇEK') kemer yapısı ve parlak arka plan ile çakışarak zor okunuyor.",
+   "sahne": 3
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Alttaki beyaz açıklama metni kısmen koyu arka plan üzerinde yer alsa da kontrast bazı kelimelerde düşüyor.",
+   "sahne": 9
+  }
+ ],
+ "sure": 56.9,
+ "lufs": -14.4,
+ "senkron": "19/19",
+ "zaman": "2026-11-13T16:01:03Z"
+}
