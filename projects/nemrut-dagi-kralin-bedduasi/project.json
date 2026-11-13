@@ -236,11 +236,11 @@
    "start": null,
    "end": null,
    "lines": [
-    "Yazıtta bir de beddua var:",
+    "Yazıtta bir de beddua var.",
     "Bu kutsal yere zarar veren, soyuyla birlikte tanrıların cezasına uğrasın."
    ],
-   "big": "BEDDUA",
-   "sub": "YAZITTA YAZIYOR",
+   "big": null,
+   "sub": null,
    "year": null,
    "label": "NOMOS",
    "fx": [
@@ -255,11 +255,21 @@
     0.5,
     0.55
    ],
-   "effect": "stamp",
-   "video": "k2.mp4",
-   "video_url": "https://PENDING_K2",
-   "v_bas": 5.0,
-   "v_son": 10.0
+   "anim": {
+    "tur": "yazit",
+    "baslik": "KRALIN YAZITI · NOMOS",
+    "satirlar": [
+     "Her kim bu kutsal düzeni bozar,",
+     "bu anıta zarar verir",
+     "ya da anlamını",
+     "değiştirmeye kalkarsa,",
+     "yalnız kendisi değil,",
+     "bütün soyu da",
+     "tanrıların cezasına uğrasın."
+    ],
+    "imza": "— I. ANTİOKHOS · MÖ 1. YÜZYIL (ÖZET ÇEVİRİ)",
+    "boyut": 52
+   }
   },
   {
    "image": "images/s09.jpg",

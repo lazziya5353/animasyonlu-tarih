@@ -289,3 +289,28 @@ def _zoom(self, lt, dur):
 
 
 DepremAnim._zoom = _zoom
+
+
+# ── yazıt kartı: taş dokulu arka plan, başlık, metin satır satır daktiloyla yazılır (izleyici durdurup okusun) ──
+def _yazit(self, lt, dur):
+    c = self.c
+    if not hasattr(self, "_taş"):
+        rng = np.random.default_rng(7); n = rng.random((H // 4, W // 4)).astype(np.float32)
+        im = Image.fromarray((n * 255).astype(np.uint8)).resize((W, H), Image.BICUBIC).filter(ImageFilter.GaussianBlur(3))
+        a = np.asarray(im).astype(np.float32) / 255.; yy = np.linspace(-1, 1, H)[:, None]; xx = np.linspace(-1, 1, W)[None, :]
+        vig = np.clip(1 - .55 * (xx ** 2 + yy ** 2), 0, 1); v = (.10 + .10 * a) * vig
+        rgb = np.stack([v * 1.25, v * 1.08, v * .85], -1)
+        self._taş = Image.fromarray((np.clip(rgb, 0, 1) * 255).astype(np.uint8)).convert("RGBA")
+    fr = self._taş.copy(); out = clamp((dur - lt) / .4)
+    put(fr, text(c.get("baslik", "YAZIT"), "sans9", 34, GOLD, spacing=10), W / 2, 520, clamp(lt / .4) * out)
+    satirlar = c["satirlar"]; toplam = sum(len(s) for s in satirlar); hiz = toplam / max(1., c.get("yazma_sure", dur * .75))
+    kalan = int(max(0, lt - .5) * hiz); y = 640
+    for s in satirlar:
+        g = s[:max(0, kalan)]; kalan -= len(s)
+        if g: put(fr, text(g, "serif", c.get("boyut", 50), (240, 226, 196), glow=(120, 90, 40), spacing=1), W / 2, y, out)
+        y += int(c.get("boyut", 50) * 1.45)
+    if c.get("imza") and kalan > 0: put(fr, text(c["imza"], "sans9", 28, (210, 190, 150), spacing=4), W / 2, y + 40, clamp(kalan / 20) * out)
+    return fr
+
+
+DepremAnim._yazit = _yazit
