@@ -1,0 +1,31 @@
+{
+ "asama": "kurgu",
+ "durum": "uyari",
+ "ozet": "55 sn, -14 LUFS, senkron 17/19",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı süresi okunuşa uymuyor (35 kar/sn): “Duvarları içe doğru eğik; ekipmansız inm”"
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı süresi okunuşa uymuyor (41 kar/sn): “Kapısındaki kitabe: Paulus, Meryem Ana'y”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “128 METRELİK CEHENNEM, 452 BASAMAKLIK CENNET”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “CENNET Mİ, CEHENNEM Mİ?”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “452 basamağı iner miydin?”"
+  }
+ ],
+ "sure": 55.4,
+ "lufs": -13.7,
+ "senkron": "17/19",
+ "zaman": "2026-11-13T14:21:36Z"
+}

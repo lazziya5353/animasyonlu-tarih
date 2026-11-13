@@ -1,0 +1,451 @@
+{
+ "title": "Cennet ve Cehennem Obrukları",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "128 METRELİK CEHENNEM, 452 BASAMAKLIK CENNET",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": 0.0,
+   "end": 5.84,
+   "lines": [
+    "Türkiye'de yan yana iki çukur var.",
+    "Birinin adı Cennet, diğerinin adı Cehennem."
+   ],
+   "big": "MERSİN",
+   "sub": "CENNET VE CEHENNEM",
+   "year": null,
+   "label": "SİLİFKE",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/v01.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": 5.84,
+   "end": 8.65,
+   "lines": [
+    "Ama asıl sır, ikisinin de dibinde."
+   ],
+   "big": "2 OBRUK",
+   "sub": "YAN YANA",
+   "year": null,
+   "label": "SİLİFKE",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/v02.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": 8.65,
+   "end": 13.23,
+   "lines": [
+    "Bunlar mağara değil, obruk.",
+    "Yeraltı suyu kireç taşını eritti, tavan çöktü."
+   ],
+   "big": "OBRUK",
+   "sub": "ÇÖKEN YERALTI",
+   "year": null,
+   "label": "OLUŞUM",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/v03.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": 13.23,
+   "end": 18.96,
+   "lines": [
+    "Cehennem'in derinliği 128 metre.",
+    "Duvarları içe doğru eğik; ekipmansız inmek imkânsız."
+   ],
+   "big": "128 M",
+   "sub": "CEHENNEM ÇUKURU",
+   "year": null,
+   "label": "CEHENNEM",
+   "fx": [
+    "smoke"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "glow",
+   "video": "videos/v04.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": 18.96,
+   "end": 24.51,
+   "lines": [
+    "Rivayete göre Zeus, yüz başlı ejderha Typhon'u",
+    "Etna'ya kapatmadan önce burada hapsetti."
+   ],
+   "big": "TYPHON",
+   "sub": "RİVAYETE GÖRE",
+   "year": null,
+   "label": "EFSANE",
+   "fx": [
+    "smoke",
+    "flicker"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "stamp",
+   "video": "videos/v05.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": 24.51,
+   "end": 28.94,
+   "lines": [
+    "Hemen yanındaki Cennet'e ise",
+    "452 taş basamakla iniliyor."
+   ],
+   "big": "452",
+   "sub": "TAŞ BASAMAK",
+   "year": null,
+   "label": "CENNET",
+   "fx": [
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/v06.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": 28.94,
+   "end": 35.2,
+   "lines": [
+    "Aşağıda hava birden serinliyor.",
+    "Dışarısı kavururken dip, adeta doğal klima."
+   ],
+   "big": "SERİN",
+   "sub": "DOĞAL KLİMA",
+   "year": null,
+   "label": "CENNET",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/v07.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": 35.2,
+   "end": 42.38,
+   "lines": [
+    "Dipte, MS 5. yüzyıldan bir kilise sizi bekliyor.",
+    "Kapısındaki kitabe: Paulus, Meryem Ana'ya adadı."
+   ],
+   "big": "5. YY",
+   "sub": "MERYEM ANA KİLİSESİ",
+   "year": null,
+   "label": "KİLİSE",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "type",
+   "type_text": "MS 5. YÜZYIL · MERYEM ANA",
+   "video": "videos/v08.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": 42.38,
+   "end": 48.68,
+   "lines": [
+    "Kilisenin arkasındaki mağaradan",
+    "yeraltı suyunun uğultusu yükseliyor."
+   ],
+   "big": "UĞULTU",
+   "sub": "YERALTI SUYU",
+   "year": null,
+   "label": "MAĞARA",
+   "fx": [
+    "fog",
+    "flicker"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/v09.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": 48.68,
+   "end": 54.879875000000006,
+   "lines": [
+    "Sen olsan 452 basamağı iner miydin?",
+    "Yorumlara yaz."
+   ],
+   "big": "CENNET Mİ?",
+   "sub": "CEHENNEM Mİ?",
+   "year": null,
+   "label": "BUGÜN",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/v10.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  }
+ ],
+ "eras": [
+  {
+   "name": "OLUŞUM",
+   "from": 0,
+   "to": 2
+  },
+  {
+   "name": "CEHENNEM",
+   "from": 3,
+   "to": 4
+  },
+  {
+   "name": "CENNET",
+   "from": 5,
+   "to": 9
+  }
+ ],
+ "outro_plan": {
+  "title": "CENNET Mİ, CEHENNEM Mİ?",
+  "line": "452 basamağı iner miydin?"
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 3,
+   "value": 128,
+   "unit": "METRE",
+   "small": "CEHENNEM ÇUKURUNUN DERİNLİĞİ"
+  },
+  {
+   "scene": 5,
+   "value": 452,
+   "unit": "BASAMAK",
+   "small": "CENNET'E İNİŞ"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true,
+ "cards": [
+  {
+   "start": 14.43,
+   "end": 18.66,
+   "value": 128,
+   "unit": "METRE",
+   "small": "CEHENNEM ÇUKURUNUN DERİNLİĞİ"
+  },
+  {
+   "start": 25.71,
+   "end": 28.64,
+   "value": 452,
+   "unit": "BASAMAK",
+   "small": "CENNET'E İNİŞ"
+  }
+ ],
+ "outro": {
+  "start": 49.179875,
+  "title": "CENNET Mİ, CEHENNEM Mİ?",
+  "line": "452 basamağı iner miydin?",
+  "line_at": 51.479875
+ },
+ "duration": 55.38,
+ "jumps": [],
+ "captions": [
+  {
+   "start": 0.21,
+   "end": 2.39,
+   "text": "Türkiye'de yan yana iki çukur var."
+  },
+  {
+   "start": 2.76,
+   "end": 5.64,
+   "text": "Birinin adı Cennet, diğerinin adı Cehennem."
+  },
+  {
+   "start": 5.99,
+   "end": 8.45,
+   "text": "Ama asıl sır, ikisinin de dibinde."
+  },
+  {
+   "start": 8.8,
+   "end": 9.9,
+   "text": "Bunlar mağara değil, obruk."
+  },
+  {
+   "start": 10.26,
+   "end": 13.02,
+   "text": "Yeraltı suyu kireç taşını eritti, tavan çöktü."
+  },
+  {
+   "start": 13.38,
+   "end": 16.93,
+   "text": "Cehennem'in derinliği 128 metre."
+  },
+  {
+   "start": 17.29,
+   "end": 18.76,
+   "text": "Duvarları içe doğru eğik; ekipmansız inmek imkânsız."
+  },
+  {
+   "start": 19.11,
+   "end": 22.45,
+   "text": "Rivayete göre Zeus, yüz başlı ejderha Typhon'u"
+  },
+  {
+   "start": 22.71,
+   "end": 24.3,
+   "text": "Etna'ya kapatmadan önce burada hapsetti."
+  },
+  {
+   "start": 24.66,
+   "end": 26.86,
+   "text": "Hemen yanındaki Cennet'e ise"
+  },
+  {
+   "start": 27.23,
+   "end": 28.79,
+   "text": "452 taş basamakla iniliyor."
+  },
+  {
+   "start": 29.09,
+   "end": 31.17,
+   "text": "Aşağıda hava birden serinliyor."
+  },
+  {
+   "start": 31.53,
+   "end": 35.08,
+   "text": "Dışarısı kavururken dip, adeta doğal klima."
+  },
+  {
+   "start": 35.35,
+   "end": 40.69,
+   "text": "Dipte, MS 5. yüzyıldan bir kilise sizi bekliyor."
+  },
+  {
+   "start": 41.06,
+   "end": 42.22,
+   "text": "Kapısındaki kitabe: Paulus, Meryem Ana'ya adadı."
+  },
+  {
+   "start": 42.53,
+   "end": 44.31,
+   "text": "Kilisenin arkasındaki mağaradan"
+  },
+  {
+   "start": 44.66,
+   "end": 48.46,
+   "text": "yeraltı suyunun uğultusu yükseliyor."
+  },
+  {
+   "start": 48.83,
+   "end": 51.49,
+   "text": "Sen olsan 452 basamağı iner miydin?"
+  },
+  {
+   "start": 51.85,
+   "end": 52.68,
+   "text": "Yorumlara yaz."
+  }
+ ]
+}
