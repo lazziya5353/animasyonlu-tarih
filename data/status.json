@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "ishak-pasa-sarayinin-tarihi: ses hazır",
-  "cikti": "projects/ishak-pasa-sarayinin-tarihi",
-  "zaman": "2026-11-13T13:01:31Z"
+  "mesaj": "cennet-ve-cehennem-obruklari: ses hazır",
+  "cikti": "projects/cennet-ve-cehennem-obruklari",
+  "zaman": "2026-11-13T14:00:04Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-13T13:30:46Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi: kurgu ✓",
-  "cikti": "projects/rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi/kontrol",
-  "zaman": "2026-11-13T13:30:42Z"
+  "durum": "hata",
+  "mesaj": "cennet-ve-cehennem-obruklari: gorsel ✗",
+  "cikti": "projects/cennet-ve-cehennem-obruklari/kontrol",
+  "zaman": "2026-11-13T14:05:52Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
