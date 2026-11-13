@@ -29,9 +29,9 @@
    "anim": {
     "tur": "zoom",
     "from": [
-     62,
-     33,
-     150
+     36.5,
+     38.5,
+     70
     ],
     "to": [
      38.741,
@@ -82,7 +82,7 @@
     0.55
    ],
    "video": "k1.mp4",
-   "video_url": "https://PENDING_K1",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_181344_b888845f-779f-4bd1-844f-e7fae52ae0a4.mp4",
    "v_bas": 0.0,
    "v_son": 5.0
   },
@@ -112,7 +112,7 @@
    "effect": "type",
    "type_text": "ANTİOKHOS · KOMMAGENE · ZEUS · APOLLON · HERAKLES",
    "video": "k1.mp4",
-   "video_url": "https://PENDING_K1",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_181344_b888845f-779f-4bd1-844f-e7fae52ae0a4.mp4",
    "v_bas": 5.0,
    "v_son": 10.0
   },
@@ -140,7 +140,7 @@
     0.55
    ],
    "video": "k1.mp4",
-   "video_url": "https://PENDING_K1",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_181344_b888845f-779f-4bd1-844f-e7fae52ae0a4.mp4",
    "v_bas": 10.0,
    "v_son": 15.0
   },
@@ -169,7 +169,7 @@
    ],
    "effect": "glow",
    "video": "k1.mp4",
-   "video_url": "https://PENDING_K1",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_181344_b888845f-779f-4bd1-844f-e7fae52ae0a4.mp4",
    "v_bas": 15.0,
    "v_son": 20.0
   },
@@ -197,7 +197,7 @@
     0.55
    ],
    "video": "k1.mp4",
-   "video_url": "https://PENDING_K1",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_181344_b888845f-779f-4bd1-844f-e7fae52ae0a4.mp4",
    "v_bas": 20.0,
    "v_son": 25.0
   },

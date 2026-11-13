@@ -19,6 +19,10 @@ BOLGE = {  # ad: (lon0, lon1, lat0, lat1, k = derece başına piksel (enlem))
     "misir": (24.0, 37.0, 21.0, 33.0, 150),
     "giza": (31.05, 31.25, 29.93, 30.05, 12000),
     "cin": (73.0, 125.0, 22.0, 48.0, 45),
+    "orta": (10.0, 62.0, 18.0, 52.0, 45),
+    "dogu_anadolu": (34.0, 44.0, 35.5, 40.5, 450),
+    "kahire": (30.4, 32.0, 29.4, 30.6, 1300),
+    "kuzey_cin": (95.0, 122.0, 34.0, 43.0, 160),
 }
 SADECE = [a for a in os.environ.get("BOLGELER", "").split(",") if a]
 
