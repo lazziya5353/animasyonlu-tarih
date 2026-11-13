@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi videosu hazır",
-  "cikti": "release:video-rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi",
-  "zaman": "2026-11-13T12:53:04Z"
+  "mesaj": "ishak-pasa-sarayinin-tarihi videosu hazır",
+  "cikti": "release:video-ishak-pasa-sarayinin-tarihi",
+  "zaman": "2026-11-13T13:09:53Z"
  },
  "kontrol": {
   "durum": "hata",
-  "mesaj": "rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi: kurgu ✗",
-  "cikti": "projects/rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi/kontrol",
-  "zaman": "2026-11-13T12:52:58Z"
+  "mesaj": "ishak-pasa-sarayinin-tarihi: kurgu ✗",
+  "cikti": "projects/ishak-pasa-sarayinin-tarihi/kontrol",
+  "zaman": "2026-11-13T13:09:47Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
