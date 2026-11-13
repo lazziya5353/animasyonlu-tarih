@@ -12,13 +12,16 @@
    "year": 1462,
    "label": "1462",
    "prompt": "Vertical 9:16 cinematic wide shot of a wide river at dawn, many wooden boats and pontoon crossings carrying distant 15th-century Ottoman soldiers and horses to the far bank, misty reeds in the foreground, army shown only as small distant silhouettes, no flags, no text, main subject centered, empty sky space at the top and calm empty water space at the bottom",
-   "fx": [
-    "fog"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 cinematic wide shot of a wide river at dawn, many wooden boats and pontoon crossings carrying distant 15th-century Ottoman soldiers and horses to the far bank, misty reeds in the foreground, army shown only as small distant silhouettes, no flags, no text, main subject centered, empty sky space at the top and calm empty water space at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s01.jpg"
+   "image": "images/s01.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_233106_4400bb8d-dd91-4426-aace-4c16b7e73aeb.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -29,14 +32,16 @@
    "year": 1462,
    "label": "1462",
    "prompt": "Vertical 9:16 cinematic shot of an empty misty plain and dark forest edge in medieval Wallachia, a long column of a 15th-century army visible only as tiny distant silhouettes on a dirt road, lonely and tense mood, no text, no flags, main subject centered, open sky at the top, empty foreground at the bottom",
-   "fx": [
-    "fog",
-    "dust"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 cinematic shot of an empty misty plain and dark forest edge in medieval Wallachia, a long column of a 15th-century army visible only as tiny distant silhouettes on a dirt road, lonely and tense mood, no text, no flags, main subject centered, open sky at the top, empty foreground at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s02.jpg"
+   "image": "images/s02.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_233106_4400bb8d-dd91-4426-aace-4c16b7e73aeb.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -47,14 +52,16 @@
    "year": 1462,
    "label": "17 Haziran 1462",
    "prompt": "Vertical 9:16 dramatic night scene, a group of horsemen with burning torches galloping across a dark field toward a large army camp of tents in the far distance, riders shown only as dark silhouettes from far away, glowing torchlight and drifting sparks, no faces, no text, no flags, main subject centered, dark sky space at the top, dark ground space at the bottom",
-   "fx": [
-    "ember",
-    "smoke"
-   ],
+   "fx": [],
    "effect": "stamp",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 dramatic night scene, a group of horsemen with burning torches galloping across a dark field toward a large army camp of tents in the far distance, riders shown only as dark silhouettes from far away, glowing torchlight and drifting sparks, no faces, no text, no flags, main subject centered, dark sky space at the top, dark ground space at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s03.jpg"
+   "image": "images/s03.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_233106_4400bb8d-dd91-4426-aace-4c16b7e73aeb.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -65,15 +72,16 @@
    "year": 1462,
    "label": "1462",
    "prompt": "Vertical 9:16 night view of a large ornate 15th-century Ottoman royal tent glowing from within at the center of a camp, seen from a distance and from behind, torch-bearing horsemen as dark silhouettes approaching through smoke, chaotic but non-violent atmosphere, no blood, no faces, no text, no flags, main subject centered, space at the top and at the bottom",
-   "fx": [
-    "flicker",
-    "smoke",
-    "ember_few"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 night view of a large ornate 15th-century Ottoman royal tent glowing from within at the center of a camp, seen from a distance and from behind, torch-bearing horsemen as dark silhouettes approaching through smoke, chaotic but non-violent atmosphere, no blood, no faces, no text, no flags, main subject centered, space at the top and at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s04.jpg"
+   "image": "images/s04.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_233106_4400bb8d-dd91-4426-aace-4c16b7e73aeb.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -84,14 +92,16 @@
    "year": 1462,
    "label": "1462",
    "prompt": "Vertical 9:16 gray dawn light over a quiet Ottoman camp after a night raid, scattered tents and smoldering torches, rows of Janissaries in tall white felt hats standing in formation as distant silhouettes seen from behind, calm and tense mood, no blood, no bodies, no faces, no text, no flags, main subject centered, pale sky space at the top, empty ground at the bottom",
-   "fx": [
-    "smoke",
-    "fog"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 gray dawn light over a quiet Ottoman camp after a night raid, scattered tents and smoldering torches, rows of Janissaries in tall white felt hats standing in formation as distant silhouettes seen from behind, calm and tense mood, no blood, no bodies, no faces, no text, no flags, main subject centered, pale sky space at the top, empty ground at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s05.jpg"
+   "image": "images/s05.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_233106_4400bb8d-dd91-4426-aace-4c16b7e73aeb.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -102,14 +112,16 @@
    "year": 1462,
    "label": "1462",
    "prompt": "Vertical 9:16 eerie foggy view of an abandoned medieval Wallachian town with its gates wide open and empty, in the far distance a faint forest of tall thin wooden poles as dim silhouettes in heavy mist, only vertical poles, no bodies, no blood, no people, no text, no flags, main subject centered, grey sky space at the top, misty empty road at the bottom",
-   "fx": [
-    "fog",
-    "dust"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 eerie foggy view of an abandoned medieval Wallachian town with its gates wide open and empty, in the far distance a faint forest of tall thin wooden poles as dim silhouettes in heavy mist, only vertical poles, no bodies, no blood, no people, no text, no flags, main subject centered, grey sky space at the top, misty empty road at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s06.jpg"
+   "image": "images/s06.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_235851_7560113e-0b49-4af4-a9d6-bb1d0e4f1f60.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -120,14 +132,16 @@
    "year": 1462,
    "label": "1462",
    "prompt": "Vertical 9:16 interior of a dim medieval Wallachian court hall with stone arches and a simple carved wooden throne at the center, a young nobleman in 15th-century Eastern European noble robes seen only from behind as a silhouette, a few boyars in fur-trimmed caftans as distant shadowy figures, warm candlelight, no faces, no text, no flags, main subject centered, dark ceiling space at the top, stone floor space at the bottom",
-   "fx": [
-    "flicker",
-    "dust"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 interior of a dim medieval Wallachian court hall with stone arches and a simple carved wooden throne at the center, a young nobleman in 15th-century Eastern European noble robes seen only from behind as a silhouette, a few boyars in fur-trimmed caftans as distant shadowy figures, warm candlelight, no faces, no text, no flags, main subject centered, dark ceiling space at the top, stone floor space at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s07.jpg"
+   "image": "images/s07.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_235851_7560113e-0b49-4af4-a9d6-bb1d0e4f1f60.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -138,14 +152,16 @@
    "year": 1462,
    "label": "1462",
    "prompt": "Vertical 9:16 cold dusk scene, a lone rider in a dark cloak and fur hat seen far away as a silhouette on a mountain path heading toward snowy Carpathian peaks, on the horizon a distant stone castle on a hill above a wide river bend, no faces, no text, no flags, main subject centered, twilight sky at the top, snowy path at the bottom",
-   "fx": [
-    "snow",
-    "fog"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 cold dusk scene, a lone rider in a dark cloak and fur hat seen far away as a silhouette on a mountain path heading toward snowy Carpathian peaks, on the horizon a distant stone castle on a hill above a wide river bend, no faces, no text, no flags, main subject centered, twilight sky at the top, snowy path at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s08.jpg"
+   "image": "images/s08.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_235851_7560113e-0b49-4af4-a9d6-bb1d0e4f1f60.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -156,14 +172,16 @@
    "year": 1476,
    "label": "1476",
    "prompt": "Vertical 9:16 cold winter battlefield at dawn in thick fog, far-off silhouettes of cavalry and spears barely visible in the mist, bare trees and frozen ground, somber and quiet mood, no blood, no bodies, no faces, no text, no flags, main subject centered, pale sky space at the top, empty snowy ground at the bottom",
-   "fx": [
-    "fog",
-    "snow"
-   ],
+   "fx": [],
    "effect": "stamp",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 cold winter battlefield at dawn in thick fog, far-off silhouettes of cavalry and spears barely visible in the mist, bare trees and frozen ground, somber and quiet mood, no blood, no bodies, no faces, no text, no flags, main subject centered, pale sky space at the top, empty snowy ground at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s09.jpg"
+   "image": "images/s09.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_235851_7560113e-0b49-4af4-a9d6-bb1d0e4f1f60.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -174,14 +192,16 @@
    "year": 1897,
    "label": "1897",
    "prompt": "Vertical 9:16 gothic fantasy scene, a lone dark castle on a high cliff in the Carpathian mountains under a huge full moon, bats flying across the sky, swirling mist below, completely empty of people, no text, no flags, main subject centered, moonlit sky space at the top, dark misty valley at the bottom",
-   "fx": [
-    "fog",
-    "flicker"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 gothic fantasy scene, a lone dark castle on a high cliff in the Carpathian mountains under a huge full moon, bats flying across the sky, swirling mist below, completely empty of people, no text, no flags, main subject centered, moonlit sky space at the top, dark misty valley at the bottom, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s10.jpg"
+   "image": "images/s10.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_235851_7560113e-0b49-4af4-a9d6-bb1d0e4f1f60.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
   }
  ],
  "finale": "",

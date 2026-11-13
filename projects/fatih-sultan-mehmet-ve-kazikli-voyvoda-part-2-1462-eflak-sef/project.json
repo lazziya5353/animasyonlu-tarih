@@ -16,9 +16,7 @@
    "sub": "TUNA GEÇİLDİ",
    "year": 1462,
    "label": "1462",
-   "fx": [
-    "fog"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -26,7 +24,12 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_233106_4400bb8d-dd91-4426-aace-4c16b7e73aeb.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s02.jpg",
@@ -39,10 +42,7 @@
    "sub": "KARŞIDA ORDU YOK",
    "year": 1462,
    "label": "1462",
-   "fx": [
-    "fog",
-    "dust"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -50,7 +50,12 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_233106_4400bb8d-dd91-4426-aace-4c16b7e73aeb.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s03.jpg",
@@ -63,10 +68,7 @@
    "sub": "17 HAZİRAN GECESİ",
    "year": 1462,
    "label": "17 Haziran 1462",
-   "fx": [
-    "ember",
-    "smoke"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -75,7 +77,12 @@
     0.5,
     0.5
    ],
-   "effect": "stamp"
+   "effect": "stamp",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_233106_4400bb8d-dd91-4426-aace-4c16b7e73aeb.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s04.jpg",
@@ -88,11 +95,7 @@
    "sub": "SULTANIN ÇADIRI",
    "year": 1462,
    "label": "1462",
-   "fx": [
-    "flicker",
-    "smoke",
-    "ember_few"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -100,7 +103,12 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_233106_4400bb8d-dd91-4426-aace-4c16b7e73aeb.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s05.jpg",
@@ -113,10 +121,7 @@
    "sub": "SULTAN KURTULDU",
    "year": 1462,
    "label": "1462",
-   "fx": [
-    "smoke",
-    "fog"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -124,7 +129,12 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_233106_4400bb8d-dd91-4426-aace-4c16b7e73aeb.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s06.jpg",
@@ -137,10 +147,7 @@
    "sub": "ŞEHİR BOŞALTILMIŞ",
    "year": 1462,
    "label": "1462",
-   "fx": [
-    "fog",
-    "dust"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -148,7 +155,12 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_235851_7560113e-0b49-4af4-a9d6-bb1d0e4f1f60.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s07.jpg",
@@ -161,10 +173,7 @@
    "sub": "YENİ VOYVODA",
    "year": 1462,
    "label": "1462",
-   "fx": [
-    "flicker",
-    "dust"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -172,7 +181,12 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_235851_7560113e-0b49-4af4-a9d6-bb1d0e4f1f60.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s08.jpg",
@@ -185,10 +199,7 @@
    "sub": "MACARİSTAN'A SIĞINDI",
    "year": 1462,
    "label": "1462",
-   "fx": [
-    "snow",
-    "fog"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -196,7 +207,12 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_235851_7560113e-0b49-4af4-a9d6-bb1d0e4f1f60.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s09.jpg",
@@ -209,10 +225,7 @@
    "sub": "SON SAVAŞ",
    "year": 1476,
    "label": "1476",
-   "fx": [
-    "fog",
-    "snow"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -221,7 +234,12 @@
     0.5,
     0.5
    ],
-   "effect": "stamp"
+   "effect": "stamp",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_235851_7560113e-0b49-4af4-a9d6-bb1d0e4f1f60.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s10.jpg",
@@ -234,10 +252,7 @@
    "sub": "DRAKULA ROMANI",
    "year": 1897,
    "label": "1897",
-   "fx": [
-    "fog",
-    "flicker"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -245,7 +260,12 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_235851_7560113e-0b49-4af4-a9d6-bb1d0e4f1f60.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
   }
  ],
  "eras": [
