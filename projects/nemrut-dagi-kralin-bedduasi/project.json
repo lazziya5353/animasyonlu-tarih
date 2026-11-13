@@ -236,8 +236,8 @@
    "start": null,
    "end": null,
    "lines": [
-    "Yazıtta bir de beddua var.",
-    "Bu kutsal yere zarar veren, soyuyla birlikte tanrıların cezasına uğrasın."
+    "Yazıtın sonunda, bu kutsal yere zarar verenlere bir beddua var.",
+    "Ekranı durdur ve oku."
    ],
    "big": null,
    "sub": null,
@@ -268,7 +268,8 @@
      "tanrıların cezasına uğrasın."
     ],
     "imza": "— I. ANTİOKHOS · MÖ 1. YÜZYIL (ÖZET ÇEVİRİ)",
-    "boyut": 52
+    "boyut": 52,
+    "yazma_sure": 2.0
    }
   },
   {
