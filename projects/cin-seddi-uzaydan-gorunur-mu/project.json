@@ -1,0 +1,460 @@
+{
+ "title": "Çin Seddi Uzaydan Görünür mü?",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "ÇİN SEDDİ UZAYDAN GÖRÜNÜR MÜ?",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Okulda hep öğrettiler: Çin Seddi, uzaydan görünen tek yapı.",
+    "Peki gerçekten öyle mi?"
+   ],
+   "big": "ÇİN SEDDİ",
+   "sub": "UZAYDAN GÖRÜNÜR MÜ?",
+   "year": null,
+   "label": "EFSANE",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     75,
+     30,
+     150
+    ],
+    "to": [
+     108,
+     38.5,
+     30
+    ],
+    "zoom_sure": 5.5,
+    "etiketler": [
+     [
+      "ÇİN",
+      104,
+      33
+     ]
+    ]
+   }
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Çin'in ilk astronotu Yang Liwei, 2003'te uzaya çıktı.",
+    "Ve Seddi göremediğini söyledi."
+   ],
+   "big": "2003",
+   "sub": "YANG LİWEİ",
+   "year": null,
+   "label": "UZAY",
+   "fx": [
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Sebebi basit: sur dar ve rengi toprağa karışıyor.",
+    "Yollar ve şehirler bile ondan daha kolay seçiliyor."
+   ],
+   "big": "NEDEN?",
+   "sub": "DAR VE TOPRAK RENGİ",
+   "year": null,
+   "label": "UZAY",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Peki nereden nereye uzanıyor?",
+    "Batıda Jiayuguan'dan, doğuda denize kadar."
+   ],
+   "big": "HARİTA",
+   "sub": "BATIDAN DOĞUYA",
+   "year": null,
+   "label": "ÇİN",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     108,
+     38.5,
+     30
+    ],
+    "to": [
+     109,
+     39.2,
+     26
+    ],
+    "zoom_sure": 1.0,
+    "cizgi": [
+     [
+      98.22,
+      39.8
+     ],
+     [
+      100.45,
+      38.93
+     ],
+     [
+      102.64,
+      37.93
+     ],
+     [
+      104.6,
+      37.4
+     ],
+     [
+      106.27,
+      38.47
+     ],
+     [
+      107.6,
+      38.2
+     ],
+     [
+      109.73,
+      38.29
+     ],
+     [
+      111.3,
+      39.5
+     ],
+     [
+      113.3,
+      40.1
+     ],
+     [
+      115.0,
+      40.5
+     ],
+     [
+      116.0,
+      40.43
+     ],
+     [
+      117.5,
+      40.3
+     ],
+     [
+      119.8,
+      40.0
+     ]
+    ],
+    "cizgi_sure": 4.5,
+    "cizgi_etiketler": [
+     [
+      "JİAYUGUAN",
+      98.22,
+      39.8,
+      60
+     ],
+     [
+      "SHANHAİGUAN",
+      119.8,
+      40.0,
+      60
+     ]
+    ],
+    "etiketler": [
+     [
+      "BOZKIR",
+      108,
+      43.2
+     ]
+    ]
+   }
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "İlk büyük sur, MÖ üçüncü yüzyılda imparator Qin Shi Huang'ın emriyle yapıldı."
+   ],
+   "big": "MÖ 3. YY",
+   "sub": "QİN SHİ HUANG",
+   "year": null,
+   "label": "QİN",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Kimden korkuyorlardı?",
+    "Kuzeyin atlı savaşçılarından: Hunlardan."
+   ],
+   "big": "HUNLAR",
+   "sub": "KUZEYİN ATLILARI",
+   "year": null,
+   "label": "BOZKIR",
+   "fx": [
+    "dust",
+    "smoke"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Türk tarihçilerin çoğu, Asya Hunlarını Türklerin ataları sayar.",
+    "Yüzyıllar sonra sahneye Göktürkler çıktı."
+   ],
+   "big": "GÖKTÜRKLER",
+   "sub": "BOZKIRIN YENİ GÜCÜ",
+   "year": null,
+   "label": "6. YY",
+   "fx": [
+    "gold"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Sui hanedanı, Göktürklere karşı Seddi tam yedi kez onardı."
+   ],
+   "big": "7 KEZ",
+   "sub": "GÖKTÜRKLERE KARŞI",
+   "year": null,
+   "label": "SUİ",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "glow",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bugün gördüğümüz tuğla surların çoğu ise",
+    "çok sonra, Ming döneminde, Moğollara karşı yapıldı."
+   ],
+   "big": "MİNG",
+   "sub": "MOĞOLLARA KARŞI",
+   "year": null,
+   "label": "MİNG",
+   "fx": [
+    "smoke"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Uzaydan ancak zoom'lu kamerayla, doğru ışıkta fotoğraflanabiliyor.",
+    "Çıplak gözle değil."
+   ],
+   "big": "GÖRÜNMEZ",
+   "sub": "ÇIPLAK GÖZLE",
+   "year": null,
+   "label": "GERÇEK",
+   "fx": [
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Sence Göktürkler olmasa, Çin Seddi bu kadar büyür müydü?",
+    "Yorumlara yaz."
+   ],
+   "big": "SENCE?",
+   "sub": "GÖKTÜRKLER OLMASA?",
+   "year": null,
+   "label": "BUGÜN",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  }
+ ],
+ "eras": [
+  {
+   "name": "EFSANE",
+   "from": 0,
+   "to": 2
+  },
+  {
+   "name": "SUR",
+   "from": 3,
+   "to": 4
+  },
+  {
+   "name": "BOZKIR",
+   "from": 5,
+   "to": 8
+  },
+  {
+   "name": "GERÇEK",
+   "from": 9,
+   "to": 10
+  }
+ ],
+ "outro_plan": {
+  "title": "GÖKTÜRKLER OLMASA?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 7,
+   "value": 7,
+   "unit": "KEZ ONARILDI",
+   "small": "SUİ HANEDANI · GÖKTÜRKLERE KARŞI"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true
+}

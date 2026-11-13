@@ -1,0 +1,391 @@
+{
+ "baslik": "Çin Seddi Uzaydan Görünür mü?",
+ "hook": "ÇİN SEDDİ UZAYDAN GÖRÜNÜR MÜ?",
+ "map_region": "anadolu",
+ "sahneler": [
+  {
+   "lines": [
+    "Okulda hep öğrettiler: Çin Seddi, uzaydan görünen tek yapı.",
+    "Peki gerçekten öyle mi?"
+   ],
+   "big": "ÇİN SEDDİ",
+   "sub": "UZAYDAN GÖRÜNÜR MÜ?",
+   "label": "EFSANE",
+   "fx": [],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     75,
+     30,
+     150
+    ],
+    "to": [
+     108,
+     38.5,
+     30
+    ],
+    "zoom_sure": 5.5,
+    "etiketler": [
+     [
+      "ÇİN",
+      104,
+      33
+     ]
+    ]
+   },
+   "image": "images/s01.jpg",
+   "prompt": "Great Wall",
+   "prompt_tam": "Great Wall"
+  },
+  {
+   "lines": [
+    "Çin'in ilk astronotu Yang Liwei, 2003'te uzaya çıktı.",
+    "Ve Seddi göremediğini söyledi."
+   ],
+   "big": "2003",
+   "sub": "YANG LİWEİ",
+   "label": "UZAY",
+   "fx": [
+    "rays"
+   ],
+   "image": "images/s02.jpg",
+   "prompt": "Great Wall",
+   "prompt_tam": "Great Wall",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "lines": [
+    "Sebebi basit: sur dar ve rengi toprağa karışıyor.",
+    "Yollar ve şehirler bile ondan daha kolay seçiliyor."
+   ],
+   "big": "NEDEN?",
+   "sub": "DAR VE TOPRAK RENGİ",
+   "label": "UZAY",
+   "fx": [
+    "dust"
+   ],
+   "image": "images/s03.jpg",
+   "prompt": "Great Wall",
+   "prompt_tam": "Great Wall",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "lines": [
+    "Peki nereden nereye uzanıyor?",
+    "Batıda Jiayuguan'dan, doğuda denize kadar."
+   ],
+   "big": "HARİTA",
+   "sub": "BATIDAN DOĞUYA",
+   "label": "ÇİN",
+   "fx": [],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     108,
+     38.5,
+     30
+    ],
+    "to": [
+     109,
+     39.2,
+     26
+    ],
+    "zoom_sure": 1.0,
+    "cizgi": [
+     [
+      98.22,
+      39.8
+     ],
+     [
+      100.45,
+      38.93
+     ],
+     [
+      102.64,
+      37.93
+     ],
+     [
+      104.6,
+      37.4
+     ],
+     [
+      106.27,
+      38.47
+     ],
+     [
+      107.6,
+      38.2
+     ],
+     [
+      109.73,
+      38.29
+     ],
+     [
+      111.3,
+      39.5
+     ],
+     [
+      113.3,
+      40.1
+     ],
+     [
+      115.0,
+      40.5
+     ],
+     [
+      116.0,
+      40.43
+     ],
+     [
+      117.5,
+      40.3
+     ],
+     [
+      119.8,
+      40.0
+     ]
+    ],
+    "cizgi_sure": 4.5,
+    "cizgi_etiketler": [
+     [
+      "JİAYUGUAN",
+      98.22,
+      39.8,
+      60
+     ],
+     [
+      "SHANHAİGUAN",
+      119.8,
+      40.0,
+      60
+     ]
+    ],
+    "etiketler": [
+     [
+      "BOZKIR",
+      108,
+      43.2
+     ]
+    ]
+   },
+   "image": "images/s04.jpg",
+   "prompt": "Great Wall",
+   "prompt_tam": "Great Wall"
+  },
+  {
+   "lines": [
+    "İlk büyük sur, MÖ üçüncü yüzyılda imparator Qin Shi Huang'ın emriyle yapıldı."
+   ],
+   "big": "MÖ 3. YY",
+   "sub": "QİN SHİ HUANG",
+   "label": "QİN",
+   "fx": [
+    "dust"
+   ],
+   "image": "images/s05.jpg",
+   "prompt": "Great Wall",
+   "prompt_tam": "Great Wall",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "lines": [
+    "Kimden korkuyorlardı?",
+    "Kuzeyin atlı savaşçılarından: Hunlardan."
+   ],
+   "big": "HUNLAR",
+   "sub": "KUZEYİN ATLILARI",
+   "label": "BOZKIR",
+   "fx": [
+    "dust",
+    "smoke"
+   ],
+   "effect": "stamp",
+   "image": "images/s06.jpg",
+   "prompt": "Great Wall",
+   "prompt_tam": "Great Wall",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "lines": [
+    "Türk tarihçilerin çoğu, Asya Hunlarını Türklerin ataları sayar.",
+    "Yüzyıllar sonra sahneye Göktürkler çıktı."
+   ],
+   "big": "GÖKTÜRKLER",
+   "sub": "BOZKIRIN YENİ GÜCÜ",
+   "label": "6. YY",
+   "fx": [
+    "gold"
+   ],
+   "image": "images/s07.jpg",
+   "prompt": "Great Wall",
+   "prompt_tam": "Great Wall",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  },
+  {
+   "lines": [
+    "Sui hanedanı, Göktürklere karşı Seddi tam yedi kez onardı."
+   ],
+   "big": "7 KEZ",
+   "sub": "GÖKTÜRKLERE KARŞI",
+   "label": "SUİ",
+   "fx": [
+    "dust"
+   ],
+   "effect": "glow",
+   "image": "images/s08.jpg",
+   "prompt": "Great Wall",
+   "prompt_tam": "Great Wall",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "lines": [
+    "Bugün gördüğümüz tuğla surların çoğu ise",
+    "çok sonra, Ming döneminde, Moğollara karşı yapıldı."
+   ],
+   "big": "MİNG",
+   "sub": "MOĞOLLARA KARŞI",
+   "label": "MİNG",
+   "fx": [
+    "smoke"
+   ],
+   "image": "images/s09.jpg",
+   "prompt": "Great Wall",
+   "prompt_tam": "Great Wall",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "lines": [
+    "Uzaydan ancak zoom'lu kamerayla, doğru ışıkta fotoğraflanabiliyor.",
+    "Çıplak gözle değil."
+   ],
+   "big": "GÖRÜNMEZ",
+   "sub": "ÇIPLAK GÖZLE",
+   "label": "GERÇEK",
+   "fx": [
+    "rays"
+   ],
+   "image": "images/s10.jpg",
+   "prompt": "Great Wall",
+   "prompt_tam": "Great Wall",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "lines": [
+    "Sence Göktürkler olmasa, Çin Seddi bu kadar büyür müydü?",
+    "Yorumlara yaz."
+   ],
+   "big": "SENCE?",
+   "sub": "GÖKTÜRKLER OLMASA?",
+   "label": "BUGÜN",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "image": "images/s11.jpg",
+   "prompt": "Great Wall",
+   "prompt_tam": "Great Wall",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  }
+ ],
+ "finale": "",
+ "maps": [],
+ "cards": [
+  {
+   "scene": 7,
+   "value": 7,
+   "unit": "KEZ ONARILDI",
+   "small": "SUİ HANEDANI · GÖKTÜRKLERE KARŞI"
+  }
+ ],
+ "eras": [
+  {
+   "name": "EFSANE",
+   "from": 0,
+   "to": 2
+  },
+  {
+   "name": "SUR",
+   "from": 3,
+   "to": 4
+  },
+  {
+   "name": "BOZKIR",
+   "from": 5,
+   "to": 8
+  },
+  {
+   "name": "GERÇEK",
+   "from": 9,
+   "to": 10
+  }
+ ],
+ "outro": {
+  "title": "GÖKTÜRKLER OLMASA?",
+  "line": "Yorumlara yaz"
+ },
+ "aciklama": "Çin Seddi uzaydan görünür mü? 👀 Çin'in ilk astronotu bile göremedi.\n\nSur ilk olarak bozkırın atlı savaşçıları Hunlara karşı yapıldı. Sui hanedanı Göktürklere karşı Seddi tam 7 kez onardı.\n\n💬 Sence Göktürkler olmasa Seddi bu kadar büyür müydü?\n📤 Bunu bilmeyen bir arkadaşına gönder.\n🔔 Takip et @animasyon.tarih\n\n(Görseller temsilidir. Uydu: Sentinel-2 cloudless 2016, EOX)",
+ "kanca_alternatifleri": [
+  "ÇİN SEDDİ UZAYDAN GÖRÜNÜR MÜ?",
+  "ÇİNLİLER KİMDEN KORKTU?",
+  "GÖKTÜRKLER İÇİN 7 KEZ ONARILDI"
+ ],
+ "aciklama_alternatifleri": [],
+ "hashtagler": [
+  "#tarih",
+  "#keşfet",
+  "#reels",
+  "#çinseddi",
+  "#göktürkler",
+  "#hunlar",
+  "#türktarihi",
+  "#uzay",
+  "#efsane",
+  "#tarihbilgisi",
+  "#animasyontarih"
+ ],
+ "kaynaklar": [
+  "https://www.britannica.com/topic/Great-Wall-of-China/The-Han-through-Yuan-dynasties",
+  "https://www.spacecentre.nz/resources/faq/solar-system/earth/great-wall-china.html",
+  "https://www.livescience.com/34212-great-wall-of-china-only-manmade-object-visible-from-space.html",
+  "https://brewminate.com/the-construction-phases-of-the-great-wall-of-china/",
+  "https://www.Britannica.Com/place/China/The-Sui-dynasty"
+ ],
+ "kontrol_notlari": [
+  "Sui 7 kez onarım, Tujue=Göktürkler: Britannica.",
+  "Yang Liwei 2003: birden çok kaynak.",
+  "Hun-Türk bağı: 'Türk tarihçilerin çoğu ... sayar' diye dengeli ifade."
+ ],
+ "konu": "Çin Seddi Uzaydan Görünür mü",
+ "tarih": "",
+ "slug": "cin-seddi-uzaydan-gorunur-mu",
+ "durum": "onaylandi",
+ "sade": true,
+ "seslendirme_metni": "Okulda hep öğrettiler: Çin Seddi, uzaydan görünen tek yapı.\nPeki gerçekten öyle mi?\nÇin'in ilk astronotu Yang Livey, iki bin üçte uzaya çıktı.\nVe Seddi göremediğini söyledi.\nSebebi basit: sur dar ve rengi toprağa karışıyor.\nYollar ve şehirler bile ondan daha kolay seçiliyor.\nPeki nereden nereye uzanıyor?\nBatıda Ciyayugüan'dan, doğuda denize kadar.\nİlk büyük sur, Milattan önce üçüncü yüzyılda imparator Çin Şi Huang'ın emriyle yapıldı.\nKimden korkuyorlardı?\nKuzeyin atlı savaşçılarından: Hunlardan.\nTürk tarihçilerin çoğu, Asya Hunlarını Türklerin ataları sayar.\nYüzyıllar sonra sahneye Göktürkler çıktı.\nSuy hanedanı, Göktürklere karşı Seddi tam yedi kez onardı.\nBugün gördüğümüz tuğla surların çoğu ise\nçok sonra, Ming döneminde, Moğollara karşı yapıldı.\nUzaydan ancak zumlu kamerayla, doğru ışıkta fotoğraflanabiliyor.\nÇıplak gözle değil.\nSence Göktürkler olmasa, Çin Seddi bu kadar büyür müydü?\nYorumlara yaz."
+}
