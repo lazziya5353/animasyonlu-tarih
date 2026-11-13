@@ -8,12 +8,13 @@
   {
    "image": "images/s01.jpg",
    "start": 0.0,
-   "end": 3.93,
+   "end": 7.569999999999999,
    "lines": [
-    "Bu saray Türkiye'de. Hem de Ağrı Dağı'nın karşısında."
+    "Ağrı Dağı'nın karşısında, duvarlarında gizli bir ısıtma sistemi olan bir saray var.",
+    "Kapısı ise bugün Türkiye'de değil."
    ],
    "big": "AĞRI",
-   "sub": "TÜRKİYE'NİN DOĞUSU",
+   "sub": "GİZLİ ISITMA, KAYIP KAPI",
    "year": 1685,
    "label": "1685",
    "fx": [
@@ -34,8 +35,8 @@
   },
   {
    "image": "images/s02.jpg",
-   "start": 3.93,
-   "end": 10.17,
+   "start": 7.569999999999999,
+   "end": 14.33,
    "lines": [
     "Doğubayazıt'ta, İran sınırına yakın bir tepede yükseliyor. Alanı yaklaşık 7.600 metrekare."
    ],
@@ -61,8 +62,8 @@
   },
   {
    "image": "images/s03.jpg",
-   "start": 10.17,
-   "end": 14.129999999999999,
+   "start": 14.33,
+   "end": 18.490000000000002,
    "lines": [
     "İnşaatı 1685'te Çolak Abdi Paşa başlattı."
    ],
@@ -89,8 +90,8 @@
   },
   {
    "image": "images/s04.jpg",
-   "start": 14.129999999999999,
-   "end": 23.19,
+   "start": 18.490000000000002,
+   "end": 27.470000000000002,
    "lines": [
     "Çıldıroğulları ailesi nesiller boyu çalıştı. Taşlar çevre köylerden ve Ağrı Dağı'ndan taşındı. Saray yaklaşık 100 yılda tamamlandı."
    ],
@@ -116,8 +117,8 @@
   },
   {
    "image": "images/s05.jpg",
-   "start": 23.19,
-   "end": 27.19,
+   "start": 27.470000000000002,
+   "end": 32.370000000000005,
    "lines": [
     "Harem kapısının kitabesi, yapının İshak Paşa döneminde tamamlandığını bildirir."
    ],
@@ -145,8 +146,8 @@
   },
   {
    "image": "images/s06.jpg",
-   "start": 27.19,
-   "end": 35.190000000000005,
+   "start": 32.370000000000005,
+   "end": 40.11,
    "lines": [
     "Mimarisinde Osmanlı, Selçuklu ve İran izleri iç içe.",
     "Bazı kaynaklar Gürcü ve Ermeni etkisini de anar."
@@ -173,8 +174,8 @@
   },
   {
    "image": "images/s07.jpg",
-   "start": 35.190000000000005,
-   "end": 42.63,
+   "start": 40.11,
+   "end": 47.870000000000005,
    "lines": [
     "Duvar boşlukları, sarayda merkezî ısıtma sistemi olduğuna işaret ediyor.",
     "Bu, 18. yüzyıl için dikkat çekici bir ayrıntı."
@@ -201,8 +202,8 @@
   },
   {
    "image": "images/s08.jpg",
-   "start": 42.63,
-   "end": 49.51,
+   "start": 47.870000000000005,
+   "end": 54.35,
    "lines": [
     "Altın kaplamalı denen kapısı, 1877-1878 Rus işgalinde söküldü ve Rusya'ya götürüldü."
    ],
@@ -228,8 +229,8 @@
   },
   {
    "image": "images/s09.jpg",
-   "start": 49.51,
-   "end": 54.57,
+   "start": 54.35,
+   "end": 60.33,
    "lines": [
     "Sarayı 1840 depremi ve savaşlar yıprattı. Bugün restorasyonlarla ayakta."
    ],
@@ -255,13 +256,14 @@
   },
   {
    "image": "images/s10.jpg",
-   "start": 54.57,
-   "end": 61.576625,
+   "start": 60.33,
+   "end": 68.43558300000001,
    "lines": [
-    "Bugün Ağrı Dağı'na bakan saray, UNESCO Dünya Mirası Geçici Listesi'nde."
+    "Bugün UNESCO Dünya Mirası Geçici Listesi'nde.",
+    "Sence o kapı geri gelmeli mi? Yorumlara yaz."
    ],
    "big": "ARARAT",
-   "sub": "UNESCO GEÇİCİ LİSTE",
+   "sub": "KAPI GERİ GELMELİ Mİ?",
    "year": 2026,
    "label": "BUGÜN",
    "fx": [
@@ -345,8 +347,8 @@
  "sade": true,
  "maps": [
   {
-   "start": 10.17,
-   "end": 12.469999999999999,
+   "start": 14.33,
+   "end": 16.63,
    "cam_from": [
     43.78,
     38.989999999999995,
@@ -373,101 +375,111 @@
  ],
  "cards": [
   {
-   "start": 5.13,
-   "end": 9.87,
+   "start": 8.77,
+   "end": 14.03,
    "value": 7600,
    "unit": "M²",
    "small": "YAKLAŞIK SARAY ALANI"
   },
   {
-   "start": 15.329999999999998,
-   "end": 22.89,
+   "start": 19.69,
+   "end": 27.17,
    "value": 99,
    "unit": "YIL",
    "small": "SÜREN İNŞAAT"
   }
  ],
  "outro": {
-  "start": 55.876625,
+  "start": 62.735583000000005,
   "title": "İSHAK PAŞA SARAYI",
   "line": "Bir sonraki durak için takipte kal.",
-  "line_at": 58.176624999999994
+  "line_at": 65.035583
  },
- "duration": 62.08,
+ "duration": 68.94,
  "jumps": [
   {
-   "t": 14.129999999999999,
+   "t": 18.490000000000002,
    "value": 99
   },
   {
-   "t": 42.63,
+   "t": 47.870000000000005,
    "value": 93
   },
   {
-   "t": 49.51,
+   "t": 54.35,
    "value": 134
   }
  ],
  "captions": [
   {
    "start": 0.0,
-   "end": 3.32,
-   "text": "Bu saray Türkiye'de. Hem de Ağrı Dağı'nın karşısında."
+   "end": 4.78,
+   "text": "Ağrı Dağı'nın karşısında, duvarlarında gizli bir ısıtma sistemi olan bir saray var."
   },
   {
-   "start": 4.08,
-   "end": 9.72,
+   "start": 5.18,
+   "end": 7.2,
+   "text": "Kapısı ise bugün Türkiye'de değil."
+  },
+  {
+   "start": 7.72,
+   "end": 13.9,
    "text": "Doğubayazıt'ta, İran sınırına yakın bir tepede yükseliyor. Alanı yaklaşık 7.600 metrekare."
   },
   {
-   "start": 10.32,
-   "end": 13.94,
+   "start": 14.48,
+   "end": 18.06,
    "text": "İnşaatı 1685'te Çolak Abdi Paşa başlattı."
   },
   {
-   "start": 14.28,
-   "end": 22.74,
+   "start": 18.64,
+   "end": 27.14,
    "text": "Çıldıroğulları ailesi nesiller boyu çalıştı. Taşlar çevre köylerden ve Ağrı Dağı'ndan taşındı. Saray yaklaşık 100 yılda tamamlandı."
   },
   {
-   "start": 23.34,
-   "end": 27.31,
+   "start": 27.62,
+   "end": 31.8,
    "text": "Harem kapısının kitabesi, yapının İshak Paşa döneminde tamamlandığını bildirir."
   },
   {
-   "start": 27.34,
-   "end": 31.48,
+   "start": 32.52,
+   "end": 36.34,
    "text": "Mimarisinde Osmanlı, Selçuklu ve İran izleri iç içe."
   },
   {
-   "start": 31.98,
-   "end": 34.7,
+   "start": 36.86,
+   "end": 39.62,
    "text": "Bazı kaynaklar Gürcü ve Ermeni etkisini de anar."
   },
   {
-   "start": 35.34,
-   "end": 38.98,
+   "start": 40.26,
+   "end": 44.16,
    "text": "Duvar boşlukları, sarayda merkezî ısıtma sistemi olduğuna işaret ediyor."
   },
   {
-   "start": 39.58,
-   "end": 42.3,
+   "start": 44.72,
+   "end": 47.52,
    "text": "Bu, 18. yüzyıl için dikkat çekici bir ayrıntı."
   },
   {
-   "start": 42.78,
-   "end": 49.26,
+   "start": 48.02,
+   "end": 54.47,
    "text": "Altın kaplamalı denen kapısı, 1877-1878 Rus işgalinde söküldü ve Rusya'ya götürüldü."
   },
   {
-   "start": 49.66,
-   "end": 54.69,
+   "start": 54.5,
+   "end": 59.94,
    "text": "Sarayı 1840 depremi ve savaşlar yıprattı. Bugün restorasyonlarla ayakta."
   },
   {
-   "start": 54.72,
-   "end": 59.06,
-   "text": "Bugün Ağrı Dağı'na bakan saray, UNESCO Dünya Mirası Geçici Listesi'nde."
+   "start": 60.48,
+   "end": 63.02,
+   "text": "Bugün UNESCO Dünya Mirası Geçici Listesi'nde."
+  },
+  {
+   "start": 63.46,
+   "end": 65.9,
+   "text": "Sence o kapı geri gelmeli mi? Yorumlara yaz."
   }
  ]
 }
