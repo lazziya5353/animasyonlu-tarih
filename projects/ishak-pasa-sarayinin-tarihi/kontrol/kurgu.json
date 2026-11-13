@@ -1,7 +1,7 @@
 {
  "asama": "kurgu",
  "durum": "hata",
- "ozet": "62 sn, -14 LUFS, senkron 12/12",
+ "ozet": "69 sn, -15 LUFS, senkron 14/14",
  "maddeler": [
   {
    "seviye": "bilgi",
@@ -13,17 +13,12 @@
   },
   {
    "seviye": "hata",
-   "mesaj": "Harita üzerindeki 'TEBRİZ' etiketi sağ kenardan kesilmektedir.",
+   "mesaj": "Üst taraftaki harita etiketi ('DOĞU SINIRI') sol kenardan kadraj dışına taşmış ve kesilmiştir.",
    "sahne": 3
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "Altyazı metni (Duvar boşlukları...) parlak ateş ve taş zemin üzerinde kontrast eksikliği nedeniyle zor okunmaktadır.",
-   "sahne": 7
   }
  ],
- "sure": 62.1,
- "lufs": -14.2,
- "senkron": "12/12",
- "zaman": "2026-11-13T13:09:47Z"
+ "sure": 68.9,
+ "lufs": -14.8,
+ "senkron": "14/14",
+ "zaman": "2026-11-13T13:28:30Z"
 }

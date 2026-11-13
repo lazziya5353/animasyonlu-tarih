@@ -21,13 +21,13 @@
   "durum": "tamam",
   "mesaj": "ishak-pasa-sarayinin-tarihi videosu hazır",
   "cikti": "release:video-ishak-pasa-sarayinin-tarihi",
-  "zaman": "2026-11-13T13:09:53Z"
+  "zaman": "2026-11-13T13:28:34Z"
  },
  "kontrol": {
   "durum": "hata",
   "mesaj": "ishak-pasa-sarayinin-tarihi: kurgu ✗",
   "cikti": "projects/ishak-pasa-sarayinin-tarihi/kontrol",
-  "zaman": "2026-11-13T13:09:47Z"
+  "zaman": "2026-11-13T13:28:30Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
