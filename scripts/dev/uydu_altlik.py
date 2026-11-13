@@ -24,6 +24,7 @@ BOLGE = {  # ad: (lon0, lon1, lat0, lat1, k = derece başına piksel (enlem))
     "kahire": (30.4, 32.0, 29.4, 30.6, 1300),
     "kuzey_cin": (95.0, 122.0, 34.0, 43.0, 160),
 }
+BLUE_MARBLE = {"dunya", "orta", "cin", "kuzey_cin", "misir"}  # geniş açılar: NASA Blue Marble (kamu malı, kabartmalı, tek parça)
 SADECE = [a for a in os.environ.get("BOLGELER", "").split(",") if a]
 
 
@@ -68,7 +69,13 @@ def main():
     for ad, (lon0, lon1, lat0, lat1, k) in BOLGE.items():
         if SADECE and ad not in SADECE: continue
         C = math.cos(math.radians((lat0 + lat1) / 2)); Wp, Hp = int((lon1 - lon0) * k * C), int((lat1 - lat0) * k)
-        im = wms(EOX, lay, lon0, lon1, lat0, lat1, Wp, Hp, "image/jpeg")
+        if ad in BLUE_MARBLE:
+            im = None
+            for gl in ("BlueMarble_ShadedRelief_Bathymetry", "BlueMarble_NextGeneration", "BlueMarble_ShadedRelief"):
+                try: im = wms(GIBS, gl, lon0, lon1, lat0, lat1, Wp, Hp, "image/jpeg", v130=True); print("blue marble:", gl); break
+                except SystemExit as e: print("olmadı:", gl, e)
+            if im is None: im = wms(EOX, lay, lon0, lon1, lat0, lat1, Wp, Hp, "image/jpeg")
+        else: im = wms(EOX, lay, lon0, lon1, lat0, lat1, Wp, Hp, "image/jpeg")
         im.save(os.path.join(MAPDIR, f"uydu_{ad}.jpg"), quality=90); print("kaydedildi", ad, im.size)
     if SADECE: return _json(lay, title)
     lon0, lon1, lat0, lat1, k = BOLGE["marmara"]; C = math.cos(math.radians((lat0 + lat1) / 2))
