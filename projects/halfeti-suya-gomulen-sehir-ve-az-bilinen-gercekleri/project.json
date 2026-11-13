@@ -27,7 +27,11 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_011506_8cf53cb1-809a-4439-a657-8a95787cb980.mp4",
+   "v_bas": 0,
+   "v_son": 5
   },
   {
    "image": "images/s02.jpg",
@@ -51,7 +55,11 @@
     0.5,
     0.55
    ],
-   "effect": "stamp"
+   "effect": "stamp",
+   "video": "k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_011506_8cf53cb1-809a-4439-a657-8a95787cb980.mp4",
+   "v_bas": 5,
+   "v_son": 10
   },
   {
    "image": "images/s03.jpg",
@@ -74,7 +82,11 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_011506_8cf53cb1-809a-4439-a657-8a95787cb980.mp4",
+   "v_bas": 10,
+   "v_son": 15
   },
   {
    "image": "images/s04.jpg",
@@ -98,7 +110,11 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_011506_8cf53cb1-809a-4439-a657-8a95787cb980.mp4",
+   "v_bas": 15,
+   "v_son": 20
   },
   {
    "image": "images/s05.jpg",
@@ -122,7 +138,11 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_011506_8cf53cb1-809a-4439-a657-8a95787cb980.mp4",
+   "v_bas": 20,
+   "v_son": 25
   },
   {
    "image": "images/s06.jpg",
@@ -145,7 +165,11 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_015728_0a064a24-b1ed-412a-bcb2-8804aa33117c.mp4",
+   "v_bas": 0,
+   "v_son": 5
   },
   {
    "image": "images/s07.jpg",
@@ -169,7 +193,11 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_015728_0a064a24-b1ed-412a-bcb2-8804aa33117c.mp4",
+   "v_bas": 5,
+   "v_son": 10
   },
   {
    "image": "images/s08.jpg",
@@ -195,7 +223,11 @@
     0.55
    ],
    "effect": "type",
-   "type_text": "29 EKİM 2026 · BİRECİK BARAJI"
+   "type_text": "29 EKİM 2026 · BİRECİK BARAJI",
+   "video": "k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_015728_0a064a24-b1ed-412a-bcb2-8804aa33117c.mp4",
+   "v_bas": 10,
+   "v_son": 15
   },
   {
    "image": "images/s09.jpg",
@@ -220,7 +252,11 @@
     0.5,
     0.5
    ],
-   "effect": "glow"
+   "effect": "glow",
+   "video": "k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_015728_0a064a24-b1ed-412a-bcb2-8804aa33117c.mp4",
+   "v_bas": 15,
+   "v_son": 20
   },
   {
    "image": "images/s10.jpg",
@@ -243,7 +279,11 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_015728_0a064a24-b1ed-412a-bcb2-8804aa33117c.mp4",
+   "v_bas": 20,
+   "v_son": 25
   }
  ],
  "eras": [
