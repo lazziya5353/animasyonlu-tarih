@@ -1,0 +1,351 @@
+{
+ "title": "Rize'nin Tarihi ve Çayın Rize'ye Gelişi",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "RİZE HALKI ÇAYI İSTEMEDİ, 1924'TE KANUN ÇIKTI",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bugün Rize çayla anılır.",
+    "Oysa halk, çayı başta dikmek istemedi."
+   ],
+   "big": "RİZE",
+   "sub": "ÇAYIN ŞEHRİ",
+   "year": 395,
+   "label": "RİZE",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Eski kaynaklarda adı Rizayon geçer.",
+    "Sonra Roma, ardından Bizans hüküm sürdü."
+   ],
+   "big": "RİZAYON",
+   "sub": "ANTİK ÇAĞ",
+   "year": 395,
+   "label": "RİZAYON",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bin iki yüz dört'te Trabzon Rum İmparatorluğu kuruldu.",
+    "Rize de sınırları içindeydi."
+   ],
+   "big": "1204",
+   "sub": "TRABZON RUM DEVLETİ",
+   "year": 1204,
+   "label": "1204",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bin dört yüz altmış bir'de Fatih, Trabzon'u aldı.",
+    "Rize de Osmanlı'ya katıldı."
+   ],
+   "big": "1461",
+   "sub": "OSMANLI DÖNEMİ",
+   "year": 1461,
+   "label": "1461",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bin dört yüz seksen altı'da Rize,",
+    "yaklaşık bin iki yüz kişilik bir kale şehriydi."
+   ],
+   "big": "1486",
+   "sub": "KÜÇÜK KALE ŞEHRİ",
+   "year": 1486,
+   "label": "1486",
+   "fx": [
+    "fog",
+    "smoke"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bin dokuz yüz on yedi'de bir rapor,",
+    "çayın Rize'de yetişebileceğini yazdı."
+   ],
+   "big": "1917",
+   "sub": "ÇAY RAPORU",
+   "year": 1917,
+   "label": "1917",
+   "fx": [
+    "dust",
+    "flicker"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Zihni Derin Batum'dan fidan getirdi, ilgi görmedi.",
+    "Bin dokuz yüz yirmi dört'te kanun çıktı."
+   ],
+   "big": "1924",
+   "sub": "407 SAYILI KANUN",
+   "year": 1924,
+   "label": "1924",
+   "fx": [
+    "dust",
+    "flicker"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "type",
+   "type_text": "6 ŞUBAT 1924 · 407 SAYILI KANUN"
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bin dokuz yüz otuz sekiz'de ilk yaş çay hasadı yapıldı."
+   ],
+   "big": "1938",
+   "sub": "İLK HASAT",
+   "year": 1938,
+   "label": "1938",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bin dokuz yüz otuz dokuz mahsulü,",
+    "yirmi beş gramlık kutularla tanıtım için gönderildi."
+   ],
+   "big": "1939",
+   "sub": "25 GRAMLIK KUTULAR",
+   "year": 1939,
+   "label": "1939",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bin dokuz yüz kırk yedi'de Rize Fener'de,",
+    "günde altmış ton kapasiteli ilk fabrika açıldı."
+   ],
+   "big": "1947",
+   "sub": "İLK ÇAY FABRİKASI",
+   "year": 1947,
+   "label": "1947",
+   "fx": [
+    "smoke",
+    "gold"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "glow"
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bin dokuz yüz seksen dört'te çay serbest bırakıldı.",
+    "Bugün Çaykur ve özel fabrikalar çalışıyor."
+   ],
+   "big": "1984",
+   "sub": "SERBEST ÇAY",
+   "year": 1984,
+   "label": "1984",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Rize'nin çaya bu kadar zor ısındığına inanır mıydın?"
+   ],
+   "big": "RİZE",
+   "sub": "İNANIR MIYDIN?",
+   "year": 1984,
+   "label": "RİZE",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "ANTİK VE ORTAÇAĞ",
+   "from": 0,
+   "to": 4
+  },
+  {
+   "name": "ÇAYIN GELİŞİ",
+   "from": 5,
+   "to": 8
+  },
+  {
+   "name": "ÇAY ŞEHRİ",
+   "from": 9,
+   "to": 11
+  }
+ ],
+ "outro_plan": {
+  "title": "RİZE VE ÇAY",
+  "line": "Rize'nin çaya bu kadar zor ısındığına inanır mıydın?"
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 4,
+   "value": 1200,
+   "unit": "KİŞİ",
+   "small": "1486'DA RİZE (YAKLAŞIK)"
+  },
+  {
+   "scene": 9,
+   "value": 60,
+   "unit": "TON/GÜN",
+   "small": "İLK FABRİKANIN KAPASİTESİ"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": ""
+}

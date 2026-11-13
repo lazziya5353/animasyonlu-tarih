@@ -1,0 +1,305 @@
+{
+ "baslik": "Rize'nin Tarihi ve Çayın Rize'ye Gelişi",
+ "hook": "RİZE HALKI ÇAYI İSTEMEDİ, 1924'TE KANUN ÇIKTI",
+ "map_region": "anadolu",
+ "sahneler": [
+  {
+   "lines": [
+    "Bugün Rize çayla anılır.",
+    "Oysa halk, çayı başta dikmek istemedi."
+   ],
+   "big": "RİZE",
+   "sub": "ÇAYIN ŞEHRİ",
+   "year": 395,
+   "label": "RİZE",
+   "prompt": "Stylized aerial map of Turkey with a slow cinematic zoom toward the lush green eastern Black Sea coast, misty mountains and tea terraces near the coastline, no text, no labels, no borders lettering",
+   "fx": [
+    "fog"
+   ],
+   "prompt_tam": "Stylized aerial map of Turkey with a slow cinematic zoom toward the lush green eastern Black Sea coast, misty mountains and tea terraces near the coastline, no text, no labels, no borders lettering, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s01.jpg"
+  },
+  {
+   "lines": [
+    "Eski kaynaklarda adı Rizayon geçer.",
+    "Sonra Roma, ardından Bizans hüküm sürdü."
+   ],
+   "big": "RİZAYON",
+   "sub": "ANTİK ÇAĞ",
+   "year": 395,
+   "label": "RİZAYON",
+   "prompt": "Ancient Roman-era small harbor town on the eastern Black Sea coast at dawn, simple stone buildings and wooden fishing boats, steep green forested mountains behind, seen from a distance, no people faces, no text",
+   "fx": [
+    "fog",
+    "dust"
+   ],
+   "prompt_tam": "Ancient Roman-era small harbor town on the eastern Black Sea coast at dawn, simple stone buildings and wooden fishing boats, steep green forested mountains behind, seen from a distance, no people faces, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s02.jpg"
+  },
+  {
+   "lines": [
+    "Bin iki yüz dört'te Trabzon Rum İmparatorluğu kuruldu.",
+    "Rize de sınırları içindeydi."
+   ],
+   "big": "1204",
+   "sub": "TRABZON RUM DEVLETİ",
+   "year": 1204,
+   "label": "1204",
+   "prompt": "Medieval Byzantine-style fortified coastal city on a rocky hill above the Black Sea, stone walls and towers, sailing ships in the harbor, overcast dramatic sky, seen from far away, no flags, no text",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "prompt_tam": "Medieval Byzantine-style fortified coastal city on a rocky hill above the Black Sea, stone walls and towers, sailing ships in the harbor, overcast dramatic sky, seen from far away, no flags, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s03.jpg"
+  },
+  {
+   "lines": [
+    "Bin dört yüz altmış bir'de Fatih, Trabzon'u aldı.",
+    "Rize de Osmanlı'ya katıldı."
+   ],
+   "big": "1461",
+   "sub": "OSMANLI DÖNEMİ",
+   "year": 1461,
+   "label": "1461",
+   "prompt": "Silhouetted 15th-century Ottoman army with horsemen and tents on a green hillside above the Black Sea at dusk, seen from behind and far away, period-accurate armor and clothing, no flags, no text, no violence",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "effect": "stamp",
+   "prompt_tam": "Silhouetted 15th-century Ottoman army with horsemen and tents on a green hillside above the Black Sea at dusk, seen from behind and far away, period-accurate armor and clothing, no flags, no text, no violence, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s04.jpg"
+  },
+  {
+   "lines": [
+    "Bin dört yüz seksen altı'da Rize,",
+    "yaklaşık bin iki yüz kişilik bir kale şehriydi."
+   ],
+   "big": "1486",
+   "sub": "KÜÇÜK KALE ŞEHRİ",
+   "year": 1486,
+   "label": "1486",
+   "prompt": "Small medieval stone castle town on a green Black Sea shore, a few wooden houses, smoke rising from chimneys, misty morning, viewed from far away, no people faces, no text",
+   "fx": [
+    "fog",
+    "smoke"
+   ],
+   "prompt_tam": "Small medieval stone castle town on a green Black Sea shore, a few wooden houses, smoke rising from chimneys, misty morning, viewed from far away, no people faces, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s05.jpg"
+  },
+  {
+   "lines": [
+    "Bin dokuz yüz on yedi'de bir rapor,",
+    "çayın Rize'de yetişebileceğini yazdı."
+   ],
+   "big": "1917",
+   "sub": "ÇAY RAPORU",
+   "year": 1917,
+   "label": "1917",
+   "prompt": "A man seen from behind in an early 20th-century long coat and brimmed hat, studying papers at a wooden desk by a window overlooking humid green hills with tea bushes, papers blank with no readable text, warm lamp light",
+   "fx": [
+    "dust",
+    "flicker"
+   ],
+   "prompt_tam": "A man seen from behind in an early 20th-century long coat and brimmed hat, studying papers at a wooden desk by a window overlooking humid green hills with tea bushes, papers blank with no readable text, warm lamp light, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s06.jpg"
+  },
+  {
+   "lines": [
+    "Zihni Derin Batum'dan fidan getirdi, ilgi görmedi.",
+    "Bin dokuz yüz yirmi dört'te kanun çıktı."
+   ],
+   "big": "1924",
+   "sub": "407 SAYILI KANUN",
+   "year": 1924,
+   "label": "1924",
+   "prompt": "Dark wooden desk in a 1920s office with a blank aged paper document, an inkwell, a pen and a small pot with a young tea seedling, soft lamp light, no text or writing on the paper",
+   "fx": [
+    "dust",
+    "flicker"
+   ],
+   "effect": "type",
+   "type_text": "6 ŞUBAT 1924 · 407 SAYILI KANUN",
+   "prompt_tam": "Dark wooden desk in a 1920s office with a blank aged paper document, an inkwell, a pen and a small pot with a young tea seedling, soft lamp light, no text or writing on the paper, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s07.jpg"
+  },
+  {
+   "lines": [
+    "Bin dokuz yüz otuz sekiz'de ilk yaş çay hasadı yapıldı."
+   ],
+   "big": "1938",
+   "sub": "İLK HASAT",
+   "year": 1938,
+   "label": "1938",
+   "prompt": "Villagers in 1930s traditional Black Sea clothing, seen from behind, hand-picking young tea leaves on steep green terraces with baskets on their backs, morning mist, no faces, no text",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "prompt_tam": "Villagers in 1930s traditional Black Sea clothing, seen from behind, hand-picking young tea leaves on steep green terraces with baskets on their backs, morning mist, no faces, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s08.jpg"
+  },
+  {
+   "lines": [
+    "Bin dokuz yüz otuz dokuz mahsulü,",
+    "yirmi beş gramlık kutularla tanıtım için gönderildi."
+   ],
+   "big": "1939",
+   "sub": "25 GRAMLIK KUTULAR",
+   "year": 1939,
+   "label": "1939",
+   "prompt": "Small neat plain paper boxes of tea on a wooden table beside a ribbon and a bundle of envelopes, 1930s style, blank packaging with no text or logo, warm window light",
+   "fx": [
+    "dust"
+   ],
+   "prompt_tam": "Small neat plain paper boxes of tea on a wooden table beside a ribbon and a bundle of envelopes, 1930s style, blank packaging with no text or logo, warm window light, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s09.jpg"
+  },
+  {
+   "lines": [
+    "Bin dokuz yüz kırk yedi'de Rize Fener'de,",
+    "günde altmış ton kapasiteli ilk fabrika açıldı."
+   ],
+   "big": "1947",
+   "sub": "İLK ÇAY FABRİKASI",
+   "year": 1947,
+   "label": "1947",
+   "prompt": "A 1940s stone and brick tea factory on a green hillside near Rize, workers in period clothes silhouetted carrying baskets of leaves, steam rising from the building, golden evening light, no signage, no text",
+   "fx": [
+    "smoke",
+    "gold"
+   ],
+   "effect": "glow",
+   "prompt_tam": "A 1940s stone and brick tea factory on a green hillside near Rize, workers in period clothes silhouetted carrying baskets of leaves, steam rising from the building, golden evening light, no signage, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s10.jpg"
+  },
+  {
+   "lines": [
+    "Bin dokuz yüz seksen dört'te çay serbest bırakıldı.",
+    "Bugün Çaykur ve özel fabrikalar çalışıyor."
+   ],
+   "big": "1984",
+   "sub": "SERBEST ÇAY",
+   "year": 1984,
+   "label": "1984",
+   "prompt": "Modern view of tea-covered terraced hills of Rize at sunrise, rows of green tea bushes descending to the Black Sea, a tea factory with steam in the distance, no people faces, no text",
+   "fx": [
+    "fog",
+    "rays"
+   ],
+   "prompt_tam": "Modern view of tea-covered terraced hills of Rize at sunrise, rows of green tea bushes descending to the Black Sea, a tea factory with steam in the distance, no people faces, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s11.jpg"
+  },
+  {
+   "lines": [
+    "Rize'nin çaya bu kadar zor ısındığına inanır mıydın?"
+   ],
+   "big": "RİZE",
+   "sub": "İNANIR MIYDIN?",
+   "year": 1984,
+   "label": "RİZE",
+   "prompt": "A tulip-shaped glass of tea with rising steam on a small table beside a window overlooking terraced green hills and the Black Sea, evening light, no text",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "prompt_tam": "A tulip-shaped glass of tea with rising steam on a small table beside a window overlooking terraced green hills and the Black Sea, evening light, no text, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
+   "image": "images/s12.jpg"
+  }
+ ],
+ "finale": "",
+ "maps": [],
+ "cards": [
+  {
+   "scene": 4,
+   "value": 1200,
+   "unit": "KİŞİ",
+   "small": "1486'DA RİZE (YAKLAŞIK)"
+  },
+  {
+   "scene": 9,
+   "value": 60,
+   "unit": "TON/GÜN",
+   "small": "İLK FABRİKANIN KAPASİTESİ"
+  }
+ ],
+ "eras": [
+  {
+   "name": "ANTİK VE ORTAÇAĞ",
+   "from": 0,
+   "to": 4
+  },
+  {
+   "name": "ÇAYIN GELİŞİ",
+   "from": 5,
+   "to": 8
+  },
+  {
+   "name": "ÇAY ŞEHRİ",
+   "from": 9,
+   "to": 11
+  }
+ ],
+ "outro": {
+  "title": "RİZE VE ÇAY",
+  "line": "Rize'nin çaya bu kadar zor ısındığına inanır mıydın?"
+ },
+ "aciklama": "Rize'yi çayla tanıyorsun ama çayın bu kıyıya bir kanunla ve zorlukla geldiğini biliyor muydun? 1461'den 1947'deki ilk fabrikaya Rize'nin kısa hikâyesi. Sonuna kadar izle!\n\n📌 Kaydet / arkadaşına gönder\n\n(Görseller temsilidir.)",
+ "kanca_alternatifleri": [
+  "RİZE 1486'DA YAKLAŞIK 1200 KİŞİLİK KALE ŞEHRİYDİ",
+  "İLK ÇAY FABRİKASI GÜNDE 60 TON İŞLİYORDU",
+  "ZİHNİ DERİN'İN FİDANLARINA HALK İLGİ GÖSTERMEDİ"
+ ],
+ "aciklama_alternatifleri": [
+  "Rize'nin çayını her gün içiyorsun ama ilk fidanlara halkın neden ilgi göstermediğini hiç merak ettin mi? 1924 kanunundan 1947'deki ilk fabrikaya kısa hikâye. Sonuna kadar izle!\n\n📌 Kaydet / arkadaşına gönder\n\n(Görseller temsilidir.)",
+  "1486'da yaklaşık 1200 kişilik küçük bir kale şehri olan Rize, bugün çayıyla tanınıyor. Bu değişim 1917'deki bir raporla başladı. Sonuna kadar izle!\n\n📌 Kaydet / arkadaşına gönder\n\n(Görseller temsilidir.)"
+ ],
+ "hashtagler": [
+  "#tarih",
+  "#keşfet",
+  "#reels",
+  "#rize",
+  "#rizetarihi",
+  "#çay",
+  "#zihniderin",
+  "#çaykur",
+  "#karadeniz",
+  "#tarihbilgisi",
+  "#çaytarihi",
+  "#animasyontarih"
+ ],
+ "kaynaklar": [
+  "https://www.caykur.gov.tr/Pages/Kurumsal/KurumHakkinda.aspx?ItemId=6",
+  "https://www.caykur.gov.tr/Pages/Kurumsal/KurumHakkinda.aspx?ItemId=6&ItemId2=523&ItemType=Detail",
+  "https://www.rize.bel.tr/icerik/rize-ve-cay",
+  "https://www.tb.org.tr/en/cayin-tarihcesi-1",
+  "https://islamansiklopedisi.org.tr/rize",
+  "https://rize.meb.gov.tr/www/rizenin-tarihcesi/icerik/2064",
+  "https://calismaortami.fisek.org.tr/icerik/rizede-ondan-once-cay-dikilmiyordu-zihni-derin/",
+  "https://100sene100nesne.com/cay/",
+  "https://www.karadenizinfo.com/rize-tarih",
+  "https://www.researchgate.net/publication/329029267_Turkiye_Cumhuriyeti%27nde_Cay_Yetistiriciligi_ve_Cay_Politikalari_1923-1960"
+ ],
+ "kontrol_notlari": [
+  "Biçim notu: Anlatım satırlarında yıllar ses yapay zekası için yazıyla yazıldı. Ekrandaki big, label, hook ve açıklamada rakam kullanıldı. Kural metni bu konuda çelişkiliydi, bu yüzden ikisini ayırdım.",
+  "Doğrulandı: 6 Şubat 1924 tarihli 407 sayılı 'Rize Vilayeti ile Borçka Kazasında Fındık, Portakal, Limon, Mandalina ve Çay Yetiştirilmesi Hakkında Kanun'. Çaykur, Rize Belediyesi, ResearchGate. Bir blogda 16 Şubat yazıyor, resmî kaynaklar 6 Şubat diyor. Bir sitede ise 4047 sayısı geçiyor, bu bir yazım hatası.",
+  "Doğrulandı: Ali Rıza Erten'in 1917 Batum raporu, Zihni Derin'in 1923'te Rize'ye fidanlık için gönderilmesi ve Batum'dan fidan getirmesi. Halkın başlangıçtaki isteksizliği çay üretimini geciktirdi. Kaynaklar Rize Belediyesi, Çaykur, Fişek Enstitüsü.",
+  "Doğrulandı: İlk yaş çay hasadı ve kuru çay üretimi 1938'de yapıldı. İlk çay fabrikası 1947'de Rize Fener Mahallesi'nde, günlük 60 ton kapasiteyle Merkez Çay Fabrikası adıyla açıldı. Kaynaklar Çaykur, Ticaret Borsası.",
+  "Doğrulandı: 1939 mahsulü tanıtım için milletvekillerine ve Milli Tasarruf Cemiyeti'ne 25'er gramlık kutularla gönderildi. Kaynak 100sene100nesne. Tek kaynak olduğu için, istenirse bu sahne çıkarılabilir.",
+  "Doğrulandı: 1971'de 1497 sayılı Çay Kurumu Kanunu çıktı. 1983'te kurum Çaykur adıyla yeniden yapılandırıldı. 19.12.1984 tarihli 3092 sayılı Çay Kanunu ile çay tarımı, üretimi, işletmesi ve satışı serbest bırakıldı. Kaynaklar Çaykur, Rizedeyiz.",
+  "Doğrulandı: 1204'te Trabzon Rum Devleti kuruldu ve Rize bu devletin sınırları içinde kaldı. Fatih 1461'de Trabzon'u alırken Rize de Osmanlı topraklarına katıldı. Kaynaklar TDV İslâm Ansiklopedisi, Rize MEM, Vikipedi.",
+  "Tartışmalı, metne alınmadı: Bazı yerel kaynaklar Rize'nin kesin olarak Türk hâkimiyetine geçişini 1470'te komutan Ali Paşa'ya bağlıyor. Metinde TDV'ye uyularak yalnızca 'Trabzon'la birlikte 1461'de Osmanlı'ya katıldı' denildi.",
+  "Doğrulandı: TDV'ye göre Rize'nin nüfus kayıtları 1486'da (891 H.) başlıyor ve toplam nüfus 1200 dolayında. Kartta ve metinde 'yaklaşık' ifadesi kullanıldı.",
+  "Rhizaion adı birçok kaynakta geçiyor, ama adın kökeni konusunda farklı görüşler var (pirinç, dağ eteği, Farsça kökenli sözcük). Metinde köken iddiası yok, yalnızca 'eski kaynaklarda adı Rizayon geçer' deniyor. Okunuş: Rizayon. Antik dönem ve Roma-Bizans sınırları için kaynak olarak karadenizinfo kullanıldı. Bu dönem için kesin tarih verilmedi.",
+  "Çıkarıldı: Güncel yaş çay üretim rakamları ve kaçak çay konusu bu turda güvenilir bir kaynakla doğrulanamadı, bu yüzden metne ve kartlara girmedi. İstenirse Çaykur/TÜİK verisiyle ayrı bir sahne eklenebilir.",
+  "Zaman çizelgesi notu: İlk iki sahne (antik dönem ve Rhizaion) kesin bir yıla bağlanamadığı için Roma-Bizans ayrımı olan 395 yılına yerleştirildi. Gerekirse eras'ta bu iki sahne yıl göstermeden kullanılabilir.",
+  "Haritalar: İzin verilen şehir listesinde Rize ve Trabzon olmadığı için harita geçişi eklenmedi. Açılıştaki Türkiye'den Rize'ye yaklaşma, 1. sahnenin görsel promptuyla çözüldü.",
+  "'İnanır mıydın?' sorusu çaya ve Rize'ye dair meraktır. İnanç veya din sorgulayan bir soru değildir."
+ ],
+ "konu": "Rize'nin tarihi ve çayın Rize'ye geliş hikayesi",
+ "tarih": "",
+ "slug": "rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi",
+ "durum": "onay-bekliyor",
+ "seslendirme_metni": "Bugün Rize çayla anılır.\nOysa halk, çayı başta dikmek istemedi.\nEski kaynaklarda adı Rizayon geçer.\nSonra Roma, ardından Bizans hüküm sürdü.\nBin iki yüz dört'te Trabzon Rum İmparatorluğu kuruldu.\nRize de sınırları içindeydi.\nBin dört yüz altmış bir'de Fatih, Trabzon'u aldı.\nRize de Osmanlı'ya katıldı.\nBin dört yüz seksen altı'da Rize,\nyaklaşık bin iki yüz kişilik bir kale şehriydi.\nBin dokuz yüz on yedi'de bir rapor,\nçayın Rize'de yetişebileceğini yazdı.\nZihni Derin Batum'dan fidan getirdi, ilgi görmedi.\nBin dokuz yüz yirmi dört'te kanun çıktı.\nBin dokuz yüz otuz sekiz'de ilk yaş çay hasadı yapıldı.\nBin dokuz yüz otuz dokuz mahsulü,\nyirmi beş gramlık kutularla tanıtım için gönderildi.\nBin dokuz yüz kırk yedi'de Rize Fener'de,\ngünde altmış ton kapasiteli ilk fabrika açıldı.\nBin dokuz yüz seksen dört'te çay serbest bırakıldı.\nBugün Çaykur ve özel fabrikalar çalışıyor.\nRize'nin çaya bu kadar zor ısındığına inanır mıydın?"
+}

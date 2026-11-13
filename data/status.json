@@ -7,9 +7,9 @@
  },
  "senarist": {
   "durum": "tamam",
-  "mesaj": "'Halfeti: suya gömülen şehir ve az bilinen gerçekleri' metni onay bekliyor",
-  "cikti": "projects/halfeti-suya-gomulen-sehir-ve-az-bilinen-gercekleri/script.json",
-  "zaman": "2026-11-12T23:53:43Z"
+  "mesaj": "'Rize'nin tarihi ve çayın Rize'ye geliş hikayesi' metni onay bekliyor",
+  "cikti": "projects/rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi/script.json",
+  "zaman": "2026-11-13T09:54:48Z"
  },
  "gorsel": {
   "durum": "tamam",
@@ -25,9 +25,9 @@
  },
  "kontrol": {
   "durum": "tamam",
-  "mesaj": "halfeti-suya-gomulen-sehir-ve-az-bilinen-gercekleri: kurgu ✓",
-  "cikti": "projects/halfeti-suya-gomulen-sehir-ve-az-bilinen-gercekleri/kontrol",
-  "zaman": "2026-11-13T06:01:48Z"
+  "mesaj": "rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi: senaryo !",
+  "cikti": "projects/rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi/kontrol",
+  "zaman": "2026-11-13T09:54:49Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

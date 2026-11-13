@@ -1,0 +1,59 @@
+{
+ "asama": "senaryo",
+ "durum": "uyari",
+ "ozet": "12 sahne, tahmini 64 sn · 10 not",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "yıl yazıyla yazılmış, ekranda rakam olmalı: “Bin iki yüz dört'te Trabzon Rum İmparatorluğu kuru”",
+   "sahne": 3
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "yıl yazıyla yazılmış, ekranda rakam olmalı: “Bin dört yüz altmış bir'de Fatih, Trabzon'u aldı.”",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "yıl yazıyla yazılmış, ekranda rakam olmalı: “Bin dört yüz seksen altı'da Rize,”",
+   "sahne": 5
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "yıl yazıyla yazılmış, ekranda rakam olmalı: “yaklaşık bin iki yüz kişilik bir kale şehriydi.”",
+   "sahne": 5
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "yıl yazıyla yazılmış, ekranda rakam olmalı: “Bin dokuz yüz on yedi'de bir rapor,”",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "yıl yazıyla yazılmış, ekranda rakam olmalı: “Bin dokuz yüz yirmi dört'te kanun çıktı.”",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "yıl yazıyla yazılmış, ekranda rakam olmalı: “Bin dokuz yüz otuz sekiz'de ilk yaş çay hasadı yap”",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "yıl yazıyla yazılmış, ekranda rakam olmalı: “Bin dokuz yüz otuz dokuz mahsulü,”",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "yıl yazıyla yazılmış, ekranda rakam olmalı: “Bin dokuz yüz kırk yedi'de Rize Fener'de,”",
+   "sahne": 10
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "yıl yazıyla yazılmış, ekranda rakam olmalı: “Bin dokuz yüz seksen dört'te çay serbest bırakıldı”",
+   "sahne": 11
+  }
+ ],
+ "tahmini_sure": 64.2,
+ "zaman": "2026-11-13T09:54:49Z"
+}
