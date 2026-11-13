@@ -1,27 +1,15 @@
 {
  "asama": "ses",
  "durum": "uyari",
- "ozet": "65 sn, metinle %94 uyumlu",
+ "ozet": "57 sn, metinle %98 uyumlu",
  "maddeler": [
   {
    "seviye": "uyari",
-   "mesaj": "seste patlama (clipping) olabilir"
-  },
-  {
-   "seviye": "uyari",
    "mesaj": "okunmamış/yanlış okunmuş olabilir: “doğu ile”"
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "okunmamış/yanlış okunmuş olabilir: “bin dokuz yüz seksen yediden”"
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "metinde olmayan bir şey okunmuş olabilir: “işte ses kaydının transkripsiyonu”"
   }
  ],
- "sure": 64.5,
- "benzerlik": 0.942,
- "dokum": "İşte ses kaydının transkripsiyonu:\n\nTürkiye'nin doğusunda iki bin metrenin üstünde bir dağ var. Tepesinde bir kral iki bin yıldır uyuyor. Tepedeki dev höyüğü insanlar taş taş yığdı. Yüksekliği tam elli metre. Önünde dev heykeller tahtlarında oturuyor. Kral Antiokhos, tanrılarla yan yana. Kral babasından Pers, annesinden Makedon soyundan geldiğini söylüyordu. Heykellerde doğuyla batı birleşti. Bazı taş bloklar dokuz tona kadar çıkıyor. Hepsi bu zirveye taşındı. Zamanla heykellerin başları gövdelerinden düştü. Bugün yerde yan yana duruyorlar. Kral tahtların arkasına iki yüz otuz yedi satırlık bir yazıt kazıttı. Yazıtta bir de beddua var: Bu kutsal yere zarar veren soyuyla birlikte tanrıların cezasına uğrasın. Yazıt kralın höyüğün içinde yattığını söylüyor ama mezar odası bugün hala bulunamadı. Nemrut bindokuzyüzseksenyediden beri UNESCO Dünya Mirası. Sence mezar açılmalı mı yoksa beddua mı kazanmalı? Yorumlara yaz.",
- "zaman": "2026-11-13T18:18:27Z"
+ "sure": 57.4,
+ "benzerlik": 0.98,
+ "dokum": "Türkiye'nin doğusunda iki bin metrenin üstünde bir dağ var. Tepesinde bir kral iki bin yıldır uyuyor. Tepedeki dev höyüğü insanlar taş taş yığdı. Yüksekliği tam elli metre. Önünde dev heykeller tahtlarında oturuyor. Kral Antiokhos tanrılarla yan yana. Kral babasından Pers, annesinden Makedon soyundan geldiğini söylüyordu. Heykellerde doğuyla batı birleşti. Bazı taş bloklar dokuz tona kadar çıkıyor. Hepsi bu zirveye taşındı. Zamanla heykellerin başları gövdelerinden düştü. Bugün yerde yan yana duruyorlar. Kral tahtların arkasına iki yüz otuz yedi satırlık bir yazıt kazıttı. Yazıtın sonunda bu kutsal yere zarar verenlere bir beddua var. Ekranı durdur ve oku. Yazıt kralın höyüğün içinde yattığını söylüyor. Ama mezar odası bugün hala bulunamadı. Nemrut bin dokuz yüz seksen yediden beri UNESCO Dünya Mirası. Sence mezar açılmalı mı yoksa beddua mı kazanmalı? Yorumlara yaz.",
+ "zaman": "2026-11-13T18:28:30Z"
 }

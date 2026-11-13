@@ -1,7 +1,7 @@
 {
  "asama": "gorsel",
  "durum": "hata",
- "ozet": "10/11 görsel",
+ "ozet": "9/11 görsel",
  "maddeler": [
   {
    "seviye": "bilgi",
@@ -36,11 +36,6 @@
   {
    "seviye": "bilgi",
    "mesaj": "video klipli sahne (görsel gerekmez)",
-   "sahne": 8
-  },
-  {
-   "seviye": "bilgi",
-   "mesaj": "video klipli sahne (görsel gerekmez)",
    "sahne": 9
   },
   {
@@ -55,11 +50,12 @@
   },
   {
    "seviye": "hata",
-   "mesaj": "eksik görsel: sahne 1"
+   "mesaj": "eksik görsel: sahne 1, 8"
   }
  ],
  "eksik": [
-  1
+  1,
+  8
  ],
- "zaman": "2026-11-13T18:18:28Z"
+ "zaman": "2026-11-13T18:28:31Z"
 }
