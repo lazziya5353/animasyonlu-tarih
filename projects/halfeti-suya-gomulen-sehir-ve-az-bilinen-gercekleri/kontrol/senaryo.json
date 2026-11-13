@@ -1,0 +1,54 @@
+{
+ "asama": "senaryo",
+ "durum": "uyari",
+ "ozet": "10 sahne, tahmini 70 sn · 9 not",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Burası Şanlıurfa'nın Halfeti ilçesi. 2000 yılında Birecik Ba…”",
+   "sahne": 2
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Eski Halfeti'de su yaklaşık 50 metre yükseldi. Halk, 10 kilo…”",
+   "sahne": 3
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Savaşan köyünde bir caminin minaresi hâlâ sudan yükseliyor. …”",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 4 satıra taşıyor, kısaltılabilir: “Rumkale, Ermenice adıyla Hromgla, bir dönem Ermeni katolikos…”",
+   "sahne": 5
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Halfeti'nin karagülü de ünlü. Yalnızca burada yetiştiği söyl…”",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 4 satıra taşıyor, kısaltılabilir: “2013'te Halfeti, Cittaslow yani sakin şehir ağına katıldı. 2…”",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “29 Ekim 2026'da Birecik Barajı'nda kontrollü tahliye başladı…”",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 3 satıra taşıyor, kısaltılabilir: “Ulu Cami, eski evler ve bahçeler yeniden göründü. Halfetilil…”",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı 4 satıra taşıyor, kısaltılabilir: “Bakım bitince su eski seviyesine dönecek. Yani bu manzara ge…”",
+   "sahne": 10
+  }
+ ],
+ "tahmini_sure": 69.8,
+ "zaman": "2026-11-12T23:53:44Z"
+}
