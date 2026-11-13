@@ -10,10 +10,11 @@
    "start": null,
    "end": null,
    "lines": [
-    "Bu saray Türkiye'de. Hem de Ağrı Dağı'nın karşısında."
+    "Ağrı Dağı'nın karşısında, duvarlarında gizli bir ısıtma sistemi olan bir saray var.",
+    "Kapısı ise bugün Türkiye'de değil."
    ],
    "big": "AĞRI",
-   "sub": "TÜRKİYE'NİN DOĞUSU",
+   "sub": "GİZLİ ISITMA, KAYIP KAPI",
    "year": 1685,
    "label": "1685",
    "fx": [
@@ -258,10 +259,11 @@
    "start": null,
    "end": null,
    "lines": [
-    "Bugün Ağrı Dağı'na bakan saray, UNESCO Dünya Mirası Geçici Listesi'nde."
+    "Bugün UNESCO Dünya Mirası Geçici Listesi'nde.",
+    "Sence o kapı geri gelmeli mi? Yorumlara yaz."
    ],
    "big": "ARARAT",
-   "sub": "UNESCO GEÇİCİ LİSTE",
+   "sub": "KAPI GERİ GELMELİ Mİ?",
    "year": 2026,
    "label": "BUGÜN",
    "fx": [

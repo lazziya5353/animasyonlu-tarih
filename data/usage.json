@@ -328,6 +328,13 @@
    "servis": "pollinations-gorsel",
    "usd": 0.0,
    "detay": "s01.jpg (ücretsiz)"
+  },
+  {
+   "zaman": "2026-11-13T13:01:31Z",
+   "ajan": "ses",
+   "servis": "gemini-ses",
+   "usd": 0.0,
+   "detay": "Charon sesi (ücretsiz kota)"
   }
  ]
 }

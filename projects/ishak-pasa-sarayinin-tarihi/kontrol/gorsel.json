@@ -1,24 +1,59 @@
 {
  "asama": "gorsel",
- "durum": "hata",
- "ozet": "0/10 görsel",
+ "durum": "tamam",
+ "ozet": "10/10 görsel",
  "maddeler": [
   {
-   "seviye": "hata",
-   "mesaj": "eksik görsel: sahne 1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 1
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 2
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 3
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 4
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 5
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 6
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 7
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 8
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 9
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "video klipli sahne (görsel gerekmez)",
+   "sahne": 10
   }
  ],
- "eksik": [
-  1,
-  2,
-  3,
-  4,
-  5,
-  6,
-  7,
-  8,
-  9,
-  10
- ],
- "zaman": "2026-11-12T23:35:32Z"
+ "eksik": [],
+ "zaman": "2026-11-13T13:08:15Z"
 }
