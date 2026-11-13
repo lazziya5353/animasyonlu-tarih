@@ -168,8 +168,8 @@
   },
   {
    "lines": [
-    "Yazıtta bir de beddua var.",
-    "Bu kutsal yere zarar veren, soyuyla birlikte tanrıların cezasına uğrasın."
+    "Yazıtın sonunda, bu kutsal yere zarar verenlere bir beddua var.",
+    "Ekranı durdur ve oku."
    ],
    "big": null,
    "sub": null,
@@ -194,7 +194,8 @@
      "tanrıların cezasına uğrasın."
     ],
     "imza": "— I. ANTİOKHOS · MÖ 1. YÜZYIL (ÖZET ÇEVİRİ)",
-    "boyut": 52
+    "boyut": 52,
+    "yazma_sure": 2.0
    }
   },
   {
@@ -322,5 +323,5 @@
  "slug": "nemrut-dagi-kralin-bedduasi",
  "durum": "onaylandi",
  "sade": true,
- "seslendirme_metni": "Türkiye'nin doğusunda, iki bin metrenin üstünde bir dağ var.\nTepesinde bir kral, iki bin yıldır uyuyor.\nTepedeki dev höyüğü insanlar taş taş yığdı.\nYüksekliği tam elli metre.\nÖnünde dev heykeller tahtlarında oturuyor.\nKral Antiyokos, tanrılarla yan yana.\nKral, babasından Pers, annesinden Makedon soyundan geldiğini söylüyordu.\nHeykellerde Doğu ile Batı birleşti.\nBazı taş bloklar dokuz tona kadar çıkıyor.\nHepsi bu zirveye taşındı.\nZamanla heykellerin başları gövdelerinden düştü.\nBugün yerde, yan yana duruyorlar.\nKral, tahtların arkasına iki yüz otuz yedi satırlık bir yazıt kazıttı.\nYazıtta bir de beddua var.\nBu kutsal yere zarar veren, soyuyla birlikte tanrıların cezasına uğrasın.\nYazıt, kralın höyüğün içinde yattığını söylüyor.\nAma mezar odası bugün hâlâ bulunamadı.\nNemrut, bin dokuz yüz seksen yediden beri UNESCO Dünya Mirası.\nSence mezar açılmalı mı, yoksa beddua mı kazanmalı?\nYorumlara yaz."
+ "seslendirme_metni": "Türkiye'nin doğusunda, iki bin metrenin üstünde bir dağ var.\nTepesinde bir kral, iki bin yıldır uyuyor.\nTepedeki dev höyüğü insanlar taş taş yığdı.\nYüksekliği tam elli metre.\nÖnünde dev heykeller tahtlarında oturuyor.\nKral Antiyokos, tanrılarla yan yana.\nKral, babasından Pers, annesinden Makedon soyundan geldiğini söylüyordu.\nHeykellerde Doğu ile Batı birleşti.\nBazı taş bloklar dokuz tona kadar çıkıyor.\nHepsi bu zirveye taşındı.\nZamanla heykellerin başları gövdelerinden düştü.\nBugün yerde, yan yana duruyorlar.\nKral, tahtların arkasına iki yüz otuz yedi satırlık bir yazıt kazıttı.\nYazıtın sonunda, bu kutsal yere zarar verenlere bir beddua var.\nEkranı durdur ve oku.\nYazıt, kralın höyüğün içinde yattığını söylüyor.\nAma mezar odası bugün hâlâ bulunamadı.\nNemrut, bin dokuz yüz seksen yediden beri UNESCO Dünya Mirası.\nSence mezar açılmalı mı, yoksa beddua mı kazanmalı?\nYorumlara yaz."
 }
