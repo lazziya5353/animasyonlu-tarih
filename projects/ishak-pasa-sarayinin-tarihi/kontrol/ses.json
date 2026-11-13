@@ -1,10 +1,13 @@
 {
  "asama": "ses",
  "durum": "tamam",
- "ozet": "59 sn, metinle %99 uyumlu",
- "maddeler": [],
- "sure": 59.4,
- "benzerlik": 0.993,
- "dokum": "Bu saray Türkiye'de, hem de Ağrı Dağı'nın karşısında. Doğubayazıt'ta İran sınırına yakın bir tepede yükseliyor. Alanı yaklaşık yedi bin altı yüz metrekare. İnşaatı bin altı yüz seksen beşte Çolak Abdi Paşa başlattı. Çıldıroğulları ailesi nesiller boyu çalıştı. Taşlar çevre köylerden ve Ağrı Dağı'ndan taşındı. Saray yaklaşık yüz yılda tamamlandı. Harem kapısının kitabesi yapının İshak Paşa döneminde tamamlandığını bildirir. Mimarisinde Osmanlı, Selçuklu ve İran izleri iç içe. Bazı kaynaklar Gürcü ve Ermeni etkisini de anar. Duvar boşlukları sarayda merkezi ısıtma sistemi olduğuna işaret ediyor. Bu on sekizinci yüzyıl için dikkat çekici bir ayrıntı. Altın kaplamalı denen kapısı bin sekiz yüz yetmiş yedi bin sekiz yüz yetmiş sekiz Rus işgalinde söküldü ve Rusya'ya götürüldü. Sarayı bin sekiz yüz kırk depremi ve savaşlar yıprattı. Bugün restorasyonlarla ayakta. Bugün Ağrı Dağı'na bakan saray UNESCO Dünya Mirası geçici listesinde.",
- "zaman": "2026-11-12T23:35:30Z"
+ "ozet": "66 sn",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "metin-ses karşılaştırması atlandı: Gemini yanıt vermedi (gemini-3.6-flash: The read operation timed out)"
+  }
+ ],
+ "sure": 66.2,
+ "zaman": "2026-11-13T13:08:13Z"
 }
