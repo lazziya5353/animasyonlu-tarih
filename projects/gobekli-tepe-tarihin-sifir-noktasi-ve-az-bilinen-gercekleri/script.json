@@ -12,14 +12,16 @@
    "year": -9600,
    "label": "MÖ 9600",
    "prompt": "Vertical 9:16 composition, massive T-shaped limestone pillars arranged in a circle on a rocky hilltop in southeastern Anatolia at dawn, main subject centered, empty sky at top for a title, empty ground at bottom for subtitles, tiny Neolithic figures in animal hides seen only as distant silhouettes from behind, no text, no inscriptions, no faces",
-   "fx": [
-    "fog",
-    "rays"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16 composition, massive T-shaped limestone pillars arranged in a circle on a rocky hilltop in southeastern Anatolia at dawn, main subject centered, empty sky at top for a title, empty ground at bottom for subtitles, tiny Neolithic figures in animal hides seen only as distant silhouettes from behind, no text, no inscriptions, no faces, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s01.jpg"
+   "image": "images/s01.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_002448_a849a4b4-87cf-421e-9d72-550dddca75cb.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -30,14 +32,16 @@
    "year": -9600,
    "label": "MÖ 9600",
    "prompt": "Vertical 9:16, high aerial view of a rocky hilltop in the Şanlıurfa region with circular stone enclosures at center, dry plain stretching below, warm golden morning light, empty space at top and bottom for text overlays, no text, no people",
-   "fx": [
-    "dust",
-    "rays"
-   ],
+   "fx": [],
    "effect": "stamp",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, high aerial view of a rocky hilltop in the Şanlıurfa region with circular stone enclosures at center, dry plain stretching below, warm golden morning light, empty space at top and bottom for text overlays, no text, no people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s02.jpg"
+   "image": "images/s02.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_002448_a849a4b4-87cf-421e-9d72-550dddca75cb.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -49,14 +53,16 @@
    "year": -9600,
    "label": "MÖ 9600",
    "prompt": "Vertical 9:16, an ancient circle of tall standing stones in sharp focus at center foreground, far behind on a hazy horizon the faint silhouette of Egyptian pyramids, suggesting the older age of the stones, dusk sky, empty top and bottom areas for text, no text, no people",
-   "fx": [
-    "dust",
-    "gold"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, an ancient circle of tall standing stones in sharp focus at center foreground, far behind on a hazy horizon the faint silhouette of Egyptian pyramids, suggesting the older age of the stones, dusk sky, empty top and bottom areas for text, no text, no people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s03.jpg"
+   "image": "images/s03.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_002448_a849a4b4-87cf-421e-9d72-550dddca75cb.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -68,14 +74,16 @@
    "year": -9600,
    "label": "MÖ 9600",
    "prompt": "Vertical 9:16, silhouettes of Neolithic hunter-gatherers seen from behind wearing animal hides, using ropes and wooden levers to move a huge limestone slab, wild grassland with distant gazelles, central action, empty top and bottom bands for text, no text, no faces, no blood",
-   "fx": [
-    "dust",
-    "smoke"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, silhouettes of Neolithic hunter-gatherers seen from behind wearing animal hides, using ropes and wooden levers to move a huge limestone slab, wild grassland with distant gazelles, central action, empty top and bottom bands for text, no text, no faces, no blood, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s04.jpg"
+   "image": "images/s04.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_002448_a849a4b4-87cf-421e-9d72-550dddca75cb.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -87,14 +95,16 @@
    "year": -9600,
    "label": "MÖ 9600",
    "prompt": "Vertical 9:16, close view of a T-shaped limestone pillar centered in frame with carved relief of a fox, a snake and a wild boar, dramatic side light, weathered stone texture, empty top and bottom areas for text, no letters, no symbols that look like writing, no people",
-   "fx": [
-    "dust",
-    "flicker"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, close view of a T-shaped limestone pillar centered in frame with carved relief of a fox, a snake and a wild boar, dramatic side light, weathered stone texture, empty top and bottom areas for text, no letters, no symbols that look like writing, no people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s05.jpg"
+   "image": "images/s05.jpg",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_002448_a849a4b4-87cf-421e-9d72-550dddca75cb.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -106,14 +116,16 @@
    "year": -8000,
    "label": "MÖ 8000",
    "prompt": "Vertical 9:16, a circular stone enclosure with T-shaped pillars partly buried under rubble and earth, tops of pillars emerging from soil, soft dusk light, centered subject, empty top and bottom for text, no text, no people, no faces",
-   "fx": [
-    "dust",
-    "fog"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, a circular stone enclosure with T-shaped pillars partly buried under rubble and earth, tops of pillars emerging from soil, soft dusk light, centered subject, empty top and bottom for text, no text, no people, no faces, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s06.jpg"
+   "image": "images/s06.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_004820_685754d6-596c-4a48-bbf5-29c079364d45.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -124,14 +136,16 @@
    "year": 1995,
    "label": "1995",
    "prompt": "Vertical 9:16, 1990s archaeological excavation on a hilltop with trenches, wooden scaffolding and canvas tents, one researcher seen as a small silhouette from far behind, sunrise haze, central trench with uncovered pillar tops, empty top and bottom for text, no text, no visible faces",
-   "fx": [
-    "dust",
-    "rays"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, 1990s archaeological excavation on a hilltop with trenches, wooden scaffolding and canvas tents, one researcher seen as a small silhouette from far behind, sunrise haze, central trench with uncovered pillar tops, empty top and bottom for text, no text, no visible faces, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s07.jpg"
+   "image": "images/s07.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_004820_685754d6-596c-4a48-bbf5-29c079364d45.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -142,14 +156,16 @@
    "year": 2018,
    "label": "2018",
    "prompt": "Vertical 9:16, modern protective canopy over the excavated stone enclosures of Göbekli Tepe at golden hour, wooden visitor walkways, central view of pillars under the roof, empty top and bottom for text, no signs, no text, no people",
-   "fx": [
-    "rays",
-    "gold"
-   ],
+   "fx": [],
    "effect": "stamp",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, modern protective canopy over the excavated stone enclosures of Göbekli Tepe at golden hour, wooden visitor walkways, central view of pillars under the roof, empty top and bottom for text, no signs, no text, no people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s08.jpg"
+   "image": "images/s08.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_004820_685754d6-596c-4a48-bbf5-29c079364d45.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -161,14 +177,16 @@
    "year": 2025,
    "label": "2025",
    "prompt": "Vertical 9:16, a T-shaped limestone pillar with a stylized carved face (simple nose and brow ridge, carved stone only) emerging from an excavation trench at Karahantepe, archaeologists only as tiny silhouettes far away seen from behind, warm sunrise light, central subject, empty top and bottom for text, no text, no writing",
-   "fx": [
-    "dust",
-    "rays"
-   ],
+   "fx": [],
    "effect": "glow",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, a T-shaped limestone pillar with a stylized carved face (simple nose and brow ridge, carved stone only) emerging from an excavation trench at Karahantepe, archaeologists only as tiny silhouettes far away seen from behind, warm sunrise light, central subject, empty top and bottom for text, no text, no writing, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s09.jpg"
+   "image": "images/s09.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_004820_685754d6-596c-4a48-bbf5-29c079364d45.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
   },
   {
    "lines": [
@@ -180,14 +198,16 @@
    "year": 2026,
    "label": "2026",
    "prompt": "Vertical 9:16, wide view of the Şanlıurfa plain at sunrise with several distant hills dotted with small excavation tents and shelters, central hill with a stone circle in the middle ground, empty top and bottom for text, no text, no close-up people",
-   "fx": [
-    "fog",
-    "rays"
-   ],
+   "fx": [],
    "effect": "",
    "type_text": "",
    "prompt_tam": "Vertical 9:16, wide view of the Şanlıurfa plain at sunrise with several distant hills dotted with small excavation tents and shelters, central hill with a stone circle in the middle ground, empty top and bottom for text, no text, no close-up people, cinematic film still, photorealistic, 35mm, dramatic natural light, epic historical drama, warm muted color grade, vertical 9:16, no text, no watermark",
-   "image": "images/s10.jpg"
+   "image": "images/s10.jpg",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_004820_685754d6-596c-4a48-bbf5-29c079364d45.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
   }
  ],
  "finale": "",

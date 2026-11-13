@@ -16,10 +16,7 @@
    "sub": "STONEHENGE'DEN ESKİ",
    "year": -9600,
    "label": "MÖ 9600",
-   "fx": [
-    "fog",
-    "rays"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -27,7 +24,12 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_002448_a849a4b4-87cf-421e-9d72-550dddca75cb.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s02.jpg",
@@ -40,10 +42,7 @@
    "sub": "GÖBEKLİ TEPE",
    "year": -9600,
    "label": "MÖ 9600",
-   "fx": [
-    "dust",
-    "rays"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -52,7 +51,12 @@
     0.5,
     0.55
    ],
-   "effect": "stamp"
+   "effect": "stamp",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_002448_a849a4b4-87cf-421e-9d72-550dddca75cb.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s03.jpg",
@@ -66,10 +70,7 @@
    "sub": "BİNLERCE YIL DAHA ESKİ",
    "year": -9600,
    "label": "MÖ 9600",
-   "fx": [
-    "dust",
-    "gold"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -77,7 +78,12 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_002448_a849a4b4-87cf-421e-9d72-550dddca75cb.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s04.jpg",
@@ -91,10 +97,7 @@
    "sub": "TARIM ÖNCESİ TOPLULUK",
    "year": -9600,
    "label": "MÖ 9600",
-   "fx": [
-    "dust",
-    "smoke"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -102,7 +105,12 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_002448_a849a4b4-87cf-421e-9d72-550dddca75cb.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s05.jpg",
@@ -116,10 +124,7 @@
    "sub": "HAYVAN KABARTMALARI",
    "year": -9600,
    "label": "MÖ 9600",
-   "fx": [
-    "dust",
-    "flicker"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -127,7 +132,12 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_002448_a849a4b4-87cf-421e-9d72-550dddca75cb.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s06.jpg",
@@ -141,10 +151,7 @@
    "sub": "HÂLÂ TARTIŞILIYOR",
    "year": -8000,
    "label": "MÖ 8000",
-   "fx": [
-    "dust",
-    "fog"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -152,7 +159,12 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_004820_685754d6-596c-4a48-bbf5-29c079364d45.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s07.jpg",
@@ -165,10 +177,7 @@
    "sub": "KLAUS SCHMIDT KAZILARI",
    "year": 1995,
    "label": "1995",
-   "fx": [
-    "dust",
-    "rays"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -176,7 +185,12 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_004820_685754d6-596c-4a48-bbf5-29c079364d45.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s08.jpg",
@@ -189,10 +203,7 @@
    "sub": "UNESCO DÜNYA MİRASI",
    "year": 2018,
    "label": "2018",
-   "fx": [
-    "rays",
-    "gold"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -201,7 +212,12 @@
     0.5,
     0.55
    ],
-   "effect": "stamp"
+   "effect": "stamp",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_004820_685754d6-596c-4a48-bbf5-29c079364d45.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s09.jpg",
@@ -215,10 +231,7 @@
    "sub": "KARAHANTEPE: İNSAN YÜZLÜ TAŞ",
    "year": 2025,
    "label": "2025",
-   "fx": [
-    "dust",
-    "rays"
-   ],
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -227,7 +240,12 @@
     0.5,
     0.5
    ],
-   "effect": "glow"
+   "effect": "glow",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_004820_685754d6-596c-4a48-bbf5-29c079364d45.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
   },
   {
    "image": "images/s10.jpg",
@@ -241,10 +259,7 @@
    "sub": "KAZILAR SÜRÜYOR",
    "year": 2026,
    "label": "2026",
-   "fx": [
-    "fog",
-    "rays"
-   ],
+   "fx": [],
    "kb": [
     1.18,
     1.04,
@@ -252,7 +267,12 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_004820_685754d6-596c-4a48-bbf5-29c079364d45.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
   }
  ],
  "eras": [
