@@ -1,0 +1,251 @@
+{
+ "baslik": "Topkapı Sarayı: Harem ve Cinlerin Koridoru",
+ "hook": "TOPKAPI'DA CİNLERİN TOPLANDIĞI KORİDOR",
+ "map_region": "anadolu",
+ "sahneler": [
+  {
+   "lines": [
+    "Topkapı Sarayı'nda, cinlerin her gece toplandığına inanılan bir koridor var."
+   ],
+   "big": "TOPKAPI",
+   "sub": "CİNLERİN KORİDORU",
+   "label": "RİVAYET",
+   "fx": [
+    "fog",
+    "flicker"
+   ],
+   "prompt": "Dark narrow Ottoman palace corridor at night lit by a single oil lamp, Iznik tile walls, mysterious mist drifting along the floor, long shadows, eerie but elegant",
+   "image": "images/s01.jpg",
+   "prompt_tam": "Dark narrow Ottoman palace corridor at night lit by a single oil lamp, Iznik tile walls, mysterious mist drifting along the floor, long shadows, eerie but elegant, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Adı bile ürkütücü: Cinlerin Meşveret Yeri.",
+    "Haremin içinde, Altın Yol'un hemen yanında."
+   ],
+   "big": "HAREM",
+   "sub": "CİNLERİN MEŞVERET YERİ",
+   "label": "HAREM",
+   "fx": [
+    "fog"
+   ],
+   "prompt": "Long Ottoman harem passageway with stone floor and tiled walls, soft candlelight, empty, perspective toward a dark arched doorway",
+   "image": "images/s02.jpg",
+   "prompt_tam": "Long Ottoman harem passageway with stone floor and tiled walls, soft candlelight, empty, perspective toward a dark arched doorway, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Peki Harem gerçekte neydi?",
+    "Batılı ressamların çizdiği o hayal dünyası değil."
+   ],
+   "big": "GERÇEK",
+   "sub": "HAREM NEYDİ?",
+   "label": "HAREM",
+   "fx": [
+    "dust"
+   ],
+   "prompt": "Ottoman harem courtyard with tiled arcades and a marble fountain in soft morning light, calm and orderly, no people",
+   "image": "images/s03.jpg",
+   "prompt_tam": "Ottoman harem courtyard with tiled arcades and a marble fountain in soft morning light, calm and orderly, no people, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Haremde en büyük söz, padişahın annesi Valide Sultan'ındı."
+   ],
+   "big": "VALİDE",
+   "sub": "HAREMİN PATRONU",
+   "label": "DÜZEN",
+   "fx": [
+    "gold"
+   ],
+   "effect": "glow",
+   "prompt": "Opulent Ottoman Valide Sultan apartment, gilded ceiling, Iznik tiles, a richly dressed woman seen from behind sitting on a divan looking out a window toward the Bosphorus",
+   "image": "images/s04.jpg",
+   "prompt_tam": "Opulent Ottoman Valide Sultan apartment, gilded ceiling, Iznik tiles, a richly dressed woman seen from behind sitting on a divan looking out a window toward the Bosphorus, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Cariyelerin çoğu padişahın eşi değil, hizmet kadrosuydu.",
+    "Müzik, hat ve edebiyat eğitimi alırlardı."
+   ],
+   "big": "OKUL",
+   "sub": "EĞİTİM VE DİSİPLİN",
+   "label": "DÜZEN",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "prompt": "Young Ottoman women in modest period dresses seen from behind, practicing calligraphy and playing an oud in a sunlit tiled room, warm light",
+   "image": "images/s05.jpg",
+   "prompt_tam": "Young Ottoman women in modest period dresses seen from behind, practicing calligraphy and playing an oud in a sunlit tiled room, warm light, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Haremin üç yüzü aşkın odasının ilkleri,",
+    "III. Murad döneminde yapıldı."
+   ],
+   "big": "300+",
+   "sub": "ODA",
+   "label": "1574-1595",
+   "fx": [
+    "dust"
+   ],
+   "prompt": "Aerial view of the Topkapi Palace harem complex with many domes, chimneys and courtyards on Seraglio Point, Bosphorus behind, golden hour",
+   "image": "images/s06.jpg",
+   "prompt_tam": "Aerial view of the Topkapi Palace harem complex with many domes, chimneys and courtyards on Seraglio Point, Bosphorus behind, golden hour, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Şimdi o koridora dönelim.",
+    "Koridor nereye çıkıyor biliyor musun?"
+   ],
+   "big": "KORİDOR",
+   "sub": "NEREYE ÇIKIYOR?",
+   "label": "RİVAYET",
+   "fx": [
+    "fog",
+    "flicker"
+   ],
+   "effect": "stamp",
+   "prompt": "Slow view down a dark tiled palace corridor toward a heavy ornate wooden door slightly ajar, thin light beam through the gap, mist",
+   "image": "images/s07.jpg",
+   "prompt_tam": "Slow view down a dark tiled palace corridor toward a heavy ornate wooden door slightly ajar, thin light beam through the gap, mist, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Şehzadelerin yıllarca kapatıldığı daireye: Kafes'e."
+   ],
+   "big": "KAFES",
+   "sub": "ŞEHZADELERİN DAİRESİ",
+   "label": "KAFES",
+   "fx": [
+    "smoke"
+   ],
+   "prompt": "Elegant but lonely Ottoman palace chamber with latticed windows and tiled walls, a young prince seen from behind standing at the window, melancholic dim light",
+   "image": "images/s08.jpg",
+   "prompt_tam": "Elegant but lonely Ottoman palace chamber with latticed windows and tiled walls, a young prince seen from behind standing at the window, melancholic dim light, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Bazı yorumcular, cin hikâyesinin",
+    "oradaki gizli görüşmeleri örtmek için anlatıldığını düşünür."
+   ],
+   "big": "SIR",
+   "sub": "CİNLER Mİ, SİYASET Mİ?",
+   "label": "YORUM",
+   "fx": [
+    "fog"
+   ],
+   "prompt": "Two shadowy figures whispering in a dark palace corridor by lamplight, silhouettes only, Iznik tiles, secretive mood",
+   "image": "images/s09.jpg",
+   "prompt_tam": "Two shadowy figures whispering in a dark palace corridor by lamplight, silhouettes only, Iznik tiles, secretive mood, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Bir de sarayda 87 tılsımlı gömlek var.",
+    "Padişahları nazardan ve yenilgiden koruduğuna inanılıyordu."
+   ],
+   "big": "87",
+   "sub": "TILSIMLI GÖMLEK",
+   "label": "MÜZE",
+   "fx": [
+    "gold"
+   ],
+   "effect": "glow",
+   "prompt": "Antique Ottoman talismanic shirt displayed in a museum case, covered with tiny geometric squares and calligraphy patterns in red, gold and black, dramatic spotlight",
+   "image": "images/s10.jpg",
+   "prompt_tam": "Antique Ottoman talismanic shirt displayed in a museum case, covered with tiny geometric squares and calligraphy patterns in red, gold and black, dramatic spotlight, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Sence cin hikâyesi neyi saklıyordu?",
+    "Yorumlara yaz."
+   ],
+   "big": "SENCE?",
+   "sub": "CİN Mİ, SİYASET Mİ?",
+   "label": "BUGÜN",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "prompt": "Topkapi Palace seen from the Bosphorus at sunset, domes and towers glowing, calm water, birds",
+   "image": "images/s11.jpg",
+   "prompt_tam": "Topkapi Palace seen from the Bosphorus at sunset, domes and towers glowing, calm water, birds, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  }
+ ],
+ "finale": "",
+ "maps": [],
+ "cards": [
+  {
+   "scene": 5,
+   "value": 300,
+   "unit": "ODA",
+   "small": "HAREMİN ODA SAYISI (+)"
+  },
+  {
+   "scene": 9,
+   "value": 87,
+   "unit": "GÖMLEK",
+   "small": "TOPKAPI'DAKİ TILSIMLI GÖMLEKLER"
+  }
+ ],
+ "eras": [
+  {
+   "name": "RİVAYET",
+   "from": 0,
+   "to": 1
+  },
+  {
+   "name": "GERÇEK HAREM",
+   "from": 2,
+   "to": 5
+  },
+  {
+   "name": "KORİDORUN SIRRI",
+   "from": 6,
+   "to": 10
+  }
+ ],
+ "outro": {
+  "title": "CİN Mİ, SİYASET Mİ?",
+  "line": "Yorumlara yaz"
+ },
+ "aciklama": "Topkapı Sarayı'nda cinlerin her gece toplandığına inanılan bir koridor var 👀 Peki o koridor nereye çıkıyor?\n\nHarem, Batılı tabloların anlattığı yer değildi: Valide Sultan'ın yönettiği, eğitim ve disiplinin olduğu bir kurumdu. Sarayda bugün 87 tılsımlı gömlek de sergileniyor.\n\n💬 Sence cin hikâyesi neyi saklıyordu?\n📤 Bunu bilmeyen bir arkadaşına gönder.\n🔔 Takip et @animasyon.tarih\n📍 Topkapı Sarayı Müzesi, Fatih / İstanbul\n\n(Görseller temsilidir.)",
+ "kanca_alternatifleri": [
+  "TOPKAPI'DA CİNLERİN TOPLANDIĞI KORİDOR",
+  "HAREM SANDIĞIN GİBİ DEĞİLDİ",
+  "PADİŞAHLARIN TILSIMLI GÖMLEKLERİ"
+ ],
+ "aciklama_alternatifleri": [],
+ "hashtagler": [
+  "#tarih",
+  "#keşfet",
+  "#reels",
+  "#topkapısarayı",
+  "#harem",
+  "#osmanlıtarihi",
+  "#istanbul",
+  "#tılsım",
+  "#efsane",
+  "#tarihbilgisi",
+  "#animasyontarih"
+ ],
+ "kaynaklar": [
+  "https://istanbulansiklopedisi.org/handle/rek/8061",
+  "https://www.haberturk.com/tubitak-ansiklopedi/harem-nedir",
+  "https://dergipark.org.tr/tr/download/article-file/5586609",
+  "https://www.lonelyplanet.com/pois/402212",
+  "https://en.wikipedia.org/wiki/Ottoman_Imperial_Harem"
+ ],
+ "kontrol_notlari": [
+  "Cinlerin Meşveret Yeri: Reşat Ekrem Koçu, İstanbul Ansiklopedisi — 'batıl inanç', koridor Kafes'e çıkar; yorum 'mânalı bir masal'.",
+  "87 tılsımlı gömlek: Milli Saraylar dergisi.",
+  "Harem oda sayısı ~300, ilkleri III. Murad (1574-95): Lonely Planet."
+ ],
+ "konu": "Topkapı Sarayı Harem ve Cinlerin Koridoru",
+ "tarih": "",
+ "slug": "topkapi-sarayi-harem-ve-cinler-koridoru",
+ "durum": "onaylandi",
+ "sade": true,
+ "seslendirme_metni": "Topkapı Sarayı'nda, cinlerin her gece toplandığına inanılan bir koridor var.\nAdı bile ürkütücü: Cinlerin Meşveret Yeri.\nHaremin içinde, Altın Yol'un hemen yanında.\nPeki Harem gerçekte neydi?\nBatılı ressamların çizdiği o hayal dünyası değil.\nHaremde en büyük söz, padişahın annesi Valide Sultan'ındı.\nCariyelerin çoğu padişahın eşi değil, hizmet kadrosuydu.\nMüzik, hat ve edebiyat eğitimi alırlardı.\nHaremin üç yüzü aşkın odasının ilkleri,\nÜçüncü Murad döneminde yapıldı.\nŞimdi o koridora dönelim.\nKoridor nereye çıkıyor biliyor musun?\nŞehzadelerin yıllarca kapatıldığı daireye: Kafes'e.\nBazı yorumcular, cin hikâyesinin\noradaki gizli görüşmeleri örtmek için anlatıldığını düşünür.\nBir de sarayda seksen yedi tılsımlı gömlek var.\nPadişahları nazardan ve yenilgiden koruduğuna inanılıyordu.\nSence cin hikâyesi neyi saklıyordu?\nYorumlara yaz."
+}

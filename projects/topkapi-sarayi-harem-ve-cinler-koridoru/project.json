@@ -1,0 +1,320 @@
+{
+ "title": "Topkapı Sarayı: Harem ve Cinlerin Koridoru",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "TOPKAPI'DA CİNLERİN TOPLANDIĞI KORİDOR",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Topkapı Sarayı'nda, cinlerin her gece toplandığına inanılan bir koridor var."
+   ],
+   "big": "TOPKAPI",
+   "sub": "CİNLERİN KORİDORU",
+   "year": null,
+   "label": "RİVAYET",
+   "fx": [
+    "fog",
+    "flicker"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Adı bile ürkütücü: Cinlerin Meşveret Yeri.",
+    "Haremin içinde, Altın Yol'un hemen yanında."
+   ],
+   "big": "HAREM",
+   "sub": "CİNLERİN MEŞVERET YERİ",
+   "year": null,
+   "label": "HAREM",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Peki Harem gerçekte neydi?",
+    "Batılı ressamların çizdiği o hayal dünyası değil."
+   ],
+   "big": "GERÇEK",
+   "sub": "HAREM NEYDİ?",
+   "year": null,
+   "label": "HAREM",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Haremde en büyük söz, padişahın annesi Valide Sultan'ındı."
+   ],
+   "big": "VALİDE",
+   "sub": "HAREMİN PATRONU",
+   "year": null,
+   "label": "DÜZEN",
+   "fx": [
+    "gold"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "glow"
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Cariyelerin çoğu padişahın eşi değil, hizmet kadrosuydu.",
+    "Müzik, hat ve edebiyat eğitimi alırlardı."
+   ],
+   "big": "OKUL",
+   "sub": "EĞİTİM VE DİSİPLİN",
+   "year": null,
+   "label": "DÜZEN",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Haremin üç yüzü aşkın odasının ilkleri,",
+    "III. Murad döneminde yapıldı."
+   ],
+   "big": "300+",
+   "sub": "ODA",
+   "year": null,
+   "label": "1574-1595",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Şimdi o koridora dönelim.",
+    "Koridor nereye çıkıyor biliyor musun?"
+   ],
+   "big": "KORİDOR",
+   "sub": "NEREYE ÇIKIYOR?",
+   "year": null,
+   "label": "RİVAYET",
+   "fx": [
+    "fog",
+    "flicker"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Şehzadelerin yıllarca kapatıldığı daireye: Kafes'e."
+   ],
+   "big": "KAFES",
+   "sub": "ŞEHZADELERİN DAİRESİ",
+   "year": null,
+   "label": "KAFES",
+   "fx": [
+    "smoke"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bazı yorumcular, cin hikâyesinin",
+    "oradaki gizli görüşmeleri örtmek için anlatıldığını düşünür."
+   ],
+   "big": "SIR",
+   "sub": "CİNLER Mİ, SİYASET Mİ?",
+   "year": null,
+   "label": "YORUM",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bir de sarayda 87 tılsımlı gömlek var.",
+    "Padişahları nazardan ve yenilgiden koruduğuna inanılıyordu."
+   ],
+   "big": "87",
+   "sub": "TILSIMLI GÖMLEK",
+   "year": null,
+   "label": "MÜZE",
+   "fx": [
+    "gold"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "glow"
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Sence cin hikâyesi neyi saklıyordu?",
+    "Yorumlara yaz."
+   ],
+   "big": "SENCE?",
+   "sub": "CİN Mİ, SİYASET Mİ?",
+   "year": null,
+   "label": "BUGÜN",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "RİVAYET",
+   "from": 0,
+   "to": 1
+  },
+  {
+   "name": "GERÇEK HAREM",
+   "from": 2,
+   "to": 5
+  },
+  {
+   "name": "KORİDORUN SIRRI",
+   "from": 6,
+   "to": 10
+  }
+ ],
+ "outro_plan": {
+  "title": "CİN Mİ, SİYASET Mİ?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 5,
+   "value": 300,
+   "unit": "ODA",
+   "small": "HAREMİN ODA SAYISI (+)"
+  },
+  {
+   "scene": 9,
+   "value": 87,
+   "unit": "GÖMLEK",
+   "small": "TOPKAPI'DAKİ TILSIMLI GÖMLEKLER"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true
+}
