@@ -1,37 +1,19 @@
 {
  "asama": "kurgu",
- "durum": "hata",
- "ozet": "59 sn, -14 LUFS, senkron 20/22",
+ "durum": "tamam",
+ "ozet": "59 sn, -14 LUFS, senkron 22/22",
  "maddeler": [
-  {
-   "seviye": "uyari",
-   "mesaj": "altyazı süresi okunuşa uymuyor (31 kar/sn): “Bin dokuz yüz yirmi dört'te kanun çıktı.”"
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "altyazı süresi okunuşa uymuyor (29 kar/sn): “Bin dokuz yüz seksen dört'te çay serbest”"
-  },
   {
    "seviye": "bilgi",
    "mesaj": "sığmadığı için küçültüldü: “RİZE HALKI ÇAYI İSTEMEDİ, 1924'TE KANUN ÇIKTI”"
   },
   {
    "seviye": "bilgi",
-   "mesaj": "sığmadığı için küçültüldü: “Rize'nin çaya bu kadar zor ısındığına inanır mıydın?”"
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "Üst kısımdaki soluk bilgi metni (1924'te kanun çıktı) gökyüzü arka planında güçlükle okunuyor.",
-   "sahne": 1
-  },
-  {
-   "seviye": "hata",
-   "mesaj": "Sol taraftaki açıklama metni kadrajın dışına taşmış ve sol kenardan kesilmiş.",
-   "sahne": 12
+   "mesaj": "sığmadığı için küçültüldü: “Bunu biliyor muydun?”"
   }
  ],
  "sure": 59.0,
  "lufs": -13.6,
- "senkron": "20/22",
- "zaman": "2026-11-13T12:52:58Z"
+ "senkron": "22/22",
+ "zaman": "2026-11-13T13:30:42Z"
 }
