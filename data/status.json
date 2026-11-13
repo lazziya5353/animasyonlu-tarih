@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "cennet-ve-cehennem-obruklari: ses hazır",
-  "cikti": "projects/cennet-ve-cehennem-obruklari",
-  "zaman": "2026-11-13T14:00:04Z"
+  "mesaj": "topkapi-sarayi-harem-ve-cinler-koridoru: ses hazır",
+  "cikti": "projects/topkapi-sarayi-harem-ve-cinler-koridoru",
+  "zaman": "2026-11-13T15:33:34Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-13T14:21:42Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "cennet-ve-cehennem-obruklari: kurgu !",
-  "cikti": "projects/cennet-ve-cehennem-obruklari/kontrol",
-  "zaman": "2026-11-13T14:21:36Z"
+  "durum": "hata",
+  "mesaj": "topkapi-sarayi-harem-ve-cinler-koridoru: gorsel ✗",
+  "cikti": "projects/topkapi-sarayi-harem-ve-cinler-koridoru/kontrol",
+  "zaman": "2026-11-13T15:35:36Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
