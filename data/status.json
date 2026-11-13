@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri videosu hazır",
-  "cikti": "release:video-gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri",
-  "zaman": "2026-11-13T02:30:26Z"
+  "mesaj": "halfeti-suya-gomulen-sehir-ve-az-bilinen-gercekleri videosu hazır",
+  "cikti": "release:video-halfeti-suya-gomulen-sehir-ve-az-bilinen-gercekleri",
+  "zaman": "2026-11-13T06:01:54Z"
  },
  "kontrol": {
   "durum": "tamam",
-  "mesaj": "gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri: kurgu ✓",
-  "cikti": "projects/gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri/kontrol",
-  "zaman": "2026-11-13T02:30:21Z"
+  "mesaj": "halfeti-suya-gomulen-sehir-ve-az-bilinen-gercekleri: kurgu ✓",
+  "cikti": "projects/halfeti-suya-gomulen-sehir-ve-az-bilinen-gercekleri/kontrol",
+  "zaman": "2026-11-13T06:01:48Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

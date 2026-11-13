@@ -1,0 +1,31 @@
+{
+ "asama": "kurgu",
+ "durum": "tamam",
+ "ozet": "77 sn, -14 LUFS, senkron 10/10",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “26 YIL SONRA SU ÇEKİLDİ, HALFETİ GÖRÜNDÜ”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “RUMKALE · ERMENİ KATOLİKOSLUK MERKEZİ”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “ULU CAMİ”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “Suyun altındaki şehir sessizce bekliyor.”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.6-flash: The read operation timed out)"
+  }
+ ],
+ "sure": 77.4,
+ "lufs": -13.9,
+ "senkron": "10/10",
+ "zaman": "2026-11-13T06:01:48Z"
+}
