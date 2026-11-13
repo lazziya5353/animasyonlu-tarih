@@ -1,0 +1,23 @@
+{
+ "asama": "kurgu",
+ "durum": "tamam",
+ "ozet": "69 sn, -15 LUFS, senkron 10/10",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “1 GECE, 1 HEDEF: FATİH'İN ÇADIRI”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “Bir sonraki hikâyede görüşmek üzere.”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.5-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more info)"
+  }
+ ],
+ "sure": 69.3,
+ "lufs": -14.9,
+ "senkron": "10/10",
+ "zaman": "2026-11-13T00:34:49Z"
+}

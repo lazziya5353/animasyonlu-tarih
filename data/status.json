@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "fatih-sultan-mehmet-ve-kazikli-voyvoda-part-1-edirnedeki-reh videosu hazır",
-  "cikti": "release:video-fatih-sultan-mehmet-ve-kazikli-voyvoda-part-1-edirnedeki-reh",
-  "zaman": "2026-11-12T23:42:19Z"
+  "mesaj": "fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef videosu hazır",
+  "cikti": "release:video-fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef",
+  "zaman": "2026-11-13T00:34:55Z"
  },
  "kontrol": {
-  "durum": "hata",
-  "mesaj": "gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri: gorsel ✗",
-  "cikti": "projects/gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri/kontrol",
-  "zaman": "2026-11-13T00:01:25Z"
+  "durum": "tamam",
+  "mesaj": "fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef: kurgu ✓",
+  "cikti": "projects/fatih-sultan-mehmet-ve-kazikli-voyvoda-part-2-1462-eflak-sef/kontrol",
+  "zaman": "2026-11-13T00:34:49Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

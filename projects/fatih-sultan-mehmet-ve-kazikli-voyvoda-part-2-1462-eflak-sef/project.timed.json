@@ -1,0 +1,382 @@
+{
+ "title": "Fatih ve Kazıklı Voyvoda Part 2: 1462 Gece Baskını",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "1 GECE, 1 HEDEF: FATİH'İN ÇADIRI",
+ "map_region": "avrupa_ortadogu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": 0.0,
+   "end": 9.17,
+   "lines": [
+    "Haziran 1462'nin başında Osmanlı ordusu, Eflak direnişine rağmen Tuna'yı geçti. Ama asıl tehlike karanlıkta bekliyordu."
+   ],
+   "big": "TUNA",
+   "sub": "TUNA GEÇİLDİ",
+   "year": 1462,
+   "label": "1462",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_233106_4400bb8d-dd91-4426-aace-4c16b7e73aeb.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": 9.17,
+   "end": 15.25,
+   "lines": [
+    "Osmanlı ordusu ilerliyor, ama karşısında ordu yok. Vlad geri çekilerek direniyor."
+   ],
+   "big": "SESSİZ",
+   "sub": "KARŞIDA ORDU YOK",
+   "year": 1462,
+   "label": "1462",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_233106_4400bb8d-dd91-4426-aace-4c16b7e73aeb.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": 15.25,
+   "end": 21.630000000000003,
+   "lines": [
+    "17 Haziran 1462 gecesi, Târgoviște yakınlarında Vlad ordugâha baskın düzenliyor."
+   ],
+   "big": "1462",
+   "sub": "17 HAZİRAN GECESİ",
+   "year": 1462,
+   "label": "17 Haziran 1462",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "stamp",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_233106_4400bb8d-dd91-4426-aace-4c16b7e73aeb.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": 21.630000000000003,
+   "end": 27.290000000000003,
+   "lines": [
+    "Hedefi bizzat Sultan Mehmed'di. Meşale taşıyan süvariler uyuyan ordugâha daldı."
+   ],
+   "big": "HEDEF",
+   "sub": "SULTANIN ÇADIRI",
+   "year": 1462,
+   "label": "1462",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_233106_4400bb8d-dd91-4426-aace-4c16b7e73aeb.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": 27.290000000000003,
+   "end": 33.99,
+   "lines": [
+    "Baskın amacına ulaşamadı. Sultan sağ kurtuldu; sabah Osmanlı birlikleri Eflaklıları takip etti."
+   ],
+   "big": "SAĞ",
+   "sub": "SULTAN KURTULDU",
+   "year": 1462,
+   "label": "1462",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_233106_4400bb8d-dd91-4426-aace-4c16b7e73aeb.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": 33.99,
+   "end": 41.47,
+   "lines": [
+    "Ordu başkent Târgoviște'ye vardığında şehir terk edilmişti. Dönemin anlatılarına göre çevrede kazıklar ormanı vardı."
+   ],
+   "big": "BAŞKENT",
+   "sub": "ŞEHİR BOŞALTILMIŞ",
+   "year": 1462,
+   "label": "1462",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_235851_7560113e-0b49-4af4-a9d6-bb1d0e4f1f60.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": 41.47,
+   "end": 47.85,
+   "lines": [
+    "Fatih, Vlad'ın kardeşi Radu'yu Eflak tahtına geçirip ordusuyla ayrıldı. Boyarların çoğu Radu'ya geçti."
+   ],
+   "big": "RADU",
+   "sub": "YENİ VOYVODA",
+   "year": 1462,
+   "label": "1462",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_235851_7560113e-0b49-4af4-a9d6-bb1d0e4f1f60.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": 47.85,
+   "end": 53.050000000000004,
+   "lines": [
+    "Vlad Macaristan'a sığındı; Kral Corvinus onu tutuklattı. Yıllarca tutsak kaldı."
+   ],
+   "big": "KAÇIŞ",
+   "sub": "MACARİSTAN'A SIĞINDI",
+   "year": 1462,
+   "label": "1462",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_235851_7560113e-0b49-4af4-a9d6-bb1d0e4f1f60.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": 53.050000000000004,
+   "end": 58.11,
+   "lines": [
+    "1476'da Macar ve Boğdan desteğiyle yeniden tahta çıktı, ama kısa süre sonra savaşta öldü."
+   ],
+   "big": "1476",
+   "sub": "SON SAVAŞ",
+   "year": 1476,
+   "label": "1476",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "stamp",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_235851_7560113e-0b49-4af4-a9d6-bb1d0e4f1f60.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": 58.11,
+   "end": 68.85445800000001,
+   "lines": [
+    "Asıl efsane sonradan doğdu: 1897'de Bram Stoker, Dracula romanını yayımladı. Vampir kurgu, Vlad ise gerçekti."
+   ],
+   "big": "1897",
+   "sub": "DRAKULA ROMANI",
+   "year": 1897,
+   "label": "1897",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261112_235851_7560113e-0b49-4af4-a9d6-bb1d0e4f1f60.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
+  }
+ ],
+ "eras": [
+  {
+   "name": "EFLAK SEFERİ",
+   "from": 0,
+   "to": 5
+  },
+  {
+   "name": "SONRASI",
+   "from": 6,
+   "to": 8
+  },
+  {
+   "name": "EFSANE",
+   "from": 9,
+   "to": 9
+  }
+ ],
+ "outro_plan": {
+  "title": "ANİMASYON TARİH",
+  "line": "Bir sonraki hikâyede görüşmek üzere."
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 8,
+   "value": 14,
+   "unit": "YIL",
+   "small": "BASKINDAN ÖLÜME"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true,
+ "cards": [
+  {
+   "start": 54.25000000000001,
+   "end": 57.81,
+   "value": 14,
+   "unit": "YIL",
+   "small": "BASKINDAN ÖLÜME"
+  }
+ ],
+ "outro": {
+  "start": 63.154458000000005,
+  "title": "ANİMASYON TARİH",
+  "line": "Bir sonraki hikâyede görüşmek üzere.",
+  "line_at": 65.454458
+ },
+ "duration": 69.35,
+ "jumps": [
+  {
+   "t": 58.11,
+   "value": 421
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.0,
+   "end": 8.88,
+   "text": "Haziran 1462'nin başında Osmanlı ordusu, Eflak direnişine rağmen Tuna'yı geçti. Ama asıl tehlike karanlıkta bekliyordu."
+  },
+  {
+   "start": 9.32,
+   "end": 14.72,
+   "text": "Osmanlı ordusu ilerliyor, ama karşısında ordu yok. Vlad geri çekilerek direniyor."
+  },
+  {
+   "start": 15.4,
+   "end": 21.1,
+   "text": "17 Haziran 1462 gecesi, Târgoviște yakınlarında Vlad ordugâha baskın düzenliyor."
+  },
+  {
+   "start": 21.78,
+   "end": 26.96,
+   "text": "Hedefi bizzat Sultan Mehmed'di. Meşale taşıyan süvariler uyuyan ordugâha daldı."
+  },
+  {
+   "start": 27.44,
+   "end": 33.58,
+   "text": "Baskın amacına ulaşamadı. Sultan sağ kurtuldu; sabah Osmanlı birlikleri Eflaklıları takip etti."
+  },
+  {
+   "start": 34.14,
+   "end": 40.98,
+   "text": "Ordu başkent Târgoviște'ye vardığında şehir terk edilmişti. Dönemin anlatılarına göre çevrede kazıklar ormanı vardı."
+  },
+  {
+   "start": 41.62,
+   "end": 47.56,
+   "text": "Fatih, Vlad'ın kardeşi Radu'yu Eflak tahtına geçirip ordusuyla ayrıldı. Boyarların çoğu Radu'ya geçti."
+  },
+  {
+   "start": 48.0,
+   "end": 52.56,
+   "text": "Vlad Macaristan'a sığındı; Kral Corvinus onu tutuklattı. Yıllarca tutsak kaldı."
+  },
+  {
+   "start": 53.2,
+   "end": 58.23,
+   "text": "1476'da Macar ve Boğdan desteğiyle yeniden tahta çıktı, ama kısa süre sonra savaşta öldü."
+  },
+  {
+   "start": 58.26,
+   "end": 66.42,
+   "text": "Asıl efsane sonradan doğdu: 1897'de Bram Stoker, Dracula romanını yayımladı. Vampir kurgu, Vlad ise gerçekti."
+  }
+ ]
+}
