@@ -1,0 +1,316 @@
+{
+ "baslik": "Nemrut Dağı ve Kralın Bedduası",
+ "hook": "NEMRUT'TA KRALIN BEDDUASI",
+ "map_region": "anadolu",
+ "sahneler": [
+  {
+   "lines": [
+    "Türkiye'nin doğusunda, iki bin metrenin üstünde bir dağ var.",
+    "Tepesinde bir kral, iki bin yıldır uyuyor."
+   ],
+   "big": "NEMRUT",
+   "sub": "ADIYAMAN",
+   "label": "2.134 M",
+   "fx": [],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     62,
+     33,
+     150
+    ],
+    "to": [
+     38.741,
+     37.981,
+     0.8
+    ],
+    "zoom_sure": 5.0,
+    "etiketler": [
+     [
+      "TÜRKİYE",
+      33.5,
+      39.2
+     ],
+     [
+      "ADIYAMAN",
+      38.28,
+      37.76
+     ]
+    ],
+    "hedef": [
+     38.741,
+     37.981,
+     "NEMRUT DAĞI"
+    ]
+   },
+   "image": "images/s01.jpg",
+   "prompt": "Mount Nemrut",
+   "prompt_tam": "Mount Nemrut"
+  },
+  {
+   "lines": [
+    "Tepedeki dev höyüğü insanlar taş taş yığdı.",
+    "Yüksekliği tam elli metre."
+   ],
+   "big": "50 M",
+   "sub": "İNSAN YAPIMI HÖYÜK",
+   "label": "MÖ 1. YY",
+   "fx": [
+    "fog"
+   ],
+   "image": "images/s02.jpg",
+   "prompt": "Mount Nemrut",
+   "prompt_tam": "Mount Nemrut",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "lines": [
+    "Önünde dev heykeller tahtlarında oturuyor.",
+    "Kral Antiokhos, tanrılarla yan yana."
+   ],
+   "big": "HEYKELLER",
+   "sub": "DOĞU TERASI",
+   "label": "TANRILAR",
+   "fx": [
+    "dust"
+   ],
+   "effect": "type",
+   "type_text": "ANTİOKHOS · KOMMAGENE · ZEUS · APOLLON · HERAKLES",
+   "image": "images/s03.jpg",
+   "prompt": "Mount Nemrut",
+   "prompt_tam": "Mount Nemrut",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "lines": [
+    "Kral, babasından Pers, annesinden Makedon soyundan geldiğini söylüyordu.",
+    "Heykellerde Doğu ile Batı birleşti."
+   ],
+   "big": "DOĞU + BATI",
+   "sub": "PERS VE YUNAN",
+   "label": "ANTİOKHOS",
+   "fx": [
+    "rays"
+   ],
+   "image": "images/s04.jpg",
+   "prompt": "Mount Nemrut",
+   "prompt_tam": "Mount Nemrut",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "lines": [
+    "Bazı taş bloklar dokuz tona kadar çıkıyor.",
+    "Hepsi bu zirveye taşındı."
+   ],
+   "big": "9 TON",
+   "sub": "TEK BİR BLOK",
+   "label": "2.150 M",
+   "fx": [
+    "dust"
+   ],
+   "effect": "glow",
+   "image": "images/s05.jpg",
+   "prompt": "Mount Nemrut",
+   "prompt_tam": "Mount Nemrut",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "lines": [
+    "Zamanla heykellerin başları gövdelerinden düştü.",
+    "Bugün yerde, yan yana duruyorlar."
+   ],
+   "big": "BAŞLAR",
+   "sub": "YERE DÜŞTÜ",
+   "label": "BUGÜN",
+   "fx": [
+    "fog"
+   ],
+   "image": "images/s06.jpg",
+   "prompt": "Mount Nemrut",
+   "prompt_tam": "Mount Nemrut",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  },
+  {
+   "lines": [
+    "Kral, tahtların arkasına 237 satırlık bir yazıt kazıttı."
+   ],
+   "big": "237",
+   "sub": "SATIRLIK YAZIT",
+   "label": "NOMOS",
+   "fx": [
+    "dust",
+    "flicker"
+   ],
+   "effect": "type",
+   "type_text": "NOMOS · KRALIN KUTSAL YASASI",
+   "image": "images/s07.jpg",
+   "prompt": "Mount Nemrut",
+   "prompt_tam": "Mount Nemrut",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "lines": [
+    "Yazıtta bir de beddua var:",
+    "Bu kutsal yere zarar veren, soyuyla birlikte tanrıların cezasına uğrasın."
+   ],
+   "big": "BEDDUA",
+   "sub": "YAZITTA YAZIYOR",
+   "label": "NOMOS",
+   "fx": [
+    "smoke",
+    "flicker"
+   ],
+   "effect": "stamp",
+   "image": "images/s08.jpg",
+   "prompt": "Mount Nemrut",
+   "prompt_tam": "Mount Nemrut",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "lines": [
+    "Yazıt, kralın höyüğün içinde yattığını söylüyor.",
+    "Ama mezar odası bugün hâlâ bulunamadı."
+   ],
+   "big": "MEZAR?",
+   "sub": "HÂLÂ BULUNAMADI",
+   "label": "SIR",
+   "fx": [
+    "fog"
+   ],
+   "image": "images/s09.jpg",
+   "prompt": "Mount Nemrut",
+   "prompt_tam": "Mount Nemrut",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "lines": [
+    "Nemrut, 1987'den beri UNESCO Dünya Mirası."
+   ],
+   "big": "UNESCO",
+   "sub": "1987",
+   "label": "1987",
+   "fx": [
+    "gold"
+   ],
+   "image": "images/s10.jpg",
+   "prompt": "Mount Nemrut",
+   "prompt_tam": "Mount Nemrut",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "lines": [
+    "Sence mezar açılmalı mı, yoksa beddua mı kazanmalı?",
+    "Yorumlara yaz."
+   ],
+   "big": "SENCE?",
+   "sub": "MEZAR AÇILMALI MI?",
+   "label": "BUGÜN",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "image": "images/s11.jpg",
+   "prompt": "Mount Nemrut",
+   "prompt_tam": "Mount Nemrut",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  }
+ ],
+ "finale": "",
+ "maps": [],
+ "cards": [
+  {
+   "scene": 6,
+   "value": 237,
+   "unit": "SATIR",
+   "small": "KRALIN YAZITI (NOMOS)"
+  }
+ ],
+ "eras": [
+  {
+   "name": "DAĞ",
+   "from": 0,
+   "to": 1
+  },
+  {
+   "name": "HEYKELLER",
+   "from": 2,
+   "to": 5
+  },
+  {
+   "name": "YAZIT VE BEDDUA",
+   "from": 6,
+   "to": 10
+  }
+ ],
+ "outro": {
+  "title": "MEZAR MI, BEDDUA MI?",
+  "line": "Yorumlara yaz"
+ },
+ "aciklama": "Adıyaman'da 2.134 metrede bir kral iki bin yıldır uyuyor 👀 Ve kutsal alanına zarar verene beddua bırakmış.\n\nKommagene Kralı I. Antiokhos, tahtların arkasına 237 satırlık bir yazıt kazıttı. Mezar odası ise bugün hâlâ bulunamadı.\n\n💬 Sence mezar açılmalı mı?\n📤 Bunu bilmeyen bir arkadaşına gönder.\n🔔 Takip et @animasyon.tarih\n📍 Nemrut Dağı, Kahta / Adıyaman\n\n(Görseller temsilidir. Uydu: Sentinel-2 cloudless 2016, EOX)",
+ "kanca_alternatifleri": [
+  "NEMRUT'TA KRALIN BEDDUASI",
+  "2 BİN YILDIR BULUNAMAYAN MEZAR",
+  "BAŞLARI YERE DÜŞEN TANRILAR"
+ ],
+ "aciklama_alternatifleri": [],
+ "hashtagler": [
+  "#tarih",
+  "#keşfet",
+  "#reels",
+  "#nemrut",
+  "#nemrutdağı",
+  "#adıyaman",
+  "#kommagene",
+  "#unesco",
+  "#antikçağ",
+  "#tarihbilgisi",
+  "#animasyontarih"
+ ],
+ "kaynaklar": [
+  "https://bianet.org/haber/nemruttan-allianoiye-81138",
+  "https://travelatelier.com/?p=20492",
+  "https://followinghadrianphotography.com/tag/mount-nemrut/",
+  "https://wikipedia.com/wiki/Nemrud_Dagi",
+  "https://ebruliturizm.com/?p=4174"
+ ],
+ "kontrol_notlari": [
+  "Beddua: nomos yazıtı, Sencer Şahin çevirisi (Bianet alıntısı) — videoda özetlendi.",
+  "237 satır, 50 m höyük, 9 ton blok, UNESCO 1987: kaynaklarda."
+ ],
+ "konu": "Nemrut Dağı ve Kralın Bedduası",
+ "tarih": "",
+ "slug": "nemrut-dagi-kralin-bedduasi",
+ "durum": "onaylandi",
+ "sade": true,
+ "seslendirme_metni": "Türkiye'nin doğusunda, iki bin metrenin üstünde bir dağ var.\nTepesinde bir kral, iki bin yıldır uyuyor.\nTepedeki dev höyüğü insanlar taş taş yığdı.\nYüksekliği tam elli metre.\nÖnünde dev heykeller tahtlarında oturuyor.\nKral Antiyokos, tanrılarla yan yana.\nKral, babasından Pers, annesinden Makedon soyundan geldiğini söylüyordu.\nHeykellerde Doğu ile Batı birleşti.\nBazı taş bloklar dokuz tona kadar çıkıyor.\nHepsi bu zirveye taşındı.\nZamanla heykellerin başları gövdelerinden düştü.\nBugün yerde, yan yana duruyorlar.\nKral, tahtların arkasına iki yüz otuz yedi satırlık bir yazıt kazıttı.\nYazıtta bir de beddua var:\nBu kutsal yere zarar veren, soyuyla birlikte tanrıların cezasına uğrasın.\nYazıt, kralın höyüğün içinde yattığını söylüyor.\nAma mezar odası bugün hâlâ bulunamadı.\nNemrut, bin dokuz yüz seksen yediden beri UNESCO Dünya Mirası.\nSence mezar açılmalı mı, yoksa beddua mı kazanmalı?\nYorumlara yaz."
+}

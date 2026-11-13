@@ -1,0 +1,386 @@
+{
+ "title": "Nemrut Dağı ve Kralın Bedduası",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "NEMRUT'TA KRALIN BEDDUASI",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Türkiye'nin doğusunda, iki bin metrenin üstünde bir dağ var.",
+    "Tepesinde bir kral, iki bin yıldır uyuyor."
+   ],
+   "big": "NEMRUT",
+   "sub": "ADIYAMAN",
+   "year": null,
+   "label": "2.134 M",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     62,
+     33,
+     150
+    ],
+    "to": [
+     38.741,
+     37.981,
+     0.8
+    ],
+    "zoom_sure": 5.0,
+    "etiketler": [
+     [
+      "TÜRKİYE",
+      33.5,
+      39.2
+     ],
+     [
+      "ADIYAMAN",
+      38.28,
+      37.76
+     ]
+    ],
+    "hedef": [
+     38.741,
+     37.981,
+     "NEMRUT DAĞI"
+    ]
+   }
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Tepedeki dev höyüğü insanlar taş taş yığdı.",
+    "Yüksekliği tam elli metre."
+   ],
+   "big": "50 M",
+   "sub": "İNSAN YAPIMI HÖYÜK",
+   "year": null,
+   "label": "MÖ 1. YY",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Önünde dev heykeller tahtlarında oturuyor.",
+    "Kral Antiokhos, tanrılarla yan yana."
+   ],
+   "big": "HEYKELLER",
+   "sub": "DOĞU TERASI",
+   "year": null,
+   "label": "TANRILAR",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "type",
+   "type_text": "ANTİOKHOS · KOMMAGENE · ZEUS · APOLLON · HERAKLES",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Kral, babasından Pers, annesinden Makedon soyundan geldiğini söylüyordu.",
+    "Heykellerde Doğu ile Batı birleşti."
+   ],
+   "big": "DOĞU + BATI",
+   "sub": "PERS VE YUNAN",
+   "year": null,
+   "label": "ANTİOKHOS",
+   "fx": [
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bazı taş bloklar dokuz tona kadar çıkıyor.",
+    "Hepsi bu zirveye taşındı."
+   ],
+   "big": "9 TON",
+   "sub": "TEK BİR BLOK",
+   "year": null,
+   "label": "2.150 M",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "glow",
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Zamanla heykellerin başları gövdelerinden düştü.",
+    "Bugün yerde, yan yana duruyorlar."
+   ],
+   "big": "BAŞLAR",
+   "sub": "YERE DÜŞTÜ",
+   "year": null,
+   "label": "BUGÜN",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Kral, tahtların arkasına 237 satırlık bir yazıt kazıttı."
+   ],
+   "big": "237",
+   "sub": "SATIRLIK YAZIT",
+   "year": null,
+   "label": "NOMOS",
+   "fx": [
+    "dust",
+    "flicker"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "type",
+   "type_text": "NOMOS · KRALIN KUTSAL YASASI",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Yazıtta bir de beddua var:",
+    "Bu kutsal yere zarar veren, soyuyla birlikte tanrıların cezasına uğrasın."
+   ],
+   "big": "BEDDUA",
+   "sub": "YAZITTA YAZIYOR",
+   "year": null,
+   "label": "NOMOS",
+   "fx": [
+    "smoke",
+    "flicker"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp",
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Yazıt, kralın höyüğün içinde yattığını söylüyor.",
+    "Ama mezar odası bugün hâlâ bulunamadı."
+   ],
+   "big": "MEZAR?",
+   "sub": "HÂLÂ BULUNAMADI",
+   "year": null,
+   "label": "SIR",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Nemrut, 1987'den beri UNESCO Dünya Mirası."
+   ],
+   "big": "UNESCO",
+   "sub": "1987",
+   "year": null,
+   "label": "1987",
+   "fx": [
+    "gold"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Sence mezar açılmalı mı, yoksa beddua mı kazanmalı?",
+    "Yorumlara yaz."
+   ],
+   "big": "SENCE?",
+   "sub": "MEZAR AÇILMALI MI?",
+   "year": null,
+   "label": "BUGÜN",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  }
+ ],
+ "eras": [
+  {
+   "name": "DAĞ",
+   "from": 0,
+   "to": 1
+  },
+  {
+   "name": "HEYKELLER",
+   "from": 2,
+   "to": 5
+  },
+  {
+   "name": "YAZIT VE BEDDUA",
+   "from": 6,
+   "to": 10
+  }
+ ],
+ "outro_plan": {
+  "title": "MEZAR MI, BEDDUA MI?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 6,
+   "value": 237,
+   "unit": "SATIR",
+   "small": "KRALIN YAZITI (NOMOS)"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true
+}
