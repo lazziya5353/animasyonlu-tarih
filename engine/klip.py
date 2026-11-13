@@ -38,7 +38,8 @@ class Klip:
 
     def frame(self, lt, dur):
         n = self.n; sure = n / 30.0; lt = max(0., lt); u = clamp(lt / max(.1, dur)); r = dur / sure
-        if r <= EN_YAVAS: pos = u * (n - 1)                                 # parçayı sahne süresine tam yay
+        if r < 0.87: pos = min(n - 1, lt * 30 * 1.15)                       # sahne klipten kısa: hızlandırma yok (en çok %15), klibin baştan bir kısmı gerçek hızda oynar
+        elif r <= EN_YAVAS: pos = u * (n - 1)                                 # parçayı sahne süresine tam yay
         else: pos = (n - 1) * (1 - (1 - u) ** (r / 1.25))                   # çok uzun cümle: donmak yerine giderek yavaşlar, son kareye cümleyle birlikte varır
         i = int(pos); f = pos - i; a = self._al(i)
         if f > .05 and i + 1 < n: a = Image.blend(a, self._al(i + 1), f)
