@@ -229,20 +229,7 @@
   }
  ],
  "finale": "",
- "maps": [
-  {
-   "after_scene": 1,
-   "cities": [
-    "Erzurum",
-    "Tebriz"
-   ],
-   "route": [
-    "Erzurum",
-    "Tebriz"
-   ],
-   "title": "DOĞU SINIRI: ERZURUM — TEBRİZ"
-  }
- ],
+ "maps": [],
  "cards": [
   {
    "scene": 1,

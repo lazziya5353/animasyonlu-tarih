@@ -310,20 +310,7 @@
   "title": "İSHAK PAŞA SARAYI",
   "line": "Bir sonraki durak için takipte kal."
  },
- "maps_plan": [
-  {
-   "after_scene": 1,
-   "cities": [
-    "Erzurum",
-    "Tebriz"
-   ],
-   "route": [
-    "Erzurum",
-    "Tebriz"
-   ],
-   "title": "DOĞU SINIRI: ERZURUM — TEBRİZ"
-  }
- ],
+ "maps_plan": [],
  "cards_plan": [
   {
    "scene": 1,
