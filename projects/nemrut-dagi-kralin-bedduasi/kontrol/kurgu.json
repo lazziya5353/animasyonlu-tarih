@@ -1,0 +1,24 @@
+{
+ "asama": "kurgu",
+ "durum": "hata",
+ "ozet": "60 sn, -14 LUFS, senkron 20/20",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “DOĞU + BATI”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “MEZAR MI, BEDDUA MI?”"
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Ekranın sol üst ve sağ tarafındaki 237 ve 215 satır etiketleri ile metin katmanları arka plan görseliyle üst üste binip okunmaz hale gelmiş.",
+   "sahne": 7
+  }
+ ],
+ "sure": 60.1,
+ "lufs": -14.2,
+ "senkron": "20/20",
+ "zaman": "2026-11-13T19:17:29Z"
+}

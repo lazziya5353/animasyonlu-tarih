@@ -1,0 +1,516 @@
+{
+ "title": "Nemrut Dağı ve Kralın Bedduası",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "NEMRUT'TA KRALIN BEDDUASI",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": 0.0,
+   "end": 7.27,
+   "lines": [
+    "Türkiye'nin doğusunda, iki bin metrenin üstünde bir dağ var.",
+    "Tepesinde bir kral, iki bin yıldır uyuyor."
+   ],
+   "big": "NEMRUT",
+   "sub": "ADIYAMAN",
+   "year": null,
+   "label": "2.134 M",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     36.5,
+     38.5,
+     70
+    ],
+    "to": [
+     38.741,
+     37.981,
+     0.8
+    ],
+    "zoom_sure": 5.0,
+    "etiketler": [
+     [
+      "TÜRKİYE",
+      33.5,
+      39.2
+     ],
+     [
+      "ADIYAMAN",
+      38.28,
+      37.76
+     ]
+    ],
+    "hedef": [
+     38.741,
+     37.981,
+     "NEMRUT DAĞI"
+    ]
+   }
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": 7.27,
+   "end": 12.67,
+   "lines": [
+    "Tepedeki dev höyüğü insanlar taş taş yığdı.",
+    "Yüksekliği tam elli metre."
+   ],
+   "big": "50 M",
+   "sub": "İNSAN YAPIMI HÖYÜK",
+   "year": null,
+   "label": "MÖ 1. YY",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_181344_b888845f-779f-4bd1-844f-e7fae52ae0a4.mp4",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": 12.67,
+   "end": 18.130000000000003,
+   "lines": [
+    "Önünde dev heykeller tahtlarında oturuyor.",
+    "Kral Antiokhos, tanrılarla yan yana."
+   ],
+   "big": "HEYKELLER",
+   "sub": "DOĞU TERASI",
+   "year": null,
+   "label": "TANRILAR",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "type",
+   "type_text": "ANTİOKHOS · KOMMAGENE · ZEUS · APOLLON · HERAKLES",
+   "video": "k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_181344_b888845f-779f-4bd1-844f-e7fae52ae0a4.mp4",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": 18.130000000000003,
+   "end": 25.75,
+   "lines": [
+    "Kral, babasından Pers, annesinden Makedon soyundan geldiğini söylüyordu.",
+    "Heykellerde Doğu ile Batı birleşti."
+   ],
+   "big": "DOĞU + BATI",
+   "sub": "PERS VE YUNAN",
+   "year": null,
+   "label": "ANTİOKHOS",
+   "fx": [
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_181344_b888845f-779f-4bd1-844f-e7fae52ae0a4.mp4",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": 25.75,
+   "end": 30.41,
+   "lines": [
+    "Bazı taş bloklar dokuz tona kadar çıkıyor.",
+    "Hepsi bu zirveye taşındı."
+   ],
+   "big": "9 TON",
+   "sub": "TEK BİR BLOK",
+   "year": null,
+   "label": "2.150 M",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "glow",
+   "video": "k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_181344_b888845f-779f-4bd1-844f-e7fae52ae0a4.mp4",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": 30.41,
+   "end": 35.53,
+   "lines": [
+    "Zamanla heykellerin başları gövdelerinden düştü.",
+    "Bugün yerde, yan yana duruyorlar."
+   ],
+   "big": "BAŞLAR",
+   "sub": "YERE DÜŞTÜ",
+   "year": null,
+   "label": "BUGÜN",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_181344_b888845f-779f-4bd1-844f-e7fae52ae0a4.mp4",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": 35.53,
+   "end": 39.11,
+   "lines": [
+    "Kral, tahtların arkasına 237 satırlık bir yazıt kazıttı."
+   ],
+   "big": "237",
+   "sub": "SATIRLIK YAZIT",
+   "year": null,
+   "label": "NOMOS",
+   "fx": [
+    "dust",
+    "flicker"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "type",
+   "type_text": "NOMOS · KRALIN KUTSAL YASASI",
+   "video": "k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_184109_089613aa-02f4-48f0-903a-dbe83e829d37.mp4",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": 39.11,
+   "end": 44.33,
+   "lines": [
+    "Yazıtın sonunda, bu kutsal yere zarar verenlere bir beddua var.",
+    "Ekranı durdur ve oku."
+   ],
+   "big": null,
+   "sub": null,
+   "year": null,
+   "label": "NOMOS",
+   "fx": [
+    "smoke",
+    "flicker"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "anim": {
+    "tur": "yazit",
+    "baslik": "KRALIN YAZITI · NOMOS",
+    "satirlar": [
+     "Her kim bu kutsal düzeni bozar,",
+     "bu anıta zarar verir",
+     "ya da anlamını",
+     "değiştirmeye kalkarsa,",
+     "yalnız kendisi değil,",
+     "bütün soyu da",
+     "tanrıların cezasına uğrasın."
+    ],
+    "imza": "— I. ANTİOKHOS · MÖ 1. YÜZYIL (ÖZET ÇEVİRİ)",
+    "boyut": 52,
+    "yazma_sure": 2.0
+   }
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": 44.33,
+   "end": 49.45,
+   "lines": [
+    "Yazıt, kralın höyüğün içinde yattığını söylüyor.",
+    "Ama mezar odası bugün hâlâ bulunamadı."
+   ],
+   "big": "MEZAR?",
+   "sub": "HÂLÂ BULUNAMADI",
+   "year": null,
+   "label": "SIR",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_184109_089613aa-02f4-48f0-903a-dbe83e829d37.mp4",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": 49.45,
+   "end": 53.11,
+   "lines": [
+    "Nemrut, 1987'den beri UNESCO Dünya Mirası."
+   ],
+   "big": "UNESCO",
+   "sub": "1987",
+   "year": null,
+   "label": "1987",
+   "fx": [
+    "gold"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_184109_089613aa-02f4-48f0-903a-dbe83e829d37.mp4",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": 53.11,
+   "end": 59.5955,
+   "lines": [
+    "Sence mezar açılmalı mı, yoksa beddua mı kazanmalı?",
+    "Yorumlara yaz."
+   ],
+   "big": "SENCE?",
+   "sub": "MEZAR AÇILMALI MI?",
+   "year": null,
+   "label": "BUGÜN",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_184109_089613aa-02f4-48f0-903a-dbe83e829d37.mp4",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  }
+ ],
+ "eras": [
+  {
+   "name": "DAĞ",
+   "from": 0,
+   "to": 1
+  },
+  {
+   "name": "HEYKELLER",
+   "from": 2,
+   "to": 5
+  },
+  {
+   "name": "YAZIT VE BEDDUA",
+   "from": 6,
+   "to": 10
+  }
+ ],
+ "outro_plan": {
+  "title": "MEZAR MI, BEDDUA MI?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 6,
+   "value": 237,
+   "unit": "SATIR",
+   "small": "KRALIN YAZITI (NOMOS)"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true,
+ "cards": [
+  {
+   "start": 36.730000000000004,
+   "end": 38.81,
+   "value": 237,
+   "unit": "SATIR",
+   "small": "KRALIN YAZITI (NOMOS)"
+  }
+ ],
+ "outro": {
+  "start": 53.8955,
+  "title": "MEZAR MI, BEDDUA MI?",
+  "line": "Yorumlara yaz",
+  "line_at": 56.195499999999996
+ },
+ "duration": 60.1,
+ "jumps": [],
+ "captions": [
+  {
+   "start": 0.0,
+   "end": 3.8,
+   "text": "Türkiye'nin doğusunda, iki bin metrenin üstünde bir dağ var."
+  },
+  {
+   "start": 4.24,
+   "end": 7.0,
+   "text": "Tepesinde bir kral, iki bin yıldır uyuyor."
+  },
+  {
+   "start": 7.42,
+   "end": 10.3,
+   "text": "Tepedeki dev höyüğü insanlar taş taş yığdı."
+  },
+  {
+   "start": 10.68,
+   "end": 12.18,
+   "text": "Yüksekliği tam elli metre."
+  },
+  {
+   "start": 12.82,
+   "end": 15.2,
+   "text": "Önünde dev heykeller tahtlarında oturuyor."
+  },
+  {
+   "start": 15.58,
+   "end": 17.74,
+   "text": "Kral Antiokhos, tanrılarla yan yana."
+  },
+  {
+   "start": 18.28,
+   "end": 22.42,
+   "text": "Kral, babasından Pers, annesinden Makedon soyundan geldiğini söylüyordu."
+  },
+  {
+   "start": 22.96,
+   "end": 25.32,
+   "text": "Heykellerde Doğu ile Batı birleşti."
+  },
+  {
+   "start": 25.9,
+   "end": 28.23,
+   "text": "Bazı taş bloklar dokuz tona kadar çıkıyor."
+  },
+  {
+   "start": 28.26,
+   "end": 30.12,
+   "text": "Hepsi bu zirveye taşındı."
+  },
+  {
+   "start": 30.56,
+   "end": 33.2,
+   "text": "Zamanla heykellerin başları gövdelerinden düştü."
+  },
+  {
+   "start": 33.54,
+   "end": 35.3,
+   "text": "Bugün yerde, yan yana duruyorlar."
+  },
+  {
+   "start": 35.68,
+   "end": 38.94,
+   "text": "Kral, tahtların arkasına 237 satırlık bir yazıt kazıttı."
+  },
+  {
+   "start": 39.26,
+   "end": 42.6,
+   "text": "Yazıtın sonunda, bu kutsal yere zarar verenlere bir beddua var."
+  },
+  {
+   "start": 42.98,
+   "end": 44.2,
+   "text": "Ekranı durdur ve oku."
+  },
+  {
+   "start": 44.48,
+   "end": 46.74,
+   "text": "Yazıt, kralın höyüğün içinde yattığını söylüyor."
+  },
+  {
+   "start": 47.16,
+   "end": 49.2,
+   "text": "Ama mezar odası bugün hâlâ bulunamadı."
+  },
+  {
+   "start": 49.6,
+   "end": 52.84,
+   "text": "Nemrut, 1987'den beri UNESCO Dünya Mirası."
+  },
+  {
+   "start": 53.26,
+   "end": 56.1,
+   "text": "Sence mezar açılmalı mı, yoksa beddua mı kazanmalı?"
+  },
+  {
+   "start": 56.44,
+   "end": 57.04,
+   "text": "Yorumlara yaz."
+  }
+ ]
+}

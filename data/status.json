@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "ishak-pasa-sarayinin-tarihi videosu hazır",
-  "cikti": "release:video-ishak-pasa-sarayinin-tarihi",
-  "zaman": "2026-11-13T18:06:11Z"
+  "mesaj": "nemrut-dagi-kralin-bedduasi videosu hazır",
+  "cikti": "release:video-nemrut-dagi-kralin-bedduasi",
+  "zaman": "2026-11-13T19:17:36Z"
  },
  "kontrol": {
   "durum": "hata",
-  "mesaj": "cin-seddi-uzaydan-gorunur-mu: gorsel ✗",
-  "cikti": "projects/cin-seddi-uzaydan-gorunur-mu/kontrol",
-  "zaman": "2026-11-13T18:47:10Z"
+  "mesaj": "nemrut-dagi-kralin-bedduasi: kurgu ✗",
+  "cikti": "projects/nemrut-dagi-kralin-bedduasi/kontrol",
+  "zaman": "2026-11-13T19:17:29Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
