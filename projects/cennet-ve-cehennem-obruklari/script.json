@@ -16,7 +16,11 @@
    ],
    "prompt": "Epic aerial drone view looking down into two giant natural sinkholes side by side in a green Mediterranean landscape near Silifke Turkey, one wide and lush with trees, one narrow and dark, morning light",
    "image": "images/s01.jpg",
-   "prompt_tam": "Epic aerial drone view looking down into two giant natural sinkholes side by side in a green Mediterranean landscape near Silifke Turkey, one wide and lush with trees, one narrow and dark, morning light, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+   "prompt_tam": "Epic aerial drone view looking down into two giant natural sinkholes side by side in a green Mediterranean landscape near Silifke Turkey, one wide and lush with trees, one narrow and dark, morning light, photorealistic, cinematic, vertical 9:16, no text, no watermark",
+   "video": "videos/v01.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -30,7 +34,11 @@
    ],
    "prompt": "Slow descent from the rim into a huge lush green sinkhole, sheer limestone walls covered in plants, sunlight beams falling inside",
    "image": "images/s02.jpg",
-   "prompt_tam": "Slow descent from the rim into a huge lush green sinkhole, sheer limestone walls covered in plants, sunlight beams falling inside, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+   "prompt_tam": "Slow descent from the rim into a huge lush green sinkhole, sheer limestone walls covered in plants, sunlight beams falling inside, photorealistic, cinematic, vertical 9:16, no text, no watermark",
+   "video": "videos/v02.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -46,7 +54,11 @@
    ],
    "prompt": "Cutaway illustration-like realistic view of underground water dissolving limestone and the cave ceiling collapsing into a sinkhole, dust falling, dramatic light",
    "image": "images/s03.jpg",
-   "prompt_tam": "Cutaway illustration-like realistic view of underground water dissolving limestone and the cave ceiling collapsing into a sinkhole, dust falling, dramatic light, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+   "prompt_tam": "Cutaway illustration-like realistic view of underground water dissolving limestone and the cave ceiling collapsing into a sinkhole, dust falling, dramatic light, photorealistic, cinematic, vertical 9:16, no text, no watermark",
+   "video": "videos/v03.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -62,7 +74,11 @@
    "effect": "glow",
    "prompt": "Looking down into a deep narrow dark sinkhole with overhanging inward-curving limestone walls, darkness at the bottom, small trees on the rim, ominous mood",
    "image": "images/s04.jpg",
-   "prompt_tam": "Looking down into a deep narrow dark sinkhole with overhanging inward-curving limestone walls, darkness at the bottom, small trees on the rim, ominous mood, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+   "prompt_tam": "Looking down into a deep narrow dark sinkhole with overhanging inward-curving limestone walls, darkness at the bottom, small trees on the rim, ominous mood, photorealistic, cinematic, vertical 9:16, no text, no watermark",
+   "video": "videos/v04.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -79,7 +95,11 @@
    "effect": "stamp",
    "prompt": "Mythical giant dragon silhouette with many heads trapped in a dark deep pit, glowing embers and smoke rising, a bolt of lightning in the stormy sky above, epic fantasy painting style",
    "image": "images/s05.jpg",
-   "prompt_tam": "Mythical giant dragon silhouette with many heads trapped in a dark deep pit, glowing embers and smoke rising, a bolt of lightning in the stormy sky above, epic fantasy painting style, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+   "prompt_tam": "Mythical giant dragon silhouette with many heads trapped in a dark deep pit, glowing embers and smoke rising, a bolt of lightning in the stormy sky above, epic fantasy painting style, photorealistic, cinematic, vertical 9:16, no text, no watermark",
+   "video": "videos/v05.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -94,7 +114,11 @@
    ],
    "prompt": "Long winding stone staircase descending into a lush green sinkhole, tiny visitors seen from behind and far away, sunlight from above, ferns and trees",
    "image": "images/s06.jpg",
-   "prompt_tam": "Long winding stone staircase descending into a lush green sinkhole, tiny visitors seen from behind and far away, sunlight from above, ferns and trees, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+   "prompt_tam": "Long winding stone staircase descending into a lush green sinkhole, tiny visitors seen from behind and far away, sunlight from above, ferns and trees, photorealistic, cinematic, vertical 9:16, no text, no watermark",
+   "video": "videos/v06.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -109,7 +133,11 @@
    ],
    "prompt": "Bottom of a green sinkhole, cool mist hanging in the air, moss-covered rocks and ferns, soft diffused light from the opening far above",
    "image": "images/s07.jpg",
-   "prompt_tam": "Bottom of a green sinkhole, cool mist hanging in the air, moss-covered rocks and ferns, soft diffused light from the opening far above, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+   "prompt_tam": "Bottom of a green sinkhole, cool mist hanging in the air, moss-covered rocks and ferns, soft diffused light from the opening far above, photorealistic, cinematic, vertical 9:16, no text, no watermark",
+   "video": "videos/v07.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -127,7 +155,11 @@
    "type_text": "MS 5. YÜZYIL · MERYEM ANA",
    "prompt": "Small ancient stone Byzantine chapel built at the mouth of a cave at the bottom of a sinkhole, arched windows, sunbeams, moss and ivy, no text",
    "image": "images/s08.jpg",
-   "prompt_tam": "Small ancient stone Byzantine chapel built at the mouth of a cave at the bottom of a sinkhole, arched windows, sunbeams, moss and ivy, no text, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+   "prompt_tam": "Small ancient stone Byzantine chapel built at the mouth of a cave at the bottom of a sinkhole, arched windows, sunbeams, moss and ivy, no text, photorealistic, cinematic, vertical 9:16, no text, no watermark",
+   "video": "videos/v08.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -143,7 +175,11 @@
    ],
    "prompt": "Dark wet cave interior behind a ruined chapel, glistening rocks lit by a single flashlight beam, mist, an underground stream faintly visible",
    "image": "images/s09.jpg",
-   "prompt_tam": "Dark wet cave interior behind a ruined chapel, glistening rocks lit by a single flashlight beam, mist, an underground stream faintly visible, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+   "prompt_tam": "Dark wet cave interior behind a ruined chapel, glistening rocks lit by a single flashlight beam, mist, an underground stream faintly visible, photorealistic, cinematic, vertical 9:16, no text, no watermark",
+   "video": "videos/v09.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   },
   {
    "lines": [
@@ -159,7 +195,11 @@
    ],
    "prompt": "Golden sunset aerial view over the two sinkholes and the Mediterranean coast in the distance, warm light, calm",
    "image": "images/s10.jpg",
-   "prompt_tam": "Golden sunset aerial view over the two sinkholes and the Mediterranean coast in the distance, warm light, calm, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+   "prompt_tam": "Golden sunset aerial view over the two sinkholes and the Mediterranean coast in the distance, warm light, calm, photorealistic, cinematic, vertical 9:16, no text, no watermark",
+   "video": "videos/v10.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0,
+   "v_son_tam": true
   }
  ],
  "finale": "",
