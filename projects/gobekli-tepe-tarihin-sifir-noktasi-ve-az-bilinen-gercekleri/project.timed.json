@@ -1,0 +1,407 @@
+{
+ "title": "Göbekli Tepe: Tarihin Sıfır Noktası",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "STONEHENGE'DEN 6 BİN YIL ÖNCE DİKİLDİ",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": 0.0,
+   "end": 5.449999999999999,
+   "lines": [
+    "Stonehenge'den 6 bin yıldan fazla önce, Anadolu'da devasa taşlar dikildi."
+   ],
+   "big": "6 BİN",
+   "sub": "STONEHENGE'DEN ESKİ",
+   "year": -9600,
+   "label": "MÖ 9600",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_002448_a849a4b4-87cf-421e-9d72-550dddca75cb.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": 5.449999999999999,
+   "end": 12.15,
+   "lines": [
+    "Yer, Şanlıurfa'daki Göbekli Tepe. Tarihlemesi yaklaşık MÖ 9600 olarak veriliyor."
+   ],
+   "big": "MÖ 9600",
+   "sub": "GÖBEKLİ TEPE",
+   "year": -9600,
+   "label": "MÖ 9600",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_002448_a849a4b4-87cf-421e-9d72-550dddca75cb.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": 12.15,
+   "end": 18.770000000000003,
+   "lines": [
+    "Mısır piramitlerinden de binlerce yıl daha eski.",
+    "Dünyanın ilk anıtsal mimari örneklerinden biri sayılıyor."
+   ],
+   "big": "PİRAMİT",
+   "sub": "BİNLERCE YIL DAHA ESKİ",
+   "year": -9600,
+   "label": "MÖ 9600",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_002448_a849a4b4-87cf-421e-9d72-550dddca75cb.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": 18.770000000000003,
+   "end": 25.76,
+   "lines": [
+    "Onu çiftçiler değil, tarım öncesi avcı-toplayıcılar inşa etti.",
+    "Bu, 'önce tarım, sonra anıt' fikrini sorgulattı."
+   ],
+   "big": "AVCILAR",
+   "sub": "TARIM ÖNCESİ TOPLULUK",
+   "year": -9600,
+   "label": "MÖ 9600",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_002448_a849a4b4-87cf-421e-9d72-550dddca75cb.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": 25.76,
+   "end": 32.97,
+   "lines": [
+    "Dikilitaşlar T biçiminde; bazıları metrelerce yüksek.",
+    "Üzerlerinde tilki, yılan ve yaban domuzu kabartmaları var."
+   ],
+   "big": "T TAŞLAR",
+   "sub": "HAYVAN KABARTMALARI",
+   "year": -9600,
+   "label": "MÖ 9600",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_002448_a849a4b4-87cf-421e-9d72-550dddca75cb.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": 32.97,
+   "end": 37.940000000000005,
+   "lines": [
+    "Bazı araştırmacılara göre yapılar kasıtlı olarak toprakla gömüldü.",
+    "Bu hâlâ tartışılıyor."
+   ],
+   "big": "GÖMÜLDÜ?",
+   "sub": "HÂLÂ TARTIŞILIYOR",
+   "year": -8000,
+   "label": "MÖ 8000",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_004820_685754d6-596c-4a48-bbf5-29c079364d45.mp4",
+   "v_bas": 0,
+   "v_son": 5,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": 37.940000000000005,
+   "end": 43.39,
+   "lines": [
+    "1995'te Alman arkeolog Klaus Schmidt kazıları başlattı ve alanı dünyaya tanıttı."
+   ],
+   "big": "1995",
+   "sub": "KLAUS SCHMIDT KAZILARI",
+   "year": 1995,
+   "label": "1995",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_004820_685754d6-596c-4a48-bbf5-29c079364d45.mp4",
+   "v_bas": 5,
+   "v_son": 10,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": 43.39,
+   "end": 47.39,
+   "lines": [
+    "Göbekli Tepe, 2018'de UNESCO Dünya Mirası Listesi'ne girdi."
+   ],
+   "big": "2018",
+   "sub": "UNESCO DÜNYA MİRASI",
+   "year": 2018,
+   "label": "2018",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_004820_685754d6-596c-4a48-bbf5-29c079364d45.mp4",
+   "v_bas": 10,
+   "v_son": 15,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": 47.39,
+   "end": 55.51,
+   "lines": [
+    "2025'te Taş Tepeler projesindeki Karahantepe'de, insan yüzü işlenmiş ilk T biçimli dikilitaş bulundu.",
+    "Bakanlık, bunun bir ilk olduğunu duyurdu."
+   ],
+   "big": "2025",
+   "sub": "KARAHANTEPE: İNSAN YÜZLÜ TAŞ",
+   "year": 2025,
+   "label": "2025",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "glow",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_004820_685754d6-596c-4a48-bbf5-29c079364d45.mp4",
+   "v_bas": 15,
+   "v_son": 20,
+   "etiket": "TEMSİLİ"
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": 55.51,
+   "end": 61.9555,
+   "lines": [
+    "Bu alanlar yalnızca ritüel için mi, yoksa yaşam yeri miydi?",
+    "Kazılar sürüyor."
+   ],
+   "big": "SORULAR",
+   "sub": "KAZILAR SÜRÜYOR",
+   "year": 2026,
+   "label": "2026",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_004820_685754d6-596c-4a48-bbf5-29c079364d45.mp4",
+   "v_bas": 20,
+   "v_son": 25,
+   "etiket": "TEMSİLİ"
+  }
+ ],
+ "eras": [
+  {
+   "name": "NEOLİTİK",
+   "from": 0,
+   "to": 5
+  },
+  {
+   "name": "KEŞİF",
+   "from": 6,
+   "to": 7
+  },
+  {
+   "name": "GÜNCEL",
+   "from": 8,
+   "to": 9
+  }
+ ],
+ "outro_plan": {
+  "title": "GÖBEKLİ TEPE",
+  "line": "Taşlar sessiz, kazılar devam ediyor. Takipte kal."
+ },
+ "maps_plan": [],
+ "cards_plan": [],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true,
+ "outro": {
+  "start": 56.2555,
+  "title": "GÖBEKLİ TEPE",
+  "line": "Taşlar sessiz, kazılar devam ediyor. Takipte kal.",
+  "line_at": 58.555499999999995
+ },
+ "duration": 62.46,
+ "jumps": [
+  {
+   "t": 32.97,
+   "value": 1600
+  },
+  {
+   "t": 37.940000000000005,
+   "value": 9995
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.0,
+   "end": 5.28,
+   "text": "Stonehenge'den 6 bin yıldan fazla önce, Anadolu'da devasa taşlar dikildi."
+  },
+  {
+   "start": 5.6,
+   "end": 11.94,
+   "text": "Yer, Şanlıurfa'daki Göbekli Tepe. Tarihlemesi yaklaşık MÖ 9600 olarak veriliyor."
+  },
+  {
+   "start": 12.3,
+   "end": 14.95,
+   "text": "Mısır piramitlerinden de binlerce yıl daha eski."
+  },
+  {
+   "start": 15.29,
+   "end": 18.57,
+   "text": "Dünyanın ilk anıtsal mimari örneklerinden biri sayılıyor."
+  },
+  {
+   "start": 18.92,
+   "end": 22.43,
+   "text": "Onu çiftçiler değil, tarım öncesi avcı-toplayıcılar inşa etti."
+  },
+  {
+   "start": 22.71,
+   "end": 25.6,
+   "text": "Bu, 'önce tarım, sonra anıt' fikrini sorgulattı."
+  },
+  {
+   "start": 25.91,
+   "end": 29.21,
+   "text": "Dikilitaşlar T biçiminde; bazıları metrelerce yüksek."
+  },
+  {
+   "start": 29.52,
+   "end": 32.85,
+   "text": "Üzerlerinde tilki, yılan ve yaban domuzu kabartmaları var."
+  },
+  {
+   "start": 33.12,
+   "end": 36.37,
+   "text": "Bazı araştırmacılara göre yapılar kasıtlı olarak toprakla gömüldü."
+  },
+  {
+   "start": 36.66,
+   "end": 37.8,
+   "text": "Bu hâlâ tartışılıyor."
+  },
+  {
+   "start": 38.09,
+   "end": 43.35,
+   "text": "1995'te Alman arkeolog Klaus Schmidt kazıları başlattı ve alanı dünyaya tanıttı."
+  },
+  {
+   "start": 43.54,
+   "end": 47.26,
+   "text": "Göbekli Tepe, 2018'de UNESCO Dünya Mirası Listesi'ne girdi."
+  },
+  {
+   "start": 47.54,
+   "end": 53.44,
+   "text": "2025'te Taş Tepeler projesindeki Karahantepe'de, insan yüzü işlenmiş ilk T biçimli dikilitaş bulundu."
+  },
+  {
+   "start": 53.66,
+   "end": 55.4,
+   "text": "Bakanlık, bunun bir ilk olduğunu duyurdu."
+  },
+  {
+   "start": 55.66,
+   "end": 58.66,
+   "text": "Bu alanlar yalnızca ritüel için mi, yoksa yaşam yeri miydi?"
+  },
+  {
+   "start": 58.94,
+   "end": 59.76,
+   "text": "Kazılar sürüyor."
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "asama": "kurgu",
+ "durum": "hata",
+ "ozet": "62 sn, -14 LUFS, senkron 16/16",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “STONEHENGE'DEN 6 BİN YIL ÖNCE DİKİLDİ”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “Taşlar sessiz, kazılar devam ediyor. Takipte kal.”"
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Altyazı metni arka plandaki insan figürlerinin ve koyu renkli taşın üzerine binerek okunmaz hale gelmiş.",
+   "sahne": 4
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Ekranın yanlarındaki metinler kadraj dışına taşmış ve alt kısımdaki zaman çizelgesi bileşeni eksik/kesilmiş.",
+   "sahne": 10
+  }
+ ],
+ "sure": 62.4,
+ "lufs": -14.5,
+ "senkron": "16/16",
+ "zaman": "2026-11-13T01:24:11Z"
+}
