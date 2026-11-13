@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "ishak-pasa-sarayinin-tarihi: ses hazır",
-  "cikti": "projects/ishak-pasa-sarayinin-tarihi",
-  "zaman": "2026-11-12T23:31:51Z"
+  "mesaj": "gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri: ses hazır",
+  "cikti": "projects/gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri",
+  "zaman": "2026-11-12T23:58:03Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-12T23:42:19Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "fatih-sultan-mehmet-ve-kazikli-voyvoda-part-1-edirnedeki-reh: kurgu ✓",
-  "cikti": "projects/fatih-sultan-mehmet-ve-kazikli-voyvoda-part-1-edirnedeki-reh/kontrol",
-  "zaman": "2026-11-12T23:42:14Z"
+  "durum": "hata",
+  "mesaj": "gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri: gorsel ✗",
+  "cikti": "projects/gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri/kontrol",
+  "zaman": "2026-11-13T00:01:25Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
