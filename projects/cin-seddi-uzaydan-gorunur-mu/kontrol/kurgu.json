@@ -1,0 +1,28 @@
+{
+ "asama": "kurgu",
+ "durum": "hata",
+ "ozet": "60 sn, -15 LUFS, senkron 20/20",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “ÇİN SEDDİ UZAYDAN GÖRÜNÜR MÜ?”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “GÖKTÜRKLER”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “GÖKTÜRKLER OLMASA?”"
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Üst üste binen metinler ('SENCE?' ve 'GÖKTÜRKLER OLMASA?') okunabilirliği bozuyor.",
+   "sahne": 11
+  }
+ ],
+ "sure": 59.6,
+ "lufs": -14.6,
+ "senkron": "20/20",
+ "zaman": "2026-11-13T20:05:47Z"
+}
