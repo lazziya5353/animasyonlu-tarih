@@ -1,24 +1,13 @@
 {
  "asama": "gorsel",
- "durum": "hata",
- "ozet": "0/10 görsel",
+ "durum": "tamam",
+ "ozet": "10/10 görsel",
  "maddeler": [
   {
-   "seviye": "hata",
-   "mesaj": "eksik görsel: sahne 1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka incelemesi atlandı: Gemini yanıt vermedi (gemini-3.5-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more info)"
   }
  ],
- "eksik": [
-  1,
-  2,
-  3,
-  4,
-  5,
-  6,
-  7,
-  8,
-  9,
-  10
- ],
- "zaman": "2026-11-13T00:01:25Z"
+ "eksik": [],
+ "zaman": "2026-11-13T01:59:15Z"
 }

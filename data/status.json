@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "halfeti-suya-gomulen-sehir-ve-az-bilinen-gercekleri: ses hazır",
-  "cikti": "projects/halfeti-suya-gomulen-sehir-ve-az-bilinen-gercekleri",
-  "zaman": "2026-11-13T00:24:04Z"
+  "mesaj": "gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri: ses hazır",
+  "cikti": "projects/gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri",
+  "zaman": "2026-11-13T01:43:59Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-13T01:24:18Z"
  },
  "kontrol": {
-  "durum": "hata",
-  "mesaj": "gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri: kurgu ✗",
+  "durum": "tamam",
+  "mesaj": "gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri: gorsel ✓",
   "cikti": "projects/gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri/kontrol",
-  "zaman": "2026-11-13T01:24:11Z"
+  "zaman": "2026-11-13T01:59:15Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
