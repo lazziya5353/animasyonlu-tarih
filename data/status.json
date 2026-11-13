@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "cin-seddi-uzaydan-gorunur-mu: ses hazır",
-  "cikti": "projects/cin-seddi-uzaydan-gorunur-mu",
-  "zaman": "2026-11-13T18:43:52Z"
+  "mesaj": "piramitleri-kim-yapti: ses hazır",
+  "cikti": "projects/piramitleri-kim-yapti",
+  "zaman": "2026-11-13T19:32:00Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -25,9 +25,9 @@
  },
  "kontrol": {
   "durum": "hata",
-  "mesaj": "nemrut-dagi-kralin-bedduasi: kurgu ✗",
-  "cikti": "projects/nemrut-dagi-kralin-bedduasi/kontrol",
-  "zaman": "2026-11-13T19:17:29Z"
+  "mesaj": "piramitleri-kim-yapti: gorsel ✗",
+  "cikti": "projects/piramitleri-kim-yapti/kontrol",
+  "zaman": "2026-11-13T19:34:34Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
