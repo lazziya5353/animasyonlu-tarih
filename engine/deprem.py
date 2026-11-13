@@ -278,8 +278,13 @@ def _zoom(self, lt, dur):
         p = ease((lt - zs) / max(.1, c.get("cizgi_sure", 2.5)))
         pts = [to(lo, la) for lo, la in c["cizgi"]]
         if p > 0:
-            kp = kismi(pts, p); parlak_cizgi(fr, kp, GOLD, c.get("cizgi_kalinlik", 7), glow=16)
-            if p < 1: nokta(fr, kp[-1][0], kp[-1][1], GOLD, 1.0, r=9, pulse=.4)
+            q = clamp((lt - zs) / .6)                                      # çizgi başlarken harita kararsın, çizgi öne çıksın
+            if q > 0: fr.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, int(110 * q))))
+            kp = kismi(pts, p); kal = c.get("cizgi_kalinlik", 7); renk_ = tuple(c.get("cizgi_renk", (255, 170, 60)))
+            parlak_cizgi(fr, kp, renk_, kal + 6, glow=22); parlak_cizgi(fr, kp, (255, 245, 225), max(3, kal // 3), glow=4)
+            if p < 1: nokta(fr, kp[-1][0], kp[-1][1], renk_, 1.0, r=12, pulse=.5)
+            if c.get("cizgi_ad") and p > .35:
+                m = pts[len(pts) // 2]; put(fr, text(c["cizgi_ad"], "serif", 64, (255, 235, 200), glow=renk_, spacing=6), m[0], m[1] + 110, clamp((p - .35) / .3))
         for ad, lo, la, kaydir in c.get("cizgi_etiketler", []):
             x, y = to(lo, la); etiket(fr, ad, x, y + kaydir, clamp((lt - zs - .3) / .5), size=30, col=GOLD)
     if c.get("hedef"):

@@ -92,9 +92,9 @@
      30
     ],
     "to": [
-     109.2,
+     109.0,
      39.6,
-     33
+     27
     ],
     "zoom_sure": 1.0,
     "cizgi": [
@@ -155,25 +155,26 @@
     "cizgi_etiketler": [
      [
       "JİAYUGUAN",
-      100.5,
+      99.5,
       39.8,
-      -60
+      -70
      ],
      [
       "SHANHAİGUAN",
-      117.0,
+      118.0,
       40.0,
-      -60
+      -70
      ]
     ],
     "etiketler": [
      [
-      "BOZKIR",
+      "MOĞOL BOZKIRI",
       108,
-      43.2
+      43.5
      ]
     ],
-    "cizgi_kalinlik": 11
+    "cizgi_kalinlik": 10,
+    "cizgi_ad": "ÇİN SEDDİ"
    },
    "image": "images/s04.jpg",
    "prompt": "Great Wall",
