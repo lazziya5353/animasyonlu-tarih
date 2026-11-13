@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "topkapi-sarayi-harem-ve-cinler-koridoru videosu hazır",
-  "cikti": "release:video-topkapi-sarayi-harem-ve-cinler-koridoru",
-  "zaman": "2026-11-13T16:01:11Z"
+  "mesaj": "cennet-ve-cehennem-obruklari videosu hazır",
+  "cikti": "release:video-cennet-ve-cehennem-obruklari",
+  "zaman": "2026-11-13T17:15:18Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "topkapi-sarayi-harem-ve-cinler-koridoru: kurgu !",
-  "cikti": "projects/topkapi-sarayi-harem-ve-cinler-koridoru/kontrol",
-  "zaman": "2026-11-13T16:01:03Z"
+  "durum": "hata",
+  "mesaj": "cennet-ve-cehennem-obruklari: kurgu ✗",
+  "cikti": "projects/cennet-ve-cehennem-obruklari/kontrol",
+  "zaman": "2026-11-13T17:15:12Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

@@ -1,16 +1,8 @@
 {
  "asama": "kurgu",
- "durum": "uyari",
- "ozet": "55 sn, -14 LUFS, senkron 17/19",
+ "durum": "hata",
+ "ozet": "55 sn, -14 LUFS, senkron 19/19",
  "maddeler": [
-  {
-   "seviye": "uyari",
-   "mesaj": "altyazı süresi okunuşa uymuyor (35 kar/sn): “Duvarları içe doğru eğik; ekipmansız inm”"
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "altyazı süresi okunuşa uymuyor (41 kar/sn): “Kapısındaki kitabe: Paulus, Meryem Ana'y”"
-  },
   {
    "seviye": "bilgi",
    "mesaj": "sığmadığı için küçültüldü: “128 METRELİK CEHENNEM, 452 BASAMAKLIK CENNET”"
@@ -22,10 +14,20 @@
   {
    "seviye": "bilgi",
    "mesaj": "sığmadığı için küçültüldü: “452 basamağı iner miydin?”"
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Alt zaman çizgisindeki 'SILIFKE' etiketi sol kenara çok yakın ve kısmen kesilme riski taşıyor.",
+   "sahne": 1
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Diğer tüm karelerde bulunan alttaki zaman çizelgesi (timeline) bu karede eksik.",
+   "sahne": 10
   }
  ],
  "sure": 55.4,
  "lufs": -13.7,
- "senkron": "17/19",
- "zaman": "2026-11-13T14:21:36Z"
+ "senkron": "19/19",
+ "zaman": "2026-11-13T17:15:12Z"
 }

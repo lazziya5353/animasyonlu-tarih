@@ -8,7 +8,7 @@
   {
    "image": "images/s01.jpg",
    "start": 0.0,
-   "end": 5.84,
+   "end": 5.77,
    "lines": [
     "Türkiye'de yan yana iki çukur var.",
     "Birinin adı Cennet, diğerinin adı Cehennem."
@@ -34,7 +34,7 @@
   },
   {
    "image": "images/s02.jpg",
-   "start": 5.84,
+   "start": 5.77,
    "end": 8.65,
    "lines": [
     "Ama asıl sır, ikisinin de dibinde."
@@ -61,7 +61,7 @@
   {
    "image": "images/s03.jpg",
    "start": 8.65,
-   "end": 13.23,
+   "end": 14.27,
    "lines": [
     "Bunlar mağara değil, obruk.",
     "Yeraltı suyu kireç taşını eritti, tavan çöktü."
@@ -88,8 +88,8 @@
   },
   {
    "image": "images/s04.jpg",
-   "start": 13.23,
-   "end": 18.96,
+   "start": 14.27,
+   "end": 20.970000000000002,
    "lines": [
     "Cehennem'in derinliği 128 metre.",
     "Duvarları içe doğru eğik; ekipmansız inmek imkânsız."
@@ -116,8 +116,8 @@
   },
   {
    "image": "images/s05.jpg",
-   "start": 18.96,
-   "end": 24.51,
+   "start": 20.970000000000002,
+   "end": 26.53,
    "lines": [
     "Rivayete göre Zeus, yüz başlı ejderha Typhon'u",
     "Etna'ya kapatmadan önce burada hapsetti."
@@ -145,8 +145,8 @@
   },
   {
    "image": "images/s06.jpg",
-   "start": 24.51,
-   "end": 28.94,
+   "start": 26.53,
+   "end": 31.290000000000003,
    "lines": [
     "Hemen yanındaki Cennet'e ise",
     "452 taş basamakla iniliyor."
@@ -172,8 +172,8 @@
   },
   {
    "image": "images/s07.jpg",
-   "start": 28.94,
-   "end": 35.2,
+   "start": 31.290000000000003,
+   "end": 36.81,
    "lines": [
     "Aşağıda hava birden serinliyor.",
     "Dışarısı kavururken dip, adeta doğal klima."
@@ -199,8 +199,8 @@
   },
   {
    "image": "images/s08.jpg",
-   "start": 35.2,
-   "end": 42.38,
+   "start": 36.81,
+   "end": 44.45,
    "lines": [
     "Dipte, MS 5. yüzyıldan bir kilise sizi bekliyor.",
     "Kapısındaki kitabe: Paulus, Meryem Ana'ya adadı."
@@ -229,8 +229,8 @@
   },
   {
    "image": "images/s09.jpg",
-   "start": 42.38,
-   "end": 48.68,
+   "start": 44.45,
+   "end": 48.63,
    "lines": [
     "Kilisenin arkasındaki mağaradan",
     "yeraltı suyunun uğultusu yükseliyor."
@@ -257,7 +257,7 @@
   },
   {
    "image": "images/s10.jpg",
-   "start": 48.68,
+   "start": 48.63,
    "end": 54.879875000000006,
    "lines": [
     "Sen olsan 452 basamağı iner miydin?",
@@ -329,15 +329,15 @@
  "sade": true,
  "cards": [
   {
-   "start": 14.43,
-   "end": 18.66,
+   "start": 15.469999999999999,
+   "end": 20.67,
    "value": 128,
    "unit": "METRE",
    "small": "CEHENNEM ÇUKURUNUN DERİNLİĞİ"
   },
   {
-   "start": 25.71,
-   "end": 28.64,
+   "start": 27.73,
+   "end": 30.990000000000002,
    "value": 452,
    "unit": "BASAMAK",
    "small": "CENNET'E İNİŞ"
@@ -353,98 +353,98 @@
  "jumps": [],
  "captions": [
   {
-   "start": 0.21,
-   "end": 2.39,
+   "start": 0.0,
+   "end": 2.28,
    "text": "Türkiye'de yan yana iki çukur var."
   },
   {
    "start": 2.76,
-   "end": 5.64,
+   "end": 5.62,
    "text": "Birinin adı Cennet, diğerinin adı Cehennem."
   },
   {
-   "start": 5.99,
-   "end": 8.45,
+   "start": 5.92,
+   "end": 8.36,
    "text": "Ama asıl sır, ikisinin de dibinde."
   },
   {
    "start": 8.8,
-   "end": 9.9,
+   "end": 10.58,
    "text": "Bunlar mağara değil, obruk."
   },
   {
-   "start": 10.26,
-   "end": 13.02,
+   "start": 11.08,
+   "end": 14.1,
    "text": "Yeraltı suyu kireç taşını eritti, tavan çöktü."
   },
   {
-   "start": 13.38,
-   "end": 16.93,
+   "start": 14.42,
+   "end": 16.8,
    "text": "Cehennem'in derinliği 128 metre."
   },
   {
-   "start": 17.29,
-   "end": 18.76,
+   "start": 17.3,
+   "end": 20.72,
    "text": "Duvarları içe doğru eğik; ekipmansız inmek imkânsız."
   },
   {
-   "start": 19.11,
-   "end": 22.45,
+   "start": 21.12,
+   "end": 24.41,
    "text": "Rivayete göre Zeus, yüz başlı ejderha Typhon'u"
   },
   {
-   "start": 22.71,
-   "end": 24.3,
+   "start": 24.44,
+   "end": 26.65,
    "text": "Etna'ya kapatmadan önce burada hapsetti."
   },
   {
-   "start": 24.66,
-   "end": 26.86,
+   "start": 26.68,
+   "end": 28.68,
    "text": "Hemen yanındaki Cennet'e ise"
   },
   {
-   "start": 27.23,
-   "end": 28.79,
+   "start": 29.06,
+   "end": 30.98,
    "text": "452 taş basamakla iniliyor."
   },
   {
-   "start": 29.09,
-   "end": 31.17,
+   "start": 31.44,
+   "end": 33.12,
    "text": "Aşağıda hava birden serinliyor."
   },
   {
-   "start": 31.53,
-   "end": 35.08,
+   "start": 33.58,
+   "end": 36.62,
    "text": "Dışarısı kavururken dip, adeta doğal klima."
   },
   {
-   "start": 35.35,
-   "end": 40.69,
+   "start": 36.96,
+   "end": 40.54,
    "text": "Dipte, MS 5. yüzyıldan bir kilise sizi bekliyor."
   },
   {
-   "start": 41.06,
-   "end": 42.22,
+   "start": 41.02,
+   "end": 44.2,
    "text": "Kapısındaki kitabe: Paulus, Meryem Ana'ya adadı."
   },
   {
-   "start": 42.53,
-   "end": 44.31,
+   "start": 44.6,
+   "end": 46.24,
    "text": "Kilisenin arkasındaki mağaradan"
   },
   {
-   "start": 44.66,
-   "end": 48.46,
+   "start": 46.52,
+   "end": 48.32,
    "text": "yeraltı suyunun uğultusu yükseliyor."
   },
   {
-   "start": 48.83,
-   "end": 51.49,
+   "start": 48.78,
+   "end": 51.46,
    "text": "Sen olsan 452 basamağı iner miydin?"
   },
   {
-   "start": 51.85,
-   "end": 52.68,
+   "start": 51.82,
+   "end": 52.5,
    "text": "Yorumlara yaz."
   }
  ]
