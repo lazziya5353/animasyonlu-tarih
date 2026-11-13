@@ -12,10 +12,10 @@
   "zaman": "2026-11-13T09:54:48Z"
  },
  "gorsel": {
-  "durum": "tamam",
-  "mesaj": "rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi: ses hazır",
+  "durum": "hata",
+  "mesaj": "rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi: görseller elle yüklenecek: Pollinations hatası 402: {\"status\":402,\"success\":false,\"error\":{\"code\":\"FREE_LIMIT\",\"message\":\"Free limit reached: 1 image every 45 seconds per IP. Retry after 25s, or get unlimited images with a pollen key at https://enter.p, 1 görsel üretildi",
   "cikti": "projects/rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi",
-  "zaman": "2026-11-13T10:06:56Z"
+  "zaman": "2026-11-13T11:27:12Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -27,7 +27,7 @@
   "durum": "hata",
   "mesaj": "rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi: gorsel ✗",
   "cikti": "projects/rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi/kontrol",
-  "zaman": "2026-11-13T10:13:40Z"
+  "zaman": "2026-11-13T11:37:40Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

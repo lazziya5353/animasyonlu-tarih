@@ -1,15 +1,19 @@
 {
  "asama": "gorsel",
  "durum": "hata",
- "ozet": "0/12 görsel",
+ "ozet": "1/12 görsel, ortalama puan 7.0/10",
  "maddeler": [
   {
    "seviye": "hata",
-   "mesaj": "eksik görsel: sahne 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12"
+   "mesaj": "Görselin sağ alt köşesinde 'pollinations.ai' filigranı/yazısı yer almaktadır.",
+   "sahne": 1
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "eksik görsel: sahne 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12"
   }
  ],
  "eksik": [
-  1,
   2,
   3,
   4,
@@ -22,5 +26,6 @@
   11,
   12
  ],
- "zaman": "2026-11-13T10:13:40Z"
+ "ortalama_puan": 7.0,
+ "zaman": "2026-11-13T11:37:40Z"
 }
