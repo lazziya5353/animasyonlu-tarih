@@ -1,0 +1,27 @@
+{
+ "asama": "ses",
+ "durum": "uyari",
+ "ozet": "61 sn, metinle %94 uyumlu",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "seste patlama (clipping) olabilir"
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "okunmamış/yanlış okunmuş olabilir: “heykellerde doğu ile batı”"
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "metinde olmayan bir şey okunmuş olabilir: “işte ses kaydının kelimesi kelimesine dökümü”"
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "metinde olmayan bir şey okunmuş olabilir: “heykeller de doğuyla batıyı”"
+  }
+ ],
+ "sure": 60.9,
+ "benzerlik": 0.939,
+ "dokum": "İşte ses kaydının kelimesi kelimesine dökümü:\n\nTürkiye'nin doğusunda iki bin metrenin üstünde bir dağ var. Tepesinde bir kral iki bin yıldır uyuyor. Tepedeki dev höyüğü insanlar taş taş yığdı. Yüksekliği tam elli metre. Önünde dev heykeller tahtlarında oturuyor. Kral Antiokhos tanrılarla yan yana. Kral babasından Pers, annesinden Makedon soyundan geldiğini söylüyordu. Heykeller de doğuyla batıyı birleşti. Bazı taş bloklar dokuz tona kadar çıkıyor. Hepsi bu zirveye taşındı. Zamanla heykellerin başları gövdelerinden düştü. Bugün yerde yan yana duruyorlar. Kral tahtların arkasına iki yüz otuz yedi satırlık bir yazıt kazıttı. Yazıtta bir de beddua var. Bu kutsal yere zarar veren soyuyla birlikte tanrıların cezasına uğrasın. Yazıt kralın höyüğün içinde yattığını söylüyor. Ama mezar odası bugün hala bulunamadı. Nemrut bin dokuz yüz seksen yediden beri UNESCO Dünya Mirası. Sence mezar açılmalı mı, yoksa beddua mı kazanmalı? Yorumlara yaz.",
+ "zaman": "2026-11-13T18:23:34Z"
+}
