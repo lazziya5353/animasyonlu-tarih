@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "halfeti-suya-gomulen-sehir-ve-az-bilinen-gercekleri videosu hazır",
-  "cikti": "release:video-halfeti-suya-gomulen-sehir-ve-az-bilinen-gercekleri",
-  "zaman": "2026-11-13T06:01:54Z"
+  "mesaj": "rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi videosu hazır",
+  "cikti": "release:video-rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi",
+  "zaman": "2026-11-13T12:53:04Z"
  },
  "kontrol": {
   "durum": "hata",
-  "mesaj": "rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi: gorsel ✗",
+  "mesaj": "rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi: kurgu ✗",
   "cikti": "projects/rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi/kontrol",
-  "zaman": "2026-11-13T11:37:40Z"
+  "zaman": "2026-11-13T12:52:58Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
