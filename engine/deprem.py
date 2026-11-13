@@ -263,3 +263,29 @@ class DepremAnim:
         blok(c.get("y2", 880), c.get("alt_baslik", f"EN AZ RİSKLİ {n} İLÇE"), bot, YESIL, .9)
         if c.get("not"): put(fr, text(c["not"], "sans", 26, (220, 220, 220), spacing=1), W / 2, c.get("y2", 880) + 88 + n * 84 + 10, clamp((lt - 1.6) / .5) * out)
         return fr
+
+
+# ── uydudan yakınlaşma: geniş görünümden hedefe iner, istenirse bir çizgi (ör. Çin Seddi) çizer ──
+def _zoom(self, lt, dur):
+    c = self.c; a0, a1 = c["from"], c["to"]; zs = c.get("zoom_sure", min(dur * .7, 5.0))
+    u = inout(clamp(lt / max(.1, zs)))
+    lon = a0[0] + (a1[0] - a0[0]) * u; lat = a0[1] + (a1[1] - a0[1]) * u
+    w = math.exp(math.log(a0[2]) + (math.log(a1[2]) - math.log(a0[2])) * u)
+    fr, to, s = self.h.kare((lon, lat, w * (1 - .03 * clamp((lt - zs) / max(.1, dur - zs)))))
+    for ad, lo, la in c.get("etiketler", []):
+        x, y = to(lo, la); etiket(fr, ad, x, y - 46, clamp((u - .2) / .3) * clamp((.92 - u) / .15 + (1 if not c.get("etiket_sonra_gizle") else 0)), size=30)
+    if c.get("cizgi"):
+        p = ease((lt - zs) / max(.1, c.get("cizgi_sure", 2.5)))
+        pts = [to(lo, la) for lo, la in c["cizgi"]]
+        if p > 0: parlak_cizgi(fr, kismi(pts, p), GOLD, 7, glow=10)
+        for ad, lo, la, kaydir in c.get("cizgi_etiketler", []):
+            x, y = to(lo, la); etiket(fr, ad, x, y + kaydir, clamp((lt - zs - .3) / .5), size=30, col=GOLD)
+    if c.get("hedef"):
+        lo, la, ad = c["hedef"]; x, y = to(lo, la); q = clamp((lt - zs * .85) / .4)
+        if q > 0:
+            nokta(fr, x, y, GOLD, q, pulse=.25 * math.sin(lt * 4) + .25)
+            etiket(fr, ad, x, y - 70, q, size=40, col=WHITE)
+    return fr
+
+
+DepremAnim._zoom = _zoom

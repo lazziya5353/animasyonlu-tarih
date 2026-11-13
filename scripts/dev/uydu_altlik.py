@@ -13,7 +13,14 @@ GIBS = "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi"
 BOLGE = {  # ad: (lon0, lon1, lat0, lat1, k = derece başına piksel (enlem))
     "marmara": (26.0, 33.0, 37.0, 44.2, 520),
     "istanbul": (27.8, 30.0, 40.55, 41.75, 2000),
+    "dunya": (-20.0, 140.0, -5.0, 60.0, 16),
+    "anadolu": (25.0, 46.0, 34.0, 43.5, 140),
+    "adiyaman": (37.6, 39.6, 37.4, 38.6, 1400),
+    "misir": (24.0, 37.0, 21.0, 33.0, 150),
+    "giza": (31.05, 31.25, 29.93, 30.05, 12000),
+    "cin": (73.0, 125.0, 22.0, 48.0, 45),
 }
+SADECE = [a for a in os.environ.get("BOLGELER", "").split(",") if a]
 
 
 def get(url, tries=4):
@@ -55,15 +62,21 @@ def wms(base, layer, lon0, lon1, lat0, lat1, Wp, Hp, fmt, extra="", v130=False, 
 def main():
     lay, title = eox_katman(); print("SEÇİLEN:", lay, "|", title)
     for ad, (lon0, lon1, lat0, lat1, k) in BOLGE.items():
+        if SADECE and ad not in SADECE: continue
         C = math.cos(math.radians((lat0 + lat1) / 2)); Wp, Hp = int((lon1 - lon0) * k * C), int((lat1 - lat0) * k)
         im = wms(EOX, lay, lon0, lon1, lat0, lat1, Wp, Hp, "image/jpeg")
         im.save(os.path.join(MAPDIR, f"uydu_{ad}.jpg"), quality=90); print("kaydedildi", ad, im.size)
+    if SADECE: return _json(lay, title)
     lon0, lon1, lat0, lat1, k = BOLGE["marmara"]; C = math.cos(math.radians((lat0 + lat1) / 2))
     Wp, Hp = int((lon1 - lon0) * k * C), int((lat1 - lat0) * k)
     for gl in ("BlackMarble_2016", "VIIRS_Black_Marble"):
         try:
             g = wms(GIBS, gl, lon0, lon1, lat0, lat1, Wp, Hp, "image/jpeg", v130=True); g.save(os.path.join(MAPDIR, "gece_marmara.jpg"), quality=90); print("gece:", gl); break
         except SystemExit as e: print("gece katmanı olmadı:", gl, e)
+    _json(lay, title)
+
+
+def _json(lay, title):
     json.dump({"bolgeler": BOLGE, "eox_katman": lay, "eox_baslik": title, "atif": "Sentinel-2 cloudless - https://s2maps.eu by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016 & 2017)",
                "gece": "NASA Black Marble (kamu malı)"}, open(os.path.join(MAPDIR, "uydu.json"), "w"), ensure_ascii=False, indent=1)
 
