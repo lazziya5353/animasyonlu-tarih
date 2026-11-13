@@ -1,0 +1,300 @@
+{
+ "title": "Cennet ve Cehennem Obrukları",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "128 METRELİK CEHENNEM, 452 BASAMAKLIK CENNET",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Türkiye'de yan yana iki çukur var.",
+    "Birinin adı Cennet, diğerinin adı Cehennem."
+   ],
+   "big": "MERSİN",
+   "sub": "CENNET VE CEHENNEM",
+   "year": null,
+   "label": "SİLİFKE",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ama asıl sır, ikisinin de dibinde."
+   ],
+   "big": "2 OBRUK",
+   "sub": "YAN YANA",
+   "year": null,
+   "label": "SİLİFKE",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bunlar mağara değil, obruk.",
+    "Yeraltı suyu kireç taşını eritti, tavan çöktü."
+   ],
+   "big": "OBRUK",
+   "sub": "ÇÖKEN YERALTI",
+   "year": null,
+   "label": "OLUŞUM",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Cehennem'in derinliği 128 metre.",
+    "Duvarları içe doğru eğik; ekipmansız inmek imkânsız."
+   ],
+   "big": "128 M",
+   "sub": "CEHENNEM ÇUKURU",
+   "year": null,
+   "label": "CEHENNEM",
+   "fx": [
+    "smoke"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "glow"
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Rivayete göre Zeus, yüz başlı ejderha Typhon'u",
+    "Etna'ya kapatmadan önce burada hapsetti."
+   ],
+   "big": "TYPHON",
+   "sub": "RİVAYETE GÖRE",
+   "year": null,
+   "label": "EFSANE",
+   "fx": [
+    "smoke",
+    "flicker"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "stamp"
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Hemen yanındaki Cennet'e ise",
+    "452 taş basamakla iniliyor."
+   ],
+   "big": "452",
+   "sub": "TAŞ BASAMAK",
+   "year": null,
+   "label": "CENNET",
+   "fx": [
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Aşağıda hava birden serinliyor.",
+    "Dışarısı kavururken dip, adeta doğal klima."
+   ],
+   "big": "SERİN",
+   "sub": "DOĞAL KLİMA",
+   "year": null,
+   "label": "CENNET",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Dipte, MS 5. yüzyıldan bir kilise sizi bekliyor.",
+    "Kapısındaki kitabe: Paulus, Meryem Ana'ya adadı."
+   ],
+   "big": "5. YY",
+   "sub": "MERYEM ANA KİLİSESİ",
+   "year": null,
+   "label": "KİLİSE",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "type",
+   "type_text": "MS 5. YÜZYIL · MERYEM ANA"
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Kilisenin arkasındaki mağaradan",
+    "yeraltı suyunun uğultusu yükseliyor."
+   ],
+   "big": "UĞULTU",
+   "sub": "YERALTI SUYU",
+   "year": null,
+   "label": "MAĞARA",
+   "fx": [
+    "fog",
+    "flicker"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Sen olsan 452 basamağı iner miydin?",
+    "Yorumlara yaz."
+   ],
+   "big": "CENNET Mİ?",
+   "sub": "CEHENNEM Mİ?",
+   "year": null,
+   "label": "BUGÜN",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "OLUŞUM",
+   "from": 0,
+   "to": 2
+  },
+  {
+   "name": "CEHENNEM",
+   "from": 3,
+   "to": 4
+  },
+  {
+   "name": "CENNET",
+   "from": 5,
+   "to": 9
+  }
+ ],
+ "outro_plan": {
+  "title": "CENNET Mİ, CEHENNEM Mİ?",
+  "line": "452 basamağı iner miydin?"
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 3,
+   "value": 128,
+   "unit": "METRE",
+   "small": "CEHENNEM ÇUKURUNUN DERİNLİĞİ"
+  },
+  {
+   "scene": 5,
+   "value": 452,
+   "unit": "BASAMAK",
+   "small": "CENNET'E İNİŞ"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true
+}

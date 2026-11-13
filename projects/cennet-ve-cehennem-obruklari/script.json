@@ -1,0 +1,238 @@
+{
+ "baslik": "Cennet ve Cehennem Obrukları",
+ "hook": "128 METRELİK CEHENNEM, 452 BASAMAKLIK CENNET",
+ "map_region": "anadolu",
+ "sahneler": [
+  {
+   "lines": [
+    "Türkiye'de yan yana iki çukur var.",
+    "Birinin adı Cennet, diğerinin adı Cehennem."
+   ],
+   "big": "MERSİN",
+   "sub": "CENNET VE CEHENNEM",
+   "label": "SİLİFKE",
+   "fx": [
+    "fog"
+   ],
+   "prompt": "Epic aerial drone view looking down into two giant natural sinkholes side by side in a green Mediterranean landscape near Silifke Turkey, one wide and lush with trees, one narrow and dark, morning light",
+   "image": "images/s01.jpg",
+   "prompt_tam": "Epic aerial drone view looking down into two giant natural sinkholes side by side in a green Mediterranean landscape near Silifke Turkey, one wide and lush with trees, one narrow and dark, morning light, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Ama asıl sır, ikisinin de dibinde."
+   ],
+   "big": "2 OBRUK",
+   "sub": "YAN YANA",
+   "label": "SİLİFKE",
+   "fx": [
+    "dust"
+   ],
+   "prompt": "Slow descent from the rim into a huge lush green sinkhole, sheer limestone walls covered in plants, sunlight beams falling inside",
+   "image": "images/s02.jpg",
+   "prompt_tam": "Slow descent from the rim into a huge lush green sinkhole, sheer limestone walls covered in plants, sunlight beams falling inside, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Bunlar mağara değil, obruk.",
+    "Yeraltı suyu kireç taşını eritti, tavan çöktü."
+   ],
+   "big": "OBRUK",
+   "sub": "ÇÖKEN YERALTI",
+   "label": "OLUŞUM",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "prompt": "Cutaway illustration-like realistic view of underground water dissolving limestone and the cave ceiling collapsing into a sinkhole, dust falling, dramatic light",
+   "image": "images/s03.jpg",
+   "prompt_tam": "Cutaway illustration-like realistic view of underground water dissolving limestone and the cave ceiling collapsing into a sinkhole, dust falling, dramatic light, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Cehennem'in derinliği 128 metre.",
+    "Duvarları içe doğru eğik; ekipmansız inmek imkânsız."
+   ],
+   "big": "128 M",
+   "sub": "CEHENNEM ÇUKURU",
+   "label": "CEHENNEM",
+   "fx": [
+    "smoke"
+   ],
+   "effect": "glow",
+   "prompt": "Looking down into a deep narrow dark sinkhole with overhanging inward-curving limestone walls, darkness at the bottom, small trees on the rim, ominous mood",
+   "image": "images/s04.jpg",
+   "prompt_tam": "Looking down into a deep narrow dark sinkhole with overhanging inward-curving limestone walls, darkness at the bottom, small trees on the rim, ominous mood, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Rivayete göre Zeus, yüz başlı ejderha Typhon'u",
+    "Etna'ya kapatmadan önce burada hapsetti."
+   ],
+   "big": "TYPHON",
+   "sub": "RİVAYETE GÖRE",
+   "label": "EFSANE",
+   "fx": [
+    "smoke",
+    "flicker"
+   ],
+   "effect": "stamp",
+   "prompt": "Mythical giant dragon silhouette with many heads trapped in a dark deep pit, glowing embers and smoke rising, a bolt of lightning in the stormy sky above, epic fantasy painting style",
+   "image": "images/s05.jpg",
+   "prompt_tam": "Mythical giant dragon silhouette with many heads trapped in a dark deep pit, glowing embers and smoke rising, a bolt of lightning in the stormy sky above, epic fantasy painting style, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Hemen yanındaki Cennet'e ise",
+    "452 taş basamakla iniliyor."
+   ],
+   "big": "452",
+   "sub": "TAŞ BASAMAK",
+   "label": "CENNET",
+   "fx": [
+    "rays"
+   ],
+   "prompt": "Long winding stone staircase descending into a lush green sinkhole, tiny visitors seen from behind and far away, sunlight from above, ferns and trees",
+   "image": "images/s06.jpg",
+   "prompt_tam": "Long winding stone staircase descending into a lush green sinkhole, tiny visitors seen from behind and far away, sunlight from above, ferns and trees, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Aşağıda hava birden serinliyor.",
+    "Dışarısı kavururken dip, adeta doğal klima."
+   ],
+   "big": "SERİN",
+   "sub": "DOĞAL KLİMA",
+   "label": "CENNET",
+   "fx": [
+    "fog"
+   ],
+   "prompt": "Bottom of a green sinkhole, cool mist hanging in the air, moss-covered rocks and ferns, soft diffused light from the opening far above",
+   "image": "images/s07.jpg",
+   "prompt_tam": "Bottom of a green sinkhole, cool mist hanging in the air, moss-covered rocks and ferns, soft diffused light from the opening far above, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Dipte, MS 5. yüzyıldan bir kilise sizi bekliyor.",
+    "Kapısındaki kitabe: Paulus, Meryem Ana'ya adadı."
+   ],
+   "big": "5. YY",
+   "sub": "MERYEM ANA KİLİSESİ",
+   "label": "KİLİSE",
+   "fx": [
+    "dust",
+    "rays"
+   ],
+   "effect": "type",
+   "type_text": "MS 5. YÜZYIL · MERYEM ANA",
+   "prompt": "Small ancient stone Byzantine chapel built at the mouth of a cave at the bottom of a sinkhole, arched windows, sunbeams, moss and ivy, no text",
+   "image": "images/s08.jpg",
+   "prompt_tam": "Small ancient stone Byzantine chapel built at the mouth of a cave at the bottom of a sinkhole, arched windows, sunbeams, moss and ivy, no text, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Kilisenin arkasındaki mağaradan",
+    "yeraltı suyunun uğultusu yükseliyor."
+   ],
+   "big": "UĞULTU",
+   "sub": "YERALTI SUYU",
+   "label": "MAĞARA",
+   "fx": [
+    "fog",
+    "flicker"
+   ],
+   "prompt": "Dark wet cave interior behind a ruined chapel, glistening rocks lit by a single flashlight beam, mist, an underground stream faintly visible",
+   "image": "images/s09.jpg",
+   "prompt_tam": "Dark wet cave interior behind a ruined chapel, glistening rocks lit by a single flashlight beam, mist, an underground stream faintly visible, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  },
+  {
+   "lines": [
+    "Sen olsan 452 basamağı iner miydin?",
+    "Yorumlara yaz."
+   ],
+   "big": "CENNET Mİ?",
+   "sub": "CEHENNEM Mİ?",
+   "label": "BUGÜN",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "prompt": "Golden sunset aerial view over the two sinkholes and the Mediterranean coast in the distance, warm light, calm",
+   "image": "images/s10.jpg",
+   "prompt_tam": "Golden sunset aerial view over the two sinkholes and the Mediterranean coast in the distance, warm light, calm, photorealistic, cinematic, vertical 9:16, no text, no watermark"
+  }
+ ],
+ "finale": "",
+ "maps": [],
+ "cards": [
+  {
+   "scene": 3,
+   "value": 128,
+   "unit": "METRE",
+   "small": "CEHENNEM ÇUKURUNUN DERİNLİĞİ"
+  },
+  {
+   "scene": 5,
+   "value": 452,
+   "unit": "BASAMAK",
+   "small": "CENNET'E İNİŞ"
+  }
+ ],
+ "eras": [
+  {
+   "name": "OLUŞUM",
+   "from": 0,
+   "to": 2
+  },
+  {
+   "name": "CEHENNEM",
+   "from": 3,
+   "to": 4
+  },
+  {
+   "name": "CENNET",
+   "from": 5,
+   "to": 9
+  }
+ ],
+ "outro": {
+  "title": "CENNET Mİ, CEHENNEM Mİ?",
+  "line": "452 basamağı iner miydin?"
+ },
+ "aciklama": "Türkiye'de adı Cennet ve Cehennem olan iki dev çukur var 👀 Biri 128 metre derinliğinde ve içine inilemiyor, diğerinin dibinde 1.500 yıllık bir kilise saklı.\n\n💬 Sen olsan 452 basamağı iner miydin?\n📤 Bunu bilmeyen bir arkadaşına gönder.\n🔔 Tarihin unutulmaz anları için takip et @animasyon.tarih\n\n(Görseller temsilidir.)",
+ "kanca_alternatifleri": [
+  "TÜRKİYE'DE CENNET VE CEHENNEM YAN YANA",
+  "ZEUS EJDERHAYI BU ÇUKURA HAPSETTİ (RİVAYET)",
+  "452 BASAMAK İNİNCE KARŞINIZA ÇIKAN KİLİSE"
+ ],
+ "aciklama_alternatifleri": [],
+ "hashtagler": [
+  "#tarih",
+  "#keşfet",
+  "#reels",
+  "#mersin",
+  "#silifke",
+  "#cennetcehennem",
+  "#obruk",
+  "#mitoloji",
+  "#gezilecekyerler",
+  "#türkiye",
+  "#tarihbilgisi",
+  "#animasyontarih"
+ ],
+ "kaynaklar": [
+  "https://www.kulturportali.gov.tr/turkiye/mersin/gezilecekyer/cennet-ve-cehennem-obruklari",
+  "https://en.wikipedia.org/wiki/Cennet_and_Cehennem",
+  "https://kureansiklopedi.com/tr/detay/cennet-cehennem-magaralari-mersin-45f09"
+ ],
+ "kontrol_notlari": [
+  "Kullanıcı metninden düzeltildi: Cennet obruğu ~70 m (135 değil); kiliseyi yaptıran Paulus (Brullos değil); Styx ve Zeus tapınağı taşları iddiaları kaynaksız, çıkarıldı.",
+  "Typhon: mitoloji, 'rivayete göre' etiketli."
+ ],
+ "konu": "Cennet ve Cehennem Obrukları",
+ "tarih": "",
+ "slug": "cennet-ve-cehennem-obruklari",
+ "durum": "onaylandi",
+ "sade": true,
+ "seslendirme_metni": "Türkiye'de yan yana iki çukur var.\nBirinin adı Cennet, diğerinin adı Cehennem.\nAma asıl sır, ikisinin de dibinde.\nBunlar mağara değil, obruk.\nYeraltı suyu kireç taşını eritti, tavan çöktü.\nCehennem'in derinliği yüz yirmi sekiz metre.\nDuvarları içe doğru eğik; ekipmansız inmek imkânsız.\nRivayete göre Zeus, yüz başlı ejderha Tifon'u\nEtna'ya kapatmadan önce burada hapsetti.\nHemen yanındaki Cennet'e ise\ndört yüz elli iki taş basamakla iniliyor.\nAşağıda hava birden serinliyor.\nDışarısı kavururken dip, adeta doğal klima.\nDipte, Milattan sonra beşinci yüzyıldan bir kilise sizi bekliyor.\nKapısındaki kitabe: Paulus, Meryem Ana'ya adadı.\nKilisenin arkasındaki mağaradan\nyeraltı suyunun uğultusu yükseliyor.\nSen olsan dört yüz elli iki basamağı iner miydin?\nYorumlara yaz."
+}
