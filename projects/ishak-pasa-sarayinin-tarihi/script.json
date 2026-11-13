@@ -5,10 +5,11 @@
  "sahneler": [
   {
    "lines": [
-    "Bu saray Türkiye'de. Hem de Ağrı Dağı'nın karşısında."
+    "Ağrı Dağı'nın karşısında, duvarlarında gizli bir ısıtma sistemi olan bir saray var.",
+    "Kapısı ise bugün Türkiye'de değil."
    ],
    "big": "AĞRI",
-   "sub": "TÜRKİYE'NİN DOĞUSU",
+   "sub": "GİZLİ ISITMA, KAYIP KAPI",
    "year": 1685,
    "label": "1685",
    "prompt": "Vertical 9:16 wide establishing shot of a hilltop Ottoman stone palace with domes and a slender minaret at dawn, snow-capped Mount Ararat rising huge behind it, golden light on pale and dark stone, palace centered in frame, open misty sky in the top third for a title, empty dark foreground in the bottom third for subtitles, no text, no lettering, no flags, no people",
@@ -205,10 +206,11 @@
   },
   {
    "lines": [
-    "Bugün Ağrı Dağı'na bakan saray, UNESCO Dünya Mirası Geçici Listesi'nde."
+    "Bugün UNESCO Dünya Mirası Geçici Listesi'nde.",
+    "Sence o kapı geri gelmeli mi? Yorumlara yaz."
    ],
    "big": "ARARAT",
-   "sub": "UNESCO GEÇİCİ LİSTE",
+   "sub": "KAPI GERİ GELMELİ Mİ?",
    "year": 2026,
    "label": "BUGÜN",
    "prompt": "Vertical 9:16 majestic sunset panorama of the stone palace on its hill glowing in gold, snow-capped Mount Ararat in the background turning pink and orange, a lone distant visitor silhouette seen from behind on the path, palace centered, calm sky at top for title and dark foreground at bottom for captions, no text, no flags",
@@ -338,7 +340,7 @@
  "tarih": "",
  "slug": "ishak-pasa-sarayinin-tarihi",
  "durum": "onaylandi",
- "seslendirme_metni": "Bu saray Türkiye'de. Hem de Ağrı Dağı'nın karşısında.\nDoğubayazıt'ta, İran sınırına yakın bir tepede yükseliyor. Alanı yaklaşık yedi bin altı yüz metrekare.\nİnşaatı bin altı yüz seksen beşte Çolak Abdi Paşa başlattı.\nÇıldıroğulları ailesi nesiller boyu çalıştı. Taşlar çevre köylerden ve Ağrı Dağı'ndan taşındı. Saray yaklaşık yüz yılda tamamlandı.\nHarem kapısının kitabesi, yapının İshak Paşa döneminde tamamlandığını bildirir.\nMimarisinde Osmanlı, Selçuklu ve İran izleri iç içe.\nBazı kaynaklar Gürcü ve Ermeni etkisini de anar.\nDuvar boşlukları, sarayda merkezî ısıtma sistemi olduğuna işaret ediyor.\nBu, on sekizinci yüzyıl için dikkat çekici bir ayrıntı.\nAltın kaplamalı denen kapısı, bin sekiz yüz yetmiş yedi-bin sekiz yüz yetmiş sekiz Rus işgalinde söküldü ve Rusya'ya götürüldü.\nSarayı bin sekiz yüz kırk depremi ve savaşlar yıprattı. Bugün restorasyonlarla ayakta.\nBugün Ağrı Dağı'na bakan saray, UNESCO Dünya Mirası Geçici Listesi'nde.",
+ "seslendirme_metni": "Ağrı Dağı'nın karşısında, duvarlarında gizli bir ısıtma sistemi olan bir saray var.\nKapısı ise bugün Türkiye'de değil.\nDoğubayazıt'ta, İran sınırına yakın bir tepede yükseliyor. Alanı yaklaşık yedi bin altı yüz metrekare.\nİnşaatı bin altı yüz seksen beşte Çolak Abdi Paşa başlattı.\nÇıldıroğulları ailesi nesiller boyu çalıştı. Taşlar çevre köylerden ve Ağrı Dağı'ndan taşındı. Saray yaklaşık yüz yılda tamamlandı.\nHarem kapısının kitabesi, yapının İshak Paşa döneminde tamamlandığını bildirir.\nMimarisinde Osmanlı, Selçuklu ve İran izleri iç içe.\nBazı kaynaklar Gürcü ve Ermeni etkisini de anar.\nDuvar boşlukları, sarayda merkezî ısıtma sistemi olduğuna işaret ediyor.\nBu, on sekizinci yüzyıl için dikkat çekici bir ayrıntı.\nAltın kaplamalı denen kapısı, bin sekiz yüz yetmiş yedi-bin sekiz yüz yetmiş sekiz Rus işgalinde söküldü ve Rusya'ya götürüldü.\nSarayı bin sekiz yüz kırk depremi ve savaşlar yıprattı. Bugün restorasyonlarla ayakta.\nBugün UNESCO Dünya Mirası Geçici Listesi'nde.\nSence o kapı geri gelmeli mi? Yorumlara yaz.",
  "ses_stil": "Derin sesli bir erkek belgesel anlatıcısı gibi, akıcı ve tempolu oku, cümleler arasında kısa durakla, sayıları yazıldığı gibi oku:\n",
  "sade": true
 }
