@@ -1,0 +1,17 @@
+{
+ "asama": "ses",
+ "durum": "uyari",
+ "ozet": "75 sn",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "seste patlama (clipping) olabilir"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "metin-ses karşılaştırması atlandı: Gemini yanıt vermedi (gemini-3.5-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more info)"
+  }
+ ],
+ "sure": 74.7,
+ "zaman": "2026-11-13T00:28:00Z"
+}
