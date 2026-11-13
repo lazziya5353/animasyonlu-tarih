@@ -1,7 +1,7 @@
 {
  "asama": "kurgu",
- "durum": "hata",
- "ozet": "62 sn, -14 LUFS, senkron 16/16",
+ "durum": "tamam",
+ "ozet": "65 sn, -14 LUFS, senkron 16/16",
  "maddeler": [
   {
    "seviye": "bilgi",
@@ -12,18 +12,12 @@
    "mesaj": "sığmadığı için küçültüldü: “Taşlar sessiz, kazılar devam ediyor. Takipte kal.”"
   },
   {
-   "seviye": "hata",
-   "mesaj": "Altyazı metni arka plandaki insan figürlerinin ve koyu renkli taşın üzerine binerek okunmaz hale gelmiş.",
-   "sahne": 4
-  },
-  {
-   "seviye": "hata",
-   "mesaj": "Ekranın yanlarındaki metinler kadraj dışına taşmış ve alt kısımdaki zaman çizelgesi bileşeni eksik/kesilmiş.",
-   "sahne": 10
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.5-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more info)"
   }
  ],
- "sure": 62.4,
- "lufs": -14.5,
+ "sure": 64.7,
+ "lufs": -13.8,
  "senkron": "16/16",
- "zaman": "2026-11-13T01:24:11Z"
+ "zaman": "2026-11-13T02:30:21Z"
 }
