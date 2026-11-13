@@ -92,9 +92,9 @@
      30
     ],
     "to": [
-     109,
-     39.2,
-     26
+     109.2,
+     39.6,
+     33
     ],
     "zoom_sure": 1.0,
     "cizgi": [
@@ -155,15 +155,15 @@
     "cizgi_etiketler": [
      [
       "JİAYUGUAN",
-      98.22,
+      100.5,
       39.8,
-      60
+      -60
      ],
      [
       "SHANHAİGUAN",
-      119.8,
+      117.0,
       40.0,
-      60
+      -60
      ]
     ],
     "etiketler": [
@@ -172,7 +172,8 @@
       108,
       43.2
      ]
-    ]
+    ],
+    "cizgi_kalinlik": 11
    },
    "image": "images/s04.jpg",
    "prompt": "Great Wall",

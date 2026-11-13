@@ -277,7 +277,7 @@ def _zoom(self, lt, dur):
     if c.get("cizgi"):
         p = ease((lt - zs) / max(.1, c.get("cizgi_sure", 2.5)))
         pts = [to(lo, la) for lo, la in c["cizgi"]]
-        if p > 0: parlak_cizgi(fr, kismi(pts, p), GOLD, 7, glow=10)
+        if p > 0: parlak_cizgi(fr, kismi(pts, p), GOLD, c.get("cizgi_kalinlik", 7), glow=10)
         for ad, lo, la, kaydir in c.get("cizgi_etiketler", []):
             x, y = to(lo, la); etiket(fr, ad, x, y + kaydir, clamp((lt - zs - .3) / .5), size=30, col=GOLD)
     if c.get("hedef"):
