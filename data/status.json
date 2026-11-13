@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri: ses hazır",
-  "cikti": "projects/gobekli-tepe-tarihin-sifir-noktasi-ve-az-bilinen-gercekleri",
-  "zaman": "2026-11-13T01:43:59Z"
+  "mesaj": "rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi: ses hazır",
+  "cikti": "projects/rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi",
+  "zaman": "2026-11-13T10:06:56Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-13T06:01:54Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi: senaryo !",
+  "durum": "hata",
+  "mesaj": "rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi: gorsel ✗",
   "cikti": "projects/rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi/kontrol",
-  "zaman": "2026-11-13T09:54:49Z"
+  "zaman": "2026-11-13T10:13:40Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
