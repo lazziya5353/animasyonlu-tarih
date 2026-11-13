@@ -38,7 +38,7 @@ def yuzde(v): return f"{v:.1f}".replace(".", ",")
 class Harita:
     """Altlık: varsa uydu (Sentinel-2 cloudless 2016 + yakın plan için yüksek çözünürlüklü İstanbul), yoksa çizim altlık."""
     _cache = {}
-    ATIF = "Uydu: Sentinel-2 cloudless 2016 · EOX · CC BY 4.0"
+    ATIF = "Uydu: NASA Blue Marble · Sentinel-2 cloudless 2016 (EOX, CC BY 4.0)"
 
     def __init__(self, stil="uydu"):
         R = json.load(open(os.path.join(MAPDIR, "regions.json")))["marmara"]
