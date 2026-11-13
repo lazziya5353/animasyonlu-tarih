@@ -24,10 +24,10 @@
   "zaman": "2026-11-13T06:01:54Z"
  },
  "kontrol": {
-  "durum": "hata",
-  "mesaj": "rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi: gorsel ✗",
+  "durum": "tamam",
+  "mesaj": "rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi: gorsel ✓",
   "cikti": "projects/rizenin-tarihi-ve-cayin-rizeye-gelis-hikayesi/kontrol",
-  "zaman": "2026-11-13T11:37:40Z"
+  "zaman": "2026-11-13T12:46:56Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
