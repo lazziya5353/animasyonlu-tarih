@@ -15,7 +15,7 @@
   "durum": "tamam",
   "mesaj": "osmanli-armasinin-sirlari: ses hazır",
   "cikti": "projects/osmanli-armasinin-sirlari",
-  "zaman": "2026-11-14T15:11:06Z"
+  "zaman": "2026-11-14T15:36:16Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-14T15:16:04Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "osmanli-armasinin-sirlari: gorsel !",
+  "durum": "hata",
+  "mesaj": "osmanli-armasinin-sirlari: gorsel ✗",
   "cikti": "projects/osmanli-armasinin-sirlari/kontrol",
-  "zaman": "2026-11-14T15:23:10Z"
+  "zaman": "2026-11-14T15:46:43Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

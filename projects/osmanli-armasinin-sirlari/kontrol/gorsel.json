@@ -1,7 +1,7 @@
 {
  "asama": "gorsel",
- "durum": "uyari",
- "ozet": "19/19 görsel",
+ "durum": "hata",
+ "ozet": "19/19 görsel, ortalama puan 1.0/10",
  "maddeler": [
   {
    "seviye": "uyari",
@@ -859,10 +859,102 @@
    "sahne": 19
   },
   {
-   "seviye": "bilgi",
-   "mesaj": "yapay zeka incelemesi atlandı: Gemini yanıt vermedi (gemini-3.8-flash 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. )"
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş bir ekrandan oluşuyor, Osmanlı arması görünmüyor.",
+   "sahne": 1
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş bir ekrandan oluşuyor, Osmanlı arması görünmüyor.",
+   "sahne": 2
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş bir ekrandan oluşuyor, Osmanlı arması görünmüyor.",
+   "sahne": 3
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş bir ekrandan oluşuyor, Osmanlı arması görünmüyor.",
+   "sahne": 4
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş bir ekrandan oluşuyor, Osmanlı arması görünmüyor.",
+   "sahne": 5
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş bir ekrandan oluşuyor, Osmanlı arması görünmüyor.",
+   "sahne": 6
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel eksik veya tamamen siyah/boş bir görüntüden oluşuyor.",
+   "sahne": 7
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel eksik veya tamamen siyah/boş bir görüntüden oluşuyor.",
+   "sahne": 8
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel eksik veya tamamen siyah/boş bir görüntüden oluşuyor.",
+   "sahne": 9
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel eksik veya tamamen siyah/boş bir görüntüden oluşuyor.",
+   "sahne": 10
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel eksik veya tamamen siyah/boş bir görüntüden oluşuyor.",
+   "sahne": 11
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel eksik veya tamamen siyah/boş bir görüntüden oluşuyor.",
+   "sahne": 12
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel yüklenemedi veya tamamen siyah bir arkaplandan ibaret.",
+   "sahne": 13
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel yüklenemedi veya tamamen siyah bir arkaplandan ibaret.",
+   "sahne": 14
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel yüklenemedi veya tamamen siyah bir arkaplandan ibaret.",
+   "sahne": 15
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel yüklenemedi veya tamamen siyah bir arkaplandan ibaret.",
+   "sahne": 16
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel yüklenemedi veya tamamen siyah bir arkaplandan ibaret.",
+   "sahne": 17
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel yüklenemedi veya tamamen siyah bir arkaplandan ibaret.",
+   "sahne": 18
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, istenen Osmanlı arması görseli bulunmuyor.",
+   "sahne": 19
   }
  ],
  "eksik": [],
- "zaman": "2026-11-14T15:23:10Z"
+ "ortalama_puan": 1.0,
+ "zaman": "2026-11-14T15:46:43Z"
 }
