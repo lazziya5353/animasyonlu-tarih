@@ -1,27 +1,19 @@
 {
  "asama": "ses",
  "durum": "hata",
- "ozet": "98 sn, metinle %95 uyumlu",
+ "ozet": "102 sn, metinle %94 uyumlu",
  "maddeler": [
   {
    "seviye": "hata",
-   "mesaj": "ses 98 sn; video Reels sınırını (90 sn) aşar"
+   "mesaj": "ses 102 sn; video Reels sınırını (90 sn) aşar"
   },
   {
    "seviye": "uyari",
    "mesaj": "seste patlama (clipping) olabilir"
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "okunmamış/yanlış okunmuş olabilir: “aden bahçesinden”"
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "okunmamış/yanlış okunmuş olabilir: “aden bahçesinin”"
   }
  ],
- "sure": 97.7,
- "benzerlik": 0.954,
- "dokum": "Dünyanın en eski kitapları cennetten dört nehir aktığını yazar. Bunlardan ikisi bugün Türkiye'den doğuyor. Tevrat'ta Adem Bahçesi'nden çıkan nehirlerin ikisinin adı Hiddekel ve Perat. Yani Dicle ve Fırat. Fırat iki koldan doğar. Erzurum'da Dumlu Dağı'ndan çıkan Karasu ve Ağrı'dan gelen Murat. İki kol Elazığ'da Keban'da birleşir. O birleşme noktası bugün baraj gölünün altında. Dicle'nin kaynağı hemen yanında. Elazığ'daki Hazar Gölü ve Hazar Baba Dağı. Fırat yaklaşık iki bin sekiz yüz kilometre akar. Dicle ise bin dokuz yüz. İkisi de Suriye ve Irak'tan geçer. Aradaki topraklara Yunanlılar iki nehir arası dedi: Mezopotamya. Yazının ve ilk şehirlerin doğduğu yer. Ama asıl ilginç olan bu iki nehrin buluştuğu yer. Irak'ın güneyinde Kurna'da birleşir, Şattülarap olurlar ve yaklaşık iki yüz kilometre sonra Basra Körfezi'ne dökülürler. Rivayete göre Kurna'da Hazreti Adem'in ağacı varmış. Bazıları Adem Bahçesi'nin burada olduğuna inanır. Peki bu nehirler ne kadar derin? Doğal yataklarında çoğu yerde sadece bir kaç metre. Ama barajlar her şeyi değiştirdi. Atatürk Barajı'nın gövdesi yüz altmış dokuz metre. Gölü Türkiye'nin üçüncü büyük gölü. Dicle'deki Ilısu Barajı'ysa binlerce yıllık Hasankeyf'i suların altına aldı. Bir de Fırat'ın en gizemli tarafı var: Altın. Bir hadise göre kıyamete yakın Fırat altından bir hazineyi açığa çıkaracak. İnsanlar onun için savaşacak. Aynı hadiste bir uyarı da var. Kim orada bulunursa ondan bir şey almasın. Bazıları bunu nehrin kurumasıyla, bazıları petrol ya da su kaynaklarıyla yorumlar. Kesin bir yorum yok. Cennetten aktığına inanılan iki nehir binlerce yıldır hayat taşıyor. Sence Adem Bahçesi gerçekten orada mıydı?",
- "zaman": "2026-11-14T13:54:10Z"
+ "sure": 102.0,
+ "benzerlik": 0.939,
+ "dokum": "Dünyanın en eski kitapları cennetten dört nehir aktığını yazar. Bunlardan ikisi bugün Türkiye'den doğuyor. Tevrat'ta Adem Bahçesinden çıkan nehirlerin ikisinin adı Hiddekel ve Perat. Yani Dicle ve Fırat. Fırat iki koldan doğar. Erzurum'da Dumlu Dağından çıkan Karasu ve Ağrı'dan gelen Murat. İki kol Elazığ'da Keban'da birleşir. O birleşme noktası bugün baraj gölünün altında. Dicle'nin kaynağı hemen yanında. Elazığ'daki Hazar Gölü ve Hazar Baba Dağı. Fırat yaklaşık iki bin sekiz yüz kilometre akarken, Dicle ise bin dokuz yüz. İkisi de Suriye ve Irak'tan geçer. Aradaki topraklara Yunanlılar iki nehir arası dedi. Mezopotamya. Yazının ve ilk şehirlerin doğduğu yer. Ama asıl ilginç olan, bu iki nehrin buluştuğu yer. Irak'ın güneyinde Kurna'da birleşip Şattül Arap olurlar. Ve yaklaşık iki yüz kilometre sonra Basra Körfezine dökülürler. Rivayete göre Kurna'da Hazreti Adem'in ağacı varmış. Bazıları Adem Bahçesinin burada olduğuna inanır. Peki bu nehirler ne kadar derin? Doğal yataklarında çoğu yerde sadece bir kaç metre. Ama barajlar her şeyi değiştirdi. Atatürk Barajının gövdesi yüz altmış dokuz metre. Gölü Türkiye'nin üçüncü büyük gölü. Dicle'deki Ilısu Barajı ise binlerce yıllık Hasankeyf'i sular altına aldı. Bir de Fırat'ın en gizemli tarafı var. Altın. Peygamber Efendimiz Sallallahü Aleyhi ve Sellem bir hadisinde, kıyamete yakın Fırat'ın altından bir hazine çıkaracağını bildirir. İnsanlar onun için savaşacak. Aynı hadiste Peygamber Efendimiz şöyle uyarır: \"Kim orada bulunursa ondan bir şey almasın.\" Bazıları bunu nehrin kurumasıyla, bazıları petrol ya da su kaynaklarıyla yorumlar. Kesin bir yorum yok. Cennetten aktığına inanılan iki nehir binlerce yıldır hayat taşıyor. Sence Adem Bahçesi gerçekten orada mıydı?",
+ "zaman": "2026-11-14T15:31:01Z"
 }

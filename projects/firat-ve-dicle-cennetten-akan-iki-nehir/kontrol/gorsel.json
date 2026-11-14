@@ -80,96 +80,96 @@
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah / yüklenememiş durumda.",
+   "mesaj": "Görsel tamamen siyah ve boş; sahne içeriği görüntülenemiyor.",
    "sahne": 1
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah / yüklenememiş durumda.",
+   "mesaj": "Görsel tamamen siyah ve boş; sahne içeriği görüntülenemiyor.",
    "sahne": 2
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah / yüklenememiş durumda.",
+   "mesaj": "Görsel tamamen siyah ve boş; sahne içeriği görüntülenemiyor.",
    "sahne": 3
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah / yüklenememiş durumda.",
+   "mesaj": "Görsel tamamen siyah ve boş; sahne içeriği görüntülenemiyor.",
    "sahne": 4
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah / yüklenememiş durumda.",
+   "mesaj": "Görsel tamamen siyah ve boş; sahne içeriği görüntülenemiyor.",
    "sahne": 5
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah / yüklenememiş durumda.",
+   "mesaj": "Görsel tamamen siyah ve boş; sahne içeriği görüntülenemiyor.",
    "sahne": 6
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah/boş görünüyor, sahne içeriği yüklenememiş veya eksik.",
+   "mesaj": "Görsel yüklenemedi / tamamen siyah ekrandan oluşuyor.",
    "sahne": 7
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah/boş görünüyor, sahne içeriği yüklenememiş veya eksik.",
+   "mesaj": "Görsel yüklenemedi / tamamen siyah ekrandan oluşuyor.",
    "sahne": 8
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah/boş görünüyor, sahne içeriği yüklenememiş veya eksik.",
+   "mesaj": "Görsel yüklenemedi / tamamen siyah ekrandan oluşuyor.",
    "sahne": 9
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah/boş görünüyor, sahne içeriği yüklenememiş veya eksik.",
+   "mesaj": "Görsel yüklenemedi / tamamen siyah ekrandan oluşuyor.",
    "sahne": 10
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah/boş görünüyor, sahne içeriği yüklenememiş veya eksik.",
+   "mesaj": "Görsel yüklenemedi / tamamen siyah ekrandan oluşuyor.",
    "sahne": 11
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah/boş görünüyor, sahne içeriği yüklenememiş veya eksik.",
+   "mesaj": "Görsel yüklenemedi / tamamen siyah ekrandan oluşuyor.",
    "sahne": 12
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah/boş, içerik yüklenmemiş veya eksik.",
+   "mesaj": "Görsel tamamen siyah ve boş; sahne içeriği yüklenememiş veya görüntü görüntülenemiyor.",
    "sahne": 13
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah/boş, içerik yüklenmemiş veya eksik.",
+   "mesaj": "Görsel tamamen siyah ve boş; sahne içeriği yüklenememiş veya görüntü görüntülenemiyor.",
    "sahne": 14
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah/boş, içerik yüklenmemiş veya eksik.",
+   "mesaj": "Görsel tamamen siyah ve boş; sahne içeriği yüklenememiş veya görüntü görüntülenemiyor.",
    "sahne": 15
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah/boş, içerik yüklenmemiş veya eksik.",
+   "mesaj": "Görsel tamamen siyah ve boş; sahne içeriği yüklenememiş veya görüntü görüntülenemiyor.",
    "sahne": 16
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah/boş, içerik yüklenmemiş veya eksik.",
+   "mesaj": "Görsel tamamen siyah ve boş; sahne içeriği yüklenememiş veya görüntü görüntülenemiyor.",
    "sahne": 17
   },
   {
    "seviye": "hata",
-   "mesaj": "Görsel tamamen siyah/boş, içerik yüklenmemiş veya eksik.",
+   "mesaj": "Görsel tamamen siyah ve boş; sahne içeriği yüklenememiş veya görüntü görüntülenemiyor.",
    "sahne": 18
   }
  ],
  "eksik": [],
  "ortalama_puan": 1.0,
- "zaman": "2026-11-14T14:00:25Z"
+ "zaman": "2026-11-14T15:34:43Z"
 }
