@@ -1,0 +1,1415 @@
+{
+ "title": "Osmanlı Armasının Sırları",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "OSMANLI ARMASININ SIRLARI",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": 0.0,
+   "end": 4.67,
+   "lines": [
+    "Bu armada 30'dan fazla sembol var.",
+    "Çoğu insan birini bile bilmiyor."
+   ],
+   "big": "30+",
+   "sub": "SEMBOL",
+   "year": null,
+   "label": "ARMA-İ OSMANÎ",
+   "fx": [
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.5,
+      0.5,
+      0.95
+     ],
+     [
+      0.32,
+      0.5,
+      0.5,
+      0.85
+     ],
+     [
+      1,
+      0.5,
+      0.5,
+      0.765
+     ]
+    ],
+    "vurgu": []
+   }
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": 4.67,
+   "end": 12.049999999999999,
+   "lines": [
+    "Bu, Osmanlı Devleti'nin arması.",
+    "Son şeklini 17 Nisan 1882'de, İkinci Abdülhamid döneminde aldı."
+   ],
+   "big": "1882",
+   "sub": "17 NİSAN",
+   "year": null,
+   "label": "II. ABDÜLHAMİD",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.5,
+      0.5,
+      0.765
+     ],
+     [
+      0.32,
+      0.5,
+      0.48,
+      0.8
+     ],
+     [
+      1,
+      0.5,
+      0.48,
+      0.72
+     ]
+    ],
+    "vurgu": []
+   }
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": 12.049999999999999,
+   "end": 16.17,
+   "lines": [
+    "İlk Batı tarzı Osmanlı arması ise Abdülmecid zamanında hazırlandı."
+   ],
+   "big": "İLK ARMA",
+   "sub": "ABDÜLMECİD",
+   "year": null,
+   "label": "1850'LER",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.5,
+      0.48,
+      0.72
+     ],
+     [
+      0.32,
+      0.5,
+      0.5,
+      0.9
+     ],
+     [
+      1,
+      0.5,
+      0.5,
+      0.81
+     ]
+    ],
+    "vurgu": []
+   }
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": 16.17,
+   "end": 27.39,
+   "lines": [
+    "Bir de dikkat et: Avrupa armalarında aslan, kartal gibi hayvanlar olur.",
+    "Osmanlı armasında tek bir hayvan bile yok. Bunun, İslam geleneğinde canlı tasvirinden kaçınılmasıyla ilgili olduğu düşünülür."
+   ],
+   "big": "HAYVAN YOK",
+   "sub": "ASLAN · KARTAL YOK",
+   "year": null,
+   "label": "FARK",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.5,
+      0.5,
+      0.81
+     ],
+     [
+      0.32,
+      0.5,
+      0.5,
+      0.85
+     ],
+     [
+      1,
+      0.5,
+      0.5,
+      0.765
+     ]
+    ],
+    "vurgu": []
+   }
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": 27.39,
+   "end": 33.35,
+   "lines": [
+    "En tepede ışınlar saçan bir güneş var.",
+    "Devletin büyüklüğünü ve parlaklığını anlattığı yorumlanır."
+   ],
+   "big": "GÜNEŞ",
+   "sub": "İHTİŞAM",
+   "year": null,
+   "label": "ZİRVE",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.5,
+      0.5,
+      0.765
+     ],
+     [
+      0.2,
+      0.5,
+      0.36,
+      0.765
+     ],
+     [
+      0.42,
+      0.5,
+      0.22,
+      0.7
+     ],
+     [
+      1,
+      0.5,
+      0.22,
+      0.63
+     ]
+    ],
+    "vurgu": [
+     [
+      0.38,
+      0.97,
+      0.48,
+      0.2,
+      0.3,
+      "GÜNEŞ"
+     ]
+    ]
+   }
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": 33.35,
+   "end": 43.07,
+   "lines": [
+    "Güneşin tam ortasında padişahın tuğrası duruyor. Yani resmî imzası.",
+    "Padişah değişince armadaki tuğra da değişirdi. Bu çizimdeki, Sultan Reşad'ın tuğrası."
+   ],
+   "big": "TUĞRA",
+   "sub": "PADİŞAHIN İMZASI",
+   "year": null,
+   "label": "TUĞRA",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.5,
+      0.22,
+      0.63
+     ],
+     [
+      0.32,
+      0.48,
+      0.17,
+      0.34
+     ],
+     [
+      1,
+      0.48,
+      0.17,
+      0.306
+     ]
+    ],
+    "vurgu": [
+     [
+      0.28,
+      0.97,
+      0.48,
+      0.165,
+      0.11,
+      "TUĞRA"
+     ]
+    ]
+   }
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": 43.07,
+   "end": 51.89,
+   "lines": [
+    "Tuğranın da kendi parçaları var: yukarı uzanan üç tuğ, soldaki iç içe beyzeler,",
+    "sağa uzanan kollar ve en altta padişahın adının yazdığı sere."
+   ],
+   "big": "TUĞRA",
+   "sub": "TUĞ · BEYZE · KOL · SERE",
+   "year": null,
+   "label": "PARÇALAR",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.48,
+      0.17,
+      0.306
+     ],
+     [
+      0.32,
+      0.46,
+      0.17,
+      0.2
+     ],
+     [
+      1,
+      0.46,
+      0.17,
+      0.18
+     ]
+    ],
+    "vurgu": [
+     [
+      0.28,
+      0.443,
+      0.455,
+      0.135,
+      0.035,
+      "TUĞLAR"
+     ],
+     [
+      0.443,
+      0.605,
+      0.405,
+      0.175,
+      0.045,
+      "BEYZELER"
+     ],
+     [
+      0.605,
+      0.767,
+      0.53,
+      0.19,
+      0.035,
+      "KOLLAR"
+     ],
+     [
+      0.767,
+      0.97,
+      0.47,
+      0.2,
+      0.03,
+      "SERE"
+     ]
+    ]
+   }
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": 51.89,
+   "end": 60.59,
+   "lines": [
+    "Tuğranın altındaki hilalde Arapça bir yazı var.",
+    "Anlamı kabaca: İlahi yardıma dayanan Yüce Osmanlı Devleti.",
+    "Hilalin kendisi de İslam'ın simgesi."
+   ],
+   "big": "HİLAL",
+   "sub": "DEVLET-İ ALİYYE",
+   "year": null,
+   "label": "YAZI",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.46,
+      0.17,
+      0.18
+     ],
+     [
+      0.32,
+      0.47,
+      0.26,
+      0.42
+     ],
+     [
+      1,
+      0.47,
+      0.26,
+      0.378
+     ]
+    ],
+    "vurgu": [
+     [
+      0.28,
+      0.97,
+      0.47,
+      0.275,
+      0.13,
+      "HİLALDEKİ YAZI"
+     ]
+    ]
+   }
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": 60.59,
+   "end": 68.25,
+   "lines": [
+    "Kalkanın üstünde sorguçlu bir kavuk var.",
+    "Avrupa armalarındaki tacın yerine, Osman Gazi'ye ve hanedanın köküne gönderme olarak yorumlanır."
+   ],
+   "big": "KAVUK",
+   "sub": "TAÇ YERİNE",
+   "year": null,
+   "label": "OSMAN GAZİ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.47,
+      0.26,
+      0.378
+     ],
+     [
+      0.2,
+      0.47,
+      0.34,
+      0.6
+     ],
+     [
+      0.42,
+      0.47,
+      0.42,
+      0.2
+     ],
+     [
+      1,
+      0.47,
+      0.42,
+      0.18
+     ]
+    ],
+    "vurgu": [
+     [
+      0.38,
+      0.97,
+      0.47,
+      0.413,
+      0.045,
+      "SORGUÇLU KAVUK"
+     ]
+    ]
+   }
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": 68.25,
+   "end": 75.21,
+   "lines": [
+    "Ortadaki kalkan yıldızlar ve hilallerle çevrili.",
+    "Bazıları bunu imparatorluktaki farklı halkların bir arada oluşu diye yorumlar."
+   ],
+   "big": "KALKAN",
+   "sub": "MERKEZ",
+   "year": null,
+   "label": "MERKEZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.47,
+      0.42,
+      0.18
+     ],
+     [
+      0.32,
+      0.47,
+      0.53,
+      0.3
+     ],
+     [
+      1,
+      0.47,
+      0.53,
+      0.27
+     ]
+    ],
+    "vurgu": [
+     [
+      0.28,
+      0.97,
+      0.47,
+      0.547,
+      0.085,
+      "KALKAN"
+     ]
+    ]
+   }
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": 75.21,
+   "end": 79.71,
+   "lines": [
+    "Solda yeşil sancak hilafeti,",
+    "sağda kırmızı sancak ise devleti ve saltanatı temsil eder."
+   ],
+   "big": "İKİ SANCAK",
+   "sub": "HİLAFET · SALTANAT",
+   "year": null,
+   "label": "SANCAKLAR",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.47,
+      0.53,
+      0.27
+     ],
+     [
+      0.32,
+      0.47,
+      0.46,
+      0.55
+     ],
+     [
+      1,
+      0.47,
+      0.46,
+      0.495
+     ]
+    ],
+    "vurgu": [
+     [
+      0.28,
+      0.605,
+      0.27,
+      0.45,
+      0.08,
+      "HİLAFET SANCAĞI"
+     ],
+     [
+      0.605,
+      0.97,
+      0.64,
+      0.46,
+      0.09,
+      "SALTANAT SANCAĞI"
+     ]
+    ]
+   }
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": 79.71,
+   "end": 86.21,
+   "lines": [
+    "Sol tarafta bir terazi var: adalet.",
+    "Altındaki iki kitaptan biri şeriatı, diğeri kanunları temsil eder."
+   ],
+   "big": "TERAZİ",
+   "sub": "ADALET",
+   "year": null,
+   "label": "HUKUK",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.47,
+      0.46,
+      0.495
+     ],
+     [
+      0.2,
+      0.3,
+      0.515,
+      0.6
+     ],
+     [
+      0.42,
+      0.13,
+      0.57,
+      0.3
+     ],
+     [
+      1,
+      0.13,
+      0.57,
+      0.27
+     ]
+    ],
+    "vurgu": [
+     [
+      0.38,
+      0.655,
+      0.104,
+      0.553,
+      0.06,
+      "TERAZİ"
+     ],
+     [
+      0.655,
+      0.97,
+      0.111,
+      0.61,
+      0.06,
+      "İKİ KİTAP"
+     ]
+    ]
+   }
+  },
+  {
+   "image": "images/s13.jpg",
+   "start": 86.21,
+   "end": 90.28999999999999,
+   "lines": [
+    "Hemen yanındaki çiçek demeti ve bereket boynuzu,",
+    "barışı ve bolluğu anlatır."
+   ],
+   "big": "BEREKET",
+   "sub": "BARIŞ · BOLLUK",
+   "year": null,
+   "label": "BOLLUK",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.13,
+      0.57,
+      0.27
+     ],
+     [
+      0.32,
+      0.28,
+      0.55,
+      0.3
+     ],
+     [
+      1,
+      0.28,
+      0.55,
+      0.27
+     ]
+    ],
+    "vurgu": [
+     [
+      0.28,
+      0.605,
+      0.263,
+      0.513,
+      0.075,
+      "ÇİÇEKLER"
+     ],
+     [
+      0.605,
+      0.97,
+      0.335,
+      0.6,
+      0.05,
+      "BEREKET BOYNUZU"
+     ]
+    ]
+   }
+  },
+  {
+   "image": "images/s14.jpg",
+   "start": 90.28999999999999,
+   "end": 93.97,
+   "lines": [
+    "Boynuzun altındaki küçük çapa ise Osmanlı donanmasının simgesi."
+   ],
+   "big": "ÇAPA",
+   "sub": "DONANMA",
+   "year": null,
+   "label": "DENİZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.28,
+      0.55,
+      0.27
+     ],
+     [
+      0.32,
+      0.32,
+      0.65,
+      0.18
+     ],
+     [
+      1,
+      0.32,
+      0.65,
+      0.162
+     ]
+    ],
+    "vurgu": [
+     [
+      0.28,
+      0.97,
+      0.319,
+      0.653,
+      0.035,
+      "ÇAPA"
+     ]
+    ]
+   }
+  },
+  {
+   "image": "images/s15.jpg",
+   "start": 93.97,
+   "end": 97.89,
+   "lines": [
+    "Sağ tarafta kocaman bir top ve gülleler var.",
+    "Yani ordunun gücü."
+   ],
+   "big": "TOP",
+   "sub": "ORDU",
+   "year": null,
+   "label": "ORDU",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.32,
+      0.65,
+      0.162
+     ],
+     [
+      0.2,
+      0.57,
+      0.61,
+      0.6
+     ],
+     [
+      0.42,
+      0.82,
+      0.57,
+      0.32
+     ],
+     [
+      1,
+      0.82,
+      0.57,
+      0.288
+     ]
+    ],
+    "vurgu": [
+     [
+      0.38,
+      0.655,
+      0.861,
+      0.543,
+      0.08,
+      "TOP"
+     ],
+     [
+      0.655,
+      0.97,
+      0.742,
+      0.627,
+      0.035,
+      "GÜLLELER"
+     ]
+    ]
+   }
+  },
+  {
+   "image": "images/s16.jpg",
+   "start": 97.89,
+   "end": 105.30999999999999,
+   "lines": [
+    "Etrafta kılıçlar, mızraklar, teberler, hatta tabanca ve tüfek var.",
+    "Eski ve yeni silahlar yan yana: hem gelenek hem modernleşme."
+   ],
+   "big": "SİLAHLAR",
+   "sub": "ESKİ · YENİ",
+   "year": null,
+   "label": "SİLAHLAR",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.82,
+      0.57,
+      0.288
+     ],
+     [
+      0.2,
+      0.66,
+      0.495,
+      0.8
+     ],
+     [
+      0.42,
+      0.5,
+      0.42,
+      0.8
+     ],
+     [
+      1,
+      0.5,
+      0.42,
+      0.72
+     ]
+    ],
+    "vurgu": [
+     [
+      0.38,
+      0.563,
+      0.09,
+      0.36,
+      0.06,
+      "TEBER"
+     ],
+     [
+      0.563,
+      0.747,
+      0.088,
+      0.43,
+      0.05,
+      "TABANCA"
+     ],
+     [
+      0.747,
+      0.97,
+      0.917,
+      0.467,
+      0.06,
+      "KILIÇ"
+     ]
+    ]
+   }
+  },
+  {
+   "image": "images/s17.jpg",
+   "start": 105.30999999999999,
+   "end": 109.28999999999999,
+   "lines": [
+    "Ortanın altında küçük bir meşale var.",
+    "Eğitimi ve ilerlemeyi simgelediği yorumlanır."
+   ],
+   "big": "MEŞALE",
+   "sub": "EĞİTİM",
+   "year": null,
+   "label": "İLERLEME",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.5,
+      0.42,
+      0.72
+     ],
+     [
+      0.2,
+      0.46,
+      0.55,
+      0.72
+     ],
+     [
+      0.42,
+      0.42,
+      0.68,
+      0.2
+     ],
+     [
+      1,
+      0.42,
+      0.68,
+      0.18
+     ]
+    ],
+    "vurgu": [
+     [
+      0.38,
+      0.97,
+      0.407,
+      0.683,
+      0.035,
+      "MEŞALE"
+     ]
+    ]
+   }
+  },
+  {
+   "image": "images/s18.jpg",
+   "start": 109.28999999999999,
+   "end": 117.08999999999999,
+   "lines": [
+    "En altta asılı madalyalar ise Osmanlı nişanları.",
+    "Şefkat, Mecidî, Osmanî ve İmtiyaz gibi. Devlete hizmet edenlere verilirdi."
+   ],
+   "big": "NİŞANLAR",
+   "sub": "ŞEREF",
+   "year": null,
+   "label": "NİŞANLAR",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.42,
+      0.68,
+      0.18
+     ],
+     [
+      0.2,
+      0.445,
+      0.755,
+      0.6
+     ],
+     [
+      0.42,
+      0.47,
+      0.83,
+      0.6
+     ],
+     [
+      1,
+      0.47,
+      0.83,
+      0.54
+     ]
+    ],
+    "vurgu": [
+     [
+      0.38,
+      0.518,
+      0.065,
+      0.76,
+      0.05,
+      "ŞEFKAT"
+     ],
+     [
+      0.518,
+      0.655,
+      0.27,
+      0.885,
+      0.05,
+      "MECİDÎ"
+     ],
+     [
+      0.655,
+      0.792,
+      0.67,
+      0.885,
+      0.05,
+      "OSMANÎ"
+     ],
+     [
+      0.792,
+      0.97,
+      0.88,
+      0.75,
+      0.05,
+      "İMTİYAZ"
+     ]
+    ]
+   }
+  },
+  {
+   "image": "images/s19.jpg",
+   "start": 117.08999999999999,
+   "end": 124.94695800000001,
+   "lines": [
+    "Bu arma, saltanatın sonuna kadar kullanıldı.",
+    "Sence bu sembollerin en anlamlısı hangisi? Yorumlara yaz."
+   ],
+   "big": "SENCE?",
+   "sub": "YORUMLARA YAZ",
+   "year": null,
+   "label": "SON",
+   "fx": [
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "gorsel_zoom",
+    "gorsel": "engine/map/arma.png",
+    "kamera": [
+     [
+      0,
+      0.47,
+      0.83,
+      0.54
+     ],
+     [
+      0.2,
+      0.485,
+      0.665,
+      0.95
+     ],
+     [
+      0.42,
+      0.5,
+      0.5,
+      0.95
+     ],
+     [
+      1,
+      0.5,
+      0.5,
+      0.855
+     ]
+    ],
+    "vurgu": []
+   }
+  }
+ ],
+ "eras": [
+  {
+   "name": "ARMA",
+   "from": 0,
+   "to": 3
+  },
+  {
+   "name": "ZİRVE",
+   "from": 4,
+   "to": 7
+  },
+  {
+   "name": "MERKEZ",
+   "from": 8,
+   "to": 10
+  },
+  {
+   "name": "SOL",
+   "from": 11,
+   "to": 13
+  },
+  {
+   "name": "SAĞ",
+   "from": 14,
+   "to": 16
+  },
+  {
+   "name": "NİŞANLAR",
+   "from": 17,
+   "to": 18
+  }
+ ],
+ "outro_plan": {
+  "title": "EN ANLAMLI SEMBOL HANGİSİ?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true,
+ "outro": {
+  "start": 119.246958,
+  "title": "EN ANLAMLI SEMBOL HANGİSİ?",
+  "line": "Yorumlara yaz",
+  "line_at": 121.546958
+ },
+ "duration": 125.45,
+ "jumps": [],
+ "captions": [
+  {
+   "start": 0.0,
+   "end": 2.4,
+   "text": "Bu armada 30'dan fazla sembol var."
+  },
+  {
+   "start": 2.82,
+   "end": 4.38,
+   "text": "Çoğu insan birini bile bilmiyor."
+  },
+  {
+   "start": 4.82,
+   "end": 6.68,
+   "text": "Bu, Osmanlı Devleti'nin arması."
+  },
+  {
+   "start": 7.02,
+   "end": 11.96,
+   "text": "Son şeklini 17 Nisan 1882'de, İkinci Abdülhamid döneminde aldı."
+  },
+  {
+   "start": 12.2,
+   "end": 16.0,
+   "text": "İlk Batı tarzı Osmanlı arması ise Abdülmecid zamanında hazırlandı."
+  },
+  {
+   "start": 16.32,
+   "end": 20.36,
+   "text": "Bir de dikkat et: Avrupa armalarında aslan, kartal gibi hayvanlar olur."
+  },
+  {
+   "start": 20.76,
+   "end": 27.51,
+   "text": "Osmanlı armasında tek bir hayvan bile yok. Bunun, İslam geleneğinde canlı tasvirinden kaçınılmasıyla ilgili olduğu düşünülür."
+  },
+  {
+   "start": 27.54,
+   "end": 29.96,
+   "text": "En tepede ışınlar saçan bir güneş var."
+  },
+  {
+   "start": 30.34,
+   "end": 33.16,
+   "text": "Devletin büyüklüğünü ve parlaklığını anlattığı yorumlanır."
+  },
+  {
+   "start": 33.5,
+   "end": 37.56,
+   "text": "Güneşin tam ortasında padişahın tuğrası duruyor. Yani resmî imzası."
+  },
+  {
+   "start": 37.96,
+   "end": 42.9,
+   "text": "Padişah değişince armadaki tuğra da değişirdi. Bu çizimdeki, Sultan Reşad'ın tuğrası."
+  },
+  {
+   "start": 43.22,
+   "end": 47.84,
+   "text": "Tuğranın da kendi parçaları var: yukarı uzanan üç tuğ, soldaki iç içe beyzeler,"
+  },
+  {
+   "start": 48.28,
+   "end": 51.66,
+   "text": "sağa uzanan kollar ve en altta padişahın adının yazdığı sere."
+  },
+  {
+   "start": 52.04,
+   "end": 54.39,
+   "text": "Tuğranın altındaki hilalde Arapça bir yazı var."
+  },
+  {
+   "start": 54.42,
+   "end": 58.18,
+   "text": "Anlamı kabaca: İlahi yardıma dayanan Yüce Osmanlı Devleti."
+  },
+  {
+   "start": 58.46,
+   "end": 60.38,
+   "text": "Hilalin kendisi de İslam'ın simgesi."
+  },
+  {
+   "start": 60.74,
+   "end": 62.58,
+   "text": "Kalkanın üstünde sorguçlu bir kavuk var."
+  },
+  {
+   "start": 62.92,
+   "end": 67.92,
+   "text": "Avrupa armalarındaki tacın yerine, Osman Gazi'ye ve hanedanın köküne gönderme olarak yorumlanır."
+  },
+  {
+   "start": 68.4,
+   "end": 70.88,
+   "text": "Ortadaki kalkan yıldızlar ve hilallerle çevrili."
+  },
+  {
+   "start": 71.26,
+   "end": 74.92,
+   "text": "Bazıları bunu imparatorluktaki farklı halkların bir arada oluşu diye yorumlar."
+  },
+  {
+   "start": 75.36,
+   "end": 76.82,
+   "text": "Solda yeşil sancak hilafeti,"
+  },
+  {
+   "start": 77.18,
+   "end": 79.83,
+   "text": "sağda kırmızı sancak ise devleti ve saltanatı temsil eder."
+  },
+  {
+   "start": 79.86,
+   "end": 82.1,
+   "text": "Sol tarafta bir terazi var: adalet."
+  },
+  {
+   "start": 82.48,
+   "end": 85.86,
+   "text": "Altındaki iki kitaptan biri şeriatı, diğeri kanunları temsil eder."
+  },
+  {
+   "start": 86.36,
+   "end": 88.5,
+   "text": "Hemen yanındaki çiçek demeti ve bereket boynuzu,"
+  },
+  {
+   "start": 88.82,
+   "end": 90.06,
+   "text": "barışı ve bolluğu anlatır."
+  },
+  {
+   "start": 90.44,
+   "end": 93.76,
+   "text": "Boynuzun altındaki küçük çapa ise Osmanlı donanmasının simgesi."
+  },
+  {
+   "start": 94.12,
+   "end": 96.22,
+   "text": "Sağ tarafta kocaman bir top ve gülleler var."
+  },
+  {
+   "start": 96.54,
+   "end": 97.6,
+   "text": "Yani ordunun gücü."
+  },
+  {
+   "start": 98.04,
+   "end": 101.62,
+   "text": "Etrafta kılıçlar, mızraklar, teberler, hatta tabanca ve tüfek var."
+  },
+  {
+   "start": 101.9,
+   "end": 105.0,
+   "text": "Eski ve yeni silahlar yan yana: hem gelenek hem modernleşme."
+  },
+  {
+   "start": 105.46,
+   "end": 107.18,
+   "text": "Ortanın altında küçük bir meşale var."
+  },
+  {
+   "start": 107.46,
+   "end": 109.41,
+   "text": "Eğitimi ve ilerlemeyi simgelediği yorumlanır."
+  },
+  {
+   "start": 109.44,
+   "end": 112.3,
+   "text": "En altta asılı madalyalar ise Osmanlı nişanları."
+  },
+  {
+   "start": 112.54,
+   "end": 116.7,
+   "text": "Şefkat, Mecidî, Osmanî ve İmtiyaz gibi. Devlete hizmet edenlere verilirdi."
+  },
+  {
+   "start": 117.24,
+   "end": 119.26,
+   "text": "Bu arma, saltanatın sonuna kadar kullanıldı."
+  },
+  {
+   "start": 119.68,
+   "end": 122.6,
+   "text": "Sence bu sembollerin en anlamlısı hangisi? Yorumlara yaz."
+  }
+ ]
+}

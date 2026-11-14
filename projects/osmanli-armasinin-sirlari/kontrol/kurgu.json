@@ -1,0 +1,33 @@
+{
+ "asama": "kurgu",
+ "durum": "hata",
+ "ozet": "125 sn, -14 LUFS, senkron 37/37",
+ "maddeler": [
+  {
+   "seviye": "hata",
+   "mesaj": "video 125 sn; Instagram'a otomatik yükleme sınırı 90 sn"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “HAYVAN YOK”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “EN ANLAMLI SEMBOL HANGİSİ?”"
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Alt kısımdaki açıklama metni eksik/kesilmiş ve metin şablonu tam görünmüyor.",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Başlık metni ve sol taraftaki vurgu yazısı arka planla çakışarak kısmen kesilmiş ve okunurluğu düşmüş.",
+   "sahne": 19
+  }
+ ],
+ "sure": 125.4,
+ "lufs": -13.5,
+ "senkron": "37/37",
+ "zaman": "2026-11-14T16:01:33Z"
+}
