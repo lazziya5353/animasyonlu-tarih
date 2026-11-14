@@ -71,10 +71,9 @@
     0.5,
     0.55
    ],
-   "video": "k1.mp4",
-   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_190813_fe0e92a1-1ae6-4151-bd00-e426b65db586.mp4",
-   "v_bas": 0.0,
-   "v_son": 5.0
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_084029_84659bc3-03cc-4b48-9ced-5a018d9c656b.mp4",
+   "v_bas": 0,
+   "v_son": 8
   },
   {
    "image": "images/s03.jpg",
@@ -133,9 +132,9 @@
      30
     ],
     "to": [
-     109.2,
+     109.0,
      39.6,
-     33
+     27
     ],
     "zoom_sure": 1.0,
     "cizgi": [
@@ -196,25 +195,26 @@
     "cizgi_etiketler": [
      [
       "JİAYUGUAN",
-      100.5,
+      99.5,
       39.8,
-      -60
+      -70
      ],
      [
       "SHANHAİGUAN",
-      117.0,
+      118.0,
       40.0,
-      -60
+      -70
      ]
     ],
     "etiketler": [
      [
-      "BOZKIR",
+      "MOĞOL BOZKIRI",
       108,
-      43.2
+      43.5
      ]
     ],
-    "cizgi_kalinlik": 11
+    "cizgi_kalinlik": 10,
+    "cizgi_ad": "ÇİN SEDDİ"
    }
   },
   {

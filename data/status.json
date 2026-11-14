@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "piramitleri-kim-yapti videosu hazır",
-  "cikti": "release:video-piramitleri-kim-yapti",
-  "zaman": "2026-11-14T08:53:31Z"
+  "mesaj": "cin-seddi-uzaydan-gorunur-mu videosu hazır",
+  "cikti": "release:video-cin-seddi-uzaydan-gorunur-mu",
+  "zaman": "2026-11-14T13:41:38Z"
  },
  "kontrol": {
   "durum": "tamam",
-  "mesaj": "piramitleri-kim-yapti: kurgu ✓",
-  "cikti": "projects/piramitleri-kim-yapti/kontrol",
-  "zaman": "2026-11-14T08:53:26Z"
+  "mesaj": "cin-seddi-uzaydan-gorunur-mu: kurgu ✓",
+  "cikti": "projects/cin-seddi-uzaydan-gorunur-mu/kontrol",
+  "zaman": "2026-11-14T13:41:31Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
