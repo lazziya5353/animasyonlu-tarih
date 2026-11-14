@@ -52,7 +52,7 @@
   {
    "image": "images/s02.jpg",
    "start": 4.67,
-   "end": 12.049999999999999,
+   "end": 12.09,
    "lines": [
     "Bu, Osmanlı Devleti'nin arması.",
     "Son şeklini 17 Nisan 1882'de, İkinci Abdülhamid döneminde aldı."
@@ -99,7 +99,7 @@
   },
   {
    "image": "images/s03.jpg",
-   "start": 12.049999999999999,
+   "start": 12.09,
    "end": 16.17,
    "lines": [
     "İlk Batı tarzı Osmanlı arması ise Abdülmecid zamanında hazırlandı."
@@ -147,7 +147,7 @@
   {
    "image": "images/s04.jpg",
    "start": 16.17,
-   "end": 27.39,
+   "end": 27.37,
    "lines": [
     "Bir de dikkat et: Avrupa armalarında aslan, kartal gibi hayvanlar olur.",
     "Osmanlı armasında tek bir hayvan bile yok. Bunun, İslam geleneğinde canlı tasvirinden kaçınılmasıyla ilgili olduğu düşünülür."
@@ -194,8 +194,8 @@
   },
   {
    "image": "images/s05.jpg",
-   "start": 27.39,
-   "end": 33.35,
+   "start": 27.37,
+   "end": 33.33,
    "lines": [
     "En tepede ışınlar saçan bir güneş var.",
     "Devletin büyüklüğünü ve parlaklığını anlattığı yorumlanır."
@@ -257,8 +257,8 @@
   },
   {
    "image": "images/s06.jpg",
-   "start": 33.35,
-   "end": 43.07,
+   "start": 33.33,
+   "end": 43.050000000000004,
    "lines": [
     "Güneşin tam ortasında padişahın tuğrası duruyor. Yani resmî imzası.",
     "Padişah değişince armadaki tuğra da değişirdi. Bu çizimdeki, Sultan Reşad'ın tuğrası."
@@ -314,8 +314,8 @@
   },
   {
    "image": "images/s07.jpg",
-   "start": 43.07,
-   "end": 51.89,
+   "start": 43.050000000000004,
+   "end": 51.51,
    "lines": [
     "Tuğranın da kendi parçaları var: yukarı uzanan üç tuğ, soldaki iç içe beyzeler,",
     "sağa uzanan kollar ve en altta padişahın adının yazdığı sere."
@@ -344,16 +344,16 @@
       0.306
      ],
      [
-      0.32,
-      0.46,
+      0.25,
+      0.47,
       0.17,
-      0.2
+      0.25
      ],
      [
       1,
-      0.46,
+      0.47,
       0.17,
-      0.18
+      0.24
      ]
     ],
     "vurgu": [
@@ -395,7 +395,7 @@
   },
   {
    "image": "images/s08.jpg",
-   "start": 51.89,
+   "start": 51.51,
    "end": 60.59,
    "lines": [
     "Tuğranın altındaki hilalde Arapça bir yazı var.",
@@ -421,9 +421,9 @@
     "kamera": [
      [
       0,
-      0.46,
+      0.47,
       0.17,
-      0.18
+      0.24
      ],
      [
       0.32,
@@ -454,7 +454,7 @@
   {
    "image": "images/s09.jpg",
    "start": 60.59,
-   "end": 68.25,
+   "end": 68.27,
    "lines": [
     "Kalkanın üstünde sorguçlu bir kavuk var.",
     "Avrupa armalarındaki tacın yerine, Osman Gazi'ye ve hanedanın köküne gönderme olarak yorumlanır."
@@ -516,8 +516,8 @@
   },
   {
    "image": "images/s10.jpg",
-   "start": 68.25,
-   "end": 75.21,
+   "start": 68.27,
+   "end": 75.14999999999999,
    "lines": [
     "Ortadaki kalkan yıldızlar ve hilallerle çevrili.",
     "Bazıları bunu imparatorluktaki farklı halkların bir arada oluşu diye yorumlar."
@@ -573,8 +573,8 @@
   },
   {
    "image": "images/s11.jpg",
-   "start": 75.21,
-   "end": 79.71,
+   "start": 75.14999999999999,
+   "end": 79.72999999999999,
    "lines": [
     "Solda yeşil sancak hilafeti,",
     "sağda kırmızı sancak ise devleti ve saltanatı temsil eder."
@@ -638,7 +638,7 @@
   },
   {
    "image": "images/s12.jpg",
-   "start": 79.71,
+   "start": 79.72999999999999,
    "end": 86.21,
    "lines": [
     "Sol tarafta bir terazi var: adalet.",
@@ -710,7 +710,7 @@
   {
    "image": "images/s13.jpg",
    "start": 86.21,
-   "end": 90.28999999999999,
+   "end": 90.30999999999999,
    "lines": [
     "Hemen yanındaki çiçek demeti ve bereket boynuzu,",
     "barışı ve bolluğu anlatır."
@@ -774,7 +774,7 @@
   },
   {
    "image": "images/s14.jpg",
-   "start": 90.28999999999999,
+   "start": 90.30999999999999,
    "end": 93.97,
    "lines": [
     "Boynuzun altındaki küçük çapa ise Osmanlı donanmasının simgesi."
@@ -902,7 +902,7 @@
   {
    "image": "images/s16.jpg",
    "start": 97.89,
-   "end": 105.30999999999999,
+   "end": 105.33,
    "lines": [
     "Etrafta kılıçlar, mızraklar, teberler, hatta tabanca ve tüfek var.",
     "Eski ve yeni silahlar yan yana: hem gelenek hem modernleşme."
@@ -931,22 +931,28 @@
       0.288
      ],
      [
+      0.3,
       0.2,
-      0.5,
-      0.495,
-      1.02
+      0.39,
+      0.42
      ],
      [
+      0.72,
+      0.2,
       0.42,
-      0.5,
-      0.42,
-      1.02
+      0.42
+     ],
+     [
+      0.8,
+      0.78,
+      0.46,
+      0.42
      ],
      [
       1,
-      0.5,
-      0.42,
-      1.02
+      0.78,
+      0.46,
+      0.42
      ]
     ],
     "vurgu": [
@@ -980,7 +986,7 @@
   },
   {
    "image": "images/s17.jpg",
-   "start": 105.30999999999999,
+   "start": 105.33,
    "end": 109.28999999999999,
    "lines": [
     "Ortanın altında küçük bir meşale var.",
@@ -1005,9 +1011,9 @@
     "kamera": [
      [
       0,
-      0.5,
-      0.42,
-      1.02
+      0.78,
+      0.46,
+      0.42
      ],
      [
       0.2,
@@ -1073,40 +1079,58 @@
       0.18
      ],
      [
-      0.2,
       0.3,
-      0.8,
-      0.5
+      0.47,
+      0.81,
+      0.95
      ],
      [
-      0.34,
-      0.2,
-      0.78,
-      0.42
+      0.37,
+      0.25,
+      0.8,
+      0.55
      ],
      [
       0.5,
+      0.25,
+      0.8,
+      0.55
+     ],
+     [
+      0.55,
       0.3,
-      0.86,
-      0.42
+      0.85,
+      0.55
      ],
      [
       0.64,
-      0.64,
-      0.86,
-      0.42
+      0.3,
+      0.85,
+      0.55
+     ],
+     [
+      0.69,
+      0.68,
+      0.85,
+      0.55
      ],
      [
       0.78,
-      0.78,
-      0.77,
-      0.42
+      0.68,
+      0.85,
+      0.55
+     ],
+     [
+      0.82,
+      0.72,
+      0.8,
+      0.55
      ],
      [
       1,
-      0.5,
+      0.72,
       0.8,
-      1.02
+      0.55
      ]
     ],
     "vurgu": [
@@ -1175,9 +1199,9 @@
     "kamera": [
      [
       0,
-      0.47,
-      0.83,
-      0.54
+      0.72,
+      0.8,
+      0.55
      ],
      [
       0.2,
@@ -1273,12 +1297,12 @@
    "text": "Bu, Osmanlı Devleti'nin arması."
   },
   {
-   "start": 7.02,
+   "start": 7.04,
    "end": 11.96,
    "text": "Son şeklini 17 Nisan 1882'de, İkinci Abdülhamid döneminde aldı."
   },
   {
-   "start": 12.2,
+   "start": 12.24,
    "end": 16.0,
    "text": "İlk Batı tarzı Osmanlı arması ise Abdülmecid zamanında hazırlandı."
   },
@@ -1289,51 +1313,51 @@
   },
   {
    "start": 20.76,
-   "end": 27.51,
+   "end": 27.49,
    "text": "Osmanlı armasında tek bir hayvan bile yok. Bunun, İslam geleneğinde canlı tasvirinden kaçınılmasıyla ilgili olduğu düşünülür."
   },
   {
-   "start": 27.54,
-   "end": 29.96,
+   "start": 27.52,
+   "end": 29.98,
    "text": "En tepede ışınlar saçan bir güneş var."
   },
   {
-   "start": 30.34,
+   "start": 30.36,
    "end": 33.16,
    "text": "Devletin büyüklüğünü ve parlaklığını anlattığı yorumlanır."
   },
   {
-   "start": 33.5,
-   "end": 37.56,
+   "start": 33.48,
+   "end": 37.54,
    "text": "Güneşin tam ortasında padişahın tuğrası duruyor. Yani resmî imzası."
   },
   {
-   "start": 37.96,
-   "end": 42.9,
+   "start": 37.98,
+   "end": 42.88,
    "text": "Padişah değişince armadaki tuğra da değişirdi. Bu çizimdeki, Sultan Reşad'ın tuğrası."
   },
   {
-   "start": 43.22,
-   "end": 47.84,
+   "start": 43.2,
+   "end": 47.82,
    "text": "Tuğranın da kendi parçaları var: yukarı uzanan üç tuğ, soldaki iç içe beyzeler,"
   },
   {
    "start": 48.28,
-   "end": 51.66,
+   "end": 51.63,
    "text": "sağa uzanan kollar ve en altta padişahın adının yazdığı sere."
   },
   {
-   "start": 52.04,
-   "end": 54.39,
+   "start": 51.66,
+   "end": 54.42,
    "text": "Tuğranın altındaki hilalde Arapça bir yazı var."
   },
   {
-   "start": 54.42,
-   "end": 58.18,
+   "start": 54.78,
+   "end": 58.14,
    "text": "Anlamı kabaca: İlahi yardıma dayanan Yüce Osmanlı Devleti."
   },
   {
-   "start": 58.46,
+   "start": 58.42,
    "end": 60.38,
    "text": "Hilalin kendisi de İslam'ın simgesi."
   },
@@ -1343,38 +1367,38 @@
    "text": "Kalkanın üstünde sorguçlu bir kavuk var."
   },
   {
-   "start": 62.92,
-   "end": 67.92,
+   "start": 62.96,
+   "end": 67.94,
    "text": "Avrupa armalarındaki tacın yerine, Osman Gazi'ye ve hanedanın köküne gönderme olarak yorumlanır."
   },
   {
-   "start": 68.4,
+   "start": 68.42,
    "end": 70.88,
    "text": "Ortadaki kalkan yıldızlar ve hilallerle çevrili."
   },
   {
-   "start": 71.26,
+   "start": 71.28,
    "end": 74.92,
    "text": "Bazıları bunu imparatorluktaki farklı halkların bir arada oluşu diye yorumlar."
   },
   {
-   "start": 75.36,
+   "start": 75.3,
    "end": 76.82,
    "text": "Solda yeşil sancak hilafeti,"
   },
   {
    "start": 77.18,
-   "end": 79.83,
+   "end": 79.85,
    "text": "sağda kırmızı sancak ise devleti ve saltanatı temsil eder."
   },
   {
-   "start": 79.86,
+   "start": 79.88,
    "end": 82.1,
    "text": "Sol tarafta bir terazi var: adalet."
   },
   {
    "start": 82.48,
-   "end": 85.86,
+   "end": 85.88,
    "text": "Altındaki iki kitaptan biri şeriatı, diğeri kanunları temsil eder."
   },
   {
@@ -1388,7 +1412,7 @@
    "text": "barışı ve bolluğu anlatır."
   },
   {
-   "start": 90.44,
+   "start": 90.46,
    "end": 93.76,
    "text": "Boynuzun altındaki küçük çapa ise Osmanlı donanmasının simgesi."
   },
@@ -1399,7 +1423,7 @@
   },
   {
    "start": 96.54,
-   "end": 97.6,
+   "end": 97.58,
    "text": "Yani ordunun gücü."
   },
   {
@@ -1413,7 +1437,7 @@
    "text": "Eski ve yeni silahlar yan yana: hem gelenek hem modernleşme."
   },
   {
-   "start": 105.46,
+   "start": 105.48,
    "end": 107.18,
    "text": "Ortanın altında küçük bir meşale var."
   },
