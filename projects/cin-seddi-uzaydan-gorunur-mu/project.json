@@ -26,27 +26,10 @@
         0.5,
         0.5
       ],
-      "anim": {
-        "tur": "zoom",
-        "from": [
-          75,
-          30,
-          150
-        ],
-        "to": [
-          108,
-          38.5,
-          30
-        ],
-        "zoom_sure": 5.5,
-        "etiketler": [
-          [
-            "ÇİN",
-            104,
-            33
-          ]
-        ]
-      }
+      "video": "videos/k3.mp4",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_084029_84659bc3-03cc-4b48-9ced-5a018d9c656b.mp4",
+      "v_bas": 0.0,
+      "v_son": 4.5
     },
     {
       "image": "images/s02.jpg",
@@ -72,8 +55,8 @@
         0.55
       ],
       "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_084029_84659bc3-03cc-4b48-9ced-5a018d9c656b.mp4",
-      "v_bas": 0,
-      "v_son": 8,
+      "v_bas": 4.5,
+      "v_son": 10.0,
       "video": "videos/k3.mp4"
     },
     {
