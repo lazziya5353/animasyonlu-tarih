@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "osmanli-armasinin-sirlari videosu hazır",
-  "cikti": "release:video-osmanli-armasinin-sirlari",
-  "zaman": "2026-11-14T16:24:01Z"
+  "mesaj": "osman-beyin-kayip-imzasi videosu hazır",
+  "cikti": "release:video-osman-beyin-kayip-imzasi",
+  "zaman": "2026-11-14T18:36:36Z"
  },
  "kontrol": {
-  "durum": "hata",
-  "mesaj": "osman-beyin-kayip-imzasi: gorsel ✗",
+  "durum": "tamam",
+  "mesaj": "osman-beyin-kayip-imzasi: kurgu ✓",
   "cikti": "projects/osman-beyin-kayip-imzasi/kontrol",
-  "zaman": "2026-11-14T18:14:57Z"
+  "zaman": "2026-11-14T18:36:30Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

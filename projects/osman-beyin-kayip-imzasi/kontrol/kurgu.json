@@ -1,0 +1,19 @@
+{
+ "asama": "kurgu",
+ "durum": "tamam",
+ "ozet": "78 sn, -14 LUFS, senkron 18/18",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “O İMZA BULUNUR MU?”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.5-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more info)"
+  }
+ ],
+ "sure": 78.4,
+ "lufs": -13.8,
+ "senkron": "18/18",
+ "zaman": "2026-11-14T18:36:30Z"
+}
