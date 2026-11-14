@@ -18,6 +18,7 @@ from PIL import Image, ImageDraw, ImageFilter
 from core import W, H, GOLD, WHITE, F, clamp, ease, inout, text, put
 
 HERE = os.path.dirname(os.path.abspath(__file__)); MAPDIR = os.path.join(HERE, "map")
+GORSEL_TURLER = ("gorsel_zoom",)
 KIRMIZI = (226, 64, 52); YESIL = (86, 190, 120); AMBER = (255, 176, 64)
 
 
@@ -124,11 +125,12 @@ def baslik(fr, ust, alt, lt, out=1.0):
 
 class DepremAnim:
     def __init__(self, proje_dir, cfg):
-        self.c = cfg; self.h = Harita(cfg.get("stil", "uydu")); self._ilce = None
+        self.c = cfg; self.dir = proje_dir; self._ilce = None
+        self.h = None if cfg["tur"] in GORSEL_TURLER else Harita(cfg.get("stil", "uydu"))
 
     def frame(self, lt, dur):
         fr = getattr(self, "_" + self.c["tur"])(lt, dur)
-        if self.h.uydu and self.c["tur"] != "ilce_tablo":
+        if self.h and self.h.uydu and self.c["tur"] != "ilce_tablo":
             put(fr, text(Harita.ATIF, "sans", 20, (230, 230, 230), spacing=1, shadow=True), W / 2, 1868, .75)
         return fr
 
@@ -333,3 +335,83 @@ def _yazit(self, lt, dur):
 
 
 DepremAnim._yazit = _yazit
+
+
+# ── görselde yakınlaşma: tek bir büyük görsel (ör. arma) üzerinde kamera gezer, sembolleri vurgular ──
+#   {"tur": "gorsel_zoom", "gorsel": "engine/map/arma.png",
+#    "kamera": [[t, cx, cy, w], ...]   t: sahne süresinin oranı (0-1), cx/cy: görselde 0-1 konum, w: ekrana sığan görsel genişliği oranı
+#    "vurgu":  [[t0, t1, cx, cy, r, "AD"], ...]  t0/t1 oran, r: görsel genişliğine oranla yarıçap; etrafı kararır, altın halka + etiket
+#    "atif": "..."}  (alt satırda küçük atıf)
+class Gorsel:
+    _cache = {}
+
+    def __init__(self, yol):
+        if yol not in Gorsel._cache:
+            Image.MAX_IMAGE_PIXELS = None
+            im = Image.open(yol).convert("RGBA"); bg = Image.new("RGBA", im.size, (0, 0, 0, 255)); bg.alpha_composite(im)
+            lv = [bg.convert("RGB")]
+            while lv[-1].width > 1400: lv.append(lv[-1].resize((lv[-1].width // 2, lv[-1].height // 2), Image.LANCZOS))
+            Gorsel._cache[yol] = lv
+        self.lv = Gorsel._cache[yol]; self.W0, self.H0 = self.lv[0].size
+
+    def kare(self, cx, cy, w):
+        """cx, cy (0-1), w: görünen genişlik (görsel genişliği oranı) → kare ve görsel(0-1)→ekran dönüşümü"""
+        bw = w * self.W0; bh = bw * H / W; x0 = cx * self.W0 - bw / 2; y0 = cy * self.H0 - bh / 2
+        s = W / bw; k = 0
+        while k + 1 < len(self.lv) and bw / 2 ** (k + 1) >= W * 1.0: k += 1   # kaynak/ekran ≤ 2 olacak seviye
+        im = self.lv[k]; f = self.W0 / im.width
+        fr = Image.new("RGBA", (W, H), (0, 0, 0, 255))
+        ix0, iy0, ix1, iy1 = max(0, x0), max(0, y0), min(self.W0, x0 + bw), min(self.H0, y0 + bh)
+        if ix1 > ix0 and iy1 > iy0:
+            dx0, dy0 = int(round((ix0 - x0) * s)), int(round((iy0 - y0) * s)); dx1, dy1 = int(round((ix1 - x0) * s)), int(round((iy1 - y0) * s))
+            if dx1 > dx0 and dy1 > dy0:
+                parca = im.resize((dx1 - dx0, dy1 - dy0), Image.BICUBIC if s * f > 1 else Image.BILINEAR, box=(ix0 / f, iy0 / f, ix1 / f, iy1 / f))
+                fr.paste(parca, (dx0, dy0))
+        def to(u, v): return ((u * self.W0 - x0) * s, (v * self.H0 - y0) * s)
+        return fr, to, s * self.W0
+
+
+def _kamera(kf, p):
+    """anahtar kareler arasında yumuşak geçiş; genişlik logaritmik (yakınlaşma hızı sabit hissettirsin)"""
+    kf = sorted(kf)
+    if p <= kf[0][0]: return kf[0][1:]
+    for a, b in zip(kf, kf[1:]):
+        if p <= b[0]:
+            u = inout((p - a[0]) / max(1e-6, b[0] - a[0]))
+            return (a[1] + (b[1] - a[1]) * u, a[2] + (b[2] - a[2]) * u, math.exp(math.log(a[3]) + (math.log(b[3]) - math.log(a[3])) * u))
+    return kf[-1][1:]
+
+
+def _gorsel_zoom(self, lt, dur):
+    c = self.c
+    if not hasattr(self, "_g"):
+        yol = c["gorsel"]
+        if not os.path.isabs(yol):
+            yol = next((y for y in (os.path.join(self.dir, yol), os.path.join(HERE, "..", yol), os.path.join(HERE, yol)) if os.path.exists(y)), yol)
+        self._g = Gorsel(yol)
+    p = clamp(lt / max(.1, dur)); cx, cy, w = _kamera(c.get("kamera", [[0, .5, .5, 1.0]]), p)
+    fr, to, olc = self._g.kare(cx, cy, w)
+    for t0, t1, vx, vy, r, ad in c.get("vurgu", []):
+        q = clamp((p - t0) / .06) * clamp((t1 - p) / .06)
+        if q <= 0: continue
+        x, y = to(vx, vy); R = r * olc; ri = int(R)
+        # spot: halkanın dışı kararır
+        m = Image.new("L", (W // 4, H // 4), int(150 * q)); ImageDraw.Draw(m).ellipse([(x - R) / 4, (y - R) / 4, (x + R) / 4, (y + R) / 4], fill=0)
+        m = m.filter(ImageFilter.GaussianBlur(10)).resize((W, H), Image.BILINEAR)
+        k = Image.new("RGBA", (W, H), (0, 0, 0, 0)); k.putalpha(m); fr.alpha_composite(k)
+        # parlayan altın halka (çizilerek kapanır)
+        ac = 360 * ease(clamp((p - t0) / .1)); puls = 1 + .015 * math.sin(lt * 4)
+        lay = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(lay); RR = R * puls
+        d.arc([x - RR, y - RR, x + RR, y + RR], -90, -90 + ac, fill=GOLD + (int(255 * q),), width=7)
+        fr.alpha_composite(lay.filter(ImageFilter.GaussianBlur(14))); fr.alpha_composite(lay)
+        if ad:
+            im = text(ad, "sans9", 44, WHITE, glow=GOLD, spacing=4)
+            ly = y + R + 60 if y + R + 60 < H - 330 else y - R - 60
+            ly = min(max(ly, 520), H - 330); lx = min(max(x, im.width / 2 + 10), W - im.width / 2 - 10)
+            put(fr, im, lx, ly, clamp((p - t0 - .04) / .06) * q)
+    if c.get("atif", True):
+        put(fr, text(c.get("atif") if isinstance(c.get("atif"), str) else "Arma: Wikimedia Commons (kamu malı)", "sans", 20, (230, 230, 230), spacing=1, shadow=True), W / 2, 1868, .7)
+    return fr
+
+
+DepremAnim._gorsel_zoom = _gorsel_zoom
