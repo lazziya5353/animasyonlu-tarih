@@ -21,13 +21,13 @@
   "durum": "tamam",
   "mesaj": "cin-seddi-uzaydan-gorunur-mu videosu hazır",
   "cikti": "release:video-cin-seddi-uzaydan-gorunur-mu",
-  "zaman": "2026-11-14T13:57:47Z"
+  "zaman": "2026-11-14T14:13:08Z"
  },
  "kontrol": {
-  "durum": "hata",
-  "mesaj": "firat-ve-dicle-cennetten-akan-iki-nehir: gorsel ✗",
-  "cikti": "projects/firat-ve-dicle-cennetten-akan-iki-nehir/kontrol",
-  "zaman": "2026-11-14T14:00:25Z"
+  "durum": "tamam",
+  "mesaj": "cin-seddi-uzaydan-gorunur-mu: kurgu ✓",
+  "cikti": "projects/cin-seddi-uzaydan-gorunur-mu/kontrol",
+  "zaman": "2026-11-14T14:13:03Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
