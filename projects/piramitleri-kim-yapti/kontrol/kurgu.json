@@ -1,0 +1,27 @@
+{
+ "asama": "kurgu",
+ "durum": "tamam",
+ "ozet": "64 sn, -14 LUFS, senkron 20/20",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “PİRAMİTLERİ KÖLELER Mİ YAPTI?”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “2,3 MİLYON”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “HANGİ EFSANE YANLIŞ?”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.8-flash: The read operation timed out)"
+  }
+ ],
+ "sure": 64.4,
+ "lufs": -14.4,
+ "senkron": "20/20",
+ "zaman": "2026-11-14T08:53:26Z"
+}

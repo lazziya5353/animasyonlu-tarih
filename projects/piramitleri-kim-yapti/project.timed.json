@@ -1,0 +1,502 @@
+{
+ "title": "Piramitleri Kim Yaptı?",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "PİRAMİTLERİ KÖLELER Mİ YAPTI?",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": 0.0,
+   "end": 9.07,
+   "lines": [
+    "Hep öyle anlatıldı: piramitleri kölelere kırbaçla yaptırdılar.",
+    "Ama 2013'te bulunan bir günlük, bambaşka bir hikâye anlatıyor."
+   ],
+   "big": "PİRAMİTLER",
+   "sub": "KÖLELER Mİ YAPTI?",
+   "year": null,
+   "label": "GİZA",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     30,
+     30,
+     70
+    ],
+    "to": [
+     31.1305,
+     29.972,
+     0.06
+    ],
+    "zoom_sure": 5.5,
+    "etiketler": [
+     [
+      "MISIR",
+      29.5,
+      27.5
+     ],
+     [
+      "NİL",
+      31.35,
+      27.2
+     ]
+    ],
+    "hedef": [
+     31.1307,
+     29.9705,
+     "GİZA PİRAMİTLERİ"
+    ]
+   }
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": 9.07,
+   "end": 15.33,
+   "lines": [
+    "Burası Giza. Büyük Piramit, Firavun Keops için yapıldı.",
+    "Yaklaşık dört bin altı yüz yıl önce."
+   ],
+   "big": "KEOPS",
+   "sub": "BÜYÜK PİRAMİT",
+   "year": null,
+   "label": "MÖ 2560",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_195445_2c4e7881-30f6-45ab-be57-0665d0bd9462.mp4",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": 15.33,
+   "end": 18.630000000000003,
+   "lines": [
+    "Yaklaşık 2,3 milyon taş bloktan oluşuyor."
+   ],
+   "big": "2,3 MİLYON",
+   "sub": "TAŞ BLOK",
+   "year": null,
+   "label": "KEOPS",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "glow",
+   "video": "k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_195445_2c4e7881-30f6-45ab-be57-0665d0bd9462.mp4",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": 18.630000000000003,
+   "end": 25.130000000000003,
+   "lines": [
+    "2013'te Kızıldeniz kıyısındaki bir mağarada papirüsler bulundu.",
+    "Bugüne kadar bulunan en eski papirüsler."
+   ],
+   "big": "2013",
+   "sub": "WADİ EL-CERF",
+   "year": null,
+   "label": "KEŞİF",
+   "fx": [
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "stamp",
+   "video": "k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_195445_2c4e7881-30f6-45ab-be57-0665d0bd9462.mp4",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": 25.130000000000003,
+   "end": 31.03,
+   "lines": [
+    "Bunlar, Merer adında bir ustabaşının günlüğüydü.",
+    "Piramidin yapımını yazan tek görgü tanığı."
+   ],
+   "big": "MERER",
+   "sub": "USTABAŞININ GÜNLÜĞÜ",
+   "year": null,
+   "label": "KEŞİF",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "type",
+   "type_text": "MERER · 4.600 YILLIK GÜNLÜK",
+   "video": "k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_195445_2c4e7881-30f6-45ab-be57-0665d0bd9462.mp4",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": 31.03,
+   "end": 37.25,
+   "lines": [
+    "Merer, ekibiyle Tura'daki taş ocaklarından",
+    "kireç taşını teknelerle Giza'ya taşıdığını gün gün yazmış."
+   ],
+   "big": "NİL",
+   "sub": "TAŞLAR TEKNEYLE GELDİ",
+   "year": null,
+   "label": "TURA",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_195445_2c4e7881-30f6-45ab-be57-0665d0bd9462.mp4",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": 37.25,
+   "end": 40.59,
+   "lines": [
+    "Yani taşlar, kanallar ve Nil üzerinden taşındı."
+   ],
+   "big": "KANALLAR",
+   "sub": "SU YOLU",
+   "year": null,
+   "label": "NİL",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_203000_82be6074-8759-4e70-ba6b-5e828f44131e.mp4",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": 40.59,
+   "end": 45.63,
+   "lines": [
+    "Peki işçiler kimdi?",
+    "Arkeologlar piramitlerin hemen yanında bir işçi kenti buldu."
+   ],
+   "big": "İŞÇİ KENTİ",
+   "sub": "GİZA",
+   "year": null,
+   "label": "LEHNER",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_203000_82be6074-8759-4e70-ba6b-5e828f44131e.mp4",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": 45.63,
+   "end": 52.27,
+   "lines": [
+    "Yaklaşık yirmi bin kişinin yaşayabileceği kadar büyük.",
+    "Fırınlar, ekmek ve et kemikleri: işçiler iyi besleniyordu."
+   ],
+   "big": "20.000",
+   "sub": "KİŞİLİK KENT",
+   "year": null,
+   "label": "İŞÇİLER",
+   "fx": [
+    "smoke"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "glow",
+   "video": "k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_203000_82be6074-8759-4e70-ba6b-5e828f44131e.mp4",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": 52.27,
+   "end": 57.550000000000004,
+   "lines": [
+    "Yani piramitler kırbaçla değil,",
+    "organize, beslenen işçilerle yükseldi."
+   ],
+   "big": "GERÇEK",
+   "sub": "KÖLE DEĞİL, İŞÇİ",
+   "year": null,
+   "label": "SONUÇ",
+   "fx": [
+    "gold"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_203000_82be6074-8759-4e70-ba6b-5e828f44131e.mp4",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": 57.550000000000004,
+   "end": 63.868625,
+   "lines": [
+    "Sence piramitler hakkında başka hangi efsane yanlış?",
+    "Yorumlara yaz."
+   ],
+   "big": "SENCE?",
+   "sub": "HANGİ EFSANE YANLIŞ?",
+   "year": null,
+   "label": "BUGÜN",
+   "fx": [
+    "gold",
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261113_203000_82be6074-8759-4e70-ba6b-5e828f44131e.mp4",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  }
+ ],
+ "eras": [
+  {
+   "name": "EFSANE",
+   "from": 0,
+   "to": 2
+  },
+  {
+   "name": "GÜNLÜK",
+   "from": 3,
+   "to": 6
+  },
+  {
+   "name": "İŞÇİLER",
+   "from": 7,
+   "to": 10
+  }
+ ],
+ "outro_plan": {
+  "title": "HANGİ EFSANE YANLIŞ?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 8,
+   "value": 20000,
+   "unit": "KİŞİ",
+   "small": "İŞÇİ KENTİNİN KAPASİTESİ (YAKLAŞIK)"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true,
+ "cards": [
+  {
+   "start": 46.830000000000005,
+   "end": 51.970000000000006,
+   "value": 20000,
+   "unit": "KİŞİ",
+   "small": "İŞÇİ KENTİNİN KAPASİTESİ (YAKLAŞIK)"
+  }
+ ],
+ "outro": {
+  "start": 58.168625,
+  "title": "HANGİ EFSANE YANLIŞ?",
+  "line": "Yorumlara yaz",
+  "line_at": 60.468624999999996
+ },
+ "duration": 64.37,
+ "jumps": [],
+ "captions": [
+  {
+   "start": 0.57,
+   "end": 4.18,
+   "text": "Hep öyle anlatıldı: piramitleri kölelere kırbaçla yaptırdılar."
+  },
+  {
+   "start": 4.8,
+   "end": 8.8,
+   "text": "Ama 2013'te bulunan bir günlük, bambaşka bir hikâye anlatıyor."
+  },
+  {
+   "start": 9.22,
+   "end": 12.82,
+   "text": "Burası Giza. Büyük Piramit, Firavun Keops için yapıldı."
+  },
+  {
+   "start": 13.2,
+   "end": 14.96,
+   "text": "Yaklaşık dört bin altı yüz yıl önce."
+  },
+  {
+   "start": 15.48,
+   "end": 18.3,
+   "text": "Yaklaşık 2,3 milyon taş bloktan oluşuyor."
+  },
+  {
+   "start": 18.78,
+   "end": 22.36,
+   "text": "2013'te Kızıldeniz kıyısındaki bir mağarada papirüsler bulundu."
+  },
+  {
+   "start": 22.86,
+   "end": 24.94,
+   "text": "Bugüne kadar bulunan en eski papirüsler."
+  },
+  {
+   "start": 25.28,
+   "end": 27.97,
+   "text": "Bunlar, Merer adında bir ustabaşının günlüğüydü."
+  },
+  {
+   "start": 28.0,
+   "end": 30.6,
+   "text": "Piramidin yapımını yazan tek görgü tanığı."
+  },
+  {
+   "start": 31.18,
+   "end": 33.55,
+   "text": "Merer, ekibiyle Tura'daki taş ocaklarından"
+  },
+  {
+   "start": 33.58,
+   "end": 36.84,
+   "text": "kireç taşını teknelerle Giza'ya taşıdığını gün gün yazmış."
+  },
+  {
+   "start": 37.4,
+   "end": 40.2,
+   "text": "Yani taşlar, kanallar ve Nil üzerinden taşındı."
+  },
+  {
+   "start": 40.74,
+   "end": 41.78,
+   "text": "Peki işçiler kimdi?"
+  },
+  {
+   "start": 42.32,
+   "end": 45.36,
+   "text": "Arkeologlar piramitlerin hemen yanında bir işçi kenti buldu."
+  },
+  {
+   "start": 45.78,
+   "end": 48.2,
+   "text": "Yaklaşık yirmi bin kişinin yaşayabileceği kadar büyük."
+  },
+  {
+   "start": 48.86,
+   "end": 52.39,
+   "text": "Fırınlar, ekmek ve et kemikleri: işçiler iyi besleniyordu."
+  },
+  {
+   "start": 52.42,
+   "end": 54.6,
+   "text": "Yani piramitler kırbaçla değil,"
+  },
+  {
+   "start": 54.96,
+   "end": 57.18,
+   "text": "organize, beslenen işçilerle yükseldi."
+  },
+  {
+   "start": 57.7,
+   "end": 60.18,
+   "text": "Sence piramitler hakkında başka hangi efsane yanlış?"
+  },
+  {
+   "start": 60.68,
+   "end": 61.3,
+   "text": "Yorumlara yaz."
+  }
+ ]
+}
