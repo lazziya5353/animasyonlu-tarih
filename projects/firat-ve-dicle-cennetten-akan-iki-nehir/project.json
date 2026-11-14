@@ -1,0 +1,907 @@
+{
+ "title": "Fırat ve Dicle: Cennetten Akan İki Nehir",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "CENNETTEN AKAN İKİ NEHİR",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Dünyanın en eski kitapları, cennetten dört nehir aktığını yazar.",
+    "Bunlardan ikisi bugün Türkiye'den doğuyor."
+   ],
+   "big": "CENNET",
+   "sub": "DÖRT NEHİR",
+   "year": null,
+   "label": "EFSANE",
+   "fx": [
+    "rays"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Tevrat'ta Aden bahçesinden çıkan nehirlerin ikisinin adı: Hiddekel ve Perat.",
+    "Yani Dicle ve Fırat."
+   ],
+   "big": "ADEN",
+   "sub": "HİDDEKEL · PERAT",
+   "year": null,
+   "label": "TEVRAT",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Fırat iki koldan doğar: Erzurum'da Dumlu Dağı'ndan çıkan Karasu,",
+    "ve Ağrı'dan gelen Murat."
+   ],
+   "big": "FIRAT",
+   "sub": "İKİ KOLDAN DOĞAR",
+   "year": null,
+   "label": "ERZURUM",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     38.0,
+     36.5,
+     22
+    ],
+    "to": [
+     40.9,
+     39.25,
+     6.5
+    ],
+    "zoom_sure": 3.0,
+    "etiketler": [],
+    "cizgiler": [
+     {
+      "pts": [
+       [
+        41.4,
+        40.1
+       ],
+       [
+        40.6,
+        39.95
+       ],
+       [
+        39.5,
+        39.75
+       ],
+       [
+        39.2,
+        39.3
+       ],
+       [
+        38.9,
+        38.85
+       ]
+      ],
+      "renk": [
+       80,
+       170,
+       255
+      ],
+      "ad": "KARASU",
+      "ad_yer": [
+       40.3,
+       40.25
+      ],
+      "sure": 2.5
+     },
+     {
+      "pts": [
+       [
+        43.67,
+        39.54
+       ],
+       [
+        42.6,
+        39.1
+       ],
+       [
+        41.5,
+        38.75
+       ],
+       [
+        40.6,
+        38.7
+       ],
+       [
+        39.95,
+        38.69
+       ],
+       [
+        38.9,
+        38.85
+       ]
+      ],
+      "renk": [
+       120,
+       220,
+       255
+      ],
+      "ad": "MURAT",
+      "ad_yer": [
+       41.9,
+       38.45
+      ],
+      "sure": 2.5,
+      "gecikme": 0.8
+     }
+    ],
+    "hedef": [
+     38.9,
+     38.85,
+     "KEBAN"
+    ]
+   }
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "İki kol Elazığ'da, Keban'da birleşir.",
+    "O birleşme noktası bugün baraj gölünün altında."
+   ],
+   "big": "KEBAN",
+   "sub": "BİRLEŞME NOKTASI",
+   "year": null,
+   "label": "ELAZIĞ",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Dicle'nin kaynağı hemen yanında: Elazığ'daki Hazar Gölü ve Hazarbaba Dağı."
+   ],
+   "big": "DİCLE",
+   "sub": "HAZAR GÖLÜ",
+   "year": null,
+   "label": "ELAZIĞ",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Fırat yaklaşık 2.800 kilometre akar, Dicle ise 1.900.",
+    "İkisi de Suriye ve Irak'tan geçer."
+   ],
+   "big": "2.800 KM",
+   "sub": "FIRAT · DİCLE 1.900 KM",
+   "year": null,
+   "label": "YOLCULUK",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     40.0,
+     37.5,
+     10
+    ],
+    "to": [
+     42.6,
+     34.8,
+     15
+    ],
+    "zoom_sure": 1.5,
+    "etiketler": [
+     [
+      "TÜRKİYE",
+      39.0,
+      39.4
+     ],
+     [
+      "SURİYE",
+      38.6,
+      35.3
+     ],
+     [
+      "IRAK",
+      43.5,
+      33.0
+     ]
+    ],
+    "cizgiler": [
+     {
+      "pts": [
+       [
+        38.9,
+        38.85
+       ],
+       [
+        38.6,
+        38.3
+       ],
+       [
+        38.32,
+        37.48
+       ],
+       [
+        37.98,
+        37.03
+       ],
+       [
+        38.0,
+        36.8
+       ],
+       [
+        39.0,
+        35.95
+       ],
+       [
+        40.14,
+        35.33
+       ],
+       [
+        40.92,
+        34.45
+       ],
+       [
+        42.4,
+        34.13
+       ],
+       [
+        43.3,
+        33.42
+       ],
+       [
+        43.78,
+        33.35
+       ],
+       [
+        44.42,
+        32.48
+       ],
+       [
+        45.3,
+        31.32
+       ],
+       [
+        46.26,
+        31.05
+       ],
+       [
+        47.43,
+        31.0
+       ]
+      ],
+      "renk": [
+       80,
+       170,
+       255
+      ],
+      "ad": "FIRAT",
+      "ad_yer": [
+       40.2,
+       34.6
+      ],
+      "sure": 4.5
+     },
+     {
+      "pts": [
+       [
+        39.4,
+        38.5
+       ],
+       [
+        40.23,
+        37.9
+       ],
+       [
+        41.41,
+        37.71
+       ],
+       [
+        42.19,
+        37.33
+       ],
+       [
+        43.13,
+        36.34
+       ],
+       [
+        43.68,
+        34.6
+       ],
+       [
+        43.87,
+        34.2
+       ],
+       [
+        44.38,
+        33.33
+       ],
+       [
+        45.8,
+        32.5
+       ],
+       [
+        47.15,
+        31.84
+       ],
+       [
+        47.43,
+        31.0
+       ]
+      ],
+      "renk": [
+       60,
+       230,
+       200
+      ],
+      "ad": "DİCLE",
+      "ad_yer": [
+       43.0,
+       35.6
+      ],
+      "sure": 4.5,
+      "gecikme": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Aradaki topraklara Yunanlılar 'iki nehir arası' dedi: Mezopotamya.",
+    "Yazının ve ilk şehirlerin doğduğu yer."
+   ],
+   "big": "MEZOPOTAMYA",
+   "sub": "İKİ NEHİR ARASI",
+   "year": null,
+   "label": "SÜMER",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://PENDING_K1",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ama asıl ilginç olan, bu iki nehrin buluştuğu yer."
+   ],
+   "big": "BULUŞMA",
+   "sub": "",
+   "year": null,
+   "label": "IRAK",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Irak'ın güneyinde, Kurna'da birleşip Şattülarap olurlar,",
+    "ve yaklaşık 200 kilometre sonra Basra Körfezi'ne dökülürler."
+   ],
+   "big": "KURNA",
+   "sub": "ŞATTÜLARAP",
+   "year": null,
+   "label": "BASRA",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     44.5,
+     32.5,
+     9
+    ],
+    "to": [
+     47.6,
+     30.7,
+     3.2
+    ],
+    "zoom_sure": 2.5,
+    "etiketler": [],
+    "cizgiler": [
+     {
+      "pts": [
+       [
+        43.78,
+        33.35
+       ],
+       [
+        44.42,
+        32.48
+       ],
+       [
+        45.3,
+        31.32
+       ],
+       [
+        46.26,
+        31.05
+       ],
+       [
+        47.43,
+        31.0
+       ]
+      ],
+      "renk": [
+       80,
+       170,
+       255
+      ],
+      "ad": "FIRAT",
+      "ad_yer": [
+       46.2,
+       30.75
+      ],
+      "sure": 1.5
+     },
+     {
+      "pts": [
+       [
+        45.8,
+        32.5
+       ],
+       [
+        47.15,
+        31.84
+       ],
+       [
+        47.43,
+        31.0
+       ]
+      ],
+      "renk": [
+       60,
+       230,
+       200
+      ],
+      "ad": "DİCLE",
+      "ad_yer": [
+       46.6,
+       32.0
+      ],
+      "sure": 1.5
+     },
+     {
+      "pts": [
+       [
+        47.43,
+        31.0
+       ],
+       [
+        47.8,
+        30.5
+       ],
+       [
+        48.5,
+        29.98
+       ]
+      ],
+      "renk": [
+       255,
+       200,
+       90
+      ],
+      "ad": "ŞATTÜLARAP",
+      "ad_yer": [
+       48.3,
+       30.75
+      ],
+      "sure": 2.0,
+      "gecikme": 1.4
+     }
+    ],
+    "hedef": [
+     47.43,
+     31.0,
+     "KURNA"
+    ]
+   }
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Rivayete göre Kurna'da Hz. Âdem'in ağacı varmış.",
+    "Bazıları Aden bahçesinin burada olduğuna inanır."
+   ],
+   "big": "RİVAYET",
+   "sub": "ÂDEM'İN AĞACI",
+   "year": null,
+   "label": "KURNA",
+   "fx": [
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Peki bu nehirler ne kadar derin?",
+    "Doğal yataklarında çoğu yerde sadece birkaç metre."
+   ],
+   "big": "DERİNLİK",
+   "sub": "BİRKAÇ METRE",
+   "year": null,
+   "label": "KESİT",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ama barajlar her şeyi değiştirdi. Atatürk Barajı'nın gövdesi 169 metre.",
+    "Gölü, Türkiye'nin üçüncü büyük gölü."
+   ],
+   "big": "169 M",
+   "sub": "ATATÜRK BARAJI",
+   "year": null,
+   "label": "BARAJ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s13.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Dicle'deki Ilısu Barajı ise binlerce yıllık Hasankeyf'i suların altına aldı."
+   ],
+   "big": "HASANKEYF",
+   "sub": "SULAR ALTINDA",
+   "year": null,
+   "label": "2020",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://PENDING_K2",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  },
+  {
+   "image": "images/s14.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bir de Fırat'ın en gizemli tarafı var: altın."
+   ],
+   "big": "ALTIN",
+   "sub": "",
+   "year": null,
+   "label": "RİVAYET",
+   "fx": [
+    "gold"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k3.mp4",
+   "video_url": "https://PENDING_K3",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s15.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bir hadise göre kıyamete yakın Fırat, altından bir hazineyi açığa çıkaracak.",
+    "İnsanlar onun için savaşacak."
+   ],
+   "big": "HAZİNE",
+   "sub": "HADİS",
+   "year": null,
+   "label": "HADİS",
+   "fx": [
+    "gold"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k3.mp4",
+   "video_url": "https://PENDING_K3",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s16.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Aynı hadiste bir uyarı da var:",
+    "Kim orada bulunursa, ondan bir şey almasın."
+   ],
+   "big": "UYARI",
+   "sub": "BUHÂRÎ · MÜSLİM",
+   "year": null,
+   "label": "HADİS",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "type",
+   "type_text": "KİM ORADA BULUNURSA ONDAN BİR ŞEY ALMASIN",
+   "video": "videos/k3.mp4",
+   "video_url": "https://PENDING_K3",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s17.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bazıları bunu nehrin kurumasıyla, bazıları petrol ya da su kaynaklarıyla yorumlar.",
+    "Kesin bir yorum yok."
+   ],
+   "big": "YORUM",
+   "sub": "KESİN BİLGİ YOK",
+   "year": null,
+   "label": "YORUM",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k3.mp4",
+   "video_url": "https://PENDING_K3",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s18.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Cennetten aktığına inanılan iki nehir, binlerce yıldır hayat taşıyor.",
+    "Sence Aden bahçesi gerçekten orada mıydı?"
+   ],
+   "big": "SENCE?",
+   "sub": "YORUMLARA YAZ",
+   "year": null,
+   "label": "SON",
+   "fx": [
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k3.mp4",
+   "video_url": "https://PENDING_K3",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  }
+ ],
+ "eras": [
+  {
+   "name": "CENNET",
+   "from": 0,
+   "to": 1
+  },
+  {
+   "name": "DOĞUŞ",
+   "from": 2,
+   "to": 6
+  },
+  {
+   "name": "BULUŞMA",
+   "from": 7,
+   "to": 9
+  },
+  {
+   "name": "DERİNLİK",
+   "from": 10,
+   "to": 12
+  },
+  {
+   "name": "ALTIN",
+   "from": 13,
+   "to": 17
+  }
+ ],
+ "outro_plan": {
+  "title": "ADEN BAHÇESİ ORADA MIYDI?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 11,
+   "value": 169,
+   "unit": "METRE",
+   "small": "ATATÜRK BARAJI GÖVDE YÜKSEKLİĞİ"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true
+}

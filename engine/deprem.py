@@ -287,6 +287,18 @@ def _zoom(self, lt, dur):
                 m = pts[len(pts) // 2]; put(fr, text(c["cizgi_ad"], "serif", 64, (255, 235, 200), glow=renk_, spacing=6), m[0], m[1] + 110, clamp((p - .35) / .3))
         for ad, lo, la, kaydir in c.get("cizgi_etiketler", []):
             x, y = to(lo, la); etiket(fr, ad, x, y + kaydir, clamp((lt - zs - .3) / .5), size=30, col=GOLD)
+    if c.get("cizgiler"):                                                  # birden çok akan çizgi (ör. iki nehir birleşiyor)
+        q = clamp((lt - zs) / .6)
+        if q > 0: fr.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, int(90 * q))))
+        for cz in c["cizgiler"]:
+            p = ease((lt - zs - cz.get("gecikme", 0)) / max(.1, cz.get("sure", 3.0)))
+            if p <= 0: continue
+            pts = [to(lo, la) for lo, la in cz["pts"]]; kp = kismi(pts, p); renk_ = tuple(cz.get("renk", (80, 170, 255))); kal = cz.get("kalinlik", 9)
+            parlak_cizgi(fr, kp, renk_, kal + 6, glow=22); parlak_cizgi(fr, kp, (235, 248, 255), max(3, kal // 3), glow=4)
+            if p < 1: nokta(fr, kp[-1][0], kp[-1][1], renk_, 1.0, r=12, pulse=.5)
+            if cz.get("ad") and p > .3:
+                lo, la = cz.get("ad_yer", cz["pts"][len(pts) // 2]); x, y = to(lo, la)
+                put(fr, text(cz["ad"], "serif", 54, (255, 255, 255), glow=renk_, spacing=5), x, y, clamp((p - .3) / .3))
     if c.get("hedef"):
         lo, la, ad = c["hedef"]; x, y = to(lo, la); q = clamp((lt - zs * .85) / .4)
         if q > 0:
