@@ -1,6 +1,6 @@
 {
  "asama": "kurgu",
- "durum": "tamam",
+ "durum": "hata",
  "ozet": "78 sn, -14 LUFS, senkron 18/18",
  "maddeler": [
   {
@@ -8,12 +8,13 @@
    "mesaj": "sığmadığı için küçültüldü: “O İMZA BULUNUR MU?”"
   },
   {
-   "seviye": "bilgi",
-   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.6-flash 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. )"
+   "seviye": "hata",
+   "mesaj": "Ekranın alt kısmındaki alt yazı/metin karanlık arka plan üzerinde neredeyse tamamen siyah ve okunmaz durumdadır.",
+   "sahne": 12
   }
  ],
  "sure": 78.4,
  "lufs": -13.8,
  "senkron": "18/18",
- "zaman": "2026-11-14T18:57:42Z"
+ "zaman": "2026-11-14T19:07:11Z"
 }

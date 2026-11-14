@@ -21,13 +21,13 @@
   "durum": "tamam",
   "mesaj": "osman-beyin-kayip-imzasi videosu hazır",
   "cikti": "release:video-osman-beyin-kayip-imzasi",
-  "zaman": "2026-11-14T18:57:47Z"
+  "zaman": "2026-11-14T19:07:15Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "osman-beyin-kayip-imzasi: kurgu ✓",
+  "durum": "hata",
+  "mesaj": "osman-beyin-kayip-imzasi: kurgu ✗",
   "cikti": "projects/osman-beyin-kayip-imzasi/kontrol",
-  "zaman": "2026-11-14T18:57:42Z"
+  "zaman": "2026-11-14T19:07:11Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

@@ -36,7 +36,7 @@
   {
    "image": "images/s02.jpg",
    "start": 7.529999999999999,
-   "end": 11.87,
+   "end": 11.889999999999999,
    "lines": [
     "Osman Bey'in ne tuğrası ne de kendi imzasını taşıyan bir belgesi var."
    ],
@@ -62,7 +62,7 @@
   },
   {
    "image": "images/s03.jpg",
-   "start": 11.87,
+   "start": 11.889999999999999,
    "end": 17.310000000000002,
    "lines": [
     "Bilinen ilk Osmanlı tuğrası, oğlu Orhan Gazi'nin 1324 tarihli vakfiyesinde."
@@ -88,7 +88,7 @@
   {
    "image": "images/s04.jpg",
    "start": 17.310000000000002,
-   "end": 26.41,
+   "end": 26.37,
    "lines": [
     "Ve o ilk tuğrada şu yazıyor: Orhan bin Osman. Yani Osman oğlu Orhan.",
     "Kurucunun adı, ilk tuğrada sadece baba olarak geçiyor."
@@ -117,8 +117,8 @@
   },
   {
    "image": "images/s05.jpg",
-   "start": 26.41,
-   "end": 27.990000000000002,
+   "start": 26.37,
+   "end": 28.57,
    "lines": [
     "Peki kurucunun imzası neden yok?"
    ],
@@ -142,7 +142,7 @@
   },
   {
    "image": "images/s06.jpg",
-   "start": 27.990000000000002,
+   "start": 28.57,
    "end": 35.11,
    "lines": [
     "Osman Bey zamanında Osmanlı, Söğüt çevresinde küçük bir uç beyliğiydi.",
@@ -198,7 +198,7 @@
   {
    "image": "images/s08.jpg",
    "start": 40.15,
-   "end": 47.550000000000004,
+   "end": 47.57,
    "lines": [
     "Başka bir ihtimal: belgeler vardı ama savaşlarda ve yangınlarda kayboldu.",
     "Bunlar tarihçilerin tahminleri, kesin bilgi değil."
@@ -225,8 +225,8 @@
   },
   {
    "image": "images/s09.jpg",
-   "start": 47.550000000000004,
-   "end": 51.54,
+   "start": 47.57,
+   "end": 51.6,
    "lines": [
     "Ama bir gizem daha var: Osman Bey adına basıldığı iddia edilen bir sikke."
    ],
@@ -247,13 +247,13 @@
    ],
    "video": "videos/k1.mp4",
    "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_145855_f8b7ce74-04cd-4f9f-ad97-dfb48e83a797.mp4",
-   "v_bas": 3.0,
-   "v_son": 8.0
+   "v_bas": 0.0,
+   "v_son": 5.0
   },
   {
    "image": "images/s10.jpg",
-   "start": 51.54,
-   "end": 61.050000000000004,
+   "start": 51.6,
+   "end": 61.03,
    "lines": [
     "Nümismat İbrahim Artuk bu sikkeyi Osman Gazi'ye ait saydı.",
     "Bazı araştırmacılar ise başka bir beyliğe ait olabileceğini söylüyor. Tartışma hâlâ sürüyor."
@@ -278,7 +278,7 @@
   },
   {
    "image": "images/s11.jpg",
-   "start": 61.050000000000004,
+   "start": 61.03,
    "end": 66.63,
    "lines": [
     "Tarihçi Necdet Sakaoğlu'na göre, 1320'den sonra Osman Bey'in adının geçtiği tek bir belge bile yok."
@@ -383,7 +383,7 @@
   },
   {
    "start": 4.9,
-   "end": 7.36,
+   "end": 7.38,
    "text": "Bir tanesininki yok: devleti kuran adamın."
   },
   {
@@ -392,7 +392,7 @@
    "text": "Osman Bey'in ne tuğrası ne de kendi imzasını taşıyan bir belgesi var."
   },
   {
-   "start": 12.02,
+   "start": 12.04,
    "end": 16.92,
    "text": "Bilinen ilk Osmanlı tuğrası, oğlu Orhan Gazi'nin 1324 tarihli vakfiyesinde."
   },
@@ -403,16 +403,16 @@
   },
   {
    "start": 23.18,
-   "end": 26.06,
+   "end": 26.08,
    "text": "Kurucunun adı, ilk tuğrada sadece baba olarak geçiyor."
   },
   {
-   "start": 26.56,
-   "end": 28.11,
+   "start": 26.52,
+   "end": 28.14,
    "text": "Peki kurucunun imzası neden yok?"
   },
   {
-   "start": 28.14,
+   "start": 28.72,
    "end": 32.5,
    "text": "Osman Bey zamanında Osmanlı, Söğüt çevresinde küçük bir uç beyliğiydi."
   },
@@ -437,23 +437,23 @@
    "text": "Bunlar tarihçilerin tahminleri, kesin bilgi değil."
   },
   {
-   "start": 47.7,
-   "end": 51.28,
+   "start": 47.72,
+   "end": 51.26,
    "text": "Ama bir gizem daha var: Osman Bey adına basıldığı iddia edilen bir sikke."
   },
   {
-   "start": 51.69,
-   "end": 55.19,
+   "start": 51.75,
+   "end": 55.24,
    "text": "Nümismat İbrahim Artuk bu sikkeyi Osman Gazi'ye ait saydı."
   },
   {
-   "start": 55.22,
+   "start": 55.6,
    "end": 60.46,
    "text": "Bazı araştırmacılar ise başka bir beyliğe ait olabileceğini söylüyor. Tartışma hâlâ sürüyor."
   },
   {
-   "start": 61.2,
-   "end": 66.28,
+   "start": 61.18,
+   "end": 66.26,
    "text": "Tarihçi Necdet Sakaoğlu'na göre, 1320'den sonra Osman Bey'in adının geçtiği tek bir belge bile yok."
   },
   {
@@ -462,7 +462,7 @@
    "text": "Osman Gazi, Bursa'daki türbesinde yatıyor. İmzası yok ama kurduğu devlet 600 yıldan fazla yaşadı."
   },
   {
-   "start": 72.9,
+   "start": 72.88,
    "end": 75.52,
    "text": "Sence o ilk imza bir gün bulunur mu? Yorumlara yaz."
   }
