@@ -409,6 +409,14 @@ def _gorsel_zoom(self, lt, dur):
             ly = y + R + 60 if y + R + 60 < H - 330 else y - R - 60
             ly = min(max(ly, 520), H - 330); lx = min(max(x, im.width / 2 + 10), W - im.width / 2 - 10)
             put(fr, im, lx, ly, clamp((p - t0 - .04) / .06) * q)
+    if c.get("okunur"):                                                     # yazılar okunsun: üst ve altta koyu geçiş
+        g = Image.new("L", (1, H), 0); px = g.load()
+        for yy in range(H):
+            a = 0
+            if yy < 760: a = 185 * (1 - yy / 760) ** 1.3
+            if yy > 1180: a = max(a, 215 * ((yy - 1180) / (H - 1180)) ** .9)
+            px[0, yy] = int(a)
+        k = Image.new("RGBA", (W, H), (0, 0, 0, 0)); k.putalpha(g.resize((W, H))); fr.alpha_composite(k)
     if c.get("atif", True):
         put(fr, text(c.get("atif") if isinstance(c.get("atif"), str) else "Arma: Wikimedia Commons (kamu malı)", "sans", 20, (230, 230, 230), spacing=1, shadow=True), W / 2, 1868, .7)
     return fr
