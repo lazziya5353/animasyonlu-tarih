@@ -1,27 +1,11 @@
 {
  "asama": "kurgu",
  "durum": "hata",
- "ozet": "100 sn, -14 LUFS, senkron 28/32",
+ "ozet": "105 sn, -14 LUFS, senkron 32/32",
  "maddeler": [
   {
    "seviye": "hata",
-   "mesaj": "video 100 sn; Instagram'a otomatik yükleme sınırı 90 sn"
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "altyazı süresi okunuşa uymuyor (30 kar/sn): “Fırat iki koldan doğar: Erzurum'da Dumlu”"
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "altyazı süresi okunuşa uymuyor (32 kar/sn): “Dicle'nin kaynağı hemen yanında: Elazığ'”"
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "altyazı süresi okunuşa uymuyor (54 kar/sn): “Yazının ve ilk şehirlerin doğduğu yer.”"
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "altyazı süresi okunuşa uymuyor (43 kar/sn): “Ama barajlar her şeyi değiştirdi. Atatür”"
+   "mesaj": "video 105 sn; Instagram'a otomatik yükleme sınırı 90 sn"
   },
   {
    "seviye": "bilgi",
@@ -30,10 +14,25 @@
   {
    "seviye": "bilgi",
    "mesaj": "sığmadığı için küçültüldü: “ADEN BAHÇESİ ORADA MIYDI?”"
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Haritadaki alt metin açıklaması arka plan görseliyle düşük kontrast oluşturduğu için okunması zor.",
+   "sahne": 3
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Harita üzerindeki alt açıklama metni arka plan rengi nedeniyle zor okunuyor.",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Altyazı metni mum ışığı ve kitap üzerindeki parlaklıkla çakışarak okunabilirliği azaltıyor.",
+   "sahne": 16
   }
  ],
- "sure": 100.4,
- "lufs": -13.5,
- "senkron": "28/32",
- "zaman": "2026-11-14T15:15:58Z"
+ "sure": 104.7,
+ "lufs": -14.4,
+ "senkron": "32/32",
+ "zaman": "2026-11-14T15:52:42Z"
 }

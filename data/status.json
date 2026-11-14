@@ -21,13 +21,13 @@
   "durum": "tamam",
   "mesaj": "firat-ve-dicle-cennetten-akan-iki-nehir videosu hazır",
   "cikti": "release:video-firat-ve-dicle-cennetten-akan-iki-nehir",
-  "zaman": "2026-11-14T15:16:04Z"
+  "zaman": "2026-11-14T15:52:48Z"
  },
  "kontrol": {
   "durum": "hata",
-  "mesaj": "firat-ve-dicle-cennetten-akan-iki-nehir: gorsel ✗",
+  "mesaj": "firat-ve-dicle-cennetten-akan-iki-nehir: kurgu ✗",
   "cikti": "projects/firat-ve-dicle-cennetten-akan-iki-nehir/kontrol",
-  "zaman": "2026-11-14T15:34:43Z"
+  "zaman": "2026-11-14T15:52:42Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

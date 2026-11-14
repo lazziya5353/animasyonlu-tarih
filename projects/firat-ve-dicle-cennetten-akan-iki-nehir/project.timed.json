@@ -8,7 +8,7 @@
   {
    "image": "images/s01.jpg",
    "start": 0.0,
-   "end": 6.88,
+   "end": 6.79,
    "lines": [
     "Dünyanın en eski kitapları, cennetten dört nehir aktığını yazar.",
     "Bunlardan ikisi bugün Türkiye'den doğuyor."
@@ -35,8 +35,8 @@
   },
   {
    "image": "images/s02.jpg",
-   "start": 6.88,
-   "end": 14.99,
+   "start": 6.79,
+   "end": 13.389999999999999,
    "lines": [
     "Tevrat'ta Aden bahçesinden çıkan nehirlerin ikisinin adı: Hiddekel ve Perat.",
     "Yani Dicle ve Fırat."
@@ -63,8 +63,8 @@
   },
   {
    "image": "images/s03.jpg",
-   "start": 14.99,
-   "end": 18.89,
+   "start": 13.389999999999999,
+   "end": 19.110000000000003,
    "lines": [
     "Fırat iki koldan doğar: Erzurum'da Dumlu Dağı'ndan çıkan Karasu,",
     "ve Ağrı'dan gelen Murat."
@@ -182,8 +182,8 @@
   },
   {
    "image": "images/s04.jpg",
-   "start": 18.89,
-   "end": 25.34,
+   "start": 19.110000000000003,
+   "end": 23.610000000000003,
    "lines": [
     "İki kol Elazığ'da, Keban'da birleşir.",
     "O birleşme noktası bugün baraj gölünün altında."
@@ -210,8 +210,8 @@
   },
   {
    "image": "images/s05.jpg",
-   "start": 25.34,
-   "end": 27.98,
+   "start": 23.610000000000003,
+   "end": 28.41,
    "lines": [
     "Dicle'nin kaynağı hemen yanında: Elazığ'daki Hazar Gölü ve Hazarbaba Dağı."
    ],
@@ -237,8 +237,8 @@
   },
   {
    "image": "images/s06.jpg",
-   "start": 27.98,
-   "end": 32.01,
+   "start": 28.41,
+   "end": 34.93,
    "lines": [
     "Fırat yaklaşık 2.800 kilometre akar, Dicle ise 1.900.",
     "İkisi de Suriye ve Irak'tan geçer."
@@ -427,8 +427,8 @@
   },
   {
    "image": "images/s07.jpg",
-   "start": 32.01,
-   "end": 37.86,
+   "start": 34.93,
+   "end": 41.45,
    "lines": [
     "Aradaki topraklara Yunanlılar 'iki nehir arası' dedi: Mezopotamya.",
     "Yazının ve ilk şehirlerin doğduğu yer."
@@ -455,8 +455,8 @@
   },
   {
    "image": "images/s08.jpg",
-   "start": 37.86,
-   "end": 41.63,
+   "start": 41.45,
+   "end": 44.65,
    "lines": [
     "Ama asıl ilginç olan, bu iki nehrin buluştuğu yer."
    ],
@@ -480,8 +480,8 @@
   },
   {
    "image": "images/s09.jpg",
-   "start": 41.63,
-   "end": 50.22,
+   "start": 44.65,
+   "end": 50.99,
    "lines": [
     "Irak'ın güneyinde, Kurna'da birleşip Şattülarap olurlar,",
     "ve yaklaşık 200 kilometre sonra Basra Körfezi'ne dökülürler."
@@ -614,8 +614,8 @@
   },
   {
    "image": "images/s10.jpg",
-   "start": 50.22,
-   "end": 55.82,
+   "start": 50.99,
+   "end": 57.17,
    "lines": [
     "Rivayete göre Kurna'da Hz. Âdem'in ağacı varmış.",
     "Bazıları Aden bahçesinin burada olduğuna inanır."
@@ -642,8 +642,8 @@
   },
   {
    "image": "images/s11.jpg",
-   "start": 55.82,
-   "end": 60.730000000000004,
+   "start": 57.17,
+   "end": 62.050000000000004,
    "lines": [
     "Peki bu nehirler ne kadar derin?",
     "Doğal yataklarında çoğu yerde sadece birkaç metre."
@@ -668,8 +668,8 @@
   },
   {
    "image": "images/s12.jpg",
-   "start": 60.730000000000004,
-   "end": 65.33999999999999,
+   "start": 62.050000000000004,
+   "end": 68.92999999999999,
    "lines": [
     "Ama barajlar her şeyi değiştirdi. Atatürk Barajı'nın gövdesi 169 metre.",
     "Gölü, Türkiye'nin üçüncü büyük gölü."
@@ -694,8 +694,8 @@
   },
   {
    "image": "images/s13.jpg",
-   "start": 65.33999999999999,
-   "end": 71.78999999999999,
+   "start": 68.92999999999999,
+   "end": 73.33,
    "lines": [
     "Dicle'deki Ilısu Barajı ise binlerce yıllık Hasankeyf'i suların altına aldı."
    ],
@@ -721,8 +721,8 @@
   },
   {
    "image": "images/s14.jpg",
-   "start": 71.78999999999999,
-   "end": 73.96,
+   "start": 73.33,
+   "end": 76.30999999999999,
    "lines": [
     "Bir de Fırat'ın en gizemli tarafı var: altın."
    ],
@@ -748,14 +748,14 @@
   },
   {
    "image": "images/s15.jpg",
-   "start": 73.96,
-   "end": 80.92999999999999,
+   "start": 76.30999999999999,
+   "end": 84.80999999999999,
    "lines": [
-    "Bir hadise göre kıyamete yakın Fırat, altından bir hazineyi açığa çıkaracak.",
+    "Peygamber Efendimiz (s.a.v.) bir hadisinde, kıyamete yakın Fırat'ın altından bir hazine çıkaracağını bildirir.",
     "İnsanlar onun için savaşacak."
    ],
    "big": "HAZİNE",
-   "sub": "HADİS",
+   "sub": "HZ. PEYGAMBER (S.A.V.)",
    "year": null,
    "label": "HADİS",
    "fx": [
@@ -776,10 +776,10 @@
   },
   {
    "image": "images/s16.jpg",
-   "start": 80.92999999999999,
-   "end": 85.16,
+   "start": 84.80999999999999,
+   "end": 89.89,
    "lines": [
-    "Aynı hadiste bir uyarı da var:",
+    "Aynı hadiste Peygamber Efendimiz şöyle uyarır:",
     "Kim orada bulunursa, ondan bir şey almasın."
    ],
    "big": "UYARI",
@@ -804,8 +804,8 @@
   },
   {
    "image": "images/s17.jpg",
-   "start": 85.16,
-   "end": 91.07,
+   "start": 89.89,
+   "end": 95.69,
    "lines": [
     "Bazıları bunu nehrin kurumasıyla, bazıları petrol ya da su kaynaklarıyla yorumlar.",
     "Kesin bir yorum yok."
@@ -830,8 +830,8 @@
   },
   {
    "image": "images/s18.jpg",
-   "start": 91.07,
-   "end": 99.947792,
+   "start": 95.69,
+   "end": 104.24745800000001,
    "lines": [
     "Cennetten aktığına inanılan iki nehir, binlerce yıldır hayat taşıyor.",
     "Sence Aden bahçesi gerçekten orada mıydı?"
@@ -906,180 +906,180 @@
  "sade": true,
  "cards": [
   {
-   "start": 61.93000000000001,
-   "end": 65.03999999999999,
+   "start": 63.25000000000001,
+   "end": 68.63,
    "value": 169,
    "unit": "METRE",
    "small": "ATATÜRK BARAJI GÖVDE YÜKSEKLİĞİ"
   }
  ],
  "outro": {
-  "start": 94.247792,
+  "start": 98.547458,
   "title": "ADEN BAHÇESİ ORADA MIYDI?",
   "line": "Yorumlara yaz",
-  "line_at": 96.547792
+  "line_at": 100.847458
  },
- "duration": 100.45,
+ "duration": 104.75,
  "jumps": [],
  "captions": [
   {
-   "start": 0.3,
-   "end": 4.15,
+   "start": 0.0,
+   "end": 3.98,
    "text": "Dünyanın en eski kitapları, cennetten dört nehir aktığını yazar."
   },
   {
-   "start": 4.5,
-   "end": 6.69,
+   "start": 4.32,
+   "end": 6.52,
    "text": "Bunlardan ikisi bugün Türkiye'den doğuyor."
   },
   {
-   "start": 7.03,
-   "end": 13.26,
+   "start": 6.94,
+   "end": 11.54,
    "text": "Tevrat'ta Aden bahçesinden çıkan nehirlerin ikisinin adı: Hiddekel ve Perat."
   },
   {
-   "start": 13.62,
-   "end": 14.77,
+   "start": 11.92,
+   "end": 13.12,
    "text": "Yani Dicle ve Fırat."
   },
   {
-   "start": 15.14,
-   "end": 17.27,
+   "start": 13.54,
+   "end": 17.13,
    "text": "Fırat iki koldan doğar: Erzurum'da Dumlu Dağı'ndan çıkan Karasu,"
   },
   {
-   "start": 17.53,
-   "end": 18.69,
+   "start": 17.16,
+   "end": 18.9,
    "text": "ve Ağrı'dan gelen Murat."
   },
   {
-   "start": 19.04,
-   "end": 20.9,
+   "start": 19.26,
+   "end": 21.14,
    "text": "İki kol Elazığ'da, Keban'da birleşir."
   },
   {
-   "start": 21.26,
-   "end": 25.16,
+   "start": 21.5,
+   "end": 23.73,
    "text": "O birleşme noktası bugün baraj gölünün altında."
   },
   {
-   "start": 25.49,
-   "end": 27.77,
+   "start": 23.76,
+   "end": 28.26,
    "text": "Dicle'nin kaynağı hemen yanında: Elazığ'daki Hazar Gölü ve Hazarbaba Dağı."
   },
   {
-   "start": 28.13,
-   "end": 30.37,
+   "start": 28.56,
+   "end": 32.5,
    "text": "Fırat yaklaşık 2.800 kilometre akar, Dicle ise 1.900."
   },
   {
-   "start": 30.54,
-   "end": 31.8,
+   "start": 32.92,
+   "end": 34.74,
    "text": "İkisi de Suriye ve Irak'tan geçer."
   },
   {
-   "start": 32.16,
-   "end": 36.73,
+   "start": 35.08,
+   "end": 38.9,
    "text": "Aradaki topraklara Yunanlılar 'iki nehir arası' dedi: Mezopotamya."
   },
   {
-   "start": 36.96,
-   "end": 37.66,
+   "start": 39.26,
+   "end": 41.22,
    "text": "Yazının ve ilk şehirlerin doğduğu yer."
   },
   {
-   "start": 38.01,
-   "end": 41.62,
+   "start": 41.6,
+   "end": 44.46,
    "text": "Ama asıl ilginç olan, bu iki nehrin buluştuğu yer."
   },
   {
-   "start": 41.78,
-   "end": 46.57,
+   "start": 44.8,
+   "end": 47.82,
    "text": "Irak'ın güneyinde, Kurna'da birleşip Şattülarap olurlar,"
   },
   {
-   "start": 46.78,
-   "end": 50.01,
+   "start": 48.16,
+   "end": 51.11,
    "text": "ve yaklaşık 200 kilometre sonra Basra Körfezi'ne dökülürler."
   },
   {
-   "start": 50.37,
-   "end": 52.92,
+   "start": 51.14,
+   "end": 54.3,
    "text": "Rivayete göre Kurna'da Hz. Âdem'in ağacı varmış."
   },
   {
-   "start": 53.27,
-   "end": 55.6,
+   "start": 54.66,
+   "end": 57.0,
    "text": "Bazıları Aden bahçesinin burada olduğuna inanır."
   },
   {
-   "start": 55.97,
-   "end": 57.59,
+   "start": 57.32,
+   "end": 58.94,
    "text": "Peki bu nehirler ne kadar derin?"
   },
   {
-   "start": 57.96,
-   "end": 60.52,
+   "start": 59.34,
+   "end": 61.78,
    "text": "Doğal yataklarında çoğu yerde sadece birkaç metre."
   },
   {
-   "start": 60.88,
-   "end": 62.55,
+   "start": 62.2,
+   "end": 66.42,
    "text": "Ama barajlar her şeyi değiştirdi. Atatürk Barajı'nın gövdesi 169 metre."
   },
   {
-   "start": 62.91,
-   "end": 65.23,
+   "start": 66.88,
+   "end": 68.9,
    "text": "Gölü, Türkiye'nin üçüncü büyük gölü."
   },
   {
-   "start": 65.49,
-   "end": 71.59,
+   "start": 69.08,
+   "end": 73.12,
    "text": "Dicle'deki Ilısu Barajı ise binlerce yıllık Hasankeyf'i suların altına aldı."
   },
   {
-   "start": 71.94,
-   "end": 73.85,
+   "start": 73.48,
+   "end": 76.12,
    "text": "Bir de Fırat'ın en gizemli tarafı var: altın."
   },
   {
-   "start": 74.11,
-   "end": 78.84,
-   "text": "Bir hadise göre kıyamete yakın Fırat, altından bir hazineyi açığa çıkaracak."
+   "start": 76.46,
+   "end": 82.66,
+   "text": "Peygamber Efendimiz (s.a.v.) bir hadisinde, kıyamete yakın Fırat'ın altından bir hazine çıkaracağını bildirir."
   },
   {
-   "start": 79.13,
-   "end": 80.71,
+   "start": 82.96,
+   "end": 84.56,
    "text": "İnsanlar onun için savaşacak."
   },
   {
-   "start": 81.08,
-   "end": 82.48,
-   "text": "Aynı hadiste bir uyarı da var:"
+   "start": 84.96,
+   "end": 87.02,
+   "text": "Aynı hadiste Peygamber Efendimiz şöyle uyarır:"
   },
   {
-   "start": 82.65,
-   "end": 84.95,
+   "start": 87.38,
+   "end": 89.62,
    "text": "Kim orada bulunursa, ondan bir şey almasın."
   },
   {
-   "start": 85.31,
-   "end": 89.53,
+   "start": 90.04,
+   "end": 94.16,
    "text": "Bazıları bunu nehrin kurumasıyla, bazıları petrol ya da su kaynaklarıyla yorumlar."
   },
   {
-   "start": 89.81,
-   "end": 90.86,
+   "start": 94.54,
+   "end": 95.38,
    "text": "Kesin bir yorum yok."
   },
   {
-   "start": 91.22,
-   "end": 94.86,
+   "start": 95.84,
+   "end": 99.18,
    "text": "Cennetten aktığına inanılan iki nehir, binlerce yıldır hayat taşıyor."
   },
   {
-   "start": 95.22,
-   "end": 97.56,
+   "start": 99.6,
+   "end": 101.72,
    "text": "Sence Aden bahçesi gerçekten orada mıydı?"
   }
  ]
