@@ -1,0 +1,175 @@
+{
+ "asama": "gorsel",
+ "durum": "hata",
+ "ozet": "18/18 görsel, ortalama puan 1.0/10",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 3
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 3
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 9
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah / yüklenememiş durumda.",
+   "sahne": 1
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah / yüklenememiş durumda.",
+   "sahne": 2
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah / yüklenememiş durumda.",
+   "sahne": 3
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah / yüklenememiş durumda.",
+   "sahne": 4
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah / yüklenememiş durumda.",
+   "sahne": 5
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah / yüklenememiş durumda.",
+   "sahne": 6
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş görünüyor, sahne içeriği yüklenememiş veya eksik.",
+   "sahne": 7
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş görünüyor, sahne içeriği yüklenememiş veya eksik.",
+   "sahne": 8
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş görünüyor, sahne içeriği yüklenememiş veya eksik.",
+   "sahne": 9
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş görünüyor, sahne içeriği yüklenememiş veya eksik.",
+   "sahne": 10
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş görünüyor, sahne içeriği yüklenememiş veya eksik.",
+   "sahne": 11
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş görünüyor, sahne içeriği yüklenememiş veya eksik.",
+   "sahne": 12
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik yüklenmemiş veya eksik.",
+   "sahne": 13
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik yüklenmemiş veya eksik.",
+   "sahne": 14
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik yüklenmemiş veya eksik.",
+   "sahne": 15
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik yüklenmemiş veya eksik.",
+   "sahne": 16
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik yüklenmemiş veya eksik.",
+   "sahne": 17
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik yüklenmemiş veya eksik.",
+   "sahne": 18
+  }
+ ],
+ "eksik": [],
+ "ortalama_puan": 1.0,
+ "zaman": "2026-11-14T14:00:25Z"
+}

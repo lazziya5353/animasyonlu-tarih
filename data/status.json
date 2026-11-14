@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "piramitleri-kim-yapti: ses hazır",
-  "cikti": "projects/piramitleri-kim-yapti",
-  "zaman": "2026-11-13T19:32:00Z"
+  "mesaj": "firat-ve-dicle-cennetten-akan-iki-nehir: ses hazır",
+  "cikti": "projects/firat-ve-dicle-cennetten-akan-iki-nehir",
+  "zaman": "2026-11-14T13:52:55Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-14T13:41:38Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "cin-seddi-uzaydan-gorunur-mu: kurgu ✓",
-  "cikti": "projects/cin-seddi-uzaydan-gorunur-mu/kontrol",
-  "zaman": "2026-11-14T13:41:31Z"
+  "durum": "hata",
+  "mesaj": "firat-ve-dicle-cennetten-akan-iki-nehir: gorsel ✗",
+  "cikti": "projects/firat-ve-dicle-cennetten-akan-iki-nehir/kontrol",
+  "zaman": "2026-11-14T14:00:25Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
