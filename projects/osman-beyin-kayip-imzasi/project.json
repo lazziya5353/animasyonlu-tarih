@@ -1,0 +1,370 @@
+{
+ "title": "Osman Bey'in Kayıp İmzası",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "KURUCUNUN İMZASI NEREDE?",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Osmanlı'da 36 padişah var. 35'inin tuğrası bugüne ulaştı.",
+    "Bir tanesininki yok: devleti kuran adamın."
+   ],
+   "big": "35 / 36",
+   "sub": "TUĞRASI OLAN PADİŞAH",
+   "year": null,
+   "label": "GİZEM",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_145855_f8b7ce74-04cd-4f9f-ad97-dfb48e83a797.mp4",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Osman Bey'in ne tuğrası ne de kendi imzasını taşıyan bir belgesi var."
+   ],
+   "big": "OSMAN BEY",
+   "sub": "İMZA YOK",
+   "year": null,
+   "label": "1299",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_145855_f8b7ce74-04cd-4f9f-ad97-dfb48e83a797.mp4",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bilinen ilk Osmanlı tuğrası, oğlu Orhan Gazi'nin 1324 tarihli vakfiyesinde."
+   ],
+   "big": "1324",
+   "sub": "İLK TUĞRA",
+   "year": null,
+   "label": "1324",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_163114_f2fc3fe5-ffc0-4b74-86c7-793d7c5244ca.mp4",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ve o ilk tuğrada şu yazıyor: Orhan bin Osman. Yani Osman oğlu Orhan.",
+    "Kurucunun adı, ilk tuğrada sadece baba olarak geçiyor."
+   ],
+   "big": "ORHAN",
+   "sub": "BİN OSMAN",
+   "year": null,
+   "label": "TUĞRA",
+   "fx": [
+    "gold"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "effect": "type",
+   "type_text": "ORHAN BİN OSMAN",
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_145855_f8b7ce74-04cd-4f9f-ad97-dfb48e83a797.mp4",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Peki kurucunun imzası neden yok?"
+   ],
+   "big": "NEDEN?",
+   "sub": "",
+   "year": null,
+   "label": "SORU",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_145855_f8b7ce74-04cd-4f9f-ad97-dfb48e83a797.mp4",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Osman Bey zamanında Osmanlı, Söğüt çevresinde küçük bir uç beyliğiydi.",
+    "Yazılı devlet düzeni daha yeni kuruluyordu."
+   ],
+   "big": "SÖĞÜT",
+   "sub": "UÇ BEYLİĞİ",
+   "year": null,
+   "label": "SÖĞÜT",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_145855_f8b7ce74-04cd-4f9f-ad97-dfb48e83a797.mp4",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Tuğra, sikke, hutbe gibi hükümdarlık alametleri Orhan Gazi döneminde yerleşti."
+   ],
+   "big": "ORHAN",
+   "sub": "DEVLET DÜZENİ",
+   "year": null,
+   "label": "ORHAN",
+   "fx": [
+    "flicker"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_163114_f2fc3fe5-ffc0-4b74-86c7-793d7c5244ca.mp4",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Başka bir ihtimal: belgeler vardı ama savaşlarda ve yangınlarda kayboldu.",
+    "Bunlar tarihçilerin tahminleri, kesin bilgi değil."
+   ],
+   "big": "KAYIP",
+   "sub": "TAHMİN",
+   "year": null,
+   "label": "İHTİMAL",
+   "fx": [
+    "ember"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_163114_f2fc3fe5-ffc0-4b74-86c7-793d7c5244ca.mp4",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ama bir gizem daha var: Osman Bey adına basıldığı iddia edilen bir sikke."
+   ],
+   "big": "SİKKE",
+   "sub": "TARTIŞMALI",
+   "year": null,
+   "label": "SİKKE",
+   "fx": [
+    "gold"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_145855_f8b7ce74-04cd-4f9f-ad97-dfb48e83a797.mp4",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Nümismat İbrahim Artuk bu sikkeyi Osman Gazi'ye ait saydı.",
+    "Bazı araştırmacılar ise başka bir beyliğe ait olabileceğini söylüyor. Tartışma hâlâ sürüyor."
+   ],
+   "big": "ARTUK",
+   "sub": "SİKKE TARTIŞMASI",
+   "year": null,
+   "label": "SİKKE",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_145855_f8b7ce74-04cd-4f9f-ad97-dfb48e83a797.mp4",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Tarihçi Necdet Sakaoğlu'na göre, 1320'den sonra Osman Bey'in adının geçtiği tek bir belge bile yok."
+   ],
+   "big": "1320",
+   "sub": "SON İZ",
+   "year": null,
+   "label": "1320",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_163114_f2fc3fe5-ffc0-4b74-86c7-793d7c5244ca.mp4",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Osman Gazi, Bursa'daki türbesinde yatıyor. İmzası yok ama kurduğu devlet 600 yıldan fazla yaşadı.",
+    "Sence o ilk imza bir gün bulunur mu? Yorumlara yaz."
+   ],
+   "big": "SENCE?",
+   "sub": "YORUMLARA YAZ",
+   "year": null,
+   "label": "BURSA",
+   "fx": [
+    "rays"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_163114_f2fc3fe5-ffc0-4b74-86c7-793d7c5244ca.mp4",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  }
+ ],
+ "eras": [
+  {
+   "name": "GİZEM",
+   "from": 0,
+   "to": 3
+  },
+  {
+   "name": "NEDEN",
+   "from": 4,
+   "to": 7
+  },
+  {
+   "name": "SİKKE",
+   "from": 8,
+   "to": 10
+  },
+  {
+   "name": "SON",
+   "from": 11,
+   "to": 11
+  }
+ ],
+ "outro_plan": {
+  "title": "O İMZA BULUNUR MU?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true
+}
