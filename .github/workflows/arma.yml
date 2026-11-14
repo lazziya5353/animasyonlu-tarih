@@ -1,0 +1,31 @@
+name: "Araç · Osmanlı arması PNG indir"
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  indir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq librsvg2-bin jq
+      - name: SVG indir ve PNG'ye çevir
+        run: |
+          UA="animasyonlu-tarih-bot/1.0 (github actions)"
+          for T in "File:Coat_of_arms_of_the_Ottoman_Empire_(1882–1922).svg" "File:Coat_of_arms_of_the_Ottoman_Empire_(1882-1922).svg" "File:Coat_of_arms_of_the_Ottoman_Empire.svg"; do
+            URL=$(curl -sG -A "$UA" "https://commons.wikimedia.org/w/api.php" --data-urlencode "titles=$T" -d action=query -d prop=imageinfo -d "iiprop=url|extmetadata" -d format=json -d redirects=1 | tee /tmp/meta.json | jq -r '.query.pages[].imageinfo[0].url // empty')
+            [ -n "$URL" ] && echo "Bulundu: $T -> $URL" && break
+          done
+          test -n "$URL"
+          jq '.query.pages[].imageinfo[0].extmetadata | {Artist, LicenseShortName, Credit, ObjectName}' /tmp/meta.json | tee /tmp/lisans.json
+          curl -sL -A "$UA" -o /tmp/arma.svg "$URL"
+          mkdir -p engine/map
+          rsvg-convert -h 6000 -a -b none /tmp/arma.svg -o engine/map/arma.png
+          { echo "Kaynak: $URL"; cat /tmp/lisans.json; } > engine/map/arma_lisans.txt
+          file engine/map/arma.png; ls -la engine/map/arma.png
+      - name: Kaydet
+        run: |
+          git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
+          git add engine/map/arma.png engine/map/arma_lisans.txt; git commit -m "Osmanlı arması PNG (Wikimedia Commons SVG, 6000px)" || exit 0
+          (git pull --rebase || (git rebase --abort; git pull --no-rebase --no-edit -X ours)) && git push
