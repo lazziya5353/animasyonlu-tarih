@@ -1,0 +1,44 @@
+{
+ "asama": "gorsel",
+ "durum": "hata",
+ "ozet": "12/12 görsel, ortalama puan 1.0/10",
+ "maddeler": [
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah / yüklenememiş veya eksik.",
+   "sahne": 1
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah / yüklenememiş veya eksik.",
+   "sahne": 2
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah / yüklenememiş veya eksik.",
+   "sahne": 3
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah / yüklenememiş veya eksik.",
+   "sahne": 4
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah / yüklenememiş veya eksik.",
+   "sahne": 5
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah / yüklenememiş veya eksik.",
+   "sahne": 6
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka incelemesi atlandı: Gemini yanıt vermedi (gemini-2.5-flash 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your)"
+  }
+ ],
+ "eksik": [],
+ "ortalama_puan": 1.0,
+ "zaman": "2026-11-14T18:14:57Z"
+}

@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "osmanli-armasinin-sirlari: ses hazır",
-  "cikti": "projects/osmanli-armasinin-sirlari",
-  "zaman": "2026-11-14T15:36:16Z"
+  "mesaj": "osman-beyin-kayip-imzasi: ses hazır",
+  "cikti": "projects/osman-beyin-kayip-imzasi",
+  "zaman": "2026-11-14T18:00:29Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -25,9 +25,9 @@
  },
  "kontrol": {
   "durum": "hata",
-  "mesaj": "osmanli-armasinin-sirlari: kurgu ✗",
-  "cikti": "projects/osmanli-armasinin-sirlari/kontrol",
-  "zaman": "2026-11-14T16:23:55Z"
+  "mesaj": "osman-beyin-kayip-imzasi: gorsel ✗",
+  "cikti": "projects/osman-beyin-kayip-imzasi/kontrol",
+  "zaman": "2026-11-14T18:14:57Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
