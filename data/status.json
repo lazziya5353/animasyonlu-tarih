@@ -21,13 +21,13 @@
   "durum": "tamam",
   "mesaj": "cin-seddi-uzaydan-gorunur-mu videosu hazır",
   "cikti": "release:video-cin-seddi-uzaydan-gorunur-mu",
-  "zaman": "2026-11-14T13:41:38Z"
+  "zaman": "2026-11-14T13:57:47Z"
  },
  "kontrol": {
   "durum": "tamam",
   "mesaj": "cin-seddi-uzaydan-gorunur-mu: kurgu ✓",
   "cikti": "projects/cin-seddi-uzaydan-gorunur-mu/kontrol",
-  "zaman": "2026-11-14T13:41:31Z"
+  "zaman": "2026-11-14T13:57:43Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
