@@ -153,8 +153,8 @@
       ],
       "video": "videos/k1.mp4",
       "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_145855_f8b7ce74-04cd-4f9f-ad97-dfb48e83a797.mp4",
-      "v_bas": 20.0,
-      "v_son": 25.0,
+      "v_bas": 3.0,
+      "v_son": 8.0,
       "image": "images/s09.jpg",
       "prompt": "Ottoman"
     },
@@ -167,10 +167,10 @@
       "sub": "SİKKE TARTIŞMASI",
       "label": "SİKKE",
       "fx": [],
-      "video": "videos/k1.mp4",
-      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_145855_f8b7ce74-04cd-4f9f-ad97-dfb48e83a797.mp4",
-      "v_bas": 20.0,
-      "v_son": 25.0,
+      "video": "videos/k2.mp4",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_163114_f2fc3fe5-ffc0-4b74-86c7-793d7c5244ca.mp4",
+      "v_bas": 0.0,
+      "v_son": 5.0,
       "image": "images/s10.jpg",
       "prompt": "Ottoman"
     },
@@ -266,7 +266,8 @@
   ],
   "kontrol_notlari": [
     "Neden yok kısmı tahmin olarak verildi.",
-    "Sikke tartışmalı olarak verildi."
+    "Sikke tartışmalı olarak verildi.",
+    "Higgsfield sikke görüntüsü Roma sikkesi (portreli) çıktı, tarihsel olarak yanlış; kullanılmadı."
   ],
   "konu": "Osman Bey'in imzası",
   "tarih": "",
