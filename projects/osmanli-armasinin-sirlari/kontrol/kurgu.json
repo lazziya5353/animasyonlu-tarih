@@ -16,13 +16,12 @@
    "mesaj": "sığmadığı için küçültüldü: “EN ANLAMLI SEMBOL HANGİSİ?”"
   },
   {
-   "seviye": "hata",
-   "mesaj": "Görselin sol tarafındaki yazılar kadraj dışına taşmış ve üst üste binerek okunmaz hale gelmiş.",
-   "sahne": 19
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.7-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more info)"
   }
  ],
  "sure": 125.4,
  "lufs": -13.5,
  "senkron": "37/37",
- "zaman": "2026-11-14T16:23:55Z"
+ "zaman": "2026-11-14T18:31:34Z"
 }
