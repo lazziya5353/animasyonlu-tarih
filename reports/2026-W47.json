@@ -6,23 +6,23 @@
    "gun": "Pazartesi",
    "olaylar": [
     {
-     "yil": 1938,
-     "baslik": "Atatürk'ün naaşı Dolmabahçe'de katafalka kondu",
-     "ozet": "Atatürk'ün naaşı, halkın veda etmesi için Dolmabahçe Sarayı'nda katafalka yerleştirildi.",
-     "yildiz": 5,
-     "neden": "Güçlü duygusal etki, arşiv görselleri bol",
-     "tur": "tarihte-bugun",
-     "kaynak": "https://www.haberler.com/haberler/tarihte-bugun-ne-oldu-16-kasim-tarihinde-ne-oldu-13737891-haberi/",
+     "yil": 1532,
+     "baslik": "Cajamarca: Atahualpa Esir",
+     "ozet": "Pizarro'nun az sayıdaki adamı Cajamarca'da İnka hükümdarı Atahualpa'yı esir aldı.",
+     "yildiz": 4,
+     "neden": "Dramatik, harita ve sahne animasyonuna uygun",
+     "tur": "dunya",
+     "kaynak": "https://en.wikipedia.org/wiki/Battle_of_Cajamarca",
      "durum": "bekliyor"
     },
     {
-     "yil": 1995,
-     "baslik": "A Milli Takım ilk kez Avrupa Şampiyonası'nda",
-     "ozet": "Türkiye, İsveç deplasmanında 2-2 berabere kalarak ilk kez EURO finallerine katılmayı garantiledi.",
-     "yildiz": 4,
-     "neden": "Futbol gururu, Türk izleyicide yüksek ilgi",
-     "tur": "tarihte-bugun",
-     "kaynak": "https://www.cnnturk.com/tarihte-bugun/tarihte-bugun-16-kasim",
+     "yil": 1945,
+     "baslik": "UNESCO Kuruldu",
+     "ozet": "UNESCO'nun kuruluş anayasası yürürlüğe girdi.",
+     "yildiz": 2,
+     "neden": "Bilgilendirici ama görsel etkisi düşük",
+     "tur": "dunya",
+     "kaynak": "https://en.wikipedia.org/wiki/UNESCO",
      "durum": "bekliyor"
     }
    ]
@@ -33,22 +33,22 @@
    "olaylar": [
     {
      "yil": 1922,
-     "baslik": "Vahdettin İstanbul'dan ayrıldı",
-     "ozet": "Son Osmanlı padişahı VI. Mehmed (Vahdettin) İstanbul'u terk etti.",
+     "baslik": "Vahdettin İstanbul'dan Ayrıldı",
+     "ozet": "Son padişah Vahdettin, saltanatın kaldırılmasından sonra 17 Kasım 1922 sabahı İstanbul'dan ayrıldı. Bir İngiliz zırhlısıyla Malta'ya gitti.",
      "yildiz": 5,
-     "neden": "Saltanatın sonu, dramatik ve görsel",
+     "neden": "Osmanlı'nın sonu, güçlü dramatik an",
      "tur": "tarihte-bugun",
-     "kaynak": "https://tr.wikipedia.org/wiki/%C5%9Eablon:Tarihte_bug%C3%BCn/17_Kas%C4%B1m",
+     "kaynak": "https://www.kiliskenthaber.com/mobil/haber/tarihte-bugun-son-padisah-vahdettin-istanbul-dan-kacti-84353.html",
      "durum": "bekliyor"
     },
     {
      "yil": 1869,
-     "baslik": "Süveyş Kanalı açıldı",
-     "ozet": "Akdeniz'i Kızıldeniz'e bağlayan Süveyş Kanalı görkemli bir törenle açıldı.",
+     "baslik": "Süveyş Kanalı Açıldı",
+     "ozet": "Kanal, Mısır Hidivi İsmail Paşa döneminde 17 Kasım 1869'da hizmete açıldı.",
      "yildiz": 4,
-     "neden": "Harita animasyonuna çok uygun mühendislik harikası",
+     "neden": "Harita animasyonuna çok uygun",
      "tur": "dunya",
-     "kaynak": "https://www.brt.com.tr/17-kasim-tarihte-bugun-3029",
+     "kaynak": "https://www.fokusplus.com/ekonomi-tarih/suveys-kanali-nerede-tarihcesi-stratejik-onemi-ve-kuresel-ticaretteki-rolu",
      "durum": "bekliyor"
     }
    ]
@@ -59,22 +59,22 @@
    "olaylar": [
     {
      "yil": 1928,
-     "baslik": "Mickey Mouse ilk kez beyazperdede",
-     "ozet": "Walt Disney'in 'Steamboat Willie' çizgi filmiyle Mickey Mouse ilk kez gösterildi.",
+     "baslik": "Mickey Mouse'un Doğuşu",
+     "ozet": "Steamboat Willie, 18 Kasım 1928'de New York'taki Colony Theatre'da gösterildi; Mickey Mouse ilk kez halkın karşısına çıktı.",
      "yildiz": 5,
-     "neden": "Animasyon sayfasına birebir uyan konu",
-     "tur": "dunya",
-     "kaynak": "https://tr.wikipedia.org/wiki/%C5%9Eablon:Tarihte_bug%C3%BCn/18_Kas%C4%B1m",
+     "neden": "Animasyon sayfasına birebir uyuyor",
+     "tur": "tarihte-bugun",
+     "kaynak": "https://playbill.com/article/today-the-broadway-theatre-turns-100",
      "durum": "bekliyor"
     },
     {
-     "yil": 1601,
-     "baslik": "Kanije Savunması",
-     "ozet": "Tiryaki Hasan Paşa komutasındaki Osmanlı ordusu, Haçlı ordusunu yenerek Kanije'yi kazandı.",
-     "yildiz": 4,
-     "neden": "Kahramanlık hikâyesi, kale kuşatması animasyonlu",
-     "tur": "savas",
-     "kaynak": "https://www.biyografiler.com/bilgi/18-kasim",
+     "yil": 1626,
+     "baslik": "Aziz Petrus Bazilikası Kutsandı",
+     "ozet": "Roma'daki yeni Aziz Petrus Bazilikası Papa VIII. Urbanus tarafından kutsandı.",
+     "yildiz": 3,
+     "neden": "Mimari görsellik güçlü, Ayasofya ile bağ kurulur",
+     "tur": "dunya",
+     "kaynak": "https://en.wikipedia.org/wiki/St._Peter%27s_Basilica",
      "durum": "bekliyor"
     }
    ]
@@ -84,23 +84,23 @@
    "gun": "Perşembe",
    "olaylar": [
     {
-     "yil": 1938,
-     "baslik": "Atatürk'ün son yolculuğu başladı",
-     "ozet": "Atatürk'ün naaşı, İstanbul'dan Ankara'ya bir törenle yola çıkarıldı.",
-     "yildiz": 5,
-     "neden": "Milli hafıza, yüksek duygusal etki",
-     "tur": "tarihte-bugun",
-     "kaynak": "https://www.nukteler.com/19-kasim-tarihte-bugun/",
+     "yil": 1969,
+     "baslik": "Apollo 12 Ay'da",
+     "ozet": "Apollo 12 astronotları Conrad ve Bean Ay yüzeyine indi.",
+     "yildiz": 4,
+     "neden": "Uzay teması, görsel ve merak uyandırıcı",
+     "tur": "dunya",
+     "kaynak": "https://en.wikipedia.org/wiki/Apollo_12",
      "durum": "bekliyor"
     },
     {
      "yil": 1863,
      "baslik": "Gettysburg Konuşması",
-     "ozet": "Abraham Lincoln, Gettysburg Muharebesi sonrasında ünlü Gettysburg Konuşması'nı yaptı.",
-     "yildiz": 4,
-     "neden": "Kısa, güçlü ve tarihe damga vuran söz",
+     "ozet": "Abraham Lincoln, Gettysburg'da kısa ama ünlü konuşmasını yaptı.",
+     "yildiz": 3,
+     "neden": "Ünlü konuşma, ikonik figür",
      "tur": "dunya",
-     "kaynak": "http://www.kursunkalem.com/tarihte-bugun/19-kasim/",
+     "kaynak": "https://en.wikipedia.org/wiki/Gettysburg_Address",
      "durum": "bekliyor"
     }
    ]
@@ -111,22 +111,22 @@
    "olaylar": [
     {
      "yil": 1922,
-     "baslik": "Lozan Konferansı başladı",
-     "ozet": "Kurtuluş Savaşı sonrası barış görüşmeleri için Lozan Konferansı toplandı.",
-     "yildiz": 4,
-     "neden": "Cumhuriyet'in diplomatik zaferine giden yol",
+     "baslik": "Lozan Konferansı Başladı",
+     "ozet": "Lozan Konferansı 20 Kasım 1922'de başladı. Türk heyetinin başında İsmet Paşa vardı.",
+     "yildiz": 5,
+     "neden": "Türk izleyicide yüksek ilgi, diplomasi hikâyesi",
      "tur": "tarihte-bugun",
-     "kaynak": "https://tr.wikipedia.org/wiki/Lozan_Konferans%C4%B1",
+     "kaynak": "https://atamdergi.gov.tr/tam-metin/173/",
      "durum": "bekliyor"
     },
     {
-     "yil": 1998,
-     "baslik": "Uluslararası Uzay İstasyonu'nun ilk modülü fırlatıldı",
-     "ozet": "Zarya modülü fırlatılarak ISS'in inşası başladı.",
+     "yil": 1985,
+     "baslik": "Windows 1.0 Çıktı",
+     "ozet": "Microsoft, Windows 1.0'ı piyasaya sürdü.",
      "yildiz": 3,
-     "neden": "Uzay görselleri animasyona uygun",
+     "neden": "Nostaljik teknoloji, genç izleyiciye hitap eder",
      "tur": "dunya",
-     "kaynak": "https://en.wikipedia.org/wiki/Zarya_(ISS_module)",
+     "kaynak": "https://en.wikipedia.org/wiki/Windows_1.0",
      "durum": "bekliyor"
     }
    ]
@@ -137,22 +137,12 @@
    "olaylar": [
     {
      "yil": 1783,
-     "baslik": "İnsanlı ilk serbest balon uçuşu",
+     "baslik": "İlk İnsanlı Balon Uçuşu",
      "ozet": "Pilâtre de Rozier ve d'Arlandes, Paris'te sıcak hava balonuyla ilk serbest insanlı uçuşu yaptı.",
-     "yildiz": 4,
-     "neden": "Havacılığın doğuşu, görsel ve etkileyici",
+     "yildiz": 5,
+     "neden": "Çok görsel, havacılığın başlangıcı",
      "tur": "dunya",
      "kaynak": "https://en.wikipedia.org/wiki/Jean-Fran%C3%A7ois_Pil%C3%A2tre_de_Rozier",
-     "durum": "bekliyor"
-    },
-    {
-     "yil": 1990,
-     "baslik": "Paris Şartı imzalandı",
-     "ozet": "AGİK zirvesinde Paris Şartı imzalanarak Soğuk Savaş sonrası Avrupa için yeni dönem ilan edildi.",
-     "yildiz": 3,
-     "neden": "Soğuk Savaş'ın resmî kapanışı",
-     "tur": "dunya",
-     "kaynak": "https://www.kapadokyahaber.com.tr/haber/22412802/tarihin-izleri-19-kasim-tarihte-bugun-neler-oldu",
      "durum": "bekliyor"
     }
    ]
@@ -162,53 +152,53 @@
    "gun": "Pazar",
    "olaylar": [
     {
-     "yil": 1995,
-     "baslik": "Toy Story vizyona girdi",
-     "ozet": "Toy Story, tamamen bilgisayarla üretilen ilk uzun metrajlı animasyon film olarak gösterime girdi.",
+     "yil": 1718,
+     "baslik": "Karasakal'ın Son Savaşı",
+     "ozet": "Kaptan Edward Teach (Karasakal), Ocracoke açıklarında Teğmen Maynard'ın adamlarıyla çatışırken öldü.",
      "yildiz": 4,
-     "neden": "Animasyon tarihinde dönüm noktası",
+     "neden": "Korsan teması, merak ve macera",
      "tur": "dunya",
-     "kaynak": "https://tr.wikipedia.org/wiki/Oyuncak_Hik%C3%A2yesi",
+     "kaynak": "https://en.wikipedia.org/wiki/Edward_Teach",
      "durum": "bekliyor"
     },
     {
-     "yil": 1943,
-     "baslik": "Kahire Konferansı başladı",
-     "ozet": "Roosevelt, Churchill ve Çan Kay-şek, II. Dünya Savaşı'nın Asya cephesi için Kahire'de buluştu.",
+     "yil": 1497,
+     "baslik": "Ümit Burnu Geçildi",
+     "ozet": "Vasco da Gama'nın filosu Ümit Burnu'nu dönerek Hindistan yoluna devam etti.",
      "yildiz": 3,
-     "neden": "Savaş diplomasisi, harita animasyonuna uygun",
-     "tur": "savas",
-     "kaynak": "https://en.wikipedia.org/wiki/Cairo_Conference",
+     "neden": "Keşifler çağı, harita animasyonuna uygun",
+     "tur": "dunya",
+     "kaynak": "https://en.wikipedia.org/wiki/Vasco_da_Gama",
      "durum": "bekliyor"
     }
    ]
   }
  ],
  "savas_onerisi": {
-  "baslik": "Malazgirt Meydan Muharebesi",
-  "yil": 1071,
-  "taraflar": "Büyük Selçuklu Devleti (Alp Arslan) – Bizans İmparatorluğu (IV. Romanos Diogenes)",
-  "sonuc": "Selçuklu zaferi; Bizans imparatoru esir düştü, Anadolu'nun kapıları Türklere açıldı.",
-  "ozet": "26 Ağustos 1071'de Malazgirt'te Selçuklular Bizans ordusunu yenerek Anadolu'nun Türkleşmesinde dönüm noktası yarattı.",
-  "neden": "Türk izleyicide çok yüksek ilgi, net iki taraf",
-  "harita_bolgesi": "anadolu"
+  "baslik": "Preveze Deniz Savaşı",
+  "yil": 1538,
+  "taraflar": "Osmanlı Donanması (Barbaros Hayreddin Paşa) - Kutsal İttifak Donanması (Andrea Doria)",
+  "sonuc": "Osmanlı zaferi; Akdeniz'de Osmanlı üstünlüğü başladı",
+  "ozet": "Barbaros, Preveze açıklarında Haçlı ittifakı donanmasını yenerek Akdeniz'in hâkimi oldu.",
+  "neden": "Türk izleyicinin sevdiği zafer, deniz haritasına uygun",
+  "harita_bolgesi": "akdeniz"
  },
  "onerilen": [
   {
-   "baslik": "Mickey Mouse'un doğuşu: Steamboat Willie (1928)",
-   "tarih": "2026-11-18",
-   "tur": "dunya"
-  },
-  {
-   "baslik": "Atatürk'ün son yolculuğu: İstanbul'dan Ankara'ya (1938)",
-   "tarih": "2026-11-19",
+   "baslik": "Lozan Konferansı: 20 Kasım 1922",
+   "tarih": "2026-11-20",
    "tur": "tarihte-bugun"
   },
   {
-   "baslik": "Vahdettin İstanbul'dan ayrılıyor (1922)",
+   "baslik": "Mickey Mouse'un Doğuşu: Steamboat Willie 1928",
+   "tarih": "2026-11-18",
+   "tur": "tarihte-bugun"
+  },
+  {
+   "baslik": "Vahdettin İstanbul'dan Ayrıldı: 17 Kasım 1922",
    "tarih": "2026-11-17",
    "tur": "tarihte-bugun"
   }
  ],
- "olusturma": "2026-11-09T08:39:46Z"
+ "olusturma": "2026-11-15T21:25:36Z"
 }
