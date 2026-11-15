@@ -1,0 +1,385 @@
+{
+ "title": "Derinkuyu Yeraltı Şehri",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "BİR DUVAR YIKILDI, ALTINDAN ŞEHİR ÇIKTI",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1963. Kapadokya'da bir adam evinin duvarını yıktı.",
+    "Duvarın arkasında karanlık bir tünel vardı."
+   ],
+   "big": "1963",
+   "sub": "BİR DUVAR YIKILDI",
+   "year": null,
+   "label": "1963",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261115_030821_e51d3179-1f9b-499b-a8bd-47a485695e03.mp4",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "O tünel, yerin yaklaşık 85 metre altına inen bir şehre açılıyordu: Derinkuyu."
+   ],
+   "big": "DERİNKUYU",
+   "sub": "YERALTI ŞEHRİ",
+   "year": null,
+   "label": "NEVŞEHİR",
+   "fx": [
+    "flicker"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261115_030821_e51d3179-1f9b-499b-a8bd-47a485695e03.mp4",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Kat kat inen odalar, tüneller ve kuyular.",
+    "Dünyanın en büyük yeraltı şehirlerinden biri."
+   ],
+   "big": "85 M",
+   "sub": "KAT KAT AŞAĞI",
+   "year": null,
+   "label": "DERİNLİK",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bir dönem burada aynı anda 20 bine yakın insanın yaşayabildiği tahmin ediliyor."
+   ],
+   "big": "20.000",
+   "sub": "KİŞİ (TAHMİNİ)",
+   "year": null,
+   "label": "KAPASİTE",
+   "fx": [
+    "flicker"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Yerin altında ahırlar, mahzenler, şarap ezme yerleri vardı."
+   ],
+   "big": "AHIR",
+   "sub": "MAHZEN · ŞARAPHANE",
+   "year": null,
+   "label": "YAŞAM",
+   "fx": [
+    "flicker"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Hatta kayaya oyulmuş bir şapel bile."
+   ],
+   "big": "ŞAPEL",
+   "sub": "KAYAYA OYULMUŞ",
+   "year": null,
+   "label": "YAŞAM",
+   "fx": [
+    "flicker"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Peki yerin bu kadar altında insanlar nasıl nefes alıyordu?"
+   ],
+   "big": "HAVA?",
+   "sub": "",
+   "year": null,
+   "label": "SIR",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261115_030821_e51d3179-1f9b-499b-a8bd-47a485695e03.mp4",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "50'den fazla havalandırma bacası, havayı en alt katlara kadar taşıyordu."
+   ],
+   "big": "50+",
+   "sub": "HAVALANDIRMA BACASI",
+   "year": null,
+   "label": "SIR",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261115_030821_e51d3179-1f9b-499b-a8bd-47a485695e03.mp4",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Asıl dahice olan ise kapılar.",
+    "500 kiloya varan yuvarlak taşlar, sadece içeriden kapatılabiliyordu."
+   ],
+   "big": "500 KG",
+   "sub": "TAŞ KAPI",
+   "year": null,
+   "label": "SAVUNMA",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261115_030821_e51d3179-1f9b-499b-a8bd-47a485695e03.mp4",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Düşman kapıya dayansa bile içeri giremezdi."
+   ],
+   "big": "KAPALI",
+   "sub": "",
+   "year": null,
+   "label": "SAVUNMA",
+   "fx": [
+    "ember_few"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Peki bu şehri kim, neden kazdı?"
+   ],
+   "big": "KİM?",
+   "sub": "",
+   "year": null,
+   "label": "SORU",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "İlk tünellerin Hititler dönemine kadar gittiği düşünülüyor, ama bu bir tahmin.",
+    "Şehri büyük ölçüde Friglerin genişlettiği sanılıyor."
+   ],
+   "big": "HİTİT · FRİG",
+   "sub": "TAHMİN",
+   "year": null,
+   "label": "KÖKEN",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s13.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Sonraki yüzyıllarda bölge halkı, akınlardan korunmak için buraya sığındı."
+   ],
+   "big": "SIĞINAK",
+   "sub": "AKINLARDAN KAÇIŞ",
+   "year": null,
+   "label": "ORTAÇAĞ",
+   "fx": [
+    "ember_few"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s14.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bugün yukarıda balonlar uçuyor. Ama aşağıda hâlâ keşfedilmemiş tüneller olabilir.",
+    "Sence insanları yerin bu kadar altına iten korku neydi? Yorumlara yaz."
+   ],
+   "big": "SENCE?",
+   "sub": "YORUMLARA YAZ",
+   "year": null,
+   "label": "BUGÜN",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261115_030821_e51d3179-1f9b-499b-a8bd-47a485695e03.mp4",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  }
+ ],
+ "eras": [
+  {
+   "name": "KEŞİF",
+   "from": 0,
+   "to": 3
+  },
+  {
+   "name": "YAŞAM",
+   "from": 4,
+   "to": 9
+  },
+  {
+   "name": "KÖKEN",
+   "from": 10,
+   "to": 13
+  }
+ ],
+ "outro_plan": {
+  "title": "O KORKU NEYDİ?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 3,
+   "value": 20000,
+   "unit": "KİŞİ",
+   "small": "TAHMİNİ KAPASİTE"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true
+}

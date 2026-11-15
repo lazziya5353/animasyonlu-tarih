@@ -1,0 +1,269 @@
+{
+  "baslik": "Derinkuyu Yeraltı Şehri",
+  "hook": "BİR DUVAR YIKILDI, ALTINDAN ŞEHİR ÇIKTI",
+  "map_region": "anadolu",
+  "sahneler": [
+    {
+      "lines": [
+        "1963. Kapadokya'da bir adam evinin duvarını yıktı.",
+        "Duvarın arkasında karanlık bir tünel vardı."
+      ],
+      "big": "1963",
+      "sub": "BİR DUVAR YIKILDI",
+      "label": "1963",
+      "fx": [
+        "dust"
+      ],
+      "video": "videos/k1.mp4",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261115_030821_e51d3179-1f9b-499b-a8bd-47a485695e03.mp4",
+      "v_bas": 0.0,
+      "v_son": 5.0,
+      "image": "images/s01.jpg",
+      "prompt": "Derinkuyu"
+    },
+    {
+      "lines": [
+        "O tünel, yerin yaklaşık 85 metre altına inen bir şehre açılıyordu: Derinkuyu."
+      ],
+      "big": "DERİNKUYU",
+      "sub": "YERALTI ŞEHRİ",
+      "label": "NEVŞEHİR",
+      "fx": [
+        "flicker"
+      ],
+      "video": "videos/k1.mp4",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261115_030821_e51d3179-1f9b-499b-a8bd-47a485695e03.mp4",
+      "v_bas": 5.0,
+      "v_son": 10.0,
+      "image": "images/s02.jpg",
+      "prompt": "Derinkuyu"
+    },
+    {
+      "lines": [
+        "Kat kat inen odalar, tüneller ve kuyular.",
+        "Dünyanın en büyük yeraltı şehirlerinden biri."
+      ],
+      "big": "85 M",
+      "sub": "KAT KAT AŞAĞI",
+      "label": "DERİNLİK",
+      "fx": [],
+      "image": "images/s03.jpg",
+      "prompt": "Derinkuyu"
+    },
+    {
+      "lines": [
+        "Bir dönem burada aynı anda 20 bine yakın insanın yaşayabildiği tahmin ediliyor."
+      ],
+      "big": "20.000",
+      "sub": "KİŞİ (TAHMİNİ)",
+      "label": "KAPASİTE",
+      "fx": [
+        "flicker"
+      ],
+      "image": "images/s04.jpg",
+      "prompt": "Derinkuyu"
+    },
+    {
+      "lines": [
+        "Yerin altında ahırlar, mahzenler, şarap ezme yerleri vardı."
+      ],
+      "big": "AHIR",
+      "sub": "MAHZEN · ŞARAPHANE",
+      "label": "YAŞAM",
+      "fx": [
+        "flicker"
+      ],
+      "image": "images/s05.jpg",
+      "prompt": "Derinkuyu"
+    },
+    {
+      "lines": [
+        "Hatta kayaya oyulmuş bir şapel bile."
+      ],
+      "big": "ŞAPEL",
+      "sub": "KAYAYA OYULMUŞ",
+      "label": "YAŞAM",
+      "fx": [
+        "flicker"
+      ],
+      "image": "images/s06.jpg",
+      "prompt": "Derinkuyu"
+    },
+    {
+      "lines": [
+        "Peki yerin bu kadar altında insanlar nasıl nefes alıyordu?"
+      ],
+      "big": "HAVA?",
+      "sub": "",
+      "label": "SIR",
+      "fx": [],
+      "video": "videos/k1.mp4",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261115_030821_e51d3179-1f9b-499b-a8bd-47a485695e03.mp4",
+      "v_bas": 15.0,
+      "v_son": 20.0,
+      "image": "images/s07.jpg",
+      "prompt": "Derinkuyu"
+    },
+    {
+      "lines": [
+        "50'den fazla havalandırma bacası, havayı en alt katlara kadar taşıyordu."
+      ],
+      "big": "50+",
+      "sub": "HAVALANDIRMA BACASI",
+      "label": "SIR",
+      "fx": [],
+      "video": "videos/k1.mp4",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261115_030821_e51d3179-1f9b-499b-a8bd-47a485695e03.mp4",
+      "v_bas": 15.0,
+      "v_son": 20.0,
+      "image": "images/s08.jpg",
+      "prompt": "Derinkuyu"
+    },
+    {
+      "lines": [
+        "Asıl dahice olan ise kapılar.",
+        "500 kiloya varan yuvarlak taşlar, sadece içeriden kapatılabiliyordu."
+      ],
+      "big": "500 KG",
+      "sub": "TAŞ KAPI",
+      "label": "SAVUNMA",
+      "fx": [],
+      "video": "videos/k1.mp4",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261115_030821_e51d3179-1f9b-499b-a8bd-47a485695e03.mp4",
+      "v_bas": 10.0,
+      "v_son": 15.0,
+      "image": "images/s09.jpg",
+      "prompt": "Derinkuyu"
+    },
+    {
+      "lines": [
+        "Düşman kapıya dayansa bile içeri giremezdi."
+      ],
+      "big": "KAPALI",
+      "sub": "",
+      "label": "SAVUNMA",
+      "fx": [
+        "ember_few"
+      ],
+      "image": "images/s10.jpg",
+      "prompt": "Derinkuyu"
+    },
+    {
+      "lines": [
+        "Peki bu şehri kim, neden kazdı?"
+      ],
+      "big": "KİM?",
+      "sub": "",
+      "label": "SORU",
+      "fx": [],
+      "image": "images/s11.jpg",
+      "prompt": "Derinkuyu"
+    },
+    {
+      "lines": [
+        "İlk tünellerin Hititler dönemine kadar gittiği düşünülüyor, ama bu bir tahmin.",
+        "Şehri büyük ölçüde Friglerin genişlettiği sanılıyor."
+      ],
+      "big": "HİTİT · FRİG",
+      "sub": "TAHMİN",
+      "label": "KÖKEN",
+      "fx": [
+        "dust"
+      ],
+      "image": "images/s12.jpg",
+      "prompt": "Derinkuyu"
+    },
+    {
+      "lines": [
+        "Sonraki yüzyıllarda bölge halkı, akınlardan korunmak için buraya sığındı."
+      ],
+      "big": "SIĞINAK",
+      "sub": "AKINLARDAN KAÇIŞ",
+      "label": "ORTAÇAĞ",
+      "fx": [
+        "ember_few"
+      ],
+      "image": "images/s13.jpg",
+      "prompt": "Derinkuyu"
+    },
+    {
+      "lines": [
+        "Bugün yukarıda balonlar uçuyor. Ama aşağıda hâlâ keşfedilmemiş tüneller olabilir.",
+        "Sence insanları yerin bu kadar altına iten korku neydi? Yorumlara yaz."
+      ],
+      "big": "SENCE?",
+      "sub": "YORUMLARA YAZ",
+      "label": "BUGÜN",
+      "fx": [],
+      "video": "videos/k1.mp4",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261115_030821_e51d3179-1f9b-499b-a8bd-47a485695e03.mp4",
+      "v_bas": 20.0,
+      "v_son": 25.0,
+      "image": "images/s14.jpg",
+      "prompt": "Derinkuyu"
+    }
+  ],
+  "finale": "",
+  "maps": [],
+  "cards": [
+    {
+      "scene": 3,
+      "value": 20000,
+      "unit": "KİŞİ",
+      "small": "TAHMİNİ KAPASİTE"
+    }
+  ],
+  "eras": [
+    {
+      "name": "KEŞİF",
+      "from": 0,
+      "to": 3
+    },
+    {
+      "name": "YAŞAM",
+      "from": 4,
+      "to": 9
+    },
+    {
+      "name": "KÖKEN",
+      "from": 10,
+      "to": 13
+    }
+  ],
+  "outro": {
+    "title": "O KORKU NEYDİ?",
+    "line": "Yorumlara yaz"
+  },
+  "aciklama": "1963'te Kapadokya'da bir adam evinin duvarını yıktı… arkasında yerin 85 metre altına inen bir şehir vardı. 🕯️ Taş kapılar, havalandırma bacaları, ahırlar, şapel: Derinkuyu Yeraltı Şehri.\n\n👇 Sence insanları yerin bu kadar altına iten korku neydi? Yorumlara yaz.\n🔔 Böyle gizemli tarih hikâyelerini kaçırmamak için @animasyon.tarih'i takip et.\n(Görseller temsilidir.)",
+  "kanca_alternatifleri": [
+    "BİR DUVAR YIKILDI, ALTINDAN ŞEHİR ÇIKTI",
+    "YERİN 85 METRE ALTINDA ŞEHİR",
+    "20 BİN KİŞİ YERİN ALTINDA"
+  ],
+  "aciklama_alternatifleri": [],
+  "hashtagler": [
+    "#derinkuyu",
+    "#kapadokya",
+    "#yeraltışehri",
+    "#nevşehir",
+    "#tarih",
+    "#keşfet",
+    "#reels",
+    "#gizem",
+    "#arkeoloji",
+    "#animasyontarih"
+  ],
+  "kaynaklar": [
+    "Habertürk 22.07.2026 (1963 keşfi, 85 m, 20 bin kişi, 200-500 kg taş kapılar, 50+ baca, Hitit tahmini, Frig genişletmesi, akınlar)"
+  ],
+  "kontrol_notlari": [
+    "Hitit kökeni 'tahmin' olarak verildi.",
+    "Kapasite 'tahmin ediliyor' denildi."
+  ],
+  "konu": "Derinkuyu",
+  "tarih": "",
+  "slug": "derinkuyu-yeralti-sehri",
+  "durum": "onaylandi",
+  "sade": true,
+  "seslendirme_metni": "bin dokuz yüz altmış üç. Kapadokya'da bir adam evinin duvarını yıktı.\nDuvarın arkasında karanlık bir tünel vardı.\nO tünel, yerin yaklaşık seksen beş metre altına inen bir şehre açılıyordu: Derinkuyu.\nKat kat inen odalar, tüneller ve kuyular.\nDünyanın en büyük yeraltı şehirlerinden biri.\nBir dönem burada aynı anda yirmi bine yakın insanın yaşayabildiği tahmin ediliyor.\nYerin altında ahırlar, mahzenler, şarap ezme yerleri vardı.\nHatta kayaya oyulmuş bir şapel bile.\nPeki yerin bu kadar altında insanlar nasıl nefes alıyordu?\nelliden fazla havalandırma bacası, havayı en alt katlara kadar taşıyordu.\nAsıl dahice olan ise kapılar.\nbeş yüz kiloya varan yuvarlak taşlar, sadece içeriden kapatılabiliyordu.\nDüşman kapıya dayansa bile içeri giremezdi.\nPeki bu şehri kim, neden kazdı?\nİlk tünellerin Hititler dönemine kadar gittiği düşünülüyor, ama bu bir tahmin.\nŞehri büyük ölçüde Friglerin genişlettiği sanılıyor.\nSonraki yüzyıllarda bölge halkı, akınlardan korunmak için buraya sığındı.\nBugün yukarıda balonlar uçuyor. Ama aşağıda hala keşfedilmemiş tüneller olabilir.\nSence insanları yerin bu kadar altına iten korku neydi? Yorumlara yaz."
+}
