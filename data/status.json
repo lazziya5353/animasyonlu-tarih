@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "nuhun-gemisi-turkiyede-mi videosu hazır",
-  "cikti": "release:video-nuhun-gemisi-turkiyede-mi",
-  "zaman": "2026-11-15T00:57:57Z"
+  "mesaj": "derinkuyu-yeralti-sehri videosu hazır",
+  "cikti": "release:video-derinkuyu-yeralti-sehri",
+  "zaman": "2026-11-15T12:02:08Z"
  },
  "kontrol": {
   "durum": "tamam",
-  "mesaj": "derinkuyu-yeralti-sehri: gorsel !",
+  "mesaj": "derinkuyu-yeralti-sehri: kurgu !",
   "cikti": "projects/derinkuyu-yeralti-sehri/kontrol",
-  "zaman": "2026-11-15T11:40:49Z"
+  "zaman": "2026-11-15T12:02:02Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

@@ -1,0 +1,27 @@
+{
+ "asama": "kurgu",
+ "durum": "uyari",
+ "ozet": "74 sn, -14 LUFS, senkron 17/19",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı süresi okunuşa uymuyor (45 kar/sn): “Duvarın arkasında karanlık bir tünel var”"
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "altyazı süresi okunuşa uymuyor (28 kar/sn): “İlk tünellerin Hititler dönemine kadar g”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “BİR DUVAR YIKILDI, ALTINDAN ŞEHİR ÇIKTI”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.8-flash: The read operation timed out)"
+  }
+ ],
+ "sure": 73.6,
+ "lufs": -14.1,
+ "senkron": "17/19",
+ "zaman": "2026-11-15T12:02:02Z"
+}
