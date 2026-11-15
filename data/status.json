@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "osman-beyin-kayip-imzasi videosu hazır",
-  "cikti": "release:video-osman-beyin-kayip-imzasi",
-  "zaman": "2026-11-14T19:07:15Z"
+  "mesaj": "nuhun-gemisi-turkiyede-mi videosu hazır",
+  "cikti": "release:video-nuhun-gemisi-turkiyede-mi",
+  "zaman": "2026-11-15T00:57:57Z"
  },
  "kontrol": {
-  "durum": "tamam",
-  "mesaj": "nuhun-gemisi-turkiyede-mi: gorsel !",
+  "durum": "hata",
+  "mesaj": "nuhun-gemisi-turkiyede-mi: kurgu ✗",
   "cikti": "projects/nuhun-gemisi-turkiyede-mi/kontrol",
-  "zaman": "2026-11-15T00:43:57Z"
+  "zaman": "2026-11-15T00:57:52Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

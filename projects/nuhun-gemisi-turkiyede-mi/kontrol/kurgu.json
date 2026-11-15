@@ -1,0 +1,38 @@
+{
+ "asama": "kurgu",
+ "durum": "hata",
+ "ozet": "87 sn, -15 LUFS, senkron 24/24",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “NUH'UN GEMİSİ”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “HANGİ DAĞ?”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “KESİN DEĞİL”"
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Altyazı metni silik, bozuk ve dalgalı arka planla karışarak okunamaz hale gelmiş.",
+   "sahne": 2
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Altyazı metni dağ ve gölge alanında koyu arka plana karışarak güçlükle okunuyor.",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9 ve 10. kareler aynı arka plan görüntüsünü neredeyse hareketsiz şekilde kullanıyor (görsel tekrarı).",
+   "sahne": 9
+  }
+ ],
+ "sure": 87.3,
+ "lufs": -14.7,
+ "senkron": "24/24",
+ "zaman": "2026-11-15T00:57:52Z"
+}

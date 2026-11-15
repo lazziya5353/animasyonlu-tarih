@@ -1,0 +1,606 @@
+{
+ "title": "Nuh'un Gemisi Türkiye'de mi?",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "NUH'UN GEMİSİ TÜRKİYE'DE Mİ?",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": 0.0,
+   "end": 7.889999999999999,
+   "lines": [
+    "Ağrı'da yol kenarında resmi bir tabela var: Nuh'un Gemisi.",
+    "Ve bu yaz, 5 ülkeden bilim insanı o tepeyi taradı."
+   ],
+   "big": "NUH'UN GEMİSİ",
+   "sub": "TÜRKİYE'DE Mİ?",
+   "year": null,
+   "label": "AĞRI",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_165844_67ce1c7c-0220-4f89-be05-fca1333f4f60.mp4",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": 7.889999999999999,
+   "end": 13.549999999999999,
+   "lines": [
+    "Tufan, Tevrat'ta da Kur'an'da da anlatılır.",
+    "Sular çekilince gemi bir dağın üstüne oturur."
+   ],
+   "big": "TUFAN",
+   "sub": "",
+   "year": null,
+   "label": "KISSA",
+   "fx": [
+    "rain"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_200643_d53e3fc5-954f-4702-aeeb-43b0f19c956c.mp4",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": 13.549999999999999,
+   "end": 18.490000000000002,
+   "lines": [
+    "Ama hangi dağa? Tevrat 'Ararat dağları' der.",
+    "Kur'an ise Cudi der."
+   ],
+   "big": "HANGİ DAĞ?",
+   "sub": "AĞRI · CUDİ",
+   "year": null,
+   "label": "HARİTA",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     36.0,
+     39.0,
+     20
+    ],
+    "to": [
+     43.4,
+     38.6,
+     4.6
+    ],
+    "zoom_sure": 3.0,
+    "etiketler": [
+     [
+      "AĞRI DAĞI",
+      44.3,
+      39.8
+     ],
+     [
+      "DURUPINAR",
+      44.0,
+      39.3
+     ]
+    ],
+    "hedef": [
+     42.6,
+     37.42,
+     "CUDİ DAĞI"
+    ]
+   }
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": 18.490000000000002,
+   "end": 24.37,
+   "lines": [
+    "Cudi Dağı bugün Şırnak'ta, Cizre yakınlarında.",
+    "İslam kaynaklarında geminin oturduğu dağ olarak geçer."
+   ],
+   "big": "CUDİ",
+   "sub": "ŞIRNAK",
+   "year": null,
+   "label": "CUDİ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_200643_d53e3fc5-954f-4702-aeeb-43b0f19c956c.mp4",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": 24.37,
+   "end": 28.39,
+   "lines": [
+    "Ağrı Dağı ise Türkiye'nin en yüksek dağı. Batı'da Ararat diye bilinir."
+   ],
+   "big": "AĞRI DAĞI",
+   "sub": "ARARAT",
+   "year": null,
+   "label": "AĞRI",
+   "fx": [
+    "snow"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_165844_67ce1c7c-0220-4f89-be05-fca1333f4f60.mp4",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": 28.39,
+   "end": 32.95,
+   "lines": [
+    "Ama asıl tartışma, Ağrı Dağı'nın 30 kilometre güneyindeki bu tepede."
+   ],
+   "big": "30 KM",
+   "sub": "GÜNEYDE BİR TEPE",
+   "year": null,
+   "label": "DURUPINAR",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_165844_67ce1c7c-0220-4f89-be05-fca1333f4f60.mp4",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": 32.95,
+   "end": 40.59,
+   "lines": [
+    "1959'da Yüzbaşı İlhan Durupınar, bir hava fotoğrafında gemi şeklinde bir yapı fark etti.",
+    "Tepenin adı da ondan geliyor."
+   ],
+   "big": "1959",
+   "sub": "HAVA FOTOĞRAFI",
+   "year": null,
+   "label": "1959",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_165844_67ce1c7c-0220-4f89-be05-fca1333f4f60.mp4",
+   "v_bas": 10.0,
+   "v_son": 15.0
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": 40.59,
+   "end": 44.870000000000005,
+   "lines": [
+    "Uzunluğu yaklaşık 160 metre. Tevrat'taki gemi ölçülerine çok yakın."
+   ],
+   "big": "160 M",
+   "sub": "UZUNLUK",
+   "year": null,
+   "label": "ÖLÇÜ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_165844_67ce1c7c-0220-4f89-be05-fca1333f4f60.mp4",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": 44.870000000000005,
+   "end": 54.39,
+   "lines": [
+    "2021'den beri İTÜ ve Ağrı İbrahim Çeçen Üniversitesi bölgede çalışıyor.",
+    "Toprak örneklerinde kil, deniz çökeltisi ve yumuşakça kalıntıları bulundu."
+   ],
+   "big": "TOPRAK",
+   "sub": "30 ÖRNEK",
+   "year": null,
+   "label": "2021",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_165844_67ce1c7c-0220-4f89-be05-fca1333f4f60.mp4",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": 54.39,
+   "end": 57.47,
+   "lines": [
+    "Örnekler 3.500 ile 5.000 yıl öncesine tarihlendi."
+   ],
+   "big": "5.000 YIL",
+   "sub": "TARİHLENDİ",
+   "year": null,
+   "label": "ÖRNEK",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_165844_67ce1c7c-0220-4f89-be05-fca1333f4f60.mp4",
+   "v_bas": 15.0,
+   "v_son": 20.0
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": 57.47,
+   "end": 65.42999999999999,
+   "lines": [
+    "Bu yaz ise 5 ülkeden yaklaşık 20 kişilik bir ekip radar taraması ve sondaj yaptı.",
+    "Sonuçların 2027'de açıklanması bekleniyor."
+   ],
+   "big": "RADAR",
+   "sub": "SONUÇ 2027",
+   "year": null,
+   "label": "2026",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_165844_67ce1c7c-0220-4f89-be05-fca1333f4f60.mp4",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": 65.42999999999999,
+   "end": 66.83,
+   "lines": [
+    "Peki bilim ne diyor?"
+   ],
+   "big": "BİLİM?",
+   "sub": "",
+   "year": null,
+   "label": "SONUÇ",
+   "fx": [
+    "flicker"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_200643_d53e3fc5-954f-4702-aeeb-43b0f19c956c.mp4",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s13.jpg",
+   "start": 66.83,
+   "end": 73.50999999999999,
+   "lines": [
+    "Toprak araştırmasının başındaki Prof. Faruk Kaya bile şunu söyledi:",
+    "Bu tarihlendirmeyle geminin burada olduğu söylenemez."
+   ],
+   "big": "KESİN DEĞİL",
+   "sub": "PROF. FARUK KAYA",
+   "year": null,
+   "label": "SONUÇ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "effect": "type",
+   "type_text": "GEMİNİN BURADA OLDUĞU SÖYLENEMEZ",
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_200643_d53e3fc5-954f-4702-aeeb-43b0f19c956c.mp4",
+   "v_bas": 5.0,
+   "v_son": 10.0
+  },
+  {
+   "image": "images/s14.jpg",
+   "start": 73.50999999999999,
+   "end": 78.83,
+   "lines": [
+    "Pek çok jeolog ise yapının doğal bir oluşum olduğunu düşünüyor. Henüz ahşap bir gemi bulunmadı."
+   ],
+   "big": "DOĞAL MI?",
+   "sub": "JEOLOJİ",
+   "year": null,
+   "label": "SONUÇ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/k1.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_165844_67ce1c7c-0220-4f89-be05-fca1333f4f60.mp4",
+   "v_bas": 0.0,
+   "v_son": 5.0
+  },
+  {
+   "image": "images/s15.jpg",
+   "start": 78.83,
+   "end": 86.795292,
+   "lines": [
+    "Yani cevap hâlâ toprağın altında.",
+    "Sence gemi nerede: Ağrı mı, Cudi mi? Yorumlara yaz."
+   ],
+   "big": "SENCE?",
+   "sub": "AĞRI MI CUDİ Mİ",
+   "year": null,
+   "label": "SON",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/k2.mp4",
+   "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3LvjGqcxAHM3UWQr8NF4fUmc5V8/hf_20261114_200643_d53e3fc5-954f-4702-aeeb-43b0f19c956c.mp4",
+   "v_bas": 20.0,
+   "v_son": 25.0
+  }
+ ],
+ "eras": [
+  {
+   "name": "KISSA",
+   "from": 0,
+   "to": 4
+  },
+  {
+   "name": "DURUPINAR",
+   "from": 5,
+   "to": 10
+  },
+  {
+   "name": "BİLİM",
+   "from": 11,
+   "to": 14
+  }
+ ],
+ "outro_plan": {
+  "title": "AĞRI MI, CUDİ Mİ?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 7,
+   "value": 160,
+   "unit": "METRE",
+   "small": "DURUPINAR OLUŞUMU (YAKLAŞIK)"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true,
+ "cards": [
+  {
+   "start": 41.790000000000006,
+   "end": 44.57000000000001,
+   "value": 160,
+   "unit": "METRE",
+   "small": "DURUPINAR OLUŞUMU (YAKLAŞIK)"
+  }
+ ],
+ "outro": {
+  "start": 81.095292,
+  "title": "AĞRI MI, CUDİ Mİ?",
+  "line": "Yorumlara yaz",
+  "line_at": 83.395292
+ },
+ "duration": 87.3,
+ "jumps": [],
+ "captions": [
+  {
+   "start": 0.0,
+   "end": 4.06,
+   "text": "Ağrı'da yol kenarında resmi bir tabela var: Nuh'un Gemisi."
+  },
+  {
+   "start": 4.34,
+   "end": 7.64,
+   "text": "Ve bu yaz, 5 ülkeden bilim insanı o tepeyi taradı."
+  },
+  {
+   "start": 8.04,
+   "end": 10.48,
+   "text": "Tufan, Tevrat'ta da Kur'an'da da anlatılır."
+  },
+  {
+   "start": 10.82,
+   "end": 13.36,
+   "text": "Sular çekilince gemi bir dağın üstüne oturur."
+  },
+  {
+   "start": 13.7,
+   "end": 16.42,
+   "text": "Ama hangi dağa? Tevrat 'Ararat dağları' der."
+  },
+  {
+   "start": 16.82,
+   "end": 18.16,
+   "text": "Kur'an ise Cudi der."
+  },
+  {
+   "start": 18.64,
+   "end": 21.14,
+   "text": "Cudi Dağı bugün Şırnak'ta, Cizre yakınlarında."
+  },
+  {
+   "start": 21.48,
+   "end": 24.2,
+   "text": "İslam kaynaklarında geminin oturduğu dağ olarak geçer."
+  },
+  {
+   "start": 24.52,
+   "end": 28.51,
+   "text": "Ağrı Dağı ise Türkiye'nin en yüksek dağı. Batı'da Ararat diye bilinir."
+  },
+  {
+   "start": 28.54,
+   "end": 32.78,
+   "text": "Ama asıl tartışma, Ağrı Dağı'nın 30 kilometre güneyindeki bu tepede."
+  },
+  {
+   "start": 33.1,
+   "end": 38.56,
+   "text": "1959'da Yüzbaşı İlhan Durupınar, bir hava fotoğrafında gemi şeklinde bir yapı fark etti."
+  },
+  {
+   "start": 38.9,
+   "end": 40.2,
+   "text": "Tepenin adı da ondan geliyor."
+  },
+  {
+   "start": 40.74,
+   "end": 44.74,
+   "text": "Uzunluğu yaklaşık 160 metre. Tevrat'taki gemi ölçülerine çok yakın."
+  },
+  {
+   "start": 45.02,
+   "end": 49.82,
+   "text": "2021'den beri İTÜ ve Ağrı İbrahim Çeçen Üniversitesi bölgede çalışıyor."
+  },
+  {
+   "start": 50.2,
+   "end": 54.2,
+   "text": "Toprak örneklerinde kil, deniz çökeltisi ve yumuşakça kalıntıları bulundu."
+  },
+  {
+   "start": 54.54,
+   "end": 57.59,
+   "text": "Örnekler 3.500 ile 5.000 yıl öncesine tarihlendi."
+  },
+  {
+   "start": 57.62,
+   "end": 62.46,
+   "text": "Bu yaz ise 5 ülkeden yaklaşık 20 kişilik bir ekip radar taraması ve sondaj yaptı."
+  },
+  {
+   "start": 62.76,
+   "end": 65.22,
+   "text": "Sonuçların 2027'de açıklanması bekleniyor."
+  },
+  {
+   "start": 65.58,
+   "end": 66.54,
+   "text": "Peki bilim ne diyor?"
+  },
+  {
+   "start": 66.98,
+   "end": 70.4,
+   "text": "Toprak araştırmasının başındaki Prof. Faruk Kaya bile şunu söyledi:"
+  },
+  {
+   "start": 70.72,
+   "end": 73.34,
+   "text": "Bu tarihlendirmeyle geminin burada olduğu söylenemez."
+  },
+  {
+   "start": 73.66,
+   "end": 78.58,
+   "text": "Pek çok jeolog ise yapının doğal bir oluşum olduğunu düşünüyor. Henüz ahşap bir gemi bulunmadı."
+  },
+  {
+   "start": 78.98,
+   "end": 80.8,
+   "text": "Yani cevap hâlâ toprağın altında."
+  },
+  {
+   "start": 81.22,
+   "end": 84.28,
+   "text": "Sence gemi nerede: Ağrı mı, Cudi mi? Yorumlara yaz."
+  }
+ ]
+}
