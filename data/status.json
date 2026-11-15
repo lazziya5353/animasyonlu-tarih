@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "nuhun-gemisi-turkiyede-mi: ses hazır",
-  "cikti": "projects/nuhun-gemisi-turkiyede-mi",
-  "zaman": "2026-11-15T00:31:28Z"
+  "mesaj": "derinkuyu-yeralti-sehri: ses hazır",
+  "cikti": "projects/derinkuyu-yeralti-sehri",
+  "zaman": "2026-11-15T11:28:04Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-15T00:57:57Z"
  },
  "kontrol": {
-  "durum": "hata",
-  "mesaj": "nuhun-gemisi-turkiyede-mi: kurgu ✗",
-  "cikti": "projects/nuhun-gemisi-turkiyede-mi/kontrol",
-  "zaman": "2026-11-15T00:57:52Z"
+  "durum": "tamam",
+  "mesaj": "derinkuyu-yeralti-sehri: gorsel !",
+  "cikti": "projects/derinkuyu-yeralti-sehri/kontrol",
+  "zaman": "2026-11-15T11:40:49Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
