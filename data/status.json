@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "osman-beyin-kayip-imzasi: ses hazır",
-  "cikti": "projects/osman-beyin-kayip-imzasi",
-  "zaman": "2026-11-14T18:00:29Z"
+  "mesaj": "nuhun-gemisi-turkiyede-mi: ses hazır",
+  "cikti": "projects/nuhun-gemisi-turkiyede-mi",
+  "zaman": "2026-11-15T00:31:28Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-14T19:07:15Z"
  },
  "kontrol": {
-  "durum": "hata",
-  "mesaj": "osman-beyin-kayip-imzasi: kurgu ✗",
-  "cikti": "projects/osman-beyin-kayip-imzasi/kontrol",
-  "zaman": "2026-11-14T19:07:11Z"
+  "durum": "tamam",
+  "mesaj": "nuhun-gemisi-turkiyede-mi: gorsel !",
+  "cikti": "projects/nuhun-gemisi-turkiyede-mi/kontrol",
+  "zaman": "2026-11-15T00:43:57Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

@@ -1,0 +1,23 @@
+{
+ "asama": "gorsel",
+ "durum": "uyari",
+ "ozet": "15/15 görsel",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 3
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 3
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka incelemesi atlandı: Gemini yanıt vermedi (gemini-3.8-flash: The read operation timed out)"
+  }
+ ],
+ "eksik": [],
+ "zaman": "2026-11-15T00:43:57Z"
+}
