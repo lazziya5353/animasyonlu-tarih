@@ -40,5 +40,11 @@
   "mesaj": "Mesajın işleniyor",
   "cikti": null,
   "zaman": "2026-11-11T20:05:42Z"
+ },
+ "analist": {
+  "durum": "bekliyor",
+  "mesaj": "Instagram/YouTube bağlı değil: docs/YAYIN_KURULUM.md",
+  "cikti": null,
+  "zaman": "2026-11-16T13:35:37Z"
  }
 }
