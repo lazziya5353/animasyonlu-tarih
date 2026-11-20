@@ -118,6 +118,17 @@ def etiket(fr, s, x, y, a=1.0, size=34, col=WHITE):
     put(fr, text(s, "sans9", size, col, spacing=2), x, y, a)
 
 
+def etiket_kenarli(fr, s, x, y, a=1.0, size=34, col=WHITE):
+    """koyu kenarlı + koyu parıltılı etiket: uydu altlığı üstünde her zaman okunur; ekran içinde tutulur"""
+    f = F("sans9", size); tw = int(f.getlength(s) + 3 * len(s)) + 60; th = int(size * 1.6) + 40
+    im = Image.new("RGBA", (tw, th), (0, 0, 0, 0)); d = ImageDraw.Draw(im); xx = 30
+    for ch in s: d.text((xx, 20), ch, font=f, fill=col + (255,), stroke_width=max(3, size // 9), stroke_fill=(10, 8, 6, 255)); xx += f.getlength(ch) + 3
+    g = Image.new("RGBA", im.size, (0, 0, 0, 0)); g.putalpha(im.split()[3].filter(ImageFilter.GaussianBlur(10)).point(lambda v: int(v * .9)))
+    out = Image.new("RGBA", im.size, (0, 0, 0, 0)); out.alpha_composite(g); out.alpha_composite(im)
+    x = min(max(x, tw / 2 + 20), W - tw / 2 - 20)
+    put(fr, out, x, y, a)
+
+
 def baslik(fr, ust, alt, lt, out=1.0):
     if ust: put(fr, text(ust, "serif", 62 if len(ust) < 22 else 50, GOLD, glow=GOLD, spacing=4), W / 2, 300, clamp(lt / .5) * out)
     if alt: put(fr, text(alt, "sans9", 32, WHITE, spacing=6), W / 2, 385, clamp((lt - .3) / .5) * out)
@@ -301,6 +312,14 @@ def _zoom(self, lt, dur):
             if cz.get("ad") and p > .3:
                 lo, la = cz.get("ad_yer", cz["pts"][len(pts) // 2]); x, y = to(lo, la)
                 put(fr, text(cz["ad"], "serif", 54, (255, 255, 255), glow=renk_, spacing=5), x, y, clamp((p - .3) / .3))
+    if c.get("pinler"):                                                    # sırayla yanan raptiyeler, koyu kenarlı okunur etiketlerle
+        for pn in c["pinler"]:
+            q = clamp((lt - pn.get("t", 0)) / .35)
+            if q <= 0: continue
+            x, y = to(pn["lon"], pn["lat"]); col = tuple(pn.get("renk", GOLD))
+            nokta(fr, x, y, col, q, r=pn.get("r", 11), pulse=.2 * math.sin(lt * 4 + x) + .2)
+            if pn.get("ad"): etiket_kenarli(fr, pn["ad"], x + pn.get("dx", 0), y + pn.get("dy", -60), q, size=pn.get("boyut", 34), col=tuple(pn.get("yazi_renk", WHITE)))
+            if pn.get("ad2"): etiket_kenarli(fr, pn["ad2"], x + pn.get("dx", 0), y + pn.get("dy", -60) + pn.get("boyut", 34) * 1.15, q, size=pn.get("boyut2", 40), col=tuple(pn.get("yazi_renk2", GOLD)))
     if c.get("hedef"):
         lo, la, ad = c["hedef"]; x, y = to(lo, la); q = clamp((lt - zs * .85) / .4)
         if q > 0:
