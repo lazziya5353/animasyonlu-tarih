@@ -24,7 +24,7 @@ BOLGE = {  # ad: (lon0, lon1, lat0, lat1, k = derece başına piksel (enlem))
     "kahire": (30.4, 32.0, 29.4, 30.6, 1300),
     "kuzey_cin": (95.0, 122.0, 34.0, 43.0, 160),
     "mezopotamya": (35.0, 49.5, 29.0, 41.5, 150),
-    "istanbul_bogaz": (28.93, 29.25, 40.98, 41.26, 8000),
+    "istanbul_bogaz": (28.93, 29.25, 40.90, 41.26, 8000),
 }
 BLUE_MARBLE = {"dunya", "orta", "cin", "kuzey_cin", "misir", "mezopotamya"}  # geniş açılar: NASA Blue Marble (kamu malı, kabartmalı, tek parça)
 SADECE = [a for a in os.environ.get("BOLGELER", "").split(",") if a]
