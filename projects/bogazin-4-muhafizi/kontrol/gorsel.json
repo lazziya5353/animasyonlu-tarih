@@ -305,9 +305,9 @@
   },
   {
    "seviye": "bilgi",
-   "mesaj": "yapay zeka incelemesi atlandı: Gemini yanıt vermedi (gemini-3.8-flash: The read operation timed out)"
+   "mesaj": "yapay zeka incelemesi atlandı: Gemini yanıt vermedi (gemini-3.7-flash 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. )"
   }
  ],
  "eksik": [],
- "zaman": "2026-11-20T15:16:04Z"
+ "zaman": "2026-11-20T15:31:00Z"
 }
