@@ -317,6 +317,13 @@ def _zoom(self, lt, dur):
             q = clamp((lt - pn.get("t", 0)) / .35)
             if q <= 0: continue
             x, y = to(pn["lon"], pn["lat"]); col = tuple(pn.get("renk", GOLD))
+            if pn.get("alan"):                                           # semt alanı: yarı saydam, kenarı parlayan bölge (nokta bu alanın içinde)
+                alo, ala, km = pn["alan"]; ax, ay = to(alo, ala)
+                rx = abs(to(alo + km / (111.32 * math.cos(math.radians(ala))), ala)[0] - ax); ry = abs(to(alo, ala + km / 110.57)[1] - ay)
+                ka = Image.new("RGBA", fr.size, (0, 0, 0, 0)); kd = ImageDraw.Draw(ka)
+                kd.ellipse([ax - rx, ay - ry, ax + rx, ay + ry], fill=col + (int(42 * q),), outline=col + (int(235 * q),), width=6)
+                ka = Image.alpha_composite(ka.filter(ImageFilter.GaussianBlur(3)), ka) if q > 0 else ka
+                fr.alpha_composite(ka)
             nokta(fr, x, y, col, q, r=pn.get("r", 11), pulse=.2 * math.sin(lt * 4 + x) + .2)
             if pn.get("ad"): etiket_kenarli(fr, pn["ad"], x + pn.get("dx", 0), y + pn.get("dy", -60), q, size=pn.get("boyut", 34), col=tuple(pn.get("yazi_renk", WHITE)))
             if pn.get("ad2"): etiket_kenarli(fr, pn["ad2"], x + pn.get("dx", 0), y + pn.get("dy", -60) + pn.get("boyut", 34) * 1.15, q, size=pn.get("boyut2", 40), col=tuple(pn.get("yazi_renk2", GOLD)))
