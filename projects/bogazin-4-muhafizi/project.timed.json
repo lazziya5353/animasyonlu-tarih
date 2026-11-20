@@ -1,0 +1,1041 @@
+{
+ "title": "İstanbul Boğazı'nın 4 Muhafızı",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "BOĞAZ'IN 4 MUHAFIZI KİM?",
+ "map_region": "marmara",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": 0.0,
+   "end": 6.239999999999999,
+   "lines": [
+    "Yüzyıllar boyunca Karadeniz'den Boğaz'a giren gemiciler, dört yöne dönüp selam verirdi."
+   ],
+   "big": "SELAM",
+   "sub": "KARADENİZ'DEN BOĞAZ'A",
+   "year": null,
+   "label": "RİVAYET",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/v01.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": 6.239999999999999,
+   "end": 10.719999999999999,
+   "lines": [
+    "Rivayete göre bu selam, İstanbul Boğazı'nın dört muhafızınaydı."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "BOĞAZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     29.06,
+     41.09,
+     0.2
+    ],
+    "to": [
+     29.055,
+     41.085,
+     0.224
+    ],
+    "zoom_sure": 1.9,
+    "etiketler": [],
+    "pinler": [
+     {
+      "lon": 29.0716,
+      "lat": 41.1752,
+      "ad": "RUMELİ KAVAĞI",
+      "ad2": "TELLİ BABA",
+      "t": 0.15,
+      "dx": -170,
+      "dy": -130,
+      "boyut": 33,
+      "boyut2": 44
+     },
+     {
+      "lon": 29.0848,
+      "lat": 41.1623,
+      "ad": "BEYKOZ",
+      "ad2": "HZ. YUŞA",
+      "t": 0.6,
+      "dx": 190,
+      "dy": 60,
+      "boyut": 33,
+      "boyut2": 44
+     },
+     {
+      "lon": 29.0178,
+      "lat": 41.0458,
+      "ad": "BEŞİKTAŞ",
+      "ad2": "YAHYA EFENDİ",
+      "t": 1.05,
+      "dx": 250,
+      "dy": -20,
+      "boyut": 33,
+      "boyut2": 44
+     },
+     {
+      "lon": 29.0143,
+      "lat": 41.0224,
+      "ad": "ÜSKÜDAR",
+      "ad2": "HÜDÂYÎ",
+      "t": 1.5,
+      "dx": 215,
+      "dy": -20,
+      "boyut": 33,
+      "boyut2": 44
+     }
+    ],
+    "cizgiler": [
+     {
+      "pts": [
+       [
+        29.0178,
+        41.0458
+       ],
+       [
+        29.03,
+        41.11
+       ],
+       [
+        29.0716,
+        41.1752
+       ],
+       [
+        29.0848,
+        41.1623
+       ],
+       [
+        29.07,
+        41.07
+       ],
+       [
+        29.0143,
+        41.0224
+       ],
+       [
+        29.0178,
+        41.0458
+       ]
+      ],
+      "renk": [
+       232,
+       196,
+       120
+      ],
+      "sure": 1.6,
+      "gecikme": 0.0,
+      "kalinlik": 7
+     }
+    ]
+   }
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": 10.719999999999999,
+   "end": 12.4,
+   "lines": [
+    "Birincisi Üsküdar'da: Aziz Mahmud Hüdâyî."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "ÜSKÜDAR",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     29.055,
+     41.085,
+     0.224
+    ],
+    "to": [
+     29.03,
+     41.03,
+     0.1
+    ],
+    "zoom_sure": 1.4,
+    "etiketler": [],
+    "pinler": [
+     {
+      "lon": 29.0178,
+      "lat": 41.0458,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0716,
+      "lat": 41.1752,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0848,
+      "lat": 41.1623,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0143,
+      "lat": 41.0224,
+      "ad": "ÜSKÜDAR",
+      "ad2": "AZİZ MAHMUD HÜDÂYÎ",
+      "t": 0.7,
+      "dx": 0,
+      "dy": -150,
+      "boyut": 33,
+      "boyut2": 44
+     }
+    ]
+   }
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": 12.4,
+   "end": 20.150000000000002,
+   "lines": [
+    "Sultan Birinci Ahmed'in hocasıydı; padişahın ona su dökecek kadar hürmet ettiği anlatılır."
+   ],
+   "big": "HÜDÂYÎ",
+   "sub": "I. AHMED'İN HOCASI",
+   "year": null,
+   "label": "ÜSKÜDAR",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/v02.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": 20.150000000000002,
+   "end": 21.85,
+   "lines": [
+    "İkincisi karşı kıyıda, Beşiktaş'ta: Yahya Efendi."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "BEŞİKTAŞ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     29.03,
+     41.03,
+     0.1
+    ],
+    "to": [
+     29.02,
+     41.06,
+     0.1
+    ],
+    "zoom_sure": 1.2,
+    "etiketler": [],
+    "pinler": [
+     {
+      "lon": 29.0143,
+      "lat": 41.0224,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0716,
+      "lat": 41.1752,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0848,
+      "lat": 41.1623,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0178,
+      "lat": 41.0458,
+      "ad": "BEŞİKTAŞ",
+      "ad2": "YAHYA EFENDİ",
+      "t": 0.6,
+      "dx": 0,
+      "dy": -150,
+      "boyut": 33,
+      "boyut2": 44
+     }
+    ]
+   }
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": 21.85,
+   "end": 31.03,
+   "lines": [
+    "Kanuni Sultan Süleyman'ın süt kardeşiydi; Boğaz'ı gören tepedeki dergâhı bugün hâlâ ziyaret ediliyor."
+   ],
+   "big": "YAHYA EFENDİ",
+   "sub": "KANUNİ'NİN SÜT KARDEŞİ",
+   "year": null,
+   "label": "BEŞİKTAŞ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/v03.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": 31.03,
+   "end": 32.870000000000005,
+   "lines": [
+    "Üçüncüsü Rumeli Kavağı'nda: Telli Baba."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "RUMELİ KAVAĞI",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     29.02,
+     41.06,
+     0.1
+    ],
+    "to": [
+     29.075,
+     41.16,
+     0.1
+    ],
+    "zoom_sure": 1.5,
+    "etiketler": [],
+    "pinler": [
+     {
+      "lon": 29.0143,
+      "lat": 41.0224,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0178,
+      "lat": 41.0458,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0848,
+      "lat": 41.1623,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0947,
+      "lat": 41.1785,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0716,
+      "lat": 41.1752,
+      "ad": "RUMELİ KAVAĞI",
+      "ad2": "TELLİ BABA",
+      "t": 0.9,
+      "dx": 0,
+      "dy": -150,
+      "boyut": 33,
+      "boyut2": 44
+     }
+    ]
+   }
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": 32.870000000000005,
+   "end": 37.4,
+   "lines": [
+    "Rivayete göre evlenmek isteyen genç kızlar buraya gelir, gelinliklerinden bir tel bırakırdı."
+   ],
+   "big": "TELLİ BABA",
+   "sub": "GELİNLİKTEN BİR TEL",
+   "year": null,
+   "label": "RUMELİ KAVAĞI",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/v04.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": 37.4,
+   "end": 41.38,
+   "lines": [
+    "Peki dördüncüsü kim? Cevabı sizi şaşırtabilir."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "BEYKOZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     29.055,
+     41.085,
+     0.224
+    ],
+    "to": [
+     29.085,
+     41.155,
+     0.1
+    ],
+    "zoom_sure": 1.6,
+    "etiketler": [],
+    "pinler": [
+     {
+      "lon": 29.0143,
+      "lat": 41.0224,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0178,
+      "lat": 41.0458,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0716,
+      "lat": 41.1752,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0848,
+      "lat": 41.1623,
+      "ad": "BEYKOZ",
+      "ad2": "DÖRDÜNCÜSÜ?",
+      "t": 1.0,
+      "dx": 0,
+      "dy": 140,
+      "boyut": 33,
+      "boyut2": 44
+     }
+    ]
+   }
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": 41.38,
+   "end": 46.7,
+   "lines": [
+    "Beykoz'daki bir tepede on yedi metrelik bir kabir var: Hz. Yuşa'ya ait olduğuna inanılıyor."
+   ],
+   "big": "17 METRE",
+   "sub": "HZ. YUŞA TEPESİ",
+   "year": null,
+   "label": "BEYKOZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/v05.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": 46.7,
+   "end": 53.32,
+   "lines": [
+    "Rivayete göre bu kabrin yerini Yahya Efendi bir rüyada görmüştü."
+   ],
+   "big": "RÜYA",
+   "sub": "YAHYA EFENDİ",
+   "year": null,
+   "label": "RİVAYET",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/v06.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": 53.32,
+   "end": 59.56,
+   "lines": [
+    "Ancak Bağdat'ta da Yuşa'ya ait bir makam bulunuyor, bazı araştırmacılar bu yüzden şüpheyle yaklaşıyor."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "BEYKOZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     29.085,
+     41.155,
+     0.1
+    ],
+    "to": [
+     29.08,
+     41.15,
+     0.13
+    ],
+    "zoom_sure": 1.5,
+    "etiketler": [],
+    "pinler": [
+     {
+      "lon": 29.0143,
+      "lat": 41.0224,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0178,
+      "lat": 41.0458,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0716,
+      "lat": 41.1752,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0848,
+      "lat": 41.1623,
+      "ad": "HZ. YUŞA TEPESİ",
+      "ad2": "BAĞDAT'TA DA BİR MAKAM VAR",
+      "t": 0.3,
+      "dx": 0,
+      "dy": 150,
+      "boyut": 33,
+      "boyut2": 36
+     }
+    ]
+   }
+  },
+  {
+   "image": "images/s13.jpg",
+   "start": 59.56,
+   "end": 64.41999999999999,
+   "lines": [
+    "Tepenin hemen yanında ise Boğaz'ın Karadeniz kapısını tutan Yoros Kalesi yükselir."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "YOROS",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     29.08,
+     41.15,
+     0.13
+    ],
+    "to": [
+     29.09,
+     41.165,
+     0.09
+    ],
+    "zoom_sure": 1.6,
+    "etiketler": [],
+    "pinler": [
+     {
+      "lon": 29.0143,
+      "lat": 41.0224,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0178,
+      "lat": 41.0458,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0716,
+      "lat": 41.1752,
+      "t": 0,
+      "r": 8
+     },
+     {
+      "lon": 29.0848,
+      "lat": 41.1623,
+      "ad": "BEYKOZ",
+      "ad2": "HZ. YUŞA",
+      "t": 0.2,
+      "dx": 0,
+      "dy": 150,
+      "boyut": 33,
+      "boyut2": 44
+     },
+     {
+      "lon": 29.0947,
+      "lat": 41.1785,
+      "ad": "ANADOLU KAVAĞI",
+      "ad2": "YOROS KALESİ",
+      "t": 1.3,
+      "dx": 0,
+      "dy": -150,
+      "boyut": 33,
+      "boyut2": 44
+     }
+    ]
+   }
+  },
+  {
+   "image": "images/s14.jpg",
+   "start": 64.41999999999999,
+   "end": 68.08999999999999,
+   "lines": [
+    "Antik çağda burası \"Hieron\" diye bilinen kutsal bir alandı."
+   ],
+   "big": "HİERON",
+   "sub": "KUTSAL ALAN",
+   "year": null,
+   "label": "YOROS",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/v07.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s15.jpg",
+   "start": 68.08999999999999,
+   "end": 73.57,
+   "lines": [
+    "Kale yüzyıllar boyunca el değiştirdi; bir dönem Ceneviz gemileri bu sulardan vergi topladı."
+   ],
+   "big": "CENEVİZ",
+   "sub": "BOĞAZ'DA VERGİ",
+   "year": null,
+   "label": "YOROS",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "video": "videos/v08.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s16.jpg",
+   "start": 73.57,
+   "end": 76.38,
+   "lines": [
+    "Bugün dört muhafız hâlâ yerinde duruyor."
+   ],
+   "big": "BUGÜN",
+   "sub": "DÖRT MUHAFIZ",
+   "year": null,
+   "label": "BUGÜN",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ],
+   "video": "videos/v09.mp4",
+   "v_bas": 0.0,
+   "v_son": 8.0
+  },
+  {
+   "image": "images/s17.jpg",
+   "start": 76.38,
+   "end": 82.19416700000001,
+   "lines": [
+    "Sen bu dört türbeden hangisini ziyaret ettin? Yorumlara yaz."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "SON",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     29.06,
+     41.09,
+     0.18
+    ],
+    "to": [
+     29.055,
+     41.085,
+     0.224
+    ],
+    "zoom_sure": 1.5,
+    "etiketler": [],
+    "pinler": [
+     {
+      "lon": 29.0716,
+      "lat": 41.1752,
+      "ad": "RUMELİ KAVAĞI",
+      "ad2": "TELLİ BABA",
+      "t": 0.1,
+      "dx": -170,
+      "dy": -130,
+      "boyut": 33,
+      "boyut2": 44
+     },
+     {
+      "lon": 29.0848,
+      "lat": 41.1623,
+      "ad": "BEYKOZ",
+      "ad2": "HZ. YUŞA",
+      "t": 0.1,
+      "dx": 190,
+      "dy": 60,
+      "boyut": 33,
+      "boyut2": 44
+     },
+     {
+      "lon": 29.0178,
+      "lat": 41.0458,
+      "ad": "BEŞİKTAŞ",
+      "ad2": "YAHYA EFENDİ",
+      "t": 0.1,
+      "dx": 250,
+      "dy": -20,
+      "boyut": 33,
+      "boyut2": 44
+     },
+     {
+      "lon": 29.0143,
+      "lat": 41.0224,
+      "ad": "ÜSKÜDAR",
+      "ad2": "HÜDÂYÎ",
+      "t": 0.1,
+      "dx": 215,
+      "dy": -20,
+      "boyut": 33,
+      "boyut2": 44
+     }
+    ],
+    "cizgiler": [
+     {
+      "pts": [
+       [
+        29.0178,
+        41.0458
+       ],
+       [
+        29.03,
+        41.11
+       ],
+       [
+        29.0716,
+        41.1752
+       ],
+       [
+        29.0848,
+        41.1623
+       ],
+       [
+        29.07,
+        41.07
+       ],
+       [
+        29.0143,
+        41.0224
+       ],
+       [
+        29.0178,
+        41.0458
+       ]
+      ],
+      "renk": [
+       232,
+       196,
+       120
+      ],
+      "sure": 0.1,
+      "gecikme": -3,
+      "kalinlik": 7
+     }
+    ]
+   }
+  }
+ ],
+ "eras": [
+  {
+   "name": "SELAM",
+   "from": 0,
+   "to": 1
+  },
+  {
+   "name": "ÜSKÜDAR",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "name": "BEŞİKTAŞ",
+   "from": 4,
+   "to": 5
+  },
+  {
+   "name": "RUMELİ KAVAĞI",
+   "from": 6,
+   "to": 7
+  },
+  {
+   "name": "BEYKOZ",
+   "from": 8,
+   "to": 11
+  },
+  {
+   "name": "YOROS",
+   "from": 12,
+   "to": 14
+  },
+  {
+   "name": "BUGÜN",
+   "from": 15,
+   "to": 16
+  }
+ ],
+ "outro_plan": {
+  "title": "HANGİSİNİ ZİYARET ETTİN?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true,
+ "outro": {
+  "start": 76.494167,
+  "title": "HANGİSİNİ ZİYARET ETTİN?",
+  "line": "Yorumlara yaz",
+  "line_at": 78.794167
+ },
+ "duration": 82.69,
+ "jumps": [],
+ "captions": [
+  {
+   "start": 0.27,
+   "end": 6.03,
+   "text": "Yüzyıllar boyunca Karadeniz'den Boğaz'a giren gemiciler, dört yöne dönüp selam verirdi."
+  },
+  {
+   "start": 6.39,
+   "end": 10.51,
+   "text": "Rivayete göre bu selam, İstanbul Boğazı'nın dört muhafızınaydı."
+  },
+  {
+   "start": 10.87,
+   "end": 12.19,
+   "text": "Birincisi Üsküdar'da: Aziz Mahmud Hüdâyî."
+  },
+  {
+   "start": 12.55,
+   "end": 19.95,
+   "text": "Sultan Birinci Ahmed'in hocasıydı; padişahın ona su dökecek kadar hürmet ettiği anlatılır."
+  },
+  {
+   "start": 20.3,
+   "end": 21.69,
+   "text": "İkincisi karşı kıyıda, Beşiktaş'ta: Yahya Efendi."
+  },
+  {
+   "start": 22.0,
+   "end": 30.82,
+   "text": "Kanuni Sultan Süleyman'ın süt kardeşiydi; Boğaz'ı gören tepedeki dergâhı bugün hâlâ ziyaret ediliyor."
+  },
+  {
+   "start": 31.18,
+   "end": 32.69,
+   "text": "Üçüncüsü Rumeli Kavağı'nda: Telli Baba."
+  },
+  {
+   "start": 33.02,
+   "end": 37.3,
+   "text": "Rivayete göre evlenmek isteyen genç kızlar buraya gelir, gelinliklerinden bir tel bırakırdı."
+  },
+  {
+   "start": 37.55,
+   "end": 41.24,
+   "text": "Peki dördüncüsü kim? Cevabı sizi şaşırtabilir."
+  },
+  {
+   "start": 41.53,
+   "end": 46.49,
+   "text": "Beykoz'daki bir tepede on yedi metrelik bir kabir var: Hz. Yuşa'ya ait olduğuna inanılıyor."
+  },
+  {
+   "start": 46.85,
+   "end": 53.11,
+   "text": "Rivayete göre bu kabrin yerini Yahya Efendi bir rüyada görmüştü."
+  },
+  {
+   "start": 53.47,
+   "end": 59.36,
+   "text": "Ancak Bağdat'ta da Yuşa'ya ait bir makam bulunuyor, bazı araştırmacılar bu yüzden şüpheyle yaklaşıyor."
+  },
+  {
+   "start": 59.71,
+   "end": 64.23,
+   "text": "Tepenin hemen yanında ise Boğaz'ın Karadeniz kapısını tutan Yoros Kalesi yükselir."
+  },
+  {
+   "start": 64.57,
+   "end": 67.89,
+   "text": "Antik çağda burası \"Hieron\" diye bilinen kutsal bir alandı."
+  },
+  {
+   "start": 68.24,
+   "end": 73.36,
+   "text": "Kale yüzyıllar boyunca el değiştirdi; bir dönem Ceneviz gemileri bu sulardan vergi topladı."
+  },
+  {
+   "start": 73.72,
+   "end": 76.17,
+   "text": "Bugün dört muhafız hâlâ yerinde duruyor."
+  },
+  {
+   "start": 76.53,
+   "end": 79.99,
+   "text": "Sen bu dört türbeden hangisini ziyaret ettin? Yorumlara yaz."
+  }
+ ]
+}
