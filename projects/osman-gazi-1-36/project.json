@@ -245,13 +245,13 @@
     "tur": "zoom",
     "from": [
      30.0,
-     40.4,
+     40.3,
      2.6
     ],
     "to": [
      30.05,
-     40.4,
-     1.5
+     40.3,
+     1.6
     ],
     "zoom_sure": 1.6,
     "etiketler": [],
@@ -262,8 +262,8 @@
       "ad": "SÖĞÜT",
       "ad2": "OSMAN GAZİ",
       "t": 0.1,
-      "dx": 0,
-      "dy": 170,
+      "dx": -170,
+      "dy": -120,
       "boyut": 33,
       "boyut2": 44
      },
@@ -423,8 +423,8 @@
    "lines": [
     "Sıradaki bölüm: Orhan Gazi. Kaçırmamak için @animasyon.tarih'i takip et."
    ],
-   "big": "SIRADAKİ: ORHAN GAZİ",
-   "sub": "@ANIMASYON.TARIH",
+   "big": "SIRADAKİ",
+   "sub": "2/36 · ORHAN GAZİ",
    "year": null,
    "label": "2/36",
    "fx": [],

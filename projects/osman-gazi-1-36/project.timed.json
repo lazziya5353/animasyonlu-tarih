@@ -1,0 +1,576 @@
+{
+ "title": "1/36 Osman Gazi – kimsenin bilmediği detaylar",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "OSMANLI'YI KURAN ADAMIN TUĞRASI YOK",
+ "map_region": "marmara",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": 0.0,
+   "end": 4.3,
+   "lines": [
+    "Osmanlı'yı kuran adamın tuğrası yok. Hiçbir yerde."
+   ],
+   "big": "TUĞRA YOK",
+   "sub": "1/36 · OSMAN GAZİ",
+   "year": null,
+   "label": "1/36",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": 4.3,
+   "end": 9.94,
+   "lines": [
+    "Bugün gördüğün \"Osman Gazi tuğraları\" sonradan yapılmış temsili çizimler."
+   ],
+   "big": "TEMSİLİ",
+   "sub": "SONRADAN ÇİZİLDİ",
+   "year": null,
+   "label": "TUĞRA",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": 9.94,
+   "end": 14.639999999999999,
+   "lines": [
+    "Bilinen en eski Osmanlı tuğrası oğlu Orhan Gazi'ye ait."
+   ],
+   "big": "ORHAN GAZİ",
+   "sub": "BİLİNEN EN ESKİ TUĞRA",
+   "year": null,
+   "label": "TUĞRA",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": 14.639999999999999,
+   "end": 17.5,
+   "lines": [
+    "Peki Osman Gazi'den geriye ne kaldı?"
+   ],
+   "big": "GERİYE NE KALDI?",
+   "sub": "",
+   "year": null,
+   "label": "SÖĞÜT",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": 17.5,
+   "end": 23.1,
+   "lines": [
+    "Neredeyse tek bir şey: üzerinde \"Osman bin Ertuğrul\" yazan küçük bir sikke."
+   ],
+   "big": "SİKKE",
+   "sub": "OSMAN BİN ERTUĞRUL",
+   "year": null,
+   "label": "TEMSİLİ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": 23.1,
+   "end": 29.200000000000003,
+   "lines": [
+    "Bazı tarihçiler bu sikkenin gerçekten onun dönemine ait olup olmadığını hâlâ tartışıyor."
+   ],
+   "big": "TARTIŞMALI",
+   "sub": "GERÇEKTEN ONUN MU?",
+   "year": null,
+   "label": "TEMSİLİ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": 29.200000000000003,
+   "end": 35.1,
+   "lines": [
+    "Bir şaşırtıcı detay daha: Bizanslı tarihçiler ona Osman değil, \"Atman\" diyordu."
+   ],
+   "big": "\"ATMAN\"",
+   "sub": "BİZANS KAYNAKLARINDA",
+   "year": null,
+   "label": "BİZANS",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": 35.1,
+   "end": 38.75,
+   "lines": [
+    "Rivayete göre devletin kuruluşu bir rüyayla başladı."
+   ],
+   "big": "RÜYA",
+   "sub": "RİVAYET",
+   "year": null,
+   "label": "RİVAYET",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": 38.75,
+   "end": 44.480000000000004,
+   "lines": [
+    "Osman Gazi, Şeyh Edebali'nin evinde kalırken göğsünden bir ağaç çıktığını gördü."
+   ],
+   "big": "ŞEYH EDEBALİ",
+   "sub": "BİLECİK",
+   "year": null,
+   "label": "RİVAYET",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": 44.480000000000004,
+   "end": 50.25,
+   "lines": [
+    "Ağacın dalları dünyayı sardı. Şeyh Edebali bunu bir devlet müjdesi olarak yorumladı."
+   ],
+   "big": "DEVLET MÜJDESİ",
+   "sub": "",
+   "year": null,
+   "label": "RÜYA",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": 50.25,
+   "end": 56.74,
+   "lines": [
+    "1302'de Bafeus'ta Bizans ordusunu yendi. Bu zafer adını bütün Anadolu'ya duyurdu."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "1302",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     30.0,
+     40.3,
+     2.6
+    ],
+    "to": [
+     30.05,
+     40.3,
+     1.6
+    ],
+    "zoom_sure": 1.6,
+    "etiketler": [],
+    "pinler": [
+     {
+      "lon": 30.18,
+      "lat": 40.02,
+      "ad": "SÖĞÜT",
+      "ad2": "OSMAN GAZİ",
+      "t": 0.1,
+      "dx": -170,
+      "dy": -120,
+      "boyut": 33,
+      "boyut2": 44
+     },
+     {
+      "lon": 29.95,
+      "lat": 40.75,
+      "ad": "BAFEUS",
+      "ad2": "1302 ZAFERİ",
+      "t": 1.6,
+      "dx": 0,
+      "dy": -170,
+      "boyut": 33,
+      "boyut2": 44
+     }
+    ],
+    "cizgiler": [
+     {
+      "pts": [
+       [
+        30.18,
+        40.02
+       ],
+       [
+        30.12,
+        40.4
+       ],
+       [
+        29.95,
+        40.75
+       ]
+      ],
+      "renk": [
+       232,
+       196,
+       120
+      ],
+      "sure": 1.4,
+      "gecikme": 0.3,
+      "kalinlik": 7
+     }
+    ]
+   }
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": 56.74,
+   "end": 60.43,
+   "lines": [
+    "Ama en çok istediği şehri, Bursa'yı, göremedi."
+   ],
+   "big": "BURSA",
+   "sub": "EN ÇOK İSTEDİĞİ ŞEHİR",
+   "year": null,
+   "label": "BURSA",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s13.jpg",
+   "start": 60.43,
+   "end": 65.39,
+   "lines": [
+    "Bursa kuşatma altındayken vefat etti. Şehri oğlu Orhan aldı."
+   ],
+   "big": "KUŞATMA",
+   "sub": "ŞEHRİ ORHAN ALDI",
+   "year": null,
+   "label": "BURSA",
+   "fx": [
+    "ember_few"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s14.jpg",
+   "start": 65.39,
+   "end": 69.83999999999999,
+   "lines": [
+    "Orhan Gazi babasının naaşını Bursa'ya taşıyıp oraya defnetti."
+   ],
+   "big": "BURSA",
+   "sub": "SON DURAK",
+   "year": null,
+   "label": "TÜRBE",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s15.jpg",
+   "start": 69.83999999999999,
+   "end": 76.75,
+   "lines": [
+    "Yüzyıllar sonra Osman Gazi'nin türbesi 1855 depreminde yıkıldı ve yeniden yapıldı."
+   ],
+   "big": "1855",
+   "sub": "DEPREM · YENİDEN YAPILDI",
+   "year": null,
+   "label": "TÜRBE",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s16.jpg",
+   "start": 76.75,
+   "end": 83.85,
+   "lines": [
+    "Osman Gazi'yi sence en iyi anlatan hangisi: rüya mı, kılıç mı? Yorumlara yaz."
+   ],
+   "big": "RÜYA MI, KILIÇ MI?",
+   "sub": "YORUMLARA YAZ",
+   "year": null,
+   "label": "SENCE?",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s17.jpg",
+   "start": 83.85,
+   "end": 90.437167,
+   "lines": [
+    "Sıradaki bölüm: Orhan Gazi. Kaçırmamak için @animasyon.tarih'i takip et."
+   ],
+   "big": "SIRADAKİ",
+   "sub": "2/36 · ORHAN GAZİ",
+   "year": null,
+   "label": "2/36",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "TUĞRA",
+   "from": 0,
+   "to": 2
+  },
+  {
+   "name": "SİKKE",
+   "from": 3,
+   "to": 6
+  },
+  {
+   "name": "RÜYA",
+   "from": 7,
+   "to": 9
+  },
+  {
+   "name": "FETİH",
+   "from": 10,
+   "to": 12
+  },
+  {
+   "name": "TÜRBE",
+   "from": 13,
+   "to": 16
+  }
+ ],
+ "outro_plan": {
+  "title": "RÜYA MI, KILIÇ MI?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true,
+ "outro": {
+  "start": 84.737167,
+  "title": "RÜYA MI, KILIÇ MI?",
+  "line": "Yorumlara yaz",
+  "line_at": 87.037167
+ },
+ "duration": 90.94,
+ "jumps": [],
+ "captions": [
+  {
+   "start": 0.29,
+   "end": 4.05,
+   "text": "Osmanlı'yı kuran adamın tuğrası yok. Hiçbir yerde."
+  },
+  {
+   "start": 4.45,
+   "end": 9.71,
+   "text": "Bugün gördüğün \"Osman Gazi tuğraları\" sonradan yapılmış temsili çizimler."
+  },
+  {
+   "start": 10.09,
+   "end": 14.38,
+   "text": "Bilinen en eski Osmanlı tuğrası oğlu Orhan Gazi'ye ait."
+  },
+  {
+   "start": 14.79,
+   "end": 17.26,
+   "text": "Peki Osman Gazi'den geriye ne kaldı?"
+  },
+  {
+   "start": 17.65,
+   "end": 22.86,
+   "text": "Neredeyse tek bir şey: üzerinde \"Osman bin Ertuğrul\" yazan küçük bir sikke."
+  },
+  {
+   "start": 23.25,
+   "end": 28.96,
+   "text": "Bazı tarihçiler bu sikkenin gerçekten onun dönemine ait olup olmadığını hâlâ tartışıyor."
+  },
+  {
+   "start": 29.35,
+   "end": 34.86,
+   "text": "Bir şaşırtıcı detay daha: Bizanslı tarihçiler ona Osman değil, \"Atman\" diyordu."
+  },
+  {
+   "start": 35.25,
+   "end": 38.51,
+   "text": "Rivayete göre devletin kuruluşu bir rüyayla başladı."
+  },
+  {
+   "start": 38.9,
+   "end": 44.25,
+   "text": "Osman Gazi, Şeyh Edebali'nin evinde kalırken göğsünden bir ağaç çıktığını gördü."
+  },
+  {
+   "start": 44.63,
+   "end": 50.01,
+   "text": "Ağacın dalları dünyayı sardı. Şeyh Edebali bunu bir devlet müjdesi olarak yorumladı."
+  },
+  {
+   "start": 50.4,
+   "end": 56.49,
+   "text": "1302'de Bafeus'ta Bizans ordusunu yendi. Bu zafer adını bütün Anadolu'ya duyurdu."
+  },
+  {
+   "start": 56.89,
+   "end": 60.2,
+   "text": "Ama en çok istediği şehri, Bursa'yı, göremedi."
+  },
+  {
+   "start": 60.58,
+   "end": 65.15,
+   "text": "Bursa kuşatma altındayken vefat etti. Şehri oğlu Orhan aldı."
+  },
+  {
+   "start": 65.54,
+   "end": 69.6,
+   "text": "Orhan Gazi babasının naaşını Bursa'ya taşıyıp oraya defnetti."
+  },
+  {
+   "start": 69.99,
+   "end": 76.51,
+   "text": "Yüzyıllar sonra Osman Gazi'nin türbesi 1855 depreminde yıkıldı ve yeniden yapıldı."
+  },
+  {
+   "start": 76.9,
+   "end": 83.82,
+   "text": "Osman Gazi'yi sence en iyi anlatan hangisi: rüya mı, kılıç mı? Yorumlara yaz."
+  },
+  {
+   "start": 84.0,
+   "end": 87.96,
+   "text": "Sıradaki bölüm: Orhan Gazi. Kaçırmamak için @animasyon.tarih'i takip et."
+  }
+ ]
+}
