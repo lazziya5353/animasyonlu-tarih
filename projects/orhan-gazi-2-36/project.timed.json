@@ -1,0 +1,639 @@
+{
+ "title": "2/36 Orhan Gazi – kimsenin bilmediği detaylar",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "BİLİNEN EN ESKİ OSMANLI TUĞRASI",
+ "map_region": "marmara",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": 0.0,
+   "end": 6.109999999999999,
+   "lines": [
+    "Bugün bilinen en eski Osmanlı tuğrası bu adama ait: Orhan Gazi."
+   ],
+   "big": "EN ESKİ TUĞRA",
+   "sub": "2/36 · ORHAN GAZİ",
+   "year": null,
+   "label": "2/36",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": 6.109999999999999,
+   "end": 11.74,
+   "lines": [
+    "Bir vakfiyenin altına çekilen bu imza, 600 yıl sonra hâlâ duruyor."
+   ],
+   "big": "600 YIL",
+   "sub": "VAKFİYEDEKİ İMZA",
+   "year": null,
+   "label": "TUĞRA",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": 11.74,
+   "end": 16.55,
+   "lines": [
+    "Osmanlı'nın ilk parası da onun döneminde basıldı: gümüş akçe."
+   ],
+   "big": "AKÇE",
+   "sub": "İLK OSMANLI PARASI",
+   "year": null,
+   "label": "GÜMÜŞ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": 16.55,
+   "end": 22.89,
+   "lines": [
+    "Babası Osman Gazi'nin göremediği Bursa'yı aldı ve devletin ilk başkenti yaptı."
+   ],
+   "big": "BURSA",
+   "sub": "İLK BAŞKENT",
+   "year": null,
+   "label": "BURSA",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": 22.89,
+   "end": 29.64,
+   "lines": [
+    "Peki şunu biliyor muydun? Orhan Gazi bir Bizans prensesiyle evlendi."
+   ],
+   "big": "BİZANS PRENSESİ",
+   "sub": "BİLİYOR MUYDUN?",
+   "year": null,
+   "label": "EVLİLİK",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": 29.64,
+   "end": 32.7,
+   "lines": [
+    "Eşi Theodora, Bizans imparatoru Kantakuzenos'un kızıydı."
+   ],
+   "big": "THEODORA",
+   "sub": "KANTAKUZENOS'UN KIZI",
+   "year": null,
+   "label": "EVLİLİK",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": 32.7,
+   "end": 36.02,
+   "lines": [
+    "Ünlü gezgin İbn Battuta onu ziyaret etti."
+   ],
+   "big": "İBN BATTUTA",
+   "sub": "ÜNLÜ GEZGİN",
+   "year": null,
+   "label": "ZİYARET",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": 36.02,
+   "end": 40.910000000000004,
+   "lines": [
+    "Onu Türkmen beylerinin en güçlüsü ve en zengini olarak anlattı."
+   ],
+   "big": "EN GÜÇLÜ BEY",
+   "sub": "EN ZENGİNİ",
+   "year": null,
+   "label": "İBN BATTUTA",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": 40.910000000000004,
+   "end": 45.78,
+   "lines": [
+    "Yaklaşık yüz kalesi olduğunu ve hepsini sürekli dolaştığını yazdı."
+   ],
+   "big": "~100 KALE",
+   "sub": "SÜREKLİ DOLAŞIRDI",
+   "year": null,
+   "label": "İBN BATTUTA",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": 45.78,
+   "end": 49.03,
+   "lines": [
+    "İznik'te Osmanlı'nın ilk medresesini açtı."
+   ],
+   "big": "İLK MEDRESE",
+   "sub": "İZNİK",
+   "year": null,
+   "label": "İZNİK",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": 49.03,
+   "end": 56.99,
+   "lines": [
+    "Bizanslı tarihçi Halkokondilis onu çok tedbirli, askerlere ve yoksullara karşı cömert biri olarak anlattı."
+   ],
+   "big": "TEDBİRLİ · CÖMERT",
+   "sub": "HALKOKONDİLİS'E GÖRE",
+   "year": null,
+   "label": "KARAKTER",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": 56.99,
+   "end": 64.66999999999999,
+   "lines": [
+    "Bugün gördüğün Orhan Gazi resimleri ise yüzyıllar sonra hayal edilerek çizildi; gerçek bir portresi yok."
+   ],
+   "big": "PORTRESİ YOK",
+   "sub": "HAYAL EDİLEREK ÇİZİLDİ",
+   "year": null,
+   "label": "TEMSİLİ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s13.jpg",
+   "start": 64.66999999999999,
+   "end": 69.49,
+   "lines": [
+    "İlk düzenli ordu da onun zamanında kuruldu: yaya ve müsellemler."
+   ],
+   "big": "YAYA · MÜSELLEM",
+   "sub": "İLK DÜZENLİ ASKER",
+   "year": null,
+   "label": "ORDU",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s14.jpg",
+   "start": 69.49,
+   "end": 72.33999999999999,
+   "lines": [
+    "Ama en büyük adım denizi geçmekti."
+   ],
+   "big": "DENİZİ GEÇMEK",
+   "sub": "EN BÜYÜK ADIM",
+   "year": null,
+   "label": "RUMELİ",
+   "fx": [
+    "fog"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s15.jpg",
+   "start": 72.33999999999999,
+   "end": 76.39,
+   "lines": [
+    "Oğlu Süleyman Paşa, sallarla Çanakkale Boğazı'nı geçti."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "SÜLEYMAN PAŞA",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ],
+   "anim": {
+    "tur": "zoom",
+    "from": [
+     27.75,
+     40.3,
+     4.0
+    ],
+    "to": [
+     27.75,
+     40.3,
+     3.0
+    ],
+    "zoom_sure": 1.6,
+    "etiketler": [],
+    "pinler": [
+     {
+      "lon": 29.06,
+      "lat": 40.19,
+      "ad": "BURSA",
+      "ad2": "",
+      "t": 0.1,
+      "dx": 0,
+      "dy": -90,
+      "boyut": 33,
+      "boyut2": 44
+     },
+     {
+      "lon": 26.67,
+      "lat": 40.41,
+      "ad": "GELİBOLU",
+      "ad2": "",
+      "t": 1.8,
+      "dx": 0,
+      "dy": -90,
+      "boyut": 33,
+      "boyut2": 44
+     },
+     {
+      "lon": 26.4,
+      "lat": 40.17,
+      "ad": "ÇANAKKALE BOĞAZI",
+      "ad2": "",
+      "t": 2.2,
+      "dx": 60,
+      "dy": 110,
+      "boyut": 33,
+      "boyut2": 44
+     }
+    ],
+    "cizgiler": [
+     {
+      "pts": [
+       [
+        29.06,
+        40.19
+       ],
+       [
+        28.2,
+        40.45
+       ],
+       [
+        27.3,
+        40.5
+       ],
+       [
+        26.67,
+        40.41
+       ]
+      ],
+      "renk": [
+       232,
+       196,
+       120
+      ],
+      "sure": 1.6,
+      "gecikme": 0.3,
+      "kalinlik": 7
+     }
+    ]
+   }
+  },
+  {
+   "image": "images/s16.jpg",
+   "start": 76.39,
+   "end": 82.25,
+   "lines": [
+    "Bir deprem Gelibolu surlarını yıktı ve Osmanlı Rumeli'ye ilk kez ayak bastı."
+   ],
+   "big": "RUMELİ",
+   "sub": "İLK ADIM · GELİBOLU",
+   "year": null,
+   "label": "DEPREM",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s17.jpg",
+   "start": 82.25,
+   "end": 88.57,
+   "lines": [
+    "Orhan Gazi yaklaşık 36 yıl hüküm sürdü ve beylikten devlete geçişi başlattı."
+   ],
+   "big": "~36 YIL",
+   "sub": "BEYLİKTEN DEVLETE",
+   "year": null,
+   "label": "ORHAN GAZİ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s18.jpg",
+   "start": 88.57,
+   "end": 92.28999999999999,
+   "lines": [
+    "Sence Orhan Gazi'nin en büyük başarısı hangisi? Yorumlara yaz."
+   ],
+   "big": "EN BÜYÜK BAŞARI?",
+   "sub": "YORUMLARA YAZ",
+   "year": null,
+   "label": "SENCE?",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s19.jpg",
+   "start": 92.28999999999999,
+   "end": 101.31025,
+   "lines": [
+    "Sıradaki bölüm: I. Murad. Kaçırmamak için @animasyon.tarih'i takip et."
+   ],
+   "big": "SIRADAKİ",
+   "sub": "3/36 · I. MURAD",
+   "year": null,
+   "label": "3/36",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "TUĞRA",
+   "from": 0,
+   "to": 3
+  },
+  {
+   "name": "EVLİLİK",
+   "from": 4,
+   "to": 5
+  },
+  {
+   "name": "İBN BATTUTA",
+   "from": 6,
+   "to": 8
+  },
+  {
+   "name": "İZNİK",
+   "from": 9,
+   "to": 12
+  },
+  {
+   "name": "RUMELİ",
+   "from": 13,
+   "to": 18
+  }
+ ],
+ "outro_plan": {
+  "title": "EN BÜYÜK BAŞARI?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true,
+ "outro": {
+  "start": 95.61025,
+  "title": "EN BÜYÜK BAŞARI?",
+  "line": "Yorumlara yaz",
+  "line_at": 97.91024999999999
+ },
+ "duration": 101.81,
+ "jumps": [],
+ "captions": [
+  {
+   "start": 0.0,
+   "end": 5.87,
+   "text": "Bugün bilinen en eski Osmanlı tuğrası bu adama ait: Orhan Gazi."
+  },
+  {
+   "start": 6.26,
+   "end": 11.51,
+   "text": "Bir vakfiyenin altına çekilen bu imza, 600 yıl sonra hâlâ duruyor."
+  },
+  {
+   "start": 11.89,
+   "end": 16.32,
+   "text": "Osmanlı'nın ilk parası da onun döneminde basıldı: gümüş akçe."
+  },
+  {
+   "start": 16.7,
+   "end": 22.67,
+   "text": "Babası Osman Gazi'nin göremediği Bursa'yı aldı ve devletin ilk başkenti yaptı."
+  },
+  {
+   "start": 23.04,
+   "end": 29.45,
+   "text": "Peki şunu biliyor muydun? Orhan Gazi bir Bizans prensesiyle evlendi."
+  },
+  {
+   "start": 29.79,
+   "end": 32.46,
+   "text": "Eşi Theodora, Bizans imparatoru Kantakuzenos'un kızıydı."
+  },
+  {
+   "start": 32.85,
+   "end": 35.79,
+   "text": "Ünlü gezgin İbn Battuta onu ziyaret etti."
+  },
+  {
+   "start": 36.17,
+   "end": 40.68,
+   "text": "Onu Türkmen beylerinin en güçlüsü ve en zengini olarak anlattı."
+  },
+  {
+   "start": 41.06,
+   "end": 45.54,
+   "text": "Yaklaşık yüz kalesi olduğunu ve hepsini sürekli dolaştığını yazdı."
+  },
+  {
+   "start": 45.93,
+   "end": 48.81,
+   "text": "İznik'te Osmanlı'nın ilk medresesini açtı."
+  },
+  {
+   "start": 49.18,
+   "end": 56.77,
+   "text": "Bizanslı tarihçi Halkokondilis onu çok tedbirli, askerlere ve yoksullara karşı cömert biri olarak anlattı."
+  },
+  {
+   "start": 57.14,
+   "end": 64.45,
+   "text": "Bugün gördüğün Orhan Gazi resimleri ise yüzyıllar sonra hayal edilerek çizildi; gerçek bir portresi yok."
+  },
+  {
+   "start": 64.82,
+   "end": 69.27,
+   "text": "İlk düzenli ordu da onun zamanında kuruldu: yaya ve müsellemler."
+  },
+  {
+   "start": 69.64,
+   "end": 72.11,
+   "text": "Ama en büyük adım denizi geçmekti."
+  },
+  {
+   "start": 72.49,
+   "end": 76.16,
+   "text": "Oğlu Süleyman Paşa, sallarla Çanakkale Boğazı'nı geçti."
+  },
+  {
+   "start": 76.54,
+   "end": 82.01,
+   "text": "Bir deprem Gelibolu surlarını yıktı ve Osmanlı Rumeli'ye ilk kez ayak bastı."
+  },
+  {
+   "start": 82.4,
+   "end": 88.32,
+   "text": "Orhan Gazi yaklaşık 36 yıl hüküm sürdü ve beylikten devlete geçişi başlattı."
+  },
+  {
+   "start": 88.72,
+   "end": 92.05,
+   "text": "Sence Orhan Gazi'nin en büyük başarısı hangisi? Yorumlara yaz."
+  },
+  {
+   "start": 92.44,
+   "end": 99.11,
+   "text": "Sıradaki bölüm: I. Murad. Kaçırmamak için @animasyon.tarih'i takip et."
+  }
+ ]
+}
