@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "osman-gazi-1-36: ses hazır",
-  "cikti": "projects/osman-gazi-1-36",
-  "zaman": "2026-11-21T20:36:31Z"
+  "mesaj": "orhan-gazi-2-36: ses hazır",
+  "cikti": "projects/orhan-gazi-2-36",
+  "zaman": "2026-11-21T21:09:57Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -24,10 +24,10 @@
   "zaman": "2026-11-15T12:02:08Z"
  },
  "kontrol": {
-  "durum": "hata",
-  "mesaj": "osman-gazi-1-36: gorsel ✗",
-  "cikti": "projects/osman-gazi-1-36/kontrol",
-  "zaman": "2026-11-21T20:43:21Z"
+  "durum": "tamam",
+  "mesaj": "orhan-gazi-2-36: gorsel !",
+  "cikti": "projects/orhan-gazi-2-36/kontrol",
+  "zaman": "2026-11-21T21:16:52Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
