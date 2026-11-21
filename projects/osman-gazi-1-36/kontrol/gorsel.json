@@ -1,0 +1,60 @@
+{
+ "asama": "gorsel",
+ "durum": "hata",
+ "ozet": "17/17 görsel, ortalama puan 8.0/10",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "Görsel Sahne 4 ile neredeyse aynı kompozisyona sahiptir (aynı sahne tekrarı hissi yaratabilir).",
+   "sahne": 1
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Penceredeki cam bölmeler ve gaz lambası benzeri aydınlatma, 13-14. yüzyıl erken Osmanlı/Beylikler dönemi için anakronik detaylar barındırmaktadır.",
+   "sahne": 2
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Görsel Sahne 1'in daha net ve hafif genişletilmiş bir tekrarıdır, videoda görsel çeşitliliği azaltabilir.",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Sağ alt köşede 'TEMSİLİ' filigranı/yazısı bulunmaktadır (proje notu sikkeyi temsili kabul etse de ekranda metin olarak görünmektedir).",
+   "sahne": 5
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Sahne 5'teki sikke görselinin neredeyse birebir yakınlaştırılmış halidir (sahne tekrarı) ve sağ altta 'TEMSİLİ' yazısı yer almaktadır.",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Penceredeki cam ve gaz lambası döneme göre hafif anakronik bir görünüm sergilemektedir; ayrıca Sahne 9 ile tamamen aynı görsel kullanılmıştır.",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Görsel Sahne 8 ile birebir aynıdır, rüya anlatısı yerine oturup sohbet eden figürler gösterilmektedir.",
+   "sahne": 9
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah ve boştur; Bafeus Savaşı'na dair hiçbir içerik yüklenmemiştir.",
+   "sahne": 11
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel, bir önceki sahneyle (Sahne 14) neredeyse birebir aynı türbe açısını gösteriyor; 1855 depremi veya türbenin yıkılıp yeniden yapılmasına dair hiçbir görsel anlatım veya değişim içermiyor.",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Görselde Orta Asya tipi Moğol yurt çadırları kullanılmış; beylik dönemine ait Osmanlı obası için tipik kıl çadırlar yerine belirgin şekilde yurt çadırı formu hakim.",
+   "sahne": 17
+  }
+ ],
+ "eksik": [],
+ "ortalama_puan": 8.0,
+ "zaman": "2026-11-21T20:43:21Z"
+}
