@@ -1,0 +1,98 @@
+{
+ "asama": "gorsel",
+ "durum": "uyari",
+ "ozet": "14/14 görsel",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 2
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 5
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 12
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka incelemesi atlandı: Gemini yanıt vermedi (gemini-3.8-flash 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. )"
+  }
+ ],
+ "eksik": [],
+ "zaman": "2026-11-22T12:06:52Z"
+}

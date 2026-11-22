@@ -1,0 +1,13 @@
+{
+ "asama": "ses",
+ "durum": "tamam",
+ "ozet": "56 sn",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "metin-ses karşılaştırması atlandı: Gemini yanıt vermedi (gemini-3.7-flash 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. )"
+  }
+ ],
+ "sure": 56.3,
+ "zaman": "2026-11-22T12:00:49Z"
+}
