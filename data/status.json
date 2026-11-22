@@ -21,13 +21,13 @@
   "durum": "tamam",
   "mesaj": "aktas-golu-12-ada videosu hazır",
   "cikti": "release:video-aktas-golu-12-ada",
-  "zaman": "2026-11-22T12:55:02Z"
+  "zaman": "2026-11-22T13:09:57Z"
  },
  "kontrol": {
   "durum": "tamam",
   "mesaj": "aktas-golu-12-ada: kurgu ✓",
   "cikti": "projects/aktas-golu-12-ada/kontrol",
-  "zaman": "2026-11-22T12:54:58Z"
+  "zaman": "2026-11-22T13:09:53Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
