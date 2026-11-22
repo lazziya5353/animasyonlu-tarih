@@ -44,6 +44,10 @@
       "sub": "İKİYE BÖLÜNMÜŞ GÖL",
       "label": "SINIR",
       "fx": [],
+      "video": "videos/harita.mp4",
+      "v_bas": 3.8,
+      "v_son": 6.3,
+      "v_son_tam": true,
       "image": "images/s04.jpg",
       "prompt": "Aktaş Gölü"
     },
@@ -55,6 +59,10 @@
       "sub": "SUYUN İÇİNDEN",
       "label": "SINIR",
       "fx": [],
+      "video": "videos/harita.mp4",
+      "v_bas": 0.0,
+      "v_son": 2.0,
+      "v_son_tam": true,
       "image": "images/s05.jpg",
       "prompt": "Aktaş Gölü"
     },
@@ -66,6 +74,10 @@
       "sub": "27 KM²'NİN YARISINDAN FAZLASI",
       "label": "PAY",
       "fx": [],
+      "video": "videos/harita.mp4",
+      "v_bas": 1.5,
+      "v_son": 3.9,
+      "v_son_tam": true,
       "image": "images/s06.jpg",
       "prompt": "Aktaş Gölü"
     },
@@ -77,6 +89,10 @@
       "sub": "HEPSİ BİZDE",
       "label": "ADALAR",
       "fx": [],
+      "video": "videos/harita.mp4",
+      "v_bas": 6.0,
+      "v_son": 9.5,
+      "v_son_tam": true,
       "image": "images/s07.jpg",
       "prompt": "Aktaş Gölü"
     },

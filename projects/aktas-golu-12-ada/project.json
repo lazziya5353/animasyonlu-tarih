@@ -87,7 +87,10 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/harita.mp4",
+   "v_bas": 3.8,
+   "v_son": 6.3
   },
   {
    "image": "images/s05.jpg",
@@ -108,7 +111,10 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/harita.mp4",
+   "v_bas": 0.0,
+   "v_son": 2.0
   },
   {
    "image": "images/s06.jpg",
@@ -129,7 +135,10 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/harita.mp4",
+   "v_bas": 1.5,
+   "v_son": 3.9
   },
   {
    "image": "images/s07.jpg",
@@ -150,7 +159,10 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/harita.mp4",
+   "v_bas": 6.0,
+   "v_son": 9.5
   },
   {
    "image": "images/s08.jpg",
