@@ -50,7 +50,7 @@
   {
    "image": "images/s03.jpg",
    "start": 6.97,
-   "end": 10.25,
+   "end": 10.23,
    "lines": [
     "Adı Aktaş Gölü; Gürcüler ona Kartsakhi diyor."
    ],
@@ -70,7 +70,7 @@
   },
   {
    "image": "images/s04.jpg",
-   "start": 10.25,
+   "start": 10.23,
    "end": 13.87,
    "lines": [
     "Göl ikiye bölünmüş: bir yanı Türkiye, bir yanı Gürcistan."
@@ -87,7 +87,10 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/harita.mp4",
+   "v_bas": 3.8,
+   "v_son": 6.3
   },
   {
    "image": "images/s05.jpg",
@@ -108,7 +111,10 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/harita.mp4",
+   "v_bas": 0.0,
+   "v_son": 2.0
   },
   {
    "image": "images/s06.jpg",
@@ -129,7 +135,10 @@
     0.5,
     0.5,
     0.55
-   ]
+   ],
+   "video": "videos/harita.mp4",
+   "v_bas": 1.5,
+   "v_son": 3.9
   },
   {
    "image": "images/s07.jpg",
@@ -150,12 +159,15 @@
     0.55,
     0.5,
     0.5
-   ]
+   ],
+   "video": "videos/harita.mp4",
+   "v_bas": 6.0,
+   "v_son": 9.5
   },
   {
    "image": "images/s08.jpg",
    "start": 26.110000000000003,
-   "end": 29.830000000000002,
+   "end": 30.650000000000002,
    "lines": [
     "Büyük Ada, Başak Ada, Koçak Ada, Ufak Ada… hiçbirinde yerleşim yok."
    ],
@@ -175,8 +187,8 @@
   },
   {
    "image": "images/s09.jpg",
-   "start": 29.830000000000002,
-   "end": 33.93,
+   "start": 30.650000000000002,
+   "end": 33.95,
    "lines": [
     "Bu sınır 1921 Moskova Antlaşması'yla çizildi."
    ],
@@ -198,8 +210,8 @@
   },
   {
    "image": "images/s10.jpg",
-   "start": 33.93,
-   "end": 38.870000000000005,
+   "start": 33.95,
+   "end": 38.89,
    "lines": [
     "Kışın göl tamamen donuyor; köylüler hayvanlarını sulamak için buzu baltayla kırıyor."
    ],
@@ -219,8 +231,8 @@
   },
   {
    "image": "images/s11.jpg",
-   "start": 38.870000000000005,
-   "end": 41.57,
+   "start": 38.89,
+   "end": 41.550000000000004,
    "lines": [
     "Baharda ise adalar pelikanlarla doluyor."
    ],
@@ -240,8 +252,8 @@
   },
   {
    "image": "images/s12.jpg",
-   "start": 41.57,
-   "end": 45.61,
+   "start": 41.550000000000004,
+   "end": 45.63,
    "lines": [
     "Ak pelikan ile tepeli pelikanın Türkiye'de birlikte ürediği tek yer burası."
    ],
@@ -261,8 +273,8 @@
   },
   {
    "image": "images/s13.jpg",
-   "start": 45.61,
-   "end": 50.35,
+   "start": 45.63,
+   "end": 50.33,
    "lines": [
     "Kuşlar rahatsız olmasın diye kıyıya 2,6 kilometrelik ses duvarı bile örüldü."
    ],
@@ -282,7 +294,7 @@
   },
   {
    "image": "images/s14.jpg",
-   "start": 50.35,
+   "start": 50.33,
    "end": 58.480000000000004,
    "lines": [
     "Sen Aktaş Gölü'nü daha önce duymuş muydun? Yorumlara yaz.",
@@ -374,7 +386,7 @@
    "text": "Adı Aktaş Gölü; Gürcüler ona Kartsakhi diyor."
   },
   {
-   "start": 10.4,
+   "start": 10.38,
    "end": 13.62,
    "text": "Göl ikiye bölünmüş: bir yanı Türkiye, bir yanı Gürcistan."
   },
@@ -395,36 +407,36 @@
   },
   {
    "start": 26.26,
-   "end": 29.95,
+   "end": 30.34,
    "text": "Büyük Ada, Başak Ada, Koçak Ada, Ufak Ada… hiçbirinde yerleşim yok."
   },
   {
-   "start": 29.98,
+   "start": 30.8,
    "end": 33.76,
    "text": "Bu sınır 1921 Moskova Antlaşması'yla çizildi."
   },
   {
-   "start": 34.08,
+   "start": 34.1,
    "end": 38.52,
    "text": "Kışın göl tamamen donuyor; köylüler hayvanlarını sulamak için buzu baltayla kırıyor."
   },
   {
-   "start": 39.02,
-   "end": 41.2,
+   "start": 39.04,
+   "end": 41.18,
    "text": "Baharda ise adalar pelikanlarla doluyor."
   },
   {
-   "start": 41.72,
+   "start": 41.7,
    "end": 45.38,
    "text": "Ak pelikan ile tepeli pelikanın Türkiye'de birlikte ürediği tek yer burası."
   },
   {
-   "start": 45.76,
-   "end": 49.96,
+   "start": 45.78,
+   "end": 49.94,
    "text": "Kuşlar rahatsız olmasın diye kıyıya 2,6 kilometrelik ses duvarı bile örüldü."
   },
   {
-   "start": 50.5,
+   "start": 50.48,
    "end": 53.54,
    "text": "Sen Aktaş Gölü'nü daha önce duymuş muydun? Yorumlara yaz."
   },
