@@ -40,8 +40,8 @@
       "lines": [
         "Göl ikiye bölünmüş: bir yanı Türkiye, bir yanı Gürcistan."
       ],
-      "big": "TÜRKİYE | GÜRCİSTAN",
-      "sub": "İKİYE BÖLÜNMÜŞ GÖL",
+      "big": "",
+      "sub": "",
       "label": "SINIR",
       "fx": [],
       "video": "videos/harita.mp4",
@@ -55,8 +55,8 @@
       "lines": [
         "Sınır çizgisi suyun içinden, gölün en derin hattından geçiyor."
       ],
-      "big": "SINIR",
-      "sub": "SUYUN İÇİNDEN",
+      "big": "",
+      "sub": "",
       "label": "SINIR",
       "fx": [],
       "video": "videos/harita.mp4",
@@ -70,8 +70,8 @@
       "lines": [
         "27 kilometrekarelik gölün yaklaşık 14 kilometrekaresi bizde."
       ],
-      "big": "14 KM²",
-      "sub": "27 KM²'NİN YARISINDAN FAZLASI",
+      "big": "",
+      "sub": "",
       "label": "PAY",
       "fx": [],
       "video": "videos/harita.mp4",
@@ -85,8 +85,8 @@
       "lines": [
         "Ama asıl şaşırtıcı olan şu: 12 adanın tamamı Türk tarafında kaldı."
       ],
-      "big": "12 / 12",
-      "sub": "HEPSİ BİZDE",
+      "big": "",
+      "sub": "",
       "label": "ADALAR",
       "fx": [],
       "video": "videos/harita.mp4",
@@ -179,14 +179,7 @@
   ],
   "finale": "",
   "maps": [],
-  "cards": [
-    {
-      "scene": 5,
-      "value": 14,
-      "unit": "KM²",
-      "small": "27 KM²'NİN"
-    }
-  ],
+  "cards": [],
   "eras": [
     {
       "name": "GÖL",
