@@ -1,0 +1,19 @@
+{
+ "asama": "kurgu",
+ "durum": "tamam",
+ "ozet": "59 sn, -14 LUFS, senkron 15/15",
+ "maddeler": [
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “TÜRKİYE | GÜRCİSTAN”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.8-flash: The read operation timed out)"
+  }
+ ],
+ "sure": 59.0,
+ "lufs": -14.5,
+ "senkron": "15/15",
+ "zaman": "2026-11-22T12:28:24Z"
+}

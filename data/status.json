@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "derinkuyu-yeralti-sehri videosu hazır",
-  "cikti": "release:video-derinkuyu-yeralti-sehri",
-  "zaman": "2026-11-15T12:02:08Z"
+  "mesaj": "aktas-golu-12-ada videosu hazır",
+  "cikti": "release:video-aktas-golu-12-ada",
+  "zaman": "2026-11-22T12:28:29Z"
  },
  "kontrol": {
   "durum": "tamam",
-  "mesaj": "aktas-golu-12-ada: gorsel !",
+  "mesaj": "aktas-golu-12-ada: kurgu ✓",
   "cikti": "projects/aktas-golu-12-ada/kontrol",
-  "zaman": "2026-11-22T12:06:52Z"
+  "zaman": "2026-11-22T12:28:24Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
