@@ -1,0 +1,343 @@
+{
+ "title": "Ardahan'daki 12 Adamız – Aktaş Gölü",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "ARDAHAN'DAKİ 12 ADAMIZ",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ardahan'daki 12 adamızı hiç duydun mu?"
+   ],
+   "big": "12 ADA",
+   "sub": "ARDAHAN",
+   "year": null,
+   "label": "AKTAŞ GÖLÜ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bu adalar denizde değil, 1.800 metre yükseklikteki bir gölde."
+   ],
+   "big": "1.800 M",
+   "sub": "YÜKSEKLİKTE BİR GÖL",
+   "year": null,
+   "label": "ÇILDIR",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Adı Aktaş Gölü; Gürcüler ona Kartsakhi diyor."
+   ],
+   "big": "AKTAŞ",
+   "sub": "KARTSAKHİ",
+   "year": null,
+   "label": "ÇILDIR",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Göl ikiye bölünmüş: bir yanı Türkiye, bir yanı Gürcistan."
+   ],
+   "big": "TÜRKİYE | GÜRCİSTAN",
+   "sub": "İKİYE BÖLÜNMÜŞ GÖL",
+   "year": null,
+   "label": "SINIR",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Sınır çizgisi suyun içinden, gölün en derin hattından geçiyor."
+   ],
+   "big": "SINIR",
+   "sub": "SUYUN İÇİNDEN",
+   "year": null,
+   "label": "SINIR",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "27 kilometrekarelik gölün yaklaşık 14 kilometrekaresi bizde."
+   ],
+   "big": "14 KM²",
+   "sub": "27 KM²'NİN YARISINDAN FAZLASI",
+   "year": null,
+   "label": "PAY",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ama asıl şaşırtıcı olan şu: 12 adanın tamamı Türk tarafında kaldı."
+   ],
+   "big": "12 / 12",
+   "sub": "HEPSİ BİZDE",
+   "year": null,
+   "label": "ADALAR",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Büyük Ada, Başak Ada, Koçak Ada, Ufak Ada… hiçbirinde yerleşim yok."
+   ],
+   "big": "ISSIZ",
+   "sub": "BÜYÜK · BAŞAK · KOÇAK · UFAK",
+   "year": null,
+   "label": "ADALAR",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bu sınır 1921 Moskova Antlaşması'yla çizildi."
+   ],
+   "big": "1921",
+   "sub": "MOSKOVA ANTLAŞMASI",
+   "year": null,
+   "label": "TARİH",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Kışın göl tamamen donuyor; köylüler hayvanlarını sulamak için buzu baltayla kırıyor."
+   ],
+   "big": "BUZ",
+   "sub": "BALTAYLA KIRILIYOR",
+   "year": null,
+   "label": "KIŞ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Baharda ise adalar pelikanlarla doluyor."
+   ],
+   "big": "BAHAR",
+   "sub": "PELİKANLAR",
+   "year": null,
+   "label": "DOĞA",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ak pelikan ile tepeli pelikanın Türkiye'de birlikte ürediği tek yer burası."
+   ],
+   "big": "TEK YER",
+   "sub": "İKİ PELİKAN TÜRÜ",
+   "year": null,
+   "label": "DOĞA",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s13.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Kuşlar rahatsız olmasın diye kıyıya 2,6 kilometrelik ses duvarı bile örüldü."
+   ],
+   "big": "2,6 KM",
+   "sub": "SES DUVARI",
+   "year": null,
+   "label": "DOĞA",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s14.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Sen Aktaş Gölü'nü daha önce duymuş muydun? Yorumlara yaz.",
+    "Kaçırmamak için @animasyon.tarih'i takip et."
+   ],
+   "big": "SENCE?",
+   "sub": "YORUMLARA YAZ",
+   "year": null,
+   "label": "ARDAHAN",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "GÖL",
+   "from": 0,
+   "to": 7
+  },
+  {
+   "name": "TARİH",
+   "from": 8,
+   "to": 8
+  },
+  {
+   "name": "DOĞA",
+   "from": 9,
+   "to": 13
+  }
+ ],
+ "outro_plan": {
+  "title": "DUYMUŞ MUYDUN?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [
+  {
+   "scene": 5,
+   "value": 14,
+   "unit": "KM²",
+   "small": "27 KM²'NİN"
+  }
+ ],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true
+}

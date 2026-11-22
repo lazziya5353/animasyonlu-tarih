@@ -1,0 +1,231 @@
+{
+  "baslik": "Ardahan'daki 12 Adamız – Aktaş Gölü",
+  "hook": "ARDAHAN'DAKİ 12 ADAMIZ",
+  "map_region": "anadolu",
+  "sahneler": [
+    {
+      "lines": [
+        "Ardahan'daki 12 adamızı hiç duydun mu?"
+      ],
+      "big": "12 ADA",
+      "sub": "ARDAHAN",
+      "label": "AKTAŞ GÖLÜ",
+      "fx": [],
+      "image": "images/s01.jpg",
+      "prompt": "Aktaş Gölü"
+    },
+    {
+      "lines": [
+        "Bu adalar denizde değil, 1.800 metre yükseklikteki bir gölde."
+      ],
+      "big": "1.800 M",
+      "sub": "YÜKSEKLİKTE BİR GÖL",
+      "label": "ÇILDIR",
+      "fx": [],
+      "image": "images/s02.jpg",
+      "prompt": "Aktaş Gölü"
+    },
+    {
+      "lines": [
+        "Adı Aktaş Gölü; Gürcüler ona Kartsakhi diyor."
+      ],
+      "big": "AKTAŞ",
+      "sub": "KARTSAKHİ",
+      "label": "ÇILDIR",
+      "fx": [],
+      "image": "images/s03.jpg",
+      "prompt": "Aktaş Gölü"
+    },
+    {
+      "lines": [
+        "Göl ikiye bölünmüş: bir yanı Türkiye, bir yanı Gürcistan."
+      ],
+      "big": "TÜRKİYE | GÜRCİSTAN",
+      "sub": "İKİYE BÖLÜNMÜŞ GÖL",
+      "label": "SINIR",
+      "fx": [],
+      "image": "images/s04.jpg",
+      "prompt": "Aktaş Gölü"
+    },
+    {
+      "lines": [
+        "Sınır çizgisi suyun içinden, gölün en derin hattından geçiyor."
+      ],
+      "big": "SINIR",
+      "sub": "SUYUN İÇİNDEN",
+      "label": "SINIR",
+      "fx": [],
+      "image": "images/s05.jpg",
+      "prompt": "Aktaş Gölü"
+    },
+    {
+      "lines": [
+        "27 kilometrekarelik gölün yaklaşık 14 kilometrekaresi bizde."
+      ],
+      "big": "14 KM²",
+      "sub": "27 KM²'NİN YARISINDAN FAZLASI",
+      "label": "PAY",
+      "fx": [],
+      "image": "images/s06.jpg",
+      "prompt": "Aktaş Gölü"
+    },
+    {
+      "lines": [
+        "Ama asıl şaşırtıcı olan şu: 12 adanın tamamı Türk tarafında kaldı."
+      ],
+      "big": "12 / 12",
+      "sub": "HEPSİ BİZDE",
+      "label": "ADALAR",
+      "fx": [],
+      "image": "images/s07.jpg",
+      "prompt": "Aktaş Gölü"
+    },
+    {
+      "lines": [
+        "Büyük Ada, Başak Ada, Koçak Ada, Ufak Ada… hiçbirinde yerleşim yok."
+      ],
+      "big": "ISSIZ",
+      "sub": "BÜYÜK · BAŞAK · KOÇAK · UFAK",
+      "label": "ADALAR",
+      "fx": [],
+      "image": "images/s08.jpg",
+      "prompt": "Aktaş Gölü"
+    },
+    {
+      "lines": [
+        "Bu sınır 1921 Moskova Antlaşması'yla çizildi."
+      ],
+      "big": "1921",
+      "sub": "MOSKOVA ANTLAŞMASI",
+      "label": "TARİH",
+      "fx": [
+        "dust"
+      ],
+      "image": "images/s09.jpg",
+      "prompt": "Aktaş Gölü"
+    },
+    {
+      "lines": [
+        "Kışın göl tamamen donuyor; köylüler hayvanlarını sulamak için buzu baltayla kırıyor."
+      ],
+      "big": "BUZ",
+      "sub": "BALTAYLA KIRILIYOR",
+      "label": "KIŞ",
+      "fx": [],
+      "image": "images/s10.jpg",
+      "prompt": "Aktaş Gölü"
+    },
+    {
+      "lines": [
+        "Baharda ise adalar pelikanlarla doluyor."
+      ],
+      "big": "BAHAR",
+      "sub": "PELİKANLAR",
+      "label": "DOĞA",
+      "fx": [],
+      "image": "images/s11.jpg",
+      "prompt": "Aktaş Gölü"
+    },
+    {
+      "lines": [
+        "Ak pelikan ile tepeli pelikanın Türkiye'de birlikte ürediği tek yer burası."
+      ],
+      "big": "TEK YER",
+      "sub": "İKİ PELİKAN TÜRÜ",
+      "label": "DOĞA",
+      "fx": [],
+      "image": "images/s12.jpg",
+      "prompt": "Aktaş Gölü"
+    },
+    {
+      "lines": [
+        "Kuşlar rahatsız olmasın diye kıyıya 2,6 kilometrelik ses duvarı bile örüldü."
+      ],
+      "big": "2,6 KM",
+      "sub": "SES DUVARI",
+      "label": "DOĞA",
+      "fx": [],
+      "image": "images/s13.jpg",
+      "prompt": "Aktaş Gölü"
+    },
+    {
+      "lines": [
+        "Sen Aktaş Gölü'nü daha önce duymuş muydun? Yorumlara yaz.",
+        "Kaçırmamak için @animasyon.tarih'i takip et."
+      ],
+      "big": "SENCE?",
+      "sub": "YORUMLARA YAZ",
+      "label": "ARDAHAN",
+      "fx": [],
+      "image": "images/s14.jpg",
+      "prompt": "Aktaş Gölü"
+    }
+  ],
+  "finale": "",
+  "maps": [],
+  "cards": [
+    {
+      "scene": 5,
+      "value": 14,
+      "unit": "KM²",
+      "small": "27 KM²'NİN"
+    }
+  ],
+  "eras": [
+    {
+      "name": "GÖL",
+      "from": 0,
+      "to": 7
+    },
+    {
+      "name": "TARİH",
+      "from": 8,
+      "to": 8
+    },
+    {
+      "name": "DOĞA",
+      "from": 9,
+      "to": 13
+    }
+  ],
+  "outro": {
+    "title": "DUYMUŞ MUYDUN?",
+    "line": "Yorumlara yaz"
+  },
+  "aciklama": "Ardahan'daki 12 adamızı biliyor musun? 🏝️🇹🇷\n\nÇıldır'daki Aktaş Gölü, Türkiye ile Gürcistan arasında ikiye bölünmüş bir göl.\n27 km²'lik gölün yaklaşık 14 km²'si bizde ve gölün içindeki 12 adanın TAMAMI Türk tarafında! 😄\n\n🏝️ Büyük Ada, Başak Ada, Koçak Ada, Ufak Ada… Hiçbirinde yerleşim yok, hepsi ıssız ve kayalık.\n🦩 Ak pelikan ile tepeli pelikanın Türkiye'de birlikte ürediği tek yer burası.\n🔇 Kuşlar rahatsız olmasın diye göl kenarına 2,6 km'lik ses duvarı örüldü.\n❄️ Kışın göl donuyor, köylüler hayvanlarını sulamak için buzu baltayla kırıyor.\n\n12 ada, hepsi bizim 😄\n\nSen Aktaş Gölü'nü daha önce duymuş muydun? Yorumlara yaz 👇\n\n🔔 Türkiye'nin saklı köşelerini kaçırmamak için @animasyon.tarih'i takip et",
+  "kanca_alternatifleri": [
+    "ARDAHAN'DAKİ 12 ADAMIZ"
+  ],
+  "aciklama_alternatifleri": [],
+  "hashtagler": [
+    "#aktaşgölü",
+    "#ardahan",
+    "#çıldır",
+    "#gürcistan",
+    "#12ada",
+    "#pelikan",
+    "#türkiye",
+    "#sınır",
+    "#keşfet",
+    "#reels",
+    "#doğa",
+    "#tarih",
+    "#türkiyeninsaklıcenneti",
+    "#animasyontarih"
+  ],
+  "kaynaklar": [
+    "Küre Ansiklopedisi Aktaş Gölü",
+    "Wikipedia Kartsakhi Lake",
+    "Kükrer vd. 2021",
+    "Milliyet 2024 ses bariyeri"
+  ],
+  "kontrol_notlari": [
+    "Ada sayısı bazı kaynaklarda 13; kullanıcı 12'yi seçti."
+  ],
+  "konu": "Aktaş Gölü",
+  "tarih": "",
+  "slug": "aktas-golu-12-ada",
+  "durum": "onaylandi",
+  "sade": true,
+  "seslendirme_metni": "Ardahan'daki on iki adamızı hiç duydun mu?\nBu adalar denizde değil, bin sekiz yüz metre yükseklikteki bir gölde.\nAdı Aktaş Gölü; Gürcüler ona Kartsakhi diyor.\nGöl ikiye bölünmüş: bir yanı Türkiye, bir yanı Gürcistan.\nSınır çizgisi suyun içinden, gölün en derin hattından geçiyor.\nyirmi yedi kilometrekarelik gölün yaklaşık on dört kilometrekaresi bizde.\nAma asıl şaşırtıcı olan şu: on iki adanın tamamı Türk tarafında kaldı.\nBüyük Ada, Başak Ada, Koçak Ada, Ufak Ada… hiçbirinde yerleşim yok.\nBu sınır bin dokuz yüz yirmi bir Moskova Antlaşması'yla çizildi.\nKışın göl tamamen donuyor; köylüler hayvanlarını sulamak için buzu baltayla kırıyor.\nBaharda ise adalar pelikanlarla doluyor.\nAk pelikan ile tepeli pelikanın Türkiye'de birlikte ürediği tek yer burası.\nKuşlar rahatsız olmasın diye kıyıya iki,altı kilometrelik ses duvarı bile örüldü.\nSen Aktaş Gölü'nü daha önce duymuş muydun? Yorumlara yaz.\nKaçırmamak için animasyon tarih'i takip et."
+}
