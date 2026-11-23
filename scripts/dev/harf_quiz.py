@@ -2,8 +2,8 @@
 """Harf quiz Reel renderer (soru -> 3 sn yay -> cevap akisi).
 Kullanim: harf_quiz.py script.json ses.wav cikti.mp4 [--timed project.timed.json] [--kapak kapak.jpg]
 script.json sahneleri: 0=intro, her harf icin (soru "X harfi. ...", cevap), son=outro.
-Ses, sessizliklere (silencedetect) gore kesilip yeniden dizilir: soru sesi, 3.0 sn sessiz yay,
-cevap sesi, 1.2 sn bekleme, 0.3 sn kararma. timed.json verilirse sinirlar en yakin sessizlige oturtulur,
+Ses, sessizliklere (silencedetect) gore kesilip yeniden dizilir: soru sesi, 2.5 sn sessiz yay,
+cevap sesi, 0.7 sn bekleme, 0.25 sn kararma; ses atempo ile hizlanir. timed.json verilirse sinirlar en yakin sessizlige oturtulur,
 verilmezse sessizlikler sirayla kullanilir.
 """
 import json, math, subprocess, sys, os, argparse
@@ -97,7 +97,8 @@ def silences(wav, d=0.12):
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("script"); ap.add_argument("wav"); ap.add_argument("out")
     ap.add_argument("--timed"); ap.add_argument("--kapak")
-    ap.add_argument("--pause", type=float, default=3.0); ap.add_argument("--hold", type=float, default=1.2)
+    ap.add_argument("--pause", type=float, default=2.5); ap.add_argument("--hold", type=float, default=0.7)
+    ap.add_argument("--tempo", type=float, default=1.08)
     a = ap.parse_args()
     import numpy as np
     S = [" ".join(x["lines"]) for x in json.load(open(a.script))["sahneler"]]
@@ -115,9 +116,25 @@ def main():
         im.save(a.kapak, quality=93)
     # --- sesi sessizliklerle 2n+2 parcaya bol
     SR = 48000
-    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", a.wav, "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", a.wav, "-af", f"atempo={a.tempo}", "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
     au = np.frombuffer(raw, np.float32); tot = len(au)/SR
-    sil = [x for x in silences(a.wav) if x[0] > 0.05 and x[1] < tot - 0.05]
+    fr = np.sqrt((au[:len(au)//480*480].reshape(-1, 480)**2).mean(1)); q = fr < 10**(-42/20); sil = []; j = 0
+    while j < len(q):  # kendi enerji tabanli sessizlik tespiti (10 ms kare, -42 dB, >=80 ms)
+        if q[j]:
+            k = j
+            while k < len(q) and q[k]: k += 1
+            if k - j >= 8: sil.append((j*0.01, k*0.01))
+            j = k
+        else: j += 1
+    q35 = fr < 10**(-35/20); sil35 = []; j = 0
+    while j < len(q35):
+        if q35[j]:
+            k = j
+            while k < len(q35) and q35[k]: k += 1
+            if k - j > 40: sil35.append((j*0.01, k*0.01))
+            j = k
+        else: j += 1
+    sil = [x for x in sil if x[0] > 0.05 and x[1] < tot - 0.05]
     if a.timed:
         sc = json.load(open(a.timed))["scenes"]; assert len(sc) == 2*n + 2
         gaps = []
@@ -126,22 +143,44 @@ def main():
             g = min(sil, key=lambda g: abs((g[0]+g[1])/2 - b))
             gaps.append(g if abs((g[0]+g[1])/2 - b) < 0.4 and g not in gaps else (b - 0.08, b + 0.06))
     else:
-        gaps = sorted(sorted(sil, key=lambda g: g[0]-g[1])[:2*n+1])
+        # metin uzunluguna gore DP hizalama: en uzun sessizlikleri secmek cumle-ici duraklari
+        # sahne siniri sanip soru/cevap seslerini kaydiriyordu (sessiz soru hatasi)
+        ch = [len(x) for x in S]; rate = tot/sum(ch); m = len(sil); K = 2*n + 1
+        mid = lambda j: (sil[j][0]+sil[j][1])/2
+        def cost(t0, t1, c):
+            return math.log(max(t1 - t0, 0.05)/(rate*c))**2
+        INF = float("inf"); D = [[INF]*m for _ in range(K)]; P = [[-1]*m for _ in range(K)]
+        cost0 = cost; cost = lambda t0, t1, c: cost0(t0, t1, c)
+        for j in range(m): D[0][j] = cost(0, mid(j), ch[0])
+        for k in range(1, K):
+            for j in range(k, m):
+                for i in range(k-1, j):
+                    v = D[k-1][i] + cost(mid(i), mid(j), ch[k]) - 1.5*(sil[j][1]-sil[j][0])
+                    if v < D[k][j]: D[k][j] = v; P[k][j] = i
+        j = min(range(m), key=lambda j: D[K-1][j] + cost(mid(j), tot, ch[-1])); idx = []
+        for k in range(K-1, -1, -1): idx.append(j); j = P[k][j]
+        gaps = [sil[j] for j in reversed(idx)]
     assert len(set(gaps)) == 2*n + 1, "sessizlik sayisi yetmiyor"
     edges = [(0.0, None)] + gaps + [(None, tot)]
     segs = []
     for k in range(2*n + 2):
         s0 = edges[k][1] - 0.06 if edges[k][1] is not None else 0.0
         s1 = edges[k+1][0] + 0.08 if edges[k+1][0] is not None else tot
-        segs.append(au[int(max(0, s0)*SR):int(s1*SR)])
+        sg = au[int(max(0, s0)*SR):int(s1*SR)].copy()
+        # 0.4 sn'den uzun ic sessizlikleri 0.25 sn'ye kisalt
+        ins = [g for g in sil35 if g[0] > s0 + 0.05 and g[1] < s1 - 0.05 and g[1] - g[0] > 0.4]
+        for g in reversed(ins):
+            c0 = int((g[0] - s0 + 0.125)*SR); c1 = int((g[1] - s0 - 0.125)*SR); sg = np.concatenate([sg[:c0], sg[c1:]])
+        f = min(240, len(sg)//2); r = np.linspace(0, 1, f, dtype=np.float32); sg[:f] *= r; sg[len(sg)-f:] *= r[::-1]
+        segs.append(sg)
     z = lambda t: np.zeros(int(t*SR), np.float32)
-    parts, t = [segs[0], z(0.3)], len(segs[0])/SR + 0.3
+    parts, t = [segs[0], z(0.2)], len(segs[0])/SR + 0.2
     ev = []  # (q_start, q_end, a_start, a_end, gone)
     for k in range(n):
         qa, aa = segs[1+2*k], segs[2+2*k]
-        qs = t; qe = qs + len(qa)/SR; as_ = qe + a.pause; ae = as_ + len(aa)/SR; gone = ae + a.hold + 0.3
-        parts += [qa, z(a.pause), aa, z(a.hold + 0.3)]; ev.append((qs, qe, as_, ae, gone)); t = gone
-    outro = t; parts += [segs[-1], z(1.2)]
+        qs = t; qe = qs + len(qa)/SR; as_ = qe + a.pause; ae = as_ + len(aa)/SR; gone = ae + a.hold + 0.25
+        parts += [qa, z(a.pause), aa, z(a.hold + 0.25)]; ev.append((qs, qe, as_, ae, gone)); t = gone
+    outro = t; parts += [segs[-1], z(1.0)]
     A = np.concatenate(parts); dur = len(A)/SR
     tmpa = a.out + ".a.wav"
     import wave
@@ -169,11 +208,11 @@ def main():
                 k = min(1, (t - as_)/0.3); center(im, cur+1, n, Q[cur][1], Q[cur][2], "", k, 0.9 + 0.1*k)
             else:
                 center(im, cur+1, n, Q[cur][1], "", "", 0, 1)
-            al = min(1, (t - qs)/0.4, max(0, (gone - t)/0.3))
+            al = min(1, (t - qs)/0.25, max(0, (gone - t)/0.25))
             if al < 1: im = Image.blend(bg, im, al)
         p.stdin.write(im.tobytes())
     p.stdin.close(); p.wait(); os.remove(tmpa)
-    json.dump([dict(harf=Q[i][0], soru_t=round(e[0], 2), cevap_t=round(e[2], 2)) for i, e in enumerate(ev)], open(a.out + ".times.json", "w"), ensure_ascii=False)
+    json.dump([dict(harf=Q[i][0], soru_t=round(e[0], 2), soru_bit=round(e[1], 2), cevap_t=round(e[2], 2), cevap_bit=round(e[3], 2)) for i, e in enumerate(ev)], open(a.out + ".times.json", "w"), ensure_ascii=False)
     print("sure", dur)
 
 if __name__ == "__main__": main()
