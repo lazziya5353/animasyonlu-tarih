@@ -21,13 +21,13 @@
   "durum": "tamam",
   "mesaj": "murad-1-3-36 videosu hazır",
   "cikti": "release:video-murad-1-3-36",
-  "zaman": "2026-11-23T10:39:30Z"
+  "zaman": "2026-11-23T11:03:51Z"
  },
  "kontrol": {
   "durum": "hata",
-  "mesaj": "murad-1-3-36: gorsel ✗",
+  "mesaj": "murad-1-3-36: kurgu ✗",
   "cikti": "projects/murad-1-3-36/kontrol",
-  "zaman": "2026-11-23T10:45:12Z"
+  "zaman": "2026-11-23T11:03:46Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
