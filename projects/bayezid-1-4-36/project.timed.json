@@ -122,7 +122,7 @@
    "big": "İSTANBUL",
    "sub": "KUŞATMA",
    "year": null,
-   "label": "GERÇEK FOTOĞRAF",
+   "label": "TEMSİLİ",
    "fx": [],
    "kb": [
     1.18,
@@ -136,14 +136,14 @@
   {
    "image": "images/s07.jpg",
    "start": 29.57,
-   "end": 33.75,
+   "end": 33.77,
    "lines": [
     "Boğaz'ın Anadolu yakasına bir kale yaptırdı: bugünkü Anadoluhisarı."
    ],
    "big": "ANADOLUHİSARI",
    "sub": "BOĞAZ'IN İLK KALESİ",
    "year": null,
-   "label": "GERÇEK FOTOĞRAF",
+   "label": "TEMSİLİ",
    "fx": [],
    "kb": [
     1.04,
@@ -156,15 +156,15 @@
   },
   {
    "image": "images/s08.jpg",
-   "start": 33.75,
-   "end": 37.910000000000004,
+   "start": 33.77,
+   "end": 37.89,
    "lines": [
     "İlk adı Güzelcehisar'dı ve Boğaz'daki ilk Osmanlı kalesiydi."
    ],
    "big": "GÜZELCEHİSAR",
    "sub": "İLK ADI",
    "year": null,
-   "label": "GERÇEK FOTOĞRAF",
+   "label": "TEMSİLİ",
    "fx": [],
    "kb": [
     1.18,
@@ -177,7 +177,7 @@
   },
   {
    "image": "images/s09.jpg",
-   "start": 37.910000000000004,
+   "start": 37.89,
    "end": 41.79,
    "lines": [
     "1396'da Niğbolu'da büyük bir Haçlı ordusunu dağıttı."
@@ -208,7 +208,7 @@
    "big": "20 CAMİ?",
    "sub": "ADAK",
    "year": null,
-   "label": "GERÇEK FOTOĞRAF",
+   "label": "TEMSİLİ",
    "fx": [],
    "kb": [
     1.18,
@@ -222,14 +222,14 @@
   {
    "image": "images/s11.jpg",
    "start": 45.89,
-   "end": 50.89,
+   "end": 51.15,
    "lines": [
     "Ama 20 cami yerine, 20 kubbeli tek bir cami yaptırdı: Bursa Ulu Camii."
    ],
    "big": "20 KUBBE",
    "sub": "BURSA ULU CAMİİ",
    "year": null,
-   "label": "GERÇEK FOTOĞRAF",
+   "label": "TEMSİLİ",
    "fx": [],
    "kb": [
     1.04,
@@ -242,7 +242,7 @@
   },
   {
    "image": "images/s12.jpg",
-   "start": 50.89,
+   "start": 51.15,
    "end": 56.95,
    "lines": [
     "Bir detay daha: Bu caminin şadırvanı dışarıda değil, caminin içinde, kubbenin tam altında."
@@ -250,7 +250,7 @@
    "big": "ŞADIRVAN",
    "sub": "CAMİNİN İÇİNDE",
    "year": null,
-   "label": "GERÇEK FOTOĞRAF",
+   "label": "TEMSİLİ",
    "fx": [],
    "kb": [
     1.18,
@@ -329,7 +329,7 @@
   {
    "image": "images/s16.jpg",
    "start": 71.92999999999999,
-   "end": 75.77,
+   "end": 75.78999999999999,
    "lines": [
     "Ordudaki Tatar birlikleri savaşın ortasında Timur'un tarafına geçti."
    ],
@@ -349,8 +349,8 @@
   },
   {
    "image": "images/s17.jpg",
-   "start": 75.77,
-   "end": 78.00999999999999,
+   "start": 75.78999999999999,
+   "end": 78.03,
    "lines": [
     "Yıldırım Bayezid yenildi ve esir düştü."
    ],
@@ -370,8 +370,8 @@
   },
   {
    "image": "images/s18.jpg",
-   "start": 78.00999999999999,
-   "end": 83.27,
+   "start": 78.03,
+   "end": 83.28999999999999,
    "lines": [
     "Bazı kaynaklar onun kafes içinde taşındığını anlatır, ama tarihçiler bunu tartışıyor."
    ],
@@ -391,8 +391,8 @@
   },
   {
    "image": "images/s19.jpg",
-   "start": 83.27,
-   "end": 87.72999999999999,
+   "start": 83.28999999999999,
+   "end": 87.71,
    "lines": [
     "Esaretten hiç kurtulamadı; bir yıl sonra Akşehir'de hayatını kaybetti."
    ],
@@ -412,8 +412,8 @@
   },
   {
    "image": "images/s20.jpg",
-   "start": 87.72999999999999,
-   "end": 92.13,
+   "start": 87.71,
+   "end": 92.14999999999999,
    "lines": [
     "Ardından oğulları taht için birbirleriyle savaştı: Fetret Devri başladı."
    ],
@@ -433,8 +433,8 @@
   },
   {
    "image": "images/s21.jpg",
-   "start": 92.13,
-   "end": 94.72999999999999,
+   "start": 92.14999999999999,
+   "end": 94.71,
    "lines": [
     "Osmanlı neredeyse dağılmanın eşiğine geldi."
    ],
@@ -454,7 +454,7 @@
   },
   {
    "image": "images/s22.jpg",
-   "start": 94.72999999999999,
+   "start": 94.71,
    "end": 99.25,
    "lines": [
     "Naaşı Bursa'ya getirildi ve kendi yaptırdığı külliyedeki türbesine defnedildi."
@@ -462,7 +462,7 @@
    "big": "BURSA",
    "sub": "YILDIRIM TÜRBESİ",
    "year": null,
-   "label": "GERÇEK FOTOĞRAF",
+   "label": "TEMSİLİ",
    "fx": [],
    "kb": [
     1.18,
@@ -571,12 +571,12 @@
    "text": "Boğaz'ın Anadolu yakasına bir kale yaptırdı: bugünkü Anadoluhisarı."
   },
   {
-   "start": 33.9,
+   "start": 33.92,
    "end": 37.64,
    "text": "İlk adı Güzelcehisar'dı ve Boğaz'daki ilk Osmanlı kalesiydi."
   },
   {
-   "start": 38.06,
+   "start": 38.04,
    "end": 41.64,
    "text": "1396'da Niğbolu'da büyük bir Haçlı ordusunu dağıttı."
   },
@@ -587,11 +587,11 @@
   },
   {
    "start": 46.04,
-   "end": 51.01,
+   "end": 51.27,
    "text": "Ama 20 cami yerine, 20 kubbeli tek bir cami yaptırdı: Bursa Ulu Camii."
   },
   {
-   "start": 51.04,
+   "start": 51.3,
    "end": 56.7,
    "text": "Bir detay daha: Bu caminin şadırvanı dışarıda değil, caminin içinde, kubbenin tam altında."
   },
@@ -602,12 +602,12 @@
   },
   {
    "start": 61.92,
-   "end": 65.68,
+   "end": 65.66,
    "text": "Sonra karşısına çağın en korkulan hükümdarı çıktı: Timur."
   },
   {
    "start": 66.12,
-   "end": 71.64,
+   "end": 71.66,
    "text": "1402'de Ankara Savaşı'nda iki ordu karşılaştı. Timur'un ordusunda savaş filleri bile vardı."
   },
   {
@@ -616,42 +616,42 @@
    "text": "Ordudaki Tatar birlikleri savaşın ortasında Timur'un tarafına geçti."
   },
   {
-   "start": 75.92,
-   "end": 78.13,
+   "start": 75.94,
+   "end": 78.15,
    "text": "Yıldırım Bayezid yenildi ve esir düştü."
   },
   {
-   "start": 78.16,
-   "end": 83.02,
+   "start": 78.18,
+   "end": 83.04,
    "text": "Bazı kaynaklar onun kafes içinde taşındığını anlatır, ama tarihçiler bunu tartışıyor."
   },
   {
-   "start": 83.42,
-   "end": 87.48,
+   "start": 83.44,
+   "end": 87.46,
    "text": "Esaretten hiç kurtulamadı; bir yıl sonra Akşehir'de hayatını kaybetti."
   },
   {
-   "start": 87.88,
+   "start": 87.86,
    "end": 91.88,
    "text": "Ardından oğulları taht için birbirleriyle savaştı: Fetret Devri başladı."
   },
   {
-   "start": 92.28,
-   "end": 94.36,
+   "start": 92.3,
+   "end": 94.38,
    "text": "Osmanlı neredeyse dağılmanın eşiğine geldi."
   },
   {
-   "start": 94.88,
+   "start": 94.86,
    "end": 99.06,
    "text": "Naaşı Bursa'ya getirildi ve kendi yaptırdığı külliyedeki türbesine defnedildi."
   },
   {
    "start": 99.4,
-   "end": 102.58,
+   "end": 102.6,
    "text": "Sence Yıldırım Bayezid Timur'u yenebilir miydi? Yorumlara yaz."
   },
   {
-   "start": 102.96,
+   "start": 102.98,
    "end": 106.86,
    "text": "Sıradaki bölüm: Çelebi Mehmed. Kaçırmamak için @animasyon.tarih'i takip et."
   }

@@ -21,11 +21,11 @@
   },
   {
    "seviye": "bilgi",
-   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.6-flash: The read operation timed out)"
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.7-flash: The read operation timed out)"
   }
  ],
  "sure": 109.9,
  "lufs": -14.5,
  "senkron": "24/24",
- "zaman": "2026-11-23T11:29:13Z"
+ "zaman": "2026-11-23T11:59:56Z"
 }

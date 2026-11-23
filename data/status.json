@@ -21,13 +21,13 @@
   "durum": "tamam",
   "mesaj": "bayezid-1-4-36 videosu hazır",
   "cikti": "release:video-bayezid-1-4-36",
-  "zaman": "2026-11-23T11:29:19Z"
+  "zaman": "2026-11-23T12:00:01Z"
  },
  "kontrol": {
   "durum": "hata",
   "mesaj": "bayezid-1-4-36: kurgu ✗",
   "cikti": "projects/bayezid-1-4-36/kontrol",
-  "zaman": "2026-11-23T11:29:13Z"
+  "zaman": "2026-11-23T11:59:56Z"
  },
  "yorumcu": {
   "durum": "bekliyor",
