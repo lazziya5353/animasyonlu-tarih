@@ -1,13 +1,8 @@
 {
  "asama": "gorsel",
- "durum": "uyari",
- "ozet": "15/15 görsel",
+ "durum": "hata",
+ "ozet": "21/21 görsel, ortalama puan 7.6/10",
  "maddeler": [
-  {
-   "seviye": "uyari",
-   "mesaj": "1. sahnedeki görselle neredeyse aynı",
-   "sahne": 2
-  },
   {
    "seviye": "uyari",
    "mesaj": "5. sahnedeki görselle neredeyse aynı",
@@ -15,17 +10,12 @@
   },
   {
    "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
    "mesaj": "1. sahnedeki görselle neredeyse aynı",
-   "sahne": 7
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "2. sahnedeki görselle neredeyse aynı",
-   "sahne": 7
-  },
-  {
-   "seviye": "uyari",
-   "mesaj": "8. sahnedeki görselle neredeyse aynı",
    "sahne": 9
   },
   {
@@ -36,28 +26,130 @@
   {
    "seviye": "uyari",
    "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 13
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
    "sahne": 14
   },
   {
    "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
    "mesaj": "1. sahnedeki görselle neredeyse aynı",
-   "sahne": 15
+   "sahne": 21
   },
   {
    "seviye": "uyari",
-   "mesaj": "2. sahnedeki görselle neredeyse aynı",
-   "sahne": 15
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
   },
   {
    "seviye": "uyari",
-   "mesaj": "7. sahnedeki görselle neredeyse aynı",
-   "sahne": 15
+   "mesaj": "Görsel üzerinde Osmanlıca ve Latince harfler/yazılar (filigran/baskı izleri) mevcut.",
+   "sahne": 1
   },
   {
-   "seviye": "bilgi",
-   "mesaj": "yapay zeka incelemesi atlandı: Gemini yanıt vermedi (gemini-3.7-flash: The read operation timed out)"
+   "seviye": "uyari",
+   "mesaj": "Bina girişinde modern metal korkuluklar, tabelalar ve günümüz nesneleri görülüyor.",
+   "sahne": 3
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "14. yüzyıl (I. Murad dönemi) Osmanlı ordusunda modern kırmızı zemin üzerine beyaz ay-yıldızlı Türk bayrağı kullanılması anakronizmdir.",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Yapay zeka üretimi askerlerin ok ve yay tutuş pozisyonlarında ile ellerinde hafif deformasyonlar mevcut.",
+   "sahne": 5
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Sahne 5 ile tamamen aynı görsel kullanılmış. 'Pençik sistemi ve esirler' konusunu temsil etmiyor.",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Bursa Hüdavendigâr Camii'nin günümüzdeki fotoğrafı kullanılmış; ön plandaki modern demir parmaklıklar ve yönlendirme levhaları tarihsel anlatıyla tam örtüşmeyebilir.",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Fotoğrafta günümüz cami içi aydınlatma armatürleri ve elektrikli saat gibi modern detaylar yer almaktadır.",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Tarihi gravür temsili uygundur ancak üst ve yan kısımlarda Latin harfleri ve Osmanlıca yazılar kırpılmış olarak görülmektedir.",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Savaş tasvirindeki bazı bayraklarda detaylar belirsizdir ve anachronistic bayrak tasarımları bulunabilir.",
+   "sahne": 10
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Sahne 10 ile tamamen aynı görsel kullanılmıştır. 'Zafer ama...' ve savaş alanını gezme anlatısına uygun yeni bir görsel verilmemiştir.",
+   "sahne": 11
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Proje kurallarına göre I. Murad ve gerçek tarihi kişilerin yüzleri yapay zekayla açıkça çizilemez (yalnızca uzaktan/arkadan siluet olabilir). Bu görselde I. Murad ve Miloş Obiliç'in yüzleri net ve yakın plandan çizilmiştir.",
+   "sahne": 12
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "I. Murad'ın yüzü net ve detaylı çizilmiş; proje kurallarına göre gerçek tarihi şahsiyetlerin yüz çiziminde hassasiyet gerekebilir.",
+   "sahne": 13
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Fotoğrafta modern giyimli (kot pantolonlu/pembe tişörtlü) insanlar ve modern kilit/bahçe unsurları görünmektedir, döneme aykırıdır.",
+   "sahne": 16
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Arka planda modern saksı bitkileri, modern ahşap pencere doğramaları ve sağ üstte garip bir beyaz örtülü nesne/figür hatası mevcuttur.",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Sahne 15 ile birebir aynı görsel kullanılmıştır.",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Görsel günümüzden çekilmiş gerçek bir fotoğraf olup arka planda modern kıyafetli insanlar görünmektedir.",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Görselin üst kısımlarında ve çerçeve kenarında kısmen kesilmiş tarihi metin/harfler bulunmaktadır.",
+   "sahne": 21
   }
  ],
  "eksik": [],
- "zaman": "2026-11-23T10:17:14Z"
+ "ortalama_puan": 7.6,
+ "zaman": "2026-11-23T10:45:12Z"
 }
