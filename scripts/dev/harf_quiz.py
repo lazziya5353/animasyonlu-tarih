@@ -135,9 +135,9 @@ def main():
             if ansv: done.add(cur)
             pulse = int(3*math.sin(t*8)) if not ansv else 0
             dd = ImageDraw.Draw(im); ring(dd, letters, done, cur, pulse)
-            if t < as_:  # zamanlayici yayi: sorudan cevaba kadar saat yonunde azalir
+            if t < as_:  # zamanlayici yayi: sorudan cevaba kadar 12'den saat yonunde dolar
                 rem = 1 - (t - qs) / max(0.01, as_ - qs); r2 = 392
-                if rem > 0: dd.arc((CX-r2, CY-r2, CX+r2, CY+r2), -90 + 360*(1-rem), 270, fill=(200, 60, 50), width=6)
+                if rem < 1: dd.arc((CX-r2, CY-r2, CX+r2, CY+r2), -90, -90 + 360*(1-rem), fill=(200, 60, 50), width=6)
             if ansv:
                 k = min(1, (t - as_)/0.25); center(im, cur+1, n, Q[cur][1], Q[cur][2], Q[cur][3], k, 0.85 + 0.15*k)
             else:
