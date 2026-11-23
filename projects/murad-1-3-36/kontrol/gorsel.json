@@ -1,0 +1,63 @@
+{
+ "asama": "gorsel",
+ "durum": "uyari",
+ "ozet": "15/15 görsel",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 2
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 11
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka incelemesi atlandı: Gemini yanıt vermedi (gemini-3.7-flash: The read operation timed out)"
+  }
+ ],
+ "eksik": [],
+ "zaman": "2026-11-23T10:17:14Z"
+}
