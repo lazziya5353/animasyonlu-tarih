@@ -1,0 +1,17 @@
+{
+ "asama": "ses",
+ "durum": "hata",
+ "ozet": "107 sn",
+ "maddeler": [
+  {
+   "seviye": "hata",
+   "mesaj": "ses 107 sn; video Reels sınırını (90 sn) aşar"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "metin-ses karşılaştırması atlandı: Gemini yanıt vermedi (gemini-3.7-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more info)"
+  }
+ ],
+ "sure": 107.2,
+ "zaman": "2026-11-23T10:59:00Z"
+}

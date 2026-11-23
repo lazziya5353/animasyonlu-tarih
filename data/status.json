@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "murad-1-3-36: ses hazır",
-  "cikti": "projects/murad-1-3-36",
-  "zaman": "2026-11-23T10:38:52Z"
+  "mesaj": "bayezid-1-4-36: ses hazır",
+  "cikti": "projects/bayezid-1-4-36",
+  "zaman": "2026-11-23T10:52:01Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -25,9 +25,9 @@
  },
  "kontrol": {
   "durum": "hata",
-  "mesaj": "murad-1-3-36: gorsel ✗",
-  "cikti": "projects/murad-1-3-36/kontrol",
-  "zaman": "2026-11-23T10:45:12Z"
+  "mesaj": "bayezid-1-4-36: gorsel ✗",
+  "cikti": "projects/bayezid-1-4-36/kontrol",
+  "zaman": "2026-11-23T11:05:29Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

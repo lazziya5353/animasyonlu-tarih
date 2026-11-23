@@ -1,0 +1,114 @@
+{
+ "asama": "gorsel",
+ "durum": "hata",
+ "ozet": "23/23 görsel, ortalama puan 5.8/10",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 5
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 13
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 13
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Görselin çerçeve kenarlarında Osmanlıca yazılar mevcut.",
+   "sahne": 1
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "Savaş alanında padişah ilanı yerine sadece tuğra görseli kullanılmış.",
+   "sahne": 3
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselin aynısı tekrar kullanılmış, konu anlatımıyla uyumsuz.",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki tuğra görseli tekrar kullanılmış.",
+   "sahne": 5
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "İstanbul kuşatması anlatılırken modern binalar, kafeler ve şemsiyeler içeren günümüz görseli kullanılmış.",
+   "sahne": 6
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka incelemesi atlandı: Gemini yanıt vermedi (gemini-2.5-flash 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your)"
+  }
+ ],
+ "eksik": [],
+ "ortalama_puan": 5.8,
+ "zaman": "2026-11-23T11:05:29Z"
+}
