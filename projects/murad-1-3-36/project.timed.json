@@ -1,0 +1,451 @@
+{
+ "title": "3/36 I. Murad – Kimsenin Bilmediği Detaylar",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "SAVAŞ MEYDANINDA ŞEHİT DÜŞEN TEK PADİŞAH",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": 0.0,
+   "end": 4.47,
+   "lines": [
+    "Savaş meydanında şehit düşen tek Osmanlı padişahı: I. Murad."
+   ],
+   "big": "3/36",
+   "sub": "I. MURAD",
+   "year": null,
+   "label": "TEMSİLİ · 19. YY GRAVÜRÜ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": 4.47,
+   "end": 8.69,
+   "lines": [
+    "Ona Hüdavendigâr derlerdi; yani hükümdar, efendi."
+   ],
+   "big": "HÜDAVENDİGÂR",
+   "sub": "HÜKÜMDAR · EFENDİ",
+   "year": null,
+   "label": "TEMSİLİ · 19. YY GRAVÜRÜ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": 8.69,
+   "end": 12.95,
+   "lines": [
+    "Edirne'yi aldı ve Osmanlı'nın başkentini ilk kez Avrupa'ya taşıdı."
+   ],
+   "big": "EDİRNE",
+   "sub": "İLK AVRUPA BAŞKENTİ",
+   "year": null,
+   "label": "FETİH",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": 12.95,
+   "end": 16.110000000000003,
+   "lines": [
+    "Bugün bildiğimiz Yeniçeri Ocağı onun döneminde kuruldu."
+   ],
+   "big": "YENİÇERİ",
+   "sub": "OCAĞIN DOĞUŞU",
+   "year": null,
+   "label": "ORDU",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": 16.110000000000003,
+   "end": 21.25,
+   "lines": [
+    "Peki şunu biliyor muydun? Bursa'daki camisi dünyada bir benzeri olmayan bir yapı."
+   ],
+   "big": "BURSA",
+   "sub": "HÜDAVENDİGÂR CAMİİ",
+   "year": null,
+   "label": "ESER",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": 21.25,
+   "end": 25.73,
+   "lines": [
+    "Alt katı cami, üst katı medrese; ibadet ve ilim aynı çatı altında."
+   ],
+   "big": "CAMİ + MEDRESE",
+   "sub": "AYNI ÇATI ALTINDA",
+   "year": null,
+   "label": "ESER",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": 25.73,
+   "end": 30.650000000000002,
+   "lines": [
+    "Bugün gördüğün I. Murad resimleri de yüzyıllar sonra hayal edilerek çizildi."
+   ],
+   "big": "TEMSİLİ",
+   "sub": "GERÇEK PORTRESİ YOK",
+   "year": null,
+   "label": "TEMSİLİ · 19. YY GRAVÜRÜ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": 30.650000000000002,
+   "end": 35.870000000000005,
+   "lines": [
+    "1389'da Kosova'da, Sırp liderliğindeki Balkan ittifakının karşısına çıktı."
+   ],
+   "big": "1389",
+   "sub": "KOSOVA",
+   "year": null,
+   "label": "SAVAŞ",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": 35.870000000000005,
+   "end": 39.730000000000004,
+   "lines": [
+    "Savaşı kazandı. Ama zafer anında, savaş alanını gezerken…"
+   ],
+   "big": "ZAFER",
+   "sub": "AMA…",
+   "year": null,
+   "label": "SAVAŞ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": 39.730000000000004,
+   "end": 45.39,
+   "lines": [
+    "Yaralı gibi yerde yatan bir Sırp şövalyesi, Miloş Obiliç, ayağa fırladı ve onu hançerledi."
+   ],
+   "big": "MİLOŞ",
+   "sub": "HANÇER",
+   "year": null,
+   "label": "SUİKAST",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": 45.39,
+   "end": 48.35,
+   "lines": [
+    "Padişah, kazandığı savaşın meydanında şehit düştü."
+   ],
+   "big": "ŞEHİT",
+   "sub": "ZAFER MEYDANINDA",
+   "year": null,
+   "label": "1389",
+   "fx": [
+    "ember_few"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": 48.35,
+   "end": 53.21,
+   "lines": [
+    "İşte en az bilinen detay: Padişahın iç organları orada, Kosova'da toprağa verildi."
+   ],
+   "big": "KOSOVA",
+   "sub": "MEŞHED-İ HÜDAVENDİGÂR",
+   "year": null,
+   "label": "TÜRBE",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s13.jpg",
+   "start": 53.21,
+   "end": 57.11,
+   "lines": [
+    "Bedeni ise Bursa'ya getirilip Çekirge'deki türbesine defnedildi."
+   ],
+   "big": "BURSA",
+   "sub": "ÇEKİRGE TÜRBESİ",
+   "year": null,
+   "label": "TÜRBE",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s14.jpg",
+   "start": 57.11,
+   "end": 59.79,
+   "lines": [
+    "Kosova'daki türbe bugün hâlâ ziyaret ediliyor."
+   ],
+   "big": "BUGÜN",
+   "sub": "HÂLÂ ZİYARET EDİLİYOR",
+   "year": null,
+   "label": "TÜRBE",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s15.jpg",
+   "start": 59.79,
+   "end": 70.27225,
+   "lines": [
+    "Sence I. Murad'ın en büyük mirası hangisi? Yorumlara yaz.",
+    "Sıradaki bölüm: Yıldırım Bayezid. Kaçırmamak için @animasyon.tarih'i takip et."
+   ],
+   "big": "SIRADAKİ",
+   "sub": "4/36 · YILDIRIM BAYEZİD",
+   "year": null,
+   "label": "I. MURAD",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "HÜKÜMDAR",
+   "from": 0,
+   "to": 6
+  },
+  {
+   "name": "KOSOVA",
+   "from": 7,
+   "to": 13
+  },
+  {
+   "name": "SON",
+   "from": 14,
+   "to": 14
+  }
+ ],
+ "outro_plan": {
+  "title": "EN BÜYÜK MİRAS?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true,
+ "outro": {
+  "start": 64.57225,
+  "title": "EN BÜYÜK MİRAS?",
+  "line": "Yorumlara yaz",
+  "line_at": 66.87225
+ },
+ "duration": 70.77,
+ "jumps": [],
+ "captions": [
+  {
+   "start": 0.4,
+   "end": 4.24,
+   "text": "Savaş meydanında şehit düşen tek Osmanlı padişahı: I. Murad."
+  },
+  {
+   "start": 4.62,
+   "end": 8.46,
+   "text": "Ona Hüdavendigâr derlerdi; yani hükümdar, efendi."
+  },
+  {
+   "start": 8.84,
+   "end": 12.76,
+   "text": "Edirne'yi aldı ve Osmanlı'nın başkentini ilk kez Avrupa'ya taşıdı."
+  },
+  {
+   "start": 13.1,
+   "end": 15.94,
+   "text": "Bugün bildiğimiz Yeniçeri Ocağı onun döneminde kuruldu."
+  },
+  {
+   "start": 16.26,
+   "end": 21.12,
+   "text": "Peki şunu biliyor muydun? Bursa'daki camisi dünyada bir benzeri olmayan bir yapı."
+  },
+  {
+   "start": 21.4,
+   "end": 25.85,
+   "text": "Alt katı cami, üst katı medrese; ibadet ve ilim aynı çatı altında."
+  },
+  {
+   "start": 25.88,
+   "end": 30.48,
+   "text": "Bugün gördüğün I. Murad resimleri de yüzyıllar sonra hayal edilerek çizildi."
+  },
+  {
+   "start": 30.8,
+   "end": 35.56,
+   "text": "1389'da Kosova'da, Sırp liderliğindeki Balkan ittifakının karşısına çıktı."
+  },
+  {
+   "start": 36.02,
+   "end": 39.58,
+   "text": "Savaşı kazandı. Ama zafer anında, savaş alanını gezerken…"
+  },
+  {
+   "start": 39.88,
+   "end": 45.24,
+   "text": "Yaralı gibi yerde yatan bir Sırp şövalyesi, Miloş Obiliç, ayağa fırladı ve onu hançerledi."
+  },
+  {
+   "start": 45.54,
+   "end": 48.16,
+   "text": "Padişah, kazandığı savaşın meydanında şehit düştü."
+  },
+  {
+   "start": 48.5,
+   "end": 53.33,
+   "text": "İşte en az bilinen detay: Padişahın iç organları orada, Kosova'da toprağa verildi."
+  },
+  {
+   "start": 53.36,
+   "end": 57.02,
+   "text": "Bedeni ise Bursa'ya getirilip Çekirge'deki türbesine defnedildi."
+  },
+  {
+   "start": 57.26,
+   "end": 59.54,
+   "text": "Kosova'daki türbe bugün hâlâ ziyaret ediliyor."
+  },
+  {
+   "start": 59.94,
+   "end": 63.28,
+   "text": "Sence I. Murad'ın en büyük mirası hangisi? Yorumlara yaz."
+  },
+  {
+   "start": 63.68,
+   "end": 67.86,
+   "text": "Sıradaki bölüm: Yıldırım Bayezid. Kaçırmamak için @animasyon.tarih'i takip et."
+  }
+ ]
+}
