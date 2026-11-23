@@ -85,7 +85,7 @@ def center(im, k, n, q, ans, hint, a_alpha, a_scale):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("q"); ap.add_argument("timed"); ap.add_argument("wav"); ap.add_argument("out")
-    ap.add_argument("--kapak"); ap.add_argument("--pause", type=float, default=1.5)
+    ap.add_argument("--kapak"); ap.add_argument("--pause", type=float, default=3.0)
     a = ap.parse_args()
     Q = json.load(open(a.q)); letters = [x[0] for x in Q]; n = len(Q)
     B = base()
@@ -134,16 +134,14 @@ def main():
             done = set(range(cur)); ansv = t >= as_
             if ansv: done.add(cur)
             pulse = int(3*math.sin(t*8)) if not ansv else 0
-            prog = None
-            if qe <= t < as_: prog = (t - qe) / max(0.01, as_ - qe)
-            dd = ImageDraw.Draw(im); ring(dd, letters, done, cur, pulse, prog)
+            dd = ImageDraw.Draw(im); ring(dd, letters, done, cur, pulse)
+            if t < as_:  # zamanlayici yayi: sorudan cevaba kadar saat yonunde azalir
+                rem = 1 - (t - qs) / max(0.01, as_ - qs); r2 = 392
+                if rem > 0: dd.arc((CX-r2, CY-r2, CX+r2, CY+r2), -90 + 360*(1-rem), 270, fill=(200, 60, 50), width=6)
             if ansv:
                 k = min(1, (t - as_)/0.25); center(im, cur+1, n, Q[cur][1], Q[cur][2], Q[cur][3], k, 0.85 + 0.15*k)
             else:
                 center(im, cur+1, n, Q[cur][1], "", "", 0, 1)
-                if t >= qe:
-                    cd = 3 - min(2, int((t - qe) / (P/3)))
-                    ImageDraw.Draw(im).text((CX, 1180), str(cd), font=F("Cinzel-700", 120), fill=(225, 50, 45), anchor="mm")
         p.stdin.write(im.tobytes())
     p.stdin.close(); p.wait(); os.remove(tmpa)
     json.dump([dict(harf=Q[i][0], cevap_t=round(e[2], 2)) for i, e in enumerate(ev)], open(a.out + ".times.json", "w"), ensure_ascii=False)
