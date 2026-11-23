@@ -1,8 +1,12 @@
 {
  "asama": "kurgu",
- "durum": "tamam",
- "ozet": "71 sn, -14 LUFS, senkron 16/16",
+ "durum": "hata",
+ "ozet": "105 sn, -15 LUFS, senkron 22/22",
  "maddeler": [
+  {
+   "seviye": "hata",
+   "mesaj": "video 105 sn; Instagram'a otomatik yükleme sınırı 90 sn"
+  },
   {
    "seviye": "bilgi",
    "mesaj": "sığmadığı için küçültüldü: “SAVAŞ MEYDANINDA ŞEHİT DÜŞEN TEK PADİŞAH”"
@@ -17,11 +21,15 @@
   },
   {
    "seviye": "bilgi",
-   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.8-flash: The read operation timed out)"
+   "mesaj": "sığmadığı için küçültüldü: “KUŞAKLARDIR”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.6-flash 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. )"
   }
  ],
- "sure": 70.8,
- "lufs": -14.3,
- "senkron": "16/16",
- "zaman": "2026-11-23T10:39:25Z"
+ "sure": 105.2,
+ "lufs": -14.7,
+ "senkron": "22/22",
+ "zaman": "2026-11-23T11:03:46Z"
 }
