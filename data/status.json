@@ -13,9 +13,9 @@
  },
  "gorsel": {
   "durum": "tamam",
-  "mesaj": "bayezid-1-4-36: ses hazır",
-  "cikti": "projects/bayezid-1-4-36",
-  "zaman": "2026-11-23T10:52:01Z"
+  "mesaj": "her-harfe-tarih-1: ses hazır",
+  "cikti": "projects/her-harfe-tarih-1",
+  "zaman": "2026-11-23T22:28:20Z"
  },
  "kurgucu": {
   "durum": "tamam",
@@ -25,9 +25,9 @@
  },
  "kontrol": {
   "durum": "hata",
-  "mesaj": "bayezid-1-4-36: kurgu ✗",
-  "cikti": "projects/bayezid-1-4-36/kontrol",
-  "zaman": "2026-11-23T11:59:56Z"
+  "mesaj": "her-harfe-tarih-1: gorsel ✗",
+  "cikti": "projects/her-harfe-tarih-1/kontrol",
+  "zaman": "2026-11-23T22:35:34Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

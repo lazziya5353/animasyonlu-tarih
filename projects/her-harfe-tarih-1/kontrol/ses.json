@@ -1,0 +1,19 @@
+{
+ "asama": "ses",
+ "durum": "hata",
+ "ozet": "122 sn, metinle %95 uyumlu",
+ "maddeler": [
+  {
+   "seviye": "hata",
+   "mesaj": "ses 122 sn; video Reels sınırını (90 sn) aşar"
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "seste patlama (clipping) olabilir"
+  }
+ ],
+ "sure": 122.1,
+ "benzerlik": 0.948,
+ "dokum": "her harfe bir tarih sorusu. bakalım kaçını bileceksin? A harfi: 1934'te Mustafa Kemal'e verilen soyadı nedir? Atatürk. B harfi: Osmanlı'nın ilk büyük başkenti hangi şehirdir? Bursa. C harfi: 29 Ekim 1923'te ne ilan edildi? Cumhuriyet. D harfi: Osmanlı'da devlet işlerinin görüşüldüğü meclisin adı? Divan. E harfi: Bursa'dan sonra Osmanlı'nın başkenti olan şehir? Edirne. F harfi: İstanbul'u 1453'te fetheden padişah? Fatih Sultan Mehmet. G harfi: Çanakkale Savaşı hangi yarımadada yapıldı? Gelibolu. H harfi: Fatih'in gemileri karadan yürütüp indirdiği yer? Haliç. I harfi: 1453'ten sonra Osmanlı'nın başkenti hangi şehirdir? İstanbul. K harfi: En uzun süre tahtta kalan Osmanlı padişahı? Kanuni Sultan Süleyman. M harfi: Kanuni'nin 1526'da Macarları yendiği savaş? Mohaç. N harfi: Yıldırım Bayezid'in 1396'da Haçlıları yendiği savaş? Niğbolu. O harfi: Osmanlı Devleti'ni kuran kişi? Osman Gazi. P harfi: Barbaros'un 1538'de kazandığı büyük deniz zaferi? Preveze. R harfi: Osmanlı'nın Avrupa'daki topraklarına verilen adı? Rumeli. S harfi: Süleymaniye ve Selimiye camilerini yapan mimar? Mimar Sinan. Ş harfi: Osman Gazi'nin rüyasını yorumlayan şeyh? Şeyh Edebali. T harfi: Osmanlı padişahlarının resmi imzasına ne denir? Tuğra. U harfi: Fetihte surlara ilk sancağı diken kahraman? Ulubatlı Hasan. V harfi: Kanuni'nin 1529'da kuşattığı Avrupa şehri? Viyana. Y harfi: Mısır'ı alıp halifeliği Osmanlı'ya getiren padişah? Yavuz Sultan Selim. Z harfi: 30 Ağustos'ta kutladığımız bayram? Zafer Bayramı. Kaçını bildin? Yorumlara yaz. Kaçırmamak için Animasyon Tarihi takip et.",
+ "zaman": "2026-11-23T22:30:56Z"
+}
