@@ -19,15 +19,15 @@
  },
  "kurgucu": {
   "durum": "tamam",
-  "mesaj": "murad-1-3-36 videosu hazır",
-  "cikti": "release:video-murad-1-3-36",
-  "zaman": "2026-11-23T11:03:51Z"
+  "mesaj": "bayezid-1-4-36 videosu hazır",
+  "cikti": "release:video-bayezid-1-4-36",
+  "zaman": "2026-11-23T11:29:19Z"
  },
  "kontrol": {
   "durum": "hata",
-  "mesaj": "bayezid-1-4-36: gorsel ✗",
+  "mesaj": "bayezid-1-4-36: kurgu ✗",
   "cikti": "projects/bayezid-1-4-36/kontrol",
-  "zaman": "2026-11-23T11:05:29Z"
+  "zaman": "2026-11-23T11:29:13Z"
  },
  "yorumcu": {
   "durum": "bekliyor",

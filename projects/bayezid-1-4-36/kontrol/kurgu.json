@@ -1,0 +1,31 @@
+{
+ "asama": "kurgu",
+ "durum": "hata",
+ "ozet": "110 sn, -14 LUFS, senkron 24/24",
+ "maddeler": [
+  {
+   "seviye": "hata",
+   "mesaj": "video 110 sn; Instagram'a otomatik yükleme sınırı 90 sn"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “ESİR DÜŞEN TEK OSMANLI PADİŞAHI”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “ANADOLUHİSARI”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "sığmadığı için küçültüldü: “GÜZELCEHİSAR”"
+  },
+  {
+   "seviye": "bilgi",
+   "mesaj": "yapay zeka kare incelemesi atlandı: Gemini yanıt vermedi (gemini-3.6-flash: The read operation timed out)"
+  }
+ ],
+ "sure": 109.9,
+ "lufs": -14.5,
+ "senkron": "24/24",
+ "zaman": "2026-11-23T11:29:13Z"
+}
