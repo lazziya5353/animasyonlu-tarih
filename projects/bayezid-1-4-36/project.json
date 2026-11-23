@@ -1,0 +1,529 @@
+{
+ "title": "4/36 Yıldırım Bayezid – Kimsenin Bilmediği Detaylar",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "ESİR DÜŞEN TEK OSMANLI PADİŞAHI",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Osmanlı tarihinde düşmana esir düşen tek padişah: Yıldırım Bayezid."
+   ],
+   "big": "4/36",
+   "sub": "YILDIRIM BAYEZİD",
+   "year": null,
+   "label": "TEMSİLİ · 1815 GRAVÜRÜ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ona Yıldırım denmesinin sebebi, ordusunu şimşek hızıyla bir cepheden diğerine taşımasıydı."
+   ],
+   "big": "YILDIRIM",
+   "sub": "ŞİMŞEK HIZI",
+   "year": null,
+   "label": "TEMSİLİ",
+   "fx": [
+    "ember_few"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Babası I. Murad Kosova'da şehit düşünce, savaş meydanında padişah ilan edildi."
+   ],
+   "big": "1389",
+   "sub": "MEYDANDA PADİŞAH",
+   "year": null,
+   "label": "I. BAYEZİD'İN TUĞRASI",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Kaynaklara göre aynı gün kardeşi Yakub Çelebi öldürüldü; bu, Osmanlı'daki ilk kardeş katli olarak anılır."
+   ],
+   "big": "İLK",
+   "sub": "KARDEŞ KATLİ",
+   "year": null,
+   "label": "TEMSİLİ · 1815 GRAVÜRÜ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Kaynaklara göre Kahire'deki Abbasi halifesinden Rum diyarının sultanı unvanını aldı."
+   ],
+   "big": "SULTAN",
+   "sub": "RUM DİYARININ SULTANI",
+   "year": null,
+   "label": "UNVAN",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "İstanbul'u defalarca kuşattı."
+   ],
+   "big": "İSTANBUL",
+   "sub": "KUŞATMA",
+   "year": null,
+   "label": "GERÇEK FOTOĞRAF",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Boğaz'ın Anadolu yakasına bir kale yaptırdı: bugünkü Anadoluhisarı."
+   ],
+   "big": "ANADOLUHİSARI",
+   "sub": "BOĞAZ'IN İLK KALESİ",
+   "year": null,
+   "label": "GERÇEK FOTOĞRAF",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "İlk adı Güzelcehisar'dı ve Boğaz'daki ilk Osmanlı kalesiydi."
+   ],
+   "big": "GÜZELCEHİSAR",
+   "sub": "İLK ADI",
+   "year": null,
+   "label": "GERÇEK FOTOĞRAF",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1396'da Niğbolu'da büyük bir Haçlı ordusunu dağıttı."
+   ],
+   "big": "1396",
+   "sub": "NİĞBOLU",
+   "year": null,
+   "label": "TEMSİLİ",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Rivayete göre bu zaferden önce 20 cami yaptırma sözü vermişti."
+   ],
+   "big": "20 CAMİ?",
+   "sub": "ADAK",
+   "year": null,
+   "label": "GERÇEK FOTOĞRAF",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ama 20 cami yerine, 20 kubbeli tek bir cami yaptırdı: Bursa Ulu Camii."
+   ],
+   "big": "20 KUBBE",
+   "sub": "BURSA ULU CAMİİ",
+   "year": null,
+   "label": "GERÇEK FOTOĞRAF",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bir detay daha: Bu caminin şadırvanı dışarıda değil, caminin içinde, kubbenin tam altında."
+   ],
+   "big": "ŞADIRVAN",
+   "sub": "CAMİNİN İÇİNDE",
+   "year": null,
+   "label": "GERÇEK FOTOĞRAF",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s13.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bugün gördüğün Yıldırım Bayezid resimleri de yüzyıllar sonra hayal edilerek çizildi."
+   ],
+   "big": "TEMSİLİ",
+   "sub": "GERÇEK PORTRESİ YOK",
+   "year": null,
+   "label": "TEMSİLİ · 1815 GRAVÜRÜ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s14.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Sonra karşısına çağın en korkulan hükümdarı çıktı: Timur."
+   ],
+   "big": "TİMUR",
+   "sub": "",
+   "year": null,
+   "label": "TEMSİLİ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s15.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1402'de Ankara Savaşı'nda iki ordu karşılaştı. Timur'un ordusunda savaş filleri bile vardı."
+   ],
+   "big": "1402",
+   "sub": "ANKARA SAVAŞI",
+   "year": null,
+   "label": "TEMSİLİ",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s16.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ordudaki Tatar birlikleri savaşın ortasında Timur'un tarafına geçti."
+   ],
+   "big": "İHANET",
+   "sub": "TATAR BİRLİKLERİ",
+   "year": null,
+   "label": "TEMSİLİ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s17.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Yıldırım Bayezid yenildi ve esir düştü."
+   ],
+   "big": "ESİR",
+   "sub": "TEK PADİŞAH",
+   "year": null,
+   "label": "TEMSİLİ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s18.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bazı kaynaklar onun kafes içinde taşındığını anlatır, ama tarihçiler bunu tartışıyor."
+   ],
+   "big": "KAFES?",
+   "sub": "TARTIŞMALI",
+   "year": null,
+   "label": "TEMSİLİ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s19.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Esaretten hiç kurtulamadı; bir yıl sonra Akşehir'de hayatını kaybetti."
+   ],
+   "big": "1403",
+   "sub": "AKŞEHİR",
+   "year": null,
+   "label": "TEMSİLİ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s20.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ardından oğulları taht için birbirleriyle savaştı: Fetret Devri başladı."
+   ],
+   "big": "FETRET",
+   "sub": "DEVRİ",
+   "year": null,
+   "label": "TEMSİLİ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s21.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Osmanlı neredeyse dağılmanın eşiğine geldi."
+   ],
+   "big": "11 YIL",
+   "sub": "TAHT KAVGASI",
+   "year": null,
+   "label": "TEMSİLİ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s22.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Naaşı Bursa'ya getirildi ve kendi yaptırdığı külliyedeki türbesine defnedildi."
+   ],
+   "big": "BURSA",
+   "sub": "YILDIRIM TÜRBESİ",
+   "year": null,
+   "label": "GERÇEK FOTOĞRAF",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s23.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Sence Yıldırım Bayezid Timur'u yenebilir miydi? Yorumlara yaz.",
+    "Sıradaki bölüm: Çelebi Mehmed. Kaçırmamak için @animasyon.tarih'i takip et."
+   ],
+   "big": "SIRADAKİ",
+   "sub": "5/36 · ÇELEBİ MEHMED",
+   "year": null,
+   "label": "YILDIRIM BAYEZİD",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "YÜKSELİŞ",
+   "from": 0,
+   "to": 12
+  },
+  {
+   "name": "TİMUR",
+   "from": 13,
+   "to": 20
+  },
+  {
+   "name": "SON",
+   "from": 21,
+   "to": 22
+  }
+ ],
+ "outro_plan": {
+  "title": "YENEBİLİR MİYDİ?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true
+}

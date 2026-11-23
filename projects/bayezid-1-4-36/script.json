@@ -1,0 +1,326 @@
+{
+  "baslik": "4/36 Yıldırım Bayezid – Kimsenin Bilmediği Detaylar",
+  "hook": "ESİR DÜŞEN TEK OSMANLI PADİŞAHI",
+  "map_region": "anadolu",
+  "sahneler": [
+    {
+      "lines": [
+        "Osmanlı tarihinde düşmana esir düşen tek padişah: Yıldırım Bayezid."
+      ],
+      "big": "4/36",
+      "sub": "YILDIRIM BAYEZİD",
+      "label": "TEMSİLİ · 1815 GRAVÜRÜ",
+      "fx": [],
+      "image": "images/s01.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Ona Yıldırım denmesinin sebebi, ordusunu şimşek hızıyla bir cepheden diğerine taşımasıydı."
+      ],
+      "big": "YILDIRIM",
+      "sub": "ŞİMŞEK HIZI",
+      "label": "TEMSİLİ",
+      "fx": [
+        "ember_few"
+      ],
+      "image": "images/s02.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Babası I. Murad Kosova'da şehit düşünce, savaş meydanında padişah ilan edildi."
+      ],
+      "big": "1389",
+      "sub": "MEYDANDA PADİŞAH",
+      "label": "I. BAYEZİD'İN TUĞRASI",
+      "fx": [],
+      "image": "images/s03.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Kaynaklara göre aynı gün kardeşi Yakub Çelebi öldürüldü; bu, Osmanlı'daki ilk kardeş katli olarak anılır."
+      ],
+      "big": "İLK",
+      "sub": "KARDEŞ KATLİ",
+      "label": "TEMSİLİ · 1815 GRAVÜRÜ",
+      "fx": [],
+      "image": "images/s04.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Kaynaklara göre Kahire'deki Abbasi halifesinden Rum diyarının sultanı unvanını aldı."
+      ],
+      "big": "SULTAN",
+      "sub": "RUM DİYARININ SULTANI",
+      "label": "UNVAN",
+      "fx": [],
+      "image": "images/s05.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "İstanbul'u defalarca kuşattı."
+      ],
+      "big": "İSTANBUL",
+      "sub": "KUŞATMA",
+      "label": "GERÇEK FOTOĞRAF",
+      "fx": [],
+      "image": "images/s06.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Boğaz'ın Anadolu yakasına bir kale yaptırdı: bugünkü Anadoluhisarı."
+      ],
+      "big": "ANADOLUHİSARI",
+      "sub": "BOĞAZ'IN İLK KALESİ",
+      "label": "GERÇEK FOTOĞRAF",
+      "fx": [],
+      "image": "images/s07.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "İlk adı Güzelcehisar'dı ve Boğaz'daki ilk Osmanlı kalesiydi."
+      ],
+      "big": "GÜZELCEHİSAR",
+      "sub": "İLK ADI",
+      "label": "GERÇEK FOTOĞRAF",
+      "fx": [],
+      "image": "images/s08.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "1396'da Niğbolu'da büyük bir Haçlı ordusunu dağıttı."
+      ],
+      "big": "1396",
+      "sub": "NİĞBOLU",
+      "label": "TEMSİLİ",
+      "fx": [
+        "dust"
+      ],
+      "image": "images/s09.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Rivayete göre bu zaferden önce 20 cami yaptırma sözü vermişti."
+      ],
+      "big": "20 CAMİ?",
+      "sub": "ADAK",
+      "label": "GERÇEK FOTOĞRAF",
+      "fx": [],
+      "image": "images/s10.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Ama 20 cami yerine, 20 kubbeli tek bir cami yaptırdı: Bursa Ulu Camii."
+      ],
+      "big": "20 KUBBE",
+      "sub": "BURSA ULU CAMİİ",
+      "label": "GERÇEK FOTOĞRAF",
+      "fx": [],
+      "image": "images/s11.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Bir detay daha: Bu caminin şadırvanı dışarıda değil, caminin içinde, kubbenin tam altında."
+      ],
+      "big": "ŞADIRVAN",
+      "sub": "CAMİNİN İÇİNDE",
+      "label": "GERÇEK FOTOĞRAF",
+      "fx": [],
+      "image": "images/s12.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Bugün gördüğün Yıldırım Bayezid resimleri de yüzyıllar sonra hayal edilerek çizildi."
+      ],
+      "big": "TEMSİLİ",
+      "sub": "GERÇEK PORTRESİ YOK",
+      "label": "TEMSİLİ · 1815 GRAVÜRÜ",
+      "fx": [],
+      "image": "images/s13.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Sonra karşısına çağın en korkulan hükümdarı çıktı: Timur."
+      ],
+      "big": "TİMUR",
+      "sub": "",
+      "label": "TEMSİLİ",
+      "fx": [],
+      "image": "images/s14.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "1402'de Ankara Savaşı'nda iki ordu karşılaştı. Timur'un ordusunda savaş filleri bile vardı."
+      ],
+      "big": "1402",
+      "sub": "ANKARA SAVAŞI",
+      "label": "TEMSİLİ",
+      "fx": [
+        "dust"
+      ],
+      "image": "images/s15.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Ordudaki Tatar birlikleri savaşın ortasında Timur'un tarafına geçti."
+      ],
+      "big": "İHANET",
+      "sub": "TATAR BİRLİKLERİ",
+      "label": "TEMSİLİ",
+      "fx": [],
+      "image": "images/s16.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Yıldırım Bayezid yenildi ve esir düştü."
+      ],
+      "big": "ESİR",
+      "sub": "TEK PADİŞAH",
+      "label": "TEMSİLİ",
+      "fx": [],
+      "image": "images/s17.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Bazı kaynaklar onun kafes içinde taşındığını anlatır, ama tarihçiler bunu tartışıyor."
+      ],
+      "big": "KAFES?",
+      "sub": "TARTIŞMALI",
+      "label": "TEMSİLİ",
+      "fx": [],
+      "image": "images/s18.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Esaretten hiç kurtulamadı; bir yıl sonra Akşehir'de hayatını kaybetti."
+      ],
+      "big": "1403",
+      "sub": "AKŞEHİR",
+      "label": "TEMSİLİ",
+      "fx": [],
+      "image": "images/s19.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Ardından oğulları taht için birbirleriyle savaştı: Fetret Devri başladı."
+      ],
+      "big": "FETRET",
+      "sub": "DEVRİ",
+      "label": "TEMSİLİ",
+      "fx": [],
+      "image": "images/s20.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Osmanlı neredeyse dağılmanın eşiğine geldi."
+      ],
+      "big": "11 YIL",
+      "sub": "TAHT KAVGASI",
+      "label": "TEMSİLİ",
+      "fx": [],
+      "image": "images/s21.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Naaşı Bursa'ya getirildi ve kendi yaptırdığı külliyedeki türbesine defnedildi."
+      ],
+      "big": "BURSA",
+      "sub": "YILDIRIM TÜRBESİ",
+      "label": "GERÇEK FOTOĞRAF",
+      "fx": [],
+      "image": "images/s22.jpg",
+      "prompt": "Yıldırım Bayezid"
+    },
+    {
+      "lines": [
+        "Sence Yıldırım Bayezid Timur'u yenebilir miydi? Yorumlara yaz.",
+        "Sıradaki bölüm: Çelebi Mehmed. Kaçırmamak için @animasyon.tarih'i takip et."
+      ],
+      "big": "SIRADAKİ",
+      "sub": "5/36 · ÇELEBİ MEHMED",
+      "label": "YILDIRIM BAYEZİD",
+      "fx": [],
+      "image": "images/s23.jpg",
+      "prompt": "Yıldırım Bayezid"
+    }
+  ],
+  "finale": "",
+  "maps": [],
+  "cards": [],
+  "eras": [
+    {
+      "name": "YÜKSELİŞ",
+      "from": 0,
+      "to": 12
+    },
+    {
+      "name": "TİMUR",
+      "from": 13,
+      "to": 20
+    },
+    {
+      "name": "SON",
+      "from": 21,
+      "to": 22
+    }
+  ],
+  "outro": {
+    "title": "YENEBİLİR MİYDİ?",
+    "line": "Yorumlara yaz"
+  },
+  "aciklama": "Osmanlı tarihinde esir düşen tek padişah… 👀⚡\n\n4/36 Yıldırım Bayezid:\n⚡ Ordusunu şimşek hızıyla taşıdığı için \"Yıldırım\" dendi\n🏰 Boğaz'daki ilk Osmanlı kalesini yaptırdı: Anadoluhisarı (ilk adı Güzelcehisar)\n🕌 20 cami sözü verdi, 20 kubbeli tek cami yaptırdı: Bursa Ulu Camii\n💧 Ulu Cami'nin şadırvanı caminin içinde\n🐘 Ankara Savaşı'nda Timur'un ordusunda savaş filleri vardı\n⛓️ Timur'a esir düştü, Osmanlı Fetret Devri'ne girdi\n\nSence Yıldırım Bayezid Timur'u yenebilir miydi? Yorumlara yaz 👇\n\n🔔 36 padişahın hepsini kaçırmamak için @animasyon.tarih'i takip et",
+  "kanca_alternatifleri": [
+    "ESİR DÜŞEN TEK OSMANLI PADİŞAHI"
+  ],
+  "aciklama_alternatifleri": [],
+  "hashtagler": [
+    "#yıldırımbayezid",
+    "#bayezid",
+    "#timur",
+    "#ankarasavaşı",
+    "#niğbolu",
+    "#anadoluhisarı",
+    "#bursaulucami",
+    "#osmanlı",
+    "#osmanlıpadişahları",
+    "#tarih",
+    "#osmanlıtarihi",
+    "#ecdad",
+    "#keşfet",
+    "#reels",
+    "#animasyontarih"
+  ],
+  "kaynaklar": [
+    "TDV İslam Ansiklopedisi Bayezid I",
+    "Wikimedia Commons fotoğrafları"
+  ],
+  "kontrol_notlari": [
+    "Kardeş katli, halife unvanı ve kafes 'kaynaklara göre/tartışmalı' olarak verildi."
+  ],
+  "konu": "Yıldırım Bayezid",
+  "tarih": "",
+  "slug": "bayezid-1-4-36",
+  "durum": "onaylandi",
+  "sade": true,
+  "seslendirme_metni": "Osmanlı tarihinde düşmana esir düşen tek padişah: Yıldırım Bayezid.\nOna Yıldırım denmesinin sebebi, ordusunu şimşek hızıyla bir cepheden diğerine taşımasıydı.\nBabası I. Murad Kosova'da şehit düşünce, savaş meydanında padişah ilan edildi.\nKaynaklara göre aynı gün kardeşi Yakub Çelebi öldürüldü; bu, Osmanlı'daki ilk kardeş katli olarak anılır.\nKaynaklara göre Kahire'deki Abbasi halifesinden Rum diyarının sultanı unvanını aldı.\nİstanbul'u defalarca kuşattı.\nBoğaz'ın Anadolu yakasına bir kale yaptırdı: bugünkü Anadoluhisarı.\nİlk adı Güzelcehisar'dı ve Boğaz'daki ilk Osmanlı kalesiydi.\nbin üç yüz doksan altıda Niğbolu'da büyük bir Haçlı ordusunu dağıttı.\nRivayete göre bu zaferden önce yirmi cami yaptırma sözü vermişti.\nAma yirmi cami yerine, yirmi kubbeli tek bir cami yaptırdı: Bursa Ulu Camii.\nBir detay daha: Bu caminin şadırvanı dışarıda değil, caminin içinde, kubbenin tam altında.\nBugün gördüğün Yıldırım Bayezid resimleri de yüzyıllar sonra hayal edilerek çizildi.\nSonra karşısına çağın en korkulan hükümdarı çıktı: Timur.\nbin dört yüz ikide Ankara Savaşı'nda iki ordu karşılaştı. Timur'un ordusunda savaş filleri bile vardı.\nOrdudaki Tatar birlikleri savaşın ortasında Timur'un tarafına geçti.\nYıldırım Bayezid yenildi ve esir düştü.\nBazı kaynaklar onun kafes içinde taşındığını anlatır, ama tarihçiler bunu tartışıyor.\nEsaretten hiç kurtulamadı; bir yıl sonra Akşehir'de hayatını kaybetti.\nArdından oğulları taht için birbirleriyle savaştı: Fetret Devri başladı.\nOsmanlı neredeyse dağılmanın eşiğine geldi.\nNaaşı Bursa'ya getirildi ve kendi yaptırdığı külliyedeki türbesine defnedildi.\nSence Yıldırım Bayezid Timur'u yenebilir miydi? Yorumlara yaz.\nSıradaki bölüm: Çelebi Mehmed. Kaçırmamak için animasyon tarih'i takip et."
+}
