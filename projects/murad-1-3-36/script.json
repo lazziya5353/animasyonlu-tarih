@@ -1,0 +1,236 @@
+{
+  "baslik": "3/36 I. Murad – Kimsenin Bilmediği Detaylar",
+  "hook": "SAVAŞ MEYDANINDA ŞEHİT DÜŞEN TEK PADİŞAH",
+  "map_region": "anadolu",
+  "sahneler": [
+    {
+      "lines": [
+        "Savaş meydanında şehit düşen tek Osmanlı padişahı: I. Murad."
+      ],
+      "big": "3/36",
+      "sub": "I. MURAD",
+      "label": "TEMSİLİ · 19. YY GRAVÜRÜ",
+      "fx": [],
+      "image": "images/s01.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Ona Hüdavendigâr derlerdi; yani hükümdar, efendi."
+      ],
+      "big": "HÜDAVENDİGÂR",
+      "sub": "HÜKÜMDAR · EFENDİ",
+      "label": "TEMSİLİ · 19. YY GRAVÜRÜ",
+      "fx": [],
+      "image": "images/s02.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Edirne'yi aldı ve Osmanlı'nın başkentini ilk kez Avrupa'ya taşıdı."
+      ],
+      "big": "EDİRNE",
+      "sub": "İLK AVRUPA BAŞKENTİ",
+      "label": "FETİH",
+      "fx": [
+        "dust"
+      ],
+      "image": "images/s03.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Bugün bildiğimiz Yeniçeri Ocağı onun döneminde kuruldu."
+      ],
+      "big": "YENİÇERİ",
+      "sub": "OCAĞIN DOĞUŞU",
+      "label": "ORDU",
+      "fx": [],
+      "image": "images/s04.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Peki şunu biliyor muydun? Bursa'daki camisi dünyada bir benzeri olmayan bir yapı."
+      ],
+      "big": "BURSA",
+      "sub": "HÜDAVENDİGÂR CAMİİ",
+      "label": "ESER",
+      "fx": [],
+      "image": "images/s05.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Alt katı cami, üst katı medrese; ibadet ve ilim aynı çatı altında."
+      ],
+      "big": "CAMİ + MEDRESE",
+      "sub": "AYNI ÇATI ALTINDA",
+      "label": "ESER",
+      "fx": [],
+      "image": "images/s06.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Bugün gördüğün I. Murad resimleri de yüzyıllar sonra hayal edilerek çizildi."
+      ],
+      "big": "TEMSİLİ",
+      "sub": "GERÇEK PORTRESİ YOK",
+      "label": "TEMSİLİ · 19. YY GRAVÜRÜ",
+      "fx": [],
+      "image": "images/s07.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "1389'da Kosova'da, Sırp liderliğindeki Balkan ittifakının karşısına çıktı."
+      ],
+      "big": "1389",
+      "sub": "KOSOVA",
+      "label": "SAVAŞ",
+      "fx": [
+        "dust"
+      ],
+      "image": "images/s08.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Savaşı kazandı. Ama zafer anında, savaş alanını gezerken…"
+      ],
+      "big": "ZAFER",
+      "sub": "AMA…",
+      "label": "SAVAŞ",
+      "fx": [],
+      "image": "images/s09.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Yaralı gibi yerde yatan bir Sırp şövalyesi, Miloş Obiliç, ayağa fırladı ve onu hançerledi."
+      ],
+      "big": "MİLOŞ",
+      "sub": "HANÇER",
+      "label": "SUİKAST",
+      "fx": [],
+      "image": "images/s10.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Padişah, kazandığı savaşın meydanında şehit düştü."
+      ],
+      "big": "ŞEHİT",
+      "sub": "ZAFER MEYDANINDA",
+      "label": "1389",
+      "fx": [
+        "ember_few"
+      ],
+      "image": "images/s11.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "İşte en az bilinen detay: Padişahın iç organları orada, Kosova'da toprağa verildi."
+      ],
+      "big": "KOSOVA",
+      "sub": "MEŞHED-İ HÜDAVENDİGÂR",
+      "label": "TÜRBE",
+      "fx": [],
+      "image": "images/s12.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Bedeni ise Bursa'ya getirilip Çekirge'deki türbesine defnedildi."
+      ],
+      "big": "BURSA",
+      "sub": "ÇEKİRGE TÜRBESİ",
+      "label": "TÜRBE",
+      "fx": [],
+      "image": "images/s13.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Kosova'daki türbe bugün hâlâ ziyaret ediliyor."
+      ],
+      "big": "BUGÜN",
+      "sub": "HÂLÂ ZİYARET EDİLİYOR",
+      "label": "TÜRBE",
+      "fx": [],
+      "image": "images/s14.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Sence I. Murad'ın en büyük mirası hangisi? Yorumlara yaz.",
+        "Sıradaki bölüm: Yıldırım Bayezid. Kaçırmamak için @animasyon.tarih'i takip et."
+      ],
+      "big": "SIRADAKİ",
+      "sub": "4/36 · YILDIRIM BAYEZİD",
+      "label": "I. MURAD",
+      "fx": [],
+      "image": "images/s15.jpg",
+      "prompt": "I. Murad"
+    }
+  ],
+  "finale": "",
+  "maps": [],
+  "cards": [],
+  "eras": [
+    {
+      "name": "HÜKÜMDAR",
+      "from": 0,
+      "to": 6
+    },
+    {
+      "name": "KOSOVA",
+      "from": 7,
+      "to": 13
+    },
+    {
+      "name": "SON",
+      "from": 14,
+      "to": 14
+    }
+  ],
+  "outro": {
+    "title": "EN BÜYÜK MİRAS?",
+    "line": "Yorumlara yaz"
+  },
+  "aciklama": "Savaş meydanında şehit düşen tek Osmanlı padişahı… 👀⚔️\n\n3/36 I. Murad Hüdavendigâr:\n🏰 Başkenti ilk kez Avrupa'ya, Edirne'ye taşıdı\n🛡️ Yeniçeri Ocağı onun döneminde kuruldu\n🕌 Bursa'da alt katı cami, üst katı medrese olan eşsiz bir yapı yaptırdı\n⚔️ 1389 Kosova Savaşı'nı kazandı ama zafer anında hançerlendi\n🪦 İç organları Kosova'da, bedeni Bursa'da defnedildi\n\nSence I. Murad'ın en büyük mirası hangisi? Yorumlara yaz 👇\n\n🔔 36 padişahın hepsini kaçırmamak için @animasyon.tarih'i takip et",
+  "kanca_alternatifleri": [
+    "SAVAŞ MEYDANINDA ŞEHİT DÜŞEN TEK PADİŞAH"
+  ],
+  "aciklama_alternatifleri": [],
+  "hashtagler": [
+    "#1murad",
+    "#muradhüdavendigar",
+    "#kosovasavaşı",
+    "#osmanlı",
+    "#osmanlıpadişahları",
+    "#yeniçeri",
+    "#edirne",
+    "#bursa",
+    "#tarih",
+    "#osmanlıtarihi",
+    "#ecdad",
+    "#keşfet",
+    "#reels",
+    "#animasyontarih"
+  ],
+  "kaynaklar": [
+    "TDV İslam Ansiklopedisi Murad I"
+  ],
+  "kontrol_notlari": [
+    "Portre temsili (19. yy gravürü)."
+  ],
+  "konu": "I. Murad",
+  "tarih": "",
+  "slug": "murad-1-3-36",
+  "durum": "onaylandi",
+  "sade": true,
+  "seslendirme_metni": "Savaş meydanında şehit düşen tek Osmanlı padişahı: I. Murad.\nOna Hüdavendigâr derlerdi; yani hükümdar, efendi.\nEdirne'yi aldı ve Osmanlı'nın başkentini ilk kez Avrupa'ya taşıdı.\nBugün bildiğimiz Yeniçeri Ocağı onun döneminde kuruldu.\nPeki şunu biliyor muydun? Bursa'daki camisi dünyada bir benzeri olmayan bir yapı.\nAlt katı cami, üst katı medrese; ibadet ve ilim aynı çatı altında.\nBugün gördüğün I. Murad resimleri de yüzyıllar sonra hayal edilerek çizildi.\nbin üç yüz seksen dokuzda Kosova'da, Sırp liderliğindeki Balkan ittifakının karşısına çıktı.\nSavaşı kazandı. Ama zafer anında, savaş alanını gezerken…\nYaralı gibi yerde yatan bir Sırp şövalyesi, Miloş Obiliç, ayağa fırladı ve onu hançerledi.\nPadişah, kazandığı savaşın meydanında şehit düştü.\nİşte en az bilinen detay: Padişahın iç organları orada, Kosova'da toprağa verildi.\nBedeni ise Bursa'ya getirilip Çekirge'deki türbesine defnedildi.\nKosova'daki türbe bugün hala ziyaret ediliyor.\nSence I. Murad'ın en büyük mirası hangisi? Yorumlara yaz.\nSıradaki bölüm: Yıldırım Bayezid. Kaçırmamak için animasyon tarih'i takip et."
+}

@@ -1,0 +1,361 @@
+{
+ "title": "3/36 I. Murad – Kimsenin Bilmediği Detaylar",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "SAVAŞ MEYDANINDA ŞEHİT DÜŞEN TEK PADİŞAH",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/s01.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Savaş meydanında şehit düşen tek Osmanlı padişahı: I. Murad."
+   ],
+   "big": "3/36",
+   "sub": "I. MURAD",
+   "year": null,
+   "label": "TEMSİLİ · 19. YY GRAVÜRÜ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s02.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ona Hüdavendigâr derlerdi; yani hükümdar, efendi."
+   ],
+   "big": "HÜDAVENDİGÂR",
+   "sub": "HÜKÜMDAR · EFENDİ",
+   "year": null,
+   "label": "TEMSİLİ · 19. YY GRAVÜRÜ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s03.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Edirne'yi aldı ve Osmanlı'nın başkentini ilk kez Avrupa'ya taşıdı."
+   ],
+   "big": "EDİRNE",
+   "sub": "İLK AVRUPA BAŞKENTİ",
+   "year": null,
+   "label": "FETİH",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s04.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bugün bildiğimiz Yeniçeri Ocağı onun döneminde kuruldu."
+   ],
+   "big": "YENİÇERİ",
+   "sub": "OCAĞIN DOĞUŞU",
+   "year": null,
+   "label": "ORDU",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s05.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Peki şunu biliyor muydun? Bursa'daki camisi dünyada bir benzeri olmayan bir yapı."
+   ],
+   "big": "BURSA",
+   "sub": "HÜDAVENDİGÂR CAMİİ",
+   "year": null,
+   "label": "ESER",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s06.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Alt katı cami, üst katı medrese; ibadet ve ilim aynı çatı altında."
+   ],
+   "big": "CAMİ + MEDRESE",
+   "sub": "AYNI ÇATI ALTINDA",
+   "year": null,
+   "label": "ESER",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bugün gördüğün I. Murad resimleri de yüzyıllar sonra hayal edilerek çizildi."
+   ],
+   "big": "TEMSİLİ",
+   "sub": "GERÇEK PORTRESİ YOK",
+   "year": null,
+   "label": "TEMSİLİ · 19. YY GRAVÜRÜ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "1389'da Kosova'da, Sırp liderliğindeki Balkan ittifakının karşısına çıktı."
+   ],
+   "big": "1389",
+   "sub": "KOSOVA",
+   "year": null,
+   "label": "SAVAŞ",
+   "fx": [
+    "dust"
+   ],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s09.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Savaşı kazandı. Ama zafer anında, savaş alanını gezerken…"
+   ],
+   "big": "ZAFER",
+   "sub": "AMA…",
+   "year": null,
+   "label": "SAVAŞ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s10.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Yaralı gibi yerde yatan bir Sırp şövalyesi, Miloş Obiliç, ayağa fırladı ve onu hançerledi."
+   ],
+   "big": "MİLOŞ",
+   "sub": "HANÇER",
+   "year": null,
+   "label": "SUİKAST",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s11.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Padişah, kazandığı savaşın meydanında şehit düştü."
+   ],
+   "big": "ŞEHİT",
+   "sub": "ZAFER MEYDANINDA",
+   "year": null,
+   "label": "1389",
+   "fx": [
+    "ember_few"
+   ],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s12.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "İşte en az bilinen detay: Padişahın iç organları orada, Kosova'da toprağa verildi."
+   ],
+   "big": "KOSOVA",
+   "sub": "MEŞHED-İ HÜDAVENDİGÂR",
+   "year": null,
+   "label": "TÜRBE",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s13.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bedeni ise Bursa'ya getirilip Çekirge'deki türbesine defnedildi."
+   ],
+   "big": "BURSA",
+   "sub": "ÇEKİRGE TÜRBESİ",
+   "year": null,
+   "label": "TÜRBE",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s14.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Kosova'daki türbe bugün hâlâ ziyaret ediliyor."
+   ],
+   "big": "BUGÜN",
+   "sub": "HÂLÂ ZİYARET EDİLİYOR",
+   "year": null,
+   "label": "TÜRBE",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s15.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Sence I. Murad'ın en büyük mirası hangisi? Yorumlara yaz.",
+    "Sıradaki bölüm: Yıldırım Bayezid. Kaçırmamak için @animasyon.tarih'i takip et."
+   ],
+   "big": "SIRADAKİ",
+   "sub": "4/36 · YILDIRIM BAYEZİD",
+   "year": null,
+   "label": "I. MURAD",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "HÜKÜMDAR",
+   "from": 0,
+   "to": 6
+  },
+  {
+   "name": "KOSOVA",
+   "from": 7,
+   "to": 13
+  },
+  {
+   "name": "SON",
+   "from": 14,
+   "to": 14
+  }
+ ],
+ "outro_plan": {
+  "title": "EN BÜYÜK MİRAS?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true
+}
