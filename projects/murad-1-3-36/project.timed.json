@@ -73,7 +73,7 @@
   {
    "image": "images/s04.jpg",
    "start": 12.95,
-   "end": 16.110000000000003,
+   "end": 16.130000000000003,
    "lines": [
     "Bugün bildiğimiz Yeniçeri Ocağı onun döneminde kuruldu."
    ],
@@ -93,7 +93,7 @@
   },
   {
    "image": "images/s05.jpg",
-   "start": 16.110000000000003,
+   "start": 16.130000000000003,
    "end": 21.25,
    "lines": [
     "Peki şunu biliyor muydun? Bursa'daki camisi dünyada bir benzeri olmayan bir yapı."
@@ -136,7 +136,7 @@
   {
    "image": "images/s07.jpg",
    "start": 25.73,
-   "end": 30.650000000000002,
+   "end": 31.35,
    "lines": [
     "Bugün gördüğün I. Murad resimleri de yüzyıllar sonra hayal edilerek çizildi."
    ],
@@ -156,8 +156,8 @@
   },
   {
    "image": "images/s08.jpg",
-   "start": 30.650000000000002,
-   "end": 35.870000000000005,
+   "start": 31.35,
+   "end": 35.89,
    "lines": [
     "1389'da Kosova'da, Sırp liderliğindeki Balkan ittifakının karşısına çıktı."
    ],
@@ -179,7 +179,7 @@
   },
   {
    "image": "images/s09.jpg",
-   "start": 35.870000000000005,
+   "start": 35.89,
    "end": 39.730000000000004,
    "lines": [
     "Savaşı kazandı. Ama zafer anında, savaş alanını gezerken…"
@@ -201,7 +201,7 @@
   {
    "image": "images/s10.jpg",
    "start": 39.730000000000004,
-   "end": 45.39,
+   "end": 45.370000000000005,
    "lines": [
     "Yaralı gibi yerde yatan bir Sırp şövalyesi, Miloş Obiliç, ayağa fırladı ve onu hançerledi."
    ],
@@ -221,7 +221,7 @@
   },
   {
    "image": "images/s11.jpg",
-   "start": 45.39,
+   "start": 45.370000000000005,
    "end": 48.35,
    "lines": [
     "Padişah, kazandığı savaşın meydanında şehit düştü."
@@ -368,13 +368,13 @@
  "jumps": [],
  "captions": [
   {
-   "start": 0.4,
+   "start": 0.0,
    "end": 4.24,
    "text": "Savaş meydanında şehit düşen tek Osmanlı padişahı: I. Murad."
   },
   {
    "start": 4.62,
-   "end": 8.46,
+   "end": 8.44,
    "text": "Ona Hüdavendigâr derlerdi; yani hükümdar, efendi."
   },
   {
@@ -388,8 +388,8 @@
    "text": "Bugün bildiğimiz Yeniçeri Ocağı onun döneminde kuruldu."
   },
   {
-   "start": 16.26,
-   "end": 21.12,
+   "start": 16.28,
+   "end": 21.14,
    "text": "Peki şunu biliyor muydun? Bursa'daki camisi dünyada bir benzeri olmayan bir yapı."
   },
   {
@@ -403,22 +403,22 @@
    "text": "Bugün gördüğün I. Murad resimleri de yüzyıllar sonra hayal edilerek çizildi."
   },
   {
-   "start": 30.8,
+   "start": 31.5,
    "end": 35.56,
    "text": "1389'da Kosova'da, Sırp liderliğindeki Balkan ittifakının karşısına çıktı."
   },
   {
-   "start": 36.02,
+   "start": 36.04,
    "end": 39.58,
    "text": "Savaşı kazandı. Ama zafer anında, savaş alanını gezerken…"
   },
   {
    "start": 39.88,
-   "end": 45.24,
+   "end": 45.22,
    "text": "Yaralı gibi yerde yatan bir Sırp şövalyesi, Miloş Obiliç, ayağa fırladı ve onu hançerledi."
   },
   {
-   "start": 45.54,
+   "start": 45.52,
    "end": 48.16,
    "text": "Padişah, kazandığı savaşın meydanında şehit düştü."
   },
