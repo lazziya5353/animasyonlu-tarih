@@ -20,9 +20,20 @@
       ],
       "big": "HÜDAVENDİGÂR",
       "sub": "HÜKÜMDAR · EFENDİ",
-      "label": "TEMSİLİ · 19. YY GRAVÜRÜ",
+      "label": "I. MURAD'IN TUĞRASI",
       "fx": [],
       "image": "images/s02.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Bu lakap o kadar benimsendi ki, Bursa ve çevresi yüzyıllar boyunca Hüdavendigâr Vilayeti diye anıldı."
+      ],
+      "big": "BURSA",
+      "sub": "HÜDAVENDİGÂR VİLAYETİ",
+      "label": "İSİM",
+      "fx": [],
+      "image": "images/s03.jpg",
       "prompt": "I. Murad"
     },
     {
@@ -35,7 +46,7 @@
       "fx": [
         "dust"
       ],
-      "image": "images/s03.jpg",
+      "image": "images/s04.jpg",
       "prompt": "I. Murad"
     },
     {
@@ -46,7 +57,18 @@
       "sub": "OCAĞIN DOĞUŞU",
       "label": "ORDU",
       "fx": [],
-      "image": "images/s04.jpg",
+      "image": "images/s05.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Savaşlarda alınan esirlerin beşte biri devlete ayrıldı. Yeniçerilerin ilk kaynağı bu pençik sistemiydi."
+      ],
+      "big": "1/5",
+      "sub": "PENÇİK SİSTEMİ",
+      "label": "ORDU",
+      "fx": [],
+      "image": "images/s06.jpg",
       "prompt": "I. Murad"
     },
     {
@@ -55,9 +77,9 @@
       ],
       "big": "BURSA",
       "sub": "HÜDAVENDİGÂR CAMİİ",
-      "label": "ESER",
+      "label": "GERÇEK FOTOĞRAF",
       "fx": [],
-      "image": "images/s05.jpg",
+      "image": "images/s07.jpg",
       "prompt": "I. Murad"
     },
     {
@@ -66,9 +88,9 @@
       ],
       "big": "CAMİ + MEDRESE",
       "sub": "AYNI ÇATI ALTINDA",
-      "label": "ESER",
+      "label": "GERÇEK FOTOĞRAF",
       "fx": [],
-      "image": "images/s06.jpg",
+      "image": "images/s08.jpg",
       "prompt": "I. Murad"
     },
     {
@@ -79,7 +101,7 @@
       "sub": "GERÇEK PORTRESİ YOK",
       "label": "TEMSİLİ · 19. YY GRAVÜRÜ",
       "fx": [],
-      "image": "images/s07.jpg",
+      "image": "images/s09.jpg",
       "prompt": "I. Murad"
     },
     {
@@ -92,7 +114,7 @@
       "fx": [
         "dust"
       ],
-      "image": "images/s08.jpg",
+      "image": "images/s10.jpg",
       "prompt": "I. Murad"
     },
     {
@@ -103,7 +125,7 @@
       "sub": "AMA…",
       "label": "SAVAŞ",
       "fx": [],
-      "image": "images/s09.jpg",
+      "image": "images/s11.jpg",
       "prompt": "I. Murad"
     },
     {
@@ -114,7 +136,7 @@
       "sub": "HANÇER",
       "label": "SUİKAST",
       "fx": [],
-      "image": "images/s10.jpg",
+      "image": "images/s12.jpg",
       "prompt": "I. Murad"
     },
     {
@@ -127,40 +149,84 @@
       "fx": [
         "ember_few"
       ],
-      "image": "images/s11.jpg",
-      "prompt": "I. Murad"
-    },
-    {
-      "lines": [
-        "İşte en az bilinen detay: Padişahın iç organları orada, Kosova'da toprağa verildi."
-      ],
-      "big": "KOSOVA",
-      "sub": "MEŞHED-İ HÜDAVENDİGÂR",
-      "label": "TÜRBE",
-      "fx": [],
-      "image": "images/s12.jpg",
-      "prompt": "I. Murad"
-    },
-    {
-      "lines": [
-        "Bedeni ise Bursa'ya getirilip Çekirge'deki türbesine defnedildi."
-      ],
-      "big": "BURSA",
-      "sub": "ÇEKİRGE TÜRBESİ",
-      "label": "TÜRBE",
-      "fx": [],
       "image": "images/s13.jpg",
       "prompt": "I. Murad"
     },
     {
       "lines": [
-        "Kosova'daki türbe bugün hâlâ ziyaret ediliyor."
+        "Oğlu Bayezid orada, savaş meydanında padişah ilan edildi."
       ],
-      "big": "BUGÜN",
-      "sub": "HÂLÂ ZİYARET EDİLİYOR",
-      "label": "TÜRBE",
+      "big": "BAYEZİD",
+      "sub": "MEYDANDA PADİŞAH",
+      "label": "1389",
       "fx": [],
       "image": "images/s14.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Peki uzak Bursa'ya cenaze nasıl götürülecekti?"
+      ],
+      "big": "BURSA?",
+      "sub": "",
+      "label": "SORU",
+      "fx": [],
+      "image": "images/s15.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Naaşın yolda bozulmaması için iç organları çıkarıldı ve şehit düştüğü yere gömüldü."
+      ],
+      "big": "KOSOVA",
+      "sub": "İÇ ORGANLARI",
+      "label": "GERÇEK FOTOĞRAF",
+      "fx": [],
+      "image": "images/s16.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Bu yere sonradan bir türbe yapıldı: Meşhed-i Hüdavendigâr, yani Hüdavendigâr'ın şehit düştüğü yer."
+      ],
+      "big": "MEŞHED",
+      "sub": "MEŞHED-İ HÜDAVENDİGÂR",
+      "label": "GERÇEK FOTOĞRAF",
+      "fx": [],
+      "image": "images/s17.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Tahnit edilen bedeni ise Bursa'ya getirilip Çekirge'deki türbesine defnedildi."
+      ],
+      "big": "BURSA",
+      "sub": "ÇEKİRGE TÜRBESİ",
+      "label": "TEMSİLİ",
+      "fx": [],
+      "image": "images/s18.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Yani bir padişah, iki ayrı ülkede, iki ayrı türbede yatıyor."
+      ],
+      "big": "2 TÜRBE",
+      "sub": "KOSOVA · BURSA",
+      "label": "GERÇEK FOTOĞRAF",
+      "fx": [],
+      "image": "images/s19.jpg",
+      "prompt": "I. Murad"
+    },
+    {
+      "lines": [
+        "Kosova'daki türbenin bakımını aynı ailenin kuşaklardır üstlendiği anlatılır."
+      ],
+      "big": "KUŞAKLARDIR",
+      "sub": "AYNI AİLE",
+      "label": "GERÇEK FOTOĞRAF",
+      "fx": [],
+      "image": "images/s20.jpg",
       "prompt": "I. Murad"
     },
     {
@@ -172,7 +238,7 @@
       "sub": "4/36 · YILDIRIM BAYEZİD",
       "label": "I. MURAD",
       "fx": [],
-      "image": "images/s15.jpg",
+      "image": "images/s21.jpg",
       "prompt": "I. Murad"
     }
   ],
@@ -183,17 +249,17 @@
     {
       "name": "HÜKÜMDAR",
       "from": 0,
-      "to": 6
+      "to": 8
     },
     {
       "name": "KOSOVA",
-      "from": 7,
-      "to": 13
+      "from": 9,
+      "to": 19
     },
     {
       "name": "SON",
-      "from": 14,
-      "to": 14
+      "from": 20,
+      "to": 20
     }
   ],
   "outro": {
@@ -232,5 +298,5 @@
   "slug": "murad-1-3-36",
   "durum": "onaylandi",
   "sade": true,
-  "seslendirme_metni": "Savaş meydanında şehit düşen tek Osmanlı padişahı: I. Murad.\nOna Hüdavendigâr derlerdi; yani hükümdar, efendi.\nEdirne'yi aldı ve Osmanlı'nın başkentini ilk kez Avrupa'ya taşıdı.\nBugün bildiğimiz Yeniçeri Ocağı onun döneminde kuruldu.\nPeki şunu biliyor muydun? Bursa'daki camisi dünyada bir benzeri olmayan bir yapı.\nAlt katı cami, üst katı medrese; ibadet ve ilim aynı çatı altında.\nBugün gördüğün I. Murad resimleri de yüzyıllar sonra hayal edilerek çizildi.\nbin üç yüz seksen dokuzda Kosova'da, Sırp liderliğindeki Balkan ittifakının karşısına çıktı.\nSavaşı kazandı. Ama zafer anında, savaş alanını gezerken…\nYaralı gibi yerde yatan bir Sırp şövalyesi, Miloş Obiliç, ayağa fırladı ve onu hançerledi.\nPadişah, kazandığı savaşın meydanında şehit düştü.\nİşte en az bilinen detay: Padişahın iç organları orada, Kosova'da toprağa verildi.\nBedeni ise Bursa'ya getirilip Çekirge'deki türbesine defnedildi.\nKosova'daki türbe bugün hala ziyaret ediliyor.\nSence I. Murad'ın en büyük mirası hangisi? Yorumlara yaz.\nSıradaki bölüm: Yıldırım Bayezid. Kaçırmamak için animasyon tarih'i takip et."
+  "seslendirme_metni": "Savaş meydanında şehit düşen tek Osmanlı padişahı: I. Murad.\nOna Hüdavendigâr derlerdi; yani hükümdar, efendi.\nBu lakap o kadar benimsendi ki, Bursa ve çevresi yüzyıllar boyunca Hüdavendigâr Vilayeti diye anıldı.\nEdirne'yi aldı ve Osmanlı'nın başkentini ilk kez Avrupa'ya taşıdı.\nBugün bildiğimiz Yeniçeri Ocağı onun döneminde kuruldu.\nSavaşlarda alınan esirlerin beşte biri devlete ayrıldı. Yeniçerilerin ilk kaynağı bu pençik sistemiydi.\nPeki şunu biliyor muydun? Bursa'daki camisi dünyada bir benzeri olmayan bir yapı.\nAlt katı cami, üst katı medrese; ibadet ve ilim aynı çatı altında.\nBugün gördüğün I. Murad resimleri de yüzyıllar sonra hayal edilerek çizildi.\nbin üç yüz seksen dokuzda Kosova'da, Sırp liderliğindeki Balkan ittifakının karşısına çıktı.\nSavaşı kazandı. Ama zafer anında, savaş alanını gezerken…\nYaralı gibi yerde yatan bir Sırp şövalyesi, Miloş Obiliç, ayağa fırladı ve onu hançerledi.\nPadişah, kazandığı savaşın meydanında şehit düştü.\nOğlu Bayezid orada, savaş meydanında padişah ilan edildi.\nPeki uzak Bursa'ya cenaze nasıl götürülecekti?\nNaaşın yolda bozulmaması için iç organları çıkarıldı ve şehit düştüğü yere gömüldü.\nBu yere sonradan bir türbe yapıldı: Meşhed-i Hüdavendigâr, yani Hüdavendigâr'ın şehit düştüğü yer.\nTahnit edilen bedeni ise Bursa'ya getirilip Çekirge'deki türbesine defnedildi.\nYani bir padişah, iki ayrı ülkede, iki ayrı türbede yatıyor.\nKosova'daki türbenin bakımını aynı ailenin kuşaklardır üstlendiği anlatılır.\nSence I. Murad'ın en büyük mirası hangisi? Yorumlara yaz.\nSıradaki bölüm: Yıldırım Bayezid. Kaçırmamak için animasyon tarih'i takip et."
 }

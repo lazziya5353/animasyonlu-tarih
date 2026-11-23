@@ -36,7 +36,7 @@
    "big": "HÜDAVENDİGÂR",
    "sub": "HÜKÜMDAR · EFENDİ",
    "year": null,
-   "label": "TEMSİLİ · 19. YY GRAVÜRÜ",
+   "label": "I. MURAD'IN TUĞRASI",
    "fx": [],
    "kb": [
     1.18,
@@ -52,15 +52,13 @@
    "start": null,
    "end": null,
    "lines": [
-    "Edirne'yi aldı ve Osmanlı'nın başkentini ilk kez Avrupa'ya taşıdı."
+    "Bu lakap o kadar benimsendi ki, Bursa ve çevresi yüzyıllar boyunca Hüdavendigâr Vilayeti diye anıldı."
    ],
-   "big": "EDİRNE",
-   "sub": "İLK AVRUPA BAŞKENTİ",
+   "big": "BURSA",
+   "sub": "HÜDAVENDİGÂR VİLAYETİ",
    "year": null,
-   "label": "FETİH",
-   "fx": [
-    "dust"
-   ],
+   "label": "İSİM",
+   "fx": [],
    "kb": [
     1.04,
     1.18,
@@ -75,13 +73,15 @@
    "start": null,
    "end": null,
    "lines": [
-    "Bugün bildiğimiz Yeniçeri Ocağı onun döneminde kuruldu."
+    "Edirne'yi aldı ve Osmanlı'nın başkentini ilk kez Avrupa'ya taşıdı."
    ],
-   "big": "YENİÇERİ",
-   "sub": "OCAĞIN DOĞUŞU",
+   "big": "EDİRNE",
+   "sub": "İLK AVRUPA BAŞKENTİ",
    "year": null,
-   "label": "ORDU",
-   "fx": [],
+   "label": "FETİH",
+   "fx": [
+    "dust"
+   ],
    "kb": [
     1.18,
     1.04,
@@ -96,12 +96,12 @@
    "start": null,
    "end": null,
    "lines": [
-    "Peki şunu biliyor muydun? Bursa'daki camisi dünyada bir benzeri olmayan bir yapı."
+    "Bugün bildiğimiz Yeniçeri Ocağı onun döneminde kuruldu."
    ],
-   "big": "BURSA",
-   "sub": "HÜDAVENDİGÂR CAMİİ",
+   "big": "YENİÇERİ",
+   "sub": "OCAĞIN DOĞUŞU",
    "year": null,
-   "label": "ESER",
+   "label": "ORDU",
    "fx": [],
    "kb": [
     1.04,
@@ -117,12 +117,12 @@
    "start": null,
    "end": null,
    "lines": [
-    "Alt katı cami, üst katı medrese; ibadet ve ilim aynı çatı altında."
+    "Savaşlarda alınan esirlerin beşte biri devlete ayrıldı. Yeniçerilerin ilk kaynağı bu pençik sistemiydi."
    ],
-   "big": "CAMİ + MEDRESE",
-   "sub": "AYNI ÇATI ALTINDA",
+   "big": "1/5",
+   "sub": "PENÇİK SİSTEMİ",
    "year": null,
-   "label": "ESER",
+   "label": "ORDU",
    "fx": [],
    "kb": [
     1.18,
@@ -135,6 +135,48 @@
   },
   {
    "image": "images/s07.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Peki şunu biliyor muydun? Bursa'daki camisi dünyada bir benzeri olmayan bir yapı."
+   ],
+   "big": "BURSA",
+   "sub": "HÜDAVENDİGÂR CAMİİ",
+   "year": null,
+   "label": "GERÇEK FOTOĞRAF",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s08.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Alt katı cami, üst katı medrese; ibadet ve ilim aynı çatı altında."
+   ],
+   "big": "CAMİ + MEDRESE",
+   "sub": "AYNI ÇATI ALTINDA",
+   "year": null,
+   "label": "GERÇEK FOTOĞRAF",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s09.jpg",
    "start": null,
    "end": null,
    "lines": [
@@ -155,7 +197,7 @@
    ]
   },
   {
-   "image": "images/s08.jpg",
+   "image": "images/s10.jpg",
    "start": null,
    "end": null,
    "lines": [
@@ -178,7 +220,7 @@
    ]
   },
   {
-   "image": "images/s09.jpg",
+   "image": "images/s11.jpg",
    "start": null,
    "end": null,
    "lines": [
@@ -199,7 +241,7 @@
    ]
   },
   {
-   "image": "images/s10.jpg",
+   "image": "images/s12.jpg",
    "start": null,
    "end": null,
    "lines": [
@@ -220,7 +262,7 @@
    ]
   },
   {
-   "image": "images/s11.jpg",
+   "image": "images/s13.jpg",
    "start": null,
    "end": null,
    "lines": [
@@ -243,58 +285,16 @@
    ]
   },
   {
-   "image": "images/s12.jpg",
-   "start": null,
-   "end": null,
-   "lines": [
-    "İşte en az bilinen detay: Padişahın iç organları orada, Kosova'da toprağa verildi."
-   ],
-   "big": "KOSOVA",
-   "sub": "MEŞHED-İ HÜDAVENDİGÂR",
-   "year": null,
-   "label": "TÜRBE",
-   "fx": [],
-   "kb": [
-    1.18,
-    1.04,
-    0.5,
-    0.5,
-    0.5,
-    0.55
-   ]
-  },
-  {
-   "image": "images/s13.jpg",
-   "start": null,
-   "end": null,
-   "lines": [
-    "Bedeni ise Bursa'ya getirilip Çekirge'deki türbesine defnedildi."
-   ],
-   "big": "BURSA",
-   "sub": "ÇEKİRGE TÜRBESİ",
-   "year": null,
-   "label": "TÜRBE",
-   "fx": [],
-   "kb": [
-    1.04,
-    1.18,
-    0.5,
-    0.55,
-    0.5,
-    0.5
-   ]
-  },
-  {
    "image": "images/s14.jpg",
    "start": null,
    "end": null,
    "lines": [
-    "Kosova'daki türbe bugün hâlâ ziyaret ediliyor."
+    "Oğlu Bayezid orada, savaş meydanında padişah ilan edildi."
    ],
-   "big": "BUGÜN",
-   "sub": "HÂLÂ ZİYARET EDİLİYOR",
+   "big": "BAYEZİD",
+   "sub": "MEYDANDA PADİŞAH",
    "year": null,
-   "label": "TÜRBE",
+   "label": "1389",
    "fx": [],
    "kb": [
     1.18,
@@ -307,6 +307,132 @@
   },
   {
    "image": "images/s15.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Peki uzak Bursa'ya cenaze nasıl götürülecekti?"
+   ],
+   "big": "BURSA?",
+   "sub": "",
+   "year": null,
+   "label": "SORU",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s16.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Naaşın yolda bozulmaması için iç organları çıkarıldı ve şehit düştüğü yere gömüldü."
+   ],
+   "big": "KOSOVA",
+   "sub": "İÇ ORGANLARI",
+   "year": null,
+   "label": "GERÇEK FOTOĞRAF",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s17.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bu yere sonradan bir türbe yapıldı: Meşhed-i Hüdavendigâr, yani Hüdavendigâr'ın şehit düştüğü yer."
+   ],
+   "big": "MEŞHED",
+   "sub": "MEŞHED-İ HÜDAVENDİGÂR",
+   "year": null,
+   "label": "GERÇEK FOTOĞRAF",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s18.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Tahnit edilen bedeni ise Bursa'ya getirilip Çekirge'deki türbesine defnedildi."
+   ],
+   "big": "BURSA",
+   "sub": "ÇEKİRGE TÜRBESİ",
+   "year": null,
+   "label": "TEMSİLİ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s19.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Yani bir padişah, iki ayrı ülkede, iki ayrı türbede yatıyor."
+   ],
+   "big": "2 TÜRBE",
+   "sub": "KOSOVA · BURSA",
+   "year": null,
+   "label": "GERÇEK FOTOĞRAF",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/s20.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Kosova'daki türbenin bakımını aynı ailenin kuşaklardır üstlendiği anlatılır."
+   ],
+   "big": "KUŞAKLARDIR",
+   "sub": "AYNI AİLE",
+   "year": null,
+   "label": "GERÇEK FOTOĞRAF",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/s21.jpg",
    "start": null,
    "end": null,
    "lines": [
@@ -332,17 +458,17 @@
   {
    "name": "HÜKÜMDAR",
    "from": 0,
-   "to": 6
+   "to": 8
   },
   {
    "name": "KOSOVA",
-   "from": 7,
-   "to": 13
+   "from": 9,
+   "to": 19
   },
   {
    "name": "SON",
-   "from": 14,
-   "to": 14
+   "from": 20,
+   "to": 20
   }
  ],
  "outro_plan": {
