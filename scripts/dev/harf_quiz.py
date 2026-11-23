@@ -106,6 +106,12 @@ def main():
     for k in range(n):
         q = S[1+2*k]; L, rest = q.split(" harfi.", 1)
         Q.append((L.strip(), rest.strip(), up(S[2+2*k].strip().rstrip("."))))
+    HINT = {"A": "Soyadı Kanunu · 1934", "B": "1326 · Orhan Bey", "C": "Türkiye Cumhuriyeti · 1923", "D": "Divan-ı Hümayun",
+            "E": "I. Murad döneminde başkent", "F": "29 Mayıs 1453", "G": "Çanakkale Cephesi · 1915", "H": "İstanbul kuşatması · 1453",
+            "İ": "Başkent · 1453–1922", "K": "46 yıl · 1520–1566", "M": "Mohaç Meydan Muharebesi · 1526", "N": "Niğbolu Savaşı · 1396",
+            "O": "Osmanlı Beyliği · 1299", "P": "Preveze Deniz Savaşı · 1538", "R": "Balkanlar", "S": "Süleymaniye · Selimiye",
+            "Ş": "Osman Gazi'nin kayınpederi", "T": "Padişahın imzası", "U": "İstanbul'un Fethi · 1453", "V": "I. Viyana Kuşatması · 1529",
+            "Y": "I. Selim · 1517", "Z": "Büyük Taarruz · 1922"}
     letters = [x[0] for x in Q]
     B = base()
     if a.kapak:
@@ -149,13 +155,17 @@ def main():
         mid = lambda j: (sil[j][0]+sil[j][1])/2
         def cost(t0, t1, c):
             return math.log(max(t1 - t0, 0.05)/(rate*c))**2
+        def pen(k, i, j):  # yapi: soru "X harfi." + kisa durakla baslar; cevap tek parca (ic durak yok)
+            ins = sil[i+1:j]
+            if k % 2 == 1: return 0 if any(0.25 < g[0] - sil[i][1] < 1.0 for g in ins) else 3.0
+            return 3.0 * sum(1 for g in ins if g[1] - g[0] > 0.2)
         INF = float("inf"); D = [[INF]*m for _ in range(K)]; P = [[-1]*m for _ in range(K)]
         cost0 = cost; cost = lambda t0, t1, c: cost0(t0, t1, c)
         for j in range(m): D[0][j] = cost(0, mid(j), ch[0])
         for k in range(1, K):
             for j in range(k, m):
                 for i in range(k-1, j):
-                    v = D[k-1][i] + cost(mid(i), mid(j), ch[k]) - 1.5*(sil[j][1]-sil[j][0])
+                    v = D[k-1][i] + cost(mid(i), mid(j), ch[k]) - 1.5*(sil[j][1]-sil[j][0]) + pen(k, i, j)
                     if v < D[k][j]: D[k][j] = v; P[k][j] = i
         j = min(range(m), key=lambda j: D[K-1][j] + cost(mid(j), tot, ch[-1])); idx = []
         for k in range(K-1, -1, -1): idx.append(j); j = P[k][j]
@@ -205,7 +215,7 @@ def main():
                 dd.arc((CX-r2, CY-r2, CX+r2, CY+r2), -90, -90 + 360*min(1, (t-qe)/(as_-qe)), fill=(200, 60, 50), width=6)
             bg = im.copy()
             if ansv:
-                k = min(1, (t - as_)/0.3); center(im, cur+1, n, Q[cur][1], Q[cur][2], "", k, 0.9 + 0.1*k)
+                k = min(1, (t - as_)/0.3); center(im, cur+1, n, Q[cur][1], Q[cur][2], up(HINT.get(Q[cur][0], "")), k, 0.9 + 0.1*k)
             else:
                 center(im, cur+1, n, Q[cur][1], "", "", 0, 1)
             al = min(1, (t - qs)/0.25, max(0, (gone - t)/0.25))
