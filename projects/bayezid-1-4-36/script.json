@@ -66,7 +66,7 @@
       ],
       "big": "İSTANBUL",
       "sub": "KUŞATMA",
-      "label": "GERÇEK FOTOĞRAF",
+      "label": "TEMSİLİ",
       "fx": [],
       "image": "images/s06.jpg",
       "prompt": "Yıldırım Bayezid"
@@ -77,7 +77,7 @@
       ],
       "big": "ANADOLUHİSARI",
       "sub": "BOĞAZ'IN İLK KALESİ",
-      "label": "GERÇEK FOTOĞRAF",
+      "label": "TEMSİLİ",
       "fx": [],
       "image": "images/s07.jpg",
       "prompt": "Yıldırım Bayezid"
@@ -88,7 +88,7 @@
       ],
       "big": "GÜZELCEHİSAR",
       "sub": "İLK ADI",
-      "label": "GERÇEK FOTOĞRAF",
+      "label": "TEMSİLİ",
       "fx": [],
       "image": "images/s08.jpg",
       "prompt": "Yıldırım Bayezid"
@@ -112,7 +112,7 @@
       ],
       "big": "20 CAMİ?",
       "sub": "ADAK",
-      "label": "GERÇEK FOTOĞRAF",
+      "label": "TEMSİLİ",
       "fx": [],
       "image": "images/s10.jpg",
       "prompt": "Yıldırım Bayezid"
@@ -123,7 +123,7 @@
       ],
       "big": "20 KUBBE",
       "sub": "BURSA ULU CAMİİ",
-      "label": "GERÇEK FOTOĞRAF",
+      "label": "TEMSİLİ",
       "fx": [],
       "image": "images/s11.jpg",
       "prompt": "Yıldırım Bayezid"
@@ -134,7 +134,7 @@
       ],
       "big": "ŞADIRVAN",
       "sub": "CAMİNİN İÇİNDE",
-      "label": "GERÇEK FOTOĞRAF",
+      "label": "TEMSİLİ",
       "fx": [],
       "image": "images/s12.jpg",
       "prompt": "Yıldırım Bayezid"
@@ -246,7 +246,7 @@
       ],
       "big": "BURSA",
       "sub": "YILDIRIM TÜRBESİ",
-      "label": "GERÇEK FOTOĞRAF",
+      "label": "TEMSİLİ",
       "fx": [],
       "image": "images/s22.jpg",
       "prompt": "Yıldırım Bayezid"
