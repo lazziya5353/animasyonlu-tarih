@@ -1,0 +1,995 @@
+{
+ "title": "Her Harfe Bir Tarih Sorusu",
+ "voice": "ses.wav",
+ "voice_offset": 0.3,
+ "hook": "HER HARFE BİR TARİH SORUSU",
+ "map_region": "anadolu",
+ "scenes": [
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Her harfe bir tarih sorusu. Bakalım kaçını bileceksin?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "A harfi. 1934'te Mustafa Kemal'e verilen soyadı nedir?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Atatürk."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "B harfi. Osmanlı'nın ilk büyük başkenti hangi şehirdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Bursa."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "C harfi. 29 Ekim 1923'te ne ilan edildi?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Cumhuriyet."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "D harfi. Osmanlı'da devlet işlerinin görüşüldüğü meclisin adı?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Divan."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "E harfi. Bursa'dan sonra Osmanlı'nın başkenti olan şehir?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Edirne."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "F harfi. İstanbul'u 1453'te fetheden padişah?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Fatih Sultan Mehmed."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "G harfi. Çanakkale Savaşı hangi yarımadada yapıldı?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Gelibolu."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "H harfi. Fatih'in gemileri karadan yürütüp indirdiği yer?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Haliç."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "İ harfi. 1453'ten sonra Osmanlı'nın başkenti hangi şehirdi?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "İstanbul."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "K harfi. En uzun süre tahtta kalan Osmanlı padişahı?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Kanuni Sultan Süleyman."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "M harfi. Kanuni'nin 1526'da Macarları yendiği savaş?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Mohaç."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "N harfi. Yıldırım Bayezid'in 1396'da Haçlıları yendiği savaş?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Niğbolu."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "O harfi. Osmanlı Devleti'ni kuran kişi?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Osman Gazi."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "P harfi. Barbaros'un 1538'de kazandığı büyük deniz zaferi?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Preveze."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "R harfi. Osmanlı'nın Avrupa'daki topraklarına verilen ad?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Rumeli."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "S harfi. Süleymaniye ve Selimiye camilerini yapan mimar?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Mimar Sinan."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ş harfi. Osman Gazi'nin rüyasını yorumlayan şeyh?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Şeyh Edebali."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "T harfi. Osmanlı padişahlarının resmî imzasına ne denir?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Tuğra."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "U harfi. Fetihte surlara ilk sancağı diken kahraman?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Ulubatlı Hasan."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "V harfi. Kanuni'nin 1529'da kuşattığı Avrupa şehri?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Viyana."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Y harfi. Mısır'ı alıp halifeliği Osmanlı'ya getiren padişah?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Yavuz Sultan Selim."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Z harfi. 30 Ağustos'ta kutladığımız bayram?"
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Zafer Bayramı."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.04,
+    1.18,
+    0.5,
+    0.55,
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "image": "images/bg.jpg",
+   "start": null,
+   "end": null,
+   "lines": [
+    "Kaçını bildin? Yorumlara yaz. Kaçırmamak için animasyon tarih'i takip et."
+   ],
+   "big": "",
+   "sub": "",
+   "year": null,
+   "label": "QUIZ",
+   "fx": [],
+   "kb": [
+    1.18,
+    1.04,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "name": "QUIZ",
+   "from": 0,
+   "to": 45
+  }
+ ],
+ "outro_plan": {
+  "title": "KAÇINI BİLDİN?",
+  "line": "Yorumlara yaz"
+ },
+ "maps_plan": [],
+ "cards_plan": [],
+ "music": {
+  "booms": [
+   0.3
+  ]
+ },
+ "finale": "",
+ "sade": true
+}
