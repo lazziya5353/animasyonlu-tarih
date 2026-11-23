@@ -116,7 +116,7 @@ def main():
     ev = []  # (k, q_start, a_start, a_end)
     for i in range(n):
         qs, qe = sc[1+2*i]["start"], sc[1+2*i]["end"]; as_ = sc[2+2*i]["start"]
-        ev.append((i, qs, sh(as_), sh(sc[2+2*i]["end"]), sh(qe)))
+        ev.append((i, sh(qs), sh(as_), sh(sc[2+2*i]["end"]), sh(qe - 1e-3) + 1e-3))
     intro_end = sc[1]["start"]; outro = sh(sc[-1]["start"])
     p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
                           "-i", tmpa, "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "copy", "-shortest", "-movflags", "+faststart", a.out], stdin=subprocess.PIPE)
