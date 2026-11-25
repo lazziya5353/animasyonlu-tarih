@@ -9,7 +9,7 @@
 7. Şiddet grafik değil; gerçek kişilerin yüzleri yakından çizilmez.
 8. Render sonrası release videosu indirilip kontrol edilir: sahne sınırlarında sızma, senkron, son başlık.
 9. Bekleme yok: iş verilir, tahmini süre + 2 dk sonrasına hatırlatma kurulur.
-11. Quiz yerleşimi: soru, cevap ve alt bilgi halkanın içindeki güvenli genişliğe (en çok 720 px, satırın yüksekliğindeki kirişe göre) sığdırılır; sığmazsa küçültülür, gerekirse 2 satıra bölünür. Cevap ekrandayken filigran metin bölgesine girmez. quiz_kontrol.py metin kutusu bir harf balonuna değerse koşuyu durdurur.
+11. Quiz yerleşimi: soru, cevap ve alt bilgi halkanın içindeki güvenli genişliğe (en çok 720 px, satırın yüksekliğindeki kirişe göre) sığdırılır; sığmazsa küçültülür, gerekirse 2 satıra bölünür. Filigran her zaman görünür, %17 beyaz, ortada sürekli süzülür ve yazıların üstünden soluk geçer (gizleme yok). quiz_kontrol.py metin kutusu bir harf balonuna değerse koşuyu durdurur.
 10. Quiz ses bekçisi: quiz.yml, quiz_kontrol.py --bekci ile girişi ve 1., 11., 22. soruyu Whisper ile yazıya döker; her biri script.json'daki kart metniyle bulanık eşleşmezse (oran < 0.6) ya da Whisper yüklenemezse koşu durur. Ses yalnızca projenin kendi metninden üretilir: script.json slug'ı klasörle aynı olmalı, seslendirme_metni sahnelerle uyuşmalı; metin/stil değişince (ses.kaynak özeti) ses yeniden üretilir, ses.wav yoksa koşu hata verir.
 
 # Quiz formatı: "Her Harfe Bir Tarih Sorusu" (ücretsiz, Claude'suz)

@@ -50,8 +50,6 @@ def yerlesim(v):
             for bx, by, r in K["balonlar"]:
                 dx = max(x0 - bx, 0, bx - x1); dy = max(y0 - by, 0, by - y1)
                 if dx*dx + dy*dy < (r + 4)**2: h.append(f"{L}: metin kutusu harf balonuna degiyor ({x0},{y0},{x1},{y1})")
-            w = k.get("filigran")
-            if w and not (w[2] <= x0 or x1 <= w[0] or w[3] <= y0 or y1 <= w[1]): h.append(f"{L}: filigran cevap metninin ustunde")
     print(f"yerlesim: {len(K['kartlar'])} kart kontrol edildi, {len(h)} sorun")
     return h
 

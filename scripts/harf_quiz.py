@@ -256,7 +256,7 @@ def main():
                           "-i", tmpa, "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", a.out], stdin=subprocess.PIPE)
     # hirsizliga karsi filigran: orta alanda yavasca gezinen yari saydam (~30% beyaz) "@animasyon.tarih"
     WMf = F("Montserrat-900", 44); wb = WMf.getbbox("@animasyon.tarih")
-    WM = Image.new("RGBA", (wb[2]+8, wb[3]+8), (0, 0, 0, 0)); ImageDraw.Draw(WM).text((4, 4), "@animasyon.tarih", font=WMf, fill=(255, 255, 255, 66))
+    WM = Image.new("RGBA", (wb[2]+8, wb[3]+8), (0, 0, 0, 0)); ImageDraw.Draw(WM).text((4, 4), "@animasyon.tarih", font=WMf, fill=(255, 255, 255, 43))
     kutular = {}   # kart -> cevap tam gorunurken metin kutulari + filigran kutusu
     for fi in range(int(dur*FPS)):
         t = fi / FPS
@@ -291,10 +291,6 @@ def main():
         acik = ev[0][0] <= t < outro and t >= ev[cur][2]
         if not a.no_wm:
             wx = int(CX - WM.width/2 + 230*math.sin(t*0.21)); wy = int(CY - WM.height/2 + 330*math.sin(t*0.13 + 1.1))
-            if acik and KUTU:  # cevap ekrandayken filigran metin bolgesine girmez: ust banda (soru sayacinin ustu) kayar
-                ust = min(b[1] for b in KUTU) - 70
-                wy = min(wy, int(CY - 360 + (ust - WM.height - (CY - 360))*(0.5 + 0.5*math.sin(t*0.13 + 1.1))))
-                wx = max(CX - 260, min(wx, CX + 260 - WM.width))
         if acik and ev[cur][2] + 0.35 <= t and cur not in kutular:
             kutular[cur] = dict(metin=[list(b) for b in KUTU], filigran=None if a.no_wm else [wx, wy, wx + WM.width, wy + WM.height])
             im = im.convert("RGBA"); im.alpha_composite(WM, (wx, wy)); im = im.convert("RGB")
