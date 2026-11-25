@@ -98,7 +98,9 @@ function render() {
   html += `<h2>Son harcamalar</h2><div class="card">${(h.son || []).filter((x) => x.usd > 0).map((x) => `<div class="mut" style="display:flex;justify-content:space-between;padding:4px 0"><span>${esc(x.ajan)} · ${esc(x.detay)}</span><span>$${x.usd.toFixed(3)}</span></div>`).join("") || '<span class="mut">Kayıt yok</span>'}</div>`;
   const SEK = [["anim", "🎬 ANİMASYON TARİH VİDEO"], ["spor", "⚽ SPOR TARİHİ VİDEO"], ["ig", "📊 İNSTAGRAM ANALİZ"]];
   let sek = "anim"; try { const k = localStorage.getItem("sekme"); if (SEK.some((x) => x[0] === k)) sek = k; } catch {}
-  const spor = `<h2>SPOR TARİHİ VİDEO</h2><div class="card"><b style="color:var(--gold)">Yakında</b><div class="mut" style="margin-top:4px">Spor tarihi sayfası birkaç gün içinde burada olacak: geçmiş maç animasyonları, maç öncesi hikâyeler ve spor quizleri.</div></div><h2>Projeler</h2><div class="card mut">Henüz spor projesi yok.</div>`;
+  const QZ = (t) => (typeof quizSekmeHtml === "function" ? quizSekmeHtml(t) : "");
+  html = QZ("tarih") + html;
+  const spor = `<h2>SPOR TARİHİ VİDEO</h2>${QZ("spor")}<div class="card"><b style="color:var(--gold)">Yakında</b><div class="mut" style="margin-top:4px">Maç animasyonları ve maç öncesi hikâyeler burada olacak. Spor quizleri yukarıdaki QUIZ bölümünden üretilebilir.</div></div>`;
   $("#main").innerHTML = `<nav class="sekmeler">${SEK.map(([k, l]) => `<button class="sekme${k === sek ? " on" : ""}" data-sekme="${k}">${l}</button>`).join("")}</nav>
     <section data-bolum="anim"${sek === "anim" ? "" : " hidden"}>${html}</section><section data-bolum="spor"${sek === "spor" ? "" : " hidden"}>${spor}</section><section data-bolum="ig"${sek === "ig" ? "" : " hidden"}>${typeof igSekmeHtml === "function" ? igSekmeHtml() : renderTokenKart() + (renderInstagram() || "")}</section>`;
   document.querySelectorAll("[data-sekme]").forEach((b) => (b.onclick = () => {
@@ -106,7 +108,7 @@ function render() {
     document.querySelectorAll("[data-sekme]").forEach((x) => x.classList.toggle("on", x === b));
     document.querySelectorAll("[data-bolum]").forEach((x) => (x.hidden = x.dataset.bolum !== k)); window.scrollTo(0, 0);
   }));
-  baglaToken();
+  baglaToken(); if (typeof baglaQuiz === "function") baglaQuiz();
   document.querySelectorAll("[data-run]").forEach((b) => (b.onclick = () => runAgent(b.dataset.run)));
   baglaInstagram(); if (typeof baglaIgEk === "function") baglaIgEk();
   document.querySelectorAll("[data-detay]").forEach((b) => (b.onclick = () => ajanDetay(b.dataset.detay)));

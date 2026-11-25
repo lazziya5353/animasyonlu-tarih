@@ -1,0 +1,141 @@
+{
+ "her-harfe": {
+  "ad": "Her Harfe Bir Soru",
+  "aciklama": "Harf halkası: her harf için cevabı o harfle başlayan bir soru.",
+  "eski": true,
+  "workflow": "quiz"
+ },
+ "harf-bul": {
+  "ad": "Harflerden Bul",
+  "aciklama": "Boşluklu kelime: harfler tek tek açılır, cevabı bul.",
+  "eski": true,
+  "workflow": "harf-bul"
+ },
+ "hangisi-once": {
+  "ad": "Hangisi Önce?",
+  "aciklama": "İki olay kartı (A/B): hangisi daha önce oldu?",
+  "ornek": {
+   "a": {
+    "metin": "Malazgirt Savaşı",
+    "yil": 1071
+   },
+   "b": {
+    "metin": "Miryokefalon Savaşı",
+    "yil": 1176
+   },
+   "dogru": "A",
+   "zorluk": "kolay"
+  },
+  "kurallar": "a ve b: kısa olay adı (en çok 6 kelime) ve tam sayı yıl; yıllar farklı; dogru: yılı küçük olan ('A'/'B'). Alt bilgi otomatik iki yılı gösterir."
+ },
+ "dogru-yanlis": {
+  "ad": "Doğru mu Yanlış mı?",
+  "aciklama": "Bir iddia kartı: DOĞRU mu YANLIŞ mı? + tek satır düzeltme.",
+  "ornek": {
+   "ifade": "Türkiye Cumhuriyeti'nin ilk başkenti İstanbul'dur.",
+   "dogru": false,
+   "duzeltme": "Ankara, 13 Ekim 1923'te başkent oldu.",
+   "zorluk": "kolay"
+  },
+  "kurallar": "ifade tek cümle (en çok 18 kelime); dogru true/false; duzeltme tek kısa cümle (en çok 12 kelime), doğru ifadelerde de kısa kanıt. Yaklaşık yarısı yanlış olsun."
+ },
+ "bu-kim": {
+  "ad": "Bu Kim?",
+  "aciklama": "3 ipucu tek tek açılır, tarihî kişiyi bul.",
+  "ornek": {
+   "ipuclari": [
+    "Osmanlı denizcisi ve haritacısıdır.",
+    "Kitab-ı Bahriye'yi yazdı.",
+    "1513'te ünlü dünya haritasını çizdi."
+   ],
+   "cevap": "Piri Reis",
+   "alt_bilgi": "Osmanlı amirali · ö. 1553",
+   "zorluk": "orta"
+  },
+  "kurallar": "tam 3 ipucu, zordan kolaya; ipuçlarında cevabın adı ya da kökü GEÇMEZ; alt_bilgi kısa kimlik + yıl. İsteğe bağlı gorsel (portre)."
+ },
+ "haritada-bul": {
+  "ad": "Haritada Bul",
+  "aciklama": "Haritada 4 iğne (A–D): olay nerede oldu?",
+  "ornek": {
+   "soru": "Malazgirt Savaşı nerede yapıldı?",
+   "secenekler": [
+    {
+     "ad": "Erzurum",
+     "lat": 39.9,
+     "lon": 41.27
+    },
+    {
+     "ad": "Malazgirt",
+     "lat": 39.14,
+     "lon": 42.53
+    },
+    {
+     "ad": "Van",
+     "lat": 38.5,
+     "lon": 43.38
+    },
+    {
+     "ad": "Kars",
+     "lat": 40.6,
+     "lon": 43.1
+    }
+   ],
+   "dogru": 1,
+   "alt_bilgi": "26 Ağustos 1071 · Muş",
+   "zorluk": "kolay"
+  },
+  "kurallar": "4 seçenek, her biri gerçek koordinat (ondalık derece); seçenekler aynı bölgede ama birbirinden en az ~40 km uzak; dogru 0-3; alt_bilgi tarih + yer."
+ },
+ "yili-tahmin": {
+  "ad": "Yılı Tahmin Et",
+  "aciklama": "4 yıl seçeneği (2x2): doğru yılı bul.",
+  "ornek": {
+   "soru": "TBMM hangi yıl açıldı?",
+   "secenekler": [
+    1919,
+    1920,
+    1921,
+    1923
+   ],
+   "dogru": 1,
+   "alt_bilgi": "23 Nisan 1920",
+   "zorluk": "kolay"
+  },
+  "kurallar": "4 farklı tam sayı yıl, yakın ve inandırıcı çeldiriciler; dogru 0-3 (yerini karıştır); alt_bilgi tam tarih."
+ },
+ "emoji-tarih": {
+  "ad": "Emoji ile Tarih",
+  "aciklama": "Büyük emojilerden olayı bul.",
+  "ornek": {
+   "emoji": [
+    "🐴",
+    "🪵",
+    "⚔️",
+    "🏛️"
+   ],
+   "ipucu": "Antik bir hile",
+   "cevap": "Truva Atı",
+   "alt_bilgi": "Homeros · İlyada",
+   "zorluk": "kolay"
+  },
+  "kurallar": "2-6 emoji (bayrak emojisi kullanma, yaygın Unicode emojiler); ipucu kısa ve cevabı söylemez; cevap kısa; alt_bilgi tarih."
+ },
+ "kelime-eksik": {
+  "ad": "Bir Kelime Eksik",
+  "aciklama": "Ünlü sözde boşluk: 4 seçenekten eksik kelimeyi bul.",
+  "ornek": {
+   "soz": "Ben size taarruzu emretmiyorum, ___ emrediyorum.",
+   "secenekler": [
+    "ölmeyi",
+    "savaşmayı",
+    "direnmeyi",
+    "beklemeyi"
+   ],
+   "dogru": 0,
+   "soyleyen": "Mustafa Kemal · Çanakkale 1915",
+   "zorluk": "kolay"
+  },
+  "kurallar": "YALNIZCA kaynağı kesin, birebir doğru sözler (uydurma/şüpheli atıf yok); soz içinde tam bir ___; 4 seçenek; soyleyen: kişi · yer/yıl."
+ }
+}

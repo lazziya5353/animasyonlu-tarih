@@ -22,6 +22,8 @@ const WORKFLOWS = {
   yonetici: "yonetici.yml",
   quiz: "quiz.yml",
   "harf-bul": "harf_bul.yml",
+  "quiz-studyo": "quiz_studyo.yml",
+  "quiz-taslak": "quiz_taslak.yml",
   haftalik: "weekly_rapor.yml",
 };
 const ASAMALAR = ["senaryo", "ses", "gorsel", "kurgu", "hepsi"];
@@ -49,6 +51,28 @@ async function writeFile(path, contentB64, message) {
 }
 const dispatch = (wf, inputs = {}) => ghJson(`/repos/${REPO}/actions/workflows/${WORKFLOWS[wf]}/dispatches`, { method: "POST", body: JSON.stringify({ ref: "main", inputs }) });
 const validSlug = (s) => /^[a-z0-9-]{1,60}$/.test(s || "");
+
+// Quiz Stüdyo: format şemaları (panel, bu fonksiyon ve scripts/quiz_taslak.py aynı dosyayı kullanır)
+import QSEMA from "../../quiz/semalar.json" with { type: "json" };
+const QFORMAT = Object.keys(QSEMA).filter((k) => !QSEMA[k].eski);
+function quizIstem(fmt, konu, adet, kar, tema) {
+  const s = QSEMA[fmt]; const alan = tema === "spor" ? "spor tarihi" : "tarih (ağırlıklı Türk ve dünya tarihi)";
+  return `Türkçe bir Instagram ${alan} quiz videosu için '${s.ad}' formatında ${adet} soru hazırla. Konu: ${konu}.\nZorluk dağılımı: ${kar.kolay} kolay, ${kar.orta} orta, ${kar.zor} zor; zorları başa/ortaya/sona dağıt.\nKurallar: ${s.kurallar} Her bilgi kesin doğru ve iki kaynakla doğrulanabilir olmalı; tartışmalı ya da rivayet bilgileri kullanma. Sorular kısa (en çok 14 kelime), alt_bilgi en çok 6 kelime. Türkçe karakterleri doğru yaz.\nSadece JSON döndür: {"sorular": [ ... ]}. Tek bir sorunun şeması (örnek): ${JSON.stringify(s.ornek)}`;
+}
+const quizKontrolIstem = (fmt, sorular) => "Aşağıdaki quiz sorularını tek tek doğruluk açısından denetle (Google araması kullan). Yanlış yıl, yanlış kişi, uydurma söz, birden fazla doğru cevabı olan soru, cevabı soruda ele veren ipucu ya da hatalı koordinat varsa DÜZELT; düzeltemiyorsan soruyu çıkar. Aynı şemayı koru. Sadece JSON döndür: {\"sorular\": [...], \"notlar\": [\"soru N: ne değişti ve neden (kaynak)\"]}.\n" + JSON.stringify({ format: fmt, sorular });
+async function gemini(text, { arama = false, ms = 9000 } = {}) {
+  const key = process.env.GEMINI_API_KEY; if (!key) throw new Error("anahtar yok");
+  const body = { contents: [{ parts: [{ text }] }], generationConfig: arama ? { temperature: 0.2 } : { temperature: 0.6, responseMimeType: "application/json", thinkingConfig: { thinkingBudget: 0 } } };
+  if (arama) body.tools = [{ google_search: {} }];
+  const r = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent", { method: "POST", signal: AbortSignal.timeout(ms), headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify(body) });
+  if (!r.ok) throw new Error(`Gemini ${r.status}`);
+  const t = ((await r.json()).candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").replace(/^```(json)?|```$/gm, "");
+  return JSON.parse(t.slice(t.indexOf("{"), t.lastIndexOf("}") + 1));
+}
+async function quizSiradaki(fmt) { // projects/<format>-<n>: ilk boş n
+  const r = await gh(`/repos/${REPO}/contents/projects`); const ad = r.ok ? (await r.json()).map((x) => x.name) : [];
+  let n = 1; while (ad.includes(`${fmt}-${n}`)) n++; return `${fmt}-${n}`;
+}
 
 let failed = []; // basit kaba kuvvet koruması (sıcak fonksiyon örneği başına)
 const gecerliGh = new Map(); // doğrulanmış GitHub Actions anahtarları (10 dk)
@@ -449,6 +473,59 @@ export default async (req) => {
         await writeFile("reports/latest.json", Buffer.from(JSON.stringify(rep, null, 1)).toString("base64"), `Karar: ${b.karar} · ${b.baslik}`);
         if (b.karar === "yap" && hedef && b.api) await dispatch("senarist", { konu: `${hedef.baslik} (${hedef.yil || ""})`, tarih: hedef.tarih || "", notlar: hedef.ozet || "" });
         return json({ ok: true });
+      }
+      case "quiz_taslak": { // Quiz Stüdyo 'Ajan hazırlasın': Netlify'da anahtar varsa doğrudan Gemini, yoksa quiz_taslak.yml
+        if (!QFORMAT.includes(b.format)) return json({ hata: "Format seçilmedi" }, 400);
+        const konu = String(b.konu || "").trim().slice(0, 200); if (konu.length < 3) return json({ hata: "Konu yaz" }, 400);
+        const adet = Math.max(6, Math.min(15, Number(b.adet) || 10)); const k = b.karisim || {};
+        let kar = { kolay: Number(k.kolay) || 0, orta: Number(k.orta) || 0, zor: Number(k.zor) || 0 };
+        if (kar.kolay + kar.orta + kar.zor !== adet) kar = { kolay: Math.round(adet * 0.4), zor: Math.round(adet * 0.2) }, kar.orta = adet - kar.kolay - kar.zor;
+        const tema = b.tema === "spor" ? "spor" : "tarih";
+        if (process.env.GEMINI_API_KEY && !b.yedek) {
+          try { const j = await gemini(quizIstem(b.format, konu, adet, kar, tema)); return json({ ok: true, durum: "hazir", sorular: j.sorular || [], dogrulama_gerekli: true }); }
+          catch (e) { /* zaman aşımı ya da kota: GitHub yedeğine düş */ }
+        }
+        const id = `${Date.now().toString(36)}-${crypto.randomBytes(3).toString("hex")}`;
+        await dispatch("quiz-taslak", { id, format: b.format, konu, adet: String(adet), kolay: String(kar.kolay), orta: String(kar.orta), zor: String(kar.zor), tema });
+        return json({ ok: true, durum: "bekliyor", id });
+      }
+      case "quiz_dogrula": { // taslağın ikinci geçişi: Google aramalı doğruluk kontrolü (Netlify'dan)
+        if (!QFORMAT.includes(b.format) || !Array.isArray(b.sorular)) return json({ hata: "Geçersiz taslak" }, 400);
+        try { const j = await gemini(quizKontrolIstem(b.format, b.sorular.slice(0, 15)), { arama: true, ms: 9500 }); return json({ ok: true, sorular: j.sorular || b.sorular, notlar: j.notlar || [] }); }
+        catch (e) { return json({ ok: false, sorular: b.sorular, notlar: [`Doğruluk kontrolü yapılamadı (${e.message}); soruları elle kontrol et`] }); }
+      }
+      case "quiz_taslak_durum": {
+        if (!/^[a-z0-9-]{4,40}$/.test(b.id || "")) return json({ hata: "Geçersiz id" }, 400);
+        const j = await readJson(`projects/_taslak/${b.id}.json`); return json(j || { durum: "bekliyor" });
+      }
+      case "quiz_uret": { // onaylanan sorular -> projects/<format>-<n>/script.json (+ görseller) -> quiz_studyo.yml
+        const fmt = b.format; if (!QFORMAT.includes(fmt)) return json({ hata: "Format seçilmedi" }, 400);
+        const Q = Array.isArray(b.sorular) ? b.sorular : []; if (Q.length < 6 || Q.length > 15) return json({ hata: "6-15 soru olmalı" }, 400);
+        const slug = await quizSiradaki(fmt); const tema = b.tema === "spor" ? "spor" : "tarih";
+        const hex = (x) => (/^#[0-9a-fA-F]{6}$/.test(x || "") ? x : undefined);
+        const sc = { slug, format: fmt, tema, baslik: String(b.baslik || QSEMA[fmt].ad).slice(0, 80), sorular: Q, durum: "uretiliyor", kaynak: "panel" };
+        if (tema === "spor" && (hex(b.takim?.ana) || hex(b.takim?.ikinci))) sc.takim = { ana: hex(b.takim?.ana), ikinci: hex(b.takim?.ikinci) };
+        const resim = async (ad, b64) => { if (!b64 || b64.length > 4.5e6) return null; await writeFile(`projects/${slug}/images/${ad}`, b64, `Quiz Stüdyo görsel: ${slug}/${ad}`); return `images/${ad}`; };
+        if (b.logo) sc.logo = await resim("logo.png", b.logo);
+        if (b.arkaplan_mod === "yukle" && b.arka) sc.arkaplan = await resim("arka.jpg", b.arka);
+        if (b.arkaplan_mod === "gemini") sc.arkaplan_uret = String(b.arkaplan_prompt || `${QSEMA[fmt].ad} quiz background, ${tema === "spor" ? "stadium at night" : "historical scene"}`).slice(0, 300);
+        for (const [i, g] of Object.entries(b.gorseller || {})) { // soru görselleri: bu-kim portre, hangisi-once kart resmi
+          const q = Q[+i]; if (!q) continue;
+          if (fmt === "bu-kim") q.gorsel = await resim(`s${+i + 1}.jpg`, g);
+          if (fmt === "hangisi-once") for (const L of ["a", "b"]) if (g[L]) q[L].gorsel = await resim(`s${+i + 1}${L}.jpg`, g[L]);
+        }
+        await writeFile(`projects/${slug}/script.json`, b64(sc), `Quiz Stüdyo: ${slug} (panelden onaylandı)`);
+        await baslikYaz(slug, sc.baslik).catch(() => {});
+        await dispatch("quiz-studyo", { slug });
+        return json({ ok: true, slug });
+      }
+      case "quiz_durum": { // release varsa video + kapak, yoksa son quiz_studyo koşusu
+        if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);
+        const rel = await gh(`/repos/${REPO}/releases/tags/video-${b.slug}`);
+        if (rel.ok) { const R = await rel.json(); const a = (n) => R.assets.find((x) => x.name === n); if (a("video.mp4")) return json({ durum: "hazir", video_id: a("video.mp4").id, kapak: a("kapak.jpg")?.browser_download_url }); }
+        const runs = await ghJson(`/repos/${REPO}/actions/workflows/quiz_studyo.yml/runs?per_page=10`);
+        const r = (runs.workflow_runs || []).find((x) => (x.display_title || "").includes(b.slug)) || (runs.workflow_runs || [])[0];
+        return json({ durum: r ? (r.status === "completed" ? (r.conclusion === "success" ? "bitti" : "hata") : "calisiyor") : "bekliyor", url: r?.html_url });
       }
       case "olay": { // panelden (senin) olayların: ör. toplu görsel yükleme
         if (b.bildirim) { // ajan: "video hazır" gibi telefona bildirim
