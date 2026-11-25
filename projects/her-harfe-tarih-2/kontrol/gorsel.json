@@ -1,0 +1,5645 @@
+{
+ "asama": "gorsel",
+ "durum": "hata",
+ "ozet": "46/46 görsel, ortalama puan 1.2/10",
+ "maddeler": [
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 1
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 2
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 2
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 3
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 3
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 3
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 4
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 5
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 5
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 5
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 5
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 5
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 6
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 7
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 8
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 9
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 10
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 10
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 10
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 10
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 10
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 10
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 10
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 10
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 10
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 10
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 11
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 11
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 11
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 11
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 11
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 11
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 11
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 11
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 11
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 11
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 11
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 12
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 12
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 12
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 12
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 12
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 12
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 12
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 12
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 12
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 12
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 12
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 12
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 13
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 13
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 13
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 13
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 13
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 13
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 13
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 13
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 13
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 13
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 13
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 13
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 13
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 14
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 15
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 16
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 17
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 18
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 19
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 20
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 21
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 22
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 23
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 24
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 25
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 26
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 27
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 28
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 29
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "29. sahnedeki görselle neredeyse aynı",
+   "sahne": 30
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "29. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "30. sahnedeki görselle neredeyse aynı",
+   "sahne": 31
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "29. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "30. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "31. sahnedeki görselle neredeyse aynı",
+   "sahne": 32
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "29. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "30. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "31. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "32. sahnedeki görselle neredeyse aynı",
+   "sahne": 33
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "29. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "30. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "31. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "32. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "33. sahnedeki görselle neredeyse aynı",
+   "sahne": 34
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "29. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "30. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "31. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "32. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "33. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "34. sahnedeki görselle neredeyse aynı",
+   "sahne": 35
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "29. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "30. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "31. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "32. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "33. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "34. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "35. sahnedeki görselle neredeyse aynı",
+   "sahne": 36
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "29. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "30. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "31. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "32. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "33. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "34. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "35. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "36. sahnedeki görselle neredeyse aynı",
+   "sahne": 37
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "29. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "30. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "31. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "32. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "33. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "34. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "35. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "36. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "37. sahnedeki görselle neredeyse aynı",
+   "sahne": 38
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "29. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "30. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "31. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "32. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "33. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "34. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "35. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "36. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "37. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "38. sahnedeki görselle neredeyse aynı",
+   "sahne": 39
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "29. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "30. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "31. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "32. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "33. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "34. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "35. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "36. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "37. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "38. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "39. sahnedeki görselle neredeyse aynı",
+   "sahne": 40
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "29. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "30. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "31. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "32. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "33. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "34. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "35. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "36. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "37. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "38. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "39. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "40. sahnedeki görselle neredeyse aynı",
+   "sahne": 41
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "29. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "30. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "31. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "32. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "33. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "34. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "35. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "36. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "37. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "38. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "39. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "40. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "41. sahnedeki görselle neredeyse aynı",
+   "sahne": 42
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "29. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "30. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "31. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "32. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "33. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "34. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "35. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "36. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "37. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "38. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "39. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "40. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "41. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "42. sahnedeki görselle neredeyse aynı",
+   "sahne": 43
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "29. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "30. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "31. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "32. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "33. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "34. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "35. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "36. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "37. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "38. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "39. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "40. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "41. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "42. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "43. sahnedeki görselle neredeyse aynı",
+   "sahne": 44
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "29. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "30. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "31. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "32. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "33. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "34. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "35. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "36. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "37. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "38. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "39. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "40. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "41. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "42. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "43. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "44. sahnedeki görselle neredeyse aynı",
+   "sahne": 45
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "görsel neredeyse tamamen karanlık",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "1. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "2. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "3. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "4. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "5. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "6. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "7. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "8. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "9. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "10. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "11. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "12. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "13. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "14. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "15. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "16. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "17. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "18. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "19. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "20. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "21. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "22. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "23. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "24. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "25. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "26. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "27. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "28. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "29. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "30. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "31. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "32. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "33. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "34. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "35. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "36. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "37. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "38. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "39. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "40. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "41. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "42. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "43. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "44. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "uyari",
+   "mesaj": "45. sahnedeki görselle neredeyse aynı",
+   "sahne": 46
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, herhangi bir içerik bulunmuyor.",
+   "sahne": 1
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, herhangi bir içerik bulunmuyor.",
+   "sahne": 2
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, herhangi bir içerik bulunmuyor.",
+   "sahne": 3
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, herhangi bir içerik bulunmuyor.",
+   "sahne": 4
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, herhangi bir içerik bulunmuyor.",
+   "sahne": 5
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, herhangi bir içerik bulunmuyor.",
+   "sahne": 6
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, herhangi bir içerik bulunmuyor.",
+   "sahne": 7
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, herhangi bir içerik bulunmuyor.",
+   "sahne": 8
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, herhangi bir içerik bulunmuyor.",
+   "sahne": 9
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, herhangi bir içerik bulunmuyor.",
+   "sahne": 10
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, herhangi bir içerik bulunmuyor.",
+   "sahne": 11
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, herhangi bir içerik bulunmuyor.",
+   "sahne": 12
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik görüntülenemiyor.",
+   "sahne": 13
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik görüntülenemiyor.",
+   "sahne": 14
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik görüntülenemiyor.",
+   "sahne": 15
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik görüntülenemiyor.",
+   "sahne": 16
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik görüntülenemiyor.",
+   "sahne": 17
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik görüntülenemiyor.",
+   "sahne": 18
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik barındırmıyor.",
+   "sahne": 19
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik barındırmıyor.",
+   "sahne": 20
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik barındırmıyor.",
+   "sahne": 21
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik barındırmıyor.",
+   "sahne": 22
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik barındırmıyor.",
+   "sahne": 23
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik barındırmıyor.",
+   "sahne": 24
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş ekrandan oluşuyor, içerik barındırmıyor.",
+   "sahne": 25
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş ekrandan oluşuyor, içerik barındırmıyor.",
+   "sahne": 26
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş ekrandan oluşuyor, içerik barındırmıyor.",
+   "sahne": 27
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş ekrandan oluşuyor, içerik barındırmıyor.",
+   "sahne": 28
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş ekrandan oluşuyor, içerik barındırmıyor.",
+   "sahne": 29
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş ekrandan oluşuyor, içerik barındırmıyor.",
+   "sahne": 30
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik eksik.",
+   "sahne": 31
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik eksik.",
+   "sahne": 32
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik eksik.",
+   "sahne": 33
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik eksik.",
+   "sahne": 34
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik eksik.",
+   "sahne": 35
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah/boş, içerik eksik.",
+   "sahne": 36
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah ve içeriği yok.",
+   "sahne": 37
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah ve içeriği yok.",
+   "sahne": 38
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah ve içeriği yok.",
+   "sahne": 39
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah ve içeriği yok.",
+   "sahne": 40
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah ve içeriği yok.",
+   "sahne": 41
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah ve içeriği yok.",
+   "sahne": 42
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel tamamen siyah ve eksik; içerik barındırmıyor.",
+   "sahne": 43
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel boş ve siyah bir ekrandan ibaret.",
+   "sahne": 44
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Görsel yüklenmemiş, sadece siyah ekran görünüyor.",
+   "sahne": 45
+  },
+  {
+   "seviye": "hata",
+   "mesaj": "Sahne görseli eksik ve tamamen siyah.",
+   "sahne": 46
+  }
+ ],
+ "eksik": [],
+ "ortalama_puan": 1.2,
+ "zaman": "2026-11-25T08:38:05Z"
+}
