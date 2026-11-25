@@ -115,7 +115,7 @@ async function igRefresh(tok, eski) {
     const j = await r.json().catch(() => ({})); if (!r.ok) { const e = new Error(`Instagram ${r.status}: ${j.error?.message || ""}`.slice(0, 300)); e.kod = j.error?.code; throw e; } return j; };
   const deger = (x) => (x.total_value ? x.total_value.value : x.values?.[0]?.value);
   const F = "id,username,name,profile_picture_url,followers_count,follows_count,media_count";
-  let h, uid = process.env.IG_USER_ID, son;
+  let h, uid = process.env.IG_USER_ID || "17841480918392807", son;
   for (const hh of ["graph.instagram.com", "graph.facebook.com"]) { host = hh;
     try { if (!uid && hh === "graph.instagram.com") uid = (await get("me", { fields: "user_id" })).user_id; if (!uid) throw new Error("IG_USER_ID yok"); h = await get(uid, { fields: F }); break; } catch (e) { son = e; } }
   const simdi = new Date(), out = { zaman: simdi.toISOString().slice(0, 19) + "Z", gecmis: eski?.gecmis || [], kaynak: "panel" };
