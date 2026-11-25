@@ -30,10 +30,10 @@
   "zaman": "2026-11-25T08:38:05Z"
  },
  "yorumcu": {
-  "durum": "bekliyor",
-  "mesaj": "Instagram bağlı değil: docs/YAYIN_KURULUM.md",
+  "durum": "hata",
+  "mesaj": "Instagram anahtarının süresi dolmuş, yenilenmeli",
   "cikti": null,
-  "zaman": "2026-11-10T15:45:45Z"
+  "zaman": "2026-11-25T18:10:45Z"
  },
  "yonetici": {
   "durum": "calisiyor",
