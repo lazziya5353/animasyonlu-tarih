@@ -8,7 +8,7 @@ verilmezse sessizlikler sirayla kullanilir.
 """
 import json, math, subprocess, sys, os, argparse
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
-R = os.path.dirname(os.path.abspath(__file__)) + "/../../engine/fonts/"
+R = os.path.dirname(os.path.abspath(__file__)) + "/../engine/fonts/"
 W, H, FPS = 1080, 1920, 30
 GOLD = (232, 196, 120); WHITE = (255, 255, 255); BG = (14, 10, 7)
 F = lambda n, s: ImageFont.truetype(R + n + ".ttf", s)
@@ -99,6 +99,7 @@ def main():
     ap.add_argument("--timed"); ap.add_argument("--kapak")
     ap.add_argument("--pause", type=float, default=2.5); ap.add_argument("--hold", type=float, default=0.7)
     ap.add_argument("--tempo", type=float, default=1.08)
+    ap.add_argument("--no-wm", action="store_true", help="filigrani kapat")
     a = ap.parse_args()
     import numpy as np
     S = [" ".join(x["lines"]) for x in json.load(open(a.script))["sahneler"]]
@@ -199,6 +200,9 @@ def main():
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(A, -1, 1)*32767).astype("<i2").tobytes())
     p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
                           "-i", tmpa, "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", a.out], stdin=subprocess.PIPE)
+    # hirsizliga karsi filigran: orta alanda yavasca gezinen yari saydam (~30% beyaz) "@animasyon.tarih"
+    WMf = F("Montserrat-900", 44); wb = WMf.getbbox("@animasyon.tarih")
+    WM = Image.new("RGBA", (wb[2]+8, wb[3]+8), (0, 0, 0, 0)); ImageDraw.Draw(WM).text((4, 4), "@animasyon.tarih", font=WMf, fill=(255, 255, 255, 66))
     for fi in range(int(dur*FPS)):
         t = fi / FPS; im = B.copy(); d = ImageDraw.Draw(im)
         if t >= outro:
@@ -221,6 +225,9 @@ def main():
                 center(im, cur+1, n, Q[cur][1], "", "", 0, 1)
             al = min(1, (t - qs)/0.25, max(0, (gone - t)/0.25))
             if al < 1: im = Image.blend(bg, im, al)
+        if not a.no_wm:
+            wx = int(CX - WM.width/2 + 230*math.sin(t*0.21)); wy = int(CY - WM.height/2 + 330*math.sin(t*0.13 + 1.1))
+            im = im.convert("RGBA"); im.alpha_composite(WM, (wx, wy)); im = im.convert("RGB")
         p.stdin.write(im.tobytes())
     p.stdin.close(); p.wait(); os.remove(tmpa)
     json.dump([dict(harf=Q[i][0], soru_t=round(e[0], 2), soru_bit=round(e[1], 2), cevap_t=round(e[2], 2), cevap_bit=round(e[3], 2)) for i, e in enumerate(ev)], open(a.out + ".times.json", "w"), ensure_ascii=False)
