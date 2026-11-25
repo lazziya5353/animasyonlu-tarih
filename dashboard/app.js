@@ -83,7 +83,7 @@ function render() {
   let pr = aktif.length ? aktif.map((p) => kart(p, false)).join("") : `<div class="card mut">${arsivde.length ? "Aktif proje yok, hepsi arşivde." : "Henüz proje yok."}</div>`;
   if (arsivde.length) pr += `<details class="arsiv" ${ARSIV_ACIK ? "open" : ""}><summary><h2 style="display:inline">📦 Arşiv <span class="mut" style="font-size:14px">(${arsivde.length})</span></h2></summary>${arsivde.map((p) => kart(p, true)).join("")}</details>`;
   html += katBolum("projeler", "🎬 Projeler", aktif.length, pr, true);
-  html += `<h2>Son harcamalar</h2><div class="card">${(h.son || []).filter((x) => x.usd > 0).map((x) => `<div class="mut" style="display:flex;justify-content:space-between;padding:4px 0"><span>${esc(x.ajan)} · ${esc(x.detay)}</span><span>$${x.usd.toFixed(3)}</span></div>`).join("") || '<span class="mut">Kayıt yok</span>'}</div>`;
+  { const sonH = (h.son || []).filter((x) => x.usd > 0); html += katBolum("harcamalar", "💸 Son harcamalar", sonH.length, `<div class="card">${sonH.map((x) => `<div class="mut" style="display:flex;justify-content:space-between;padding:4px 0"><span>${esc(x.ajan)} · ${esc(x.detay)}</span><span>$${x.usd.toFixed(3)}</span></div>`).join("") || '<span class="mut">Kayıt yok</span>'}</div>`, false); }
   html += katBolum("ajanayaz", "💬 Ajana yaz", "", komutKart() + spend, false);
   const SEK = [["anim", "🎬 ANİMASYON TARİH VİDEO"], ["spor", "⚽ SPOR TARİHİ VİDEO"], ["ig", "📊 İNSTAGRAM ANALİZ"]];
   let sek = "anim"; try { const k = localStorage.getItem("sekme"); if (SEK.some((x) => x[0] === k)) sek = k; } catch {}

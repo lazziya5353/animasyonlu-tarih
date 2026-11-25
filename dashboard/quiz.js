@@ -40,13 +40,13 @@ async function baglaQuiz() {
   document.querySelectorAll("[data-qs]").forEach((kok) => {
     const tema = kok.dataset.qs;
     kok.querySelector("[data-qf]").innerHTML = Object.entries(QS).map(([k, f]) => `<button class="qs-f${QST[tema].format === k ? " on" : ""}" data-fmt="${k}"><img loading="lazy" src="quiz/onizleme-${k}.jpg" alt=""><b>${esc(f.ad)}</b><small>${esc(f.aciklama)}</small></button>`).join("");
-    kok.querySelectorAll("[data-fmt]").forEach((b) => (b.onclick = () => { QST[tema] = { format: b.dataset.fmt, sorular: [], gorseller: {} }; baglaQuiz(); }));
+    kok.querySelectorAll("[data-fmt]").forEach((b) => (b.onclick = () => { QST[tema] = { format: QST[tema].format === b.dataset.fmt ? "" : b.dataset.fmt, sorular: [], gorseller: {} }; baglaQuiz(); }));
     qGovde(kok, tema); qIsler(kok);
   });
 }
 
 function qGovde(kok, tema) {
-  const S = QST[tema], fmt = S.format, g = kok.querySelector("[data-qgovde]"); if (!fmt) { g.innerHTML = ""; return; }
+  const S = QST[tema], fmt = S.format, g = kok.querySelector("[data-qgovde]"); if (!fmt) { g.innerHTML = `<div class="mut" style="font-size:12px;margin:4px 0 8px">👆 Bir format seç</div>`; return; }
   const F = QS[fmt], kar = S.kar || { kolay: 4, orta: 4, zor: 2 }, ust = fmt === "her-harfe" ? 29 : 15;
   if (!S.sorular.length) for (let i = 0; i < 6; i++) S.sorular.push(qbos(fmt));
   g.innerHTML = `<h3 style="margin:12px 0 4px">✍️ Sorular (elle)</h3><div class="mut" style="font-size:12px">${esc(F.kurallar || "")}</div>
