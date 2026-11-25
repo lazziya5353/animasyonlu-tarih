@@ -14,11 +14,25 @@ GOLD = (232, 196, 120); WHITE = (255, 255, 255); BG = (14, 10, 7)
 F = lambda n, s: ImageFont.truetype(R + n + ".ttf", s)
 CX, CY, RAD, RR = 540, 1060, 440, 36
 
-def base():
-    im = Image.new("RGB", (W, H), BG)
-    g = Image.new("L", (W, H), 0); ImageDraw.Draw(g).ellipse((CX-620, CY-620, CX+620, CY+620), fill=255)
-    g = g.filter(ImageFilter.GaussianBlur(260))
-    im = Image.composite(Image.new("RGB", (W, H), (70, 45, 22)), im, g)
+def arkaplan_hazirla(yol):
+    """Tematik arka plan (quiz 3+): kapla-kirp, hafif bulanik, %38 parlaklik. Metin okunur kalsin diye karartilir."""
+    from PIL import ImageEnhance, ImageOps
+    im = ImageOps.fit(Image.open(yol).convert("RGB"), (int(W*1.08), int(H*1.08)), Image.LANCZOS)
+    return ImageEnhance.Brightness(im.filter(ImageFilter.GaussianBlur(6))).enhance(0.38)
+
+def arkaplan_kare(src, t, dur, kb):
+    """Cok yavas Ken Burns: sure boyunca %0 -> %8 yakinlasma (kb kapaliysa sabit orta kirpim)."""
+    z = 1.0 + (0.08*min(1, t/max(dur, 1)) if kb else 0.04)
+    w, h = int(src.width/z), int(src.height/z); x, y = (src.width - w)//2, (src.height - h)//2
+    return src.crop((x, y, x+w, y+h)).resize((W, H), Image.BILINEAR)
+
+def base(bg=None):
+    if bg is not None: im = bg.copy()
+    else:
+        im = Image.new("RGB", (W, H), BG)
+        g = Image.new("L", (W, H), 0); ImageDraw.Draw(g).ellipse((CX-620, CY-620, CX+620, CY+620), fill=255)
+        g = g.filter(ImageFilter.GaussianBlur(260))
+        im = Image.composite(Image.new("RGB", (W, H), (70, 45, 22)), im, g)
     d = ImageDraw.Draw(im)
     def ct(y, t, f, c, sp=0):
         if sp:
@@ -49,10 +63,18 @@ def fitlines(d, t, name, size, mw, maxl, minsize=40):
         if (len(ls) <= maxl and all(d.textlength(l, font=f) <= mw for l in ls)) or size <= minsize: return f, ls
         size -= 4
 
-def ring(d, letters, done, cur, pulse=0, prog=None):
+ZOR_RENK = (196, 48, 40)
+def zor_etiket(d, x, y):
+    """Balonun altinda kucuk kirmizi 'ZOR' etiketi (kendi stilimiz: koyu kirmizi hap, krem yazi)."""
+    f = F("Montserrat-900", 17); w = d.textlength("ZOR", font=f) + 16
+    d.rounded_rectangle((x - w/2, y + RR + 15, x + w/2, y + RR + 37), 11, fill=ZOR_RENK, outline=GOLD, width=1)
+    d.text((x, y + RR + 26), "ZOR", font=f, fill=(250, 235, 210), anchor="mm")
+
+def ring(d, letters, done, cur, pulse=0, prog=None, zor=()):
     lf = F("Montserrat-900", 34); n = len(letters)
     for i, L in enumerate(letters):
         x, y = pos(i, n)
+        if i in zor: zor_etiket(d, x, y)
         if i in done: d.ellipse((x-RR, y-RR, x+RR, y+RR), fill=(40, 120, 70), outline=(80, 190, 120), width=4)
         else: d.ellipse((x-RR, y-RR, x+RR, y+RR), fill=(16, 11, 7), outline=GOLD, width=3)
         d.text((x, y+2), L, font=lf, fill=WHITE, anchor="mm")
@@ -126,7 +148,7 @@ def main():
     ap.add_argument("--no-wm", action="store_true", help="filigrani kapat")
     a = ap.parse_args()
     import numpy as np
-    S = [" ".join(x["lines"]) for x in json.load(open(a.script))["sahneler"]]
+    SJ = json.load(open(a.script)); S = [" ".join(x["lines"]) for x in SJ["sahneler"]]
     n = (len(S) - 2)//2; Q = []
     for k in range(n):
         q = S[1+2*k]; L, rest = q.split(" harfi.", 1)
@@ -139,7 +161,15 @@ def main():
             "Y": "I. Selim · 1517", "Z": "Büyük Taarruz · 1922"}
     HINT = json.load(open(a.script)).get("alt_bilgi") or HINT
     letters = [x[0] for x in Q]
-    B = base()
+    # quiz 3+: sorularin zorlugu (sahneler[soru]["zorluk"] = kolay/orta/zor) ve istege bagli tematik arka plan
+    ZOR = {k for k in range(n) if SJ["sahneler"][1+2*k].get("zorluk") == "zor"}
+    BGSRC = None
+    if SJ.get("arkaplan"):
+        yol = os.path.join(os.path.dirname(os.path.abspath(a.script)), SJ["arkaplan"])
+        if not os.path.exists(yol): sys.exit(f"HATA: arkaplan bulunamadi: {yol}")
+        BGSRC = arkaplan_hazirla(yol)
+    KB = bool(SJ.get("arkaplan_kenburns")) and BGSRC is not None
+    B = base(arkaplan_kare(BGSRC, 0, 1, False) if BGSRC is not None else None)
     if a.kapak:
         im = B.copy(); d = ImageDraw.Draw(im); ring(d, letters, set(range(n)), None)
         d.text((CX, 1010), "KAÇINI", font=F("Cinzel-700", 104), fill=GOLD, anchor="ms")
@@ -214,8 +244,8 @@ def main():
     ev = []  # (q_start, q_end, a_start, a_end, gone)
     for k in range(n):
         qa, aa = segs[1+2*k], segs[2+2*k]
-        qs = t; qe = qs + len(qa)/SR; as_ = qe + a.pause; ae = as_ + len(aa)/SR; gone = ae + a.hold + 0.25
-        parts += [qa, z(a.pause), aa, z(a.hold + 0.25)]; ev.append((qs, qe, as_, ae, gone)); t = gone
+        qs = t; qe = qs + len(qa)/SR; as_ = qe + a.pause + (1.0 if len(ev) in ZOR else 0); ae = as_ + len(aa)/SR; gone = ae + a.hold + 0.25
+        parts += [qa, z(a.pause + (1.0 if len(ev) in ZOR else 0)), aa, z(a.hold + 0.25)]; ev.append((qs, qe, as_, ae, gone)); t = gone
     outro = t; parts += [segs[-1], z(1.0)]
     A = np.concatenate(parts); dur = len(A)/SR
     tmpa = a.out + ".a.wav"
@@ -229,17 +259,19 @@ def main():
     WM = Image.new("RGBA", (wb[2]+8, wb[3]+8), (0, 0, 0, 0)); ImageDraw.Draw(WM).text((4, 4), "@animasyon.tarih", font=WMf, fill=(255, 255, 255, 66))
     kutular = {}   # kart -> cevap tam gorunurken metin kutulari + filigran kutusu
     for fi in range(int(dur*FPS)):
-        t = fi / FPS; im = B.copy(); d = ImageDraw.Draw(im)
+        t = fi / FPS
+        if KB and fi % 2 == 0: B = base(arkaplan_kare(BGSRC, t, dur, True))
+        im = B.copy(); d = ImageDraw.Draw(im)
         if t >= outro:
-            ring(d, letters, set(range(n)), None)
-            center(im, None, n, "", "KAÇINI BİLDİN?", "YORUMLARA YAZ", min(1, (t-outro)/0.3), 1)
+            ring(d, letters, set(range(n)), None, zor=ZOR)
+            center(im, None, n, "", "ZORLARIN KAÇINI BİLDİN?" if ZOR else "KAÇINI BİLDİN?", f"{len(ZOR)} ZOR SORU · YORUMLARA YAZ" if ZOR else "YORUMLARA YAZ", min(1, (t-outro)/0.3), 1)
         elif t < ev[0][0]:
-            ring(d, letters, set(), None)
+            ring(d, letters, set(), None, zor=ZOR)
             center(im, None, n, "", f"{n} HARF", f"{n} SORU", min(1, t/0.4), 1)
         else:
             cur = max(i for i, e in enumerate(ev) if t >= e[0]); qs, qe, as_, ae, gone = ev[cur]
             ansv = t >= as_; done = set(range(cur + (1 if ansv else 0)))
-            ring(d, letters, done, cur, 0 if ansv else int(3*math.sin(t*8)))
+            ring(d, letters, done, cur, 0 if ansv else int(3*math.sin(t*8)), zor=ZOR)
             if qe <= t < as_:  # sessiz bekleme: kirmizi yay 12'den saat yonunde dolar
                 r2 = 392; dd = ImageDraw.Draw(im)
                 dd.arc((CX-r2, CY-r2, CX+r2, CY+r2), -90, -90 + 360*min(1, (t-qe)/(as_-qe)), fill=(200, 60, 50), width=6)
@@ -248,6 +280,12 @@ def main():
                 k = min(1, (t - as_)/0.3); center(im, cur+1, n, Q[cur][1], Q[cur][2], up(HINT.get(Q[cur][0], "")), k, 0.9 + 0.1*k)
             else:
                 center(im, cur+1, n, Q[cur][1], "", "", 0, 1)
+            if cur in ZOR and qs <= t < qs + 1.2:  # kisa "ZOR SORU" flasi: sayacin ustunde kirmizi hap, parlayip soner
+                fa = min(1, (t - qs)/0.15, (qs + 1.2 - t)/0.3); fl = Image.new("RGBA", (W, H), (0, 0, 0, 0)); fd = ImageDraw.Draw(fl)
+                ff = F("Montserrat-900", 40); w = fd.textlength("ZOR SORU", font=ff) + 50; yb = 770
+                fd.rounded_rectangle((CX - w/2, yb - 30, CX + w/2, yb + 30), 30, fill=ZOR_RENK + (int(235*fa),), outline=GOLD + (int(255*fa),), width=3)
+                fd.text((CX, yb + 2), "ZOR SORU", font=ff, fill=(255, 240, 215, int(255*fa)), anchor="mm")
+                im = im.convert("RGBA"); im.alpha_composite(fl); im = im.convert("RGB")
             al = min(1, (t - qs)/0.25, max(0, (gone - t)/0.25))
             if al < 1: im = Image.blend(bg, im, al)
         acik = ev[0][0] <= t < outro and t >= ev[cur][2]
