@@ -312,6 +312,7 @@ async function igYenile() {
   else { alert("Kayıtlı token yok; veri GitHub üzerinden güncelleniyor (~1-2 dk)."); setTimeout(load, 90000); }
 }
 function baglaInstagram() {
+  if ($("#igguncelle") && !window._igOto) { window._igOto = true; api("ig_refresh").then((r) => { if (r && r.instagram) { O.instagram = r.instagram; render(); } }).catch(() => {}); }
   document.querySelectorAll("[data-igurl]").forEach((r) => r.dataset.igurl && (r.onclick = () => window.open(r.dataset.igurl, "_blank", "noopener")));
   const b = $("#igguncelle"); if (b) b.onclick = async () => { b.disabled = true; b.textContent = "Güncelleniyor…"; try { await igYenile(); } catch (e) { alert(e.message || "Hata"); } finally { b.disabled = false; b.textContent = "Şimdi güncelle"; } };
 }
