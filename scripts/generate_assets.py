@@ -110,11 +110,24 @@ def onizleme(yol):
     except Exception as e:
         print("(önizleme yapılamadı:", e, ")"); return None
 
+def ses_metni_dogrula(sc, slug):
+    """Ses her zaman projenin KENDI metninden uretilir. Baska projeden kopyalanmis script.json
+    (slug alani / seslendirme_metni eski kalmis) sessizce yanlis ses uretmesin diye yuksek sesle durur."""
+    if sc.get("slug") and sc["slug"] != slug:
+        sys.exit(f"HATA: projects/{slug}/script.json icindeki slug '{sc['slug']}' (baska projeden kopya?). Ses uretilmedi.")
+    if sc.get("sahneler") and sc.get("seslendirme_metni"):
+        sys.path.insert(0, os.path.join(ROOT, "scripts")); from kontrol import kelimeler
+        bek = kelimeler(" ".join(l for x in sc["sahneler"] for l in x["lines"])); var = set(kelimeler(sc["seslendirme_metni"]))
+        eksik = [w for w in bek if w not in var]
+        if len(eksik) > 0.15 * max(1, len(bek)):
+            sys.exit(f"HATA: {slug} seslendirme_metni sahnelerle uyusmuyor ({len(eksik)}/{len(bek)} kelime eksik, orn. {eksik[:6]}). Ses uretilmedi.")
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--slug", required=True); ap.add_argument("--only", type=int); ap.add_argument("--ses", action="store_true"); a = ap.parse_args()
     if not os.environ.get("GEMINI_API_KEY"):
         set_status("gorsel", "bekliyor", "GEMINI_API_KEY yok: görselleri ve sesi panelden elle yükle"); print("GEMINI_API_KEY yok, atlandı."); return
     d = os.path.join(ROOT, "projects", a.slug); sc = json.load(open(os.path.join(d, "script.json")))
+    ses_metni_dogrula(sc, a.slug)
     set_status("gorsel", "calisiyor", f"{a.slug} ses ve görseller üretiliyor"); slug_ayarla(a.slug)
     notes = []
     if a.ses or not a.only:  # önce ses: görseller kapalı olsa bile ses üretilsin

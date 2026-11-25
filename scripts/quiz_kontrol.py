@@ -22,7 +22,25 @@ def max_pause(a, sr=16000):
 
 def norm(t): return re.sub(r"[^a-zçğıöşüâîû ]", "", t.replace("İ", "i").replace("I", "ı").lower())
 
-def main(v, script):
+def bekci(v, S, T, wm):
+    """Ses bekcisi: giris + 1., 11. ve 22. soru kartinin sesi Whisper ile yaziya dokulur; her biri o kartin
+    script.json'daki metniyle bulanik eslesmeli (baska projenin sesi / kayma yakalanir). Whisper yoksa HATA."""
+    import difflib, os
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from kontrol import kelimeler
+    if wm is None: return ["bekci: whisper yuklenemedi, ses dogrulanamadi"]
+    h = []; parca = [("giris", 0.0, T[0]["soru_t"], S["sahneler"][0]["lines"][0])]
+    for k in (1, 11, 22):
+        if k <= len(T): x = T[k-1]; parca.append((f"soru {k} ({x['harf']})", x["soru_t"], x["soru_bit"], S["sahneler"][1+2*(k-1)]["lines"][0]))
+        else: h.append(f"bekci: {k}. soru yok")
+    for ad, t0, t1, metin in parca:
+        txt = " ".join(s.text for s in wm.transcribe(pcm(v, t0, t1), language="tr")[0])
+        a, b = " ".join(kelimeler(txt)), " ".join(kelimeler(metin))
+        r = difflib.SequenceMatcher(None, a, b).ratio(); ok = r >= 0.6
+        print(f"BEKCI {ad}: oran {r:.2f} {'ESLESTI' if ok else 'ESLESMEDI'}\n  ses : {a}\n  kart: {b}")
+        if not ok: h.append(f"bekci {ad}: ses kartla eslesmiyor (oran {r:.2f}: {a!r})")
+    return h
+
+def main(v, script, bekci_ac=False):
     T = json.load(open(v + ".times.json")); S = json.load(open(script)); hata = []
     qs = {x["harf"]: S["sahneler"][1+2*i]["lines"][0].split(" harfi.", 1)[1] for i, x in enumerate(T)}
     ans = {x["harf"]: S["sahneler"][2+2*i]["lines"][0].rstrip(".") for i, x in enumerate(T)}
@@ -33,6 +51,7 @@ def main(v, script):
     try:
         from faster_whisper import WhisperModel; wm = WhisperModel("small", compute_type="int8")
     except Exception as e: wm = None; print("uyari: whisper yok, sizma kontrolu atlandi", e)
+    if bekci_ac: hata += bekci(v, S, T, wm)
     for x in T:
         L = x["harf"]
         for tip, t0, t1 in (("soru", x["soru_t"], x["soru_bit"]), ("cevap", x["cevap_t"], x["cevap_bit"])):
@@ -53,4 +72,4 @@ def main(v, script):
     print(json.dumps({"sure": round(va, 1), "hatalar": hata}, ensure_ascii=False, indent=1))
     return 1 if hata else 0
 
-if __name__ == "__main__": sys.exit(main(sys.argv[1], sys.argv[2]))
+if __name__ == "__main__": sys.exit(main(sys.argv[1], sys.argv[2], "--bekci" in sys.argv[3:]))

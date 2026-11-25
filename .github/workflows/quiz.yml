@@ -34,8 +34,14 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           SES: ${{ inputs.ses }}
         run: |
-          if [ "$SES" = "1" ] || [ ! -f "projects/$SLUG/ses.wav" ]; then
+          P=projects/$SLUG
+          # ses her zaman bu projenin kendi metninden: metin/stil ozeti ses.kaynak ile uyusmuyorsa yeniden uret
+          OZ=$(python -c "import json,hashlib,sys;s=json.load(open(sys.argv[1]));print(hashlib.sha256((sys.argv[2]+'|'+s.get('ses_stil','')+'|'+s['seslendirme_metni']).encode()).hexdigest())" $P/script.json "$SLUG")
+          if [ "$SES" = "1" ] || [ ! -f "$P/ses.wav" ] || [ "$(cat $P/ses.kaynak 2>/dev/null)" != "$OZ" ]; then
+            rm -f "$P/ses.wav"
             python scripts/generate_assets.py --slug "$SLUG" --ses
+            test -s "$P/ses.wav" || { echo "HATA: $P/ses.wav uretilemedi (baska projenin sesi KULLANILMAZ)"; exit 1; }
+            echo "$OZ" > "$P/ses.kaynak"
             git config user.name "github-actions"; git config user.email "github-actions@users.noreply.github.com"
             git add "projects/$SLUG"; git commit -m "Quiz sesi: $SLUG" && (git pull --rebase -q; git push) || true
           fi
@@ -43,11 +49,12 @@ jobs:
         env: { BOLUM: "${{ inputs.bolum }}" }
         run: |
           P=projects/$SLUG; mkdir -p $P/out
+          test -s "$P/ses.wav" || { echo "HATA: $P/ses.wav yok"; exit 1; }
           python scripts/harf_quiz.py $P/script.json $P/ses.wav $P/out/video.mp4
           B=""; echo "$BOLUM" | grep -Eq '^[0-9]+$' && B="--bolum $BOLUM"
           python scripts/quiz_kapak.py $P/script.json $P/out/kapak.jpg $B
       - name: Otomatik kontroller
-        run: python scripts/quiz_kontrol.py projects/$SLUG/out/video.mp4 projects/$SLUG/script.json
+        run: python scripts/quiz_kontrol.py projects/$SLUG/out/video.mp4 projects/$SLUG/script.json --bekci
       - name: Release
         run: |
           TAG="video-$SLUG"

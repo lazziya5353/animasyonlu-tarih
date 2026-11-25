@@ -9,6 +9,7 @@
 7. Şiddet grafik değil; gerçek kişilerin yüzleri yakından çizilmez.
 8. Render sonrası release videosu indirilip kontrol edilir: sahne sınırlarında sızma, senkron, son başlık.
 9. Bekleme yok: iş verilir, tahmini süre + 2 dk sonrasına hatırlatma kurulur.
+10. Quiz ses bekçisi: quiz.yml, quiz_kontrol.py --bekci ile girişi ve 1., 11., 22. soruyu Whisper ile yazıya döker; her biri script.json'daki kart metniyle bulanık eşleşmezse (oran < 0.6) ya da Whisper yüklenemezse koşu durur. Ses yalnızca projenin kendi metninden üretilir: script.json slug'ı klasörle aynı olmalı, seslendirme_metni sahnelerle uyuşmalı; metin/stil değişince (ses.kaynak özeti) ses yeniden üretilir, ses.wav yoksa koşu hata verir.
 
 # Quiz formatı: "Her Harfe Bir Tarih Sorusu" (ücretsiz, Claude'suz)
 
