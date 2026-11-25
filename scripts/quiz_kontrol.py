@@ -20,7 +20,7 @@ def max_pause(a, sr=16000):
     for x in s: cur = cur + 1 if x else 0; best = max(best, cur)
     return best*0.01
 
-def norm(t): return re.sub(r"[^a-zçğıöşüâîû ]", "", t.replace("İ", "i").replace("I", "ı").lower())
+def norm(t): return re.sub(r"[^a-zçğıöşü ]", "", t.replace("İ", "i").replace("I", "ı").lower().translate(str.maketrans("âîûÂÎÛ", "aiuaiu")))
 
 def bekci(v, S, T, wm):
     """Ses bekcisi: giris + 1., 11. ve 22. soru kartinin sesi Whisper ile yaziya dokulur; her biri o kartin
