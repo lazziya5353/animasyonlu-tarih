@@ -19,7 +19,7 @@ jobs:
       - name: İstatistikleri topla
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
-          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID || '17841480918392807' }}
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
           YT_CHANNEL_ID: ${{ vars.YT_CHANNEL_ID }}
         run: python scripts/analist.py

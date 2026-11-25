@@ -30,7 +30,7 @@ jobs:
       - name: Paylaş
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
-          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID || '17841480918392807' }}
           GH_TOKEN: ${{ github.token }}
         run: |
           ARGS=""

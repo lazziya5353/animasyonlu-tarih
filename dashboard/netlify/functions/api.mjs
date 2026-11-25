@@ -16,6 +16,7 @@ const WORKFLOWS = {
   kontrol: "kontrol.yml",
   yayinci: "yayinci.yml",
   analist: "analist.yml",
+  instagram: "instagram_analiz.yml",
   yorumcu: "yorumcu.yml",
   yonetici: "yonetici.yml",
   quiz: "quiz.yml",
@@ -132,10 +133,10 @@ export default async (req) => {
   try {
     switch (b.action) {
       case "overview": {
-        const [status, usage, report, list, analiz, yorumlar] = await Promise.all([
+        const [status, usage, report, list, analiz, yorumlar, instagram] = await Promise.all([
           readJson("data/status.json"), readJson("data/usage.json"), readJson("reports/latest.json"),
           gh(`/repos/${REPO}/contents/projects`).then((r) => (r.ok ? r.json() : [])),
-          readJson("data/analiz.json"), readJson("data/yorumlar.json"),
+          readJson("data/analiz.json"), readJson("data/yorumlar.json"), readJson("data/instagram.json"),
         ]);
         const runs = {};
         await Promise.all(Object.entries(WORKFLOWS).map(async ([k, f]) => {
@@ -149,7 +150,7 @@ export default async (req) => {
         const servis = {};
         kayit.filter((x) => x.zaman.startsWith(ay)).forEach((x) => (servis[x.servis] = (servis[x.servis] || 0) + x.usd));
         const projeler = (list || []).filter((x) => x.type === "dir").map((x) => x.name);
-        return json({ status: status || {}, runs, report, projeler, basliklar: await basliklar(projeler).catch(() => ({})), arsiv: ((await getStore({ name: "ayar", consistency: "strong" }).get("arsiv", { type: "json" })) || []).filter((x) => projeler.includes(x)), analiz,
+        return json({ status: status || {}, runs, report, projeler, basliklar: await basliklar(projeler).catch(() => ({})), instagram, arsiv: ((await getStore({ name: "ayar", consistency: "strong" }).get("arsiv", { type: "json" })) || []).filter((x) => projeler.includes(x)), analiz,
           yorumlar: { bekleyen: (yorumlar?.yorumlar || []).filter((y) => y.durum === "yeni").slice(0, 40), fikirler: (yorumlar?.fikirler || []).slice(-8).reverse() },
           harcama: { aylik, servis, butce: Number(process.env.AYLIK_BUTCE_USD || 15), son: kayit.slice(-8).reverse() } });
       }

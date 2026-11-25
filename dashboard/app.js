@@ -74,7 +74,7 @@ function render() {
       <button data-run="${a.k}">${a.btn}</button> <button class="ghost" data-detay="${a.k}">Detay</button>${c === "err" && /projects\/[a-z0-9-]+/.test(st?.cikti || st?.mesaj || "") ? ` <button class="duzelt" data-hduzelt="${esc((st.cikti || st.mesaj).match(/projects\/([a-z0-9-]+)/)[1])}" data-hmesaj="${esc(a.ad + ": " + (st.mesaj || ""))}">🔧 Düzelt</button>` : ""}</div>`;
   }
   html += `</div>`;
-  html += renderYorumlar() + renderAnaliz();
+  html += renderYorumlar() + renderInstagram() + renderAnaliz();
   const r = O.report;
   html += `<h2>Haftanın raporu ${r ? `<span class="mut" style="font-family:Mont;font-size:12px">· ${esc(r.hafta)}</span>` : ""}</h2>`;
   if (!r) html += `<div class="card mut">Henüz rapor yok. Araştırmacıyı çalıştır ya da pazar akşamını bekle.</div>`;
@@ -98,6 +98,7 @@ function render() {
   html += `<h2>Son harcamalar</h2><div class="card">${(h.son || []).filter((x) => x.usd > 0).map((x) => `<div class="mut" style="display:flex;justify-content:space-between;padding:4px 0"><span>${esc(x.ajan)} · ${esc(x.detay)}</span><span>$${x.usd.toFixed(3)}</span></div>`).join("") || '<span class="mut">Kayıt yok</span>'}</div>`;
   $("#main").innerHTML = html;
   document.querySelectorAll("[data-run]").forEach((b) => (b.onclick = () => runAgent(b.dataset.run)));
+  baglaInstagram();
   document.querySelectorAll("[data-detay]").forEach((b) => (b.onclick = () => ajanDetay(b.dataset.detay)));
   document.querySelectorAll("[data-hduzelt]").forEach((b) => (b.onclick = async () => {
     if (b.disabled) return; b.disabled = true; b.textContent = "Gönderiliyor…";
@@ -226,6 +227,44 @@ function baglaYorumlar() {
     await guvenli(() => api("yorum_karar", { kararlar: [{ id: box.dataset.id, durum: b.dataset.y, taslak: ta?.value }] }), b.dataset.y === "onaylandi" ? "Cevap gönderiliyor" : b.dataset.y === "gizle" ? "Yorum gizleniyor" : "Geçildi");
     box.remove();
   }));
+}
+// ───────── INSTAGRAM ANALİZ ─────────
+const sayi = (n) => (n === null || n === undefined ? "—" : Number(n).toLocaleString("tr-TR"));
+function igGrafik(seri) {
+  if (!seri || seri.length < 2) return `<div class="mut" style="padding:10px 0">Takipçi grafiği birkaç günlük veri birikince görünecek.</div>`;
+  const W = 640, H = 150, P = 26, ys = seri.map((x) => x.y), mn = Math.min(...ys), mx = Math.max(...ys), r = mx - mn || 1;
+  const X = (i) => P + (i * (W - 2 * P)) / (seri.length - 1), Y = (v) => H - P - ((v - mn) * (H - 2 * P)) / r;
+  const yol = seri.map((x, i) => `${i ? "L" : "M"}${X(i).toFixed(1)},${Y(x.y).toFixed(1)}`).join("");
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block;margin-top:8px" role="img" aria-label="Takipçi büyümesi">
+    <path d="${yol}L${X(seri.length - 1)},${H - P}L${P},${H - P}Z" fill="rgba(232,196,120,.12)"/><path d="${yol}" fill="none" stroke="var(--gold)" stroke-width="2.2" stroke-linejoin="round"/>
+    <text x="${P}" y="${H - 6}" fill="var(--mut)" font-size="11">${esc(seri[0].x)}</text><text x="${W - P}" y="${H - 6}" fill="var(--mut)" font-size="11" text-anchor="end">${esc(seri.at(-1).x)}</text>
+    <text x="${W - P}" y="${Y(seri.at(-1).y) - 8}" fill="var(--gold)" font-size="12" font-weight="700" text-anchor="end">${sayi(seri.at(-1).y)}</text></svg>`;
+}
+function renderInstagram() {
+  const g = O.instagram; if (!g) return "";
+  const h = g.hesap || {}, o = g.ozet30 || {};
+  let seri = (g.gecmis || []).map((x) => ({ x: x.tarih.slice(5).split("-").reverse().join("."), y: x.takipci }));
+  const fc = g.gunluk?.follower_count; let degisim = "";
+  if (fc?.length) { const top = fc.reduce((s, x) => s + (x.deger || 0), 0); degisim = `<div class="mut" style="margin-top:4px">Son 30 günde net takipçi değişimi (Instagram): <b style="color:${top >= 0 ? "var(--ok)" : "var(--err)"}">${top >= 0 ? "+" : ""}${sayi(top)}</b></div>`;
+    if (seri.length < 3) { let t = (h.takipci || 0) - top; seri = fc.map((x) => ({ x: x.tarih.slice(5).split("-").reverse().join("."), y: (t += x.deger || 0) })); } }
+  const kpi = (v, l) => `<div><b>${sayi(v)}</b><span>${l}</span></div>`;
+  const vids = (g.medya || []).slice(0, 15);
+  const saat = (g.en_iyi_saatler || []).map((x) => `${String(x.saat).padStart(2, "0")}.00`).join(", ");
+  let s = `<h2>INSTAGRAM ANALİZ <span class="mut" style="font-family:Mont;font-size:12px">· son güncelleme ${ago(g.zaman)}</span></h2><div class="card">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">${h.foto ? `<img src="${esc(h.foto)}" alt="" style="width:40px;height:40px;border-radius:50%" referrerpolicy="no-referrer">` : ""}
+    <div style="flex:1"><b>${esc(h.ad || h.kullanici || "")}</b><div class="mut">@${esc(h.kullanici || "")} · ${sayi(h.gonderi)} gönderi</div></div><button id="igguncelle">Şimdi güncelle</button></div>
+    ${g.hata ? `<div style="color:var(--err);margin-bottom:8px">${esc(g.hata)}</div>` : ""}
+    <div class="kpi kpi4">${kpi(h.takipci, "Takipçi")}${kpi(o.views, "30 gün izlenme")}${kpi(o.reach, "30 gün erişim")}${kpi(o.profile_views, "Profil ziyareti")}</div>
+    ${degisim}${igGrafik(seri)}
+    ${saat ? `<div class="mut" style="margin-top:8px">⏰ En iyi paylaşım saatleri (İstanbul, ortalama izlenmeye göre): <b style="color:var(--gold)">${saat}</b>${g.en_iyi_gun ? ` · en iyi gün: <b style="color:var(--gold)">${esc(g.en_iyi_gun)}</b>` : ""}</div>` : ""}
+    <div style="overflow-x:auto;margin-top:12px"><table class="igtab"><thead><tr><th>#</th><th>Video</th><th>▶ İzlenme</th><th>🔖 Kayıt</th><th>↗ Paylaşım</th><th>⏱ Ort. izleme</th></tr></thead><tbody>
+    ${vids.map((v, i) => `<tr data-igurl="${esc(v.url || "")}"><td>${i + 1}</td><td class="igb">${esc(v.baslik || "(açıklamasız)")}<div class="mut" style="font-size:11px">${v.zaman ? new Date(v.zaman).toLocaleString("tr-TR", { dateStyle: "short", timeStyle: "short" }) : ""} · ❤ ${sayi(v.begeni)} · 💬 ${sayi(v.yorum)}</div></td><td>${sayi(v.izlenme)}</td><td>${sayi(v.kaydetme)}</td><td>${sayi(v.paylasim)}</td><td>${v.ort_izleme_sn != null ? v.ort_izleme_sn + " sn" : "—"}</td></tr>`).join("") || `<tr><td colspan="6" class="mut">Henüz gönderi yok</td></tr>`}
+    </tbody></table></div></div>`;
+  return s;
+}
+function baglaInstagram() {
+  document.querySelectorAll("[data-igurl]").forEach((r) => r.dataset.igurl && (r.onclick = () => window.open(r.dataset.igurl, "_blank", "noopener")));
+  const b = $("#igguncelle"); if (b) b.onclick = async () => { b.disabled = true; try { await guvenli(() => api("run", { agent: "instagram" }), "Instagram verisi güncelleniyor (~1-2 dk)"); setTimeout(load, 90000); } catch { b.disabled = false; } };
 }
 function renderAnaliz() {
   const a = O.analiz; if (!a || !(a.instagram || a.youtube)) return "";

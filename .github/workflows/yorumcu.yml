@@ -24,7 +24,7 @@ jobs:
       - name: Yorumlar
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
-          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID || '17841480918392807' }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/yorumcu.py "$MOD"
       - name: Kaydet

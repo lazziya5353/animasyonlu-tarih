@@ -1,0 +1,29 @@
+name: "Instagram Analiz (günlük)"
+on:
+  schedule:
+    - cron: "40 4 * * *"   # Her gün 07:40 (İstanbul)
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: repo-yazma, cancel-in-progress: false }
+jobs:
+  analiz:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONUNBUFFERED: "1"
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Instagram verisini çek
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID || '17841480918392807' }}
+        run: python scripts/instagram_analiz.py
+      - name: Kaydet (yalnız data/ → Netlify yeniden derlenmez)
+        if: always()
+        run: |
+          git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
+          git add data; git commit -m "Instagram analiz: günlük veri [skip netlify]" || exit 0
+          (git pull --rebase || (git rebase --abort; git pull --no-rebase --no-edit -X ours)) && git push
