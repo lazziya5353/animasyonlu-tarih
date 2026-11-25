@@ -11,3 +11,7 @@
   [headers.values]
     X-Frame-Options = "DENY"
     Referrer-Policy = "no-referrer"
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["libsodium-wrappers", "libsodium"]
