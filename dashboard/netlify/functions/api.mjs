@@ -1,5 +1,6 @@
 // Animasyonlu Tarih kontrol paneli API'si (Netlify Function).
 // Ortam değişkenleri: GITHUB_TOKEN (repo + workflow yetkili), GITHUB_REPO (sahip/repo), PANEL_SIFRE, AYLIK_BUTCE_USD (isteğe bağlı)
+// IG hızlı yenileme: IG token Netlify Blobs (ig/tok) içinde AES-256-GCM ile şifreli; anahtar PANEL_SIFRE’den türetilir (PANEL_SIFRE değişirse token yeniden kaydedilmeli). İsteğe bağlı IG_USER_ID.
 import crypto from "node:crypto";
 import { getStore } from "@netlify/blobs";
 import * as wpMod from "web-push";
@@ -101,6 +102,53 @@ async function olayEkle(slug, liste) {
   return cur.n;
 }
 
+// --- Instagram hızlı yenileme: token Blobs'ta AES-256-GCM ile şifreli durur (anahtar PANEL_SIFRE'den türetilir); asla loglanmaz/döndürülmez
+const igKey = () => crypto.createHash("sha256").update("ig-token-v1|" + (process.env.PANEL_SIFRE || "").trim()).digest();
+function igSifrele(t) { const iv = crypto.randomBytes(12), c = crypto.createCipheriv("aes-256-gcm", igKey(), iv); const e = Buffer.concat([c.update(t, "utf8"), c.final()]); return [iv, c.getAuthTag(), e].map((x) => x.toString("base64")).join("."); }
+function igCoz(s) { const [iv, tag, e] = s.split(".").map((x) => Buffer.from(x, "base64")); const d = crypto.createDecipheriv("aes-256-gcm", igKey(), iv); d.setAuthTag(tag); return Buffer.concat([d.update(e), d.final()]).toString("utf8"); }
+const igStore = () => getStore({ name: "ig", consistency: "strong" });
+const IG_GUN = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"];
+const IG_MEDYA = ["views", "reach", "saved", "shares", "total_interactions", "likes", "comments"], IG_REELS = ["ig_reels_avg_watch_time", "ig_reels_video_view_total_time"];
+async function igRefresh(tok, eski) {
+  const V = "v25.0"; let host = "graph.instagram.com";
+  const get = async (yol, p = {}) => { const r = await fetch(`https://${host}/${V}/${yol}?${new URLSearchParams(p)}`, { headers: { Authorization: `Bearer ${tok}` } });
+    const j = await r.json().catch(() => ({})); if (!r.ok) { const e = new Error(`Instagram ${r.status}: ${j.error?.message || ""}`.slice(0, 300)); e.kod = j.error?.code; throw e; } return j; };
+  const deger = (x) => (x.total_value ? x.total_value.value : x.values?.[0]?.value);
+  const F = "id,username,name,profile_picture_url,followers_count,follows_count,media_count";
+  let h, uid = process.env.IG_USER_ID, son;
+  for (const hh of ["graph.instagram.com", "graph.facebook.com"]) { host = hh;
+    try { if (!uid && hh === "graph.instagram.com") uid = (await get("me", { fields: "user_id" })).user_id; if (!uid) throw new Error("IG_USER_ID yok"); h = await get(uid, { fields: F }); break; } catch (e) { son = e; } }
+  const simdi = new Date(), out = { zaman: simdi.toISOString().slice(0, 19) + "Z", gecmis: eski?.gecmis || [], kaynak: "panel" };
+  if (!h) { for (const k of ["hesap", "ozet30", "gunluk", "medya"]) if (eski?.[k]) out[k] = eski[k];
+    out.hata = son?.kod === 190 ? "Instagram anahtarı geçersiz/süresi dolmuş" : `Instagram'a bağlanılamadı: ${son?.message || ""}`; return out; }
+  out.host = host; out.hesap = { kullanici: h.username, ad: h.name, foto: h.profile_picture_url, takipci: h.followers_count || 0, takip: h.follows_count, gonderi: h.media_count || 0 };
+  const until = Math.floor(simdi / 1000), since = until - 30 * 86400 + 60, yok = new Set(), ozet = {}, gunluk = {};
+  await Promise.all([
+    ...["reach", "views", "profile_views", "accounts_engaged", "total_interactions", "follows_and_unfollows"].map((m) => get(`${uid}/insights`, { metric: m, period: "day", metric_type: "total_value", since, until })
+      .then((r) => (r.data || []).forEach((x) => (ozet[x.name] = deger(x)))).catch(() => yok.add(m))),
+    ...["follower_count", "reach"].map((m) => get(`${uid}/insights`, { metric: m, period: "day", since, until })
+      .then((r) => (r.data || []).forEach((x) => (gunluk[x.name] = (x.values || []).map((v) => ({ tarih: (v.end_time || "").slice(0, 10), deger: v.value })))))
+      .catch(() => m === "follower_count" && yok.add("follower_count (günlük)"))),
+  ]);
+  out.ozet30 = ozet; out.gunluk = gunluk;
+  const bugun = out.zaman.slice(0, 10);
+  out.gecmis = [...out.gecmis.filter((g) => g.tarih !== bugun).slice(-365), { tarih: bugun, takipci: out.hesap.takipci }];
+  const medya = ((await get(`${uid}/media`, { fields: "id,caption,media_type,media_product_type,permalink,thumbnail_url,media_url,timestamp,like_count,comments_count", limit: 50 })).data || []).slice(0, 50);
+  const ist = async (id, met) => { try { const r = await get(`${id}/insights`, { metric: met.join(",") }); return Object.fromEntries((r.data || []).map((x) => [x.name, deger(x)])); } catch {}
+    const o = {}; await Promise.all(met.map((m) => get(`${id}/insights`, { metric: m }).then((r) => (r.data || []).forEach((x) => (o[x.name] = deger(x)))).catch(() => yok.add(m)))); return o; };
+  const liste = await Promise.all(medya.map(async (p) => { const st = await ist(p.id, p.media_product_type === "REELS" ? [...IG_MEDYA, ...IG_REELS] : IG_MEDYA), ort = st.ig_reels_avg_watch_time;
+    return { id: p.id, baslik: (p.caption || "").trim().split("\n")[0].slice(0, 90), zaman: p.timestamp, tur: p.media_product_type || p.media_type, medya_turu: p.media_type, url: p.permalink,
+      kapak: p.thumbnail_url || (p.media_type === "IMAGE" ? p.media_url : null), begeni: p.like_count ?? st.likes, yorum: p.comments_count ?? st.comments,
+      izlenme: st.views, erisim: st.reach, kaydetme: st.saved, paylasim: st.shares, etkilesim: st.total_interactions, ort_izleme_sn: typeof ort === "number" ? Math.round(ort / 100) / 10 : null }; }));
+  liste.sort((a, b) => (b.izlenme || 0) - (a.izlenme || 0)); out.medya = liste;
+  const ort = (a) => a.reduce((s, x) => s + x, 0) / a.length, saat = {}, gun = {};
+  for (const v of liste) { if (!v.zaman || !v.izlenme) continue; const t = new Date(Date.parse(v.zaman.slice(0, 19) + "Z") + 3 * 3600e3);
+    (saat[t.getUTCHours()] ||= []).push(v.izlenme); (gun[(t.getUTCDay() + 6) % 7] ||= []).push(v.izlenme); }
+  out.en_iyi_saatler = Object.entries(saat).sort((a, b) => ort(b[1]) - ort(a[1])).slice(0, 3).map(([s, v]) => ({ saat: +s, ort_izlenme: Math.round(ort(v)), adet: v.length }));
+  const gs = Object.entries(gun).sort((a, b) => ort(b[1]) - ort(a[1])); if (gs.length) out.en_iyi_gun = IG_GUN[+gs[0][0]];
+  out.desteklenmeyen = [...yok].sort(); return out;
+}
+
 export default async (req) => {
   if (req.method !== "POST") return json({ hata: "POST gerekli" }, 405);
   let b = {};
@@ -138,6 +186,7 @@ export default async (req) => {
           gh(`/repos/${REPO}/contents/projects`).then((r) => (r.ok ? r.json() : [])),
           readJson("data/analiz.json"), readJson("data/yorumlar.json"), readJson("data/instagram.json"),
         ]);
+        const igMeta = await igStore().get("meta", { type: "json" }).catch(() => null);
         const runs = {};
         await Promise.all(Object.entries(WORKFLOWS).map(async ([k, f]) => {
           const r = await gh(`/repos/${REPO}/actions/workflows/${f}/runs?per_page=1`);
@@ -150,7 +199,7 @@ export default async (req) => {
         const servis = {};
         kayit.filter((x) => x.zaman.startsWith(ay)).forEach((x) => (servis[x.servis] = (servis[x.servis] || 0) + x.usd));
         const projeler = (list || []).filter((x) => x.type === "dir").map((x) => x.name);
-        return json({ status: status || {}, runs, report, projeler, basliklar: await basliklar(projeler).catch(() => ({})), instagram, arsiv: ((await getStore({ name: "ayar", consistency: "strong" }).get("arsiv", { type: "json" })) || []).filter((x) => projeler.includes(x)), analiz,
+        return json({ status: status || {}, runs, report, projeler, basliklar: await basliklar(projeler).catch(() => ({})), instagram, igToken: igMeta ? { kayitli: true, zaman: igMeta.zaman, son4: igMeta.son4 } : null, arsiv: ((await getStore({ name: "ayar", consistency: "strong" }).get("arsiv", { type: "json" })) || []).filter((x) => projeler.includes(x)), analiz,
           yorumlar: { bekleyen: (yorumlar?.yorumlar || []).filter((y) => y.durum === "yeni").slice(0, 40), fikirler: (yorumlar?.fikirler || []).slice(-8).reverse() },
           harcama: { aylik, servis, butce: Number(process.env.AYLIK_BUTCE_USD || 15), son: kayit.slice(-8).reverse() } });
       }
@@ -197,8 +246,15 @@ export default async (req) => {
         const pr = await gh(`/repos/${REPO}/actions/secrets/IG_TOKEN`, { method: "PUT", body: JSON.stringify({ encrypted_value: enc, key_id }) });
         if (pr.status === 403 || pr.status === 404) return izinYok();
         if (!pr.ok) return json({ hata: `GitHub ${pr.status}` }, 502);
+        await igStore().set("tok", igSifrele(tok)); await igStore().setJSON("meta", { zaman: new Date().toISOString(), son4: tok.slice(-4) });
         await dispatch("instagram");
-        return json({ ok: true });
+        return json({ ok: true, igToken: { kayitli: true, zaman: new Date().toISOString(), son4: tok.slice(-4) } });
+      }
+      case "ig_refresh": { // hızlı yenileme: Blobs'taki token ile doğrudan Graph API; token yoksa GitHub workflow'u tetiklenir
+        const enc = await igStore().get("tok").catch(() => null); let tok = null;
+        if (enc) try { tok = igCoz(enc); } catch { tok = null; }
+        if (!tok) { await dispatch("instagram"); return json({ ok: true, yedek: true }); }
+        return json({ ok: true, instagram: await igRefresh(tok, await readJson("data/instagram.json")) });
       }
       case "run": { // ajanı çalıştır
         if (!WORKFLOWS[b.agent]) return json({ hata: "Bilinmeyen ajan" }, 400);

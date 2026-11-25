@@ -280,12 +280,13 @@ function renderTokenKart() {
     <div class="row" style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><span class="st ${basari ? "ok" : "err"}">${basari ? "Son çekim başarılı" : "Son çekim başarısız"}</span><span class="mut">${g.zaman ? ago(g.zaman) : "Hiç çekilmedi"}</span></div>
     <div style="margin-top:8px">Hesap: <b>${esc(h.kullanici ? "@" + h.kullanici : "—")}</b> · Takipçi: <b>${h.takipci != null ? sayi(h.takipci) : "—"}</b></div>
     ${g.hata ? `<div style="color:var(--err);margin-top:6px">${esc(g.hata)}</div>` : ""}
-    ${insightsYok ? `<div class="uyari">⚠️ Token'da <b>instagram_business_manage_insights</b> izni yok. İzlenme, erişim, kaydetme gibi istatistikler gelmiyor. Aşağıdaki adımlarla yeni token oluşturup buraya yapıştır.</div>` : ""}
+    ${insightsYok ? `<div class="uyari">⚠️ <b>İstatistik izni eksik:</b> Bu token istatistik izni olmadan oluşturulmuş. Meta'da izni ekleyip yeni token üret, buraya yapıştır.</div>` : ""}
     ${eksik.length ? `<div class="mut" style="margin-top:6px">Gelmeyen metrikler: ${eksik.map((x) => `<span class="tag">${esc(x)}</span>`).join(" ")}</div>` : `<div class="mut" style="margin-top:6px">Tüm metrikler geliyor ✓</div>`}
     <div class="sep"></div><b style="font-size:14px">Token güncelle</b>
-    <form id="tokform" class="tokform" autocomplete="off"><input id="toktxt" type="password" placeholder="Yeni Instagram token'ı" autocomplete="new-password"><button class="gold" type="submit">Kaydet</button></form>
+    ${O.igToken?.kayitli ? `<div style="color:var(--ok);margin-top:6px">✓ Token kayıtlı · son güncelleme ${new Date(O.igToken.zaman).toLocaleString("tr-TR", { dateStyle: "short", timeStyle: "short" })} · …${esc(O.igToken.son4 || "")}</div>` : `<div class="mut" style="margin-top:6px">Henüz token kaydedilmedi</div>`}
+    <form id="tokform" class="tokform" autocomplete="off"><input id="toktxt" type="password" placeholder="Yeni token yapıştır (sadece değiştirmek için)" autocomplete="new-password"><button class="gold" type="submit">Kaydet</button></form>
     <div id="tokmsg" class="mut" style="margin-top:6px"></div>
-    <details class="nasil"><summary>Token nasıl yenilenir? (insights izniyle)</summary><ol>
+    <details class="nasil"${insightsYok ? " open" : ""}><summary>Token nasıl yenilenir? (insights izniyle)</summary><ol>
       <li><a href="https://developers.facebook.com/apps" target="_blank" rel="noopener">developers.facebook.com</a> → <b>Animasyon Tarih Ajan</b> uygulamasını aç</li>
       <li><b>Customize use case</b> → <b>Permissions and features</b></li>
       <li><b>instagram_business_manage_insights</b> iznini ekle</li>
@@ -299,15 +300,20 @@ function baglaToken() {
     e.preventDefault(); const i = $("#toktxt"), m = $("#tokmsg"), b = f.querySelector("button"), v = i.value.trim();
     if (v.length < 20) { m.textContent = "Token çok kısa görünüyor."; return; }
     b.disabled = true; m.style.color = ""; m.textContent = "Kaydediliyor…";
-    try { await api("ig_token", { token: v }); i.value = ""; m.style.color = "var(--ok)"; m.textContent = "✓ Token kaydedildi, Instagram verisi yeniden çekiliyor (~1-2 dk)."; setTimeout(load, 120000); }
+    try { const r = await api("ig_token", { token: v }); i.value = ""; if (r.igToken) O.igToken = r.igToken; m.style.color = "var(--ok)"; m.textContent = "✓ Token kaydedildi, Instagram verisi çekiliyor…"; await igYenile(); }
     catch (er) { m.style.color = "var(--err)"; const izin = /izin/.test(er.message || "");
       m.innerHTML = izin ? `GitHub anahtarına 'Secrets: Read and write' izni eklenmeli. Şimdilik token'ı elle ekleyebilirsin: <a href="https://github.com/lazziya5353/animasyonlu-tarih/settings/secrets/actions" target="_blank" rel="noopener">GitHub → Secrets → IG_TOKEN</a>` : esc(er.message || "Hata"); }
     finally { b.disabled = false; }
   };
 }
+async function igYenile() {
+  const r = await api("ig_refresh");
+  if (r.instagram) { O.instagram = r.instagram; render(); }
+  else { alert("Kayıtlı token yok; veri GitHub üzerinden güncelleniyor (~1-2 dk)."); setTimeout(load, 90000); }
+}
 function baglaInstagram() {
   document.querySelectorAll("[data-igurl]").forEach((r) => r.dataset.igurl && (r.onclick = () => window.open(r.dataset.igurl, "_blank", "noopener")));
-  const b = $("#igguncelle"); if (b) b.onclick = async () => { b.disabled = true; try { await guvenli(() => api("run", { agent: "instagram" }), "Instagram verisi güncelleniyor (~1-2 dk)"); setTimeout(load, 90000); } catch { b.disabled = false; } };
+  const b = $("#igguncelle"); if (b) b.onclick = async () => { b.disabled = true; b.textContent = "Güncelleniyor…"; try { await igYenile(); } catch (e) { alert(e.message || "Hata"); } finally { b.disabled = false; b.textContent = "Şimdi güncelle"; } };
 }
 function renderAnaliz() {
   const a = O.analiz; if (!a || !(a.instagram || a.youtube)) return "";
