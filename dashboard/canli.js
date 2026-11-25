@@ -1,10 +1,10 @@
 // ───────── 🔴 Canlı panel + "Anlık güncelle": tek ortak poller (ig_live) ─────────
 // app.js'teki $, esc, api, sayi, O kullanılır. Panel ve anahtar aynı zamanlayıcıyı paylaşır: API çağrısı asla ikiye katlanmaz.
 const CL = { panel: false, anlik: false, aralik: 30, timer: null, sonTik: 0, sonDetay: 0, sinir: false, hata: "", calisiyor: false,
-  ilk: null, onceki: null, views: {}, gorulen: null, feed: [] };
+  ilk: null, onceki: null, oturum: null, durdu: false, views: {}, gorulen: null, feed: [] };
 try { CL.anlik = localStorage.getItem("iganlik") === "1"; const a = +localStorage.getItem("igaralik"); if ([10, 20, 30, 60].includes(a)) CL.aralik = a; } catch {}
 const canliAnlikAcik = () => CL.anlik;
-const clGerek = () => (CL.panel || CL.anlik) && !document.hidden;
+const clGerek = () => ((CL.panel && !CL.durdu) || CL.anlik) && !document.hidden;
 const clGecikme = () => (CL.sinir || CL.hata ? 60 : Math.max(10, CL.aralik)) * 1000;
 
 function clPlanla() {
@@ -33,6 +33,7 @@ function clIsle(r) {
   const d = { takipci: r.followers_count ?? null, izlenme: son.views ?? null, begeni: son.like_count ?? null, yorum: son.comments_count ?? null, vid: son.id, medya: r.medya || [] };
   const zaman = r.zaman || new Date().toISOString(), yeni = [];
   if (!CL.ilk) CL.ilk = { ...d };
+  clOturumIsle(d);
   const o = CL.onceki;
   if (o) {
     if (d.takipci != null && o.takipci != null && d.takipci !== o.takipci) yeni.push({ t: `${d.takipci > o.takipci ? "+" : ""}${sayi(d.takipci - o.takipci)} takipçi`, ic: "👤" });
@@ -44,7 +45,7 @@ function clIsle(r) {
   }
   if (r.yorumlar) {
     if (!CL.gorulen) CL.gorulen = new Set(r.yorumlar.map((y) => y.id));
-    else for (const y of [...r.yorumlar].reverse()) if (!CL.gorulen.has(y.id)) { CL.gorulen.add(y.id); yeni.push({ t: `@${y.kullanici} yorum yaptı: ${String(y.metin || "").slice(0, 90)}`, ic: "💬" }); }
+    else for (const y of [...r.yorumlar].reverse()) if (!CL.gorulen.has(y.id)) { CL.gorulen.add(y.id); if (CL.oturum) CL.oturum.yeniYorum++; yeni.push({ t: `@${y.kullanici} yorum yaptı: ${String(y.metin || "").slice(0, 90)}`, ic: "💬" }); }
   }
   for (const x of yeni) CL.feed.unshift({ ...x, zaman }); CL.feed = CL.feed.slice(0, 60);
   clPanelGuncelle(d, o); clYerinde(d, o);
@@ -112,6 +113,7 @@ function clSaat() {
 setInterval(clSaat, 1000);
 
 function clPanelAc(ac) {
+  if (!ac && CL.panel && !CL.durdu) clOturumBitir(true);
   CL.panel = ac; let p = $("#canlip");
   if (ac && !p) {
     p = document.createElement("aside"); p.id = "canlip"; p.setAttribute("aria-label", "Canlı panel");
@@ -121,17 +123,20 @@ function clPanelAc(ac) {
       <div class="cluyari" hidden></div>
       <div class="clgrid">${kut("takipci", "Takipçi")}${kut("izlenme", "İzlenme")}${kut("begeni", "Beğeni")}${kut("yorum", "Yorum")}</div>
       <div class="clvid mut"></div><div class="mut" style="font-size:11px;margin:2px 0 8px">Rozetler: ilk = panel açıldığından beri, ikinci = son güncellemeden beri</div>
+      <div class="clozet"></div><button class="ghost cldurdur">⏹ Durdur</button>
       <h3>Hareketler</h3><div class="clfeed"></div>
-      <div class="clnot">ℹ️ Instagram kimin beğendiğini/takip ettiğini paylaşmıyor; sayılar ve yorumlar canlı.<br>⏱ İzlenme sayısını Instagram birkaç dakikada bir günceller.</div>`;
+      <div class="clgecmis"></div><div class="clnot">ℹ️ Instagram kimin beğendiğini/takip ettiğini paylaşmıyor; sayılar ve yorumlar canlı.<br>⏱ İzlenme sayısını Instagram birkaç dakikada bir günceller.</div>`;
     document.body.append(p);
     p.querySelector(".clkapat").onclick = () => clPanelAc(false);
+    p.querySelector(".cldurdur").onclick = () => { if (CL.durdu) clPanelAc(true); else { CL.durdu = true; clOturumBitir(false); clPlanla(); } };
     p.querySelectorAll("[data-clara]").forEach((b) => (b.onclick = () => {
       CL.aralik = +b.dataset.clara; try { localStorage.setItem("igaralik", CL.aralik); } catch {}
       p.querySelectorAll("[data-clara]").forEach((x) => x.classList.toggle("on", x === b)); clPlanla();
     }));
   }
   if (p) p.hidden = !ac; document.body.classList.toggle("clacik", ac);
-  if (ac) { CL.ilk = null; CL.feed = []; CL.onceki = null; CL.gorulen = null; CL.sonDetay = 0; clDurum(); clPanelGuncelle({ medya: [] }, null); CL.sonTik = 0; }
+  if (ac) { CL.durdu = false; CL.oturum = { bas: Date.now(), duraklama: 0, durBas: document.hidden ? Date.now() : 0, taban: null, son: null, yeniYorum: 0 };
+    p.querySelector(".clozet").innerHTML = ""; p.querySelector(".cldurdur").textContent = "⏹ Durdur"; clGecmisCiz(); CL.ilk = null; CL.feed = []; CL.onceki = null; CL.gorulen = null; CL.sonDetay = 0; clDurum(); clPanelGuncelle({ medya: [] }, null); CL.sonTik = 0; }
   clFab(); clPlanla();
 }
 function clFab() {
@@ -146,4 +151,54 @@ function canliBagla() {
   clFab(); clPlanla();
 }
 document.addEventListener("click", (e) => { if (e.target.closest("[data-sekme]")) setTimeout(clFab, 0); });
-document.addEventListener("visibilitychange", () => (document.hidden ? (clearTimeout(CL.timer), (CL.timer = null)) : clPlanla()));
+document.addEventListener("visibilitychange", () => {
+  const o = CL.panel && !CL.durdu ? CL.oturum : null; // gizlenme = duraklatma, durdurma değil
+  if (o) { if (document.hidden) o.durBas = o.durBas || Date.now(); else if (o.durBas) { o.duraklama += Date.now() - o.durBas; o.durBas = 0; } }
+  document.hidden ? (clearTimeout(CL.timer), (CL.timer = null)) : clPlanla();
+});
+
+// ── Canlı oturum özeti
+function clOturumIsle(d) {
+  const o = CL.oturum; if (!o || !CL.panel || CL.durdu) return;
+  const m5 = d.medya.slice(0, 5).map((m) => ({ id: m.id, baslik: m.baslik || "(açıklamasız)", kapak: m.kapak || m.thumbnail_url || m.media_url || "", views: m.views ?? null, like: m.like_count ?? null, yorum: m.comments_count ?? null }));
+  if (!o.taban) o.taban = { takipci: d.takipci, medya: m5 };
+  else for (const m of o.taban.medya) if (m.views == null) { const y = m5.find((x) => x.id === m.id); if (y?.views != null) m.views = y.views; } // izlenme geç gelirse tabanı tamamla
+  o.son = { takipci: d.takipci, medya: m5 };
+}
+function clOturumBitir(toastGoster) {
+  const o = CL.oturum; CL.oturum = null; if (!o) return;
+  const bit = Date.now(), aktif = Math.max(1000, bit - o.bas - o.duraklama - (o.durBas ? bit - o.durBas : 0));
+  const fark = (a, b) => (a != null && b != null ? a - b : 0), t = o.taban, s = o.son;
+  const vid = [];
+  if (t && s) for (const b of t.medya) { const n = s.medya.find((x) => x.id === b.id); if (!n) continue;
+    const g = { id: b.id, baslik: b.baslik, kapak: b.kapak || n.kapak, izlenme: fark(n.views, b.views), begeni: fark(n.like, b.like), yorum: fark(n.yorum, b.yorum) };
+    if (g.izlenme || g.begeni || g.yorum) vid.push(g); }
+  const top = (k) => vid.reduce((a, v) => a + v[k], 0);
+  const oz = { bas: o.bas, bit, sure: aktif, takipci: t && s ? fark(s.takipci, t.takipci) : 0, izlenme: top("izlenme"), begeni: top("begeni"), yorum: top("yorum"), yeniYorum: o.yeniYorum, vid };
+  let liste = clGecmisOku(); liste.unshift(oz); liste = liste.slice(0, 10);
+  try { localStorage.setItem("igoturumlar", JSON.stringify(liste)); } catch {}
+  const p = $("#canlip");
+  if (p) { p.querySelector(".clozet").innerHTML = clOzetHtml(oz); p.querySelector(".cldurdur").textContent = "▶ Yeniden başlat"; clGecmisCiz(); }
+  if (toastGoster) { const d = document.createElement("div"); d.className = "cltoast"; d.style.cssText = "position:fixed;right:16px;bottom:16px;z-index:9999;max-width:340px;max-height:70vh;overflow:auto;background:var(--kart,#1b1b22);color:inherit;border-radius:12px;padding:12px;box-shadow:0 8px 30px #0008;cursor:pointer";
+    d.title = "Kapatmak için tıkla"; d.innerHTML = clOzetHtml(oz); d.onclick = () => d.remove(); document.body.append(d); setTimeout(() => d.remove(), 12000); }
+}
+function clGecmisOku() { try { const x = JSON.parse(localStorage.getItem("igoturumlar") || "[]"); return Array.isArray(x) ? x : []; } catch { return []; } }
+const clSure = (ms) => { const sn = Math.round(ms / 1000), sa = Math.floor(sn / 3600), dk = Math.floor((sn % 3600) / 60); return `${sa ? sa + " sa " : ""}${dk} dk ${sn % 60} sn`; };
+const clZ = (ms) => new Date(ms).toLocaleTimeString("tr-TR", { timeZone: "Europe/Istanbul", hour: "2-digit", minute: "2-digit", second: "2-digit" });
+const clIs = (n) => `${n > 0 ? "+" : ""}${sayi(n)}`;
+function clOzetHtml(z, kisa) {
+  const dk = z.sure / 60000, hiz = (n) => (n / dk).toLocaleString("tr-TR", { maximumFractionDigits: 1 });
+  const gun = new Date(z.bas).toLocaleDateString("tr-TR", { timeZone: "Europe/Istanbul", day: "numeric", month: "short" });
+  const vids = (z.vid || []).map((v) => `<div style="display:flex;gap:8px;align-items:center;margin:4px 0">${v.kapak ? `<img src="${esc(v.kapak)}" alt="" loading="lazy" referrerpolicy="no-referrer" style="width:36px;height:48px;object-fit:cover;border-radius:6px" onerror="this.remove()">` : "🎬"}<div style="font-size:12px;min-width:0"><div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(v.baslik)}</div><span class="mut">▶ ${clIs(v.izlenme)} · ❤ ${clIs(v.begeni)} · 💬 ${clIs(v.yorum)}</span></div></div>`).join("");
+  return `<div class="clozk" style="border:1px solid #fff2;border-radius:10px;padding:10px;margin:8px 0">
+    <b>Canlı oturum özeti · ${clSure(z.sure)}</b>
+    <div class="mut" style="font-size:12px">${gun} · Başlangıç ${clZ(z.bas)} · Bitiş ${clZ(z.bit)}</div>
+    <div style="margin:6px 0">${clIs(z.takipci)} takipçi, ${clIs(z.izlenme)} izlenme, ${clIs(z.begeni)} beğeni, ${clIs(z.yorum)} yorum</div>
+    <div class="mut" style="font-size:12px">⚡ ${hiz(z.izlenme)} izlenme/dk · ${hiz(z.takipci)} takipçi/dk · 💬 ${sayi(z.yeniYorum)} yeni yorum</div>
+    ${kisa ? "" : vids ? `<div style="margin-top:6px">${vids}</div>` : '<div class="mut" style="font-size:12px;margin-top:6px">Videolarda değişim olmadı.</div>'}</div>`;
+}
+function clGecmisCiz() {
+  const p = $("#canlip"); if (!p) return; const el = p.querySelector(".clgecmis"); const l = clGecmisOku();
+  el.innerHTML = l.length ? `<h3 style="display:flex;justify-content:space-between;align-items:center">Geçmiş oturumlar <button class="ghost clgtemiz">Temizle</button></h3>${l.map((z) => `<details><summary>${new Date(z.bas).toLocaleString("tr-TR", { timeZone: "Europe/Istanbul", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })} · ${clSure(z.sure)} · ${clIs(z.izlenme)} izlenme</summary>${clOzetHtml(z)}</details>`).join("")}` : "";
+  const b = el.querySelector(".clgtemiz"); if (b) b.onclick = () => { try { localStorage.removeItem("igoturumlar"); } catch {} clGecmisCiz(); };
+}

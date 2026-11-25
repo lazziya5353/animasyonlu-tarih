@@ -1,4 +1,4 @@
-// panel sürümü: 2026-11-25b
+// panel sürümü: 2026-11-25c (canli.js v2)
 self.addEventListener("install", (e) => self.skipWaiting());
 self.addEventListener("activate", (e) => self.clients.claim());
 self.addEventListener("fetch", () => {});
