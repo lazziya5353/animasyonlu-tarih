@@ -24,6 +24,7 @@ def norm(t): return re.sub(r"[^a-zçğıöşüâîû ]", "", t.replace("İ", "i"
 
 def main(v, script):
     T = json.load(open(v + ".times.json")); S = json.load(open(script)); hata = []
+    qs = {x["harf"]: S["sahneler"][1+2*i]["lines"][0].split(" harfi.", 1)[1] for i, x in enumerate(T)}
     ans = {x["harf"]: S["sahneler"][2+2*i]["lines"][0].rstrip(".") for i, x in enumerate(T)}
     pr = lambda k: subprocess.run(["ffprobe", "-v", "error", "-select_streams", k, "-show_entries", "stream=duration", "-of", "csv=p=0", v], capture_output=True, text=True).stdout.strip()
     va, aa = float(pr("v:0")), float(pr("a:0"))
@@ -38,10 +39,14 @@ def main(v, script):
             a = pcm(v, t0, t1)
             if len(a) == 0 or np.sqrt((a**2).mean()) < 0.005: hata.append(f"{L} {tip}: ses yok")
             elif max_pause(a) > 0.4: hata.append(f"{L} {tip}: {max_pause(a):.2f} sn ic durak")
-            if tip == "soru" and wm:
+            if wm and len(a):
                 txt = norm(" ".join(s.text for s in wm.transcribe(a, language="tr")[0]))
-                w = norm(ans[L]).split()[0]
-                if re.search(r"\b" + w[:max(4, len(w)-2)], txt): hata.append(f"{L} soru: cevap sizmasi ({txt!r})")
+                w = norm(ans[L]).split()[0]; print(f"{L} {tip} [{t0:.1f}-{t1:.1f}]: {txt}")
+                if tip == "soru":
+                    if re.search(r"\b" + w[:max(4, len(w)-2)], txt): hata.append(f"{L} soru: cevap sizmasi ({txt!r})")
+                    bek = [x[:4] for x in norm(qs[L]).split() if len(x) > 3]
+                    if bek and sum(x in txt for x in bek) / len(bek) < 0.5: hata.append(f"{L} soru: ses ekrandaki soruyla uyusmuyor ({txt!r})")
+                elif w[:3] not in txt: hata.append(f"{L} cevap: ses ekrandaki cevapla uyusmuyor ({txt!r})")
         # alt bilgi: cevap karesinde, soru karesine gore yeni acik-krem piksel satiri (225,210,190)
         def krem(fr): return (np.abs(fr - [225, 210, 190]).sum(2) < 40)[1150:1750].sum()
         if krem(frame(v, x["cevap_bit"] + 0.3)) - krem(frame(v, x["soru_bit"] + 1.0)) < 150: hata.append(f"{L}: alt bilgi satiri gorunmuyor")
