@@ -1,5 +1,7 @@
 # Higgsfield'lı video üretim kuralları (12 Kasım derslerinden)
 
+> **Quiz üretimi için önce [QUIZ_REHBERI.md](QUIZ_REHBERI.md) okunur** (akış, tasarım, kontroller, geçmiş hatalar, elle kontrol listesi). Senarist quiz konularında bu rehberi otomatik yükler.
+
 1. Seslendirmede sayılar yazıyla (Senarist otomatik yapar). Rakam olursa Whisper tutmaz, altyazı/görüntü sesin önüne geçer.
 2. Sahne-klip eşleşmesi: cümle süresi klip parçasının 1,8 katını geçmesin; geçerse komşu sahnelerden pay al.
 3. Klip sınırlarında 0,3 sn pay (engine/klip.py otomatik). AI klibinde kesim tam saniyede olmuyor.
