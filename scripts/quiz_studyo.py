@@ -21,6 +21,8 @@ FORMATLAR = {
     "hangisi-once": "HANGİSİ ÖNCE?", "dogru-yanlis": "DOĞRU MU YANLIŞ MI?", "bu-kim": "BU KİM?", "haritada-bul": "HARİTADA BUL",
     "yili-tahmin": "YILI TAHMİN ET", "emoji-tarih": "EMOJİ İLE TARİH", "kelime-eksik": "BİR KELİME EKSİK"}
 HARF = "ABCD"
+GIRIS = {"hangisi-once": "Hangisi önce", "dogru-yanlis": "Doğru mu yanlış mı", "bu-kim": "Bu kim", "haritada-bul": "Haritada bul",
+         "yili-tahmin": "Yılı tahmin et", "emoji-tarih": "Emoji ile tarih", "kelime-eksik": "Bir kelime eksik"}
 TR = str.maketrans("iı", "İI")
 def up(t): return t.translate(TR).upper()
 def hexrgb(h, d):
@@ -188,7 +190,7 @@ def hazirla(path):
     SJ = json.load(open(path)); h = dogrula(SJ)
     if h: print("\n".join(h)); sys.exit("HATA: script.json gecersiz")
     T = Tema(SJ); fmt = SJ["format"]; n = len(SJ["sorular"])
-    sah = [dict(lines=[SJ.get("giris") or f"{FORMATLAR[fmt].title()}! {n} soru, bakalım kaçını bileceksin?"], tip="giris")]
+    sah = [dict(lines=[SJ.get("giris") or f"{GIRIS[fmt]}! {n} soru, bakalım kaçını bileceksin?"], tip="giris")]
     for i, q in enumerate(SJ["sorular"]):
         ql, al = satirlar(fmt, q)
         for l in ql: sah.append(dict(lines=[l], tip="soru", soru=i))

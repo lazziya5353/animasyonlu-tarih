@@ -68,7 +68,7 @@ jobs:
           OZ=$(python -c "import json,hashlib,sys;s=json.load(open(sys.argv[1]));print(hashlib.sha256((sys.argv[2]+'|'+s.get('ses_stil','')+'|'+s['seslendirme_metni']).encode()).hexdigest())" $P/script.json "$SLUG")
           if [ "$SES" = "1" ] || [ ! -f "$P/ses.wav" ] || [ "$(cat $P/ses.kaynak 2>/dev/null)" != "$OZ" ]; then
             rm -f "$P/ses.wav"
-            python scripts/generate_assets.py --slug "$SLUG" --ses
+            python scripts/quiz_studyo_ses.py "$SLUG"
             test -s "$P/ses.wav" || { echo "HATA: $P/ses.wav uretilemedi"; exit 1; }
             echo "$OZ" > "$P/ses.kaynak"
             git add "projects/$SLUG"; git commit -qm "Quiz Stüdyo sesi: $SLUG" && (git pull --rebase -q; git push -q) || true
