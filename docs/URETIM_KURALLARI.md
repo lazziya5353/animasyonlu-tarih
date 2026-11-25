@@ -36,3 +36,10 @@ Akış: ses (Gemini) → video + kapak (`scripts/quiz_kapak.py`) → `scripts/qu
 12. ZOR soruları (quiz 3'ten itibaren; quiz 2'ye uygulanmaz): script.json'da her soru sahnesine "zorluk": "kolay" | "orta" | "zor". Zor sorular quizin başına, ortasına ve sonuna dağıtılır, sona yığılmaz. Harf balonunun altında baştan küçük kırmızı "ZOR" etiketi görünür; zor soru gelince sayacın üstünde kısa "ZOR SORU" flaşı çıkar ve düşünme süresine +1 sn eklenir. Kapanış "ZORLARIN KAÇINI BİLDİN?" sorar. Kapakta "N ZOR SORU" hapı çıkar (quiz_kapak.py otomatik sayar). Renk ve stil bizim: koyu kırmızı hap, altın çerçeve, krem yazı; rakip kanalın tasarımı kopyalanmaz.
 13. Tematik arka plan (isteğe bağlı, quiz 3+): script.json "arkaplan": "images/xxx.jpg" (proje klasörüne göre). Konuya uygun tarihi sahne, %38 parlaklık ve hafif bulanıklıkla halkanın arkasına konur; "arkaplan_kenburns": true ile süre boyunca çok yavaş %8 yakınlaşma yapılır. Boşsa kahverengi/altın gradyan kalır. Tüm yazılar okunur kalmalı; kontrol kareleriyle bakılır.
 14. Hareketli @animasyon.tarih filigranı varsayılan olarak açıktır (--no-wm yalnızca test için).
+
+## Bilgi doğrulama (zorunlu, render öncesi)
+- Her cümledeki tarih, sayı, isim ve "ilk/en" iddiası güvenilir kaynakla tek tek doğrulanır.
+- Süre hesapları bugünün yılıyla yeniden hesaplanır (ör. 1324 → 2026 = ~700 yıl; "600 yıl" HATA idi, Orhan Gazi videosu).
+- "İlk kez" iddialarında kronoloji kontrol edilir (ör. Rumeli'ye ilk ayak: Çimpe 1352, Gelibolu 1354 depremi sonrası).
+- Doğrulanamayan alıntı/tarif çıkarılır veya "rivayete göre / kaynaklara göre" ile verilir.
+- Doğrulama sonucu projede `dogrulama.md` olarak saklanır; yoksa render başlatılmaz.
