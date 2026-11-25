@@ -267,8 +267,8 @@ function renderInstagram() {
     <div class="kpi kpi4">${kpi(h.takipci, "Takipçi")}${kpi(o.views, "30 gün izlenme")}${kpi(o.reach, "30 gün erişim")}${kpi(o.profile_views, "Profil ziyareti")}</div>
     ${degisim}${igGrafik(seri)}
     ${saat ? `<div class="mut" style="margin-top:8px">⏰ En iyi paylaşım saatleri (İstanbul, ortalama izlenmeye göre): <b style="color:var(--gold)">${saat}</b>${g.en_iyi_gun ? ` · en iyi gün: <b style="color:var(--gold)">${esc(g.en_iyi_gun)}</b>` : ""}</div>` : ""}
-    <div style="overflow-x:auto;margin-top:12px"><table class="igtab"><thead><tr><th>#</th><th>Video</th><th>▶ İzlenme</th><th>🔖 Kayıt</th><th>↗ Paylaşım</th><th>⏱ Ort. izleme</th></tr></thead><tbody>
-    ${vids.map((v, i) => `<tr data-igurl="${esc(v.url || "")}"><td>${i + 1}</td><td class="igb">${esc(v.baslik || "(açıklamasız)")}<div class="mut" style="font-size:11px">${v.zaman ? new Date(v.zaman).toLocaleString("tr-TR", { dateStyle: "short", timeStyle: "short" }) : ""} · ❤ ${sayi(v.begeni)} · 💬 ${sayi(v.yorum)}</div></td><td>${sayi(v.izlenme)}</td><td>${sayi(v.kaydetme)}</td><td>${sayi(v.paylasim)}</td><td>${v.ort_izleme_sn != null ? v.ort_izleme_sn + " sn" : "—"}</td></tr>`).join("") || `<tr><td colspan="6" class="mut">Henüz gönderi yok</td></tr>`}
+    <div style="overflow-x:auto;margin-top:12px"><table class="igtab"><thead><tr><th>#</th><th></th><th>Video</th><th>▶ İzlenme</th><th>🔖 Kayıt</th><th>↗ Paylaşım</th><th>⏱ Ort. izleme</th></tr></thead><tbody>
+    ${vids.map((v, i) => `<tr data-igurl="${esc(v.url || "")}"><td>${i + 1}</td><td class="igk">${(v.kapak || v.thumbnail_url || v.media_url) ? `<img src="${esc(v.kapak || v.thumbnail_url || v.media_url)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'igph',textContent:'🎬'}))">` : `<span class="igph">🎬</span>`}</td><td class="igb">${esc(v.baslik || "(açıklamasız)")}<div class="mut" style="font-size:11px">${v.zaman ? new Date(v.zaman).toLocaleString("tr-TR", { dateStyle: "short", timeStyle: "short" }) : ""} · ❤ ${sayi(v.begeni)} · 💬 ${sayi(v.yorum)}</div></td><td>${sayi(v.izlenme)}</td><td>${sayi(v.kaydetme)}</td><td>${sayi(v.paylasim)}</td><td>${v.ort_izleme_sn != null ? v.ort_izleme_sn + " sn" : "—"}</td></tr>`).join("") || `<tr><td colspan="7" class="mut">Henüz gönderi yok</td></tr>`}
     </tbody></table></div></div>`;
   return s;
 }
@@ -276,17 +276,23 @@ function renderTokenKart() {
   const g = O.instagram || {}, h = g.hesap || {}, eksik = g.desteklenmeyen || [];
   const basari = g.zaman && !g.hata && h.kullanici;
   const insightsYok = eksik.length && eksik.some((x) => /reach|views|profile_views|follower_count/.test(x));
+  const kayitli = O.igToken?.kayitli, authHata = /190|expired|invalid|süres|geçersiz|oauth/i.test(g.hata || "");
+  const sorun = !kayitli || !basari || authHata || insightsYok;
+  const tz = O.igToken?.zaman || g.zaman;
+  const form = `<form id="tokform" class="tokform" autocomplete="off"><input id="toktxt" type="password" placeholder="Yeni token yapıştır" autocomplete="new-password"><button class="gold" type="submit">Kaydet</button></form><div id="tokmsg" class="mut" style="margin-top:6px"></div>`;
+  if (!sorun) return `<h2>Instagram Bağlantısı / Token</h2><div class="card">
+    <div class="tokok">✓ Instagram bağlı · token kayıtlı (…${esc(O.igToken.son4 || "")}) · son güncelleme ${tz ? ago(tz) : "—"} · <a href="#" id="tokdegis">Token'ı değiştir</a></div>
+    <div id="tokalan" hidden>${form}</div></div>`;
   return `<h2>Instagram Bağlantısı / Token</h2><div class="card">
     <div class="row" style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><span class="st ${basari ? "ok" : "err"}">${basari ? "Son çekim başarılı" : "Son çekim başarısız"}</span><span class="mut">${g.zaman ? ago(g.zaman) : "Hiç çekilmedi"}</span></div>
     <div style="margin-top:8px">Hesap: <b>${esc(h.kullanici ? "@" + h.kullanici : "—")}</b> · Takipçi: <b>${h.takipci != null ? sayi(h.takipci) : "—"}</b></div>
-    ${g.hata ? `<div style="color:var(--err);margin-top:6px">${esc(g.hata)}</div>` : ""}
+    ${g.hata ? `<div style="color:var(--err);margin-top:6px">${esc(g.hata)}${authHata ? " — token süresi dolmuş veya geçersiz, yenisini yapıştır." : ""}</div>` : ""}
     ${insightsYok ? `<div class="uyari">⚠️ <b>İstatistik izni eksik:</b> Bu token istatistik izni olmadan oluşturulmuş. Meta'da izni ekleyip yeni token üret, buraya yapıştır.</div>` : ""}
-    ${eksik.length ? `<div class="mut" style="margin-top:6px">Gelmeyen metrikler: ${eksik.map((x) => `<span class="tag">${esc(x)}</span>`).join(" ")}</div>` : `<div class="mut" style="margin-top:6px">Tüm metrikler geliyor ✓</div>`}
+    ${eksik.length ? `<div class="mut" style="margin-top:6px">Gelmeyen metrikler: ${eksik.map((x) => `<span class="tag">${esc(x)}</span>`).join(" ")}</div>` : ""}
     <div class="sep"></div><b style="font-size:14px">Token güncelle</b>
-    ${O.igToken?.kayitli ? `<div style="color:var(--ok);margin-top:6px">✓ Token kayıtlı · son güncelleme ${new Date(O.igToken.zaman).toLocaleString("tr-TR", { dateStyle: "short", timeStyle: "short" })} · …${esc(O.igToken.son4 || "")}</div>` : `<div class="mut" style="margin-top:6px">Henüz token kaydedilmedi</div>`}
-    <form id="tokform" class="tokform" autocomplete="off"><input id="toktxt" type="password" placeholder="Yeni token yapıştır (sadece değiştirmek için)" autocomplete="new-password"><button class="gold" type="submit">Kaydet</button></form>
-    <div id="tokmsg" class="mut" style="margin-top:6px"></div>
-    <details class="nasil"${insightsYok ? " open" : ""}><summary>Token nasıl yenilenir? (insights izniyle)</summary><ol>
+    ${kayitli ? `<div class="mut" style="margin-top:6px">Kayıtlı token: …${esc(O.igToken.son4 || "")}</div>` : `<div style="color:var(--err);margin-top:6px">Henüz token kaydedilmedi</div>`}
+    ${form}
+    <details class="nasil" open><summary>Token nasıl yenilenir? (insights izniyle)</summary><ol>
       <li><a href="https://developers.facebook.com/apps" target="_blank" rel="noopener">developers.facebook.com</a> → <b>Animasyon Tarih Ajan</b> uygulamasını aç</li>
       <li><b>Customize use case</b> → <b>Permissions and features</b></li>
       <li><b>instagram_business_manage_insights</b> iznini ekle</li>
@@ -295,6 +301,7 @@ function renderTokenKart() {
       <li>Yukarıdaki kutuya yapıştırıp <b>Kaydet</b>'e bas</li></ol></details></div>`;
 }
 function baglaToken() {
+  const d = $("#tokdegis"); if (d) d.onclick = (e) => { e.preventDefault(); const a = $("#tokalan"); a.hidden = !a.hidden; if (!a.hidden) $("#toktxt").focus(); };
   const f = $("#tokform"); if (!f) return;
   f.onsubmit = async (e) => {
     e.preventDefault(); const i = $("#toktxt"), m = $("#tokmsg"), b = f.querySelector("button"), v = i.value.trim();
