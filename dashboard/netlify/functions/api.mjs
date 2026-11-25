@@ -62,9 +62,9 @@ function quizIstem(fmt, konu, adet, kar, tema) {
 const quizKontrolIstem = (fmt, sorular) => "Aşağıdaki quiz sorularını tek tek doğruluk açısından denetle (Google araması kullan). Yanlış yıl, yanlış kişi, uydurma söz, birden fazla doğru cevabı olan soru, cevabı soruda ele veren ipucu ya da hatalı koordinat varsa DÜZELT; düzeltemiyorsan soruyu çıkar. Aynı şemayı koru. Sadece JSON döndür: {\"sorular\": [...], \"notlar\": [\"soru N: ne değişti ve neden (kaynak)\"]}.\n" + JSON.stringify({ format: fmt, sorular });
 async function gemini(text, { arama = false, ms = 9000 } = {}) {
   const key = process.env.GEMINI_API_KEY; if (!key) throw new Error("anahtar yok");
-  const body = { contents: [{ parts: [{ text }] }], generationConfig: arama ? { temperature: 0.2 } : { temperature: 0.6, responseMimeType: "application/json", thinkingConfig: { thinkingBudget: 0 } } };
+  const body = { contents: [{ parts: [{ text }] }], generationConfig: arama ? { temperature: 0.2 } : { temperature: 0.6, responseMimeType: "application/json" } };
   if (arama) body.tools = [{ google_search: {} }];
-  const r = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent", { method: "POST", signal: AbortSignal.timeout(ms), headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify(body) });
+  const r = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent", { method: "POST", signal: AbortSignal.timeout(ms), headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify(body) });
   if (!r.ok) throw new Error(`Gemini ${r.status}`);
   const t = ((await r.json()).candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").replace(/^```(json)?|```$/gm, "");
   return JSON.parse(t.slice(t.indexOf("{"), t.lastIndexOf("}") + 1));

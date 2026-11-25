@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import ROOT
 from generate_assets import call
 SEMA = json.load(open(os.path.join(ROOT, "dashboard", "quiz", "semalar.json")))
-MODEL = os.environ.get("GEMINI_METIN_MODEL") or "gemini-2.5-flash"
+MODEL = os.environ.get("GEMINI_METIN_MODEL") or "gemini-flash-latest"
 
 def istem(fmt, konu, adet, kar, tema):
     s = SEMA[fmt]; alan = "spor tarihi" if tema == "spor" else "tarih (ağırlıklı Türk ve dünya tarihi)"
