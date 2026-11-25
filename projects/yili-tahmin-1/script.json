@@ -89,5 +89,222 @@
    "alt_bilgi": "Anadolu Selçuklu – Moğol · 1243"
   }
  ],
- "durum": "test"
+ "durum": "test",
+ "sahneler": [
+  {
+   "lines": [
+    "Yili Tahmi̇n Et! 7 soru, bakalım kaçını bileceksin?"
+   ],
+   "tip": "giris",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Malazgirt Savaşı hangi yıl yapıldı?"
+   ],
+   "tip": "soru",
+   "soru": 0,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Cevap 1071."
+   ],
+   "tip": "cevap",
+   "soru": 0,
+   "zorluk": "kolay",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "TBMM hangi yıl açıldı?"
+   ],
+   "tip": "soru",
+   "soru": 1,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Cevap 1920."
+   ],
+   "tip": "cevap",
+   "soru": 1,
+   "zorluk": "kolay",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Mohaç Meydan Muharebesi hangi yıl yapıldı?"
+   ],
+   "tip": "soru",
+   "soru": 2,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Cevap 1526."
+   ],
+   "tip": "cevap",
+   "soru": 2,
+   "zorluk": "orta",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Tanzimat Fermanı hangi yıl ilan edildi?"
+   ],
+   "tip": "soru",
+   "soru": 3,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Cevap 1839."
+   ],
+   "tip": "cevap",
+   "soru": 3,
+   "zorluk": "orta",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Soyadı Kanunu hangi yıl kabul edildi?"
+   ],
+   "tip": "soru",
+   "soru": 4,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Cevap 1934."
+   ],
+   "tip": "cevap",
+   "soru": 4,
+   "zorluk": "orta",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Kanuni Sultan Süleyman hangi yıl tahta çıktı?"
+   ],
+   "tip": "soru",
+   "soru": 5,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Cevap 1520."
+   ],
+   "tip": "cevap",
+   "soru": 5,
+   "zorluk": "zor",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Kösedağ Savaşı hangi yıl yapıldı?"
+   ],
+   "tip": "soru",
+   "soru": 6,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Cevap 1243."
+   ],
+   "tip": "cevap",
+   "soru": 6,
+   "zorluk": "zor",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Kaçını bildin? Yorumlara yaz!"
+   ],
+   "tip": "kapanis",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  }
+ ],
+ "seslendirme_metni": "Yili Tahmi̇n Et! yedi soru, bakalım kaçını bileceksin?\nMalazgirt Savaşı hangi yıl yapıldı?\nCevap bin yetmiş bir.\nTBMM hangi yıl açıldı?\nCevap bin dokuz yüz yirmi.\nMohaç Meydan Muharebesi hangi yıl yapıldı?\nCevap bin beş yüz yirmi altı.\nTanzimat Fermanı hangi yıl ilan edildi?\nCevap bin sekiz yüz otuz dokuz.\nSoyadı Kanunu hangi yıl kabul edildi?\nCevap bin dokuz yüz otuz dört.\nKanuni Sultan Süleyman hangi yıl tahta çıktı?\nCevap bin beş yüz yirmi.\nKösedağ Savaşı hangi yıl yapıldı?\nCevap bin iki yüz kırk üç.\nKaçını bildin? Yorumlara yaz!",
+ "ses_stil": "Gülümseyen, oyunbaz ama vakur bir belgesel anlatıcısı gibi, normal hızda ve akıcı oku. Satır aralarında çok kısa duraksa:\n"
 }
