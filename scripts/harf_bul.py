@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""""Harflerden Bul" Reel renderer (soru + harf kutulari -> 3 sn yay, harfler tek tek acilir -> cevap yesil).
+""""Harflerden Bul" Reel renderer (soru + sabit maskeli harf kutulari -> 3 sn yay (zor +1 sn) -> tum kutular birden dolar, cevap yesil).
 Kullanim:
   harf_bul.py --hazirla script.json            # sorular[] -> sahneler + seslendirme_metni (maskeleri dogrular)
   harf_bul.py script.json ses.wav cikti.mp4    # video (+ cikti.mp4.times.json, cikti.mp4.kutular.json)
@@ -21,7 +21,8 @@ Y_KUTU = 1080                          # kutu blogunun dikey merkezi
 TIMER = (540, 1530, 78)                # yay merkezi + yaricap
 GIRIS = "Harflerden bul! Boşlukları doldur, bakalım kaçını çözebileceksin?"
 CIKIS = "Kaçını bildin? Yorumlara yaz!"
-EKSTRA = {"kolay": 3, "orta": 2, "zor": 1}   # 3 sn yayda acilan ek harf sayisi (~1/sn; zor daha az)
+ORAN_MAX = 0.30                        # maskede acik harf orani ust siniri (hedef kolay ~%25, orta ~%20)
+ZOR_MAX = 2                            # zor soruda en fazla acik harf
 
 # ---------- maske ----------
 def maske_coz(q):
@@ -35,15 +36,19 @@ def maske_coz(q):
         if b.isalpha():
             if a != "_" and a != b: raise ValueError(f"{c}: {i}. harf maskede {a!r}, cevapta {b!r}")
         elif a != b: raise ValueError(f"{c}: {i}. konumda bosluk/tire uyusmuyor ({a!r} / {b!r})")
-    if all(a != "_" for a, b in zip(m, c) if b.isalpha()): raise ValueError(f"{c}: maske cevabin tamamini aciyor")
+    harf = [i for i, b in enumerate(c) if b.isalpha()]; acik = [i for i in harf if m[i] != "_"]
+    if len(acik) == len(harf): raise ValueError(f"{c}: maske cevabin tamamini aciyor")
+    if len(acik) > ORAN_MAX*len(harf): raise ValueError(f"{c}: cok harf acik ({len(acik)}/{len(harf)} > %{int(ORAN_MAX*100)})")
+    if q.get("zorluk") == "zor" and len(acik) > ZOR_MAX: raise ValueError(f"{c}: zor soruda en fazla {ZOR_MAX} harf acik olabilir ({len(acik)})")
+    kel = c.split(" ")
+    if len(kel) > 1:
+        bas = 0
+        for w in kel:
+            if not any(m[bas + j] != "_" for j, ch in enumerate(w) if ch.isalpha()): raise ValueError(f"{c}: '{w}' kelimesinde hic acik harf yok")
+            bas += len(w) + 1
+        bas = [0] + [i + 1 for i, ch in enumerate(c) if ch == " "]
+        if all(m[i] != "_" for i in bas): raise ValueError(f"{c}: her kelimenin ilk harfi acik (cok kolay)")
     return m
-
-def ekstra_sira(q, k):
-    """Yay sirasinda acilacak ek harflerin indeksleri (sabit tohum; en az 1 harf kapali kalir)."""
-    c = up(q["cevap"]); m = maske_coz(q)
-    kapali = [i for i, (a, b) in enumerate(zip(m, c)) if b.isalpha() and a == "_"]
-    n = max(0, min(EKSTRA.get(q.get("zorluk", "kolay"), 2), len(kapali) - 1))
-    return random.Random(1000 + k).sample(kapali, n)
 
 def okunus(cevap):
     w = []
@@ -238,7 +243,7 @@ def render(a):
     SJ = json.load(open(a.script)); Q = SJ["sorular"]; n = len(Q)
     S = [" ".join(x["lines"]) for x in SJ["sahneler"]]
     assert len(S) == 2*n + 2, "sahneler sorularla uyusmuyor: once --hazirla"
-    M = [maske_coz(q) for q in Q]; C = [up(q["cevap"]) for q in Q]; X = [ekstra_sira(q, k) for k, q in enumerate(Q)]
+    M = [maske_coz(q) for q in Q]; C = [up(q["cevap"]) for q in Q]; P = [a.pause + (1.0 if q.get("zorluk") == "zor" else 0) for q in Q]
     ZOR = {k for k, q in enumerate(Q) if q.get("zorluk") == "zor"}
     SR = 48000
     raw = subprocess.run(["ffmpeg", "-v", "error", "-i", a.wav, "-af", f"atempo={a.tempo}", "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
@@ -247,8 +252,8 @@ def render(a):
     parts, t = [segs[0], z(0.25)], len(segs[0])/SR + 0.25; ev = []
     for k in range(n):
         qa, aa = segs[1+2*k], segs[2+2*k]
-        qs = t; qe = qs + len(qa)/SR; as_ = qe + a.pause; ae = as_ + len(aa)/SR; gone = max(ae, as_ + 0.8) + a.hold + 0.25
-        parts += [qa, z(a.pause), aa, z(gone - ae)]; ev.append((qs, qe, as_, ae, gone)); t = gone
+        qs = t; qe = qs + len(qa)/SR; as_ = qe + P[k]; ae = as_ + len(aa)/SR; gone = max(ae, as_ + 0.8) + a.hold + 0.25
+        parts += [qa, z(P[k]), aa, z(gone - ae)]; ev.append((qs, qe, as_, ae, gone)); t = gone
     outro = t; parts += [segs[-1], z(1.0)]
     A = np.concatenate(parts); dur = len(A)/SR; tmpa = a.out + ".a.wav"
     with wave.open(tmpa, "wb") as w:
@@ -276,12 +281,10 @@ def render(a):
             acik = {i for i, ch in enumerate(M[k]) if ch != "_"}
             yesil = t >= as_; yeni = set(); pop = 1.0
             if qe <= t < as_:
-                el = t - qe; step = a.pause/(len(X[k]) + 1)
-                for j, i in enumerate(X[k]):
-                    if el >= step*(j + 1): yeni.add(i); pop = min(1, (el - step*(j + 1))/0.2)
-                bx.append(timer_ciz(d, min(1, el/a.pause), max(1, math.ceil(a.pause - el)))); faz = "yay"
+                el = t - qe   # maske sabit: yay sirasinda harf acilmaz
+                bx.append(timer_ciz(d, min(1, el/P[k]), max(1, math.ceil(P[k] - el)))); faz = "yay"
             elif not yesil: faz = "soru"
-            else: yeni = set(X[k]); faz = "cevap"
+            else: faz = "cevap"
             bx += kutular_ciz(d, C[k], acik | yeni, yeni, yesil, pop)
             if yesil: bx += alt_bilgi_ciz(d, C[k], HF.get(str(k+1), q.get("alt_bilgi", "")), min(1, (t - as_)/0.3))
             if k in ZOR and qs <= t < qs + 1.2:
