@@ -52,5 +52,11 @@
   "mesaj": "4566 takipçi · 20 gönderi analiz edildi",
   "cikti": null,
   "zaman": "2026-11-25T17:13:06Z"
+ },
+ "haftalik": {
+  "durum": "tamam",
+  "mesaj": "Haftalık rapor hazır (18.11 – 25.11.2026, gemini)",
+  "cikti": null,
+  "zaman": "2026-11-25T17:56:20Z"
  }
 }
