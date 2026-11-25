@@ -2,6 +2,7 @@
 
 > **Quiz üretimi için önce [QUIZ_REHBERI.md](QUIZ_REHBERI.md) okunur** (akış, tasarım, kontroller, geçmiş hatalar, elle kontrol listesi). Senarist quiz konularında bu rehberi otomatik yükler.
 > **"Harflerden Bul" (boşluk doldurma) quizi için [HARF_BUL_REHBERI.md](HARF_BUL_REHBERI.md) okunur** (script.json alanları, maske kuralları, harf_bul.yml, kontroller). Senarist `harflerden-bul-*` projelerinde bu rehberi otomatik yükler.
+> **Yeni quiz formatları (Hangisi Önce?, Doğru mu Yanlış mı?, Bu Kim?, Haritada Bul, Yılı Tahmin Et, Emoji ile Tarih, Bir Kelime Eksik) için [QUIZ_STUDYO_REHBERI.md](QUIZ_STUDYO_REHBERI.md) okunur** (şemalar, quiz_studyo.yml, temalar, kontroller, dersler). Senarist bu formatlarda ve tüm quiz projelerinde bu rehberi otomatik yükler; panelde QUIZ bölümünden de üretilir.
 
 1. Seslendirmede sayılar yazıyla (Senarist otomatik yapar). Rakam olursa Whisper tutmaz, altyazı/görüntü sesin önüne geçer.
 2. Sahne-klip eşleşmesi: cümle süresi klip parçasının 1,8 katını geçmesin; geçerse komşu sahnelerden pay al.

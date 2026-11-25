@@ -51,8 +51,11 @@ JSON şeması:
 "aciklama":"","kanca_alternatifleri":[],"aciklama_alternatifleri":[],"hashtagler":[],"kaynaklar":[],"kontrol_notlari":[]}}"""
     if slug.startswith("harflerden-bul") or "harflerden bul" in a.konu.lower():  # Harflerden Bul: kendi rehberi yuklenir
         system += "\n\nBU BIR 'HARFLERDEN BUL' QUIZI. docs/HARF_BUL_REHBERI.md kurallarina eksiksiz uy (genel quiz kurallari icin QUIZ_REHBERI de gecerli):\n" + open(os.path.join(ROOT, "docs", "HARF_BUL_REHBERI.md"), encoding="utf-8").read() + "\n\n" + open(os.path.join(ROOT, "docs", "QUIZ_REHBERI.md"), encoding="utf-8").read()
+    elif any(slug.startswith(f) for f in ("hangisi-once", "dogru-yanlis", "bu-kim", "haritada-bul", "yili-tahmin", "emoji-tarih", "kelime-eksik")):  # Quiz Studyo formatlari
+        system += "\n\nBU BIR QUIZ STUDYO PROJESI. docs/QUIZ_STUDYO_REHBERI.md kurallarina eksiksiz uy; script.json'u 'sahneler' ile DEGIL, rehberdeki 'format' + 'sorular' semasiyla yaz:\n" + open(os.path.join(ROOT, "docs", "QUIZ_STUDYO_REHBERI.md"), encoding="utf-8").read()
     elif "quiz" in (a.konu + slug).lower() or slug.startswith("her-harfe"):  # quiz: rehber her zaman ajanin talimatina eklenir
         system += "\n\nBU BIR QUIZ. docs/QUIZ_REHBERI.md kurallarina eksiksiz uy:\n" + open(os.path.join(ROOT, "docs", "QUIZ_REHBERI.md"), encoding="utf-8").read()
+        system += "\n\nYeni quiz formatlari (Hangisi Once, Dogru mu Yanlis mi, Bu Kim, Haritada Bul, Yili Tahmin Et, Emoji ile Tarih, Bir Kelime Eksik) istenirse docs/QUIZ_STUDYO_REHBERI.md gecerlidir:\n" + open(os.path.join(ROOT, "docs", "QUIZ_STUDYO_REHBERI.md"), encoding="utf-8").read()
     sc = extract_json(yazar(system, user, "senarist", max_tokens=24000, web_search=int(os.environ.get("ARAMA_SAYISI", "3"))), "senarist")
     sc["konu"] = a.konu; sc["tarih"] = a.tarih; sc["slug"] = slug; sc["durum"] = "onay-bekliyor"
     sc["seslendirme_metni"] = "\n".join(l for s in sc["sahneler"] for l in s["lines"])
