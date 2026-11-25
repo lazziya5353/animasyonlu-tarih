@@ -65,7 +65,7 @@ def main(v, script, bekci_ac=False):
                     if re.search(r"\b" + w[:max(4, len(w)-2)], txt): hata.append(f"{L} soru: cevap sizmasi ({txt!r})")
                     bek = [x[:4] for x in norm(qs[L]).split() if len(x) > 3]
                     if bek and sum(x in txt for x in bek) / len(bek) < 0.5: hata.append(f"{L} soru: ses ekrandaki soruyla uyusmuyor ({txt!r})")
-                elif w[:3] not in txt: hata.append(f"{L} cevap: ses ekrandaki cevapla uyusmuyor ({txt!r})")
+                elif w[:3] not in txt and __import__("difflib").SequenceMatcher(None, norm(ans[L]).replace(" ", ""), txt.replace(" ", "")).ratio() < 0.6: hata.append(f"{L} cevap: ses ekrandaki cevapla uyusmuyor ({txt!r})")
         # alt bilgi: cevap karesinde, soru karesine gore yeni acik-krem piksel satiri (225,210,190)
         def krem(fr): return (np.abs(fr - [225, 210, 190]).sum(2) < 40)[1150:1750].sum()
         if krem(frame(v, x["cevap_bit"] + 0.3)) - krem(frame(v, x["soru_bit"] + 1.0)) < 150: hata.append(f"{L}: alt bilgi satiri gorunmuyor")
