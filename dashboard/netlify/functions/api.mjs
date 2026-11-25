@@ -548,6 +548,7 @@ export default async (req) => {
           if (sc.hata) return json({ hata: sc.hata }, 400);
           await writeFile(`projects/${slug}/script.json`, b64(sc), `Quiz Stüdyo: ${slug} (panelden onaylandı)`);
           await baslikYaz(slug, sc.baslik).catch(() => {});
+          if (b.ses_harici) return json({ ok: true, slug, ses_bekliyor: true }); // dis ses: workflow, ses yüklenince quiz_ses_yukle'den başlar
           await dispatch(QSEMA[fmt].workflow, { slug }); // "quiz" -> quiz.yml, "harf-bul" -> harf_bul.yml
           return json({ ok: true, slug });
         }
@@ -566,8 +567,19 @@ export default async (req) => {
         }
         await writeFile(`projects/${slug}/script.json`, b64(sc), `Quiz Stüdyo: ${slug} (panelden onaylandı)`);
         await baslikYaz(slug, sc.baslik).catch(() => {});
+        if (b.ses_harici) return json({ ok: true, slug, ses_bekliyor: true });
         await dispatch("quiz-studyo", { slug });
         return json({ ok: true, slug });
+      }
+      case "quiz_ses_yukle": { // dis ses (ElevenLabs vb.): <=4 MB parçalar halinde projects/<slug>/ses_harici.<ext>[.partNN]; son parçada workflow başlar
+        const ext = String(b.ext || "").toLowerCase(), i = Number(b.i), n = Number(b.n);
+        if (!validSlug(b.slug) || !["mp3", "wav", "m4a"].includes(ext) || !(n >= 1 && n <= 8) || !(i >= 0 && i < n) || !b.base64 || b.base64.length > 4.5e6) return json({ hata: "Geçersiz ses parçası" }, 400);
+        const ad = n === 1 ? `ses_harici.${ext}` : `ses_harici.${ext}.part${String(i).padStart(2, "0")}`;
+        await writeFile(`projects/${b.slug}/${ad}`, b.base64, `Dış ses: ${b.slug}/${ad} (${i + 1}/${n})`);
+        if (i < n - 1) return json({ ok: true, devam: true });
+        const wf = /^her-harfe-/.test(b.slug) ? "quiz" : /^harflerden-bul/.test(b.slug) ? "harf-bul" : "quiz-studyo";
+        await dispatch(wf, { slug: b.slug });
+        return json({ ok: true, slug: b.slug });
       }
       case "quiz_durum": { // release varsa video + kapak, yoksa son quiz_studyo koşusu
         if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);

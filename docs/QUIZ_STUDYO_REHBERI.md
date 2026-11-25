@@ -110,3 +110,13 @@ Kontrol sonrası elle: kapak + soru/sayaç/cevap karelerinden küçük bir kontr
 - Haritada altlık kenarında kamera kayabilir; renderer iğneler sığana kadar uzaklaşır, sığmazsa durur.
 - Panel bekleyen işi tek tutar (concurrency): toplu üretimde sırayla başlat.
 - GitHub GraphQL ve artifact indirme ajan oturumlarında kapalı: release dosyalarını `https://github.com/<repo>/releases/download/video-<slug>/video.mp4` ile, zamanları iş logundaki kontrol satırlarından al.
+
+## Dış ses (ElevenLabs vb.)
+
+9 formatın hepsinde çalışır. Formda **Ses kaynağı**: "Gemini (otomatik)" (varsayılan) ya da "Kendi ses dosyam (ElevenLabs vb.)".
+
+1. "Kendi ses dosyam" seç → **Seslendirme metnini kopyala**. Metin, workflow'un `seslendirme_metni` ile birebir aynıdır (giriş, her soru satırı, her cevap satırı, kapanış; satır satır, sayılar yazıya çevrili). Kaynak: `dashboard/quiz.js` `qSesMetni` (quiz_studyo.py `hazirla`, harf_bul.py `hazirla` ve api `quizEskiScript` mantığının JS kopyası; biri değişirse ötekini de değiştir).
+2. ElevenLabs'e aynen yapıştır, mp3 indir, **Ses dosyası yükle** (mp3/wav/m4a, ≤25 MB).
+3. **Onayla ve Üret**: `quiz_uret` script.json'u yazar ama workflow'u başlatmaz; dosya 3 MB'lık parçalarla `quiz_ses_yukle` ile `projects/<slug>/ses_harici.<ext>` (çok parçalıysa `.partNN`) olarak commit edilir, son parçada workflow başlar. (Netlify istek sınırı ~6 MB olduğu için tek commit ya da release asset yerine parçalı commit.)
+4. Workflow'un Ses adımında `scripts/harici_ses.py hazirla` dosyayı bulursa (parçaları birleştirir) Gemini TTS atlanır ve ffmpeg ile `ses.wav` yapılır: mono, 24000 Hz, `loudnorm`. Sonrası (sessizlikle bölme, Whisper hizalama, tüm kontroller) aynen çalışır.
+5. Kontrol bekçisi düşerse iş kırmızı biter ve şu hata yazılır: **"Yüklenen ses metinle eşleşmiyor: X. sorudan sonra kayma var"**. Metni değiştirmeden tekrar seslendir; satır atlama/ekleme yapma.

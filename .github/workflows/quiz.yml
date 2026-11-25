@@ -37,7 +37,10 @@ jobs:
           P=projects/$SLUG
           # ses her zaman bu projenin kendi metninden: metin/stil ozeti ses.kaynak ile uyusmuyorsa yeniden uret
           OZ=$(python -c "import json,hashlib,sys;s=json.load(open(sys.argv[1]));print(hashlib.sha256((sys.argv[2]+'|'+s.get('ses_stil','')+'|'+s['seslendirme_metni']).encode()).hexdigest())" $P/script.json "$SLUG")
-          if [ "$SES" = "1" ] || [ ! -f "$P/ses.wav" ] || [ "$(cat $P/ses.kaynak 2>/dev/null)" != "$OZ" ]; then
+          # panelden dis ses (ses_harici.*) yuklendiyse Gemini TTS atlanir; 0 = dis ses kullanildi, 3 = yok
+          set +e; python scripts/harici_ses.py hazirla "$SLUG"; RC=$?; set -e; [ "$RC" = 1 ] && exit 1
+          if [ "$RC" = 0 ]; then echo "dis ses -> ses.wav (mono 24 kHz, loudnorm)"
+          elif [ "$SES" = "1" ] || [ ! -f "$P/ses.wav" ] || [ "$(cat $P/ses.kaynak 2>/dev/null)" != "$OZ" ]; then
             rm -f "$P/ses.wav"
             python scripts/generate_assets.py --slug "$SLUG" --ses
             test -s "$P/ses.wav" || { echo "HATA: $P/ses.wav uretilemedi (baska projenin sesi KULLANILMAZ)"; exit 1; }
@@ -54,7 +57,10 @@ jobs:
           B=""; echo "$BOLUM" | grep -Eq '^[0-9]+$' && B="--bolum $BOLUM"
           python scripts/quiz_kapak.py $P/script.json $P/out/kapak.jpg $B
       - name: Otomatik kontroller
-        run: python scripts/quiz_kontrol.py projects/$SLUG/out/video.mp4 projects/$SLUG/script.json --bekci
+        run: |
+          set +e; python scripts/quiz_kontrol.py projects/$SLUG/out/video.mp4 projects/$SLUG/script.json --bekci 2>&1 | tee /tmp/kontrol.log; RC=${PIPESTATUS[0]}; set -e
+          if [ "$RC" != 0 ] && ls projects/$SLUG/ses_harici.* >/dev/null 2>&1; then python scripts/harici_ses.py hata /tmp/kontrol.log; fi
+          exit $RC
       - name: Release
         run: |
           TAG="video-$SLUG"

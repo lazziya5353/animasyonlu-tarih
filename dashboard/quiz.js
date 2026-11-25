@@ -64,6 +64,12 @@ function qGovde(kok, tema) {
      <label>Logo (isteğe bağlı, PNG) <input type="file" accept="image/*" data-qlogo></label>` : ""}
    <label>Arka plan <select data-qarka><option value="tema">Tema varsayılanı</option><option value="yukle">Resim yükle (karartılır, bulanık)</option><option value="gemini">Gemini çizsin</option></select></label>
    <input type="file" accept="image/*" data-qarkadosya hidden><input type="text" data-qarkaprompt placeholder="Sahne tarifi (örn. gece Osmanlı kalyonları)" hidden>
+   <h3 style="margin:14px 0 4px">Ses</h3>
+   <label>Ses kaynağı <select data-qses><option value="gemini">Gemini (otomatik)</option><option value="harici">Kendi ses dosyam (ElevenLabs vb.)</option></select></label>
+   <div data-qsesharici hidden><button class="ghost" data-qmetin style="width:100%;margin-top:6px">📋 Seslendirme metnini kopyala</button>
+     <textarea data-qmetinkutu readonly hidden style="min-height:140px;margin-top:6px"></textarea>
+     <div class="mut" style="font-size:12px;margin:4px 0">ElevenLabs'e aynen yapıştır, mp3 indir, buraya yükle.</div>
+     <label>Ses dosyası yükle (mp3/wav/m4a, en fazla 25 MB) <input type="file" accept=".mp3,.wav,.m4a,audio/mpeg,audio/wav,audio/mp4,audio/x-m4a" data-qsesdosya></label></div>
    <div data-qhata class="qs-err"></div><button class="gold" data-quret style="width:100%;margin-top:10px">🎬 Onayla ve Üret</button>`;
   const ciz = () => qSorular(g, fmt, S); ciz();
   g.querySelector("[data-qekle]").onclick = () => { if (S.sorular.length < ust) { S.sorular.push(qbos(fmt)); ciz(); } };
@@ -73,6 +79,16 @@ function qGovde(kok, tema) {
   g.querySelector("[data-qarkadosya]").onchange = async (e) => (S.arka = await qResim(e.target.files[0], 1080, "image/jpeg"));
   const lg = g.querySelector("[data-qlogo]"); if (lg) lg.onchange = async (e) => (S.logo = await qResim(e.target.files[0], 400, "image/png"));
   g.querySelector("[data-qtaslak]").onclick = (e) => qTaslak(g, fmt, S, tema, e.target, ciz);
+  const ses = g.querySelector("[data-qses]"); ses.value = S.ses_mod || "gemini";
+  const sesGoster = () => { S.ses_mod = ses.value; g.querySelector("[data-qsesharici]").hidden = ses.value !== "harici"; }; ses.onchange = sesGoster; sesGoster();
+  g.querySelector("[data-qmetin]").onclick = async () => {
+    qTamamla(fmt, S.sorular); const k = g.querySelector("[data-qmetinkutu]"); k.value = qSesMetni(fmt, tema, S.sorular); k.hidden = false;
+    try { await navigator.clipboard.writeText(k.value); toast("Seslendirme metni kopyalandı"); } catch { k.select(); toast("Metni kutudan kopyala"); }
+  };
+  g.querySelector("[data-qsesdosya]").onchange = (e) => { const f = e.target.files[0]; S.ses_dosya = null; if (!f) return;
+    if (!/\.(mp3|wav|m4a)$/i.test(f.name)) { e.target.value = ""; return toast("Sadece mp3/wav/m4a"); }
+    if (f.size > 25 * 1024 * 1024) { e.target.value = ""; return toast("Dosya 25 MB'tan büyük"); }
+    S.ses_dosya = f; };
   g.querySelector("[data-quret]").onclick = (e) => qUret(g, fmt, S, tema, e.target);
 }
 
@@ -150,13 +166,24 @@ async function qUret(g, fmt, S, tema, btn) {
   const err = g.querySelector("[data-qhata]"); const h = qDogrula(fmt, S.sorular); err.textContent = h.slice(0, 6).join(" · ");
   if (h.length) return;
   if (S.arka_mod === "yukle" && !S.arka) return (err.textContent = "Arka plan resmi seç ya da 'Tema varsayılanı' yap");
+  if (S.ses_mod === "harici" && !S.ses_dosya) return (err.textContent = "Ses dosyası seç ya da 'Gemini (otomatik)' yap");
   if (!confirm(`${S.sorular.length} soruluk "${QS[fmt].ad}" videosu üretilsin mi? (~8–10 dk)`)) return;
   const renk = g.querySelector("[data-qrenk]")?.checked;
   const body = { format: fmt, tema, sorular: S.sorular, gorseller: S.gorseller, logo: S.logo, arkaplan_mod: S.arka_mod, arka: S.arka, arkaplan_prompt: g.querySelector("[data-qarkaprompt]").value,
     takim: renk ? { ana: g.querySelector("[data-qana]").value, ikinci: g.querySelector("[data-qikinci]").value } : undefined };
   btn.disabled = true; btn.textContent = "Gönderiliyor…";
   try {
-    const r = await api("quiz_uret", body); toast(`Üretim başladı: ${r.slug}`);
+    if (S.ses_mod === "harici") body.ses_harici = true;
+    const r = await api("quiz_uret", body);
+    if (r.ses_bekliyor) { // dış ses: 3 MB'lık parçalar (Netlify istek sınırı), son parçada üretim başlar
+      const f = S.ses_dosya, ext = f.name.split(".").pop().toLowerCase(), P = 3 * 1024 * 1024, n = Math.ceil(f.size / P);
+      for (let i = 0; i < n; i++) {
+        btn.textContent = `Ses yükleniyor ${i + 1}/${n}…`;
+        const b64 = await new Promise((res) => { const fr = new FileReader(); fr.onload = () => res(String(fr.result).split(",")[1]); fr.readAsDataURL(f.slice(i * P, (i + 1) * P)); });
+        await api("quiz_ses_yukle", { slug: r.slug, ext, i, n, base64: b64 });
+      }
+    }
+    toast(`Üretim başladı: ${r.slug}`);
     const L = JSON.parse(localStorage.getItem("quiz_isler") || "[]"); L.unshift(r.slug); localStorage.setItem("quiz_isler", JSON.stringify(L.slice(0, 12)));
     QST[tema] = { format: "", sorular: [], gorseller: {} }; baglaQuiz();
   } catch (e) { err.textContent = e.message || "Hata"; btn.disabled = false; btn.textContent = "🎬 Onayla ve Üret"; }
@@ -281,4 +308,55 @@ async function qAyir(g, fmt, S, tema, btn, ciz) {
   qTamamla(fmt, S.sorular); ciz();
   const h2 = qDogrula(fmt, S.sorular);
   not.innerHTML = [...notlar, h2.length ? `⚠️ ${h2.length} sorun var; kırmızı satırları düzelt.` : "✓ Tüm satırlar geçerli. Kontrol et, sonra \"Onayla ve Üret\"."].map((x) => `<div class="qs-not">${esc(x)}</div>`).join("");
+}
+
+// ---- Dış ses: workflow'un seslendirme_metni ile birebir aynı metin (quiz_studyo.py hazirla / harf_bul.py hazirla / api quizEskiScript)
+const QGIRIS = { "hangisi-once": "Hangisi önce", "dogru-yanlis": "Doğru mu yanlış mı", "bu-kim": "Bu kim", "haritada-bul": "Haritada bul",
+  "yili-tahmin": "Yılı tahmin et", "emoji-tarih": "Emoji ile tarih", "kelime-eksik": "Bir kelime eksik" };
+const QTR_ABC = "ABCÇDEFGĞHIİJKLMNOÖPRSŞTUVYZ";
+function qSayiYaz(n) { // sayi_yazi.yaz
+  const B = ["", "bir", "iki", "üç", "dört", "beş", "altı", "yedi", "sekiz", "dokuz"], O = ["", "on", "yirmi", "otuz", "kırk", "elli", "altmış", "yetmiş", "seksen", "doksan"];
+  if (n === 0) return "sıfır"; const p = [];
+  for (const [d, ad] of [[1e9, "milyar"], [1e6, "milyon"], [1000, "bin"]]) if (n >= d) { const k = Math.floor(n / d); n %= d; p.push((d === 1000 && k === 1 ? "" : qSayiYaz(k) + " ") + ad); }
+  if (n >= 100) { const k = Math.floor(n / 100); n %= 100; p.push((k === 1 ? "" : B[k] + " ") + "yüz"); }
+  if (n >= 10) { p.push(O[Math.floor(n / 10)]); n %= 10; }
+  if (n) p.push(B[n]); return p.join(" ");
+}
+function qYaziya(t) { // sayi_yazi.metni_yaziya (Python \b ile aynı: Türkçe harfler kelime karakteri)
+  const SIRA = { bir: "birinci", iki: "ikinci", "üç": "üçüncü", "dört": "dördüncü", "beş": "beşinci", "altı": "altıncı", yedi: "yedinci", sekiz: "sekizinci", dokuz: "dokuzuncu", on: "onuncu", yirmi: "yirminci", otuz: "otuzuncu", "kırk": "kırkıncı", elli: "ellinci", "altmış": "altmışıncı", "yetmiş": "yetmişinci", seksen: "sekseninci", doksan: "doksanıncı", "yüz": "yüzüncü", bin: "bininci" };
+  const sira = (n) => { const w = qSayiYaz(n).split(" "); w[w.length - 1] = SIRA[w.at(-1)] || w.at(-1); return w.join(" "); };
+  const W = "[\\p{L}\\p{N}_]", b = `(?<!${W})`;
+  t = t.replace(new RegExp(`${b}(\\d+)\\. (?=[a-zçğıöşü])`, "gu"), (m, d) => sira(+d) + " ");
+  t = t.replace(new RegExp(`${b}II\\. `, "gu"), "İkinci ").replace(new RegExp(`${b}III\\. `, "gu"), "Üçüncü ").replace(new RegExp(`${b}IV\\. `, "gu"), "Dördüncü ");
+  t = t.replace(new RegExp(`${b}MÖ `, "gu"), "Milattan önce ").replace(new RegExp(`${b}MS `, "gu"), "Milattan sonra ");
+  return t.replace(/(\d{1,3}(?:\.\d{3})+|\d+)('[a-zçğıöşü]+)?/gu, (m, d, ek) => qSayiYaz(+d.replace(/\./g, "")) + (ek || "").replace(/'/g, ""));
+}
+function qSatirlar(fmt, q) { // quiz_studyo.satirlar
+  const H = "ABCD";
+  if (fmt === "hangisi-once") return [["Hangisi daha önce oldu?", `A: ${q.a.metin}.`, `B: ${q.b.metin}.`], `Cevap ${q.dogru}: ${q[q.dogru.toLowerCase()].metin}.`];
+  if (fmt === "dogru-yanlis") return [[q.ifade], (q.dogru ? "Doğru! " : "Yanlış! ") + q.duzeltme];
+  if (fmt === "bu-kim") return [["Bu kim?", ...q.ipuclari], q.cevap + "."];
+  if (fmt === "haritada-bul") return [[q.soru], `Cevap ${H[q.dogru]}: ${q.secenekler[q.dogru].ad}.`];
+  if (fmt === "yili-tahmin") return [[q.soru], `Cevap ${q.secenekler[q.dogru]}.`];
+  if (fmt === "emoji-tarih") return [[q.soru || "Bu emojiler hangi olayı anlatıyor?"], q.cevap + "."];
+  if (fmt === "kelime-eksik") return [["Eksik kelime ne?", q.soz.replace("___", "...")], q.soz.replace("___", q.secenekler[q.dogru])];
+  return [[], ""];
+}
+function qSesMetni(fmt, tema, Q) {
+  const t = (x) => String(x ?? "").trim(), up = (x) => t(x).toLocaleUpperCase("tr");
+  if (fmt === "her-harfe") { // api quizEskiScript: harfe göre sıralı, sayı çevirisi yok
+    const S = Q.map((q) => ({ ...q, harf: up(q.harf || t(q.cevap)[0]) })).sort((a, b) => QTR_ABC.indexOf(a.harf) - QTR_ABC.indexOf(b.harf));
+    const L = [tema === "spor" ? "Her harfe bir spor sorusu! Bakalım kaçını bileceksin?" : "Her harfe bir tarih sorusu! Bakalım kaçını bileceksin?"];
+    for (const q of S) L.push(`${q.harf} harfi. ${t(q.soru)}`, `${t(q.cevap).replace(/[.]+$/, "")}.`);
+    L.push("Kaçını bildin? Yorumlara yaz."); return L.join("\n");
+  }
+  if (fmt === "harf-bul") { // harf_bul.py hazirla: okunus + metni_yaziya
+    const okunus = (c) => c.split(" ").map((p) => p.split("-").map((s) => s.slice(0, 1) + s.slice(1).replace(/I/g, "ı").replace(/İ/g, "i").toLowerCase()).join("-")).join(" ");
+    const L = ["Harflerden bul! Boşlukları doldur, bakalım kaçını çözebileceksin?"];
+    for (const q of Q) L.push(t(q.soru), (t(q.cevap_okunus) || okunus(up(q.cevap))).replace(/[.]+$/, "") + ".");
+    L.push("Kaçını bildin? Yorumlara yaz!"); return qYaziya(L.join("\n"));
+  }
+  const L = [`${QGIRIS[fmt]}! ${Q.length} soru, bakalım kaçını bileceksin?`];
+  for (const q of Q) { const [ql, al] = qSatirlar(fmt, q); L.push(...ql, al); }
+  L.push("Kaçını bildin? Yorumlara yaz!"); return L.map(qYaziya).join("\n");
 }
