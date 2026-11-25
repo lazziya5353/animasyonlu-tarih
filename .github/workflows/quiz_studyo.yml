@@ -1,0 +1,95 @@
+name: "Quiz Stüdyo · 7 yeni quiz formatı"
+# hazirla (sema + ses satirlari) -> [arka plan uret] -> Ses (Gemini) -> scripts/quiz_studyo.py video + kapak
+# -> scripts/quiz_studyo_kontrol.py -> release video-<slug>.  Rehber: docs/QUIZ_STUDYO_REHBERI.md
+# Format, tema, takim renkleri, logo ve arka plan projects/<slug>/script.json icinden okunur.
+on:
+  workflow_dispatch:
+    inputs:
+      slug: { description: "Proje klasörü (örn. hangisi-once-2)", required: true }
+      ses: { description: "Sesi yeniden üret (1 = evet)", required: false, default: "" }
+permissions:
+  contents: write
+concurrency: { group: repo-yazma, cancel-in-progress: false }
+jobs:
+  quiz-studyo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      PYTHONUNBUFFERED: "1"
+      GH_TOKEN: ${{ github.token }}
+      PANEL_URL: ${{ vars.PANEL_URL }}
+      SLUG: ${{ inputs.slug }}
+    steps:
+      - name: Proje adını kontrol et
+        run: echo "$SLUG" | grep -Eq '^[a-z0-9-]+$' || (echo 'Geçersiz proje adı'; exit 1)
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: ffmpeg kur
+        timeout-minutes: 10
+        run: bash scripts/ffmpeg_kur.sh
+      - name: Paketler + Noto Color Emoji
+        timeout-minutes: 10
+        run: |
+          pip install -q numpy soundfile pillow faster-whisper fonttools
+          curl -sfL -o engine/fonts/NotoColorEmoji.ttf https://github.com/googlefonts/noto-emoji/raw/main/fonts/NotoColorEmoji.ttf \
+            || (sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-color-emoji)
+          python -c "from PIL import features; print('raqm', features.check('raqm'))"
+      - name: Hazırla (şema doğrulama, ses satırları)
+        run: |
+          python scripts/quiz_studyo.py hazirla projects/$SLUG/script.json
+          git config user.name "github-actions"; git config user.email "github-actions@users.noreply.github.com"
+          git add projects/$SLUG/script.json; git commit -qm "Quiz Stüdyo hazırla: $SLUG" && (git pull --rebase -q; git push -q) || true
+      - name: Arka plan (Gemini, istenirse)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python - <<'PY'
+          import json, os, sys
+          sys.path.insert(0, "scripts")
+          p = f"projects/{os.environ['SLUG']}/script.json"; S = json.load(open(p))
+          if not S.get("arkaplan_uret") or (S.get("arkaplan") and os.path.exists(os.path.join(os.path.dirname(p), S["arkaplan"]))):
+              print("arka plan üretimi gerekmiyor"); sys.exit(0)
+          if not os.environ.get("GEMINI_API_KEY"): print("GEMINI_API_KEY yok, tema zemini kullanılacak"); sys.exit(0)
+          from generate_assets import ciz
+          out = os.path.join(os.path.dirname(p), "images", "arka.jpg"); os.makedirs(os.path.dirname(out), exist_ok=True)
+          try:
+              ok, kaynak = ciz(S["arkaplan_uret"] + ". Vertical 9:16, no text, no letters, no watermark.", out)
+              if ok and os.path.exists(out): S["arkaplan"] = "images/arka.jpg"; S["arkaplan_kaynak"] = kaynak; json.dump(S, open(p, "w"), ensure_ascii=False, indent=1); print("arka plan:", kaynak)
+          except Exception as e: print("uyarı: arka plan üretilemedi, tema zemini kullanılacak:", e)
+          PY
+          git add projects/$SLUG; git commit -qm "Quiz Stüdyo arka plan: $SLUG" && (git pull --rebase -q; git push -q) || true
+      - name: Ses
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SES: ${{ inputs.ses }}
+        run: |
+          P=projects/$SLUG
+          OZ=$(python -c "import json,hashlib,sys;s=json.load(open(sys.argv[1]));print(hashlib.sha256((sys.argv[2]+'|'+s.get('ses_stil','')+'|'+s['seslendirme_metni']).encode()).hexdigest())" $P/script.json "$SLUG")
+          if [ "$SES" = "1" ] || [ ! -f "$P/ses.wav" ] || [ "$(cat $P/ses.kaynak 2>/dev/null)" != "$OZ" ]; then
+            rm -f "$P/ses.wav"
+            python scripts/generate_assets.py --slug "$SLUG" --ses
+            test -s "$P/ses.wav" || { echo "HATA: $P/ses.wav uretilemedi"; exit 1; }
+            echo "$OZ" > "$P/ses.kaynak"
+            git add "projects/$SLUG"; git commit -qm "Quiz Stüdyo sesi: $SLUG" && (git pull --rebase -q; git push -q) || true
+          fi
+      - name: Video + kapak
+        run: |
+          P=projects/$SLUG; mkdir -p $P/out
+          python scripts/quiz_studyo.py video $P/script.json $P/ses.wav $P/out/video.mp4
+          python scripts/quiz_studyo.py kapak $P/script.json $P/out/kapak.jpg
+      - name: Otomatik kontroller
+        run: python scripts/quiz_studyo_kontrol.py projects/$SLUG/out/video.mp4 projects/$SLUG/script.json --bekci
+      - name: Release
+        run: |
+          TAG="video-$SLUG"
+          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --title "$SLUG" --notes "Quiz Stüdyo videosu"
+          gh release upload "$TAG" "projects/$SLUG/out/video.mp4" "projects/$SLUG/out/kapak.jpg" --clobber
+          python scripts/set_status.py kurgucu tamam "$SLUG quiz videosu hazır" "release:$TAG" || true
+      - name: Kontrol çıktısını sakla
+        if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: "kontrol-${{ inputs.slug }}", path: "projects/${{ inputs.slug }}/out/*.json", if-no-files-found: ignore }
+      - name: Hata durumunu panele yaz
+        if: failure()
+        run: python scripts/set_status.py kurgucu hata "$SLUG quiz üretilemedi, GitHub Actions kaydına bak" || true

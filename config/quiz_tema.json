@@ -1,0 +1,13 @@
+{
+ "_aciklama": "Quiz Studyo temalari. Spor sayfasinin adi kesinlesince sadece 'handle' degisir.",
+ "tarih": {
+  "handle": "@animasyon.tarih",
+  "ses_stil": "Gülümseyen, oyunbaz ama vakur bir belgesel anlatıcısı gibi, normal hızda ve akıcı oku. Satır aralarında çok kısa duraksa:\n"
+ },
+ "spor": {
+  "handle": "@spor.tarihi",
+  "ses_stil": "Enerjik bir spor spikeri gibi, heyecanlı, hızlı ve coşkulu oku; maç anlatır gibi ama anlaşılır. Satır aralarında çok kısa duraksa:\n",
+  "ana": "#1FD17A",
+  "ikinci": "#FFC83D"
+ }
+}
