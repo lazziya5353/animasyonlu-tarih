@@ -92,5 +92,404 @@
  "durum": "test",
  "kaynaklar": [
   "https://islamansiklopedisi.org.tr"
- ]
+ ],
+ "sahneler": [
+  {
+   "lines": [
+    "Hangisi önce! 7 soru, bakalım kaçını bileceksin?"
+   ],
+   "tip": "giris",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Hangisi daha önce oldu?"
+   ],
+   "tip": "soru",
+   "soru": 0,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "A: Malazgirt Savaşı."
+   ],
+   "tip": "soru",
+   "soru": 0,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "B: Miryokefalon Savaşı."
+   ],
+   "tip": "soru",
+   "soru": 0,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Cevap A: Malazgirt Savaşı."
+   ],
+   "tip": "cevap",
+   "soru": 0,
+   "zorluk": "kolay",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Hangisi daha önce oldu?"
+   ],
+   "tip": "soru",
+   "soru": 1,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "A: Ankara Savaşı."
+   ],
+   "tip": "soru",
+   "soru": 1,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "B: I. Kosova Savaşı."
+   ],
+   "tip": "soru",
+   "soru": 1,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Cevap B: I. Kosova Savaşı."
+   ],
+   "tip": "cevap",
+   "soru": 1,
+   "zorluk": "orta",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Hangisi daha önce oldu?"
+   ],
+   "tip": "soru",
+   "soru": 2,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "A: Amerika'nın keşfi."
+   ],
+   "tip": "soru",
+   "soru": 2,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "B: İstanbul'un Fethi."
+   ],
+   "tip": "soru",
+   "soru": 2,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Cevap B: İstanbul'un Fethi."
+   ],
+   "tip": "cevap",
+   "soru": 2,
+   "zorluk": "kolay",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Hangisi daha önce oldu?"
+   ],
+   "tip": "soru",
+   "soru": 3,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "A: Tanzimat Fermanı."
+   ],
+   "tip": "soru",
+   "soru": 3,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "B: Islahat Fermanı."
+   ],
+   "tip": "soru",
+   "soru": 3,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Cevap A: Tanzimat Fermanı."
+   ],
+   "tip": "cevap",
+   "soru": 3,
+   "zorluk": "orta",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Hangisi daha önce oldu?"
+   ],
+   "tip": "soru",
+   "soru": 4,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "A: Çaldıran Savaşı."
+   ],
+   "tip": "soru",
+   "soru": 4,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "B: Mercidabık Savaşı."
+   ],
+   "tip": "soru",
+   "soru": 4,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Cevap A: Çaldıran Savaşı."
+   ],
+   "tip": "cevap",
+   "soru": 4,
+   "zorluk": "zor",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Hangisi daha önce oldu?"
+   ],
+   "tip": "soru",
+   "soru": 5,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "A: Fransız İhtilali."
+   ],
+   "tip": "soru",
+   "soru": 5,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "B: Amerikan Bağımsızlık Bildirgesi."
+   ],
+   "tip": "soru",
+   "soru": 5,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Cevap B: Amerikan Bağımsızlık Bildirgesi."
+   ],
+   "tip": "cevap",
+   "soru": 5,
+   "zorluk": "orta",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Hangisi daha önce oldu?"
+   ],
+   "tip": "soru",
+   "soru": 6,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "A: İbrahim Müteferrika'nın ilk kitabı basması."
+   ],
+   "tip": "soru",
+   "soru": 6,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "B: Patrona Halil İsyanı."
+   ],
+   "tip": "soru",
+   "soru": 6,
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Cevap A: İbrahim Müteferrika'nın ilk kitabı basması."
+   ],
+   "tip": "cevap",
+   "soru": 6,
+   "zorluk": "zor",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Kaçını bildin? Yorumlara yaz!"
+   ],
+   "tip": "kapanis",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  }
+ ],
+ "seslendirme_metni": "Hangisi önce! yedi soru, bakalım kaçını bileceksin?\nHangisi daha önce oldu?\nA: Malazgirt Savaşı.\nB: Miryokefalon Savaşı.\nCevap A: Malazgirt Savaşı.\nHangisi daha önce oldu?\nA: Ankara Savaşı.\nB: I. Kosova Savaşı.\nCevap B: I. Kosova Savaşı.\nHangisi daha önce oldu?\nA: Amerika'nın keşfi.\nB: İstanbul'un Fethi.\nCevap B: İstanbul'un Fethi.\nHangisi daha önce oldu?\nA: Tanzimat Fermanı.\nB: Islahat Fermanı.\nCevap A: Tanzimat Fermanı.\nHangisi daha önce oldu?\nA: Çaldıran Savaşı.\nB: Mercidabık Savaşı.\nCevap A: Çaldıran Savaşı.\nHangisi daha önce oldu?\nA: Fransız İhtilali.\nB: Amerikan Bağımsızlık Bildirgesi.\nCevap B: Amerikan Bağımsızlık Bildirgesi.\nHangisi daha önce oldu?\nA: İbrahim Müteferrika'nın ilk kitabı basması.\nB: Patrona Halil İsyanı.\nCevap A: İbrahim Müteferrika'nın ilk kitabı basması.\nKaçını bildin? Yorumlara yaz!",
+ "ses_stil": "Gülümseyen, oyunbaz ama vakur bir belgesel anlatıcısı gibi, normal hızda ve akıcı oku. Satır aralarında çok kısa duraksa:\n"
 }
