@@ -1,39 +1,291 @@
 {
- "zaman": "2026-11-25T16:51:09Z",
+ "zaman": "2026-11-25T17:01:09Z",
  "gecmis": [
   {
    "tarih": "2026-11-25",
-   "takipci": 4387
+   "takipci": 4492
   }
  ],
  "host": "graph.facebook.com",
  "hesap": {
   "kullanici": "animasyon.tarih",
   "ad": "Animasyonlu Tarih",
-  "foto": "https://scontent-iad6-1.xx.fbcdn.net/v/t51.82787-15/890022909_17856261810697280_8828979321535550158_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=7d201b&_nc_ohc=BCYFNWSGGZYQ7kNvwEPPrVx&_nc_oc=AdpQ7b4zx-lrGEfjYmCafjqUmW8md7i6Sv9vmCOXTyyf41T6UrvCqPISdDnR9zP7X-Q&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&edm=AJ-jyNUEAAAA&_nc_gid=CIlfITQVfFNL85z7CY0L6Q&oh=00_AQTob8f7k5NdZ1V9SfdinYJh3FszJcdU5fi9qqu13tJHBg&oe=6B0CFCFC",
-  "takipci": 4387,
+  "foto": "https://scontent-ord5-1.xx.fbcdn.net/v/t51.82787-15/890022909_17856261810697280_8828979321535550158_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=7d201b&_nc_ohc=BCYFNWSGGZYQ7kNvwFjwlZW&_nc_oc=AdoIxj8z6eWeODN2dCHG0L8-i13zD-IQvPXjvYSNKzF1ID8Ay1LFDw01guXegvADUZo&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&edm=AJ-jyNUEAAAA&_nc_gid=FcJHtVrVnFMm7KeVeSacpQ&oh=00_AQSpZEHE40iAcGdGUd3gGmRcuS49eKzEiIQnR25_jdKFZA&oe=6B0CFCFC",
+  "takipci": 4492,
   "takip": 5,
   "gonderi": 20
  },
- "ozet30": {},
- "gunluk": {},
+ "ozet30": {
+  "reach": 490713,
+  "views": 674297,
+  "profile_views": 15289,
+  "accounts_engaged": 25065,
+  "total_interactions": 40447,
+  "follows_and_unfollows": null
+ },
+ "gunluk": {
+  "follower_count": [
+   {
+    "tarih": "2026-10-27",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-10-28",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-10-29",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-10-30",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-10-31",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-01",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-02",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-03",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-04",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-05",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-06",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-07",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-08",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-09",
+    "deger": 2
+   },
+   {
+    "tarih": "2026-11-10",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-11",
+    "deger": 3
+   },
+   {
+    "tarih": "2026-11-12",
+    "deger": 5
+   },
+   {
+    "tarih": "2026-11-13",
+    "deger": 1
+   },
+   {
+    "tarih": "2026-11-14",
+    "deger": 6
+   },
+   {
+    "tarih": "2026-11-15",
+    "deger": 6
+   },
+   {
+    "tarih": "2026-11-16",
+    "deger": 2
+   },
+   {
+    "tarih": "2026-11-17",
+    "deger": 1
+   },
+   {
+    "tarih": "2026-11-18",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-19",
+    "deger": 2
+   },
+   {
+    "tarih": "2026-11-20",
+    "deger": 4
+   },
+   {
+    "tarih": "2026-11-21",
+    "deger": 27
+   },
+   {
+    "tarih": "2026-11-22",
+    "deger": 75
+   },
+   {
+    "tarih": "2026-11-23",
+    "deger": 10
+   },
+   {
+    "tarih": "2026-11-24",
+    "deger": 2593
+   },
+   {
+    "tarih": "2026-11-25",
+    "deger": 0
+   }
+  ],
+  "reach": [
+   {
+    "tarih": "2026-10-27",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-10-28",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-10-29",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-10-30",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-10-31",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-01",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-02",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-03",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-04",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-05",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-06",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-07",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-08",
+    "deger": 0
+   },
+   {
+    "tarih": "2026-11-09",
+    "deger": 268
+   },
+   {
+    "tarih": "2026-11-10",
+    "deger": 10
+   },
+   {
+    "tarih": "2026-11-11",
+    "deger": 1371
+   },
+   {
+    "tarih": "2026-11-12",
+    "deger": 2032
+   },
+   {
+    "tarih": "2026-11-13",
+    "deger": 1456
+   },
+   {
+    "tarih": "2026-11-14",
+    "deger": 2369
+   },
+   {
+    "tarih": "2026-11-15",
+    "deger": 1318
+   },
+   {
+    "tarih": "2026-11-16",
+    "deger": 1462
+   },
+   {
+    "tarih": "2026-11-17",
+    "deger": 41
+   },
+   {
+    "tarih": "2026-11-18",
+    "deger": 3
+   },
+   {
+    "tarih": "2026-11-19",
+    "deger": 3
+   },
+   {
+    "tarih": "2026-11-20",
+    "deger": 1515
+   },
+   {
+    "tarih": "2026-11-21",
+    "deger": 5196
+   },
+   {
+    "tarih": "2026-11-22",
+    "deger": 13353
+   },
+   {
+    "tarih": "2026-11-23",
+    "deger": 2450
+   },
+   {
+    "tarih": "2026-11-24",
+    "deger": 317552
+   },
+   {
+    "tarih": "2026-11-25",
+    "deger": 165953
+   }
+  ]
+ },
  "medya": [
   {
-   "id": "18076275515592461",
-   "baslik": "Bilinen en eski Osmanlı tuğrası bu adama ait… 👀",
-   "zaman": "2026-11-25T15:02:28+0000",
+   "id": "17964285471254570",
+   "baslik": "A’dan Z’ye 22 harf, 22 tarih sorusu 🇹🇷",
+   "zaman": "2026-11-24T12:43:32+0000",
    "tur": "REELS",
    "medya_turu": "VIDEO",
-   "url": "https://www.instagram.com/reel/DgKzGnFNzCa/",
-   "kapak": "https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/931839671_2359779198116235_1725956901010030263_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=vAtvdDZWeWIQ7kNvwHovtx_&_nc_oc=AdruEAcZUge8GJTww5nVA7-WA1yRbP6SbFUv6AbcPZkblw7iSuPXRZpF93E3l7x2OYA&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQLaz3SDpz1Lvr4uu3N_vCp37T2CHHl4hAaRu96H2iRTSWPeGaTgvs92Z9Nc6ts5NaA1grlz1-ujBA&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQQP_3uKak-A9ASqyh-r_dmwRkW8Nzfp3vtofi8Xgsn5dQ&oe=6B0D00AA",
-   "begeni": 11,
-   "yorum": 0,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
+   "url": "https://www.instagram.com/reel/DgH-s8Std6g/",
+   "kapak": "https://scontent-ord5-2.cdninstagram.com/v/t51.82787-15/921469020_905088019293792_8884459976991895067_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=GLxjhLphyhEQ7kNvwHkBT9Y&_nc_oc=Adp55x2TVCPLDiUwawe1L5tlipBy7Xrjb0YcXFciJaUuP0Sn_JJitNOOvqTPzCCo9bk&_nc_zt=23&_nc_ht=scontent-ord5-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQKx3a5uDB4JsrZTLuE8p24zvKOQNYr4Y9XDup3Rg24dCw0VTRb8nCLv0spGv_ojfr2b7k2--Blg8A&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQTA3X_pB2G565e0lK_MrsewIDIpcQSH75IzbUhb13xTPg&oe=6B0CE090",
+   "begeni": 10976,
+   "yorum": 533,
+   "izlenme": 542494,
+   "erisim": 445482,
+   "kaydetme": 5293,
+   "paylasim": 7065,
+   "etkilesim": 24002,
+   "ort_izleme_sn": 48.3
   },
   {
    "id": "18220809361361698",
@@ -42,83 +294,15 @@
    "tur": "REELS",
    "medya_turu": "VIDEO",
    "url": "https://www.instagram.com/reel/DgKhOCuNdLa/",
-   "kapak": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/927278438_1896904021489931_9006708928876616570_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=sUJceXx8q0IQ7kNvwEeoZ7L&_nc_oc=AdpUtZIHIOwrH7RPbUgMWAwGrMSTXPPZkiAnKX-ap-pp6iRRdWH1QkOWDaGxsUG6RO0&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQLgneZwOEKsJKZtCsN69Z8kUUdZpk4cqmms2Ws4yHlahNiOvzUX5uj-mUhRdQrcU16yWnwE6avrNg&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQRKWKUXYrplddWhgFgEX-qjbj7nXJukIJCNXr8YvJGH4A&oe=6B0CCC7D",
-   "begeni": 1525,
-   "yorum": 102,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
-  },
-  {
-   "id": "17964285471254570",
-   "baslik": "A’dan Z’ye 22 harf, 22 tarih sorusu 🇹🇷",
-   "zaman": "2026-11-24T12:43:32+0000",
-   "tur": "REELS",
-   "medya_turu": "VIDEO",
-   "url": "https://www.instagram.com/reel/DgH-s8Std6g/",
-   "kapak": "https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/921469020_905088019293792_8884459976991895067_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=GLxjhLphyhEQ7kNvwEF3sQN&_nc_oc=AdpVA08om9QqCVM3Per6DYKuRYWUmC2HtKqfVs6wmpuVZmrrKC68uyEKtqUPyhVTFU4&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQIjWbrXLscesWrTeOye0ggLEJcvxVttdk8gfGbWrdscmnjGrrneudev1U8_ReovUu5h3eTJeFiycw&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQReq9GivKGJkUFyE9lO77VKSVj0eKNfYgYg19Toqu-wGQ&oe=6B0CE090",
-   "begeni": 10908,
-   "yorum": 528,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
-  },
-  {
-   "id": "17909805708600244",
-   "baslik": "Osmanlı’yı kuran adamın tuğrası yok… 👀",
-   "zaman": "2026-11-23T12:21:18+0000",
-   "tur": "REELS",
-   "medya_turu": "VIDEO",
-   "url": "https://www.instagram.com/reel/DgFXb0oNrQU/",
-   "kapak": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/917969356_40204758259169145_790041416207338794_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=TxA4Ilbd5OQQ7kNvwGOO1mW&_nc_oc=AdpFUpMfj6Q4EENxhtEpuLbHvZlc3dUVhGMRAjZXAQz03jpYfM4o7EiO0tino7UUg_E&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQJTl4_f1mvYjOZCgXTvAUJ0Its4jubFpNzihOIc9xaqMyj9qrT0ZYyEZPDjfo0DM6lQZY5AUBd6OQ&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQQzBplCA89XsgANwREHdC3PBIerWKrqu1dAa8NitEMYiw&oe=6B0CFE33",
-   "begeni": 119,
-   "yorum": 0,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
-  },
-  {
-   "id": "17877357171638637",
-   "baslik": "Ardahan’daki 12 adamızı kimse bilmiyor 👀🇹🇷",
-   "zaman": "2026-11-22T13:31:47+0000",
-   "tur": "REELS",
-   "medya_turu": "VIDEO",
-   "url": "https://www.instagram.com/reel/DgC6m0lNDR5/",
-   "kapak": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/927729813_1136705622338159_6772639911408547370_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=IfYBykrUoXUQ7kNvwHaOBUZ&_nc_oc=Adqbs39HLvcxYiLRiQR0gG1aQPlqXUkdAMSTaY5pmCF05xoAYFs2vPJjDVAHWAYz1Zk&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQLtt3hpv3rd8YYPNm9DvEHxjB-Wrg1MXjSecxbNTy05YdZ98ItxPLDW7sjfRDl1FFLG4wnlaFxObA&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQSyG-X89S38D2rZlussnKGRI9xiKEiIBoAEA4W4ZzVw1w&oe=6B0CDBE5",
-   "begeni": 73,
-   "yorum": 1,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
-  },
-  {
-   "id": "18191232751414169",
-   "baslik": "Part 2: Fatih ile Kazıklı Voyvoda’nın hesaplaşması ⚔️🌙",
-   "zaman": "2026-11-22T10:10:18+0000",
-   "tur": "REELS",
-   "medya_turu": "VIDEO",
-   "url": "https://www.instagram.com/reel/DgCjhaFREgu/",
-   "kapak": "https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/919307137_1171213122512332_8294696827764651150_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=5_6dY7CwoSMQ7kNvwFHBDSL&_nc_oc=Adp0EcraYQw2iNvpfF5ZsW-E4liW6OKuD6zllCXLN9f4BBKpnB-4aLnCddXakTbN4TY&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQLVlk4RonP9UQnkH2ZU7Tg2HNryqvg0t01ogINqDXF8UxnbE-K0nkhMqbKHM7rrm93MJTOg2lFVYg&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQRsbrH1fsUdpi_tx12npWppy0sTAgGnYcD5dcDrF1-7GA&oe=6B0CCE70",
-   "begeni": 30,
-   "yorum": 0,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
+   "kapak": "https://scontent-ord5-2.cdninstagram.com/v/t51.82787-15/927278438_1896904021489931_9006708928876616570_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=sUJceXx8q0IQ7kNvwE_3H14&_nc_oc=AdokcSDgxLzM27T4wzMudeENEjcgn7N25j0YJwgfTZm5phs4GJMxR-j4CcncKWKFHL4&_nc_zt=23&_nc_ht=scontent-ord5-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQLysHqwGIN4n9_V4RBtN9CY3R9gLbSRVWoeq9ylUO_LIxnmJWXQ4FOwKpKCLV0NcIMMkABmGWhgDw&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQSg80W37Sa3SdQoBlgvHrMZ6s4t6Wm-RzxK9YM8ET30Nw&oe=6B0CCC7D",
+   "begeni": 1650,
+   "yorum": 109,
+   "izlenme": 67834,
+   "erisim": 45994,
+   "kaydetme": 807,
+   "paylasim": 874,
+   "etkilesim": 3449,
+   "ort_izleme_sn": 56.1
   },
   {
    "id": "18439946956195140",
@@ -127,15 +311,66 @@
    "tur": "REELS",
    "medya_turu": "VIDEO",
    "url": "https://www.instagram.com/reel/DgAPvj4R2KT/",
-   "kapak": "https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/914467829_1152425203999364_1581716257105578166_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=pRDj6cJosX0Q7kNvwFa4E8Z&_nc_oc=Adp7iXAnENxZE3l57bz8URlmTKlZz9W8rUeHTZ-pcMoMpiOE9Lp5AYWzyc1c336sH90&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQL3u8lrl0chE01E1SksFVYo3ut309z1niWd7nqyPfT6gJTiSLN82IfUy6YuFMxIRqSwRvuWJn0dcg&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQRDe6l9n56lP9_Uf65mCWv1gCyqdtHNiv4SHL5cLA450g&oe=6B0CDE0D",
-   "begeni": 2121,
+   "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/914467829_1152425203999364_1581716257105578166_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=pRDj6cJosX0Q7kNvwE2TIuh&_nc_oc=AdrCJnO1KPoEw05d5uMWf8xsc6QCdNQ2gWZv_O3QM4yRvm-QxJx8YJ25eZVHg_G-JIk&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQJqC8WzOibrk7FhLTj6ZFCjo0R5bmNvzafNeteR9Q8HGIKZbNj80c6yJPcpCDHI1m2_bJcVvm1gZQ&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQR5Knwvhv3I5zKM85MzwYjhmKRxlNPqOCg7sW3VOzyy4A&oe=6B0CDE0D",
+   "begeni": 2122,
    "yorum": 99,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
+   "izlenme": 27859,
+   "erisim": 23390,
+   "kaydetme": 632,
+   "paylasim": 776,
+   "etkilesim": 3768,
+   "ort_izleme_sn": 35.7
+  },
+  {
+   "id": "17909805708600244",
+   "baslik": "Osmanlı’yı kuran adamın tuğrası yok… 👀",
+   "zaman": "2026-11-23T12:21:18+0000",
+   "tur": "REELS",
+   "medya_turu": "VIDEO",
+   "url": "https://www.instagram.com/reel/DgFXb0oNrQU/",
+   "kapak": "https://scontent-ord5-2.cdninstagram.com/v/t51.82787-15/917969356_40204758259169145_790041416207338794_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=TxA4Ilbd5OQQ7kNvwHrtC8X&_nc_oc=AdpFewo64AtHTGUiWHVrgv4mga0Pege0zsY9YR5CoFs9DR3iKXF7T0adSbOApeRKiB8&_nc_zt=23&_nc_ht=scontent-ord5-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQIOuAfFotMMd2U7xb2sU7iH1FbLwP5XYb8QbJckVMbFeJa_omzdkNqRDSlM_uVRZN2DnZa2xk-dkA&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQTdOflCc6hgLIJZkLRRxpcMW_GJFCDkoFr15rRc4whCSQ&oe=6B0CFE33",
+   "begeni": 120,
+   "yorum": 0,
+   "izlenme": 10239,
+   "erisim": 8803,
+   "kaydetme": 25,
+   "paylasim": 11,
+   "etkilesim": 158,
+   "ort_izleme_sn": 11.1
+  },
+  {
+   "id": "17877357171638637",
+   "baslik": "Ardahan’daki 12 adamızı kimse bilmiyor 👀🇹🇷",
+   "zaman": "2026-11-22T13:31:47+0000",
+   "tur": "REELS",
+   "medya_turu": "VIDEO",
+   "url": "https://www.instagram.com/reel/DgC6m0lNDR5/",
+   "kapak": "https://scontent-ord5-2.cdninstagram.com/v/t51.82787-15/927729813_1136705622338159_6772639911408547370_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=IfYBykrUoXUQ7kNvwGzUqGd&_nc_oc=Adrt_CMw0XbSllzOtZoQeEVgK0RZ-JmLVmu1He5W5xCh9iHjE9JtyFM0dry3avqm-MU&_nc_zt=23&_nc_ht=scontent-ord5-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQI_v5cX0Y0as0285j9JKVsErNniPGZShpvgmufRf3iUOrDATqncQTckjGYQJBolFg9A-5fwFwecuQ&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQT8EU6JXJh_MgVMPBlEP2rpRpeiwMLY4rF8wa3FppHGGw&oe=6B0CDBE5",
+   "begeni": 73,
+   "yorum": 1,
+   "izlenme": 7985,
+   "erisim": 7230,
+   "kaydetme": 19,
+   "paylasim": 30,
+   "etkilesim": 126,
+   "ort_izleme_sn": 7.5
+  },
+  {
+   "id": "18191232751414169",
+   "baslik": "Part 2: Fatih ile Kazıklı Voyvoda’nın hesaplaşması ⚔️🌙",
+   "zaman": "2026-11-22T10:10:18+0000",
+   "tur": "REELS",
+   "medya_turu": "VIDEO",
+   "url": "https://www.instagram.com/reel/DgCjhaFREgu/",
+   "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/919307137_1171213122512332_8294696827764651150_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=5_6dY7CwoSMQ7kNvwF0FjmA&_nc_oc=AdpfJB_tnskY8bECtA94Vqi4OUAe_hP8T4GKvuijD03l4s5mbDoKtR35QcgAMHlFdes&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQLAuQZiAxadxwLj-wLKBf15jthGCKAL8iPO2q0bWi9qWEKFWSX-NJNZBIsiDn5FYSlVzp7_qBWFPg&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQQCzXuvVm-o_u-_z_uN85VK87tUX5mjqOMuOs_VVFvH2g&oe=6B0CCE70",
+   "begeni": 30,
+   "yorum": 0,
+   "izlenme": 5836,
+   "erisim": 5237,
+   "kaydetme": 9,
+   "paylasim": 3,
+   "etkilesim": 42,
+   "ort_izleme_sn": 7.2
   },
   {
    "id": "17927903931443242",
@@ -144,15 +379,15 @@
    "tur": "REELS",
    "medya_turu": "VIDEO",
    "url": "https://www.instagram.com/reel/Df9qI2yxd57/",
-   "kapak": "https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/921772689_1156775800156435_4391888211589792675_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=P2q2PDV0U0MQ7kNvwHnlZpK&_nc_oc=AdqmtDMH8fz_w2OVarKw38AFHT0qbAKtqRv5U7lhbDSiuxEPkthLTvIIe_oLut0dfko&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQILLKOcgIA71amWy29H85nsbHxAbb59i2Q7W0Te1S3jhDvnK4uwPN4T_KAQKjUDS3bqYKYcKtQdQA&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQQbi1kgu1muMuwJGOniRQO2FjqU4i6S-blp-P3CaFy2Ew&oe=6B0CC92D",
+   "kapak": "https://scontent-ord5-2.cdninstagram.com/v/t51.82787-15/921772689_1156775800156435_4391888211589792675_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=P2q2PDV0U0MQ7kNvwEY7A98&_nc_oc=Adrd9vGPz8xhz109_-z3NEe5E8N2anPF8ybfoFkA7o0uOTzj8O2f7ZqewBgFrMKNGUw&_nc_zt=23&_nc_ht=scontent-ord5-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQKE6EhuuO16qi8kF_Dus3YgdAnWBYUpI3raynM63GHcj_9ihzT6RP3M68mKskK6DkQrjeTlzAfaPw&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQQRKt0PQqV8mTS2aqDk68shCb8NS5NXNpTH2rByMKtRlA&oe=6B0D016D",
    "begeni": 53,
    "yorum": 1,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
+   "izlenme": 5278,
+   "erisim": 4451,
+   "kaydetme": 8,
+   "paylasim": 2,
+   "etkilesim": 66,
+   "ort_izleme_sn": 17.6
   },
   {
    "id": "18146769100717933",
@@ -161,117 +396,15 @@
    "tur": "REELS",
    "medya_turu": "VIDEO",
    "url": "https://www.instagram.com/reel/DfzjkY3NI_u/",
-   "kapak": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/910303317_1403145034969849_63262414051270269_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=qK0b7zxYxRsQ7kNvwG8vqtV&_nc_oc=AdpueBD0hF0kYgryjvQoA0xkGr-tEd0zW9Bz8lTVqcjPmtnDL8NiwV-iSUTo38GED7o&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQL8yGOZzHaB0Fc2iS1HF08QKn7edKAnDiJYAmT7ayzqXKh8ORA9dT6Dn-FUKG5d6_TO-IdGtwBi-g&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQRj3cgah6LpHoMBJpDIhTZMRzCZUoz9b0ekVhzVoNMiyg&oe=6B0CC986",
+   "kapak": "https://scontent-ord5-2.cdninstagram.com/v/t51.82787-15/910303317_1403145034969849_63262414051270269_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=qK0b7zxYxRsQ7kNvwE97WmA&_nc_oc=Ado8gg2QCittU2wwR8ExI36_-OGHrqNHxlC7zu6dDk8r2YbupSgZlGNblrgZp7lX6KU&_nc_zt=23&_nc_ht=scontent-ord5-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQI05EgpUP1Bx1JIu-VIVlBMJTZwvHBtKUWXD4iS6TpKcokus3_SHtR_50Rrj0wjVZh2hoicixNcgg&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQRlyEkRAt1wAq4STZE0nPxu6RmUMkyK2RhG-xwjyPXpFQ&oe=6B0D01C6",
    "begeni": 48,
    "yorum": 0,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
-  },
-  {
-   "id": "18107209133632482",
-   "baslik": "Drakula’yı korku hikâyelerinden tanıyorsun… ama o bir zamanlar Edirne’de, Osmanlı sarayınd",
-   "zaman": "2026-11-15T13:14:22+0000",
-   "tur": "REELS",
-   "medya_turu": "VIDEO",
-   "url": "https://www.instagram.com/reel/Dfw2-kVRDey/",
-   "kapak": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/901822426_1133795049059258_2484840615227735768_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=HjGhQbhAJxcQ7kNvwGTkF1E&_nc_oc=AdrcLu0LtEAraYY5D7V_gCTIjEEKS1PgjYowNezxJpZlP1TFr5WXsyjAufWt3NHzRQc&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQLP_Om0Fa-WX7ibyiznLYwMCFyItQtA9SJCgQ_AeQcnG5FWyfbZkZ4QJ7pwiizo3Y0Hv3u5crCWHQ&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQSc0FwyUuq2sInwi7vkByMCjNN2TjzEvwO1fXYDqRGEPw&oe=6B0CE282",
-   "begeni": 22,
-   "yorum": 0,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
-  },
-  {
-   "id": "18135805690690848",
-   "baslik": "Tarihin sıfır noktası: Göbekli Tepe. 🗿",
-   "zaman": "2026-11-15T11:09:22+0000",
-   "tur": "REELS",
-   "medya_turu": "VIDEO",
-   "url": "https://www.instagram.com/reel/DfwomJKxhFD/",
-   "kapak": "https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/902391817_1784687502826543_6005254388979895460_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=sQ8b-iajTNcQ7kNvwHbt9jY&_nc_oc=Adq7wQk07a94_nZadlKJSYgeRjbxLsE7FAKShAVMmmhl3F_3vb_qbGLNhg5ZURNSdjk&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQLW5qrl60yUx81RZKG3o3KtrnM39DmEtIh6elwOOuNNMlcAYmO-shflWwqwvdjqPw13AWdnHaQzHQ&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQTYR03KeKmbAnjgZZp9mDQs58DAiuPXmAaZeblJxzF8_g&oe=6B0CD9BF",
-   "begeni": 34,
-   "yorum": 0,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
-  },
-  {
-   "id": "18126277210933153",
-   "baslik": "AHİT SANDIĞI AYASOFYADA MI ?",
-   "zaman": "2026-11-14T13:59:40+0000",
-   "tur": "REELS",
-   "medya_turu": "VIDEO",
-   "url": "https://www.instagram.com/reel/DfuXjGkxCjw/",
-   "kapak": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/901331058_1766918694389793_5246912611955490458_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=lG8QGc0Blg8Q7kNvwEmoloD&_nc_oc=AdquPhzw0HhqRwFfju7e8sJcEwjNll8aE6WU5wdBDum10O7ggwfpV7C5PD9hdVWPaTs&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQLfnpwnmjJfFaF3YrzyiVwcIWin1PPAOe3sik7Bg0_b1_d-kPjeyMk4ORnhLESCKrh0uW4E4aQyHg&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQQ4jojjnemEBZ9t3WLfx1lcMpPAVPgdJRLHbqdJBK4v-w&oe=6B0CD0E5",
-   "begeni": 39,
-   "yorum": 0,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
-  },
-  {
-   "id": "18110331359234049",
-   "baslik": "26 YIL SONRA ULU CAMİ YENİDEN GÖRÜNDÜ",
-   "zaman": "2026-11-14T11:30:05+0000",
-   "tur": "REELS",
-   "medya_turu": "VIDEO",
-   "url": "https://www.instagram.com/reel/DfuF2f5xOIs/",
-   "kapak": "https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/902453773_17858019660697280_7646581237833519433_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=6SSApRqcyiEQ7kNvwF7TWR0&_nc_oc=AdryWUI-gchWb6eIdnwOGPaZQvhJ9Wdz5mFihz9cXqO2vkJs-oeNwUTqsOH1UW5R-tQ&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQKoCghn2l7R-McMOe23Czx7jxOZ6kUzUrA0G4kokfNhFngoDHYDxl_oMZEk8VOqaKIfbw-_cLG-1w&_nc_ct=RQosPBUKFQ4AAAA&oh=00_AQTN5uDfmF7q-_RY632_yIYcUb9w4Y2_T4f5WPpjJsGoYQ&oe=6B0CD39B",
-   "begeni": 44,
-   "yorum": 0,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
-  },
-  {
-   "id": "17889106818689387",
-   "baslik": "BUGÜN GÖRDÜĞÜN İLK AYASOFYA DEĞİL",
-   "zaman": "2026-11-13T13:09:05+0000",
-   "tur": "REELS",
-   "medya_turu": "VIDEO",
-   "url": "https://www.instagram.com/reel/Dfrsi-yRQra/",
-   "kapak": "https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/901942849_17857671615697280_961023274440859704_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=HU3FgM6WUBQQ7kNvwHzNWhD&_nc_oc=Adodp5xqoll-qBdYHLph6FTq45n5eFj_HAWnMeAPxqVvL_g4GEUO2cnQHRO15pfpVK8&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQIOL90qLxGwCT52OHqnQVa98q81lVtrdWnqiP_ecNJPJVhDfGmq5Vha-dTTZZNeqIoZlAOTpjHYjQ&_nc_ct=RQosPBUKFQ4AAAA&oh=00_AQQDqlinYCX31VXntWAG85IgQ_HijwvG79HIVaCj4OIgrw&oe=6B0CED4D",
-   "begeni": 50,
-   "yorum": 1,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
-  },
-  {
-   "id": "18050300636824738",
-   "baslik": "BOĞAZ’IN ORTASINDAKİ KARANTİNA HASTANESİ",
-   "zaman": "2026-11-13T09:43:04+0000",
-   "tur": "REELS",
-   "medya_turu": "VIDEO",
-   "url": "https://www.instagram.com/reel/DfrVBEDxaPg/",
-   "kapak": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/907278416_1435259372095777_4526617514554642526_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=TvEHK0GlhcwQ7kNvwGEw0dQ&_nc_oc=AdrNPwBhAUxqy1eurBbgFmeDwt3l6gjUP_To8u7_1mAWxrZ_IoIVxbSlk94o8ANPkaY&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQIZa_r5iCI0uDTGgjb4yAPgjz3rf3fc3gJE4TRny4wTrsoWzlUcwe8D0H7eU5NKNiko4Yhx7UuzBQ&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQSGkC_KCf4KHkUHiyBnAly8xw7cOmgUi3DRjxaHpKqDMg&oe=6B0CE4DD",
-   "begeni": 13,
-   "yorum": 0,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
+   "izlenme": 4535,
+   "erisim": 4018,
+   "kaydetme": 9,
+   "paylasim": 4,
+   "etkilesim": 61,
+   "ort_izleme_sn": 20.5
   },
   {
    "id": "18128948918305213",
@@ -280,32 +413,100 @@
    "tur": "REELS",
    "medya_turu": "VIDEO",
    "url": "https://www.instagram.com/reel/DfpOuFBt4Jv/",
-   "kapak": "https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/901636431_17857341075697280_1321041750823705865_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=EleV0jckBncQ7kNvwFW1X_P&_nc_oc=Adrvo9_Om2OttW_k4cAjAKE0T8UUMv0hVpVhSy3Jft9pAFBjoTqR0VdbhDC2rBEDbnA&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQKVN5alWtt946KSv-Su-FD5L18vsNd3QP9MTmE-y9O0xzonzcdsEYycl9OBL2r4TFHnka5k1PUh8g&_nc_ct=RQosPBUKFQ4AAAA&oh=00_AQQZZLUawD0IoKnfGmx3Hst7ltkqwFqBrr3jHIGP8XZRBQ&oe=6B0CD12A",
+   "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/901636431_17857341075697280_1321041750823705865_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=EleV0jckBncQ7kNvwHjZMm8&_nc_oc=AdrTSHZATYgqehPiAacvvPRbjQLMTotd5abUMgivyzyiuonZRzGi0MBEhRQNPdQBIqc&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQLh5YzlRTxFNlZSGV2WACxAQDOFmfgT3u7eSKjyeallFLmkCnUwFJAPzlO66LdXk-X41XNe0L6dSA&_nc_ct=RQosPBUKFQ4AAAA&oh=00_AQS2La9vDibsOn09kV_n7WtumJyodYDixnpt9egkogm3nQ&oe=6B0CD12A",
    "begeni": 54,
    "yorum": 0,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
+   "izlenme": 3828,
+   "erisim": 3028,
+   "kaydetme": 8,
+   "paylasim": 7,
+   "etkilesim": 70,
+   "ort_izleme_sn": 19.1
   },
   {
-   "id": "18076958210771394",
-   "baslik": "1905’te bir lise sınıfında başlayan hikâye; 26 lig şampiyonluğu, 19 Türkiye Kupası ve Avru",
-   "zaman": "2026-11-11T13:12:53+0000",
+   "id": "18135805690690848",
+   "baslik": "Tarihin sıfır noktası: Göbekli Tepe. 🗿",
+   "zaman": "2026-11-15T11:09:22+0000",
    "tur": "REELS",
    "medya_turu": "VIDEO",
-   "url": "https://www.instagram.com/reel/Dfmjo5uR2HI/",
-   "kapak": "https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/900387842_17856996696697280_2654592457743135708_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=UjZU-ePIBZEQ7kNvwHpUHCf&_nc_oc=AdrI_YumDbPNueC8__pfU-pNxqis89_Fmr0tE-aSpoJZOL8OfnPq-U3T6-8wFxMch5w&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQJupHCLW0RvXNNmOWyb7vvqP1_DaLc4Ag6IzsMKNeH1rxePdEtZ3nS_NKE3q9m-kYeCLWhP8FaZvg&_nc_ct=RQosPBUKFQQAAAA&oh=00_AQTqQ5HGUBlUV9-fOsstXMYQF49obtjnBclIAqQlmxgy7w&oe=6B0CE5EA",
-   "begeni": 29,
+   "url": "https://www.instagram.com/reel/DfwomJKxhFD/",
+   "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/902391817_1784687502826543_6005254388979895460_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=sQ8b-iajTNcQ7kNvwEscRvP&_nc_oc=Adoos_mq5vm_Kv6rZ5iha5vlyqTu1BEWwGzWykGDuwEP5gAg10sicwI6262cR_yBUF8&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQJ3Wxs2wfMQg5q5HDnH5KKRh21oiaLdIfUXY8s8wSkbzBR4joxFeJRPRCJy4lcjQfi6vk-46kG3YQ&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQTZNatDatjfHTwSkJDtBf_de-OLy12HK58PIAwWSV3CTw&oe=6B0CD9BF",
+   "begeni": 34,
    "yorum": 0,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
+   "izlenme": 3241,
+   "erisim": 2823,
+   "kaydetme": 2,
+   "paylasim": 1,
+   "etkilesim": 37,
+   "ort_izleme_sn": 7.1
+  },
+  {
+   "id": "18110331359234049",
+   "baslik": "26 YIL SONRA ULU CAMİ YENİDEN GÖRÜNDÜ",
+   "zaman": "2026-11-14T11:30:05+0000",
+   "tur": "REELS",
+   "medya_turu": "VIDEO",
+   "url": "https://www.instagram.com/reel/DfuF2f5xOIs/",
+   "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/902453773_17858019660697280_7646581237833519433_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=6SSApRqcyiEQ7kNvwFrWnaN&_nc_oc=AdpM3hy5D68RvQUyurule4Y1g2ZKOCXX-JzMwoUNf_Z_BZXvdY4H6ngUBT5lUyg2yUg&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQJRI0zVRW2Z-9ErlMUaJYLKRULxjyxp5zGy5AVkM7eMwA41E06Xxx5Fc-LKHp7odc5GoEPxkjsX7A&_nc_ct=RQosPBUKFQ4AAAA&oh=00_AQTiXgudNwS_F_JTXDINTT-zE_j77YNarY1UeSK_IQB6hA&oe=6B0CD39B",
+   "begeni": 44,
+   "yorum": 0,
+   "izlenme": 2967,
+   "erisim": 2565,
+   "kaydetme": 7,
+   "paylasim": 1,
+   "etkilesim": 52,
+   "ort_izleme_sn": 16.4
+  },
+  {
+   "id": "18126277210933153",
+   "baslik": "AHİT SANDIĞI AYASOFYADA MI ?",
+   "zaman": "2026-11-14T13:59:40+0000",
+   "tur": "REELS",
+   "medya_turu": "VIDEO",
+   "url": "https://www.instagram.com/reel/DfuXjGkxCjw/",
+   "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/901331058_1766918694389793_5246912611955490458_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=lG8QGc0Blg8Q7kNvwEt4HqO&_nc_oc=AdoRjFJcoQ7wKzltpC6ZmUEVZL1PHP5C0GbHbogYkQA4jYDqWbfEcBkMoZnxth-coGQ&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQKFG8Bjde10VaWrPsoFAi0p7iOywfv8RyQ84XX0cTNjYF5hDhdwybtSiUi5wyt7AVqYQGEdd2_5Iw&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQTEz6EjrbwhWkT0uFp0L3HYjtBOZqGijVncyHmhXkfMaQ&oe=6B0CD0E5",
+   "begeni": 39,
+   "yorum": 0,
+   "izlenme": 2808,
+   "erisim": 2570,
+   "kaydetme": 9,
+   "paylasim": 25,
+   "etkilesim": 75,
+   "ort_izleme_sn": 18.1
+  },
+  {
+   "id": "17889106818689387",
+   "baslik": "BUGÜN GÖRDÜĞÜN İLK AYASOFYA DEĞİL",
+   "zaman": "2026-11-13T13:09:05+0000",
+   "tur": "REELS",
+   "medya_turu": "VIDEO",
+   "url": "https://www.instagram.com/reel/Dfrsi-yRQra/",
+   "kapak": "https://scontent-ord5-2.cdninstagram.com/v/t51.82787-15/901942849_17857671615697280_961023274440859704_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=HU3FgM6WUBQQ7kNvwEJnyr3&_nc_oc=AdqIcGhGqDt7u8-tk02ytLUlQvBZ_wt44pc2-EcRn5b_q0ZkOuiJn8DAE5LvFhXqqPE&_nc_zt=23&_nc_ht=scontent-ord5-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQKrBLuoG5zC8_tphd3KnW2m4qweaI8CeRgYISVL1dKaKNI2rwt_R4u1TkymSfeZ_rtxhwnaStBcMg&_nc_ct=RQosPBUKFQ4AAAA&oh=00_AQTg9DYtizIRsuOujKedFHTbBuefBewsuMDXx31pL6FKmw&oe=6B0CED4D",
+   "begeni": 50,
+   "yorum": 1,
+   "izlenme": 2735,
+   "erisim": 2454,
+   "kaydetme": 7,
+   "paylasim": 1,
+   "etkilesim": 59,
+   "ort_izleme_sn": 17.6
+  },
+  {
+   "id": "18107209133632482",
+   "baslik": "Drakula’yı korku hikâyelerinden tanıyorsun… ama o bir zamanlar Edirne’de, Osmanlı sarayınd",
+   "zaman": "2026-11-15T13:14:22+0000",
+   "tur": "REELS",
+   "medya_turu": "VIDEO",
+   "url": "https://www.instagram.com/reel/Dfw2-kVRDey/",
+   "kapak": "https://scontent-ord5-2.cdninstagram.com/v/t51.82787-15/901822426_1133795049059258_2484840615227735768_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=HjGhQbhAJxcQ7kNvwGJC7eX&_nc_oc=AdpvQRac4Nej5xpK-QkZuvCfQvvH7b5xnus3mTGopjaI7JHGu-lmuXuiZF4Or_q6cn0&_nc_zt=23&_nc_ht=scontent-ord5-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQIwe9f0NMZtDQCQhBKWKIqinklNK1yS4u_EZfLnUbgOTQUba2DygHX1_2NSkhFNPPVSPdf2dV0MEw&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQRJn_PMXX_XNMMNsEhmMOlqugLGl3B-ecIj1Bb0jBX-wQ&oe=6B0CE282",
+   "begeni": 22,
+   "yorum": 0,
+   "izlenme": 2513,
+   "erisim": 2269,
+   "kaydetme": 5,
+   "paylasim": 1,
+   "etkilesim": 28,
+   "ort_izleme_sn": 9.7
   },
   {
    "id": "18117513187830948",
@@ -314,15 +515,66 @@
    "tur": "REELS",
    "medya_turu": "VIDEO",
    "url": "https://www.instagram.com/reel/DfmZ6dhxBtJ/",
-   "kapak": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/900856221_17856971289697280_8564656583647489130_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=ChEUjDTxxo0Q7kNvwF9JYzz&_nc_oc=AdoZTGTrMAmX6HjaU0HwkTcr00zGMkOaJfiqw_jCRT_Rg9cLcfMJ3TlMapVE5o8Dr-w&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQKuhLVMAxI-Bj2Ecpyj0LqAAkWrOdRjYBAHqEWh48fG4YaoH5Aji3UZd3YEK-Pqx3Neav0I36lhcA&_nc_ct=RQosPBUKFQ4AAAA&oh=00_AQTAH1fyFz3m3FxZjvjQ48Xw04g3mGPOU3orLKKONJiTSQ&oe=6B0CD87E",
+   "kapak": "https://scontent-ord5-2.cdninstagram.com/v/t51.82787-15/900856221_17856971289697280_8564656583647489130_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=ChEUjDTxxo0Q7kNvwGfD_1X&_nc_oc=Adqx8GN2ByN-iZQgYV9n3ymyD8KSvS4Oqjo2WJjftRChnauYfWduMqeaLleoiegS2Lc&_nc_zt=23&_nc_ht=scontent-ord5-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQLSPexBT52vL-P0ZhF5530m8JBF2JVEBBRPCwfsxJn_rwk9EXz_uaT4MO88XZoDZwL-T0uBp60WIA&_nc_ct=RQosPBUKFQ4AAAA&oh=00_AQSPHM40P-PIXJdjdaeZPv7QZiHzCGMXflJB_buutl-iwQ&oe=6B0CD87E",
    "begeni": 30,
    "yorum": 0,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
+   "izlenme": 2437,
+   "erisim": 2077,
+   "kaydetme": 7,
+   "paylasim": 0,
+   "etkilesim": 37,
+   "ort_izleme_sn": 19.1
+  },
+  {
+   "id": "18076275515592461",
+   "baslik": "Bilinen en eski Osmanlı tuğrası bu adama ait… 👀",
+   "zaman": "2026-11-25T15:02:28+0000",
+   "tur": "REELS",
+   "medya_turu": "VIDEO",
+   "url": "https://www.instagram.com/reel/DgKzGnFNzCa/",
+   "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/931839671_2359779198116235_1725956901010030263_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=vAtvdDZWeWIQ7kNvwEce7fq&_nc_oc=Ado9X_PWXm8G0ySAsXIR7xySfndBB-izfwIPUYhnafxPD506kpEXlJ8F1jQRTXzvWT0&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQJy6jBkE5yAQ0FbPV8VJbG_luFSuZi8QKq6c7BsogAe7Tgx5cZ6fXq0BbC5EtGv9q7WnZ33fgF_aQ&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQTjDuMjjpBN3RBlb112_9hODqhfts7xpA2f0yWvlaYIhw&oe=6B0D00AA",
+   "begeni": 15,
+   "yorum": 0,
+   "izlenme": 1484,
+   "erisim": 1121,
+   "kaydetme": 7,
+   "paylasim": 1,
+   "etkilesim": 23,
+   "ort_izleme_sn": 6.3
+  },
+  {
+   "id": "18076958210771394",
+   "baslik": "1905’te bir lise sınıfında başlayan hikâye; 26 lig şampiyonluğu, 19 Türkiye Kupası ve Avru",
+   "zaman": "2026-11-11T13:12:53+0000",
+   "tur": "REELS",
+   "medya_turu": "VIDEO",
+   "url": "https://www.instagram.com/reel/Dfmjo5uR2HI/",
+   "kapak": "https://scontent-ord5-2.cdninstagram.com/v/t51.82787-15/900387842_17856996696697280_2654592457743135708_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=UjZU-ePIBZEQ7kNvwEH6Egd&_nc_oc=AdpQX2IdetCsQopCSFfhK_XcThPgPw49BXEHW1cFYs31-ygan65pAzP2Ividc4vb1qk&_nc_zt=23&_nc_ht=scontent-ord5-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQK-9STwjOc45SgYjo0khbnc5ab8ZhlsDi5gxSCTxXmIZIC0Hjc5K3F0Yuc40HPtzK1w-1b3qyWvuw&_nc_ct=RQosPBUKFQQAAAA&oh=00_AQShOq3ORfILhi52oGoUVcSKttovjdt38zWOAxgBuFXQJQ&oe=6B0CE5EA",
+   "begeni": 29,
+   "yorum": 0,
+   "izlenme": 1305,
+   "erisim": 1074,
+   "kaydetme": 1,
+   "paylasim": 9,
+   "etkilesim": 40,
+   "ort_izleme_sn": 12.5
+  },
+  {
+   "id": "18050300636824738",
+   "baslik": "BOĞAZ’IN ORTASINDAKİ KARANTİNA HASTANESİ",
+   "zaman": "2026-11-13T09:43:04+0000",
+   "tur": "REELS",
+   "medya_turu": "VIDEO",
+   "url": "https://www.instagram.com/reel/DfrVBEDxaPg/",
+   "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/907278416_1435259372095777_4526617514554642526_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=TvEHK0GlhcwQ7kNvwHSKR6c&_nc_oc=AdqyQImGA50oquNZsMIJFMfrk95UCnHL4a7twAqfCY5SFE9u9jBZdu2ODpZiitASNkc&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQKqlH-xawcSrzHBkO10USz1johRLCpHxaegh1mXf-WOz4iYBByOEk1JTTmCQVs2x7dqx4FkW7YVHw&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQTmGDLg9GivzXF-8Dz86Hu5o5HMRSohaogjk0uftf5ZkQ&oe=6B0CE4DD",
+   "begeni": 13,
+   "yorum": 0,
+   "izlenme": 1172,
+   "erisim": 1029,
+   "kaydetme": 2,
+   "paylasim": 0,
+   "etkilesim": 16,
+   "ort_izleme_sn": 11.3
   },
   {
    "id": "17910157965331611",
@@ -331,15 +583,15 @@
    "tur": "REELS",
    "medya_turu": "VIDEO",
    "url": "https://www.instagram.com/reel/DfiCSUcxjkD/",
-   "kapak": "https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/894460976_17856403074697280_603716995257803088_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=qXpCwMeHw88Q7kNvwFjX42f&_nc_oc=AdpG8TD8T2NOTcNHhBaXuJ5rLLUOZSyvXTOmB49to9f_KKujOx0G6Zhe2zRmh4pG4mI&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQLZHBHA4DVZRQ_9F3yikvS1YXz8VC5PndvHk8PXYVH-IjahwwGcccnM3zTL046rTA00OTyfKCM-MA&_nc_ct=RQosPBUKFQQAAAA&oh=00_AQTajsi4gzpPb1WWQscr2Mgst0Dndk6WKUsK27WgSc-cJw&oe=6B0CF30D",
+   "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/894460976_17856403074697280_603716995257803088_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=qXpCwMeHw88Q7kNvwGWGI3u&_nc_oc=AdoYzdwZa1u5phmuZ4Mv297mKONyFvjjws7eByAA7SMZq6xMYART1XYZGm5TgVeqeWs&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQLambVFcKbCCeKxibTgCc3S6_vktnNsSxB2e6NBFkJBbt0R0qhue6x_YZaPapszT0Krd9PONxwK8A&_nc_ct=RQosPBUKFQQAAAA&oh=00_AQTN4K79ha7t5U4efjIx8O0KSr-9fqh06swZkwEQCm8Q4A&oe=6B0CF30D",
    "begeni": 17,
    "yorum": 0,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
+   "izlenme": 853,
+   "erisim": 716,
+   "kaydetme": 1,
+   "paylasim": 5,
+   "etkilesim": 23,
+   "ort_izleme_sn": 8.7
   },
   {
    "id": "18116947688010832",
@@ -348,31 +600,34 @@
    "tur": "REELS",
    "medya_turu": "VIDEO",
    "url": "https://www.instagram.com/reel/DfhHuamRtzR/",
-   "kapak": "https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/899273298_17856263631697280_1787625398956127574_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=wdR5fKBP7tkQ7kNvwE-P1cd&_nc_oc=AdrFIfTbdItk_gom8cmrP2_-SCCCUreaRLoiodCL-8Xa7Q3K1fC0_zSa0nYW7M_eD8A&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=2RDsPSbX0cZ-6mUZu3Evvw&_nc_tpa=Q5bMBQIAyn8zqqkjGf_xeJLeLVgitAgcCi-805Q-fjALqYzrTNn_NWKzWWD8kzbfZKH2bFG9JqZokIWozg&_nc_ct=RQosPBUKFQQAAAA&oh=00_AQS3GAbyQ9hSC5K50Z1Tr6tsolgHbnyX8m2RfprsjzCI0A&oe=6B0CECA6",
-   "begeni": 25,
+   "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/899273298_17856263631697280_1787625398956127574_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=wdR5fKBP7tkQ7kNvwHCH1Cr&_nc_oc=AdroqFNoSwf9K8fi8Tz7VnY_c8w7bEoLGjluydx0k9HJaVtADX9WnWM1QJ1eqUhhmf0&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=nSbDsh1bjNN0ICG_ZRZTeQ&_nc_tpa=Q5bMBQIlEZIr3mfe4199jDYLK6pVRdNvD1fWM3e7jStUNKlHEe99bV6IgYp2aca4oPpnAFemfnb6s7w7ig&_nc_ct=RQosPBUKFQQAAAA&oh=00_AQSPpwnZ2SGTr-PuIv6OcNY52eb9je_kEbdFrQzQYnVw2Q&oe=6B0CECA6",
+   "begeni": 26,
    "yorum": 0,
-   "izlenme": null,
-   "erisim": null,
-   "kaydetme": null,
-   "paylasim": null,
-   "etkilesim": null,
-   "ort_izleme_sn": null
+   "izlenme": 840,
+   "erisim": 746,
+   "kaydetme": 2,
+   "paylasim": 5,
+   "etkilesim": 33,
+   "ort_izleme_sn": 14.1
   }
  ],
- "en_iyi_saatler": [],
- "desteklenmeyen": [
-  "accounts_engaged",
-  "comments",
-  "follower_count (günlük)",
-  "follows_and_unfollows",
-  "ig_reels_avg_watch_time",
-  "ig_reels_video_view_total_time",
-  "likes",
-  "profile_views",
-  "reach",
-  "saved",
-  "shares",
-  "total_interactions",
-  "views"
- ]
+ "en_iyi_saatler": [
+  {
+   "saat": 15,
+   "ort_izlenme": 130741,
+   "adet": 5
+  },
+  {
+   "saat": 17,
+   "ort_izlenme": 4182,
+   "adet": 2
+  },
+  {
+   "saat": 16,
+   "ort_izlenme": 3469,
+   "adet": 5
+  }
+ ],
+ "en_iyi_gun": "Salı",
+ "desteklenmeyen": []
 }
