@@ -6,6 +6,7 @@ on:
       kuyruk: { description: "Zamanlanmış iş kimliği (panel doldurur)", required: false, default: "" }
       test: { description: "Sadece bağlantıyı test et (1 = evet)", required: false, default: "" }
       zorla: { description: "Kurgu kontrolünde hata olsa da paylaş (1 = evet)", required: false, default: "" }
+      deneme: { description: "Sadece kap oluştur, PAYLAŞMA (1 = evet)", required: false, default: "" }
 permissions:
   contents: write
 concurrency: { group: yayinci, cancel-in-progress: false }
@@ -19,6 +20,7 @@ jobs:
       KUYRUK: ${{ inputs.kuyruk }}
       TEST: ${{ inputs.test }}
       ZORLA: ${{ inputs.zorla }}
+      DENEME: ${{ inputs.deneme }}
     steps:
       - name: Girdileri kontrol et
         run: |
@@ -38,6 +40,7 @@ jobs:
           [ -n "$SLUG" ] && ARGS="$ARGS --slug $SLUG"
           [ -n "$KUYRUK" ] && ARGS="$ARGS --kuyruk $KUYRUK"
           [ "$ZORLA" = "1" ] && ARGS="$ARGS --zorla"
+          [ "$DENEME" = "1" ] && ARGS="$ARGS --deneme"
           python scripts/yayinci.py $ARGS
       - name: Kaydet
         if: always()

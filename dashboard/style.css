@@ -76,3 +76,14 @@ details.arsiv{margin-top:6px}details.arsiv>summary{cursor:pointer;list-style:non
 .igtab td.igk{padding:4px 6px;width:56px}.igk img,.igph{width:56px;height:100px;border-radius:8px;object-fit:cover;display:block;background:var(--card2)}.igph{display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--mut)}
 .igtab th:nth-child(3){text-align:left}
 @media(max-width:640px){.igtab th:nth-child(6),.igtab td:nth-child(6),.igtab th:nth-child(7),.igtab td:nth-child(7){display:none}.igtab td.igb{min-width:140px}.igk img,.igph{width:44px;height:78px}}
+
+.altsek{display:flex;gap:6px;overflow-x:auto;margin:4px 0 2px;padding-bottom:4px}.altsek button{flex:1 0 auto;padding:8px 12px;font-size:12.5px;border-radius:20px;color:var(--mut)}.altsek button.on{color:var(--gold);border-color:var(--gold)}
+.igkp{border-radius:8px;object-fit:cover;display:block;flex:none;background:var(--card2)}.igph{border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;background:var(--card2);color:var(--mut)}
+.igmet{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.igm{background:var(--card2);border-radius:12px;padding:9px 10px;font-size:12px}.igm span{display:block;color:var(--mut)}.igm b{display:block;font-family:Cinzel;font-size:17px;color:var(--gold);margin:2px 0}
+.kutu select,.igform input,.igform select,.igform textarea{width:100%;font:inherit;font-size:13.5px;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--card2);color:var(--txt);margin-top:4px;color-scheme:dark}
+.igform label{display:block;margin-top:10px;font-size:12.5px;color:var(--mut)}.igform label.chk{display:flex;gap:8px;align-items:center}.igform label.chk input{width:auto;margin:0}
+.igsat{display:flex;align-items:center;gap:10px;padding:8px 0;border-top:1px solid var(--line);font-size:13px;cursor:pointer}.igsat:first-child{border-top:0}
+.igy{display:flex;gap:10px;padding:12px 0;border-top:1px solid var(--line);font-size:13.5px}.igy.cev{opacity:.7}.igy textarea{width:100%;font:inherit;font-size:13.5px;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--card2);color:var(--txt);margin-top:6px;resize:vertical}
+.igy .acts{display:flex;gap:6px;align-items:center;margin-top:6px}.igy .acts button{padding:6px 12px;font-size:12px}
+.igplan{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line);font-size:13px}.igplan:first-child{border-top:0}.igplan .acts{display:flex;flex-direction:column;gap:6px}.igplan .acts button{padding:6px 10px;font-size:12px}
+.igtab.fmt td,.igtab.fmt th{text-align:right}.igtab.fmt td.igb,.igtab.fmt th:first-child{text-align:left}

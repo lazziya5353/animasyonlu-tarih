@@ -49,29 +49,77 @@ def video_adresi(slug):
     raise SystemExit("Video adresi alınamadı")
 
 
-def kuyruk_guncelle(kid, durum, mesaj=""):
+def kuyruk_guncelle(kid, durum, mesaj="", **ek):
     if not kid: return
     q = oku(KUYRUK, {"isler": []})
     for it in q["isler"]:
-        if it.get("id") == kid: it.update(durum=durum, mesaj=mesaj, guncelleme=simdi())
+        if it.get("id") == kid: it.update(durum=durum, mesaj=mesaj, guncelleme=simdi(), **ek)
     yaz(KUYRUK, q)
+
+
+def kuyruk_isi(kid):
+    return next((x for x in oku(KUYRUK, {"isler": []})["isler"] if x.get("id") == kid), None) if kid else None
+
+
+def dogrudan_adres(url):
+    """github.com/.../releases/download/... gibi yönlendiren adresi son (doğrudan mp4) adrese çevirir."""
+    try:
+        r = urllib.request.urlopen(urllib.request.Request(url, method="HEAD", headers={"user-agent": "tarih-yayinci"}), timeout=60)
+        return r.geturl(), int(r.headers.get("content-length") or 0)
+    except Exception:
+        return url, 0
+
+
+def ozel_metin(it):
+    m = (it.get("caption") or "").strip(); hs = (it.get("hashtag") or "").strip()
+    if hs: hs = " ".join(h if h.startswith("#") else "#" + h for h in hs.replace(",", " ").split())
+    return (m + ("\n\n" + hs if hs else "")).strip()
 
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--slug"); ap.add_argument("--kuyruk", default="")
     ap.add_argument("--test", action="store_true"); ap.add_argument("--zorla", action="store_true"); ap.add_argument("--tekrar", action="store_true")
+    ap.add_argument("--deneme", action="store_true", help="Kap oluştur, işlenmesini bekle ama PAYLAŞMA")
     a = ap.parse_args()
+    it = kuyruk_isi(a.kuyruk)
+    if a.kuyruk and (not it or it.get("durum") not in ("bekliyor", "gonderildi")):
+        print("Kuyruk işi yok ya da iptal/bitmiş; paylaşılmadı"); return   # sadece panelden planlanmış ve hâlâ geçerli işler paylaşılır
+    if it and not a.slug: a.slug = it.get("slug") or ""
     if not IG.hazir():
         set_status("yayinci", "bekliyor", "Instagram bağlı değil: docs/YAYIN_KURULUM.md adımlarını tamamla")
         kuyruk_guncelle(a.kuyruk, "hata", "Instagram bağlı değil"); print("IG_TOKEN / IG_USER_ID yok; atlandı"); return
     if a.test:
         h = IG.hesap(); set_status("yayinci", "tamam", f"Instagram bağlı: @{h.get('username')} · {h.get('followers_count', 0)} takipçi")
         print("Bağlantı tamam:", h.get("username")); return
+    try: IG.baglan_host()
+    except IG.IGHata as e:
+        m = "Instagram anahtarının süresi dolmuş, yenilenmeli" if IG.anahtar_hatasi(e) else str(e)
+        kuyruk_guncelle(a.kuyruk, "hata", m); set_status("yayinci", "hata", m); raise SystemExit(m)
+    kullanilan, limit = IG.yayin_kotasi()
+    if kullanilan is not None and kullanilan >= limit and not a.deneme:
+        sonra = (datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=1)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        m = f"Instagram günlük paylaşım limiti dolu ({kullanilan}/{limit}); 1 saat sonra tekrar denenecek"
+        if it: kuyruk_guncelle(a.kuyruk, "bekliyor", m, zaman=sonra)
+        set_status("yayinci", "bekliyor", m); print(m); return
     slug = a.slug or ""
     d = os.path.join(ROOT, "projects", slug)
-    if not slug or not os.path.isdir(d): raise SystemExit("Proje bulunamadı")
+    if it and it.get("url"):                                   # panelden doğrudan video adresiyle planlanmış iş
+        metin = ozel_metin(it) or (aciklama_metni(oku(os.path.join(d, "script.json"), {})) if slug and os.path.isdir(d) else "")
+        if not metin: kuyruk_guncelle(a.kuyruk, "hata", "Açıklama boş"); raise SystemExit("Açıklama boş")
+        set_status("yayinci", "calisiyor", "Planlanan video Instagram'a yükleniyor")
+        try:
+            url, boyut = dogrudan_adres(it["url"]); print(f"Video: {boyut / 1e6:.1f} MB")
+            sonuc = IG.reels_yayinla(url, metin, kapak_ms=it.get("kapak_ms"), akisa=it.get("akis", True) is not False, kapak_url=it.get("kapak_url"), deneme=a.deneme)
+        except IG.IGHata as e:
+            m = "Instagram anahtarının süresi dolmuş, yenilenmeli" if IG.anahtar_hatasi(e) else str(e)
+            kuyruk_guncelle(a.kuyruk, "hata", m); set_status("yayinci", "hata", m); raise SystemExit(m)
+        if a.deneme: print("Deneme: kap hazır, paylaşılmadı", sonuc.get("kap")); return
+        m = f"Instagram'da yayında: {sonuc.get('permalink')}"
+        kuyruk_guncelle(a.kuyruk, "tamam", m, permalink=sonuc.get("permalink")); set_status("yayinci", "tamam", m, sonuc.get("permalink")); print(m); return
+    if not slug or not os.path.isdir(d):
+        kuyruk_guncelle(a.kuyruk, "hata", "Proje bulunamadı"); raise SystemExit("Proje bulunamadı")
     yay = oku(YAYINLAR, {})
-    if yay.get(slug, {}).get("instagram") and not a.tekrar:
+    if yay.get(slug, {}).get("instagram") and not a.tekrar and not a.deneme:
         m = f"{slug} zaten paylaşılmış: {yay[slug]['instagram'].get('permalink')}"
         kuyruk_guncelle(a.kuyruk, "tamam", m); set_status("yayinci", "tamam", m); print(m); return
     k = oku(os.path.join(d, "kontrol", "kurgu.json"), {})
@@ -79,18 +127,20 @@ def main():
         m = f"{slug}: kurgu kontrolünde hata var, paylaşılmadı ({k.get('ozet', '')})"
         kuyruk_guncelle(a.kuyruk, "hata", m); set_status("yayinci", "hata", m); raise SystemExit(m)
     sc = oku(os.path.join(d, "script.json"), {})
-    metin = aciklama_metni(sc)
+    metin = (ozel_metin(it) if it else "") or aciklama_metni(sc)
     set_status("yayinci", "calisiyor", f"{slug} Instagram'a yükleniyor")
     try:
         url, boyut = video_adresi(slug)
         print(f"Video: {boyut / 1e6:.1f} MB")
-        sonuc = IG.reels_yayinla(url, metin, kapak_ms=1500)
+        sonuc = IG.reels_yayinla(url, metin, kapak_ms=(it or {}).get("kapak_ms", 1500), akisa=(it or {}).get("akis", True) is not False,
+                                 kapak_url=(it or {}).get("kapak_url"), deneme=a.deneme)
     except IG.IGHata as e:
         m = ("Instagram anahtarının süresi dolmuş, yenilenmeli (docs/YAYIN_KURULUM.md)" if IG.anahtar_hatasi(e) else str(e))
         kuyruk_guncelle(a.kuyruk, "hata", m); set_status("yayinci", "hata", f"{slug}: {m}"); raise SystemExit(m)
+    if a.deneme: print("Deneme: kap hazır, paylaşılmadı", sonuc.get("kap")); return
     yay.setdefault(slug, {})["instagram"] = sonuc; yaz(YAYINLAR, yay)
     m = f"{slug} Instagram'da yayında: {sonuc.get('permalink')}"
-    kuyruk_guncelle(a.kuyruk, "tamam", m); set_status("yayinci", "tamam", m, sonuc.get("permalink")); print(m)
+    kuyruk_guncelle(a.kuyruk, "tamam", m, permalink=sonuc.get("permalink")); set_status("yayinci", "tamam", m, sonuc.get("permalink")); print(m)
 
 
 if __name__ == "__main__":

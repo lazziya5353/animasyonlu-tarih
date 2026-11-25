@@ -100,7 +100,7 @@ function render() {
   let sek = "anim"; try { const k = localStorage.getItem("sekme"); if (SEK.some((x) => x[0] === k)) sek = k; } catch {}
   const spor = `<h2>SPOR TARİHİ VİDEO</h2><div class="card"><b style="color:var(--gold)">Yakında</b><div class="mut" style="margin-top:4px">Spor tarihi sayfası birkaç gün içinde burada olacak: geçmiş maç animasyonları, maç öncesi hikâyeler ve spor quizleri.</div></div><h2>Projeler</h2><div class="card mut">Henüz spor projesi yok.</div>`;
   $("#main").innerHTML = `<nav class="sekmeler">${SEK.map(([k, l]) => `<button class="sekme${k === sek ? " on" : ""}" data-sekme="${k}">${l}</button>`).join("")}</nav>
-    <section data-bolum="anim"${sek === "anim" ? "" : " hidden"}>${html}</section><section data-bolum="spor"${sek === "spor" ? "" : " hidden"}>${spor}</section><section data-bolum="ig"${sek === "ig" ? "" : " hidden"}>${renderTokenKart()}${renderInstagram() || '<div class="card mut" style="margin-top:12px">Henüz Instagram verisi yok.</div>'}</section>`;
+    <section data-bolum="anim"${sek === "anim" ? "" : " hidden"}>${html}</section><section data-bolum="spor"${sek === "spor" ? "" : " hidden"}>${spor}</section><section data-bolum="ig"${sek === "ig" ? "" : " hidden"}>${typeof igSekmeHtml === "function" ? igSekmeHtml() : renderTokenKart() + (renderInstagram() || "")}</section>`;
   document.querySelectorAll("[data-sekme]").forEach((b) => (b.onclick = () => {
     const k = b.dataset.sekme; try { localStorage.setItem("sekme", k); } catch {}
     document.querySelectorAll("[data-sekme]").forEach((x) => x.classList.toggle("on", x === b));
@@ -108,7 +108,7 @@ function render() {
   }));
   baglaToken();
   document.querySelectorAll("[data-run]").forEach((b) => (b.onclick = () => runAgent(b.dataset.run)));
-  baglaInstagram();
+  baglaInstagram(); if (typeof baglaIgEk === "function") baglaIgEk();
   document.querySelectorAll("[data-detay]").forEach((b) => (b.onclick = () => ajanDetay(b.dataset.detay)));
   document.querySelectorAll("[data-hduzelt]").forEach((b) => (b.onclick = async () => {
     if (b.disabled) return; b.disabled = true; b.textContent = "Gönderiliyor…";
@@ -268,7 +268,7 @@ function renderInstagram() {
     ${degisim}${igGrafik(seri)}
     ${saat ? `<div class="mut" style="margin-top:8px">⏰ En iyi paylaşım saatleri (İstanbul, ortalama izlenmeye göre): <b style="color:var(--gold)">${saat}</b>${g.en_iyi_gun ? ` · en iyi gün: <b style="color:var(--gold)">${esc(g.en_iyi_gun)}</b>` : ""}</div>` : ""}
     <div style="overflow-x:auto;margin-top:12px"><table class="igtab"><thead><tr><th>#</th><th></th><th>Video</th><th>▶ İzlenme</th><th>🔖 Kayıt</th><th>↗ Paylaşım</th><th>⏱ Ort. izleme</th></tr></thead><tbody>
-    ${vids.map((v, i) => `<tr data-igurl="${esc(v.url || "")}"><td>${i + 1}</td><td class="igk">${(v.kapak || v.thumbnail_url || v.media_url) ? `<img src="${esc(v.kapak || v.thumbnail_url || v.media_url)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'igph',textContent:'🎬'}))">` : `<span class="igph">🎬</span>`}</td><td class="igb">${esc(v.baslik || "(açıklamasız)")}<div class="mut" style="font-size:11px">${v.zaman ? new Date(v.zaman).toLocaleString("tr-TR", { dateStyle: "short", timeStyle: "short" }) : ""} · ❤ ${sayi(v.begeni)} · 💬 ${sayi(v.yorum)}</div></td><td>${sayi(v.izlenme)}</td><td>${sayi(v.kaydetme)}</td><td>${sayi(v.paylasim)}</td><td>${v.ort_izleme_sn != null ? v.ort_izleme_sn + " sn" : "—"}</td></tr>`).join("") || `<tr><td colspan="7" class="mut">Henüz gönderi yok</td></tr>`}
+    ${vids.map((v, i) => `<tr data-igid="${esc(v.id)}"><td>${i + 1}</td><td class="igk">${(v.kapak || v.thumbnail_url || v.media_url) ? `<img src="${esc(v.kapak || v.thumbnail_url || v.media_url)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'igph',textContent:'🎬'}))">` : `<span class="igph">🎬</span>`}</td><td class="igb">${esc(v.baslik || "(açıklamasız)")}<div class="mut" style="font-size:11px">${v.zaman ? new Date(v.zaman).toLocaleString("tr-TR", { dateStyle: "short", timeStyle: "short" }) : ""} · ❤ ${sayi(v.begeni)} · 💬 ${sayi(v.yorum)}</div></td><td>${sayi(v.izlenme)}</td><td>${sayi(v.kaydetme)}</td><td>${sayi(v.paylasim)}</td><td>${v.ort_izleme_sn != null ? v.ort_izleme_sn + " sn" : "—"}</td></tr>`).join("") || `<tr><td colspan="7" class="mut">Henüz gönderi yok</td></tr>`}
     </tbody></table></div></div>`;
   return s;
 }
@@ -320,7 +320,6 @@ async function igYenile() {
 }
 function baglaInstagram() {
   if ($("#igguncelle") && !window._igOto) { window._igOto = true; api("ig_refresh").then((r) => { if (r && r.instagram) { O.instagram = r.instagram; render(); } }).catch(() => {}); }
-  document.querySelectorAll("[data-igurl]").forEach((r) => r.dataset.igurl && (r.onclick = () => window.open(r.dataset.igurl, "_blank", "noopener")));
   const b = $("#igguncelle"); if (b) b.onclick = async () => { b.disabled = true; b.textContent = "Güncelleniyor…"; try { await igYenile(); } catch (e) { alert(e.message || "Hata"); } finally { b.disabled = false; b.textContent = "Şimdi güncelle"; } };
 }
 function renderAnaliz() {

@@ -1,4 +1,4 @@
-// panel sürümü: 2026-11-12b
+// panel sürümü: 2026-11-25a
 self.addEventListener("install", (e) => self.skipWaiting());
 self.addEventListener("activate", (e) => self.clients.claim());
 self.addEventListener("fetch", () => {});

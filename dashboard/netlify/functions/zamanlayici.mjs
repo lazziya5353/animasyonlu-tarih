@@ -16,9 +16,13 @@ export default async () => {
   const meta = await r.json();
   const q = JSON.parse(Buffer.from(meta.content, "base64").toString("utf8"));
   const now = Date.now(); let n = 0;
+  // Instagram API sınırı: 24 saatte en fazla 25 paylaşım (güvenli tarafta 24)
+  let son24 = (q.isler || []).filter((x) => ["gonderildi", "tamam"].includes(x.durum) && now - new Date(x.guncelleme || x.zaman).getTime() < 864e5).length;
   for (const it of q.isler || []) {
-    if (it.durum !== "bekliyor" || new Date(it.zaman).getTime() > now) continue;
-    const d = await gh(`/repos/${REPO}/actions/workflows/yayinci.yml/dispatches`, { method: "POST", body: JSON.stringify({ ref: "main", inputs: { slug: it.slug, kuyruk: it.id } }) });
+    if (it.durum !== "bekliyor" || new Date(it.zaman).getTime() > now) continue;   // yalnız panelden planlanmış işler (durum=bekliyor)
+    if (son24 >= 24) { it.mesaj = "24 saatlik paylaşım sınırı dolu, sırada bekliyor"; n++; continue; }
+    const d = await gh(`/repos/${REPO}/actions/workflows/yayinci.yml/dispatches`, { method: "POST", body: JSON.stringify({ ref: "main", inputs: { slug: it.slug || "", kuyruk: it.id } }) });
+    if (d.ok) son24++;
     it.durum = d.ok ? "gonderildi" : "hata"; it.mesaj = d.ok ? "Yayıncı başlatıldı" : `Başlatılamadı (${d.status})`; it.guncelleme = new Date().toISOString(); n++;
   }
   if (n) {

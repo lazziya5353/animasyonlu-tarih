@@ -50,10 +50,32 @@ def hesap():
     return get("me", fields="user_id,username,followers_count,media_count")
 
 
-def reels_yayinla(video_url, aciklama, kapak_ms=None, log=print):
-    """Herkese açık (kısa süreli imzalı da olabilir) bir video adresinden Reels paylaşır. Döner: {"id", "permalink"}"""
-    p = {"media_type": "REELS", "video_url": video_url, "caption": aciklama[:2200], "share_to_feed": "true"}
-    if kapak_ms is not None: p["thumb_offset"] = str(int(kapak_ms))
+def baglan_host():
+    """Token Instagram ile Giriş ya da Facebook ile Giriş olabilir; çalışan API adresini seçer."""
+    global HOST
+    son = None
+    for h in [HOST, "graph.facebook.com" if HOST != "graph.facebook.com" else "graph.instagram.com"]:
+        HOST = h
+        try: get(uid(), fields="id,username"); return h
+        except IGHata as e: son = e
+    raise son
+
+
+def yayin_kotasi():
+    """Son 24 saatte API ile yapılan paylaşım sayısı (limit 25). Bilinmiyorsa None."""
+    try:
+        d = (get(f"{uid()}/content_publishing_limit", fields="quota_usage,config").get("data") or [{}])[0]
+        return d.get("quota_usage"), (d.get("config") or {}).get("quota_total", 25)
+    except IGHata:
+        return None, 25
+
+
+def reels_yayinla(video_url, aciklama, kapak_ms=None, log=print, akisa=True, kapak_url=None, deneme=False):
+    """Herkese açık (kısa süreli imzalı da olabilir) bir video adresinden Reels paylaşır. Döner: {"id", "permalink"}
+    deneme=True: sadece kap oluşturur ve işlenmesini bekler, PAYLAŞMAZ."""
+    p = {"media_type": "REELS", "video_url": video_url, "caption": aciklama[:2200], "share_to_feed": "true" if akisa else "false"}
+    if kapak_url: p["cover_url"] = kapak_url
+    elif kapak_ms is not None: p["thumb_offset"] = str(int(kapak_ms))
     cont = post(f"{uid()}/media", **p)["id"]; log(f"Kap oluşturuldu: {cont}")
     for k in range(40):                                   # en fazla ~10 dk bekle
         time.sleep(15)
@@ -63,6 +85,7 @@ def reels_yayinla(video_url, aciklama, kapak_ms=None, log=print):
         if st.get("status_code") in ("ERROR", "EXPIRED"): raise IGHata(f"Instagram videoyu işleyemedi: {st.get('status') or st.get('status_code')}")
     else:
         raise IGHata("Instagram videoyu 10 dakikada işleyemedi")
+    if deneme: return {"id": None, "kap": cont, "permalink": None, "deneme": True}
     mid = post(f"{uid()}/media_publish", creation_id=cont)["id"]
     bilgi = get(mid, fields="permalink,timestamp")
     return {"id": mid, "permalink": bilgi.get("permalink"), "zaman": bilgi.get("timestamp")}

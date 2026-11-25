@@ -22,6 +22,7 @@ const WORKFLOWS = {
   yonetici: "yonetici.yml",
   quiz: "quiz.yml",
   "harf-bul": "harf_bul.yml",
+  haftalik: "weekly_rapor.yml",
 };
 const ASAMALAR = ["senaryo", "ses", "gorsel", "kurgu", "hepsi"];
 const b64 = (o) => Buffer.from(JSON.stringify(o, null, 1)).toString("base64");
@@ -136,10 +137,12 @@ async function igRefresh(tok, eski) {
   const medya = ((await get(`${uid}/media`, { fields: "id,caption,media_type,media_product_type,permalink,thumbnail_url,media_url,timestamp,like_count,comments_count", limit: 50 })).data || []).slice(0, 50);
   const ist = async (id, met) => { try { const r = await get(`${id}/insights`, { metric: met.join(",") }); return Object.fromEntries((r.data || []).map((x) => [x.name, deger(x)])); } catch {}
     const o = {}; await Promise.all(met.map((m) => get(`${id}/insights`, { metric: m }).then((r) => (r.data || []).forEach((x) => (o[x.name] = deger(x)))).catch(() => yok.add(m)))); return o; };
-  const liste = await Promise.all(medya.map(async (p) => { const st = await ist(p.id, p.media_product_type === "REELS" ? [...IG_MEDYA, ...IG_REELS] : IG_MEDYA), ort = st.ig_reels_avg_watch_time;
+  const liste = await Promise.all(medya.map(async (p) => { const [st, ek] = await Promise.all([ist(p.id, p.media_product_type === "REELS" ? [...IG_MEDYA, ...IG_REELS] : IG_MEDYA),
+      get(`${p.id}/insights`, { metric: "follows,profile_visits" }).then((r) => Object.fromEntries((r.data || []).map((x) => [x.name, deger(x)]))).catch(() => ({}))]), ort = st.ig_reels_avg_watch_time;
     return { id: p.id, baslik: (p.caption || "").trim().split("\n")[0].slice(0, 90), zaman: p.timestamp, tur: p.media_product_type || p.media_type, medya_turu: p.media_type, url: p.permalink,
       kapak: p.thumbnail_url || (p.media_type === "IMAGE" ? p.media_url : null), begeni: p.like_count ?? st.likes, yorum: p.comments_count ?? st.comments,
-      izlenme: st.views, erisim: st.reach, kaydetme: st.saved, paylasim: st.shares, etkilesim: st.total_interactions, ort_izleme_sn: typeof ort === "number" ? Math.round(ort / 100) / 10 : null }; }));
+      izlenme: st.views, erisim: st.reach, kaydetme: st.saved, paylasim: st.shares, etkilesim: st.total_interactions, ort_izleme_sn: typeof ort === "number" ? Math.round(ort / 100) / 10 : null, takip: ek.follows ?? null, profil_ziyaret: ek.profile_visits ?? null }; }));
+  if (!liste.some((v) => v.takip != null)) yok.add("follows (gönderi başına)");
   liste.sort((a, b) => (b.izlenme || 0) - (a.izlenme || 0)); out.medya = liste;
   const ort = (a) => a.reduce((s, x) => s + x, 0) / a.length, saat = {}, gun = {};
   for (const v of liste) { if (!v.zaman || !v.izlenme) continue; const t = new Date(Date.parse(v.zaman.slice(0, 19) + "Z") + 3 * 3600e3);
@@ -147,6 +150,51 @@ async function igRefresh(tok, eski) {
   out.en_iyi_saatler = Object.entries(saat).sort((a, b) => ort(b[1]) - ort(a[1])).slice(0, 3).map(([s, v]) => ({ saat: +s, ort_izlenme: Math.round(ort(v)), adet: v.length }));
   const gs = Object.entries(gun).sort((a, b) => ort(b[1]) - ort(a[1])); if (gs.length) out.en_iyi_gun = IG_GUN[+gs[0][0]];
   out.desteklenmeyen = [...yok].sort(); return out;
+}
+
+// ───────── Instagram canlı işlemler (yorumlar, cevap, gizle) ─────────
+const IG_UID = () => process.env.IG_USER_ID || "17841480918392807";
+async function igTok() { const enc = await igStore().get("tok").catch(() => null); if (!enc) return null; try { return igCoz(enc); } catch { return null; } }
+let IG_HOST = null;
+async function igHost(tok) { // token türüne göre çalışan adres (Instagram ile Giriş / Facebook ile Giriş)
+  if (IG_HOST) return IG_HOST;
+  for (const h of ["graph.instagram.com", "graph.facebook.com"]) {
+    const r = await fetch(`https://${h}/v25.0/${IG_UID()}?fields=id,username`, { headers: { Authorization: `Bearer ${tok}` } });
+    if (r.ok) { IG_HOST = h; return h; }
+  }
+  throw new Error("Instagram anahtarı geçersiz/süresi dolmuş");
+}
+async function igCagir(tok, method, yol, p = {}) {
+  const h = await igHost(tok), get = method === "GET";
+  const r = await fetch(`https://${h}/v25.0/${yol}${get ? "?" + new URLSearchParams(p) : ""}`, { method, headers: { Authorization: `Bearer ${tok}`, ...(get ? {} : { "content-type": "application/x-www-form-urlencoded" }) }, body: get ? undefined : new URLSearchParams(p) });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(`Instagram ${r.status}: ${j.error?.message || ""}`.slice(0, 300));
+  return j;
+}
+const FORMATLAR = ["Quiz", "Harflerden Bul", "Padişah serisi", "Harita/Gezi/Yer", "Diğer"];
+// kural tabanlı, kısa ve doğal cevap önerisi (ücretsiz)
+function kuralOneri(metin, id = "") {
+  const t = String(metin || "").toLocaleLowerCase("tr").trim(), sec = (a) => a[[...String(id)].reduce((s, c) => s + c.charCodeAt(0), 0) % a.length];
+  const skor = t.match(/(\d{1,2})\s*(?:\/|de|da|'de|'da|’de|’da)\s*(\d{1,2})\b/);
+  if (skor && +skor[1] > 0 && +skor[2] > 0) { const o = Math.min(+skor[1], +skor[2]) / Math.max(+skor[1], +skor[2]);
+    return o >= 0.8 ? sec(["helal olsun 👏", "efsane skor 🔥 helal", "bu ne bilgi böyle 👏"]) : o >= 0.5 ? sec(["fena değil 👏 bir dahakine full yaparsın", "güzel skor 💪"]) : sec(["bir dahaki sefere daha iyi olur 💪", "olsun, bir sonrakinde açarsın 💪"]); }
+  if (/(\d+)\s*(doğru|dogru|bildim|puan|tane)/.test(t)) return sec(["helal olsun 👏", "güzel 👏 devamı geliyor", "iyi iş 💪"]);
+  if (/(yanlış|yanlis|hata|öyle değil|degil)/.test(t)) return sec(["uyardığın için sağ ol 🙏 bakıyoruz", "haklı olabilirsin, kontrol edip düzelteceğiz 🙏"]);
+  if (t.includes("?")) return sec(["güzel soru 🙏 bununla ilgili de bir video gelebilir", "not aldık, yakında 👀"]);
+  if (/(harika|süper|mükemmel|muhteşem|eline sağlık|emeğine|güzel|bayıldım|efsane|helal)/.test(t)) return sec(["çok teşekkürler 🙏", "sağ ol 😊 daha nicesi gelecek", "teşekkürler, iyi ki varsın 🙌"]);
+  if (/(yap|gelsin|bekliyoruz|anlat|konu)/.test(t)) return sec(["not aldık 👀 sıradakilere ekliyoruz", "güzel fikir, listeye ekledik 🙌"]);
+  if (!/[a-zçğıöşü0-9]/i.test(t)) return sec(["❤️", "🙌", "🙏"]);
+  return sec(["teşekkürler 🙌", "sağ ol 🙏", "yorumun için teşekkürler 😊"]);
+}
+async function geminiOneri(liste) { // isteğe bağlı: GEMINI_API_KEY varsa tek seferde toplu öneri
+  const key = process.env.GEMINI_API_KEY; if (!key || !liste.length) return 0;
+  const istem = "Bir Türk tarih Instagram sayfası (@animasyon.tarih) adına yorumlara cevap yaz. Çok kısa (en fazla 10 kelime), samimi, gündelik, yapay zekâ gibi durmayan, gerekirse 1 emoji. Örnek tarz: \"helal olsun 👏\", \"bir dahaki sefere daha iyi olur 💪\". JSON dizi döndür: [{\"id\":\"...\",\"cevap\":\"...\"}].\n" + JSON.stringify(liste.map((y) => ({ id: y.id, yorum: String(y.metin || "").slice(0, 300), video: y.medya?.baslik })));
+  const r = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent", { method: "POST", signal: AbortSignal.timeout(7000),
+    headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify({ contents: [{ parts: [{ text: istem }] }], generationConfig: { temperature: 0.7, responseMimeType: "application/json" } }) });
+  if (!r.ok) return 0;
+  const j = await r.json(); let a = []; try { a = JSON.parse((j.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("")); } catch { return 0; }
+  let n = 0; for (const x of Array.isArray(a) ? a : []) { const y = liste.find((z) => z.id === String(x.id)); if (y && x.cevap) { y.oneri = String(x.cevap).slice(0, 200); y.ai = true; n++; } }
+  return n;
 }
 
 export default async (req) => {
@@ -187,6 +235,8 @@ export default async (req) => {
           readJson("data/analiz.json"), readJson("data/yorumlar.json"), readJson("data/instagram.json"),
         ]);
         const igMeta = await igStore().get("meta", { type: "json" }).catch(() => null);
+        const [igFormat, formatKurallari, haftalik, kuyruk] = await Promise.all([igStore().get("format", { type: "json" }).catch(() => null),
+          readJson("data/format_kurallari.json"), readJson("data/haftalik_rapor.json"), readJson("data/yayin_kuyrugu.json")]);
         const runs = {};
         await Promise.all(Object.entries(WORKFLOWS).map(async ([k, f]) => {
           const r = await gh(`/repos/${REPO}/actions/workflows/${f}/runs?per_page=1`);
@@ -199,7 +249,8 @@ export default async (req) => {
         const servis = {};
         kayit.filter((x) => x.zaman.startsWith(ay)).forEach((x) => (servis[x.servis] = (servis[x.servis] || 0) + x.usd));
         const projeler = (list || []).filter((x) => x.type === "dir").map((x) => x.name);
-        return json({ status: status || {}, runs, report, projeler, basliklar: await basliklar(projeler).catch(() => ({})), instagram, igToken: igMeta ? { kayitli: true, zaman: igMeta.zaman, son4: igMeta.son4 } : null, arsiv: ((await getStore({ name: "ayar", consistency: "strong" }).get("arsiv", { type: "json" })) || []).filter((x) => projeler.includes(x)), analiz,
+        return json({ status: status || {}, runs, report, projeler, basliklar: await basliklar(projeler).catch(() => ({})), instagram, igToken: igMeta ? { kayitli: true, zaman: igMeta.zaman, son4: igMeta.son4 } : null, igFormat: igFormat || {}, formatKurallari, haftalik,
+          kuyruk: (kuyruk?.isler || []).slice(-60), arsiv: ((await getStore({ name: "ayar", consistency: "strong" }).get("arsiv", { type: "json" })) || []).filter((x) => projeler.includes(x)), analiz,
           yorumlar: { bekleyen: (yorumlar?.yorumlar || []).filter((y) => y.durum === "yeni").slice(0, 40), fikirler: (yorumlar?.fikirler || []).slice(-8).reverse() },
           harcama: { aylik, servis, butce: Number(process.env.AYLIK_BUTCE_USD || 15), son: kayit.slice(-8).reverse() } });
       }
@@ -410,24 +461,76 @@ export default async (req) => {
         await writeFile(`projects/${b.slug}/script.json`, b64(sc), `Paylaşım metni: ${b.slug}`);
         return json({ ok: true });
       }
-      case "planla": { // Instagram paylaşımını ileri bir saate planla (zamanlayıcı fonksiyon 10 dk'da bir bakar)
-        if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);
+      case "planla": { // Instagram paylaşımını ileri bir saate planla / düzenle (zamanlayıcı fonksiyon 10 dk'da bir bakar; yalnız buradan planlananlar paylaşılır)
+        const url = String(b.url || "").trim(), kapakUrl = String(b.kapak_url || "").trim();
+        if (!validSlug(b.slug) && !url) return json({ hata: "Video seç ya da adres gir" }, 400);
+        if (url && !/^https:\/\/\S{8,800}$/.test(url)) return json({ hata: "Geçersiz video adresi (https ile başlamalı)" }, 400);
+        if (kapakUrl && !/^https:\/\/\S{8,800}$/.test(kapakUrl)) return json({ hata: "Geçersiz kapak adresi" }, 400);
         const t = new Date(b.zaman); const now = Date.now();
         if (isNaN(t) || t < now - 60e3 || t > now + 60 * 864e5) return json({ hata: "Geçersiz zaman (en fazla 60 gün sonrası)" }, 400);
         const q = (await readJson("data/yayin_kuyrugu.json")) || { isler: [] };
-        if (q.isler.some((x) => x.slug === b.slug && x.durum === "bekliyor")) return json({ hata: "Bu video için zaten bekleyen bir plan var" }, 400);
+        const ayni24 = q.isler.filter((x) => x.id !== b.id && ["bekliyor", "gonderildi", "tamam"].includes(x.durum) && Math.abs(new Date(x.zaman) - t) < 864e5).length;
+        if (ayni24 >= 25) return json({ hata: "Instagram 24 saatte en fazla 25 paylaşıma izin veriyor; başka bir saat seç" }, 400);
+        const alan = { zaman: t.toISOString(), slug: validSlug(b.slug) ? b.slug : undefined, url: url || undefined, kapak_url: kapakUrl || undefined,
+          kapak_ms: Number.isFinite(Number(b.kapak_ms)) && b.kapak_ms !== "" && b.kapak_ms !== null ? Math.max(0, Math.min(90000, Math.round(Number(b.kapak_ms)))) : undefined,
+          caption: typeof b.caption === "string" ? b.caption.slice(0, 2200) : undefined, hashtag: typeof b.hashtag === "string" ? b.hashtag.slice(0, 600) : undefined,
+          akis: b.akis === undefined ? undefined : b.akis !== false, ad: typeof b.ad === "string" ? b.ad.slice(0, 90) : undefined };
+        if (b.id) { // düzenle: yalnız bekleyen iş
+          const it = q.isler.find((x) => x.id === b.id && x.durum === "bekliyor"); if (!it) return json({ hata: "Plan bulunamadı ya da artık düzenlenemez" }, 404);
+          for (const [k, v] of Object.entries(alan)) if (v === undefined) delete it[k]; else it[k] = v;
+          it.mesaj = "Düzenlendi"; it.guncelleme = new Date().toISOString();
+          await writeFile("data/yayin_kuyrugu.json", b64(q), `Plan düzenlendi → ${t.toISOString()}`); return json({ ok: true, id: b.id });
+        }
+        if (!url && q.isler.some((x) => x.slug === b.slug && !x.url && x.durum === "bekliyor")) return json({ hata: "Bu video için zaten bekleyen bir plan var" }, 400);
         const id = `${Date.now().toString(36)}-${crypto.randomBytes(3).toString("hex")}`;
-        q.isler.push({ id, slug: b.slug, platform: "instagram", zaman: t.toISOString(), durum: "bekliyor" });
+        q.isler.push(JSON.parse(JSON.stringify({ id, platform: "instagram", ...alan, durum: "bekliyor", kaynak: "panel", olusturma: new Date().toISOString() })));
         q.isler = q.isler.slice(-100);
-        await writeFile("data/yayin_kuyrugu.json", b64(q), `Plan: ${b.slug} → ${t.toISOString()}`);
+        await writeFile("data/yayin_kuyrugu.json", b64(q), `Plan: ${alan.slug || "video"} → ${t.toISOString()}`);
         return json({ ok: true, id });
+      }
+      case "ig_videolar": { // yayınlanabilir videolar: GitHub sürümleri video-*
+        const r = await ghJson(`/repos/${REPO}/releases?per_page=100`);
+        const v = (r || []).filter((x) => x.tag_name?.startsWith("video-")).map((x) => { const a = (x.assets || []).find((y) => y.name.endsWith(".mp4"));
+          return a ? { slug: x.tag_name.slice(6), url: a.browser_download_url, boyut: a.size, zaman: a.updated_at } : null; }).filter(Boolean);
+        const ad = await basliklar(v.map((x) => x.slug).filter(validSlug)).catch(() => ({}));
+        v.forEach((x) => (x.ad = ad[x.slug] || x.slug)); return json({ videolar: v });
+      }
+      case "ig_format": { // video formatını elle değiştir ("" = otomatik)
+        if (!/^\d{5,30}$/.test(String(b.id || ""))) return json({ hata: "Geçersiz video" }, 400);
+        if (b.format && !FORMATLAR.includes(b.format)) return json({ hata: "Geçersiz format" }, 400);
+        const F = (await igStore().get("format", { type: "json" }).catch(() => null)) || {};
+        if (b.format) F[b.id] = b.format; else delete F[b.id];
+        await igStore().setJSON("format", F); return json({ ok: true, igFormat: F });
+      }
+      case "ig_yorumlar": { // son ~20 gönderinin yorumları (canlı), cevaplanmamışları işaretle + cevap önerisi
+        const tok = await igTok(); if (!tok) return json({ hata: "Kayıtlı Instagram token'ı yok; önce token'ı kaydet" }, 400);
+        const ben = (await igCagir(tok, "GET", IG_UID(), { fields: "username" })).username;
+        const medya = (await igCagir(tok, "GET", `${IG_UID()}/media`, { fields: "id,caption,thumbnail_url,media_url,media_type,permalink,comments_count", limit: 20 })).data || [];
+        const liste = []; let hatali = 0;
+        await Promise.all(medya.filter((m) => m.comments_count > 0).map(async (m) => {
+          try { const c = await igCagir(tok, "GET", `${m.id}/comments`, { fields: "id,text,username,timestamp,like_count,hidden,replies{id,username,text,timestamp}", limit: 50 });
+            for (const y of c.data || []) { if (y.username === ben) continue; const cev = (y.replies?.data || []).filter((r) => r.username === ben);
+              liste.push({ id: y.id, metin: y.text, kullanici: y.username, zaman: y.timestamp, begeni: y.like_count, gizli: !!y.hidden, cevaplandi: cev.length > 0, cevap: cev[0]?.text || "",
+                medya: { id: m.id, baslik: (m.caption || "").trim().split("\n")[0].slice(0, 80), kapak: m.thumbnail_url || (m.media_type === "IMAGE" ? m.media_url : null), url: m.permalink } }); }
+          } catch { hatali++; } }));
+        liste.sort((a, b2) => String(b2.zaman).localeCompare(String(a.zaman)));
+        for (const y of liste) y.oneri = kuralOneri(y.metin, y.id);
+        const ai = await geminiOneri(liste.filter((y) => !y.cevaplandi && !y.gizli).slice(0, 25)).catch(() => 0);
+        return json({ ok: true, ben, yorumlar: liste.slice(0, 200), ai, hatali });
+      }
+      case "ig_yanitla": case "ig_gizle": {
+        if (!/^\d{5,30}$/.test(String(b.id || ""))) return json({ hata: "Geçersiz yorum" }, 400);
+        const tok = await igTok(); if (!tok) return json({ hata: "Kayıtlı Instagram token'ı yok" }, 400);
+        if (b.action === "ig_gizle") { await igCagir(tok, "POST", String(b.id), { hide: b.goster ? "false" : "true" }); return json({ ok: true }); }
+        const m = String(b.mesaj || "").trim(); if (!m || m.length > 1000) return json({ hata: "Cevap boş ya da çok uzun" }, 400);
+        const r = await igCagir(tok, "POST", `${b.id}/replies`, { message: m }); return json({ ok: true, id: r.id });
       }
       case "plan_iptal": {
         const q = (await readJson("data/yayin_kuyrugu.json")) || { isler: [] };
         const it = q.isler.find((x) => x.id === b.id && x.durum === "bekliyor");
         if (!it) return json({ hata: "Plan bulunamadı" }, 404);
-        it.durum = "iptal";
-        await writeFile("data/yayin_kuyrugu.json", b64(q), `Plan iptal: ${it.slug}`);
+        it.durum = "iptal"; it.guncelleme = new Date().toISOString();
+        await writeFile("data/yayin_kuyrugu.json", b64(q), `Plan iptal: ${it.slug || "video"}`);
         return json({ ok: true });
       }
       case "yorum_karar": { // [{id, durum: onaylandi|gizle|gecildi, taslak}]

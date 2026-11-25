@@ -1,0 +1,9 @@
+{
+ "aciklama": "Video formatı kuralları: sırayla bakılır, başlık/açıklama (küçük harf) içinde kelime ya da desen (regex) geçen ilk format seçilir; hiçbiri tutmazsa 'Diğer'. Panelde video detayından elle de değiştirilebilir.",
+ "sira": [
+  {"ad": "Harflerden Bul", "kelimeler": ["harflerden bul", "harf-bul", "harf bul", "harflerden"]},
+  {"ad": "Quiz", "kelimeler": ["quiz", "her harfe", "harf", "soru"]},
+  {"ad": "Padişah serisi", "kelimeler": ["padişah", "padisah", "tuğra", "tugra", "sultan", "osman gazi", "orhan gazi", "murad", "bayezid", "mehmed", "selim", "süleyman", "kanuni", "fatih", "yavuz", "abdülhamid", "abdülmecid", "mahmud"], "desenler": ["\\b\\d{1,2}\\s*/\\s*36\\b"]},
+  {"ad": "Harita/Gezi/Yer", "kelimeler": ["harita", "gezi", "kulesi", "camii", "sarayı", "üsküdar", "galata", "kız kulesi", "şehri", "nerede", "yer"]}
+ ]
+}

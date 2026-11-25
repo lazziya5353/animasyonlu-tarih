@@ -10,6 +10,7 @@ OUT = os.path.join(ROOT, "data", "instagram.json")
 GUN = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"]
 MEDYA_MET = ["views", "reach", "saved", "shares", "total_interactions", "likes", "comments"]
 REELS_MET = ["ig_reels_avg_watch_time", "ig_reels_video_view_total_time"]
+EK_MET = ["follows", "profile_visits"]   # Reels için çoğu zaman desteklenmiyor; olmazsa sessizce atlanır
 
 
 def oku(p, bos):
@@ -104,13 +105,19 @@ def main():
         reels = p.get("media_product_type") == "REELS"
         met = MEDYA_MET + (REELS_MET if reels else [])
         st, y = medya_ist(p["id"], met); med_yok.update(y)
+        try:
+            r = IG.get(f"{p['id']}/insights", metric=",".join(EK_MET))
+            for x in r.get("data", []): st[x["name"]] = deger(x)
+        except IG.IGHata:
+            pass
         ort = st.get("ig_reels_avg_watch_time")
         liste.append({"id": p["id"], "baslik": (p.get("caption") or "").strip().split("\n")[0][:90], "zaman": p.get("timestamp"),
                       "tur": p.get("media_product_type") or p.get("media_type"), "medya_turu": p.get("media_type"), "url": p.get("permalink"),
                       "kapak": p.get("thumbnail_url") or (p.get("media_url") if p.get("media_type") == "IMAGE" else None),
                       "begeni": p.get("like_count", st.get("likes")), "yorum": p.get("comments_count", st.get("comments")),
                       "izlenme": st.get("views"), "erisim": st.get("reach"), "kaydetme": st.get("saved"), "paylasim": st.get("shares"),
-                      "etkilesim": st.get("total_interactions"), "ort_izleme_sn": round(ort / 1000, 1) if isinstance(ort, (int, float)) else None})
+                      "etkilesim": st.get("total_interactions"), "ort_izleme_sn": round(ort / 1000, 1) if isinstance(ort, (int, float)) else None,
+                      "takip": st.get("follows"), "profil_ziyaret": st.get("profile_visits")})
     liste.sort(key=lambda v: v["izlenme"] or 0, reverse=True)
     out["medya"] = liste
 
@@ -129,6 +136,7 @@ def main():
             gun.setdefault(t.weekday(), []).append(v["izlenme"])
     if gun:
         g = max(gun.items(), key=lambda kv: statistics.mean(kv[1]))[0]; out["en_iyi_gun"] = GUN[g]
+    if not any(v.get("takip") is not None for v in liste): med_yok.add("follows (gönderi başına)")
     out["desteklenmeyen"] = sorted(set(yok) | med_yok)
     json.dump(out, open(OUT, "w"), ensure_ascii=False, indent=1)
     msg = f"{out['hesap']['takipci']} takipçi · {len(liste)} gönderi analiz edildi"

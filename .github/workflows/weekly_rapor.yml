@@ -1,0 +1,28 @@
+name: "Haftalık Instagram Raporu"
+on:
+  schedule:
+    - cron: "10 6 * * 1"   # Her pazartesi 09:10 (İstanbul)
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: repo-yazma, cancel-in-progress: false }
+jobs:
+  rapor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Rapor yaz
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/haftalik_rapor.py
+      - name: Kaydet
+        if: always()
+        run: |
+          git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
+          git add data; git commit -m "Haftalık Instagram raporu [skip netlify]" || exit 0
+          (git pull --rebase || (git rebase --abort; git pull --no-rebase --no-edit -X ours)) && git push
