@@ -494,7 +494,8 @@ def video(spath, wav, out):
             durum.clear() if len(durum) > 12 else None; durum[k] = im
         return durum[k]
     giris = B.copy(); dg = ImageDraw.Draw(giris); KAYIT.clear()
-    blok(dg, T, FORMATLAR[fmt], "bas", 130, (60, 760, 1020, 1060), 2, T.acc, "g1", 60)
+    tek = sigdir(dg, FORMATLAR[fmt], T, "bas", 130, 940, 1, 84)  # once tek satir; sigmazsa iki satir
+    blok(dg, T, FORMATLAR[fmt], "bas", 130, (60, 760, 1020, 1060), 1 if len(tek[1]) == 1 and dg.textlength(tek[1][0], font=tek[0]) <= 940 else 2, T.acc, "g1", 60)
     blok(dg, T, f"{n} SORU", "kalin", 60, (60, 1080, 1020, 1160), 1, T.txt, "g2")
     blok(dg, T, "KAÇINI BİLECEKSİN?", "kalin", 46, (60, 1170, 1020, 1240), 1, T.mut, "g3")
     nz = sum(q.get("zorluk") == "zor" for q in Q)
