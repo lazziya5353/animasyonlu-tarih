@@ -1,0 +1,69 @@
+{
+ "slug": "bu-kim-1",
+ "format": "bu-kim",
+ "tema": "tarih",
+ "baslik": "",
+ "sorular": [
+  {
+   "zorluk": "kolay",
+   "ipuclari": [
+    "Yeniçeri olarak orduya katıldı.",
+    "Üç padişah döneminde yüzlerce yapı inşa etti.",
+    "Edirne'deki Selimiye Camii onun eseridir."
+   ],
+   "cevap": "Mimar Sinan",
+   "alt_bilgi": "Osmanlı baş mimarı · ö. 1588"
+  },
+  {
+   "zorluk": "orta",
+   "ipuclari": [
+    "Osmanlı denizcisi ve haritacısıdır.",
+    "Kitab-ı Bahriye adlı eseri yazdı.",
+    "1513'te çizdiği dünya haritası Amerika'yı gösterir."
+   ],
+   "cevap": "Piri Reis",
+   "alt_bilgi": "Osmanlı amirali · ö. 1553"
+  },
+  {
+   "zorluk": "kolay",
+   "ipuclari": [
+    "On yedinci yüzyılda yaşadı.",
+    "Yaklaşık elli yıl boyunca gezdi.",
+    "On ciltlik Seyahatname'nin yazarıdır."
+   ],
+   "cevap": "Evliya Çelebi",
+   "alt_bilgi": "Seyahatname · 1611 – 1682 civarı"
+  },
+  {
+   "zorluk": "orta",
+   "ipuclari": [
+    "Kardeşi Oruç Reis'le denizlere açıldı.",
+    "Kaptan-ı Derya oldu.",
+    "1538'de Preveze Deniz Savaşı'nı kazandı."
+   ],
+   "cevap": "Barbaros Hayreddin Paşa",
+   "alt_bilgi": "Kaptan-ı Derya · ö. 1546"
+  },
+  {
+   "zorluk": "kolay",
+   "ipuclari": [
+    "Büyük Selçuklu sultanıdır.",
+    "Babası Çağrı Bey'dir.",
+    "1071'de Malazgirt'te Bizans'ı yendi."
+   ],
+   "cevap": "Alparslan",
+   "alt_bilgi": "Malazgirt · 26 Ağustos 1071"
+  },
+  {
+   "zorluk": "zor",
+   "ipuclari": [
+    "Uluğ Bey'in rasathanesinde çalıştı.",
+    "Fatih'in davetiyle İstanbul'a geldi.",
+    "Ayasofya Medresesi'nde ders verdi."
+   ],
+   "cevap": "Ali Kuşçu",
+   "alt_bilgi": "Astronom ve matematikçi · ö. 1474"
+  }
+ ],
+ "durum": "test"
+}

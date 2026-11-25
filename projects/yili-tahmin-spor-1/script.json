@@ -1,0 +1,81 @@
+{
+ "slug": "yili-tahmin-spor-1",
+ "format": "yili-tahmin",
+ "tema": "spor",
+ "baslik": "",
+ "sorular": [
+  {
+   "zorluk": "kolay",
+   "soru": "Galatasaray UEFA Kupası'nı hangi yıl kazandı?",
+   "secenekler": [
+    1999,
+    2000,
+    2001,
+    2002
+   ],
+   "dogru": 1,
+   "alt_bilgi": "17 Mayıs 2000 · Kopenhag"
+  },
+  {
+   "zorluk": "kolay",
+   "soru": "Türkiye Dünya Kupası'nda üçüncülüğü hangi yıl kazandı?",
+   "secenekler": [
+    2002,
+    1954,
+    2008,
+    1998
+   ],
+   "dogru": 0,
+   "alt_bilgi": "Güney Kore – Japonya 2002"
+  },
+  {
+   "zorluk": "orta",
+   "soru": "İlk FIFA Dünya Kupası hangi yıl düzenlendi?",
+   "secenekler": [
+    1924,
+    1934,
+    1928,
+    1930
+   ],
+   "dogru": 3,
+   "alt_bilgi": "Uruguay · 1930"
+  },
+  {
+   "zorluk": "orta",
+   "soru": "Modern olimpiyatlar ilk kez hangi yıl yapıldı?",
+   "secenekler": [
+    1900,
+    1896,
+    1912,
+    1886
+   ],
+   "dogru": 1,
+   "alt_bilgi": "Atina · 1896"
+  },
+  {
+   "zorluk": "zor",
+   "soru": "Naim Süleymanoğlu ilk olimpiyat altınını hangi yıl kazandı?",
+   "secenekler": [
+    1984,
+    1992,
+    1988,
+    1996
+   ],
+   "dogru": 2,
+   "alt_bilgi": "Seul Olimpiyatları · 1988"
+  },
+  {
+   "zorluk": "orta",
+   "soru": "Liverpool, İstanbul'daki unutulmaz finali hangi yıl kazandı?",
+   "secenekler": [
+    2005,
+    2003,
+    2007,
+    2009
+   ],
+   "dogru": 0,
+   "alt_bilgi": "25 Mayıs 2005 · Atatürk Olimpiyat Stadı"
+  }
+ ],
+ "durum": "test"
+}

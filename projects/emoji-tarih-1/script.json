@@ -1,0 +1,94 @@
+{
+ "slug": "emoji-tarih-1",
+ "format": "emoji-tarih",
+ "tema": "tarih",
+ "baslik": "",
+ "sorular": [
+  {
+   "zorluk": "kolay",
+   "emoji": [
+    "⛵",
+    "⛰️",
+    "🏰",
+    "🌙"
+   ],
+   "ipucu": "Gemiler karadan yürüdü",
+   "cevap": "İstanbul'un Fethi",
+   "alt_bilgi": "29 Mayıs 1453 · Fatih"
+  },
+  {
+   "zorluk": "kolay",
+   "emoji": [
+    "🐴",
+    "🪵",
+    "⚔️",
+    "🏛️"
+   ],
+   "ipucu": "Antik bir hile",
+   "cevap": "Truva Atı",
+   "alt_bilgi": "Homeros · İlyada"
+  },
+  {
+   "zorluk": "orta",
+   "emoji": [
+    "🗺️",
+    "⛵",
+    "🌍",
+    "🧭"
+   ],
+   "ipucu": "1513",
+   "cevap": "Piri Reis Haritası",
+   "alt_bilgi": "Topkapı Sarayı'nda korunuyor"
+  },
+  {
+   "zorluk": "orta",
+   "emoji": [
+    "🌷",
+    "🎉",
+    "🏛️",
+    "📜"
+   ],
+   "ipucu": "1718 – 1730",
+   "cevap": "Lale Devri",
+   "alt_bilgi": "Patrona Halil İsyanı ile bitti"
+  },
+  {
+   "zorluk": "orta",
+   "emoji": [
+    "⚓",
+    "🚢",
+    "💥",
+    "🌊"
+   ],
+   "ipucu": "18 Mart",
+   "cevap": "Çanakkale Deniz Zaferi",
+   "alt_bilgi": "18 Mart 1915"
+  },
+  {
+   "zorluk": "kolay",
+   "emoji": [
+    "🚀",
+    "🌕",
+    "👨‍🚀",
+    "👣"
+   ],
+   "ipucu": "1969",
+   "cevap": "Ay'a İlk İniş",
+   "alt_bilgi": "20 Temmuz 1969 · Apollo 11"
+  },
+  {
+   "zorluk": "zor",
+   "emoji": [
+    "🖨️",
+    "📖",
+    "📜",
+    "⚙️"
+   ],
+   "ipucu": "Gutenberg",
+   "cevap": "Matbaanın İcadı",
+   "alt_bilgi": "1450'ler · Johannes Gutenberg"
+  }
+ ],
+ "durum": "test",
+ "arkaplan_uret": "Ottoman galleons being hauled over a hill at dusk toward a city with domes, cinematic painting, dark moody, no text"
+}

@@ -1,0 +1,93 @@
+{
+ "slug": "yili-tahmin-1",
+ "format": "yili-tahmin",
+ "tema": "tarih",
+ "baslik": "",
+ "sorular": [
+  {
+   "zorluk": "kolay",
+   "soru": "Malazgirt Savaşı hangi yıl yapıldı?",
+   "secenekler": [
+    1071,
+    1176,
+    1243,
+    1038
+   ],
+   "dogru": 0,
+   "alt_bilgi": "26 Ağustos 1071 · Alparslan"
+  },
+  {
+   "zorluk": "kolay",
+   "soru": "TBMM hangi yıl açıldı?",
+   "secenekler": [
+    1919,
+    1920,
+    1921,
+    1923
+   ],
+   "dogru": 1,
+   "alt_bilgi": "23 Nisan 1920"
+  },
+  {
+   "zorluk": "orta",
+   "soru": "Mohaç Meydan Muharebesi hangi yıl yapıldı?",
+   "secenekler": [
+    1514,
+    1538,
+    1526,
+    1529
+   ],
+   "dogru": 2,
+   "alt_bilgi": "29 Ağustos 1526 · Kanuni"
+  },
+  {
+   "zorluk": "orta",
+   "soru": "Tanzimat Fermanı hangi yıl ilan edildi?",
+   "secenekler": [
+    1856,
+    1876,
+    1808,
+    1839
+   ],
+   "dogru": 3,
+   "alt_bilgi": "3 Kasım 1839 · Gülhane"
+  },
+  {
+   "zorluk": "orta",
+   "soru": "Soyadı Kanunu hangi yıl kabul edildi?",
+   "secenekler": [
+    1928,
+    1934,
+    1926,
+    1938
+   ],
+   "dogru": 1,
+   "alt_bilgi": "21 Haziran 1934"
+  },
+  {
+   "zorluk": "zor",
+   "soru": "Kanuni Sultan Süleyman hangi yıl tahta çıktı?",
+   "secenekler": [
+    1520,
+    1512,
+    1566,
+    1481
+   ],
+   "dogru": 0,
+   "alt_bilgi": "1520 – 1566 · 46 yıl"
+  },
+  {
+   "zorluk": "zor",
+   "soru": "Kösedağ Savaşı hangi yıl yapıldı?",
+   "secenekler": [
+    1176,
+    1071,
+    1308,
+    1243
+   ],
+   "dogru": 3,
+   "alt_bilgi": "Anadolu Selçuklu – Moğol · 1243"
+  }
+ ],
+ "durum": "test"
+}

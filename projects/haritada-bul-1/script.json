@@ -1,0 +1,205 @@
+{
+ "slug": "haritada-bul-1",
+ "format": "haritada-bul",
+ "tema": "tarih",
+ "baslik": "",
+ "sorular": [
+  {
+   "zorluk": "kolay",
+   "soru": "Malazgirt Savaşı nerede yapıldı?",
+   "secenekler": [
+    {
+     "ad": "Erzurum",
+     "lon": 41.27,
+     "lat": 39.9
+    },
+    {
+     "ad": "Malazgirt",
+     "lon": 42.53,
+     "lat": 39.14
+    },
+    {
+     "ad": "Van",
+     "lon": 43.38,
+     "lat": 38.5
+    },
+    {
+     "ad": "Kars",
+     "lon": 43.1,
+     "lat": 40.6
+    }
+   ],
+   "dogru": 1,
+   "alt_bilgi": "26 Ağustos 1071 · Muş"
+  },
+  {
+   "zorluk": "orta",
+   "soru": "Antik Truva kenti nerededir?",
+   "secenekler": [
+    {
+     "ad": "Bergama",
+     "lon": 27.18,
+     "lat": 39.12
+    },
+    {
+     "ad": "Efes",
+     "lon": 27.34,
+     "lat": 37.94
+    },
+    {
+     "ad": "Truva",
+     "lon": 26.24,
+     "lat": 39.96
+    },
+    {
+     "ad": "İznik",
+     "lon": 29.72,
+     "lat": 40.43
+    }
+   ],
+   "dogru": 2,
+   "alt_bilgi": "Çanakkale · Tevfikiye köyü yakını"
+  },
+  {
+   "zorluk": "orta",
+   "soru": "Sakarya Meydan Muharebesi nerede yapıldı?",
+   "secenekler": [
+    {
+     "ad": "Eskişehir",
+     "lon": 30.52,
+     "lat": 39.78
+    },
+    {
+     "ad": "Afyon",
+     "lon": 30.54,
+     "lat": 38.76
+    },
+    {
+     "ad": "Kütahya",
+     "lon": 29.98,
+     "lat": 39.42
+    },
+    {
+     "ad": "Polatlı",
+     "lon": 32.15,
+     "lat": 39.58
+    }
+   ],
+   "dogru": 3,
+   "alt_bilgi": "23 Ağustos – 13 Eylül 1921"
+  },
+  {
+   "zorluk": "kolay",
+   "soru": "Osmanlı Beyliği'nin kurulduğu Söğüt nerede?",
+   "secenekler": [
+    {
+     "ad": "Söğüt",
+     "lon": 30.18,
+     "lat": 40.02
+    },
+    {
+     "ad": "Konya",
+     "lon": 32.49,
+     "lat": 37.87
+    },
+    {
+     "ad": "Sivas",
+     "lon": 37.02,
+     "lat": 39.75
+    },
+    {
+     "ad": "Manisa",
+     "lon": 27.43,
+     "lat": 38.61
+    }
+   ],
+   "dogru": 0,
+   "alt_bilgi": "1299 · Bilecik"
+  },
+  {
+   "zorluk": "zor",
+   "soru": "Çaldıran Savaşı nerede yapıldı?",
+   "secenekler": [
+    {
+     "ad": "Erzincan",
+     "lon": 39.49,
+     "lat": 39.75
+    },
+    {
+     "ad": "Diyarbakır",
+     "lon": 40.23,
+     "lat": 37.91
+    },
+    {
+     "ad": "Çaldıran",
+     "lon": 43.91,
+     "lat": 39.14
+    },
+    {
+     "ad": "Trabzon",
+     "lon": 39.72,
+     "lat": 41.0
+    }
+   ],
+   "dogru": 2,
+   "alt_bilgi": "23 Ağustos 1514 · Van"
+  },
+  {
+   "zorluk": "zor",
+   "soru": "Preveze Deniz Savaşı nerede yapıldı?",
+   "secenekler": [
+    {
+     "ad": "Rodos",
+     "lon": 28.22,
+     "lat": 36.43
+    },
+    {
+     "ad": "Preveze",
+     "lon": 20.75,
+     "lat": 38.96
+    },
+    {
+     "ad": "Kandiye",
+     "lon": 25.13,
+     "lat": 35.34
+    },
+    {
+     "ad": "İnebahtı",
+     "lon": 21.83,
+     "lat": 38.39
+    }
+   ],
+   "dogru": 1,
+   "alt_bilgi": "28 Eylül 1538 · Barbaros"
+  },
+  {
+   "zorluk": "orta",
+   "soru": "Mohaç Meydan Muharebesi nerede yapıldı?",
+   "secenekler": [
+    {
+     "ad": "Belgrad",
+     "lon": 20.46,
+     "lat": 44.79
+    },
+    {
+     "ad": "Viyana",
+     "lon": 16.37,
+     "lat": 48.21
+    },
+    {
+     "ad": "Budin",
+     "lon": 19.04,
+     "lat": 47.5
+    },
+    {
+     "ad": "Mohaç",
+     "lon": 18.68,
+     "lat": 45.99
+    }
+   ],
+   "dogru": 3,
+   "alt_bilgi": "29 Ağustos 1526 · Macaristan"
+  }
+ ],
+ "durum": "test"
+}

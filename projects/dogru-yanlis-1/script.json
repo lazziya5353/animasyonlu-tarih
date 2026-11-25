@@ -1,0 +1,51 @@
+{
+ "slug": "dogru-yanlis-1",
+ "format": "dogru-yanlis",
+ "tema": "tarih",
+ "baslik": "",
+ "sorular": [
+  {
+   "zorluk": "kolay",
+   "ifade": "Fatih Sultan Mehmet İstanbul'u fethettiğinde 21 yaşındaydı.",
+   "dogru": true,
+   "duzeltme": "1432'de doğdu, İstanbul'u 1453'te aldı."
+  },
+  {
+   "zorluk": "kolay",
+   "ifade": "Türkiye Cumhuriyeti'nin ilk başkenti İstanbul'dur.",
+   "dogru": false,
+   "duzeltme": "Ankara, 13 Ekim 1923'te başkent oldu."
+  },
+  {
+   "zorluk": "orta",
+   "ifade": "Kanuni Sultan Süleyman, en uzun süre tahtta kalan Osmanlı padişahıdır.",
+   "dogru": true,
+   "duzeltme": "1520'den 1566'ya, 46 yıl tahtta kaldı."
+  },
+  {
+   "zorluk": "orta",
+   "ifade": "Malazgirt'te Alparslan, Bizans İmparatoru Romen Diyojen'i esir aldı.",
+   "dogru": true,
+   "duzeltme": "26 Ağustos 1071'de esir düştü, sonra serbest bırakıldı."
+  },
+  {
+   "zorluk": "orta",
+   "ifade": "Türkiye'de kadınlar milletvekili seçme ve seçilme hakkını 1923'te kazandı.",
+   "dogru": false,
+   "duzeltme": "Bu hak 5 Aralık 1934'te tanındı."
+  },
+  {
+   "zorluk": "zor",
+   "ifade": "Sakarya Meydan Muharebesi 22 gün 22 gece sürdü.",
+   "dogru": true,
+   "duzeltme": "23 Ağustos – 13 Eylül 1921 arasında sürdü."
+  },
+  {
+   "zorluk": "zor",
+   "ifade": "Piri Reis'in ünlü dünya haritası 1613 yılında çizildi.",
+   "dogru": false,
+   "duzeltme": "Harita 1513'te çizildi."
+  }
+ ],
+ "durum": "test"
+}

@@ -1,0 +1,93 @@
+{
+ "slug": "kelime-eksik-1",
+ "format": "kelime-eksik",
+ "tema": "tarih",
+ "baslik": "",
+ "sorular": [
+  {
+   "zorluk": "kolay",
+   "soz": "___ sulh, cihanda sulh.",
+   "secenekler": [
+    "Yurtta",
+    "Dünyada",
+    "Evde",
+    "Ülkede"
+   ],
+   "dogru": 0,
+   "soyleyen": "Mustafa Kemal Atatürk"
+  },
+  {
+   "zorluk": "kolay",
+   "soz": "Ne mutlu Türk'üm ___!",
+   "secenekler": [
+    "olana",
+    "diyene",
+    "kalana",
+    "bilene"
+   ],
+   "dogru": 1,
+   "soyleyen": "Mustafa Kemal Atatürk · 1933"
+  },
+  {
+   "zorluk": "orta",
+   "soz": "Hayatta en hakiki mürşit ___.",
+   "secenekler": [
+    "akıldır",
+    "tecrübedir",
+    "ilimdir",
+    "sanattır"
+   ],
+   "dogru": 2,
+   "soyleyen": "Mustafa Kemal Atatürk"
+  },
+  {
+   "zorluk": "orta",
+   "soz": "Ordular! İlk hedefiniz ___. İleri!",
+   "secenekler": [
+    "İzmir'dir",
+    "Ege'dir",
+    "Bursa'dır",
+    "Akdeniz'dir"
+   ],
+   "dogru": 3,
+   "soyleyen": "Mustafa Kemal Atatürk · 1 Eylül 1922"
+  },
+  {
+   "zorluk": "kolay",
+   "soz": "Ben size taarruzu emretmiyorum, ___ emrediyorum.",
+   "secenekler": [
+    "ölmeyi",
+    "savaşmayı",
+    "direnmeyi",
+    "beklemeyi"
+   ],
+   "dogru": 0,
+   "soyleyen": "Mustafa Kemal · Çanakkale 1915"
+  },
+  {
+   "zorluk": "kolay",
+   "soz": "Geldim, gördüm, ___.",
+   "secenekler": [
+    "aldım",
+    "gittim",
+    "yendim",
+    "kazandım"
+   ],
+   "dogru": 2,
+   "soyleyen": "Julius Caesar · MÖ 47"
+  },
+  {
+   "zorluk": "zor",
+   "soz": "Hattı müdafaa yoktur, ___ müdafaası vardır.",
+   "secenekler": [
+    "şehir",
+    "sath",
+    "yurt",
+    "halk"
+   ],
+   "dogru": 1,
+   "soyleyen": "Mustafa Kemal · Sakarya 1921"
+  }
+ ],
+ "durum": "test"
+}

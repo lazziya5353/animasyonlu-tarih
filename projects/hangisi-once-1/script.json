@@ -1,0 +1,96 @@
+{
+ "slug": "hangisi-once-1",
+ "format": "hangisi-once",
+ "tema": "tarih",
+ "baslik": "",
+ "sorular": [
+  {
+   "zorluk": "kolay",
+   "a": {
+    "metin": "Malazgirt Savaşı",
+    "yil": 1071
+   },
+   "b": {
+    "metin": "Miryokefalon Savaşı",
+    "yil": 1176
+   },
+   "dogru": "A"
+  },
+  {
+   "zorluk": "orta",
+   "a": {
+    "metin": "Ankara Savaşı",
+    "yil": 1402
+   },
+   "b": {
+    "metin": "I. Kosova Savaşı",
+    "yil": 1389
+   },
+   "dogru": "B"
+  },
+  {
+   "zorluk": "kolay",
+   "a": {
+    "metin": "Amerika'nın keşfi",
+    "yil": 1492
+   },
+   "b": {
+    "metin": "İstanbul'un Fethi",
+    "yil": 1453
+   },
+   "dogru": "B"
+  },
+  {
+   "zorluk": "orta",
+   "a": {
+    "metin": "Tanzimat Fermanı",
+    "yil": 1839
+   },
+   "b": {
+    "metin": "Islahat Fermanı",
+    "yil": 1856
+   },
+   "dogru": "A"
+  },
+  {
+   "zorluk": "zor",
+   "a": {
+    "metin": "Çaldıran Savaşı",
+    "yil": 1514
+   },
+   "b": {
+    "metin": "Mercidabık Savaşı",
+    "yil": 1516
+   },
+   "dogru": "A"
+  },
+  {
+   "zorluk": "orta",
+   "a": {
+    "metin": "Fransız İhtilali",
+    "yil": 1789
+   },
+   "b": {
+    "metin": "Amerikan Bağımsızlık Bildirgesi",
+    "yil": 1776
+   },
+   "dogru": "B"
+  },
+  {
+   "zorluk": "zor",
+   "a": {
+    "metin": "İbrahim Müteferrika'nın ilk kitabı basması",
+    "yil": 1729
+   },
+   "b": {
+    "metin": "Patrona Halil İsyanı",
+    "yil": 1730
+   },
+   "dogru": "A"
+  }
+ ],
+ "durum": "test",
+ "kaynaklar": [
+  "https://islamansiklopedisi.org.tr"
+ ]
+}
