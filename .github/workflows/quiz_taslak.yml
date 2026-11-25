@@ -1,0 +1,41 @@
+name: "Quiz Stüdyo · Ajan taslağı"
+# Panelde 'Ajan hazırlasın' (Netlify'da GEMINI_API_KEY yoksa): Gemini ile soru taslagi + dogruluk kontrolu -> projects/_taslak/<id>.json
+on:
+  workflow_dispatch:
+    inputs:
+      id: { required: true }
+      format: { required: true }
+      konu: { required: true }
+      adet: { required: false, default: "10" }
+      kolay: { required: false, default: "0" }
+      orta: { required: false, default: "0" }
+      zor: { required: false, default: "0" }
+      tema: { required: false, default: "tarih" }
+permissions:
+  contents: write
+jobs:
+  taslak:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q pillow numpy fonttools
+      - name: Taslak
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          I_ID: ${{ inputs.id }}
+          I_FORMAT: ${{ inputs.format }}
+          I_KONU: ${{ inputs.konu }}
+          I_TEMA: ${{ inputs.tema }}
+          I_ADET: ${{ inputs.adet }}
+          I_KOLAY: ${{ inputs.kolay }}
+          I_ORTA: ${{ inputs.orta }}
+          I_ZOR: ${{ inputs.zor }}
+        run: python scripts/quiz_taslak.py --id "$I_ID" --format "$I_FORMAT" --konu "$I_KONU" --tema "$I_TEMA" --adet "${I_ADET//[^0-9]/}" --kolay "${I_KOLAY//[^0-9]/}" --orta "${I_ORTA//[^0-9]/}" --zor "${I_ZOR//[^0-9]/}"
+      - name: Kaydet
+        if: always()
+        run: |
+          git config user.name "github-actions"; git config user.email "github-actions@users.noreply.github.com"
+          git add projects/_taslak; git commit -qm "Quiz taslağı [skip netlify]" && for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done || true

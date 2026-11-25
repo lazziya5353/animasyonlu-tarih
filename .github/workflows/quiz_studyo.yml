@@ -1,4 +1,5 @@
 name: "Quiz Stüdyo · 7 yeni quiz formatı"
+run-name: "Quiz Stüdyo · ${{ inputs.slug }}"
 # hazirla (sema + ses satirlari) -> [arka plan uret] -> Ses (Gemini) -> scripts/quiz_studyo.py video + kapak
 # -> scripts/quiz_studyo_kontrol.py -> release video-<slug>.  Rehber: docs/QUIZ_STUDYO_REHBERI.md
 # Format, tema, takim renkleri, logo ve arka plan projects/<slug>/script.json icinden okunur.
