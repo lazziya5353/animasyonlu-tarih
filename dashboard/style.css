@@ -135,3 +135,11 @@ html,body{overflow-x:hidden;max-width:100%}img,svg,video{max-width:100%}
 .igsec{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:13.5px}.igsec>b{font-size:14px}.igsec .igmet{margin-top:6px}
 .igyor{font-size:12.5px;margin-top:5px;word-break:break-word}
 .igdag{display:flex;align-items:flex-end;gap:4px;height:90px;margin-top:6px;overflow-x:auto}.igdag div{display:flex;flex-direction:column;align-items:center;min-width:20px;font-size:10px}.igdag i{display:block;width:14px;background:var(--gold);border-radius:3px 3px 0 0}.igdag small{color:var(--mut)}.igdag em{font-style:normal;color:var(--txt)}
+
+/* Koyu, ince kaydırma çubuğu (modal ve paneller) */
+*{scrollbar-width:thin;scrollbar-color:rgba(232,190,100,.45) transparent}
+*::-webkit-scrollbar{width:8px;height:8px}
+*::-webkit-scrollbar-track{background:transparent}
+*::-webkit-scrollbar-thumb{background:rgba(232,190,100,.35);border-radius:8px;border:2px solid transparent;background-clip:padding-box}
+*::-webkit-scrollbar-thumb:hover{background:rgba(232,190,100,.6);background-clip:padding-box}
+*::-webkit-scrollbar-corner{background:transparent}
