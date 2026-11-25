@@ -192,8 +192,8 @@ export default async (req) => {
         if (kr.status === 403 || kr.status === 404) return izinYok();
         if (!kr.ok) return json({ hata: `GitHub ${kr.status}` }, 502);
         const { key, key_id } = await kr.json();
-        const { createRequire } = await import("node:module"); const sodium = createRequire(import.meta.url)("libsodium-wrappers"); await sodium.ready;
-        const enc = sodium.to_base64(sodium.crypto_box_seal(sodium.from_string(tok), sodium.from_base64(key, sodium.base64_variants.ORIGINAL)), sodium.base64_variants.ORIGINAL);
+        const sodium = (await import("tweetsodium")).default;
+        const enc = Buffer.from(sodium.seal(Buffer.from(tok), Buffer.from(key, "base64"))).toString("base64");
         const pr = await gh(`/repos/${REPO}/actions/secrets/IG_TOKEN`, { method: "PUT", body: JSON.stringify({ encrypted_value: enc, key_id }) });
         if (pr.status === 403 || pr.status === 404) return izinYok();
         if (!pr.ok) return json({ hata: `GitHub ${pr.status}` }, 502);
