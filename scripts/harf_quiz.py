@@ -291,9 +291,10 @@ def main():
         acik = ev[0][0] <= t < outro and t >= ev[cur][2]
         if not a.no_wm:
             wx = int(CX - WM.width/2 + 230*math.sin(t*0.21)); wy = int(CY - WM.height/2 + 330*math.sin(t*0.13 + 1.1))
+        if not a.no_wm:  # filigran HER karede: soluk (%17), kesintisiz suzulur, yazilarin ustunden gecer
+            im = im.convert("RGBA"); im.alpha_composite(WM, (wx, wy)); im = im.convert("RGB")
         if acik and ev[cur][2] + 0.35 <= t and cur not in kutular:
             kutular[cur] = dict(metin=[list(b) for b in KUTU], filigran=None if a.no_wm else [wx, wy, wx + WM.width, wy + WM.height])
-            im = im.convert("RGBA"); im.alpha_composite(WM, (wx, wy)); im = im.convert("RGB")
         p.stdin.write(im.tobytes())
     p.stdin.close(); p.wait(); os.remove(tmpa)
     json.dump([dict(harf=Q[i][0], soru_t=round(e[0], 2), soru_bit=round(e[1], 2), cevap_t=round(e[2], 2), cevap_bit=round(e[3], 2)) for i, e in enumerate(ev)], open(a.out + ".times.json", "w"), ensure_ascii=False)
