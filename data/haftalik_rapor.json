@@ -1,52 +1,52 @@
 {
  "arsiv": [
   {
-   "zaman": "2026-11-25T17:57:47Z",
+   "zaman": "2026-11-25T19:39:16Z",
    "hafta": "18.11 – 25.11.2026",
-   "ozet": "Bu hafta 8 gönderi, toplam 680.944 izlenme (geçen hafta 24.039, değişim %2733). Takipçi değişimi: +2711. En iyi format: Quiz.",
+   "ozet": "Bu hafta aynı sayıda (8) gönderi paylaşmamıza rağmen izlenmelerimizi 27 binden 814 bine çıkararak devasa bir patlama yakaladık! Kaydetme ve paylaşımların katlanmasıyla birlikte sayfamıza tam 2.711 yeni takipçi kazandırdık, harika bir hafta geride kaldı.",
    "oneriler": [
-    "Quiz formatından bu hafta en az 2 video daha paylaş.",
-    "Paylaşımları Salı 15:00 civarına planla.",
-    "En çok izlenen video (A’dan Z’ye 22 harf, 22 tarih sorusu 🇹🇷) tarzında bir devam videosu çek."
+    "Salı günü saat 17:00'de en çok etkileşim alan 'Quiz' formatında 'Bilinmeyen Osmanlı Tarihi' temalı yeni bir içerik yayınla.",
+    "Perşembe günü saat 16:00'da yine 'Quiz' formatını kullanarak izleyicilere meydan okuyan 'Tarih Bilgini Test Et' serisini devam ettir.",
+    "Cuma günü saat 15:00'te 'Osmanlı Arması' videosundaki gibi merak uyandıran, gizemli tarih detaylarını ele alan bir 'Diğer' formatında video paylaş."
    ],
-   "kaynak": "şablon",
+   "kaynak": "gemini",
    "bu_hafta": {
     "gonderi": 8,
-    "izlenme": 680944,
-    "kaydetme": 6897,
-    "paylasim": 8150,
-    "begeni": 15237
+    "izlenme": 814101,
+    "kaydetme": 7878,
+    "paylasim": 10022,
+    "begeni": 17411
    },
    "gecen_hafta": {
     "gonderi": 8,
-    "izlenme": 24039,
+    "izlenme": 27162,
     "kaydetme": 49,
-    "paylasim": 40,
-    "begeni": 304
+    "paylasim": 46,
+    "begeni": 315
    },
    "en_iyi_3": [
     {
      "baslik": "A’dan Z’ye 22 harf, 22 tarih sorusu 🇹🇷",
-     "izlenme": 548196,
-     "kaydetme": 5334,
+     "izlenme": 609716,
+     "kaydetme": 5787,
      "url": "https://www.instagram.com/reel/DgH-s8Std6g/",
-     "kapak": "https://scontent-ord5-2.cdninstagram.com/v/t51.82787-15/921469020_905088019293792_8884459976991895067_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=GLxjhLphyhEQ7kNvwFFa0wU&_nc_oc=Ado9Jb3pPkf_udgp99Dwrvt7QEzHF3ZNHad3sAg0wWYeeMrkjWvRcsohnx-QD_eYfzw&_nc_zt=23&_nc_ht=scontent-ord5-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=1Nv6uhBJLcYMqIP5F1s9zw&_nc_tpa=Q5bMBQLu0Q5WqEjQxzDm6tVlchOXPhJzYt5g8St2-lPpeBhBVj68U23TXsO3koXOltMN_6znacaWQk5GhQ&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQSAHNcaHINtLZJV0jKJA4Nc5kxMsshuxT13uvUFf3GHFg&oe=6B0CE090",
+     "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/921469020_905088019293792_8884459976991895067_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=1&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=GLxjhLphyhEQ7kNvwHFzd3D&_nc_oc=AdrdHDf2aqB_PQ-XumeAXJJKY5ihHvDUKzNdgta_GLaBoGBCI0b5E_La-ENl6xpqQQI&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=BwtUFLMdgkTPHEappzEI3Q&_nc_tpa=Q5bMBQKZpb1wMFDkbYrYKgSbySp_yx4NvBHPv385hJatVcEx41qUoy61B-OBdRu6mMQp7gx3IrM-5RYBZQ&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQS0F1p-Unz4GPSAsBc1yWexL8ppetfrADzan0R1NpJqDA&oe=6B0D18D0",
      "format": "Quiz"
     },
     {
      "baslik": "Geçen quiz çok kolay dediniz, bu sefer zorlaştırdık 😏",
-     "izlenme": 73236,
-     "kaydetme": 861,
+     "izlenme": 136349,
+     "kaydetme": 1374,
      "url": "https://www.instagram.com/reel/DgKhOCuNdLa/",
-     "kapak": "https://scontent-ord5-2.cdninstagram.com/v/t51.82787-15/927278438_1896904021489931_9006708928876616570_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=sUJceXx8q0IQ7kNvwEwIhj6&_nc_oc=AdqojYXKNg0Z9F2iV26BxMZG-ikRQ1mork0iXAiN-nWBhQrhx2bctVvSsa8EZ9StzE4&_nc_zt=23&_nc_ht=scontent-ord5-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=1Nv6uhBJLcYMqIP5F1s9zw&_nc_tpa=Q5bMBQJBAwQikSOy-p-EJqBzYySFg57T5cH0yKf1Mj_-7jQy9uHAx5J41G0JeXAAfiAqRbm6E4qMBw4ifw&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQTGjAfDHUGm277UaaeR3czOC9gEOzBAo8JfU2OP__xEDA&oe=6B0D04BD",
+     "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/927278438_1896904021489931_9006708928876616570_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=1&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=sUJceXx8q0IQ7kNvwHQNpUq&_nc_oc=AdoBXEZbHLd2J7Pplsw3gkGNsjyoCy9iKbWFbKG3uNnz4dgQDCVWarSVNmQ36btPWAQ&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=BwtUFLMdgkTPHEappzEI3Q&_nc_tpa=Q5bMBQJ4X58tnBp46o2RZvGkXz_UwhNTpfEXXJJi02_tQWdhtWejvWSzswS3hHU04DJIxbPW7lTc63V4pQ&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQScd7sho3cjnSS28sVB2M4csvXn3H5hqsMUWx6lk4xqOg&oe=6B0D04BD",
      "format": "Quiz"
     },
     {
      "baslik": "Osmanlı armasında 140 yıldır kimsenin fark etmediği detaylar 👀",
-     "izlenme": 28006,
-     "kaydetme": 633,
+     "izlenme": 29471,
+     "kaydetme": 641,
      "url": "https://www.instagram.com/reel/DgAPvj4R2KT/",
-     "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/914467829_1152425203999364_1581716257105578166_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=pRDj6cJosX0Q7kNvwEyiUyy&_nc_oc=Adqnhwt73J3FN9LZvMim6OwDNxZivda5BKm2OK-bLL5vPZnSL112prqL0nL4ohL7iTc&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=1Nv6uhBJLcYMqIP5F1s9zw&_nc_tpa=Q5bMBQK5zREMSIUAdf7Te0VKFuBDSP8BYWDhyR8t7f2fEXAZa_DrKVWFFqzCBTISN1po-hAuOG-Eumtzlg&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQSia47HqOb19pwgh8is9jafIursw5RAfuRgmkgblTqZwA&oe=6B0CDE0D",
+     "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/914467829_1152425203999364_1581716257105578166_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=GGnidGTWGWUQ7kNvwEO_Rv8&_nc_oc=AdqKb11gunAfChI0d09Xt5oG4o9UnvwtCyV5nLHHpWGhDVbl0b7uwyoy82JceQVYpGY&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=BwtUFLMdgkTPHEappzEI3Q&_nc_tpa=Q5bMBQJA6djup3BNJbxEp4BI-CbfrlaOyaIdFU4ZX23DLYxwaphKYOP9WJDxjJ1r5U4CWj5AmpuaiynAEQ&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQSWRVNH_bx2pphBSQPOP2DT4S2wqlbb4NWDfv8zp8-6ew&oe=6B0D164D",
      "format": "Diğer"
     }
    ],
@@ -54,26 +54,26 @@
    "formatlar": [
     {
      "ad": "Quiz",
-     "ort_izlenme": 310716,
+     "ort_izlenme": 373032,
      "adet": 2
     },
     {
      "ad": "Padişah serisi",
-     "ort_izlenme": 6012,
+     "ort_izlenme": 7572,
      "adet": 3
     },
     {
      "ad": "Diğer",
-     "ort_izlenme": 4970,
+     "ort_izlenme": 5489,
      "adet": 13
     },
     {
      "ad": "Harita/Gezi/Yer",
-     "ort_izlenme": 3200,
+     "ort_izlenme": 3602,
      "adet": 2
     }
    ],
-   "takipci": 4566,
+   "takipci": 5587,
    "takipci_artisi": 2711,
    "takipci_kaynak": "Instagram günlük verisi",
    "en_iyi_saatler": [
@@ -85,52 +85,52 @@
   }
  ],
  "son": {
-  "zaman": "2026-11-25T17:57:47Z",
+  "zaman": "2026-11-25T19:39:16Z",
   "hafta": "18.11 – 25.11.2026",
-  "ozet": "Bu hafta 8 gönderi, toplam 680.944 izlenme (geçen hafta 24.039, değişim %2733). Takipçi değişimi: +2711. En iyi format: Quiz.",
+  "ozet": "Bu hafta aynı sayıda (8) gönderi paylaşmamıza rağmen izlenmelerimizi 27 binden 814 bine çıkararak devasa bir patlama yakaladık! Kaydetme ve paylaşımların katlanmasıyla birlikte sayfamıza tam 2.711 yeni takipçi kazandırdık, harika bir hafta geride kaldı.",
   "oneriler": [
-   "Quiz formatından bu hafta en az 2 video daha paylaş.",
-   "Paylaşımları Salı 15:00 civarına planla.",
-   "En çok izlenen video (A’dan Z’ye 22 harf, 22 tarih sorusu 🇹🇷) tarzında bir devam videosu çek."
+   "Salı günü saat 17:00'de en çok etkileşim alan 'Quiz' formatında 'Bilinmeyen Osmanlı Tarihi' temalı yeni bir içerik yayınla.",
+   "Perşembe günü saat 16:00'da yine 'Quiz' formatını kullanarak izleyicilere meydan okuyan 'Tarih Bilgini Test Et' serisini devam ettir.",
+   "Cuma günü saat 15:00'te 'Osmanlı Arması' videosundaki gibi merak uyandıran, gizemli tarih detaylarını ele alan bir 'Diğer' formatında video paylaş."
   ],
-  "kaynak": "şablon",
+  "kaynak": "gemini",
   "bu_hafta": {
    "gonderi": 8,
-   "izlenme": 680944,
-   "kaydetme": 6897,
-   "paylasim": 8150,
-   "begeni": 15237
+   "izlenme": 814101,
+   "kaydetme": 7878,
+   "paylasim": 10022,
+   "begeni": 17411
   },
   "gecen_hafta": {
    "gonderi": 8,
-   "izlenme": 24039,
+   "izlenme": 27162,
    "kaydetme": 49,
-   "paylasim": 40,
-   "begeni": 304
+   "paylasim": 46,
+   "begeni": 315
   },
   "en_iyi_3": [
    {
     "baslik": "A’dan Z’ye 22 harf, 22 tarih sorusu 🇹🇷",
-    "izlenme": 548196,
-    "kaydetme": 5334,
+    "izlenme": 609716,
+    "kaydetme": 5787,
     "url": "https://www.instagram.com/reel/DgH-s8Std6g/",
-    "kapak": "https://scontent-ord5-2.cdninstagram.com/v/t51.82787-15/921469020_905088019293792_8884459976991895067_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=GLxjhLphyhEQ7kNvwFFa0wU&_nc_oc=Ado9Jb3pPkf_udgp99Dwrvt7QEzHF3ZNHad3sAg0wWYeeMrkjWvRcsohnx-QD_eYfzw&_nc_zt=23&_nc_ht=scontent-ord5-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=1Nv6uhBJLcYMqIP5F1s9zw&_nc_tpa=Q5bMBQLu0Q5WqEjQxzDm6tVlchOXPhJzYt5g8St2-lPpeBhBVj68U23TXsO3koXOltMN_6znacaWQk5GhQ&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQSAHNcaHINtLZJV0jKJA4Nc5kxMsshuxT13uvUFf3GHFg&oe=6B0CE090",
+    "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/921469020_905088019293792_8884459976991895067_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=1&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=GLxjhLphyhEQ7kNvwHFzd3D&_nc_oc=AdrdHDf2aqB_PQ-XumeAXJJKY5ihHvDUKzNdgta_GLaBoGBCI0b5E_La-ENl6xpqQQI&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=BwtUFLMdgkTPHEappzEI3Q&_nc_tpa=Q5bMBQKZpb1wMFDkbYrYKgSbySp_yx4NvBHPv385hJatVcEx41qUoy61B-OBdRu6mMQp7gx3IrM-5RYBZQ&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQS0F1p-Unz4GPSAsBc1yWexL8ppetfrADzan0R1NpJqDA&oe=6B0D18D0",
     "format": "Quiz"
    },
    {
     "baslik": "Geçen quiz çok kolay dediniz, bu sefer zorlaştırdık 😏",
-    "izlenme": 73236,
-    "kaydetme": 861,
+    "izlenme": 136349,
+    "kaydetme": 1374,
     "url": "https://www.instagram.com/reel/DgKhOCuNdLa/",
-    "kapak": "https://scontent-ord5-2.cdninstagram.com/v/t51.82787-15/927278438_1896904021489931_9006708928876616570_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=sUJceXx8q0IQ7kNvwEwIhj6&_nc_oc=AdqojYXKNg0Z9F2iV26BxMZG-ikRQ1mork0iXAiN-nWBhQrhx2bctVvSsa8EZ9StzE4&_nc_zt=23&_nc_ht=scontent-ord5-2.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=1Nv6uhBJLcYMqIP5F1s9zw&_nc_tpa=Q5bMBQJBAwQikSOy-p-EJqBzYySFg57T5cH0yKf1Mj_-7jQy9uHAx5J41G0JeXAAfiAqRbm6E4qMBw4ifw&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQTGjAfDHUGm277UaaeR3czOC9gEOzBAo8JfU2OP__xEDA&oe=6B0D04BD",
+    "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/927278438_1896904021489931_9006708928876616570_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=1&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=sUJceXx8q0IQ7kNvwHQNpUq&_nc_oc=AdoBXEZbHLd2J7Pplsw3gkGNsjyoCy9iKbWFbKG3uNnz4dgQDCVWarSVNmQ36btPWAQ&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=BwtUFLMdgkTPHEappzEI3Q&_nc_tpa=Q5bMBQJ4X58tnBp46o2RZvGkXz_UwhNTpfEXXJJi02_tQWdhtWejvWSzswS3hHU04DJIxbPW7lTc63V4pQ&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQScd7sho3cjnSS28sVB2M4csvXn3H5hqsMUWx6lk4xqOg&oe=6B0D04BD",
     "format": "Quiz"
    },
    {
     "baslik": "Osmanlı armasında 140 yıldır kimsenin fark etmediği detaylar 👀",
-    "izlenme": 28006,
-    "kaydetme": 633,
+    "izlenme": 29471,
+    "kaydetme": 641,
     "url": "https://www.instagram.com/reel/DgAPvj4R2KT/",
-    "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/914467829_1152425203999364_1581716257105578166_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=pRDj6cJosX0Q7kNvwEyiUyy&_nc_oc=Adqnhwt73J3FN9LZvMim6OwDNxZivda5BKm2OK-bLL5vPZnSL112prqL0nL4ohL7iTc&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=1Nv6uhBJLcYMqIP5F1s9zw&_nc_tpa=Q5bMBQK5zREMSIUAdf7Te0VKFuBDSP8BYWDhyR8t7f2fEXAZa_DrKVWFFqzCBTISN1po-hAuOG-Eumtzlg&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQSia47HqOb19pwgh8is9jafIursw5RAfuRgmkgblTqZwA&oe=6B0CDE0D",
+    "kapak": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/914467829_1152425203999364_1581716257105578166_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=GGnidGTWGWUQ7kNvwEO_Rv8&_nc_oc=AdqKb11gunAfChI0d09Xt5oG4o9UnvwtCyV5nLHHpWGhDVbl0b7uwyoy82JceQVYpGY&_nc_zt=23&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=AFF3FJ0EAAAA&_nc_gid=BwtUFLMdgkTPHEappzEI3Q&_nc_tpa=Q5bMBQJA6djup3BNJbxEp4BI-CbfrlaOyaIdFU4ZX23DLYxwaphKYOP9WJDxjJ1r5U4CWj5AmpuaiynAEQ&_nc_ct=RQosPBUKFQwAAAA&oh=00_AQSWRVNH_bx2pphBSQPOP2DT4S2wqlbb4NWDfv8zp8-6ew&oe=6B0D164D",
     "format": "Diğer"
    }
   ],
@@ -138,26 +138,26 @@
   "formatlar": [
    {
     "ad": "Quiz",
-    "ort_izlenme": 310716,
+    "ort_izlenme": 373032,
     "adet": 2
    },
    {
     "ad": "Padişah serisi",
-    "ort_izlenme": 6012,
+    "ort_izlenme": 7572,
     "adet": 3
    },
    {
     "ad": "Diğer",
-    "ort_izlenme": 4970,
+    "ort_izlenme": 5489,
     "adet": 13
    },
    {
     "ad": "Harita/Gezi/Yer",
-    "ort_izlenme": 3200,
+    "ort_izlenme": 3602,
     "adet": 2
    }
   ],
-  "takipci": 4566,
+  "takipci": 5587,
   "takipci_artisi": 2711,
   "takipci_kaynak": "Instagram günlük verisi",
   "en_iyi_saatler": [
