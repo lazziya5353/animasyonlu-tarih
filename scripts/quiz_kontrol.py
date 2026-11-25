@@ -40,6 +40,21 @@ def bekci(v, S, T, wm):
         if not ok: h.append(f"bekci {ad}: ses kartla eslesmiyor (oran {r:.2f}: {a!r})")
     return h
 
+def yerlesim(v):
+    """Metin kutusu (soru/cevap/alt bilgi) hicbir harf balonuna degmemeli; filigran cevap metnine binmemeli."""
+    import os
+    if not os.path.exists(v + ".kutular.json"): return ["yerlesim: kutular.json yok"]
+    K = json.load(open(v + ".kutular.json")); h = []
+    for L, k in K["kartlar"].items():
+        for x0, y0, x1, y1 in k["metin"]:
+            for bx, by, r in K["balonlar"]:
+                dx = max(x0 - bx, 0, bx - x1); dy = max(y0 - by, 0, by - y1)
+                if dx*dx + dy*dy < (r + 4)**2: h.append(f"{L}: metin kutusu harf balonuna degiyor ({x0},{y0},{x1},{y1})")
+            w = k.get("filigran")
+            if w and not (w[2] <= x0 or x1 <= w[0] or w[3] <= y0 or y1 <= w[1]): h.append(f"{L}: filigran cevap metninin ustunde")
+    print(f"yerlesim: {len(K['kartlar'])} kart kontrol edildi, {len(h)} sorun")
+    return h
+
 def main(v, script, bekci_ac=False):
     T = json.load(open(v + ".times.json")); S = json.load(open(script)); hata = []
     qs = {x["harf"]: S["sahneler"][1+2*i]["lines"][0].split(" harfi.", 1)[1] for i, x in enumerate(T)}
@@ -51,6 +66,7 @@ def main(v, script, bekci_ac=False):
     try:
         from faster_whisper import WhisperModel; wm = WhisperModel("small", compute_type="int8")
     except Exception as e: wm = None; print("uyari: whisper yok, sizma kontrolu atlandi", e)
+    hata += yerlesim(v)
     if bekci_ac: hata += bekci(v, S, T, wm)
     for x in T:
         L = x["harf"]

@@ -63,27 +63,51 @@ def ring(d, letters, done, cur, pulse=0, prog=None):
                 r2 = RR + 20
                 d.arc((x-r2, y-r2, x+r2, y+r2), -90, -90 + 360*prog, fill=GOLD, width=4)
 
+# guvenli metin alani: halka yaricapi - balon yaricapi - pay; satirin dikey konumundaki kirisle de sinirli
+SAFE_R = RAD - RR - 40
+SAFE_W = min(720, 2*SAFE_R)
+def safe_w(y0, y1):
+    dy = max(abs(y0 - CY), abs(y1 - CY))
+    return int(min(SAFE_W, 2*math.sqrt(max(0, SAFE_R**2 - dy**2)))) if dy < SAFE_R else 0
+KUTU = []   # son center() cagrisinda cizilen metin kutulari (x0,y0,x1,y1), kontrol icin
+
 def center(im, k, n, q, ans, hint, a_alpha, a_scale):
-    d = ImageDraw.Draw(im)
-    MW = 2*(RAD-RR) - 150
+    d = ImageDraw.Draw(im); KUTU.clear()
+    MW = SAFE_W
     if k is not None:
         d.text((CX, 840), f"{k} / {n}", font=F("Montserrat-900", 40), fill=GOLD, anchor="ms")
     y = 875
     if q:
-        f, ls = fitlines(d, q, "Montserrat-700", 50, MW, 3)
-        for l in ls: d.text((CX, y), l, font=f, fill=WHITE, anchor="mt"); y += int(f.size*1.3)
+        for sz in range(50, 33, -2):
+            f, ls = fitlines(d, q, "Montserrat-700", sz, MW, 3, sz)
+            h = int(f.size*1.3)
+            if all(d.textlength(l, font=f) <= safe_w(y + i*h, y + i*h + f.size) for i, l in enumerate(ls)) and len(ls) <= 3: break
+        for l in ls:
+            d.text((CX, y), l, font=f, fill=WHITE, anchor="mt"); b = d.textbbox((CX, y), l, font=f, anchor="mt"); KUTU.append(b); y += int(f.size*1.3)
     if ans and a_alpha > 0:
-        lay = Image.new("RGBA", (W, 520), (0, 0, 0, 0)); ld = ImageDraw.Draw(lay)
+        lay = Image.new("RGBA", (W, 620), (0, 0, 0, 0)); ld = ImageDraw.Draw(lay)
+        top = max(y + 20, 1060 - 10) if len(q or "") else 1000
         f, ls = fitlines(ld, ans, "Cinzel-700", 84, MW, 2, 48)
-        yy = 10
-        for l in ls: ld.text((CX, yy), l, font=f, fill=GOLD + (255,), anchor="mt"); yy += int(f.size*1.18)
-        if hint: ld.text((CX, yy + 18), f"•  {hint}  •", font=F("Montserrat-900", 34), fill=(225, 210, 190, 255), anchor="mt"); yy += 70
+        yy = 10; lb = []
+        while True:  # cevap satirlari halkanin kirisine sigana kadar kucult
+            h = int(f.size*1.18)
+            if all(ld.textlength(l, font=f) <= safe_w(top + yy + i*h, top + yy + i*h + f.size) for i, l in enumerate(ls)) or f.size <= 40: break
+            f, ls = fitlines(ld, ans, "Cinzel-700", f.size - 4, MW, 2, f.size - 4)
+        for l in ls: ld.text((CX, yy), l, font=f, fill=GOLD + (255,), anchor="mt"); lb.append(ld.textbbox((CX, yy), l, font=f, anchor="mt")); yy += int(f.size*1.18)
+        if hint:
+            ht = f"•  {hint}  •"; yy += 18
+            for sz in range(34, 21, -2):  # alt bilgi: once kucult, sigmazsa 2 satira bol
+                hf = F("Montserrat-900", sz); hl = [ht] if ld.textlength(ht, font=hf) <= safe_w(top + yy, top + yy + sz) else wrap(ld, hint, hf, safe_w(top + yy, top + yy + int(sz*2.4)))
+                if len(hl) <= 2 and all(ld.textlength(l, font=hf) <= safe_w(top + yy + i*int(sz*1.25), top + yy + (i+1)*int(sz*1.25)) for i, l in enumerate(hl)): break
+            for l in hl: ld.text((CX, yy), l, font=hf, fill=(225, 210, 190, 255), anchor="mt"); lb.append(ld.textbbox((CX, yy), l, font=hf, anchor="mt")); yy += int(hf.size*1.25)
+            yy += 20
         lay = lay.crop((0, 0, W, yy + 10))
         if a_scale != 1:
             lay = lay.resize((int(W*a_scale), int(lay.height*a_scale)), Image.LANCZOS)
         if a_alpha < 1: lay.putalpha(lay.getchannel("A").point(lambda v: int(v*a_alpha)))
-        top = max(y + 20, 1060 - 10) if len(q or "") else 1000
-        im.paste(lay, (CX - lay.width//2, top + int((1 - a_scale)*60)), lay)
+        ox, oy = CX - lay.width//2, top + int((1 - a_scale)*60)
+        im.paste(lay, (ox, oy), lay)
+        for b in lb: KUTU.append((int(ox + b[0]*a_scale), int(oy + b[1]*a_scale), int(ox + b[2]*a_scale + 1), int(oy + b[3]*a_scale + 1)))
 
 TR = str.maketrans("iı", "İI")
 def up(t): return t.translate(TR).upper()
@@ -203,6 +227,7 @@ def main():
     # hirsizliga karsi filigran: orta alanda yavasca gezinen yari saydam (~30% beyaz) "@animasyon.tarih"
     WMf = F("Montserrat-900", 44); wb = WMf.getbbox("@animasyon.tarih")
     WM = Image.new("RGBA", (wb[2]+8, wb[3]+8), (0, 0, 0, 0)); ImageDraw.Draw(WM).text((4, 4), "@animasyon.tarih", font=WMf, fill=(255, 255, 255, 66))
+    kutular = {}   # kart -> cevap tam gorunurken metin kutulari + filigran kutusu
     for fi in range(int(dur*FPS)):
         t = fi / FPS; im = B.copy(); d = ImageDraw.Draw(im)
         if t >= outro:
@@ -225,12 +250,21 @@ def main():
                 center(im, cur+1, n, Q[cur][1], "", "", 0, 1)
             al = min(1, (t - qs)/0.25, max(0, (gone - t)/0.25))
             if al < 1: im = Image.blend(bg, im, al)
+        acik = ev[0][0] <= t < outro and t >= ev[cur][2]
         if not a.no_wm:
             wx = int(CX - WM.width/2 + 230*math.sin(t*0.21)); wy = int(CY - WM.height/2 + 330*math.sin(t*0.13 + 1.1))
+            if acik and KUTU:  # cevap ekrandayken filigran metin bolgesine girmez: ust banda (soru sayacinin ustu) kayar
+                ust = min(b[1] for b in KUTU) - 70
+                wy = min(wy, int(CY - 360 + (ust - WM.height - (CY - 360))*(0.5 + 0.5*math.sin(t*0.13 + 1.1))))
+                wx = max(CX - 260, min(wx, CX + 260 - WM.width))
+        if acik and ev[cur][2] + 0.35 <= t and cur not in kutular:
+            kutular[cur] = dict(metin=[list(b) for b in KUTU], filigran=None if a.no_wm else [wx, wy, wx + WM.width, wy + WM.height])
             im = im.convert("RGBA"); im.alpha_composite(WM, (wx, wy)); im = im.convert("RGB")
         p.stdin.write(im.tobytes())
     p.stdin.close(); p.wait(); os.remove(tmpa)
     json.dump([dict(harf=Q[i][0], soru_t=round(e[0], 2), soru_bit=round(e[1], 2), cevap_t=round(e[2], 2), cevap_bit=round(e[3], 2)) for i, e in enumerate(ev)], open(a.out + ".times.json", "w"), ensure_ascii=False)
+    bal = [[round(x), round(y), RR] for x, y in (pos(i, n) for i in range(n))]
+    json.dump(dict(balonlar=bal, kartlar={Q[i][0]: v for i, v in kutular.items()}), open(a.out + ".kutular.json", "w"), ensure_ascii=False)
     print("sure", dur)
 
 if __name__ == "__main__": main()
