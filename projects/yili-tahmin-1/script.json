@@ -93,7 +93,7 @@
  "sahneler": [
   {
    "lines": [
-    "Yili Tahmi̇n Et! 7 soru, bakalım kaçını bileceksin?"
+    "Yılı tahmin et! 7 soru, bakalım kaçını bileceksin?"
    ],
    "tip": "giris",
    "big": "",
@@ -305,6 +305,6 @@
    "prompt": "quiz"
   }
  ],
- "seslendirme_metni": "Yili Tahmi̇n Et! yedi soru, bakalım kaçını bileceksin?\nMalazgirt Savaşı hangi yıl yapıldı?\nCevap bin yetmiş bir.\nTBMM hangi yıl açıldı?\nCevap bin dokuz yüz yirmi.\nMohaç Meydan Muharebesi hangi yıl yapıldı?\nCevap bin beş yüz yirmi altı.\nTanzimat Fermanı hangi yıl ilan edildi?\nCevap bin sekiz yüz otuz dokuz.\nSoyadı Kanunu hangi yıl kabul edildi?\nCevap bin dokuz yüz otuz dört.\nKanuni Sultan Süleyman hangi yıl tahta çıktı?\nCevap bin beş yüz yirmi.\nKösedağ Savaşı hangi yıl yapıldı?\nCevap bin iki yüz kırk üç.\nKaçını bildin? Yorumlara yaz!",
+ "seslendirme_metni": "Yılı tahmin et! yedi soru, bakalım kaçını bileceksin?\nMalazgirt Savaşı hangi yıl yapıldı?\nCevap bin yetmiş bir.\nTBMM hangi yıl açıldı?\nCevap bin dokuz yüz yirmi.\nMohaç Meydan Muharebesi hangi yıl yapıldı?\nCevap bin beş yüz yirmi altı.\nTanzimat Fermanı hangi yıl ilan edildi?\nCevap bin sekiz yüz otuz dokuz.\nSoyadı Kanunu hangi yıl kabul edildi?\nCevap bin dokuz yüz otuz dört.\nKanuni Sultan Süleyman hangi yıl tahta çıktı?\nCevap bin beş yüz yirmi.\nKösedağ Savaşı hangi yıl yapıldı?\nCevap bin iki yüz kırk üç.\nKaçını bildin? Yorumlara yaz!",
  "ses_stil": "Gülümseyen, oyunbaz ama vakur bir belgesel anlatıcısı gibi, normal hızda ve akıcı oku. Satır aralarında çok kısa duraksa:\n"
 }
