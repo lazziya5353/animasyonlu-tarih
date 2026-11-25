@@ -269,10 +269,12 @@ function qAyirYerel(fmt, metin) { // kural tabanlı: blokları bul, soru/cevap/s
   for (const b of blok) { if (b.cevap) continue; let m = b.metin.match(/^(.+?)\s*(?:cevap|yanıt|doğru)\s*[:=]\s*(.+)$/i) || b.metin.match(/^(.+?\?)\s*[-–—=>]+\s*(.+)$/) || b.metin.match(/^(.+?)\s+[-–—]\s+(.+)$/) || b.metin.match(/^(.+?\?)\s*(.+)$/);
     if (m) { b.metin = m[1].trim(); b.cevap = m[2].trim(); }
     if (fmt === "her-harfe" && !b.harf) { const h = b.metin.match(/^([A-ZÇĞİÖŞÜ])\s*[-–:)]\s*(.+)$/); if (h) { b.harf = h[1]; b.metin = h[2]; } } }
+  // "Cevap - Alt bilgi": cevaptaki son boşluklu tireden sonrası alt bilgidir
+  for (const b of blok) { if (b.cevap && /\s[-–—]\s/.test(b.cevap)) { const i = b.cevap.search(/\s[-–—]\s(?!.*\s[-–—]\s)/); b.alt = b.cevap.slice(i + 3).trim(); b.cevap = b.cevap.slice(0, i).trim(); } }
   const sonuc = [], ac = []; let belirsiz = false;
   const yil = (x) => { const m = String(x || "").match(/-?\d{3,4}/); return m ? +m[0] : NaN; };
   blok.forEach((b, i) => {
-    const q = qbos(fmt); const di = b.dogru ? "ABCD".indexOf(b.dogru) : b.cevap && b.sec.length ? b.sec.findIndex((x) => trUst(x) === trUst(b.cevap)) : -1;
+    const q = qbos(fmt); if (b.alt && "alt_bilgi" in q) q.alt_bilgi = b.alt; const di = b.dogru ? "ABCD".indexOf(b.dogru) : b.cevap && b.sec.length ? b.sec.findIndex((x) => trUst(x) === trUst(b.cevap)) : -1;
     if (fmt === "her-harfe") Object.assign(q, { harf: b.harf || "", soru: b.metin, cevap: b.cevap || "" });
     else if (fmt === "harf-bul") Object.assign(q, { soru: b.metin, cevap: b.cevap || "" });
     else if (fmt === "dogru-yanlis") { const t = trUst(b.cevap || ""); q.ifade = b.metin; q.dogru = !/^(Y|YANLIŞ|YANLIS|HAYIR|F|FALSE)/.test(t); if (!b.cevap) belirsiz = true; q.duzeltme = (b.cevap || "").replace(/^(doğru|yanlış|d|y)\b[\s.,:\-–]*/i, ""); }

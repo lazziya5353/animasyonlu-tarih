@@ -73,7 +73,7 @@ async function gemini(text, { arama = false, ms = 9000 } = {}) {
   const body = { contents: [{ parts: [{ text }] }], generationConfig: arama ? { temperature: 0.2 } : { temperature: 0.6, responseMimeType: "application/json" } };
   if (arama) body.tools = [{ google_search: {} }];
   const r = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent", { method: "POST", signal: AbortSignal.timeout(ms), headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify(body) });
-  if (!r.ok) throw new Error(`Gemini ${r.status}`);
+  if (!r.ok) { let d = ""; try { d = (await r.json()).error?.message || ""; } catch {} throw new Error(`Gemini ${r.status}${d ? ": " + d.slice(0, 120) : ""}`); }
   const t = ((await r.json()).candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").replace(/^```(json)?|```$/gm, "");
   return JSON.parse(t.slice(t.indexOf("{"), t.lastIndexOf("}") + 1));
 }
