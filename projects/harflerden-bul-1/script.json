@@ -1,0 +1,428 @@
+{
+ "baslik": "Harflerden Bul 1",
+ "hook": "HARFLERDEN BUL",
+ "slug": "harflerden-bul-1",
+ "format": "harf-bul",
+ "konu": "Harflerden Bul quiz",
+ "tarih": "",
+ "durum": "onaylandi",
+ "ses_stil": "Bir quiz sunucususun. İlk cümleyi enerjik, gülümseyen ve meydan okuyan bir tonla söyle. Soruları net ve akıcı, cevapları kısa ve kendinden emin oku. Son cümleyi samimi bir çağrı gibi söyle. Uzun sessizlik bırakma, her cümleden sonra kısa bir durak ver:\n",
+ "sorular": [
+  {
+   "zorluk": "kolay",
+   "soru": "İlk Osmanlı parasını bastıran padişah?",
+   "acik_harfler": "_R__N __Z_",
+   "cevap": "ORHAN GAZİ",
+   "alt_bilgi": "1326 · İlk akçe"
+  },
+  {
+   "zorluk": "kolay",
+   "soru": "1071'de Anadolu'nun kapısını açan sultan?",
+   "acik_harfler": "A___R___N",
+   "cevap": "ALPARSLAN",
+   "alt_bilgi": "1071 · Malazgirt"
+  },
+  {
+   "zorluk": "kolay",
+   "soru": "Atatürk'ün doğduğu şehir?",
+   "acik_harfler": "S_L__İ_",
+   "cevap": "SELANİK",
+   "alt_bilgi": "1881"
+  },
+  {
+   "zorluk": "kolay",
+   "soru": "İstiklal Marşı'nın şairi?",
+   "acik_harfler": "M_H_E_ A__F E_S__",
+   "cevap": "MEHMET AKİF ERSOY",
+   "alt_bilgi": "12 Mart 1921"
+  },
+  {
+   "zorluk": "kolay",
+   "soru": "Türkiye Selçuklu Devleti'nin başkenti?",
+   "acik_harfler": "K_N_A",
+   "cevap": "KONYA",
+   "alt_bilgi": "Anadolu Selçuklu başkenti"
+  },
+  {
+   "zorluk": "kolay",
+   "soru": "Topkapı Sarayı'nı yaptıran padişah?",
+   "acik_harfler": "F_T_H S_L__N M_H_E_",
+   "cevap": "FATİH SULTAN MEHMET",
+   "alt_bilgi": "1460'lar"
+  },
+  {
+   "zorluk": "orta",
+   "soru": "Mimar Sinan'ın 'ustalık eserim' dediği cami?",
+   "acik_harfler": "S__İ__Y_",
+   "cevap": "SELİMİYE",
+   "alt_bilgi": "1575 · Edirne"
+  },
+  {
+   "zorluk": "orta",
+   "soru": "Barbaros Hayreddin Paşa'nın asıl adı?",
+   "acik_harfler": "H_Z_R",
+   "cevap": "HIZIR",
+   "alt_bilgi": "Hızır Reis"
+  },
+  {
+   "zorluk": "orta",
+   "soru": "Yavuz'un 1514'te Safevileri yendiği savaş?",
+   "acik_harfler": "Ç_L__R_N",
+   "cevap": "ÇALDIRAN",
+   "alt_bilgi": "23 Ağustos 1514"
+  },
+  {
+   "zorluk": "orta",
+   "soru": "1402 Ankara Savaşı'nda Yıldırım Bayezid'i yenen hükümdar?",
+   "acik_harfler": "T_M_R",
+   "cevap": "TİMUR",
+   "alt_bilgi": "1402 · Ankara Savaşı"
+  },
+  {
+   "zorluk": "zor",
+   "soru": "Lale Devri'nin ünlü sadrazamı Nevşehirli Damat … Paşa?",
+   "acik_harfler": "İ_R_H_M",
+   "cevap": "İBRAHİM",
+   "alt_bilgi": "1718–1730 · Lale Devri"
+  },
+  {
+   "zorluk": "zor",
+   "soru": "Osmanlı'nın ilk anayasası?",
+   "acik_harfler": "K_N_N-I E_A_İ",
+   "cevap": "KANUN-I ESASİ",
+   "alt_bilgi": "23 Aralık 1876",
+   "cevap_okunus": "Kanun-i Esasi"
+  }
+ ],
+ "cevap_okunus_not": "Cevap okunuşu cevaptan otomatik üretilir; gerekirse soruya cevap_okunus eklenir.",
+ "kaynaklar": [
+  "https://tr.wikipedia.org/wiki/Akçe",
+  "https://tr.wikipedia.org/wiki/Çaldıran_Muharebesi",
+  "https://tr.wikipedia.org/wiki/Kanun-i_Esasi"
+ ],
+ "kontrol_notlari": [
+  "İlk akçe 1326 (Orhan Bey, Bursa) yaygın kabul; bazı kaynaklar 1327 der.",
+  "Selimiye 1568-1575.",
+  "Çaldıran 23 Ağustos 1514.",
+  "Ankara Savaşı 28 Temmuz 1402.",
+  "Lale Devri 1718-1730, Nevşehirli Damat İbrahim Paşa.",
+  "Kanun-i Esasi 23 Aralık 1876.",
+  "İstiklal Marşı kabulü 12 Mart 1921."
+ ],
+ "sahneler": [
+  {
+   "lines": [
+    "Harflerden bul! Boşlukları doldur, bakalım kaçını çözebileceksin?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "İlk Osmanlı parasını bastıran padişah?"
+   ],
+   "zorluk": "kolay",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Orhan Gazi."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "1071'de Anadolu'nun kapısını açan sultan?"
+   ],
+   "zorluk": "kolay",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Alparslan."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Atatürk'ün doğduğu şehir?"
+   ],
+   "zorluk": "kolay",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Selanik."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "İstiklal Marşı'nın şairi?"
+   ],
+   "zorluk": "kolay",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Mehmet Akif Ersoy."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Türkiye Selçuklu Devleti'nin başkenti?"
+   ],
+   "zorluk": "kolay",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Konya."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Topkapı Sarayı'nı yaptıran padişah?"
+   ],
+   "zorluk": "kolay",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Fatih Sultan Mehmet."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Mimar Sinan'ın 'ustalık eserim' dediği cami?"
+   ],
+   "zorluk": "orta",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Selimiye."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Barbaros Hayreddin Paşa'nın asıl adı?"
+   ],
+   "zorluk": "orta",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Hızır."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Yavuz'un 1514'te Safevileri yendiği savaş?"
+   ],
+   "zorluk": "orta",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Çaldıran."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "1402 Ankara Savaşı'nda Yıldırım Bayezid'i yenen hükümdar?"
+   ],
+   "zorluk": "orta",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Timur."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Lale Devri'nin ünlü sadrazamı Nevşehirli Damat … Paşa?"
+   ],
+   "zorluk": "zor",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "İbrahim."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Osmanlı'nın ilk anayasası?"
+   ],
+   "zorluk": "zor",
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Kanun-i Esasi."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Kaçını bildin? Yorumlara yaz!"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  }
+ ],
+ "sade": true,
+ "alt_bilgi": {
+  "1": "1326 · İlk akçe",
+  "2": "1071 · Malazgirt",
+  "3": "1881",
+  "4": "12 Mart 1921",
+  "5": "Anadolu Selçuklu başkenti",
+  "6": "1460'lar",
+  "7": "1575 · Edirne",
+  "8": "Hızır Reis",
+  "9": "23 Ağustos 1514",
+  "10": "1402 · Ankara Savaşı",
+  "11": "1718–1730 · Lale Devri",
+  "12": "23 Aralık 1876"
+ },
+ "seslendirme_metni": "Harflerden bul! Boşlukları doldur, bakalım kaçını çözebileceksin?\nİlk Osmanlı parasını bastıran padişah?\nOrhan Gazi.\nbin yetmiş birde Anadolu'nun kapısını açan sultan?\nAlparslan.\nAtatürk'ün doğduğu şehir?\nSelanik.\nİstiklal Marşı'nın şairi?\nMehmet Akif Ersoy.\nTürkiye Selçuklu Devleti'nin başkenti?\nKonya.\nTopkapı Sarayı'nı yaptıran padişah?\nFatih Sultan Mehmet.\nMimar Sinan'ın 'ustalık eserim' dediği cami?\nSelimiye.\nBarbaros Hayreddin Paşa'nın asıl adı?\nHızır.\nYavuz'un bin beş yüz on dörtte Safevileri yendiği savaş?\nÇaldıran.\nbin dört yüz iki Ankara Savaşı'nda Yıldırım Bayezid'i yenen hükümdar?\nTimur.\nLale Devri'nin ünlü sadrazamı Nevşehirli Damat … Paşa?\nİbrahim.\nOsmanlı'nın ilk anayasası?\nKanun-i Esasi.\nKaçını bildin? Yorumlara yaz!"
+}

@@ -1,4 +1,4 @@
-"""Harf quiz kapagi (Kapak_Her_Harfe stili). Kullanim: quiz_kapak.py script.json kapak.jpg [--bolum N]"""
+"""Harf quiz kapagi (Kapak_Her_Harfe stili). Kullanim: quiz_kapak.py script.json kapak.jpg [--bolum N] [--format harf-bul]"""
 import argparse, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from harf_quiz import base, ring, up, F, CX, GOLD, WHITE
@@ -23,4 +23,8 @@ def kapak(script, out, bolum=None):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("script"); ap.add_argument("out"); ap.add_argument("--bolum", type=int)
-    a = ap.parse_args(); kapak(a.script, a.out, a.bolum)
+    ap.add_argument("--format", default="", help="harf-bul = 'HARFLERDEN BUL' kapagi (script.json format alani da secer)")
+    a = ap.parse_args()
+    if a.format == "harf-bul" or json.load(open(a.script)).get("format") == "harf-bul":
+        from harf_bul import kapak as hb_kapak; hb_kapak(a.script, a.out, a.bolum)
+    else: kapak(a.script, a.out, a.bolum)

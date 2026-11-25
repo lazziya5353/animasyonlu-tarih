@@ -19,6 +19,7 @@ const WORKFLOWS = {
   yorumcu: "yorumcu.yml",
   yonetici: "yonetici.yml",
   quiz: "quiz.yml",
+  "harf-bul": "harf_bul.yml",
 };
 const ASAMALAR = ["senaryo", "ses", "gorsel", "kurgu", "hepsi"];
 const b64 = (o) => Buffer.from(JSON.stringify(o, null, 1)).toString("base64");

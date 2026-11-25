@@ -49,7 +49,9 @@ JSON şeması:
 "maps":[{{"after_scene":2,"cities":["İstanbul","Viyana"],"route":["İstanbul","Belgrad","Viyana"],"title":"İSTANBUL — VİYANA"}}],
 "cards":[{{"scene":3,"value":53,"unit":"GÜN","small":"SÜREN KUŞATMA"}}],"eras":[{{"name":"","from":0,"to":3}}],"outro":{{"title":"","line":""}},
 "aciklama":"","kanca_alternatifleri":[],"aciklama_alternatifleri":[],"hashtagler":[],"kaynaklar":[],"kontrol_notlari":[]}}"""
-    if "quiz" in (a.konu + slug).lower() or slug.startswith("her-harfe"):  # quiz: rehber her zaman ajanin talimatina eklenir
+    if slug.startswith("harflerden-bul") or "harflerden bul" in a.konu.lower():  # Harflerden Bul: kendi rehberi yuklenir
+        system += "\n\nBU BIR 'HARFLERDEN BUL' QUIZI. docs/HARF_BUL_REHBERI.md kurallarina eksiksiz uy (genel quiz kurallari icin QUIZ_REHBERI de gecerli):\n" + open(os.path.join(ROOT, "docs", "HARF_BUL_REHBERI.md"), encoding="utf-8").read() + "\n\n" + open(os.path.join(ROOT, "docs", "QUIZ_REHBERI.md"), encoding="utf-8").read()
+    elif "quiz" in (a.konu + slug).lower() or slug.startswith("her-harfe"):  # quiz: rehber her zaman ajanin talimatina eklenir
         system += "\n\nBU BIR QUIZ. docs/QUIZ_REHBERI.md kurallarina eksiksiz uy:\n" + open(os.path.join(ROOT, "docs", "QUIZ_REHBERI.md"), encoding="utf-8").read()
     sc = extract_json(yazar(system, user, "senarist", max_tokens=24000, web_search=int(os.environ.get("ARAMA_SAYISI", "3"))), "senarist")
     sc["konu"] = a.konu; sc["tarih"] = a.tarih; sc["slug"] = slug; sc["durum"] = "onay-bekliyor"

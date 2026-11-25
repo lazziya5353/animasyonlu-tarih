@@ -1,0 +1,69 @@
+name: "Harflerden Bul · Boşluk Doldurma Quizi"
+# Hazirla (maske kontrolu) -> Ses (Gemini, ucretsiz) -> scripts/harf_bul.py video -> kapak -> scripts/harf_bul_kontrol.py -> release video-<slug>
+# Rehber: docs/HARF_BUL_REHBERI.md
+on:
+  workflow_dispatch:
+    inputs:
+      slug: { description: "Proje klasörü (örn. harflerden-bul-2)", required: true }
+      ses: { description: "Sesi yeniden üret (1 = evet; ses.wav yoksa her zaman üretilir)", required: false, default: "" }
+      bolum: { description: "Kapakta 'N. BÖLÜM' satırı (boş = yok)", required: false, default: "" }
+permissions:
+  contents: write
+concurrency: { group: repo-yazma, cancel-in-progress: false }
+jobs:
+  harf-bul:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      PYTHONUNBUFFERED: "1"
+      GH_TOKEN: ${{ github.token }}
+      PANEL_URL: ${{ vars.PANEL_URL }}
+      SLUG: ${{ inputs.slug }}
+    steps:
+      - name: Proje adını kontrol et
+        run: echo "$SLUG" | grep -Eq '^[a-z0-9-]+$' || (echo 'Geçersiz proje adı'; exit 1)
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: ffmpeg kur
+        timeout-minutes: 10
+        run: bash scripts/ffmpeg_kur.sh
+      - timeout-minutes: 10
+        run: pip install -q numpy soundfile pillow faster-whisper
+      - name: Hazırla (sorular -> sahneler, maske kontrolü)
+        run: python scripts/harf_bul.py --hazirla projects/$SLUG/script.json
+      - name: Ses
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SES: ${{ inputs.ses }}
+        run: |
+          P=projects/$SLUG
+          # ses her zaman bu projenin kendi metninden: metin/stil ozeti ses.kaynak ile uyusmuyorsa yeniden uret
+          OZ=$(python -c "import json,hashlib,sys;s=json.load(open(sys.argv[1]));print(hashlib.sha256((sys.argv[2]+'|'+s.get('ses_stil','')+'|'+s['seslendirme_metni']).encode()).hexdigest())" $P/script.json "$SLUG")
+          if [ "$SES" = "1" ] || [ ! -f "$P/ses.wav" ] || [ "$(cat $P/ses.kaynak 2>/dev/null)" != "$OZ" ]; then
+            rm -f "$P/ses.wav"
+            python scripts/generate_assets.py --slug "$SLUG" --ses
+            test -s "$P/ses.wav" || { echo "HATA: $P/ses.wav uretilemedi (baska projenin sesi KULLANILMAZ)"; exit 1; }
+            echo "$OZ" > "$P/ses.kaynak"
+            git config user.name "github-actions"; git config user.email "github-actions@users.noreply.github.com"
+            git add "projects/$SLUG"; git commit -m "Harflerden Bul sesi: $SLUG" && (git pull --rebase -q; git push) || true
+          fi
+      - name: Video + kapak
+        env: { BOLUM: "${{ inputs.bolum }}" }
+        run: |
+          P=projects/$SLUG; mkdir -p $P/out
+          test -s "$P/ses.wav" || { echo "HATA: $P/ses.wav yok"; exit 1; }
+          python scripts/harf_bul.py $P/script.json $P/ses.wav $P/out/video.mp4
+          B=""; echo "$BOLUM" | grep -Eq '^[0-9]+$' && B="--bolum $BOLUM"
+          python scripts/quiz_kapak.py $P/script.json $P/out/kapak.jpg $B --format harf-bul
+      - name: Otomatik kontroller
+        run: python scripts/harf_bul_kontrol.py projects/$SLUG/out/video.mp4 projects/$SLUG/script.json --bekci
+      - name: Release
+        run: |
+          TAG="video-$SLUG"
+          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --title "$SLUG" --notes "Animasyonlu Tarih · Harflerden Bul videosu"
+          gh release upload "$TAG" "projects/$SLUG/out/video.mp4" "projects/$SLUG/out/kapak.jpg" --clobber
+          python scripts/set_status.py kurgucu tamam "$SLUG Harflerden Bul videosu hazır" "release:$TAG" || true
+      - name: Hata durumunu panele yaz
+        if: failure()
+        run: python scripts/set_status.py kurgucu hata "$SLUG Harflerden Bul üretilemedi, GitHub Actions kaydına bak" || true
