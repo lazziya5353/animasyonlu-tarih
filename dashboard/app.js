@@ -275,6 +275,7 @@ function renderInstagram() {
     <div class="tblw" style="margin-top:8px"><table class="igtab vlist"><thead><tr><th>#</th><th></th><th>Video</th><th>▶ İzlenme</th><th>🔖 Kayıt</th><th>↗ Paylaşım</th><th>⏱ Ort. izleme</th></tr></thead><tbody>
     ${vids.map((v, i) => `<tr data-igid="${esc(v.id)}"><td class="ign">${i + 1}</td><td class="igk">${(v.kapak || v.thumbnail_url || v.media_url) ? `<img src="${esc(v.kapak || v.thumbnail_url || v.media_url)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'igph',textContent:'🎬'}))">` : `<span class="igph">🎬</span>`}</td><td class="igb">${esc(v.baslik || "(açıklamasız)")}<div class="mut" style="font-size:11px">${v.zaman ? `<b class="igzam">🕒 ${new Date(v.zaman).toLocaleString("tr-TR", { timeZone: "Europe/Istanbul", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}</b> · ${ago(v.zaman)} · ` : ""}❤ <span data-lv="begeni">${sayi(v.begeni)}</span> · 💬 <span data-lv="yorum">${sayi(v.yorum)}</span></div></td><td data-l="▶ İzlenme" data-lv="izlenme">${sayi(v.izlenme)}</td><td data-l="🔖 Kayıt">${sayi(v.kaydetme)}</td><td data-l="↗ Paylaşım">${sayi(v.paylasim)}</td><td data-l="⏱ Ort. izleme">${v.ort_izleme_sn != null ? v.ort_izleme_sn + " sn" : "—"}</td></tr>`).join("") || `<tr><td colspan="7" class="mut">Henüz gönderi yok</td></tr>`}
     </tbody></table></div></div>`;
+  if (typeof igKaynakHtml === "function") s += igKaynakHtml(g);
   return s;
 }
 function renderTokenKart() {

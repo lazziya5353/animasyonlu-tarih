@@ -3,13 +3,29 @@
   "ad": "Her Harfe Bir Soru",
   "aciklama": "Harf halkası: her harf için cevabı o harfle başlayan bir soru.",
   "eski": true,
-  "workflow": "quiz"
+  "workflow": "quiz",
+  "ornek": {
+   "harf": "A",
+   "soru": "TBMM 23 Nisan 1920'de hangi şehirde açıldı?",
+   "cevap": "Ankara",
+   "alt_bilgi": "23 Nisan 1920 · TBMM'nin açılışı",
+   "zorluk": "kolay"
+  },
+  "kurallar": "harf: cevabın ilk harfi (Türk alfabesi, büyük); her harf en çok bir kez; soru kısa, cevabı ele vermez; cevap o harfle başlar; alt_bilgi en çok 6 kelime (tarih · kısa bilgi). Sorular harf sırasına dizilir."
  },
  "harf-bul": {
   "ad": "Harflerden Bul",
   "aciklama": "Boşluklu kelime: harfler tek tek açılır, cevabı bul.",
   "eski": true,
-  "workflow": "harf-bul"
+  "workflow": "harf-bul",
+  "ornek": {
+   "soru": "İlk Osmanlı parasını bastıran padişah?",
+   "cevap": "ORHAN GAZİ",
+   "acik_harfler": "_R___ __Z_",
+   "alt_bilgi": "1326 · İlk akçe",
+   "zorluk": "kolay"
+  },
+  "kurallar": "cevap Türkçe büyük harf; acik_harfler cevapla aynı uzunlukta maske (_ kapalı), boşluk/tire aynı yerde; açık oran kolay ~%25, orta ~%20, zor en çok 2 harf, hiçbir zaman %30'u aşmaz; çok kelimede her kelimede en az 1 açık harf ama tüm ilk harfler birden açık olmaz; soru cevabı ya da kökünü içermez."
  },
  "hangisi-once": {
   "ad": "Hangisi Önce?",

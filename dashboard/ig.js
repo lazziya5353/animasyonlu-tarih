@@ -36,6 +36,24 @@ function igTakipKazandiran() {
 const igKapak = (v, w = 56) => v?.kapak ? `<img class="igkp" style="width:${w}px;height:${Math.round(w * 16 / 9)}px" src="${esc(v.kapak)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.visibility='hidden'">` : `<span class="igph" style="width:${w}px;height:${Math.round(w * 16 / 9)}px">🎬</span>`;
 
 // ── 1. Video detay
+// trafik kaynağı: API'nin verdiği kırılımlar (takipçi/takipçi olmayan, içerik türü) % çubuk olarak
+const KAYNAK_AD = { FOLLOWER: "Takipçiler", NON_FOLLOWER: "Takipçi olmayanlar", UNKNOWN: "Bilinmiyor", REELS: "Reels", POST: "Gönderi", FEED: "Gönderi", CAROUSEL_CONTAINER: "Karusel", STORY: "Hikaye", AD: "Reklam", IGTV: "Video", LIVE: "Canlı" };
+const KAYNAK_NOT = `<div class="uyari" style="margin-top:10px">ℹ️ Instagram bu kaynak dağılımını (Keşfet/Reels) API ile paylaşmıyor; uygulamadaki istatistiklerde görünür. En yakın gösterge: <b>Takipçi olmayanlara ulaşma oranı</b> — bu oran yüksekse izlenmenin çoğu Keşfet / Reels akışından gelir.</div>`;
+function igBar(o) {
+  const L = Object.entries(o || {}).filter(([, x]) => x > 0), top = L.reduce((t, [, x]) => t + x, 0); if (!top) return "";
+  return L.sort((a, b) => b[1] - a[1]).map(([k, x]) => { const y = (x * 100) / top;
+    return `<div class="igbar"><span>${esc(KAYNAK_AD[k] || k)}</span><i><em style="width:${y.toFixed(1)}%"></em></i><b>%${virgul(y)}</b><small>${sayi(x)}</small></div>`; }).join("");
+}
+const disOran = (o) => { const t = (o?.FOLLOWER || 0) + (o?.NON_FOLLOWER || 0); return t ? ((o.NON_FOLLOWER || 0) * 100) / t : null; };
+function igKaynakHtml(g) {
+  const k = g?.kaynak30; if (!k) return `<h2>Trafik kaynakları</h2><div class="card"><div class="mut">Kaynak verisi henüz yok; "Şimdi güncelle" ile çek.</div>${KAYNAK_NOT}</div>`;
+  const blok = (m, ad) => { const f = k[m]?.follow_type, t = k[m]?.media_product_type, s = k[m]?.surface_type, d = disOran(f); if (!f && !t && !s) return "";
+    return `<div style="margin-top:10px"><b style="font-size:14px">${ad} (30 gün)</b>${d != null ? `<div class="mut" style="margin:4px 0">Takipçi olmayanlara ulaşma oranı: <b style="color:var(--gold)">%${virgul(d)}</b></div>` : ""}
+      ${f ? `<div class="mut" style="margin-top:6px">Takipçi / takipçi olmayan</div>${igBar(f)}` : ""}${t ? `<div class="mut" style="margin-top:6px">İçerik türüne göre</div>${igBar(t)}` : ""}${s ? `<div class="mut" style="margin-top:6px">Kaynak (yüzey)</div>${igBar(s)}` : ""}</div>`; };
+  const ic = blok("views", "İzlenme") + blok("reach", "Erişim");
+  return `<h2>Trafik kaynakları</h2><div class="card">${ic || '<div class="mut">Bu token ile kırılım verisi gelmedi.</div>'}${k.views?.surface_type || k.reach?.surface_type ? "" : KAYNAK_NOT}</div>`;
+}
+
 function igDetay(id) {
   const M = O.instagram?.medya || [], v = M.find((x) => x.id === id); if (!v) return;
   const met = [["izlenme", "▶ İzlenme"], ["erisim", "👥 Erişim"], ["begeni", "❤ Beğeni"], ["yorum", "💬 Yorum"], ["kaydetme", "🔖 Kayıt"], ["paylasim", "↗ Paylaşım"], ["etkilesim", "✦ Toplam etkileşim"], ["ort_izleme_sn", "⏱ Ort. izleme (sn)"], ["takip", "➕ Takip"], ["profil_ziyaret", "👤 Profil ziyareti"]];
@@ -48,6 +66,9 @@ function igDetay(id) {
     <div class="mut" style="margin-top:4px">${v.zaman ? istTarih(v.zaman) : ""} · ${esc(v.tur || "")}</div>
     <label class="mut" style="display:block;margin-top:8px">Format <select id="igfsel">${["", ...FORMATLAR].map((x) => `<option value="${esc(x)}"${(el ? f : "") === x ? " selected" : ""}>${x ? esc(x) : `Otomatik (${esc(el ? "kural" : f)})`}</option>`).join("")}</select></label></div></div>
     <div class="igmet">${satir || '<div class="mut">Metrik yok</div>'}</div>
+    <div style="margin-top:12px"><b style="font-size:14px">Erişim kaynağı</b>${v.kaynak ? `<div class="mut" style="margin:4px 0">Takipçi olmayanlara ulaşma oranı: <b style="color:var(--gold)">%${virgul(disOran(v.kaynak) ?? 0)}</b></div>${igBar(v.kaynak)}`
+      : `<div class="mut" style="margin-top:4px">Bu video için takipçi/takipçi olmayan kırılımı API'den gelmedi.${v.erisim && O.instagram?.hesap?.takipci ? ` Kaba gösterge: erişim takipçi sayısının ${virgul(v.erisim / O.instagram.hesap.takipci)} katı.` : ""}</div>`}
+      <div class="mut" style="font-size:11.5px;margin-top:6px">Instagram bu kaynak dağılımını (Keşfet/Reels) API ile paylaşmıyor; uygulamadaki istatistiklerde görünür.</div></div>
     <div class="flex">${v.url ? `<a class="btn gold" href="${esc(v.url)}" target="_blank" rel="noopener">Instagram'da aç</a>` : ""}<button id="igkapat">Kapat</button></div></div>`;
   document.body.append(d);
   d.onclick = (e) => { if (e.target === d) d.remove(); }; d.querySelector("#igkapat").onclick = () => d.remove();

@@ -54,7 +54,15 @@ const validSlug = (s) => /^[a-z0-9-]{1,60}$/.test(s || "");
 
 // Quiz Stüdyo: format şemaları (panel, bu fonksiyon ve scripts/quiz_taslak.py aynı dosyayı kullanır)
 import QSEMA from "../../quiz/semalar.json" with { type: "json" };
-const QFORMAT = Object.keys(QSEMA).filter((k) => !QSEMA[k].eski);
+const QFORMAT = Object.keys(QSEMA).filter((k) => !QSEMA[k].eski), QTUM = Object.keys(QSEMA);
+const quizAyirIstem = (fmt, metin, yerel, tema) => `Kullanıcı Türkçe bir ${tema === "spor" ? "spor tarihi" : "tarih"} quizi için soruları serbest biçimde yapıştırdı. Bunları '${QSEMA[fmt].ad}' formatının şemasına dönüştür.
+KURALLAR: Kullanıcının verdiği soru sayısını AYNEN koru (soru ekleme/çıkarma yok). Kullanıcının soru ve cevap metinlerini değiştirme; sadece bölüp alanlara yerleştir. Eksik alanları sen taslakla: 4 seçenekli formatlarda seçenek yoksa doğru cevaba yakın, makul 3 çeldirici yaz; alt_bilgi/düzeltme/söyleyen yoksa kısa ve kesin doğru bir bilgi yaz; koordinat gerekiyorsa gerçek koordinatı yaz. Zorluk verilmemişse 'orta'. Format kuralları: ${QSEMA[fmt].kurallar}
+Her taslakladığın alan için notlar'a "soru N: <alan> Gemini taslağı — <kısa doğruluk notu / kaynak>" yaz; kullanıcının bilgisinde şüpheli bir hata görürsen değiştirme, notlarda belirt.
+Sadece JSON döndür: {"sorular":[...],"notlar":[...]}. Tek soru şeması: ${JSON.stringify(QSEMA[fmt].ornek)}
+Yerel ayrıştırıcının kısmi sonucu (yardımcı olabilir): ${JSON.stringify(yerel || []).slice(0, 6000)}
+METİN:
+${metin}`;
+const TR_ABC = "ABCÇDEFGĞHIİJKLMNOÖPRSŞTUVYZ";
 function quizIstem(fmt, konu, adet, kar, tema) {
   const s = QSEMA[fmt]; const alan = tema === "spor" ? "spor tarihi" : "tarih (ağırlıklı Türk ve dünya tarihi)";
   return `Türkçe bir Instagram ${alan} quiz videosu için '${s.ad}' formatında ${adet} soru hazırla. Konu: ${konu}.\nZorluk dağılımı: ${kar.kolay} kolay, ${kar.orta} orta, ${kar.zor} zor; zorları başa/ortaya/sona dağıt.\nKurallar: ${s.kurallar} Her bilgi kesin doğru ve iki kaynakla doğrulanabilir olmalı; tartışmalı ya da rivayet bilgileri kullanma. Sorular kısa (en çok 14 kelime), alt_bilgi en çok 6 kelime. Türkçe karakterleri doğru yaz.\nSadece JSON döndür: {"sorular": [ ... ]}. Tek bir sorunun şeması (örnek): ${JSON.stringify(s.ornek)}`;
@@ -72,6 +80,22 @@ async function gemini(text, { arama = false, ms = 9000 } = {}) {
 async function quizSiradaki(fmt) { // projects/<format>-<n>: ilk boş n
   const r = await gh(`/repos/${REPO}/contents/projects`); const ad = r.ok ? (await r.json()).map((x) => x.name) : [];
   let n = 1; while (ad.includes(`${fmt}-${n}`)) n++; return `${fmt}-${n}`;
+}
+
+async function quizEskiScript(fmt, slug, tema, Q, baslik, n) {
+  const t = (x) => String(x ?? "").trim(), up = (x) => t(x).toLocaleUpperCase("tr");
+  const stil = "Bir quiz sunucususun. İlk cümleyi enerjik, gülümseyen ve meydan okuyan bir tonla söyle. Soruları net ve akıcı, cevapları kısa ve kendinden emin oku. Son cümleyi samimi bir çağrı gibi söyle. Uzun sessizlik bırakma, her cümleden sonra kısa bir durak ver:\n";
+  if (fmt === "harf-bul") return { baslik: t(baslik) || `Harflerden Bul ${n}`, hook: "HARFLERDEN BUL", slug, format: "harf-bul", tema, konu: "Harflerden Bul quiz", tarih: "", durum: "onaylandi", kaynak: "panel", ses_stil: stil, sade: true,
+    sorular: Q.map((q) => ({ zorluk: ["kolay", "orta", "zor"].includes(q.zorluk) ? q.zorluk : "orta", soru: t(q.soru), cevap: up(q.cevap), acik_harfler: t(q.acik_harfler), alt_bilgi: t(q.alt_bilgi), ...(q.cevap_okunus ? { cevap_okunus: t(q.cevap_okunus) } : {}) })) };
+  const S = Q.map((q) => ({ ...q, harf: up(q.harf || t(q.cevap)[0]) })).sort((a, b) => TR_ABC.indexOf(a.harf) - TR_ABC.indexOf(b.harf));
+  if (new Set(S.map((q) => q.harf)).size !== S.length) return { hata: "Her harf bir kez kullanılmalı" };
+  const giris = tema === "spor" ? "Her harfe bir spor sorusu! Bakalım kaçını bileceksin?" : "Her harfe bir tarih sorusu! Bakalım kaçını bileceksin?";
+  const sahne = (l, z) => ({ lines: [l], big: "", sub: "", label: "QUIZ", fx: [], image: "images/bg.jpg", prompt: "quiz", ...(z ? { zorluk: z } : {}) });
+  const sah = [sahne(giris)]; for (const q of S) { sah.push(sahne(`${q.harf} harfi. ${t(q.soru)}`, q.zorluk)); sah.push(sahne(`${t(q.cevap).replace(/[.]+$/, "")}.`)); }
+  sah.push(sahne("Kaçını bildin? Yorumlara yaz."));
+  return { baslik: t(baslik) || `Her Harfe Bir ${tema === "spor" ? "Spor" : "Tarih"} Sorusu ${n}`, hook: `HER HARFE BİR ${tema === "spor" ? "SPOR" : "TARİH"} SORUSU`, slug, tema, map_region: "anadolu", sahneler: sah, finale: "", maps: [], cards: [],
+    eras: [{ name: "QUIZ", from: 0, to: 45 }], outro: { title: "KAÇINI BİLDİN?", line: "Yorumlara yaz" }, konu: "Harf quiz", tarih: "", durum: "onaylandi", kaynak: "panel", sade: true, ses_stil: stil,
+    seslendirme_metni: sah.map((x) => x.lines[0]).join("\n"), alt_bilgi: Object.fromEntries(S.map((q) => [q.harf, t(q.alt_bilgi)])), aciklama: "", hashtagler: [], kaynaklar: [], kontrol_notlari: [] };
 }
 
 let failed = []; // basit kaba kuvvet koruması (sıcak fonksiyon örneği başına)
@@ -156,6 +180,15 @@ async function igRefresh(tok, eski) {
       .catch(() => m === "follower_count" && yok.add("follower_count (günlük)"))),
   ]);
   out.ozet30 = ozet; out.gunluk = gunluk;
+  // trafik kaynağı: Graph API hesap düzeyinde yalnız follow_type (takipçi / takipçi olmayan) ve media_product_type (Reels/gönderi/hikaye) kırılımlarını verir;
+  // Keşfet / Reels sekmesi / profil gibi "yüzey" kırılımı API'de yok (denenip desteklenmeyenler kaynak30.yok'a yazılır)
+  const kir = (r) => Object.fromEntries((r.data?.[0]?.total_value?.breakdowns?.[0]?.results || []).map((x) => [x.dimension_values.join("/"), x.value]));
+  const k30 = { yok: [] };
+  await Promise.all(["views", "reach"].flatMap((m) => ["follow_type", "media_product_type", "surface_type"].map((bd) =>
+    get(`${uid}/insights`, { metric: m, period: "day", metric_type: "total_value", breakdown: bd, since, until })
+      .then((r) => { const o = kir(r); if (Object.keys(o).length) (k30[m] ||= {})[bd] = o; else k30.yok.push(`${m}:${bd}`); })
+      .catch(() => k30.yok.push(`${m}:${bd}`)))));
+  out.kaynak30 = k30;
   const bugun = out.zaman.slice(0, 10);
   out.gecmis = [...out.gecmis.filter((g) => g.tarih !== bugun).slice(-365), { tarih: bugun, takipci: out.hesap.takipci }];
   const medya = ((await get(`${uid}/media`, { fields: "id,caption,media_type,media_product_type,permalink,thumbnail_url,media_url,timestamp,like_count,comments_count", limit: 50 })).data || []).slice(0, 50);
@@ -163,9 +196,10 @@ async function igRefresh(tok, eski) {
     const o = {}; await Promise.all(met.map((m) => get(`${id}/insights`, { metric: m }).then((r) => (r.data || []).forEach((x) => (o[x.name] = deger(x)))).catch(() => yok.add(m)))); return o; };
   const liste = await Promise.all(medya.map(async (p) => { const [st, ek] = await Promise.all([ist(p.id, p.media_product_type === "REELS" ? [...IG_MEDYA, ...IG_REELS] : IG_MEDYA),
       get(`${p.id}/insights`, { metric: "follows,profile_visits" }).then((r) => Object.fromEntries((r.data || []).map((x) => [x.name, deger(x)]))).catch(() => ({}))]), ort = st.ig_reels_avg_watch_time;
+    let kaynak = null; if (!yok.has("medya:follow_type")) kaynak = await get(`${p.id}/insights`, { metric: "reach", breakdown: "follow_type", metric_type: "total_value" }).then((r) => { const o = kir(r); return Object.keys(o).length ? o : null; }).catch(() => (yok.add("medya:follow_type"), null));
     return { id: p.id, baslik: (p.caption || "").trim().split("\n")[0].slice(0, 90), zaman: p.timestamp, tur: p.media_product_type || p.media_type, medya_turu: p.media_type, url: p.permalink,
       kapak: p.thumbnail_url || (p.media_type === "IMAGE" ? p.media_url : null), begeni: p.like_count ?? st.likes, yorum: p.comments_count ?? st.comments,
-      izlenme: st.views, erisim: st.reach, kaydetme: st.saved, paylasim: st.shares, etkilesim: st.total_interactions, ort_izleme_sn: typeof ort === "number" ? Math.round(ort / 100) / 10 : null, takip: ek.follows ?? null, profil_ziyaret: ek.profile_visits ?? null }; }));
+      izlenme: st.views, erisim: st.reach, kaydetme: st.saved, paylasim: st.shares, etkilesim: st.total_interactions, ort_izleme_sn: typeof ort === "number" ? Math.round(ort / 100) / 10 : null, kaynak, takip: ek.follows ?? null, profil_ziyaret: ek.profile_visits ?? null }; }));
   if (!liste.some((v) => v.takip != null)) yok.add("follows (gönderi başına)");
   liste.sort((a, b) => (b.izlenme || 0) - (a.izlenme || 0)); out.medya = liste;
   const ort = (a) => a.reduce((s, x) => s + x, 0) / a.length, saat = {}, gun = {};
@@ -475,9 +509,9 @@ export default async (req) => {
         return json({ ok: true });
       }
       case "quiz_taslak": { // Quiz Stüdyo 'Ajan hazırlasın': Netlify'da anahtar varsa doğrudan Gemini, yoksa quiz_taslak.yml
-        if (!QFORMAT.includes(b.format)) return json({ hata: "Format seçilmedi" }, 400);
+        if (!QTUM.includes(b.format)) return json({ hata: "Format seçilmedi" }, 400);
         const konu = String(b.konu || "").trim().slice(0, 200); if (konu.length < 3) return json({ hata: "Konu yaz" }, 400);
-        const adet = Math.max(6, Math.min(15, Number(b.adet) || 10)); const k = b.karisim || {};
+        const adet = Math.max(6, Math.min(b.format === "her-harfe" ? 29 : 15, Number(b.adet) || 10)); const k = b.karisim || {};
         let kar = { kolay: Number(k.kolay) || 0, orta: Number(k.orta) || 0, zor: Number(k.zor) || 0 };
         if (kar.kolay + kar.orta + kar.zor !== adet) kar = { kolay: Math.round(adet * 0.4), zor: Math.round(adet * 0.2) }, kar.orta = adet - kar.kolay - kar.zor;
         const tema = b.tema === "spor" ? "spor" : "tarih";
@@ -490,18 +524,34 @@ export default async (req) => {
         return json({ ok: true, durum: "bekliyor", id });
       }
       case "quiz_dogrula": { // taslağın ikinci geçişi: Google aramalı doğruluk kontrolü (Netlify'dan)
-        if (!QFORMAT.includes(b.format) || !Array.isArray(b.sorular)) return json({ hata: "Geçersiz taslak" }, 400);
-        try { const j = await gemini(quizKontrolIstem(b.format, b.sorular.slice(0, 15)), { arama: true, ms: 9500 }); return json({ ok: true, sorular: j.sorular || b.sorular, notlar: j.notlar || [] }); }
+        if (!QTUM.includes(b.format) || !Array.isArray(b.sorular)) return json({ hata: "Geçersiz taslak" }, 400);
+        try { const j = await gemini(quizKontrolIstem(b.format, b.sorular.slice(0, 29)), { arama: true, ms: 9500 }); return json({ ok: true, sorular: j.sorular || b.sorular, notlar: j.notlar || [] }); }
         catch (e) { return json({ ok: false, sorular: b.sorular, notlar: [`Doğruluk kontrolü yapılamadı (${e.message}); soruları elle kontrol et`] }); }
+      }
+      case "quiz_ayir": { // "Toplu soru ekle": yerel ayrıştırıcı emin olamazsa metni Gemini formatın şemasına çevirir, eksik alanları taslaklar
+        if (!QTUM.includes(b.format)) return json({ hata: "Format seçilmedi" }, 400);
+        const metin = String(b.metin || "").trim().slice(0, 12000); if (metin.length < 5) return json({ hata: "Metin boş" }, 400);
+        try { const j = await gemini(quizAyirIstem(b.format, metin, b.yerel, b.tema), { ms: 9500 }); return json({ ok: true, sorular: j.sorular || [], notlar: j.notlar || [] }); }
+        catch (e) { return json({ ok: false, hata: `Gemini ile ayrılamadı (${e.message})` }); }
       }
       case "quiz_taslak_durum": {
         if (!/^[a-z0-9-]{4,40}$/.test(b.id || "")) return json({ hata: "Geçersiz id" }, 400);
         const j = await readJson(`projects/_taslak/${b.id}.json`); return json(j || { durum: "bekliyor" });
       }
       case "quiz_uret": { // onaylanan sorular -> projects/<format>-<n>/script.json (+ görseller) -> quiz_studyo.yml
-        const fmt = b.format; if (!QFORMAT.includes(fmt)) return json({ hata: "Format seçilmedi" }, 400);
-        const Q = Array.isArray(b.sorular) ? b.sorular : []; if (Q.length < 6 || Q.length > 15) return json({ hata: "6-15 soru olmalı" }, 400);
-        const slug = await quizSiradaki(fmt); const tema = b.tema === "spor" ? "spor" : "tarih";
+        const fmt = b.format; if (!QTUM.includes(fmt)) return json({ hata: "Format seçilmedi" }, 400);
+        const Q = Array.isArray(b.sorular) ? b.sorular : [], ust = fmt === "her-harfe" ? 29 : 15; if (Q.length < 6 || Q.length > ust) return json({ hata: `6-${ust} soru olmalı` }, 400);
+        const tema = b.tema === "spor" ? "spor" : "tarih";
+        if (QSEMA[fmt].eski) { // Her Harfe -> quiz.yml, Harflerden Bul -> harf_bul.yml (mevcut script.json şemaları)
+          const slug = await quizSiradaki(fmt === "her-harfe" ? `her-harfe-${tema}` : tema === "spor" ? "harflerden-bul-spor" : "harflerden-bul");
+          const n = slug.split("-").pop(), sc = await quizEskiScript(fmt, slug, tema, Q, b.baslik, n);
+          if (sc.hata) return json({ hata: sc.hata }, 400);
+          await writeFile(`projects/${slug}/script.json`, b64(sc), `Quiz Stüdyo: ${slug} (panelden onaylandı)`);
+          await baslikYaz(slug, sc.baslik).catch(() => {});
+          await dispatch(QSEMA[fmt].workflow, { slug }); // "quiz" -> quiz.yml, "harf-bul" -> harf_bul.yml
+          return json({ ok: true, slug });
+        }
+        const slug = await quizSiradaki(fmt);
         const hex = (x) => (/^#[0-9a-fA-F]{6}$/.test(x || "") ? x : undefined);
         const sc = { slug, format: fmt, tema, baslik: String(b.baslik || QSEMA[fmt].ad).slice(0, 80), sorular: Q, durum: "uretiliyor", kaynak: "panel" };
         if (tema === "spor" && (hex(b.takim?.ana) || hex(b.takim?.ikinci))) sc.takim = { ana: hex(b.takim?.ana), ikinci: hex(b.takim?.ikinci) };
