@@ -82,14 +82,14 @@ async function quizSiradaki(fmt) { // projects/<format>-<n>: ilk boş n
   let n = 1; while (ad.includes(`${fmt}-${n}`)) n++; return `${fmt}-${n}`;
 }
 
-async function quizEskiScript(fmt, slug, tema, Q, baslik, n) {
+async function quizEskiScript(fmt, slug, tema, Q, baslik, n, girisOzel) {
   const t = (x) => String(x ?? "").trim(), up = (x) => t(x).toLocaleUpperCase("tr");
   const stil = "Bir quiz sunucususun. İlk cümleyi enerjik, gülümseyen ve meydan okuyan bir tonla söyle. Soruları net ve akıcı, cevapları kısa ve kendinden emin oku. Son cümleyi samimi bir çağrı gibi söyle. Uzun sessizlik bırakma, her cümleden sonra kısa bir durak ver:\n";
-  if (fmt === "harf-bul") return { baslik: t(baslik) || `Harflerden Bul ${n}`, hook: "HARFLERDEN BUL", slug, format: "harf-bul", tema, konu: "Harflerden Bul quiz", tarih: "", durum: "onaylandi", kaynak: "panel", ses_stil: stil, sade: true,
+  if (fmt === "harf-bul") return { baslik: t(baslik) || `Harflerden Bul ${n}`, hook: "HARFLERDEN BUL", slug, format: "harf-bul", tema, ...(girisOzel ? { giris: girisOzel } : {}), konu: "Harflerden Bul quiz", tarih: "", durum: "onaylandi", kaynak: "panel", ses_stil: stil, sade: true,
     sorular: Q.map((q) => ({ zorluk: ["kolay", "orta", "zor"].includes(q.zorluk) ? q.zorluk : "orta", soru: t(q.soru), cevap: up(q.cevap), acik_harfler: t(q.acik_harfler), alt_bilgi: t(q.alt_bilgi), ...(q.cevap_okunus ? { cevap_okunus: t(q.cevap_okunus) } : {}) })) };
   const S = Q.map((q) => ({ ...q, harf: up(q.harf || t(q.cevap)[0]) })).sort((a, b) => TR_ABC.indexOf(a.harf) - TR_ABC.indexOf(b.harf));
   if (new Set(S.map((q) => q.harf)).size !== S.length) return { hata: "Her harf bir kez kullanılmalı" };
-  const giris = tema === "spor" ? "Her harfe bir spor sorusu! Bakalım kaçını bileceksin?" : "Her harfe bir tarih sorusu! Bakalım kaçını bileceksin?";
+  const giris = girisOzel || (tema === "spor" ? "Her harfe bir spor sorusu! Bakalım kaçını bileceksin?" : "Her harfe bir tarih sorusu! Bakalım kaçını bileceksin?");
   const sahne = (l, z) => ({ lines: [l], big: "", sub: "", label: "QUIZ", fx: [], image: "images/bg.jpg", prompt: "quiz", ...(z ? { zorluk: z } : {}) });
   const sah = [sahne(giris)]; for (const q of S) { sah.push(sahne(`${q.harf} harfi. ${t(q.soru)}`, q.zorluk)); sah.push(sahne(`${t(q.cevap).replace(/[.]+$/, "")}.`)); }
   sah.push(sahne("Kaçını bildin? Yorumlara yaz."));
@@ -542,9 +542,10 @@ export default async (req) => {
         const fmt = b.format; if (!QTUM.includes(fmt)) return json({ hata: "Format seçilmedi" }, 400);
         const Q = Array.isArray(b.sorular) ? b.sorular : [], ust = fmt === "her-harfe" ? 29 : 15; if (Q.length < 6 || Q.length > ust) return json({ hata: `6-${ust} soru olmalı` }, 400);
         const tema = b.tema === "spor" ? "spor" : "tarih";
+        const giris = String(b.giris ?? "").replace(/\s+/g, " ").trim(); if (b.giris !== undefined && (!giris || giris.length > 180)) return json({ hata: "Giriş cümlesi boş olamaz / en fazla 180 karakter" }, 400);
         if (QSEMA[fmt].eski) { // Her Harfe -> quiz.yml, Harflerden Bul -> harf_bul.yml (mevcut script.json şemaları)
           const slug = await quizSiradaki(fmt === "her-harfe" ? `her-harfe-${tema}` : tema === "spor" ? "harflerden-bul-spor" : "harflerden-bul");
-          const n = slug.split("-").pop(), sc = await quizEskiScript(fmt, slug, tema, Q, b.baslik, n);
+          const n = slug.split("-").pop(), sc = await quizEskiScript(fmt, slug, tema, Q, b.baslik, n, giris);
           if (sc.hata) return json({ hata: sc.hata }, 400);
           await writeFile(`projects/${slug}/script.json`, b64(sc), `Quiz Stüdyo: ${slug} (panelden onaylandı)`);
           await baslikYaz(slug, sc.baslik).catch(() => {});
@@ -554,7 +555,7 @@ export default async (req) => {
         }
         const slug = await quizSiradaki(fmt);
         const hex = (x) => (/^#[0-9a-fA-F]{6}$/.test(x || "") ? x : undefined);
-        const sc = { slug, format: fmt, tema, baslik: String(b.baslik || QSEMA[fmt].ad).slice(0, 80), sorular: Q, durum: "uretiliyor", kaynak: "panel" };
+        const sc = { slug, format: fmt, tema, baslik: String(b.baslik || QSEMA[fmt].ad).slice(0, 80), sorular: Q, durum: "uretiliyor", kaynak: "panel", ...(giris ? { giris } : {}) };
         if (tema === "spor" && (hex(b.takim?.ana) || hex(b.takim?.ikinci))) sc.takim = { ana: hex(b.takim?.ana), ikinci: hex(b.takim?.ikinci) };
         const resim = async (ad, b64) => { if (!b64 || b64.length > 4.5e6) return null; await writeFile(`projects/${slug}/images/${ad}`, b64, `Quiz Stüdyo görsel: ${slug}/${ad}`); return `images/${ad}`; };
         if (b.logo) sc.logo = await resim("logo.png", b.logo);

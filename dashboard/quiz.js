@@ -65,6 +65,7 @@ function qGovde(kok, tema) {
    <label>Arka plan <select data-qarka><option value="tema">Tema varsayılanı</option><option value="yukle">Resim yükle (karartılır, bulanık)</option><option value="gemini">Gemini çizsin</option></select></label>
    <input type="file" accept="image/*" data-qarkadosya hidden><input type="text" data-qarkaprompt placeholder="Sahne tarifi (örn. gece Osmanlı kalyonları)" hidden>
    <h3 style="margin:14px 0 4px">Ses</h3>
+   <label>Giriş cümlesi <a href="#" data-qgirisvars style="float:right;font-size:12px">Varsayılana dön</a><input type="text" maxlength="180" data-qgiris></label>
    <label>Ses kaynağı <select data-qses><option value="gemini">Gemini (otomatik)</option><option value="harici">Kendi ses dosyam (ElevenLabs vb.)</option></select></label>
    <div data-qsesharici hidden><button class="ghost" data-qmetin style="width:100%;margin-top:6px">📋 Seslendirme metnini kopyala</button>
      <textarea data-qmetinkutu readonly hidden style="min-height:140px;margin-top:6px"></textarea>
@@ -79,10 +80,13 @@ function qGovde(kok, tema) {
   g.querySelector("[data-qarkadosya]").onchange = async (e) => (S.arka = await qResim(e.target.files[0], 1080, "image/jpeg"));
   const lg = g.querySelector("[data-qlogo]"); if (lg) lg.onchange = async (e) => (S.logo = await qResim(e.target.files[0], 400, "image/png"));
   g.querySelector("[data-qtaslak]").onclick = (e) => qTaslak(g, fmt, S, tema, e.target, ciz);
+  const gi = g.querySelector("[data-qgiris]"); gi.value = qGiris(fmt, tema, S.sorular.length);
+  gi.oninput = () => { try { const v = gi.value.trim(); if (!v || v === qGirisVars(fmt, tema, S.sorular.length)) localStorage.removeItem(QGK + fmt); else localStorage.setItem(QGK + fmt, v); } catch {} };
+  g.querySelector("[data-qgirisvars]").onclick = (e) => { e.preventDefault(); try { localStorage.removeItem(QGK + fmt); } catch {} gi.value = qGirisVars(fmt, tema, S.sorular.length); };
   const ses = g.querySelector("[data-qses]"); ses.value = S.ses_mod || "gemini";
   const sesGoster = () => { S.ses_mod = ses.value; g.querySelector("[data-qsesharici]").hidden = ses.value !== "harici"; }; ses.onchange = sesGoster; sesGoster();
   g.querySelector("[data-qmetin]").onclick = async () => {
-    qTamamla(fmt, S.sorular); const k = g.querySelector("[data-qmetinkutu]"); k.value = qSesMetni(fmt, tema, S.sorular); k.hidden = false;
+    qTamamla(fmt, S.sorular); const k = g.querySelector("[data-qmetinkutu]"); const gh = qGirisHata(g); if (gh) return toast(gh); k.value = qSesMetni(fmt, tema, S.sorular, qGiris(fmt, tema, S.sorular.length)); k.hidden = false;
     try { await navigator.clipboard.writeText(k.value); toast("Seslendirme metni kopyalandı"); } catch { k.select(); toast("Metni kutudan kopyala"); }
   };
   g.querySelector("[data-qsesdosya]").onchange = (e) => { const f = e.target.files[0]; S.ses_dosya = null; if (!f) return;
@@ -166,10 +170,11 @@ async function qUret(g, fmt, S, tema, btn) {
   const err = g.querySelector("[data-qhata]"); const h = qDogrula(fmt, S.sorular); err.textContent = h.slice(0, 6).join(" · ");
   if (h.length) return;
   if (S.arka_mod === "yukle" && !S.arka) return (err.textContent = "Arka plan resmi seç ya da 'Tema varsayılanı' yap");
+  const gh = qGirisHata(g); if (gh) return (err.textContent = gh);
   if (S.ses_mod === "harici" && !S.ses_dosya) return (err.textContent = "Ses dosyası seç ya da 'Gemini (otomatik)' yap");
   if (!confirm(`${S.sorular.length} soruluk "${QS[fmt].ad}" videosu üretilsin mi? (~8–10 dk)`)) return;
   const renk = g.querySelector("[data-qrenk]")?.checked;
-  const body = { format: fmt, tema, sorular: S.sorular, gorseller: S.gorseller, logo: S.logo, arkaplan_mod: S.arka_mod, arka: S.arka, arkaplan_prompt: g.querySelector("[data-qarkaprompt]").value,
+  const body = { format: fmt, tema, sorular: S.sorular, gorseller: S.gorseller, logo: S.logo, arkaplan_mod: S.arka_mod, arka: S.arka, arkaplan_prompt: g.querySelector("[data-qarkaprompt]").value, giris: qGiris(fmt, tema, S.sorular.length),
     takim: renk ? { ana: g.querySelector("[data-qana]").value, ikinci: g.querySelector("[data-qikinci]").value } : undefined };
   btn.disabled = true; btn.textContent = "Gönderiliyor…";
   try {
@@ -344,21 +349,31 @@ function qSatirlar(fmt, q) { // quiz_studyo.satirlar
   if (fmt === "kelime-eksik") return [["Eksik kelime ne?", q.soz.replace("___", "...")], q.soz.replace("___", q.secenekler[q.dogru])];
   return [[], ""];
 }
-function qSesMetni(fmt, tema, Q) {
+// Giriş cümlesi: format başına localStorage; kayıt yoksa varsayılan (soru sayısı o anki sayıdan)
+const QGK = "quiz_giris_";
+function qGirisVars(fmt, tema, n) {
+  if (fmt === "her-harfe") return tema === "spor" ? "Her harfe bir spor sorusu! Bakalım kaçını bileceksin?" : "Her harfe bir tarih sorusu! Bakalım kaçını bileceksin?";
+  if (fmt === "harf-bul") return "Harflerden bul! Boşlukları doldur, bakalım kaçını çözebileceksin?";
+  return `${QGIRIS[fmt]}! ${n} soru, bakalım kaçını bileceksin?`;
+}
+function qGiris(fmt, tema, n) { let v = null; try { v = localStorage.getItem(QGK + fmt); } catch {} return (v || "").replace(/\s+/g, " ").trim() || qGirisVars(fmt, tema, n); }
+function qGirisHata(g) { const v = g.querySelector("[data-qgiris]")?.value.trim() ?? "x"; return !v ? "Giriş cümlesi boş olamaz" : v.length > 180 ? "Giriş cümlesi en fazla 180 karakter" : ""; }
+function qSesMetni(fmt, tema, Q, giris) {
+  giris = String(giris || "").trim() || qGirisVars(fmt, tema, Q.length);
   const t = (x) => String(x ?? "").trim(), up = (x) => t(x).toLocaleUpperCase("tr");
   if (fmt === "her-harfe") { // api quizEskiScript: harfe göre sıralı, sayı çevirisi yok
     const S = Q.map((q) => ({ ...q, harf: up(q.harf || t(q.cevap)[0]) })).sort((a, b) => QTR_ABC.indexOf(a.harf) - QTR_ABC.indexOf(b.harf));
-    const L = [tema === "spor" ? "Her harfe bir spor sorusu! Bakalım kaçını bileceksin?" : "Her harfe bir tarih sorusu! Bakalım kaçını bileceksin?"];
+    const L = [giris];
     for (const q of S) L.push(`${q.harf} harfi. ${t(q.soru)}`, `${t(q.cevap).replace(/[.]+$/, "")}.`);
     L.push("Kaçını bildin? Yorumlara yaz."); return L.join("\n");
   }
   if (fmt === "harf-bul") { // harf_bul.py hazirla: okunus + metni_yaziya
     const okunus = (c) => c.split(" ").map((p) => p.split("-").map((s) => s.slice(0, 1) + s.slice(1).replace(/I/g, "ı").replace(/İ/g, "i").toLowerCase()).join("-")).join(" ");
-    const L = ["Harflerden bul! Boşlukları doldur, bakalım kaçını çözebileceksin?"];
+    const L = [giris];
     for (const q of Q) L.push(t(q.soru), (t(q.cevap_okunus) || okunus(up(q.cevap))).replace(/[.]+$/, "") + ".");
     L.push("Kaçını bildin? Yorumlara yaz!"); return qYaziya(L.join("\n"));
   }
-  const L = [`${QGIRIS[fmt]}! ${Q.length} soru, bakalım kaçını bileceksin?`];
+  const L = [giris];
   for (const q of Q) { const [ql, al] = qSatirlar(fmt, q); L.push(...ql, al); }
   L.push("Kaçını bildin? Yorumlara yaz!"); return L.map(qYaziya).join("\n");
 }
