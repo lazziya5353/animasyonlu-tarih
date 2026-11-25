@@ -1,0 +1,25 @@
+name: "Quiz Stüdyo · günlük test kuyruğu"
+# Gemini ücretsiz ses kotası (günde 10 istek) yüzünden test videolarını günde bir tane üretir.
+# Listede release'i olmayan ilk projeyi quiz_studyo.yml ile başlatır; hepsi bitince hiçbir şey yapmaz.
+on:
+  schedule: [{ cron: "15 9 * * *" }]   # 12:15 İstanbul (Gemini kotası sıfırlandıktan sonra)
+  workflow_dispatch:
+permissions:
+  actions: write
+  contents: read
+jobs:
+  siradaki:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      R: ${{ github.repository }}
+    steps:
+      - run: |
+          for s in hangisi-once-1 dogru-yanlis-1 bu-kim-1 haritada-bul-1 emoji-tarih-1 kelime-eksik-1 yili-tahmin-spor-1; do
+            if ! gh api "repos/$R/releases/tags/video-$s" >/dev/null 2>&1; then
+              echo "Sıradaki: $s"
+              gh api -X POST "repos/$R/actions/workflows/quiz_studyo.yml/dispatches" -f ref=main -f "inputs[slug]=$s" -f "inputs[ses]=1"
+              exit 0
+            fi
+          done
+          echo "Tüm test videoları hazır."
