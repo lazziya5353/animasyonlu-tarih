@@ -65,3 +65,10 @@ details.arsiv{margin-top:6px}details.arsiv>summary{cursor:pointer;list-style:non
 .igtab{width:100%;border-collapse:collapse;font-size:12.5px}.igtab th{color:var(--mut);font-weight:700;text-align:right;padding:6px;white-space:nowrap;border-bottom:1px solid var(--line)}.igtab th:nth-child(2),.igtab td.igb{text-align:left}
 .igtab td{text-align:right;padding:7px 6px;border-top:1px solid var(--line);white-space:nowrap}.igtab td.igb{white-space:normal;min-width:180px}.igtab tbody tr{cursor:pointer}.igtab tbody tr:hover{background:var(--card2)}
 .kpi.kpi4{grid-template-columns:repeat(4,1fr)}@media(max-width:520px){.kpi.kpi4{grid-template-columns:1fr 1fr}}
+.sekmeler{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0 14px;position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0}
+.sekme{background:var(--card);border:1px solid var(--line);color:var(--mut);border-radius:14px;padding:12px 6px;font-family:Mont;font-weight:700;font-size:12.5px;line-height:1.25;min-height:54px;letter-spacing:.02em}
+.sekme.on{background:var(--card2);color:var(--gold);border-color:var(--gold)}
+@media(max-width:420px){.sekme{font-size:10.5px;padding:10px 4px}}
+.uyari{margin-top:8px;padding:10px 12px;border-radius:12px;background:rgba(255,107,107,.1);border:1px solid var(--err);color:var(--txt);font-size:13px}
+.tokform{display:flex;gap:8px;margin-top:8px}.tokform input{flex:1;min-width:0}
+.nasil{margin-top:12px}.nasil summary{cursor:pointer;color:var(--gold);font-size:13px}.nasil ol{font-size:13px;color:var(--mut);padding-left:20px;line-height:1.6}.nasil a{color:var(--gold)}

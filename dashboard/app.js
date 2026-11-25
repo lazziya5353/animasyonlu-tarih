@@ -74,7 +74,7 @@ function render() {
       <button data-run="${a.k}">${a.btn}</button> <button class="ghost" data-detay="${a.k}">Detay</button>${c === "err" && /projects\/[a-z0-9-]+/.test(st?.cikti || st?.mesaj || "") ? ` <button class="duzelt" data-hduzelt="${esc((st.cikti || st.mesaj).match(/projects\/([a-z0-9-]+)/)[1])}" data-hmesaj="${esc(a.ad + ": " + (st.mesaj || ""))}">🔧 Düzelt</button>` : ""}</div>`;
   }
   html += `</div>`;
-  html += renderYorumlar() + renderInstagram() + renderAnaliz();
+  html += renderYorumlar() + renderAnaliz();
   const r = O.report;
   html += `<h2>Haftanın raporu ${r ? `<span class="mut" style="font-family:Mont;font-size:12px">· ${esc(r.hafta)}</span>` : ""}</h2>`;
   if (!r) html += `<div class="card mut">Henüz rapor yok. Araştırmacıyı çalıştır ya da pazar akşamını bekle.</div>`;
@@ -96,7 +96,17 @@ function render() {
   html += aktif.length ? aktif.map((p) => kart(p, false)).join("") : `<div class="card mut">${arsivde.length ? "Aktif proje yok, hepsi arşivde." : "Henüz proje yok."}</div>`;
   if (arsivde.length) html += `<details class="arsiv" ${ARSIV_ACIK ? "open" : ""}><summary><h2 style="display:inline">📦 Arşiv <span class="mut" style="font-size:14px">(${arsivde.length})</span></h2></summary>${arsivde.map((p) => kart(p, true)).join("")}</details>`;
   html += `<h2>Son harcamalar</h2><div class="card">${(h.son || []).filter((x) => x.usd > 0).map((x) => `<div class="mut" style="display:flex;justify-content:space-between;padding:4px 0"><span>${esc(x.ajan)} · ${esc(x.detay)}</span><span>$${x.usd.toFixed(3)}</span></div>`).join("") || '<span class="mut">Kayıt yok</span>'}</div>`;
-  $("#main").innerHTML = html;
+  const SEK = [["anim", "🎬 ANİMASYON TARİH VİDEO"], ["spor", "⚽ SPOR TARİHİ VİDEO"], ["ig", "📊 İNSTAGRAM ANALİZ"]];
+  let sek = "anim"; try { const k = localStorage.getItem("sekme"); if (SEK.some((x) => x[0] === k)) sek = k; } catch {}
+  const spor = `<h2>SPOR TARİHİ VİDEO</h2><div class="card"><b style="color:var(--gold)">Yakında</b><div class="mut" style="margin-top:4px">Spor tarihi sayfası birkaç gün içinde burada olacak: geçmiş maç animasyonları, maç öncesi hikâyeler ve spor quizleri.</div></div><h2>Projeler</h2><div class="card mut">Henüz spor projesi yok.</div>`;
+  $("#main").innerHTML = `<nav class="sekmeler">${SEK.map(([k, l]) => `<button class="sekme${k === sek ? " on" : ""}" data-sekme="${k}">${l}</button>`).join("")}</nav>
+    <section data-bolum="anim"${sek === "anim" ? "" : " hidden"}>${html}</section><section data-bolum="spor"${sek === "spor" ? "" : " hidden"}>${spor}</section><section data-bolum="ig"${sek === "ig" ? "" : " hidden"}>${renderTokenKart()}${renderInstagram() || '<div class="card mut" style="margin-top:12px">Henüz Instagram verisi yok.</div>'}</section>`;
+  document.querySelectorAll("[data-sekme]").forEach((b) => (b.onclick = () => {
+    const k = b.dataset.sekme; try { localStorage.setItem("sekme", k); } catch {}
+    document.querySelectorAll("[data-sekme]").forEach((x) => x.classList.toggle("on", x === b));
+    document.querySelectorAll("[data-bolum]").forEach((x) => (x.hidden = x.dataset.bolum !== k)); window.scrollTo(0, 0);
+  }));
+  baglaToken();
   document.querySelectorAll("[data-run]").forEach((b) => (b.onclick = () => runAgent(b.dataset.run)));
   baglaInstagram();
   document.querySelectorAll("[data-detay]").forEach((b) => (b.onclick = () => ajanDetay(b.dataset.detay)));
@@ -261,6 +271,39 @@ function renderInstagram() {
     ${vids.map((v, i) => `<tr data-igurl="${esc(v.url || "")}"><td>${i + 1}</td><td class="igb">${esc(v.baslik || "(açıklamasız)")}<div class="mut" style="font-size:11px">${v.zaman ? new Date(v.zaman).toLocaleString("tr-TR", { dateStyle: "short", timeStyle: "short" }) : ""} · ❤ ${sayi(v.begeni)} · 💬 ${sayi(v.yorum)}</div></td><td>${sayi(v.izlenme)}</td><td>${sayi(v.kaydetme)}</td><td>${sayi(v.paylasim)}</td><td>${v.ort_izleme_sn != null ? v.ort_izleme_sn + " sn" : "—"}</td></tr>`).join("") || `<tr><td colspan="6" class="mut">Henüz gönderi yok</td></tr>`}
     </tbody></table></div></div>`;
   return s;
+}
+function renderTokenKart() {
+  const g = O.instagram || {}, h = g.hesap || {}, eksik = g.desteklenmeyen || [];
+  const basari = g.zaman && !g.hata && h.kullanici;
+  const insightsYok = eksik.length && eksik.some((x) => /reach|views|profile_views|follower_count/.test(x));
+  return `<h2>Instagram Bağlantısı / Token</h2><div class="card">
+    <div class="row" style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><span class="st ${basari ? "ok" : "err"}">${basari ? "Son çekim başarılı" : "Son çekim başarısız"}</span><span class="mut">${g.zaman ? ago(g.zaman) : "Hiç çekilmedi"}</span></div>
+    <div style="margin-top:8px">Hesap: <b>${esc(h.kullanici ? "@" + h.kullanici : "—")}</b> · Takipçi: <b>${h.takipci != null ? sayi(h.takipci) : "—"}</b></div>
+    ${g.hata ? `<div style="color:var(--err);margin-top:6px">${esc(g.hata)}</div>` : ""}
+    ${insightsYok ? `<div class="uyari">⚠️ Token'da <b>instagram_business_manage_insights</b> izni yok. İzlenme, erişim, kaydetme gibi istatistikler gelmiyor. Aşağıdaki adımlarla yeni token oluşturup buraya yapıştır.</div>` : ""}
+    ${eksik.length ? `<div class="mut" style="margin-top:6px">Gelmeyen metrikler: ${eksik.map((x) => `<span class="tag">${esc(x)}</span>`).join(" ")}</div>` : `<div class="mut" style="margin-top:6px">Tüm metrikler geliyor ✓</div>`}
+    <div class="sep"></div><b style="font-size:14px">Token güncelle</b>
+    <form id="tokform" class="tokform" autocomplete="off"><input id="toktxt" type="password" placeholder="Yeni Instagram token'ı" autocomplete="new-password"><button class="gold" type="submit">Kaydet</button></form>
+    <div id="tokmsg" class="mut" style="margin-top:6px"></div>
+    <details class="nasil"><summary>Token nasıl yenilenir? (insights izniyle)</summary><ol>
+      <li><a href="https://developers.facebook.com/apps" target="_blank" rel="noopener">developers.facebook.com</a> → <b>Animasyon Tarih Ajan</b> uygulamasını aç</li>
+      <li><b>Customize use case</b> → <b>Permissions and features</b></li>
+      <li><b>instagram_business_manage_insights</b> iznini ekle</li>
+      <li><b>API setup with Instagram login</b> (Unified login) bölümüne geç</li>
+      <li><b>Generate token</b> ile yeni token oluştur, kopyala</li>
+      <li>Yukarıdaki kutuya yapıştırıp <b>Kaydet</b>'e bas</li></ol></details></div>`;
+}
+function baglaToken() {
+  const f = $("#tokform"); if (!f) return;
+  f.onsubmit = async (e) => {
+    e.preventDefault(); const i = $("#toktxt"), m = $("#tokmsg"), b = f.querySelector("button"), v = i.value.trim();
+    if (v.length < 20) { m.textContent = "Token çok kısa görünüyor."; return; }
+    b.disabled = true; m.style.color = ""; m.textContent = "Kaydediliyor…";
+    try { await api("ig_token", { token: v }); i.value = ""; m.style.color = "var(--ok)"; m.textContent = "✓ Token kaydedildi, Instagram verisi yeniden çekiliyor (~1-2 dk)."; setTimeout(load, 120000); }
+    catch (er) { m.style.color = "var(--err)"; const izin = /izin/.test(er.message || "");
+      m.innerHTML = izin ? `GitHub anahtarına 'Secrets: Read and write' izni eklenmeli. Şimdilik token'ı elle ekleyebilirsin: <a href="https://github.com/lazziya5353/animasyonlu-tarih/settings/secrets/actions" target="_blank" rel="noopener">GitHub → Secrets → IG_TOKEN</a>` : esc(er.message || "Hata"); }
+    finally { b.disabled = false; }
+  };
 }
 function baglaInstagram() {
   document.querySelectorAll("[data-igurl]").forEach((r) => r.dataset.igurl && (r.onclick = () => window.open(r.dataset.igurl, "_blank", "noopener")));

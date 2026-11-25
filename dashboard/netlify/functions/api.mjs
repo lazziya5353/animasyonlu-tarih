@@ -184,6 +184,22 @@ export default async (req) => {
         const loc = r.headers.get("location");
         return loc ? json({ url: loc }) : json({ hata: "Video adresi alınamadı" }, 500);
       }
+      case "ig_token": { // Instagram token'ını GitHub Actions secret'ı (IG_TOKEN) olarak kaydet; token asla loglanmaz/geri döndürülmez
+        const tok = String(b.token || "").trim();
+        if (tok.length < 20 || tok.length > 1000 || /\s/.test(tok)) return json({ hata: "Geçersiz token" }, 400);
+        const izinYok = () => json({ hata: "GitHub anahtarına 'Secrets: Read and write' izni eklenmeli", izin: true }, 403);
+        const kr = await gh(`/repos/${REPO}/actions/secrets/public-key`);
+        if (kr.status === 403 || kr.status === 404) return izinYok();
+        if (!kr.ok) return json({ hata: `GitHub ${kr.status}` }, 502);
+        const { key, key_id } = await kr.json();
+        const sodium = (await import("libsodium-wrappers")).default; await sodium.ready;
+        const enc = sodium.to_base64(sodium.crypto_box_seal(sodium.from_string(tok), sodium.from_base64(key, sodium.base64_variants.ORIGINAL)), sodium.base64_variants.ORIGINAL);
+        const pr = await gh(`/repos/${REPO}/actions/secrets/IG_TOKEN`, { method: "PUT", body: JSON.stringify({ encrypted_value: enc, key_id }) });
+        if (pr.status === 403 || pr.status === 404) return izinYok();
+        if (!pr.ok) return json({ hata: `GitHub ${pr.status}` }, 502);
+        await dispatch("instagram");
+        return json({ ok: true });
+      }
       case "run": { // ajanı çalıştır
         if (!WORKFLOWS[b.agent]) return json({ hata: "Bilinmeyen ajan" }, 400);
         const inputs = {};

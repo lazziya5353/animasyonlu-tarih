@@ -5,6 +5,7 @@
   "type": "module",
   "dependencies": {
     "@netlify/blobs": ">=8.1.0",
+    "libsodium-wrappers": "^0.7.15",
     "web-push": "^3.6.7"
   }
 }
