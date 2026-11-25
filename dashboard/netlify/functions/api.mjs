@@ -168,7 +168,7 @@ async function igCagir(tok, method, yol, p = {}) {
   const h = await igHost(tok), get = method === "GET";
   const r = await fetch(`https://${h}/v25.0/${yol}${get ? "?" + new URLSearchParams(p) : ""}`, { method, headers: { Authorization: `Bearer ${tok}`, ...(get ? {} : { "content-type": "application/x-www-form-urlencoded" }) }, body: get ? undefined : new URLSearchParams(p) });
   const j = await r.json().catch(() => ({}));
-  if (!r.ok) throw new Error(`Instagram ${r.status}: ${j.error?.message || ""}`.slice(0, 300));
+  if (!r.ok) throw new Error(`Instagram ${r.status}: ${j.error?.message || ""}`.slice(0, 280) + (j.error?.code != null ? ` [kod ${j.error.code}]` : ""));
   return j;
 }
 const FORMATLAR = ["Quiz", "Harflerden Bul", "Padişah serisi", "Harita/Gezi/Yer", "Diğer"];
@@ -306,6 +306,24 @@ export default async (req) => {
         if (enc) try { tok = igCoz(enc); } catch { tok = null; }
         if (!tok) { await dispatch("instagram"); return json({ ok: true, yedek: true }); }
         return json({ ok: true, instagram: await igRefresh(tok, await readJson("data/instagram.json")) });
+      }
+      case "ig_live": { // canlı panel: her tikte 2 çağrı (takipçi + son 5 medya); detay=1 iken (istemci en fazla 60 sn'de bir) son 5'in izlenmesi + son ~10 yorum
+        const tok = await igTok(); if (!tok) return json({ hata: "Kayıtlı Instagram token'ı yok; önce token'ı kaydet" }, 400);
+        try {
+          const [hes, md] = await Promise.all([igCagir(tok, "GET", IG_UID(), { fields: "followers_count,username" }),
+            igCagir(tok, "GET", `${IG_UID()}/media`, { fields: "id,caption,timestamp,thumbnail_url,media_url,like_count,comments_count", limit: 5 })]);
+          const medya = (md.data || []).slice(0, 5); let yorumlar = null;
+          if (b.detay) { yorumlar = [];
+            await Promise.all(medya.map(async (m) => {
+              try { const r = await igCagir(tok, "GET", `${m.id}/insights`, { metric: "views" }); m.views = r.data?.[0]?.values?.[0]?.value ?? r.data?.[0]?.total_value?.value ?? null; } catch {}
+              if (m.comments_count > 0) try { const c = await igCagir(tok, "GET", `${m.id}/comments`, { fields: "id,text,username,timestamp", limit: 10 });
+                for (const y of c.data || []) if (y.username !== hes.username) yorumlar.push({ id: y.id, kullanici: y.username, metin: y.text, zaman: y.timestamp, medya_id: m.id }); } catch {}
+            }));
+            yorumlar.sort((x, y) => String(y.zaman).localeCompare(String(x.zaman))); yorumlar = yorumlar.slice(0, 10); }
+          return json({ ok: true, zaman: new Date().toISOString(), followers_count: hes.followers_count,
+            medya: medya.map((m) => ({ id: m.id, baslik: (m.caption || "").trim().split("\n")[0].slice(0, 60), zaman: m.timestamp, kapak: m.thumbnail_url || m.media_url || null, like_count: m.like_count ?? null, comments_count: m.comments_count ?? null, views: m.views ?? null })),
+            yorumlar });
+        } catch (e) { const kod = +(String(e.message).match(/\[kod (\d+)\]/)?.[1] || 0); return json({ hata: String(e.message || e), kod, sinir: [4, 17, 32, 613].includes(kod) }, [4, 17, 32, 613].includes(kod) ? 429 : 502); }
       }
       case "run": { // ajanı çalıştır
         if (!WORKFLOWS[b.agent]) return json({ hata: "Bilinmeyen ajan" }, 400);

@@ -66,7 +66,7 @@ function igFormatHtml() {
     return `<text x="0" y="${i * sh + 22}" fill="var(--txt)" font-size="13">${esc(x.ad)}</text><rect x="150" y="${i * sh + 8}" width="${w}" height="20" rx="5" fill="${i ? "rgba(232,196,120,.55)" : "var(--gold)"}"/><text x="${156 + w}" y="${i * sh + 22}" fill="var(--mut)" font-size="12">${sayi(Math.round(x.izl || 0))}</text>`; }).join("")}</svg>`;
   return `<h2>Format karşılaştırması</h2><div class="card"><div class="mut" style="margin-bottom:8px">Ortalama izlenme (son ${M.length} gönderi). Formatı video detayından elle değiştirebilirsin.</div>${bar}
     <div style="overflow-x:auto;margin-top:12px"><table class="igtab fmt"><thead><tr><th>Format</th><th>Adet</th><th>Ort. izlenme</th><th>Ort. kayıt</th><th>Ort. paylaşım</th><th>Ort. izleme</th><th>Etkileşim</th></tr></thead><tbody>
-    ${S.map((x) => `<tr><td class="igb"><b>${esc(x.ad)}</b></td><td>${x.n}</td><td>${sayi(x.izl == null ? null : Math.round(x.izl))}</td><td>${sayi(x.kay == null ? null : Math.round(x.kay))}</td><td>${sayi(x.pay == null ? null : Math.round(x.pay))}</td><td>${x.izs == null ? "—" : virgul(x.izs) + " sn"}</td><td>${x.etk == null ? "—" : "%" + virgul(x.etk)}</td></tr>`).join("")}
+    ${S.map((x) => `<tr><td class="igb"><b>${esc(x.ad)}</b></td><td data-l="Adet">${x.n}</td><td data-l="Ort. izlenme">${sayi(x.izl == null ? null : Math.round(x.izl))}</td><td data-l="Ort. kayıt">${sayi(x.kay == null ? null : Math.round(x.kay))}</td><td data-l="Ort. paylaşım">${sayi(x.pay == null ? null : Math.round(x.pay))}</td><td data-l="Ort. izleme">${x.izs == null ? "—" : virgul(x.izs) + " sn"}</td><td data-l="Etkileşim">${x.etk == null ? "—" : "%" + virgul(x.etk)}</td></tr>`).join("")}
     </tbody></table></div></div>`;
 }
 

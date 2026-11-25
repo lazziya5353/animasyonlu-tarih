@@ -257,18 +257,21 @@ function renderInstagram() {
   const fc = g.gunluk?.follower_count; let degisim = "";
   if (fc?.length) { const top = fc.reduce((s, x) => s + (x.deger || 0), 0); degisim = `<div class="mut" style="margin-top:4px">Son 30 günde net takipçi değişimi (Instagram): <b style="color:${top >= 0 ? "var(--ok)" : "var(--err)"}">${top >= 0 ? "+" : ""}${sayi(top)}</b></div>`;
     if (seri.length < 3) { let t = (h.takipci || 0) - top; seri = fc.map((x) => ({ x: x.tarih.slice(5).split("-").reverse().join("."), y: (t += x.deger || 0) })); } }
-  const kpi = (v, l) => `<div><b>${sayi(v)}</b><span>${l}</span></div>`;
-  const vids = (g.medya || []).slice(0, 15);
+  const kpi = (v, l, k = "") => `<div${k ? ` data-lk="${k}"` : ""}><b>${sayi(v)}</b><span>${l}</span></div>`;
+  const SIRA = { yeni: ["En yeni", (a, b) => new Date(b.zaman || 0) - new Date(a.zaman || 0)], izl: ["En çok izlenen", (a, b) => (b.izlenme || 0) - (a.izlenme || 0)], kay: ["En çok kaydedilen", (a, b) => (b.kaydetme || 0) - (a.kaydetme || 0)], pay: ["En çok paylaşılan", (a, b) => (b.paylasim || 0) - (a.paylasim || 0)] };
+  let sira = "yeni"; try { const k = localStorage.getItem("igsira"); if (SIRA[k]) sira = k; } catch {}
+  const vids = [...(g.medya || [])].sort(SIRA[sira][1]).slice(0, 15);
   const saat = (g.en_iyi_saatler || []).map((x) => `${String(x.saat).padStart(2, "0")}.00`).join(", ");
   let s = `<h2>INSTAGRAM ANALİZ <span class="mut" style="font-family:Mont;font-size:12px">· son güncelleme ${ago(g.zaman)}</span></h2><div class="card">
     <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">${h.foto ? `<img src="${esc(h.foto)}" alt="" style="width:40px;height:40px;border-radius:50%" referrerpolicy="no-referrer">` : ""}
-    <div style="flex:1"><b>${esc(h.ad || h.kullanici || "")}</b><div class="mut">@${esc(h.kullanici || "")} · ${sayi(h.gonderi)} gönderi</div></div><button id="igguncelle">Şimdi güncelle</button></div>
+    <div style="flex:1"><b>${esc(h.ad || h.kullanici || "")}</b><div class="mut">@${esc(h.kullanici || "")} · ${sayi(h.gonderi)} gönderi</div></div><div class="igbtns"><button id="igguncelle">Şimdi güncelle</button><label class="anlik" title="Anlık güncelle"><input type="checkbox" id="iganlik"${typeof canliAnlikAcik === "function" && canliAnlikAcik() ? " checked" : ""}><i></i><span>Anlık güncelle</span></label></div></div>
     ${g.hata ? `<div style="color:var(--err);margin-bottom:8px">${esc(g.hata)}</div>` : ""}
-    <div class="kpi kpi4">${kpi(h.takipci, "Takipçi")}${kpi(o.views, "30 gün izlenme")}${kpi(o.reach, "30 gün erişim")}${kpi(o.profile_views, "Profil ziyareti")}</div>
+    <div class="kpi kpi4">${kpi(h.takipci, "Takipçi", "takipci")}${kpi(o.views, "30 gün izlenme")}${kpi(o.reach, "30 gün erişim")}${kpi(o.profile_views, "Profil ziyareti")}</div>
     ${degisim}${igGrafik(seri)}
     ${saat ? `<div class="mut" style="margin-top:8px">⏰ En iyi paylaşım saatleri (İstanbul, ortalama izlenmeye göre): <b style="color:var(--gold)">${saat}</b>${g.en_iyi_gun ? ` · en iyi gün: <b style="color:var(--gold)">${esc(g.en_iyi_gun)}</b>` : ""}</div>` : ""}
-    <div style="overflow-x:auto;margin-top:12px"><table class="igtab"><thead><tr><th>#</th><th></th><th>Video</th><th>▶ İzlenme</th><th>🔖 Kayıt</th><th>↗ Paylaşım</th><th>⏱ Ort. izleme</th></tr></thead><tbody>
-    ${vids.map((v, i) => `<tr data-igid="${esc(v.id)}"><td>${i + 1}</td><td class="igk">${(v.kapak || v.thumbnail_url || v.media_url) ? `<img src="${esc(v.kapak || v.thumbnail_url || v.media_url)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'igph',textContent:'🎬'}))">` : `<span class="igph">🎬</span>`}</td><td class="igb">${esc(v.baslik || "(açıklamasız)")}<div class="mut" style="font-size:11px">${v.zaman ? new Date(v.zaman).toLocaleString("tr-TR", { dateStyle: "short", timeStyle: "short" }) : ""} · ❤ ${sayi(v.begeni)} · 💬 ${sayi(v.yorum)}</div></td><td>${sayi(v.izlenme)}</td><td>${sayi(v.kaydetme)}</td><td>${sayi(v.paylasim)}</td><td>${v.ort_izleme_sn != null ? v.ort_izleme_sn + " sn" : "—"}</td></tr>`).join("") || `<tr><td colspan="7" class="mut">Henüz gönderi yok</td></tr>`}
+    <div class="segm" role="group" aria-label="Sıralama">${Object.entries(SIRA).map(([k, [l]]) => `<button class="${k === sira ? "on" : ""}" data-igsira="${k}">${l}</button>`).join("")}</div>
+    <div class="tblw" style="margin-top:8px"><table class="igtab vlist"><thead><tr><th>#</th><th></th><th>Video</th><th>▶ İzlenme</th><th>🔖 Kayıt</th><th>↗ Paylaşım</th><th>⏱ Ort. izleme</th></tr></thead><tbody>
+    ${vids.map((v, i) => `<tr data-igid="${esc(v.id)}"><td class="ign">${i + 1}</td><td class="igk">${(v.kapak || v.thumbnail_url || v.media_url) ? `<img src="${esc(v.kapak || v.thumbnail_url || v.media_url)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'igph',textContent:'🎬'}))">` : `<span class="igph">🎬</span>`}</td><td class="igb">${esc(v.baslik || "(açıklamasız)")}<div class="mut" style="font-size:11px">${v.zaman ? `<b class="igzam">🕒 ${new Date(v.zaman).toLocaleString("tr-TR", { timeZone: "Europe/Istanbul", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}</b> · ${ago(v.zaman)} · ` : ""}❤ <span data-lv="begeni">${sayi(v.begeni)}</span> · 💬 <span data-lv="yorum">${sayi(v.yorum)}</span></div></td><td data-l="▶ İzlenme" data-lv="izlenme">${sayi(v.izlenme)}</td><td data-l="🔖 Kayıt">${sayi(v.kaydetme)}</td><td data-l="↗ Paylaşım">${sayi(v.paylasim)}</td><td data-l="⏱ Ort. izleme">${v.ort_izleme_sn != null ? v.ort_izleme_sn + " sn" : "—"}</td></tr>`).join("") || `<tr><td colspan="7" class="mut">Henüz gönderi yok</td></tr>`}
     </tbody></table></div></div>`;
   return s;
 }
@@ -320,6 +323,8 @@ async function igYenile() {
 }
 function baglaInstagram() {
   if ($("#igguncelle") && !window._igOto) { window._igOto = true; api("ig_refresh").then((r) => { if (r && r.instagram) { O.instagram = r.instagram; render(); } }).catch(() => {}); }
+  if (typeof canliBagla === "function") canliBagla();
+  document.querySelectorAll("[data-igsira]").forEach((x) => (x.onclick = () => { try { localStorage.setItem("igsira", x.dataset.igsira); } catch {} render(); }));
   const b = $("#igguncelle"); if (b) b.onclick = async () => { b.disabled = true; b.textContent = "Güncelleniyor…"; try { await igYenile(); } catch (e) { alert(e.message || "Hata"); } finally { b.disabled = false; b.textContent = "Şimdi güncelle"; } };
 }
 function renderAnaliz() {
