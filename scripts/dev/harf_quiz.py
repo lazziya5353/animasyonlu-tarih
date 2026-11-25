@@ -112,6 +112,7 @@ def main():
             "O": "Osmanlı Beyliği · 1299", "P": "Preveze Deniz Savaşı · 1538", "R": "Balkanlar", "S": "Süleymaniye · Selimiye",
             "Ş": "Osman Gazi'nin kayınpederi", "T": "Padişahın imzası", "U": "İstanbul'un Fethi · 1453", "V": "I. Viyana Kuşatması · 1529",
             "Y": "I. Selim · 1517", "Z": "Büyük Taarruz · 1922"}
+    HINT = json.load(open(a.script)).get("alt_bilgi") or HINT
     letters = [x[0] for x in Q]
     B = base()
     if a.kapak:

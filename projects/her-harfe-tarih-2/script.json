@@ -1,0 +1,563 @@
+{
+ "baslik": "Her Harfe Bir Tarih Sorusu 2",
+ "hook": "HER HARFE BİR TARİH SORUSU",
+ "map_region": "anadolu",
+ "sahneler": [
+  {
+   "lines": [
+    "Her harfe bir tarih sorusu. Bakalım kaçını bileceksin?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "A harfi. TBMM 23 Nisan 1920'de hangi şehirde açıldı?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Ankara."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "B harfi. Fatih'in 1453'te yıktığı imparatorluk?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Bizans."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "C harfi. II. Bayezid'le taht kavgası yapıp Avrupa'da esir ölen şehzade?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Cem Sultan."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "D harfi. Büyük Taarruz'un 30 Ağustos 1922'de zaferle bittiği yer?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Dumlupınar."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "E harfi. Milli Mücadele'de 1919'da toplanan ilk büyük kongre?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Erzurum Kongresi."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "F harfi. Padişahın yazılı emrine ne denir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Ferman."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "G harfi. Orhun Yazıtları'nı diktiren Türk devleti?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Göktürkler."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "H harfi. Kanuni Sultan Süleyman'ın eşi?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Hürrem Sultan."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "İ harfi. 9 Eylül 1922'de düşmandan kurtarılan şehir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "İzmir."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "K harfi. Osmanlı'nın ilk büyük toprak kaybını yaşadığı 1699 antlaşması?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Karlofça."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "M harfi. 1071'de Anadolu'nun kapısını Türklere açan savaş?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Malazgirt."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "N harfi. III. Selim'in kurduğu yeni ordu?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Nizam-ı Cedid."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "O harfi. İlk Osmanlı parasını bastıran padişah?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Orhan Gazi."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "P harfi. 1513'te ünlü dünya haritasını çizen Osmanlı denizcisi?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Pîrî Reis."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "R harfi. Kanuni'nin 1522'de fethettiği Ege adası?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Rodos."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "S harfi. Mustafa Kemal'e \"Gazi\" unvanını kazandıran savaş?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Sakarya."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Ş harfi. Osmanlı'da en yüksek din âlimine ne denirdi?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Şeyhülislam."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "T harfi. 1839'da Gülhane'de ilan edilen reform dönemi?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Tanzimat."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "U harfi. Yerleşik hayata geçen ilk Türk devleti?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Uygurlar."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "V harfi. Osmanlı'nın son padişahı?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Vahdettin."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Y harfi. 1826'da kaldırılan ünlü Osmanlı piyade ocağı?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Yeniçeri Ocağı."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Z harfi. Kanuni'nin son seferinde vefat ettiği kale?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Zigetvar."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Kaçını bildin? Yorumlara yaz. Kaçırmamak için animasyon tarih'i takip et."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  }
+ ],
+ "finale": "",
+ "maps": [],
+ "cards": [],
+ "eras": [
+  {
+   "name": "QUIZ",
+   "from": 0,
+   "to": 45
+  }
+ ],
+ "outro": {
+  "title": "KAÇINI BİLDİN?",
+  "line": "Yorumlara yaz"
+ },
+ "aciklama": "",
+ "kanca_alternatifleri": [],
+ "aciklama_alternatifleri": [],
+ "hashtagler": [],
+ "kaynaklar": [],
+ "kontrol_notlari": [],
+ "konu": "Harf quiz",
+ "tarih": "",
+ "slug": "her-harfe-tarih-1",
+ "durum": "onaylandi",
+ "sade": true,
+ "seslendirme_metni": "Her harfe bir tarih sorusu. Bakalım kaçını bileceksin?\nA harfi. bin dokuz yüz otuz dörtte Mustafa Kemal'e verilen soyadı nedir?\nAtatürk.\nB harfi. Osmanlı'nın ilk büyük başkenti hangi şehirdir?\nBursa.\nC harfi. yirmi dokuz Ekim bin dokuz yüz yirmi üçte ne ilan edildi?\nCumhuriyet.\nD harfi. Osmanlı'da devlet işlerinin görüşüldüğü meclisin adı?\nDivan.\nE harfi. Bursa'dan sonra Osmanlı'nın başkenti olan şehir?\nEdirne.\nF harfi. İstanbul'u bin dört yüz elli üçte fetheden padişah?\nFatih Sultan Mehmed.\nG harfi. Çanakkale Savaşı hangi yarımadada yapıldı?\nGelibolu.\nH harfi. Fatih'in gemileri karadan yürütüp indirdiği yer?\nHaliç.\nİ harfi. bin dört yüz elli üçten sonra Osmanlı'nın başkenti hangi şehirdi?\nİstanbul.\nK harfi. En uzun süre tahtta kalan Osmanlı padişahı?\nKanuni Sultan Süleyman.\nM harfi. Kanuni'nin bin beş yüz yirmi altıda Macarları yendiği savaş?\nMohaç.\nN harfi. Yıldırım Bayezid'in bin üç yüz doksan altıda Haçlıları yendiği savaş?\nNiğbolu.\nO harfi. Osmanlı Devleti'ni kuran kişi?\nOsman Gazi.\nP harfi. Barbaros'un bin beş yüz otuz sekizde kazandığı büyük deniz zaferi?\nPreveze.\nR harfi. Osmanlı'nın Avrupa'daki topraklarına verilen ad?\nRumeli.\nS harfi. Süleymaniye ve Selimiye camilerini yapan mimar?\nMimar Sinan.\nŞ harfi. Osman Gazi'nin rüyasını yorumlayan şeyh?\nŞeyh Edebali.\nT harfi. Osmanlı padişahlarının resmî imzasına ne denir?\nTuğra.\nU harfi. Fetihte surlara ilk sancağı diken kahraman?\nUlubatlı Hasan.\nV harfi. Kanuni'nin bin beş yüz yirmi dokuzda kuşattığı Avrupa şehri?\nViyana.\nY harfi. Mısır'ı alıp halifeliği Osmanlı'ya getiren padişah?\nYavuz Sultan Selim.\nZ harfi. otuz Ağustos'ta kutladığımız bayram?\nZafer Bayramı.\nKaçını bildin? Yorumlara yaz. Kaçırmamak için animasyon tarih'i takip et.",
+ "alt_bilgi": {
+  "A": "23 Nisan 1920 · TBMM'nin açılışı",
+  "B": "29 Mayıs 1453 · İstanbul'un fethi",
+  "C": "1459–1495 · Fatih'in oğlu",
+  "D": "30 Ağustos 1922 · Başkomutanlık Meydan Muharebesi",
+  "E": "23 Temmuz 1919",
+  "F": "Padişahın tuğralı emri",
+  "G": "552–744 · Orhun Yazıtları",
+  "H": "Kanuni'nin eşi · Haseki Sultan",
+  "İ": "9 Eylül 1922 · Kurtuluş günü",
+  "K": "1699 · II. Viyana Kuşatması'ndan sonra",
+  "M": "26 Ağustos 1071 · Sultan Alparslan",
+  "N": "1793 · III. Selim",
+  "O": "1326 · İlk Osmanlı akçesi",
+  "P": "1513 · Amerika'yı gösteren harita",
+  "R": "1522 · Kanuni'nin seferi",
+  "S": "23 Ağustos – 13 Eylül 1921",
+  "Ş": "Osmanlı'nın en yüksek din makamı",
+  "T": "3 Kasım 1839 · Gülhane Hatt-ı Hümayunu",
+  "U": "744–840 · Yerleşik hayata geçen ilk Türk devleti",
+  "V": "1918–1922 · VI. Mehmed",
+  "Y": "1826 · Vaka-i Hayriye",
+  "Z": "1566 · Kanuni'nin son seferi"
+ }
+}
