@@ -132,3 +132,6 @@ html,body{overflow-x:hidden;max-width:100%}img,svg,video{max-width:100%}
 @media(max-width:400px){.kpi{grid-template-columns:1fr 1fr}.clk b{font-size:22px}.agents{grid-template-columns:1fr}}
 .igbar{display:grid;grid-template-columns:130px 1fr 56px 56px;gap:8px;align-items:center;font-size:12.5px;margin-top:5px}.igbar i{height:9px;background:var(--card2);border-radius:6px;overflow:hidden}.igbar em{display:block;height:100%;background:var(--gold);border-radius:6px}.igbar b{text-align:right}.igbar small{color:var(--mut);text-align:right}
 @media(max-width:640px){.igbar{grid-template-columns:96px 1fr 50px}.igbar small{display:none}}
+.igsec{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:13.5px}.igsec>b{font-size:14px}.igsec .igmet{margin-top:6px}
+.igyor{font-size:12.5px;margin-top:5px;word-break:break-word}
+.igdag{display:flex;align-items:flex-end;gap:4px;height:90px;margin-top:6px;overflow-x:auto}.igdag div{display:flex;flex-direction:column;align-items:center;min-width:20px;font-size:10px}.igdag i{display:block;width:14px;background:var(--gold);border-radius:3px 3px 0 0}.igdag small{color:var(--mut)}.igdag em{font-style:normal;color:var(--txt)}

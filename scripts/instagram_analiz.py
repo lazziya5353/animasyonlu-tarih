@@ -7,6 +7,8 @@ from common import ROOT, set_status
 import instagram as IG
 
 OUT = os.path.join(ROOT, "data", "instagram.json")
+GECMIS = os.path.join(ROOT, "data", "ig_media_gecmis.json")   # her 3 saatte bir medya başına anlık görüntü (büyüme grafiği)
+KUYRUK = os.path.join(ROOT, "data", "yayin_kuyrugu.json")
 GUN = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"]
 MEDYA_MET = ["views", "reach", "saved", "shares", "total_interactions", "likes", "comments"]
 REELS_MET = ["ig_reels_avg_watch_time", "ig_reels_video_view_total_time"]
@@ -60,6 +62,31 @@ def hesap_ist(uid, since, until):
             if m == "follower_count": yok.append("follower_count (günlük)")
             print(f"  günlük seri yok: {m} ({str(e)[:120]})")
     return sonuc, gunluk, yok
+
+
+def video_sureleri():
+    """yayın kuyruğundaki permalink → proje → kontrol/kurgu.json 'sure' (sn)."""
+    out = {}
+    for it in oku(KUYRUK, {}).get("isler", []):
+        pl, sl = it.get("permalink"), it.get("slug") or it.get("proje")
+        if not pl or not sl: continue
+        k = oku(os.path.join(ROOT, "projects", str(sl), "kontrol", "kurgu.json"), {})
+        if isinstance(k.get("sure"), (int, float)): out[pl.rstrip("/")] = k["sure"]
+    return out
+
+
+def gecmis_yaz(liste, takipci, simdi):
+    """Medya başına {t, views, reach, likes, comments, saved, shares}; ~90 gün, son ~60 medya; hesap takipçi serisi de."""
+    g = oku(GECMIS, {})
+    M, sinir = g.get("medya", {}), (simdi - datetime.timedelta(days=90)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    t = simdi.strftime("%Y-%m-%dT%H:%M:%SZ")
+    for v in liste:
+        n = {"t": t, "views": v["izlenme"], "reach": v["erisim"], "likes": v["begeni"], "comments": v["yorum"], "saved": v["kaydetme"], "shares": v["paylasim"]}
+        M[v["id"]] = [x for x in M.get(v["id"], []) if x.get("t", "") >= sinir] + [n]
+    sira = sorted(M, key=lambda i: next((v["zaman"] or "" for v in liste if v["id"] == i), M[i][0]["t"] if M[i] else ""), reverse=True)
+    M = {i: M[i] for i in sira[:60]}
+    tk = [x for x in g.get("takipci", []) if x.get("t", "") >= sinir] + [{"t": t, "n": takipci}]
+    json.dump({"zaman": t, "medya": M, "takipci": tk}, open(GECMIS, "w"), ensure_ascii=False, separators=(",", ":"))
 
 
 def baglan():
@@ -118,7 +145,12 @@ def main():
                       "izlenme": st.get("views"), "erisim": st.get("reach"), "kaydetme": st.get("saved"), "paylasim": st.get("shares"),
                       "etkilesim": st.get("total_interactions"), "ort_izleme_sn": round(ort / 1000, 1) if isinstance(ort, (int, float)) else None,
                       "takip": st.get("follows"), "profil_ziyaret": st.get("profile_visits")})
+    sure = video_sureleri()
+    for v in liste:
+        if v["url"] and v["url"].rstrip("/") in sure: v["sure_sn"] = sure[v["url"].rstrip("/")]
     liste.sort(key=lambda v: v["izlenme"] or 0, reverse=True)
+    try: gecmis_yaz(liste, out["hesap"]["takipci"], simdi)
+    except Exception as e: print("geçmiş yazılamadı:", e)
     out["medya"] = liste
 
     # en iyi paylaşım saatleri (İstanbul saati, ortalama izlenmeye göre)

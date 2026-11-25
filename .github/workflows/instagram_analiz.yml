@@ -1,7 +1,7 @@
-name: "Instagram Analiz (günlük)"
+name: "Instagram Analiz (3 saatte bir)"
 on:
   schedule:
-    - cron: "40 4 * * *"   # Her gün 07:40 (İstanbul)
+    - cron: "40 */3 * * *"   # 3 saatte bir (büyüme grafiği için)
   workflow_dispatch:
 permissions:
   contents: write
@@ -25,5 +25,5 @@ jobs:
         if: always()
         run: |
           git config user.name "tarih-ajan"; git config user.email "ajan@users.noreply.github.com"
-          git add data; git commit -m "Instagram analiz: günlük veri [skip netlify]" || exit 0
+          git add data; git commit -m "Instagram analiz: veri [skip netlify]" || exit 0
           (git pull --rebase || (git rebase --abort; git pull --no-rebase --no-edit -X ours)) && git push

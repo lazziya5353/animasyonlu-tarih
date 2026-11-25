@@ -293,8 +293,8 @@ export default async (req) => {
           readJson("data/analiz.json"), readJson("data/yorumlar.json"), readJson("data/instagram.json"),
         ]);
         const igMeta = await igStore().get("meta", { type: "json" }).catch(() => null);
-        const [igFormat, formatKurallari, haftalik, kuyruk] = await Promise.all([igStore().get("format", { type: "json" }).catch(() => null),
-          readJson("data/format_kurallari.json"), readJson("data/haftalik_rapor.json"), readJson("data/yayin_kuyrugu.json")]);
+        const [igFormat, formatKurallari, haftalik, kuyruk, igGecmis] = await Promise.all([igStore().get("format", { type: "json" }).catch(() => null),
+          readJson("data/format_kurallari.json"), readJson("data/haftalik_rapor.json"), readJson("data/yayin_kuyrugu.json"), readJson("data/ig_media_gecmis.json")]);
         const runs = {};
         await Promise.all(Object.entries(WORKFLOWS).map(async ([k, f]) => {
           const r = await gh(`/repos/${REPO}/actions/workflows/${f}/runs?per_page=1`);
@@ -307,7 +307,7 @@ export default async (req) => {
         const servis = {};
         kayit.filter((x) => x.zaman.startsWith(ay)).forEach((x) => (servis[x.servis] = (servis[x.servis] || 0) + x.usd));
         const projeler = (list || []).filter((x) => x.type === "dir").map((x) => x.name);
-        return json({ status: status || {}, runs, report, projeler, basliklar: await basliklar(projeler).catch(() => ({})), instagram, igToken: igMeta ? { kayitli: true, zaman: igMeta.zaman, son4: igMeta.son4 } : null, igFormat: igFormat || {}, formatKurallari, haftalik,
+        return json({ status: status || {}, runs, report, projeler, basliklar: await basliklar(projeler).catch(() => ({})), instagram, igToken: igMeta ? { kayitli: true, zaman: igMeta.zaman, son4: igMeta.son4 } : null, igFormat: igFormat || {}, igGecmis, formatKurallari, haftalik,
           kuyruk: (kuyruk?.isler || []).slice(-60), arsiv: ((await getStore({ name: "ayar", consistency: "strong" }).get("arsiv", { type: "json" })) || []).filter((x) => projeler.includes(x)), analiz,
           yorumlar: { bekleyen: (yorumlar?.yorumlar || []).filter((y) => y.durum === "yeni").slice(0, 40), fikirler: (yorumlar?.fikirler || []).slice(-8).reverse() },
           harcama: { aylik, servis, butce: Number(process.env.AYLIK_BUTCE_USD || 15), son: kayit.slice(-8).reverse() } });
@@ -662,6 +662,25 @@ export default async (req) => {
         for (const y of liste) y.oneri = kuralOneri(y.metin, y.id);
         const ai = await geminiOneri(liste.filter((y) => !y.cevaplandi && !y.gizli).slice(0, 25)).catch(() => 0);
         return json({ ok: true, ben, yorumlar: liste.slice(0, 200), ai, hatali });
+      }
+      case "ig_medya_yorum": { // video detayı: tek videonun yorumları (beğeni sayısı + cevaplanmış mı); en fazla ~200
+        if (!/^\d{5,30}$/.test(String(b.id || ""))) return json({ hata: "Geçersiz video" }, 400);
+        const tok = await igTok(); if (!tok) return json({ hata: "Kayıtlı Instagram token'ı yok" }, 400);
+        const ben = (await igCagir(tok, "GET", IG_UID(), { fields: "username" })).username, L = [];
+        let yol = `${b.id}/comments`, p = { fields: "id,text,username,timestamp,like_count,replies{username}", limit: 50 };
+        for (let i = 0; i < 4 && yol; i++) { const c = await igCagir(tok, "GET", yol, p);
+          for (const y of c.data || []) if (y.username !== ben) L.push({ id: y.id, metin: String(y.text || "").slice(0, 300), kullanici: y.username, begeni: y.like_count ?? null, cevaplandi: (y.replies?.data || []).some((r) => r.username === ben) });
+          const s = c.paging?.cursors?.after; if (!c.paging?.next || !s) break; p = { ...p, after: s }; }
+        return json({ ok: true, yorumlar: L });
+      }
+      case "ig_degerlendir": { // "Gemini ile yorumla": metrik özetinden kısa değerlendirme; medya başına 1 gün Blobs önbelleği
+        if (!/^\d{5,30}$/.test(String(b.id || ""))) return json({ hata: "Geçersiz video" }, 400);
+        const st = igStore(), k = `deg-${b.id}`, c = await st.get(k, { type: "json" }).catch(() => null);
+        if (c && Date.now() - c.t < 864e5 && !b.yenile) return json({ ok: true, metin: c.metin, zaman: c.t, onbellek: true });
+        const istem = "Bir Türk tarih Instagram sayfasının (@animasyon.tarih) tek bir Reels videosunun verileri aşağıda. Sade, samimi, gündelik Türkçeyle (yapay zekâ gibi durmayan) 2-3 cümlelik değerlendirme ve 1-2 somut öneri yaz. Abartma, rakamlara dayan. Sadece JSON: {\"metin\": \"...\"}\n" + JSON.stringify(b.ozet || {}).slice(0, 3000);
+        try { const j = await gemini(istem); const metin = String(j.metin || "").slice(0, 1200); if (!metin) throw new Error("boş cevap");
+          await st.setJSON(k, { t: Date.now(), metin }); return json({ ok: true, metin, zaman: Date.now() }); }
+        catch (e) { return json({ hata: e.message === "anahtar yok" ? "GEMINI_API_KEY tanımlı değil" : `Gemini yanıt vermedi (${e.message})` }, 502); }
       }
       case "ig_yanitla": case "ig_gizle": {
         if (!/^\d{5,30}$/.test(String(b.id || ""))) return json({ hata: "Geçersiz yorum" }, 400);

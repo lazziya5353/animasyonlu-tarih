@@ -32,6 +32,7 @@ function clIsle(r) {
   const son = (r.medya || [])[0] || {};
   const d = { takipci: r.followers_count ?? null, izlenme: son.views ?? null, begeni: son.like_count ?? null, yorum: son.comments_count ?? null, vid: son.id, medya: r.medya || [] };
   const zaman = r.zaman || new Date().toISOString(), yeni = [];
+  if (typeof igOturumEkle === "function") igOturumEkle(r.medya, zaman);
   if (!CL.ilk) CL.ilk = { ...d };
   clOturumIsle(d);
   const o = CL.onceki;
