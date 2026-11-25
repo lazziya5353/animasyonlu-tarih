@@ -1,4 +1,4 @@
-// panel sürümü: 2026-11-25d (quiz toplu ekle, trafik kaynakları)
+// panel sürümü: 2026-11-25e (katlanır bölümler)
 self.addEventListener("install", (e) => self.skipWaiting());
 self.addEventListener("activate", (e) => self.clients.claim());
 self.addEventListener("fetch", () => {});

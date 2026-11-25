@@ -64,38 +64,27 @@ async function load() {
 function render() {
   const h = O.harcama, pct = Math.min(100, (h.aylik / h.butce) * 100);
   const srv = Object.entries(h.servis || {}).filter(([, v]) => v > 0).map(([k, v]) => `<span class="tag">${esc(k)} $${v.toFixed(2)}</span>`).join("");
-  let html = komutKart() + `<div class="card spend"><div class="row"><span class="mut">Bu ay harcama (Claude API)</span><span class="mut">Bütçe $${h.butce}</span></div>
-    <b>$${h.aylik.toFixed(2)}</b><div class="bar"><i style="width:${pct}%"></i></div><div class="chips">${srv || '<span class="mut">Henüz harcama yok</span>'}</div></div>
-    <h2>Ajanlar</h2><div class="agents">`;
+  const spend = `<div class="card spend"><div class="row"><span class="mut">Bu ay harcama (Claude API)</span><span class="mut">Bütçe $${h.butce}</span></div>
+    <b>$${h.aylik.toFixed(2)}</b><div class="bar"><i style="width:${pct}%"></i></div><div class="chips">${srv || '<span class="mut">Henüz harcama yok</span>'}</div></div>`;
+  let html = "", ajanHtml = `<div class="agents">`;
   for (const a of AGENTS) {
     const run = O.runs[a.k], st = O.status[a.k]; const [c, l] = stOf(run, st);
-    html += `<div class="card agent"><div class="ic">${a.ic}</div><h3>${a.ad}</h3><span class="st ${c}">${l}</span>
+    ajanHtml += `<div class="card agent"><div class="ic">${a.ic}</div><h3>${a.ad}</h3><span class="st ${c}">${l}</span>
       <p>${esc(adlandir(st?.mesaj) || a.is)}</p><div class="mut" style="font-size:11.5px;margin-bottom:10px">Son çalışma: ${ago(run?.zaman || st?.zaman)}${a.ucret ? " · <span title='Claude API kredisi harcar'>💳</span>" : ""}</div>
       <button data-run="${a.k}">${a.btn}</button> <button class="ghost" data-detay="${a.k}">Detay</button>${c === "err" && /projects\/[a-z0-9-]+/.test(st?.cikti || st?.mesaj || "") ? ` <button class="duzelt" data-hduzelt="${esc((st.cikti || st.mesaj).match(/projects\/([a-z0-9-]+)/)[1])}" data-hmesaj="${esc(a.ad + ": " + (st.mesaj || ""))}">🔧 Düzelt</button>` : ""}</div>`;
   }
-  html += `</div>`;
+  ajanHtml += `</div>`;
+  html += katBolum("ajanlar", "🤖 Ajanlar", AGENTS.length, ajanHtml, false);
   html += renderYorumlar() + renderAnaliz();
-  const r = O.report;
-  html += `<h2>Haftanın raporu ${r ? `<span class="mut" style="font-family:Mont;font-size:12px">· ${esc(r.hafta)}</span>` : ""}</h2>`;
-  if (!r) html += `<div class="card mut">Henüz rapor yok. Araştırmacıyı çalıştır ya da pazar akşamını bekle.</div>`;
-  else {
-    html += `<div class="card">`;
-    for (const g of r.gunler || []) {
-      html += `<div class="day"><div class="d">${esc(g.gun?.toUpperCase())} · ${esc(g.tarih)}</div>`;
-      for (const o of g.olaylar || []) html += evRow(o);
-      html += `</div>`;
-    }
-    html += `</div>`;
-    if (r.savas_onerisi) html += `<div class="card war" style="margin-top:12px"><div class="d" style="color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.08em">⚔️ HAFTANIN SAVAŞ ÖNERİSİ</div>${evRow(r.savas_onerisi)}</div>`;
-  }
   const fk = O.yorumlar?.fikirler || [];
   if (fk.length) html += `<div class="card" style="margin-top:12px"><div class="d" style="color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.08em">💡 İZLEYİCİ ÖNERİLERİ</div>${fk.map((f) => `<div class="mut" style="padding:5px 0">${esc(f.konu)} · <span style="opacity:.7">${esc(f.kaynak)}</span></div>`).join("")}</div>`;
-  html += `<h2>Projeler</h2>`;
   const ARS = new Set(O.arsiv || []), aktif = O.projeler.filter((p) => !ARS.has(p)), arsivde = (O.arsiv || []).filter((p) => O.projeler.includes(p));
   const kart = (p, ars) => `<div class="card proj" data-p="${esc(p)}"><div class="th" data-th="${esc(p)}"></div><div class="ad"><b>${esc(projeAdi(p))}</b><span class="mut">Aç →</span></div><button class="cop ars" data-ars="${esc(p)}" data-cikar="${ars ? 1 : ""}" title="${ars ? "Arşivden çıkar" : "Arşive at"}">${ars ? "↩" : "📦"}</button><button class="cop" data-cop="${esc(p)}" title="Projeyi sil" aria-label="Projeyi sil">🗑</button></div>`;
-  html += aktif.length ? aktif.map((p) => kart(p, false)).join("") : `<div class="card mut">${arsivde.length ? "Aktif proje yok, hepsi arşivde." : "Henüz proje yok."}</div>`;
-  if (arsivde.length) html += `<details class="arsiv" ${ARSIV_ACIK ? "open" : ""}><summary><h2 style="display:inline">📦 Arşiv <span class="mut" style="font-size:14px">(${arsivde.length})</span></h2></summary>${arsivde.map((p) => kart(p, true)).join("")}</details>`;
+  let pr = aktif.length ? aktif.map((p) => kart(p, false)).join("") : `<div class="card mut">${arsivde.length ? "Aktif proje yok, hepsi arşivde." : "Henüz proje yok."}</div>`;
+  if (arsivde.length) pr += `<details class="arsiv" ${ARSIV_ACIK ? "open" : ""}><summary><h2 style="display:inline">📦 Arşiv <span class="mut" style="font-size:14px">(${arsivde.length})</span></h2></summary>${arsivde.map((p) => kart(p, true)).join("")}</details>`;
+  html += katBolum("projeler", "🎬 Projeler", aktif.length, pr, true);
   html += `<h2>Son harcamalar</h2><div class="card">${(h.son || []).filter((x) => x.usd > 0).map((x) => `<div class="mut" style="display:flex;justify-content:space-between;padding:4px 0"><span>${esc(x.ajan)} · ${esc(x.detay)}</span><span>$${x.usd.toFixed(3)}</span></div>`).join("") || '<span class="mut">Kayıt yok</span>'}</div>`;
+  html += katBolum("ajanayaz", "💬 Ajana yaz", "", komutKart() + spend, false);
   const SEK = [["anim", "🎬 ANİMASYON TARİH VİDEO"], ["spor", "⚽ SPOR TARİHİ VİDEO"], ["ig", "📊 İNSTAGRAM ANALİZ"]];
   let sek = "anim"; try { const k = localStorage.getItem("sekme"); if (SEK.some((x) => x[0] === k)) sek = k; } catch {}
   const QZ = (t) => (typeof quizSekmeHtml === "function" ? quizSekmeHtml(t) : "");
@@ -119,7 +108,7 @@ function render() {
   }));
   document.querySelectorAll("[data-karar]").forEach((b) => (b.onclick = () => decide(b.dataset.baslik, b.dataset.karar)));
   document.querySelectorAll("[data-p]").forEach((b) => (b.onclick = () => openProject(b.dataset.p)));
-  const ad = document.querySelector("details.arsiv"); if (ad) ad.ontoggle = () => (ARSIV_ACIK = ad.open);
+  const ad = document.querySelector("details.arsiv:not(.kat)"); if (ad) ad.ontoggle = () => (ARSIV_ACIK = ad.open);
   document.querySelectorAll("[data-ars]").forEach((b) => (b.onclick = (e) => { e.stopPropagation(); arsivle(b.dataset.ars, !!b.dataset.cikar); }));
   document.querySelectorAll("[data-cop]").forEach((b) => (b.onclick = async (e) => {
     e.stopPropagation(); const slug = b.dataset.cop;
@@ -129,7 +118,12 @@ function render() {
     catch (err) { b.disabled = false; b.textContent = "🗑"; toast(err.message || "Hata"); }
   }));
   document.querySelectorAll("[data-th]").forEach(async (d) => { const u = await fileUrl(`projects/${d.dataset.th}/images/${DEMO ? "img01.jpg" : "s01.jpg"}`); if (u) d.style.backgroundImage = `url(${u})`; });
+  document.querySelectorAll("details[data-kat]").forEach((d) => (d.ontoggle = () => { try { localStorage.setItem("kat_" + d.dataset.kat, d.open ? "1" : "0"); } catch {} }));
   baglaYorumlar(); baglaKomut();
+}
+function katBolum(k, baslik, sayi, ic, varsayilan) {
+  let acik = varsayilan; try { const v = localStorage.getItem("kat_" + k); if (v !== null) acik = v === "1"; } catch {}
+  return `<details class="arsiv kat" data-kat="${k}"${acik ? " open" : ""}><summary><h2 style="display:inline">${baslik}${sayi !== "" ? ` <span class="mut" style="font-size:14px">· ${sayi}</span>` : ""}</h2></summary>${ic}</details>`;
 }
 
 // ───────── "Ajana yaz": serbest mesajla yönetici ajan ─────────
