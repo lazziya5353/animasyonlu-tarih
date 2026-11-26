@@ -305,7 +305,7 @@ async function qIsler(kok) {
 }
 
 // ───────── Toplu soru ekle: yerel ayrıştırıcı -> (gerekirse) Gemini -> türetilen alanlar -> düzenlenebilir satırlar ─────────
-const TR_ABC = "ABCÇDEFGĞHIİJKLMNOÖPRSŞTUVYZ";
+const TR_ABC = "ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ";
 const trUst = (x) => String(x ?? "").trim().toLocaleUpperCase("tr");
 function qIsaretle(g, fmt, S) { // doğrulama hatalarını satırlarda kırmızı göster
   const h = qDogrula(fmt, S.sorular);
@@ -410,7 +410,7 @@ async function qAyir(g, fmt, S, tema, btn, ciz) {
 // ---- Dış ses: workflow'un seslendirme_metni ile birebir aynı metin (quiz_studyo.py hazirla / harf_bul.py hazirla / api quizEskiScript)
 const QGIRIS = { "hangisi-once": "Hangisi önce", "dogru-yanlis": "Doğru mu yanlış mı", "bu-kim": "Bu kim", "haritada-bul": "Haritada bul",
   "yili-tahmin": "Yılı tahmin et", "emoji-tarih": "Emoji ile tarih", "kelime-eksik": "Bir kelime eksik" };
-const QTR_ABC = "ABCÇDEFGĞHIİJKLMNOÖPRSŞTUVYZ";
+const QTR_ABC = "ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ";
 function qSayiYaz(n) { // sayi_yazi.yaz
   const B = ["", "bir", "iki", "üç", "dört", "beş", "altı", "yedi", "sekiz", "dokuz"], O = ["", "on", "yirmi", "otuz", "kırk", "elli", "altmış", "yetmiş", "seksen", "doksan"];
   if (n === 0) return "sıfır"; const p = [];

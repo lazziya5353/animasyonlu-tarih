@@ -62,7 +62,7 @@ Sadece JSON döndür: {"sorular":[...],"notlar":[...]}. Tek soru şeması: ${JSO
 Yerel ayrıştırıcının kısmi sonucu (yardımcı olabilir): ${JSON.stringify(yerel || []).slice(0, 6000)}
 METİN:
 ${metin}`;
-const TR_ABC = "ABCÇDEFGĞHIİJKLMNOÖPRSŞTUVYZ";
+const TR_ABC = "ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ";
 function quizIstem(fmt, konu, adet, kar, tema) {
   const s = QSEMA[fmt]; const alan = tema === "spor" ? "spor tarihi" : "tarih (ağırlıklı Türk ve dünya tarihi)";
   return `Türkçe bir Instagram ${alan} quiz videosu için '${s.ad}' formatında ${adet} soru hazırla. Konu: ${konu}.\nZorluk dağılımı: ${kar.kolay} kolay, ${kar.orta} orta, ${kar.zor} zor; zorları başa/ortaya/sona dağıt.\nKurallar: ${s.kurallar} Her bilgi kesin doğru ve iki kaynakla doğrulanabilir olmalı; tartışmalı ya da rivayet bilgileri kullanma. Sorular kısa (en çok 14 kelime), alt_bilgi en çok 6 kelime. Türkçe karakterleri doğru yaz.\nSadece JSON döndür: {"sorular": [ ... ]}. Tek bir sorunun şeması (örnek): ${JSON.stringify(s.ornek)}`;
