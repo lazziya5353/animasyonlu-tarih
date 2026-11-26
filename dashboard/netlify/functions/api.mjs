@@ -282,7 +282,7 @@ async function quizListe() {
   const liste = await Promise.all(sluglar.map(async (slug) => {
     const sc = (await readJson(`projects/${slug}/script.json`).catch(() => null)) || {};
     const format = QTUM.includes(sc.format) ? sc.format : qFmtSlug(slug);
-    const soru = Array.isArray(sc.sorular) && sc.sorular.length ? sc.sorular.length : Math.max(0, (sc.sahneler || []).filter((x) => x.zorluk || /^[A-ZÇĞİÖŞÜ]$/.test(x.label || "")).length);
+    const soru = Array.isArray(sc.sorular) && sc.sorular.length ? sc.sorular.length : Math.max(0, (sc.alt_bilgi && typeof sc.alt_bilgi === "object" ? Object.keys(sc.alt_bilgi).length : 0) || (sc.sahneler || []).filter((x) => / harfi\. /.test((x.lines || [])[0] || "")).length);
     const R = rels.find((r) => r.tag_name === `video-${slug}`), a = (n) => R?.assets?.find((x) => x.name === n);
     const run = runs.filter((r) => (r.display_title || "").endsWith(`· ${slug}`) || r.display_title === slug).sort((x, y) => new Date(y.created_at) - new Date(x.created_at))[0];
     const o = { slug, format, format_ad: QSEMA[format]?.ad || format, baslik: sc.baslik || slug, soru, tema: sc.tema === "spor" || /-spor(-|$)/.test(slug) ? "spor" : "tarih",

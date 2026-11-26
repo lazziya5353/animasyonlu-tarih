@@ -253,14 +253,14 @@ const QHT_TARIH = "#tarih #osmanlı #türktarihi #tarihsorusu #quiz #bilgiyarı�
 const QHT_SPOR = "#spor #futbol #sportarihi #sporquiz #quiz #bilgiyarışması #futbolbilgisi #galatasaray #fenerbahçe #beşiktaş #keşfet #reels";
 const QSABIT = "Kaçını bildin? 👇 Puanını yaz, en yüksek puanı sabitleyelim 🏆";
 function qVarsayilan(q) { // kural tabanlı, ücretsiz: slug numarasına göre şablon değişir
-  const n = q.soru || 10, spor = q.tema === "spor", konu = spor ? "spor" : "tarih", kurt = spor ? "gerçek spor kurdu" : "gerçek tarih kurdu";
+  const n = q.soru || 22, spor = q.tema === "spor", konu = spor ? "spor" : "tarih", kurt = spor ? "gerçek spor kurdu" : "gerçek tarih kurdu";
   const no = +((q.slug.match(/(\d+)(?!.*\d)/) || [0, 0])[1]) || 0, f = q.format_ad || "quiz";
   const har = /harf/i.test(f + q.format), birim = har ? `${n} harf, ${n} ${konu} sorusu` : `${n} soru, ${f.toLowerCase()} usulü`;
   const G = ["Geçen quiz çok kolay dediniz, bu sefer zorlaştırdık 😏", "Bu sefer kimse kolay demesin 😏", "Yorumlarda \"daha zor\" diyenler, bu sizin için 😎", "Hızlı olan kazanır, hazır mısın? ⏱️", "Bunu arkadaşına da at, bakalım kim daha çok biliyor 😏", "Söz veriyoruz, bu sefer biraz kafa yakacak 🤯"];
   const O = [`Bakalım bu sefer kaç tane bileceksin? 🤔`, `Kaçta kaç yapacaksın, merak ediyoruz 🤔`, `İlk yarıyı herkes bilir, asıl iş sonda 👀`, `Dürüst ol, kopya yok 🤫`];
   const S = ["Videoyu durdurmak yok, puanını yorumlara yaz 👇", "Durdurmadan oyna, skorunu yorumlara bırak 👇", "Puanını yorumlara yaz, en yükseği sabitliyoruz 👇"];
   const K = [`${n}'de ${n} yapan ${kurt} 🏆`, `${n}/${n} yapan varsa efsanedir 🏆`, `Yarısını geçtiysen fena değil, ${n}'de ${n} ise saygılar 🫡`];
-  return { aciklama: `${G[no % G.length]}\n\n${birim}. ${O[no % O.length]}\n${S[no % S.length]}\n\n${K[no % K.length]}`, hashtagler: spor ? QHT_SPOR : QHT_TARIH, sabit_yorum: QSABIT };
+  return { aciklama: `${G[no % G.length]}\n\n${birim}. ${O[no % O.length]}\n${S[no % S.length]}\n\nBir sonraki quiz ne olsun? 👇`, hashtagler: spor ? "#spor #sporquiz #soru #keşfetteyiz #sorucevap #keşfet" : "#soru #keşfetteyiz #tarih #sorucevap #keşfet", sabit_yorum: QSABIT };
 }
 async function qKopyala(t) { try { await navigator.clipboard.writeText(t); } catch { const a = document.createElement("textarea"); a.value = t; document.body.append(a); a.select(); document.execCommand("copy"); a.remove(); } toast("Kopyalandı ✓"); }
 function qDetay(q) {
