@@ -1,0 +1,682 @@
+{
+ "baslik": "Her Harfe Bir Tarih Sorusu 5",
+ "hook": "HER HARFE BİR TARİH SORUSU",
+ "slug": "her-harfe-tarih-5",
+ "tema": "tarih",
+ "map_region": "anadolu",
+ "sahneler": [
+  {
+   "lines": [
+    "Her harfe bir tarih sorusu 5. Bölüm Bakalım kaçını bileceksin?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Ü harfi. Millî Mücadele'de Anadolu'ya silah kaçırılan tarihî Özbekler Tekkesi hangi İstanbul ilçesindedir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Üsküdar."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "A harfi. 750 yılında Emevî Devleti'ni yıkarak kurulan İslam devleti hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Abbâsîler."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "B harfi. Müslümanların Mekkeli müşriklere karşı kazandığı ilk büyük savaş hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Bedir Savaşı."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "C harfi. Osmanlı Devleti'nde 16. ve 17. yüzyıllarda Anadolu'da çıkan büyük iç isyanlara ne ad verilir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Celâli İsyanları."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Ç harfi. I. Dünya Savaşı'nda Mustafa Kemal'in \"Anafartalar Kahramanı\" olarak öne çıktığı cephe hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Çanakkale Cephesi."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "D harfi. Kaşgarlı Mahmud'un 11. yüzyılda yazdığı ilk Türkçe sözlük hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Divânü Lugâti't-Türk."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "E harfi. Dört Halife döneminden sonra İslam dünyasında kurulan ilk hanedan devleti hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Emevîler."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "F harfi. \"Muallim-i Sânî\" (İkinci Öğretmen) unvanıyla tanınan ünlü Türk-İslam filozofu kimdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Fârâbî."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "G harfi. İslam tarihinde Hz. Muhammed'in bizzat katıldığı askerî seferlere ne ad verilir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Gazve."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "H harfi. Hz. Muhammed ve Müslümanların 622 yılında Mekke'den Medine'ye göç etmesine ne ad verilir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Hicret."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "İ harfi. Batı'da \"Avicenna\" adıyla bilinen ve \"El-Kânûn fi't-Tıb\" eserini yazan İslam âlimi kimdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "İbn Sînâ."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "K harfi. I. Dünya Savaşı'nda Osmanlı ordusunun 1916'da İngiliz kuvvetlerini kuşatarak teslim aldığı zafer hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Kut'ül Amâre."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "L harfi. Türkiye Cumhuriyeti'nin bağımsızlığının uluslararası alanda tanındığı 24 Temmuz 1923 tarihli antlaşma hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Lozan Antlaşması."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "M harfi. 1071 yılında Sultan Alparslan'ın Bizans'ı yenerek Anadolu'nun kapılarını Türklere açtığı savaş hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Malazgirt Savaşı."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "N harfi. Atatürk'ün 15–20 Ekim 1927'de okuduğu ve 1919–1927 yıllarını anlattığı büyük eseri hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Nutuk."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "O harfi. İslam tarihinde Kur'an-ı Kerim'in çoğaltılarak önemli merkezlere gönderildiği üçüncü halife kimdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Osman bin Affân (Hz. Osman)."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Ö harfi. 15 Temmuz 2016 darbe girişimi gecesi Özel Kuvvetler Komutanlığı'nda darbeci generali vurarak şehit düşen astsubay kimdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Ömer Halisdemir."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "P harfi. I. Dünya Savaşı'nın ardından yenilen devletlerle yapılacak barış antlaşmalarını belirlemek için 1919'da toplanan konferans hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Paris Barış Konferansı."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "R harfi. Yavuz Sultan Selim'in 1517'de Memlûk Devleti'ne son vererek Mısır'ı fethettiği savaş hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Ridaniye Savaşı."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "S harfi. 1808'de II. Mahmud ile âyanlar arasında imzalanıp padişahın yetkilerini ilk kez sınırlandıran belge hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Sened-i İttifak."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Ş harfi. Kurtuluş Savaşı'nda cepheye kağnıyla mühimmat taşırken donarak şehit olan kadın kahramanımız kimdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Şerife Bacı."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "T harfi. 751 yılında Müslüman Araplar ile Çinliler arasında yapılan ve Türklerin İslamiyet'i kabul sürecini hızlandıran savaş hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Talas Savaşı."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "U harfi. 625 yılında Müslümanlar ile Mekkeli müşrikler arasında yapılan savaş hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Uhud Savaşı."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "V harfi. Hz. Muhammed'in 632 yılında gerçekleştirdiği son hacca ve burada yaptığı konuşmaya ne ad verilir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Veda Hutbesi."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Y harfi. 1516–1517 Mısır Seferi ile halifeliği Osmanlı hanedanına geçiren padişah kimdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Yavuz Sultan Selim."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Z harfi. Türkçülüğün Esasları eserinin yazarı ve Türk sosyolojisinin öncülerinden olan düşünür kimdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Ziyâ Gökalp."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Kaçını bildin? Yorumlara yaz."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  }
+ ],
+ "finale": "",
+ "maps": [],
+ "cards": [],
+ "eras": [
+  {
+   "name": "QUIZ",
+   "from": 0,
+   "to": 45
+  }
+ ],
+ "outro": {
+  "title": "KAÇINI BİLDİN?",
+  "line": "Yorumlara yaz"
+ },
+ "konu": "Harf quiz",
+ "tarih": "",
+ "durum": "onaylandi",
+ "kaynak": "panel",
+ "sade": true,
+ "ses_stil": "Bir quiz sunucususun. İlk cümleyi enerjik, gülümseyen ve meydan okuyan bir tonla söyle. Soruları net ve akıcı, cevapları kısa ve kendinden emin oku. Son cümleyi samimi bir çağrı gibi söyle. Uzun sessizlik bırakma, her cümleden sonra kısa bir durak ver:\n",
+ "seslendirme_metni": "Her harfe bir tarih sorusu 5. Bölüm Bakalım kaçını bileceksin?\nÜ harfi. Millî Mücadele'de Anadolu'ya silah kaçırılan tarihî Özbekler Tekkesi hangi İstanbul ilçesindedir?\nÜsküdar.\nA harfi. 750 yılında Emevî Devleti'ni yıkarak kurulan İslam devleti hangisidir?\nAbbâsîler.\nB harfi. Müslümanların Mekkeli müşriklere karşı kazandığı ilk büyük savaş hangisidir?\nBedir Savaşı.\nC harfi. Osmanlı Devleti'nde 16. ve 17. yüzyıllarda Anadolu'da çıkan büyük iç isyanlara ne ad verilir?\nCelâli İsyanları.\nÇ harfi. I. Dünya Savaşı'nda Mustafa Kemal'in \"Anafartalar Kahramanı\" olarak öne çıktığı cephe hangisidir?\nÇanakkale Cephesi.\nD harfi. Kaşgarlı Mahmud'un 11. yüzyılda yazdığı ilk Türkçe sözlük hangisidir?\nDivânü Lugâti't-Türk.\nE harfi. Dört Halife döneminden sonra İslam dünyasında kurulan ilk hanedan devleti hangisidir?\nEmevîler.\nF harfi. \"Muallim-i Sânî\" (İkinci Öğretmen) unvanıyla tanınan ünlü Türk-İslam filozofu kimdir?\nFârâbî.\nG harfi. İslam tarihinde Hz. Muhammed'in bizzat katıldığı askerî seferlere ne ad verilir?\nGazve.\nH harfi. Hz. Muhammed ve Müslümanların 622 yılında Mekke'den Medine'ye göç etmesine ne ad verilir?\nHicret.\nİ harfi. Batı'da \"Avicenna\" adıyla bilinen ve \"El-Kânûn fi't-Tıb\" eserini yazan İslam âlimi kimdir?\nİbn Sînâ.\nK harfi. I. Dünya Savaşı'nda Osmanlı ordusunun 1916'da İngiliz kuvvetlerini kuşatarak teslim aldığı zafer hangisidir?\nKut'ül Amâre.\nL harfi. Türkiye Cumhuriyeti'nin bağımsızlığının uluslararası alanda tanındığı 24 Temmuz 1923 tarihli antlaşma hangisidir?\nLozan Antlaşması.\nM harfi. 1071 yılında Sultan Alparslan'ın Bizans'ı yenerek Anadolu'nun kapılarını Türklere açtığı savaş hangisidir?\nMalazgirt Savaşı.\nN harfi. Atatürk'ün 15–20 Ekim 1927'de okuduğu ve 1919–1927 yıllarını anlattığı büyük eseri hangisidir?\nNutuk.\nO harfi. İslam tarihinde Kur'an-ı Kerim'in çoğaltılarak önemli merkezlere gönderildiği üçüncü halife kimdir?\nOsman bin Affân (Hz. Osman).\nÖ harfi. 15 Temmuz 2016 darbe girişimi gecesi Özel Kuvvetler Komutanlığı'nda darbeci generali vurarak şehit düşen astsubay kimdir?\nÖmer Halisdemir.\nP harfi. I. Dünya Savaşı'nın ardından yenilen devletlerle yapılacak barış antlaşmalarını belirlemek için 1919'da toplanan konferans hangisidir?\nParis Barış Konferansı.\nR harfi. Yavuz Sultan Selim'in 1517'de Memlûk Devleti'ne son vererek Mısır'ı fethettiği savaş hangisidir?\nRidaniye Savaşı.\nS harfi. 1808'de II. Mahmud ile âyanlar arasında imzalanıp padişahın yetkilerini ilk kez sınırlandıran belge hangisidir?\nSened-i İttifak.\nŞ harfi. Kurtuluş Savaşı'nda cepheye kağnıyla mühimmat taşırken donarak şehit olan kadın kahramanımız kimdir?\nŞerife Bacı.\nT harfi. 751 yılında Müslüman Araplar ile Çinliler arasında yapılan ve Türklerin İslamiyet'i kabul sürecini hızlandıran savaş hangisidir?\nTalas Savaşı.\nU harfi. 625 yılında Müslümanlar ile Mekkeli müşrikler arasında yapılan savaş hangisidir?\nUhud Savaşı.\nV harfi. Hz. Muhammed'in 632 yılında gerçekleştirdiği son hacca ve burada yaptığı konuşmaya ne ad verilir?\nVeda Hutbesi.\nY harfi. 1516–1517 Mısır Seferi ile halifeliği Osmanlı hanedanına geçiren padişah kimdir?\nYavuz Sultan Selim.\nZ harfi. Türkçülüğün Esasları eserinin yazarı ve Türk sosyolojisinin öncülerinden olan düşünür kimdir?\nZiyâ Gökalp.\nKaçını bildin? Yorumlara yaz.",
+ "alt_bilgi": {
+  "Ü": "1919–1922 (Millî Mücadele Dönemi)",
+  "A": "750–1258",
+  "B": "624",
+  "C": "16–17. yüzyıl",
+  "Ç": "1915",
+  "D": "11. yüzyıl",
+  "E": "661–750",
+  "F": "9–10. yüzyıl",
+  "G": "Siyer kavramı",
+  "H": "622",
+  "İ": "980–1037",
+  "K": "29 Nisan 1916",
+  "L": "24 Temmuz 1923",
+  "M": "26 Ağustos 1071",
+  "N": "1927",
+  "O": "644–656",
+  "Ö": "15 Temmuz 2016",
+  "P": "18 Ocak 1919",
+  "R": "22 Ocak 1517",
+  "S": "1808",
+  "Ş": "Aralık 1921",
+  "T": "751",
+  "U": "625",
+  "V": "632",
+  "Y": "1512–1520",
+  "Z": "1876–1924"
+ },
+ "aciklama": "",
+ "hashtagler": [],
+ "kaynaklar": [],
+ "kontrol_notlari": []
+}
