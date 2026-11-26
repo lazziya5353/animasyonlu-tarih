@@ -205,6 +205,12 @@ def main():
             g = min(sil, key=lambda g: abs((g[0]+g[1])/2 - b))
             gaps.append(g if abs((g[0]+g[1])/2 - b) < 0.4 and g not in gaps else (b - 0.08, b + 0.06))
     else:
+        # once metin tabanli bolme (Whisper kelime zamanlari); guven dusukse sessizlik DP'sine don
+        try:
+            from ses_hizala import satir_sinirlari; sn = satir_sinirlari(au, SR, S)
+        except Exception as e: print("uyari: metin hizalama calismadi:", e); sn = None
+        gaps = [(b - 0.08, b + 0.06) for b in sn[1:-1]] if sn else None
+    if gaps is None:
         # metin uzunluguna gore DP hizalama: en uzun sessizlikleri secmek cumle-ici duraklari
         # sahne siniri sanip soru/cevap seslerini kaydiriyordu (sessiz soru hatasi)
         ch = [len(x) for x in S]; rate = tot/sum(ch); m = len(sil); K = 2*n + 1

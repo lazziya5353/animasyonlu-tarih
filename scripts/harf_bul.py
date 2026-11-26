@@ -213,6 +213,11 @@ def bol(au, SR, S, n):
             else: j += 1
         return out
     sil = [x for x in sess(-42, 8) if x[0] > 0.05 and x[1] < tot - 0.05]; sil35 = sess(-35, 41)
+    try:  # once metin tabanli bolme (Whisper kelime zamanlari); guven dusukse sessizlik DP'si
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from ses_hizala import satir_sinirlari
+        sn = satir_sinirlari(au, SR, S)
+    except Exception as e: print("uyari: metin hizalama calismadi:", e); sn = None
+    if sn: return kes(au, SR, [(b - 0.08, b + 0.06) for b in sn[1:-1]], sil35, tot, n)
     ch = [len(x) for x in S]; rate = tot/sum(ch); m = len(sil); K = 2*n + 1
     if m < K: sys.exit(f"HATA: sessizlik sayisi yetmiyor ({m} < {K})")
     mid = lambda j: (sil[j][0]+sil[j][1])/2
@@ -227,7 +232,11 @@ def bol(au, SR, S, n):
                 if v < D[k][j]: D[k][j] = v; P[k][j] = i
     j = min(range(m), key=lambda j: D[K-1][j] + cost(mid(j), tot, ch[-1])); idx = []
     for k in range(K-1, -1, -1): idx.append(j); j = P[k][j]
-    gaps = [sil[j] for j in reversed(idx)]; edges = [(0.0, None)] + gaps + [(None, tot)]; segs = []
+    return kes(au, SR, [sil[j] for j in reversed(idx)], sil35, tot, n)
+
+def kes(au, SR, gaps, sil35, tot, n):
+    import numpy as np
+    edges = [(0.0, None)] + gaps + [(None, tot)]; segs = []
     for k in range(2*n + 2):
         s0 = edges[k][1] - 0.06 if edges[k][1] is not None else 0.0
         s1 = edges[k+1][0] + 0.08 if edges[k+1][0] is not None else tot
