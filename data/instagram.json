@@ -1,5 +1,5 @@
 {
- "zaman": "2026-11-26T03:44:34Z",
+ "zaman": "2026-11-26T16:57:26Z",
  "gecmis": [
   {
    "tarih": "2026-11-25",
@@ -10,7 +10,6 @@
    "takipci": 7026
   }
  ],
- "host": "graph.facebook.com",
  "hesap": {
   "kullanici": "animasyon.tarih",
   "ad": "Animasyonlu Tarih",
@@ -655,25 +654,5 @@
    "profil_ziyaret": null
   }
  ],
- "en_iyi_saatler": [
-  {
-   "saat": 15,
-   "ort_izlenme": 193237,
-   "adet": 5
-  },
-  {
-   "saat": 18,
-   "ort_izlenme": 5611,
-   "adet": 1
-  },
-  {
-   "saat": 17,
-   "ort_izlenme": 5348,
-   "adet": 2
-  }
- ],
- "en_iyi_gun": "Salı",
- "desteklenmeyen": [
-  "follows (gönderi başına)"
- ]
+ "hata": "Instagram'a bağlanılamadı: Instagram 400: API access blocked."
 }

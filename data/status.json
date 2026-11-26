@@ -48,10 +48,10 @@
   "zaman": "2026-11-16T13:35:37Z"
  },
  "instagram": {
-  "durum": "tamam",
-  "mesaj": "7026 takipçi · 20 gönderi analiz edildi",
+  "durum": "hata",
+  "mesaj": "Instagram'a bağlanılamadı: Instagram 400: API access blocked.",
   "cikti": null,
-  "zaman": "2026-11-26T03:44:58Z"
+  "zaman": "2026-11-26T16:57:26Z"
  },
  "haftalik": {
   "durum": "tamam",
