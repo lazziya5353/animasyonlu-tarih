@@ -1,0 +1,564 @@
+{
+  "baslik": "Her Harfe Bir Tarih Sorusu 4",
+  "hook": "HER HARFE BİR TARİH SORUSU",
+  "map_region": "anadolu",
+  "sahneler": [
+    {
+      "lines": [
+        "Her harfe bir tarih sorusu! Bakalım bu sefer kaçını bileceksin?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "A harfi. Kurtuluş Savaşı'nın amacını ve yöntemini açıklayan genelge hangi şehirde yayımlandı?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Amasya."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "B harfi. 26 Ağustos 1922'de başlayan saldırının adı nedir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Büyük Taarruz."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "C harfi. Osmanlı medeni kanunu Mecelle'yi hazırlayan devlet adamı kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Cevdet Paşa."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "D harfi. Oğuz Türklerinin destansı hikâyelerini anlatan eser hangisidir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Dede Korkut."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "E harfi. Osman Gazi'nin babası kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Ertuğrul Gazi."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "F harfi. Türkiye Cumhuriyeti'nin ikinci başbakanı kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Fethi Okyar."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "G harfi. TBMM'nin imzaladığı ilk uluslararası antlaşma hangisidir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Gümrü."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "H harfi. Galata Kulesi'nden uçtuğu rivayet edilen bilgin kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Hezarfen Ahmed Çelebi."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "İ harfi. Batı Cephesi'nde düzenli ordunun kazandığı ilk zafer hangisidir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "İnönü."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "K harfi. İşgallere karşı kurulan halk direniş güçlerinin adı nedir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Kuvâ-yi Milliye."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "M harfi. İstanbul'un fethindeki dev topları döken usta kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Macar Urban."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "N harfi. 93 Harbi'nde Aziziye Tabyası savunmasıyla tanınan kadın kahraman kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Nene Hatun."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "O harfi. Kaplumbağa Terbiyecisi tablosunun ressamı kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Osman Hamdi Bey."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "P harfi. Lale Devri'ni sona erdiren isyanın lideri kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Patrona Halil."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "R harfi. Atatürk'ün Selanik'te okuduğu askeri ortaokulun adı nedir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Rüştiye."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "S harfi. Türkiye'nin ilk kadın savaş pilotu kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Sabiha Gökçen."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Ş harfi. Osmanlı'da padişahın erkek çocuklarına verilen unvan nedir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Şehzade."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "T harfi. Kurtuluş Savaşı'nda halktan ordu için istenen yardım emirlerinin adı nedir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Tekalif-i Milliye."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "U harfi. Semerkant'ta rasathane kuran Timurlu hükümdar kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Uluğ Bey."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "V harfi. II. Murad'ın 1444'te Haçlıları yendiği savaş hangisidir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Varna."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Y harfi. Çelebi Mehmed'in Bursa'daki çinili türbesinin adı nedir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Yeşil Türbe."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Z harfi. Ege'de Kurtuluş Savaşı'na katılan silahlı halk kahramanlarına ne ad verilir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Zeybek."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Kaçını bildin? Yorumlara yaz. Kaçırmamak için animasyon tarih'i takip et."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    }
+  ],
+  "finale": "",
+  "maps": [],
+  "cards": [],
+  "eras": [
+    {
+      "name": "QUIZ",
+      "from": 0,
+      "to": 45
+    }
+  ],
+  "outro": {
+    "title": "KAÇINI BİLDİN?",
+    "line": "Yorumlara yaz"
+  },
+  "aciklama": "",
+  "kanca_alternatifleri": [],
+  "aciklama_alternatifleri": [],
+  "hashtagler": [],
+  "kaynaklar": [],
+  "kontrol_notlari": [],
+  "konu": "Harf quiz",
+  "tarih": "",
+  "slug": "her-harfe-tarih-4",
+  "durum": "onaylandi",
+  "sade": true,
+  "seslendirme_metni": "Her harfe bir tarih sorusu! Bakalım bu sefer kaçını bileceksin?\nA harfi. Kurtuluş Savaşı'nın amacını ve yöntemini açıklayan genelge hangi şehirde yayımlandı?\nAmasya.\nB harfi. yirmi altı Ağustos bin dokuz yüz yirmi ikide başlayan saldırının adı nedir?\nBüyük Taarruz.\nC harfi. Osmanlı medeni kanunu Mecelle'yi hazırlayan devlet adamı kimdir?\nCevdet Paşa.\nD harfi. Oğuz Türklerinin destansı hikâyelerini anlatan eser hangisidir?\nDede Korkut.\nE harfi. Osman Gazi'nin babası kimdir?\nErtuğrul Gazi.\nF harfi. Türkiye Cumhuriyeti'nin ikinci başbakanı kimdir?\nFethi Okyar.\nG harfi. TBMM'nin imzaladığı ilk uluslararası antlaşma hangisidir?\nGümrü.\nH harfi. Galata Kulesi'nden uçtuğu rivayet edilen bilgin kimdir?\nHezarfen Ahmed Çelebi.\nİ harfi. Batı Cephesi'nde düzenli ordunun kazandığı ilk zafer hangisidir?\nİnönü.\nK harfi. İşgallere karşı kurulan halk direniş güçlerinin adı nedir?\nKuvâ-yi Milliye.\nM harfi. İstanbul'un fethindeki dev topları döken usta kimdir?\nMacar Urban.\nN harfi. doksan üç Harbi'nde Aziziye Tabyası savunmasıyla tanınan kadın kahraman kimdir?\nNene Hatun.\nO harfi. Kaplumbağa Terbiyecisi tablosunun ressamı kimdir?\nOsman Hamdi Bey.\nP harfi. Lale Devri'ni sona erdiren isyanın lideri kimdir?\nPatrona Halil.\nR harfi. Atatürk'ün Selanik'te okuduğu askeri ortaokulun adı nedir?\nRüştiye.\nS harfi. Türkiye'nin ilk kadın savaş pilotu kimdir?\nSabiha Gökçen.\nŞ harfi. Osmanlı'da padişahın erkek çocuklarına verilen unvan nedir?\nŞehzade.\nT harfi. Kurtuluş Savaşı'nda halktan ordu için istenen yardım emirlerinin adı nedir?\nTekalif-i Milliye.\nU harfi. Semerkant'ta rasathane kuran Timurlu hükümdar kimdir?\nUluğ Bey.\nV harfi. İkinci Murad'ın bin dört yüz kırk dörtte Haçlıları yendiği savaş hangisidir?\nVarna.\nY harfi. Çelebi Mehmed'in Bursa'daki çinili türbesinin adı nedir?\nYeşil Türbe.\nZ harfi. Ege'de Kurtuluş Savaşı'na katılan silahlı halk kahramanlarına ne ad verilir?\nZeybek.\nKaçını bildin? Yorumlara yaz. Kaçırmamak için animasyon tarih'i takip et.",
+  "alt_bilgi": {
+    "A": "22 Haziran 1919",
+    "B": "26 Ağustos 1922",
+    "C": "1869–1876",
+    "D": "Türk destanı",
+    "E": "Söğüt",
+    "F": "1924",
+    "G": "3 Aralık 1920",
+    "H": "17. yüzyıl",
+    "İ": "I. İnönü · 1921",
+    "K": "Milli Kuvvetler",
+    "M": "Şahi topları",
+    "N": "Erzurum · 1877",
+    "O": "1906",
+    "P": "1730",
+    "R": "Selanik Askeri Rüştiyesi",
+    "S": "Atatürk'ün manevi kızı",
+    "Ş": "Veliaht adayı",
+    "T": "7 Ağustos 1921",
+    "U": "Semerkant Rasathanesi",
+    "V": "10 Kasım 1444",
+    "Y": "Bursa",
+    "Z": "Ege direnişi"
+  },
+  "ses_stil": "Bir quiz sunucususun. İlk cümleyi neşeli ve enerjik söyle. Ardından soruları net, enerjik ve akıcı, normal konuşma hızında oku. Her soru ile cevabı arasında kısa bir duraklama bırak, cümle içinde uzun sessizlik bırakma. Metin:\n"
+}
