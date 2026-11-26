@@ -1,4 +1,5 @@
 name: "Quiz · Her Harfe Bir Tarih Sorusu"
+run-name: "Quiz · Her Harfe · ${{ inputs.slug }}"
 # Ses (Gemini, ucretsiz) -> scripts/harf_quiz.py ile video -> scripts/quiz_kontrol.py -> release video-<slug>
 on:
   workflow_dispatch:

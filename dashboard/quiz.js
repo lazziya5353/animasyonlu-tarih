@@ -20,9 +20,13 @@ function qbos(fmt) { const q = { zorluk: "orta" }; (QYOL[fmt] || []).forEach(([p
 
 function quizSekmeHtml(tema) {
   return `<h2>🧩 QUIZ</h2><div class="card qs" data-qs="${tema}"><div class="mut">Format seç, soruları yaz ya da ajana hazırlat, onayla, üret. Ücretsiz: GitHub Actions + Gemini ücretsiz kota.</div>
-  <div class="qs-formatlar" data-qf></div><div data-qgovde></div><div data-qisler></div></div>`;
+  <div class="qs-formatlar" data-qf></div><div data-qgovde></div><div data-qisler></div><div data-qtum></div></div>`;
 }
-const qcss = `.qs-formatlar{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin:10px 0}
+const qcss = `.qt-kart{display:flex;gap:10px;padding:8px 0;border-top:1px solid #fff1}.qt-kart img,.qt-yok{width:64px;aspect-ratio:9/16;object-fit:cover;border-radius:8px;flex:none;background:#0004;display:grid;place-items:center}
+.qt-govde{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}.qt-govde b{font-size:14px;overflow-wrap:anywhere}.qt-roz{align-self:flex-start;color:#000;font-size:11px;font-weight:700;border-radius:99px;padding:2px 8px}
+.qt-bar{height:5px;background:#fff2;border-radius:3px;overflow:hidden}.qt-bar i{display:block;height:100%;background:var(--gold)}.qt-btn{display:flex;flex-wrap:wrap;gap:6px;margin-top:3px}.qt-btn .btn{text-decoration:none;font-size:13px;padding:6px 10px}
+.qt-modal{position:fixed;inset:0;background:#000c;z-index:999;display:grid;place-items:center;padding:12px}.qt-modal>div{display:flex;flex-direction:column;gap:8px;max-width:100%}.qt-modal video{max-height:82vh;max-width:100%;border-radius:10px}
+.qs-formatlar{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin:10px 0}
 .qs-f img{height:78px}@media(max-width:640px){.qs-f img{height:auto}}.qs-row.hata{border-color:var(--err);box-shadow:0 0 0 1px var(--err)}.qs-row input.hata{border-color:var(--err)}
 .qs-blok{border:1px dashed #fff3;border-radius:12px;padding:10px;margin:12px 0}.qs-blok h3{margin:0 0 6px;font-size:14px}.qs textarea{min-height:170px;resize:vertical}
 .qs-f{background:#0002;border:1px solid #fff2;border-radius:12px;padding:6px;text-align:left;color:inherit;font:inherit;cursor:pointer}
@@ -43,6 +47,7 @@ async function baglaQuiz() {
     kok.querySelectorAll("[data-fmt]").forEach((b) => (b.onclick = () => { QST[tema] = { format: QST[tema].format === b.dataset.fmt ? "" : b.dataset.fmt, sorular: [], gorseller: {} }; baglaQuiz(); }));
     qGovde(kok, tema); qIsler(kok);
   });
+  qTum();
 }
 
 function qGovde(kok, tema) {
@@ -199,6 +204,52 @@ function qResim(file, max, tip) { // tarayıcıda küçült -> base64 (Netlify i
 }
 
 let qZaman = null;
+// ───────── Tüm quizler (cihazdan bağımsız, GitHub'dan) ─────────
+let qTumZaman = 0, qTumYukleniyor = false, qTumCalisan = false;
+const qGecen = (t) => { if (!t) return ""; const d = (Date.now() - new Date(t)) / 1000; return d < 60 ? "az önce" : d < 3600 ? `${Math.floor(d / 60)} dk önce` : d < 86400 ? `${Math.floor(d / 3600)} sa önce` : `${Math.floor(d / 86400)} gün önce`; };
+function qTumDurum(q) {
+  const r = q.run, yeni = r && (!q.zaman || new Date(r.started) > new Date(q.zaman));
+  if (r && r.status !== "completed") return r.status === "in_progress" ? "uret" : "sira";
+  if (yeni && r.conclusion === "failure") return "hata";
+  if (q.release && q.mp4) return "hazir";
+  if (r && r.conclusion === "failure") return "hata";
+  return "taslak";
+}
+async function qTum() {
+  if (qTumYukleniyor) return; qTumYukleniyor = true; clearTimeout(qTumZaman);
+  const kutular = [...document.querySelectorAll("[data-qs] [data-qtum]")]; if (!kutular.length) { qTumYukleniyor = false; return; }
+  let L; try { L = (await api("quiz_liste")).quizler || []; } catch (e) { kutular.forEach((k) => (k.innerHTML = `<h3 style="margin:14px 0 4px">Tüm quizler</h3><div class="qs-err">Liste alınamadı</div>`)); qTumYukleniyor = false; return; }
+  qTumYukleniyor = false;
+  const ROZ = { sira: ["Sırada", "#888"], uret: ["Üretiliyor", "var(--gold)"], hazir: ["Hazır ✓", "#1fd17a"], hata: ["Hata ✗", "var(--err)"], taslak: ["Taslak", "#666"] };
+  let calisan = false;
+  kutular.forEach((k) => {
+    const tema = k.closest("[data-qs]").dataset.qs, Q = L.filter((q) => (q.tema === "spor") === (tema === "spor"));
+    k.innerHTML = `<h3 style="margin:14px 0 4px">Tüm quizler <span class="mut">(${Q.length})</span></h3>` + (Q.length ? Q.map((q) => {
+      const d = qTumDurum(q), r = q.run || {}; calisan ||= d === "sira" || d === "uret";
+      const [ad, renk] = ROZ[d], ust = d === "uret" && r.adim ? `${ad} · ${esc(r.adim)}` : ad;
+      const ilerleme = d === "uret" && r.adim_top ? `<div class="qt-bar"><i style="width:${Math.round((100 * (r.adim_no || 0)) / r.adim_top)}%"></i></div><small class="mut">Adım ${r.adim_no || 0} / ${r.adim_top}</small>` : "";
+      const alt = d === "hazir" ? `<div class="qt-btn"><button class="ghost" data-qtizle="${esc(q.mp4)}">▶ İzle</button><a class="ghost btn" href="${esc(q.mp4)}" download>⬇ İndir (video)</a>${q.kapak ? `<a class="ghost btn" href="${esc(q.kapak)}" download>⬇ Kapak</a>` : ""}</div>`
+        : d === "hata" ? `<div class="qs-err">${esc(r.hata_adim ? r.hata_adim + ": " : "")}${(r.hata || []).map(esc).join(" · ") || "bilinmeyen hata"}</div><div class="qt-btn">${r.url ? `<a class="ghost btn" href="${esc(r.url)}" target="_blank" rel="noopener">GitHub'da aç</a>` : ""}<button class="ghost" data-qttekrar="${esc(q.slug)}">↻ Tekrar dene</button></div>` : "";
+      return `<div class="qt-kart">${q.kapak ? `<img loading="lazy" src="${esc(q.kapak)}" alt="">` : `<div class="qt-yok">🧩</div>`}<div class="qt-govde"><b>${esc(q.baslik)}</b>
+        <small class="mut">${esc(q.format_ad)}${q.soru ? ` · ${q.soru} soru` : ""} · ${qGecen(r.updated || q.zaman)}</small>
+        <span class="qt-roz" style="background:${renk}">${ust}</span>${ilerleme}${alt}</div></div>`;
+    }).join("") : `<div class="mut" style="font-size:12px">Henüz quiz yok</div>`);
+  });
+  document.querySelectorAll("[data-qtizle]").forEach((b) => (b.onclick = () => qTumIzle(b.dataset.qtizle)));
+  document.querySelectorAll("[data-qttekrar]").forEach((b) => (b.onclick = async () => {
+    if (!confirm(`"${b.dataset.qttekrar}" yeniden üretilsin mi? Mevcut ses kullanılır.`)) return;
+    b.disabled = true; try { await api("quiz_tekrar", { slug: b.dataset.qttekrar }); toast("Yeniden başlatıldı"); setTimeout(qTum, 4000); } catch (e) { toast("Başlatılamadı"); b.disabled = false; }
+  }));
+  qTumCalisan = calisan;
+  if (calisan && !document.hidden) qTumZaman = setTimeout(qTum, 20000);
+}
+function qTumIzle(url) {
+  const m = document.createElement("div"); m.className = "qt-modal";
+  m.innerHTML = `<div><video src="${esc(url)}" controls autoplay playsinline></video><button class="ghost" data-kapat>Kapat</button></div>`;
+  m.onclick = (e) => { if (e.target === m || e.target.dataset.kapat != null) m.remove(); }; document.body.append(m);
+}
+document.addEventListener("visibilitychange", () => { if (document.hidden) clearTimeout(qTumZaman); else if (qTumCalisan) qTum(); });
+
 async function qIsler(kok) {
   const L = JSON.parse(localStorage.getItem("quiz_isler") || "[]"), d = kok.querySelector("[data-qisler]"); if (!L.length) { d.innerHTML = ""; return; }
   d.innerHTML = `<h3 style="margin:14px 0 4px">Üretimler</h3>` + L.map((s) => `<div class="qs-is" data-qis="${esc(s)}"><span class="mut">⏳</span><b>${esc(s)}</b><span class="mut" data-qd>…</span></div>`).join("");

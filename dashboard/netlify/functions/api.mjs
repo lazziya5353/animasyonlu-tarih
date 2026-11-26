@@ -255,6 +255,60 @@ async function geminiOneri(liste) { // isteğe bağlı: GEMINI_API_KEY varsa tek
   return n;
 }
 
+// Tüm quizler: projects/ altındaki quiz klasörleri + release + son koşu (20 sn önbellek)
+const QUIZ_ON = ["her-harfe-", "harflerden-bul-", ...QFORMAT.map((k) => k + "-")];
+const QWF = { quiz: "quiz.yml", "harf-bul": "harf_bul.yml", "quiz-studyo": "quiz_studyo.yml" };
+const qWfKey = (fmt) => QSEMA[fmt]?.workflow || "quiz-studyo";
+const qFmtSlug = (slug) => slug.startsWith("her-harfe-") ? "her-harfe" : slug.startsWith("harflerden-bul-") ? "harf-bul" : QFORMAT.find((k) => slug.startsWith(k + "-")) || "";
+let qListeOnbellek = { t: 0, v: null };
+function qHataTr(l) {
+  if (/429|RESOURCE_EXHAUSTED|quota/i.test(l)) return "Gemini günlük ses hakkı doldu (11:00'de yenilenir)";
+  return l.replace(/cevap sizmasi[^"]*/gi, "soru okunurken cevap duyuldu").replace(/ses yok/gi, "sessiz parça").trim().slice(0, 160);
+}
+function qHataOzet(log) {
+  const sat = log.split("\n").map((x) => x.replace(/^\S+Z\s/, "").trim());
+  if (sat.some((x) => /429|RESOURCE_EXHAUSTED/.test(x))) return ["Gemini günlük ses hakkı doldu (11:00'de yenilenir)"];
+  const i = sat.findIndex((x) => /"hatalar"\s*:/.test(x));
+  if (i >= 0) { const h = []; for (let k = i + 1; k < sat.length && h.length < 3; k++) { if (/^\]/.test(sat[k])) break; const m = sat[k].match(/^"(.+)",?$/); if (m) h.push(qHataTr(m[1])); } if (h.length) return h; }
+  const e = sat.filter((x) => /HATA:|Error|error:/.test(x) && !/^##\[error\]Process completed/.test(x));
+  return [...new Set(e.slice(-3).map(qHataTr))];
+}
+async function quizListe() {
+  if (qListeOnbellek.v && Date.now() - qListeOnbellek.t < 20000) return qListeOnbellek.v;
+  const [dir, rels, ...runl] = await Promise.all([ghJson(`/repos/${REPO}/contents/projects`), ghJson(`/repos/${REPO}/releases?per_page=100`).catch(() => []),
+    ...Object.values(QWF).map((w) => ghJson(`/repos/${REPO}/actions/workflows/${w}/runs?per_page=60`).then((r) => r.workflow_runs || []).catch(() => []))]);
+  const runs = runl.flat();
+  const sluglar = dir.filter((d) => d.type === "dir" && QUIZ_ON.some((o) => d.name.startsWith(o))).map((d) => d.name);
+  const liste = await Promise.all(sluglar.map(async (slug) => {
+    const sc = (await readJson(`projects/${slug}/script.json`).catch(() => null)) || {};
+    const format = QTUM.includes(sc.format) ? sc.format : qFmtSlug(slug);
+    const soru = Array.isArray(sc.sorular) && sc.sorular.length ? sc.sorular.length : Math.max(0, (sc.sahneler || []).filter((x) => x.zorluk || /^[A-ZÇĞİÖŞÜ]$/.test(x.label || "")).length);
+    const R = rels.find((r) => r.tag_name === `video-${slug}`), a = (n) => R?.assets?.find((x) => x.name === n);
+    const run = runs.filter((r) => (r.display_title || "").endsWith(`· ${slug}`) || r.display_title === slug).sort((x, y) => new Date(y.created_at) - new Date(x.created_at))[0];
+    const o = { slug, format, format_ad: QSEMA[format]?.ad || format, baslik: sc.baslik || slug, soru, tema: sc.tema === "spor" || /-spor(-|$)/.test(slug) ? "spor" : "tarih",
+      workflow: qWfKey(format), release: !!R, mp4: a("video.mp4")?.browser_download_url || null, kapak: a("kapak.jpg")?.browser_download_url || null, zaman: R?.published_at || null, run: null };
+    if (run) {
+      o.run = { id: run.id, status: run.status, conclusion: run.conclusion, started: run.run_started_at || run.created_at, updated: run.updated_at, url: run.html_url };
+      const yeni = !R || new Date(run.created_at) > new Date(R.published_at);
+      if (yeni && (run.status !== "completed" || run.conclusion === "failure")) {
+        const jobs = (await ghJson(`/repos/${REPO}/actions/runs/${run.id}/jobs`).catch(() => ({}))).jobs || [], j = jobs[0];
+        if (j) {
+          const st = j.steps || [], cur = st.findIndex((x) => x.status === "in_progress");
+          o.run.adim = cur >= 0 ? st[cur].name : null; o.run.adim_no = cur >= 0 ? cur + 1 : st.filter((x) => x.status === "completed").length; o.run.adim_top = st.length;
+          if (run.conclusion === "failure") {
+            o.run.hata_adim = st.find((x) => x.conclusion === "failure")?.name || null;
+            const lg = await gh(`/repos/${REPO}/actions/jobs/${j.id}/logs`).catch(() => null);
+            o.run.hata = lg?.ok ? qHataOzet((await lg.text()).slice(-200000)) : [];
+          }
+        }
+      }
+    }
+    return o;
+  }));
+  const t = (x) => new Date(x.run?.updated || x.zaman || 0).getTime();
+  liste.sort((x, y) => t(y) - t(x));
+  qListeOnbellek = { t: Date.now(), v: liste }; return liste;
+}
 export default async (req) => {
   if (req.method !== "POST") return json({ hata: "POST gerekli" }, 405);
   let b = {};
@@ -581,6 +635,12 @@ export default async (req) => {
         const wf = /^her-harfe-/.test(b.slug) ? "quiz" : /^harflerden-bul/.test(b.slug) ? "harf-bul" : "quiz-studyo";
         await dispatch(wf, { slug: b.slug });
         return json({ ok: true, slug: b.slug });
+      }
+      case "quiz_liste": return json({ quizler: await quizListe() });
+      case "quiz_tekrar": { // hatalı quizi yeniden başlat (ses=1 yok: mevcut ses kullanılır)
+        if (!validSlug(b.slug) || !QUIZ_ON.some((o) => b.slug.startsWith(o))) return json({ hata: "Geçersiz proje" }, 400);
+        const sc = (await readJson(`projects/${b.slug}/script.json`)) || {}, fmt = QTUM.includes(sc.format) ? sc.format : qFmtSlug(b.slug);
+        await dispatch(qWfKey(fmt), { slug: b.slug }); qListeOnbellek.v = null; return json({ ok: true });
       }
       case "quiz_durum": { // release varsa video + kapak, yoksa son quiz_studyo koşusu
         if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);

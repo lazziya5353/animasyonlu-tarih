@@ -1,4 +1,5 @@
 name: "Harflerden Bul · Boşluk Doldurma Quizi"
+run-name: "Harflerden Bul · ${{ inputs.slug }}"
 # Hazirla (maske kontrolu) -> Ses (Gemini, ucretsiz) -> scripts/harf_bul.py video -> kapak -> scripts/harf_bul_kontrol.py -> release video-<slug>
 # Rehber: docs/HARF_BUL_REHBERI.md
 on:
