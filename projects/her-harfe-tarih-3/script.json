@@ -1,0 +1,564 @@
+{
+  "baslik": "Her Harfe Bir Tarih Sorusu 3",
+  "hook": "HER HARFE BİR TARİH SORUSU",
+  "map_region": "anadolu",
+  "sahneler": [
+    {
+      "lines": [
+        "Her harfe bir tarih sorusu! Bakalım bu sefer kaçını bileceksin?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "A harfi. Kanuni Sultan Süleyman'ın annesi kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Ayşe Hafsa Sultan."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "B harfi. Atatürk'ün 1919'da Samsun'a çıktığı vapurun adı nedir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Bandırma."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "C harfi. Padişahlar tahta çıkınca yeniçerilere dağıtılan bahşişin adı nedir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Cülus."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "D harfi. Atatürk'ün vefat ettiği İstanbul'daki saray hangisidir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Dolmabahçe."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "E harfi. İstanbul'dan önceki Osmanlı başkenti neresidir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Edirne."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "F harfi. Atatürk'ün Anıtkabir'de sergilenen köpeğinin adı nedir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Foks."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "G harfi. Atatürk'ün bizzat yazdığı matematik kitabının adı nedir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Geometri."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "H harfi. Fetihte gemilerin karadan yürütülerek indirildiği su yolu hangisidir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Haliç."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "İ harfi. Türkiye'nin ikinci cumhurbaşkanı kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "İsmet İnönü."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "K harfi. Kurtuluş Savaşı'nda Doğu Cephesi komutanı kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Kazım Karabekir."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "M harfi. Şehzade Mustafa'yı boğduğu rivayet edilen paşa kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Mahmut Paşa."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "N harfi. III. Selim'in kurduğu modern ordunun adı nedir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Nizam-ı Cedid."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "O harfi. Atatürk'ün 1925'te kurduğu çiftlik hangisidir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Orman Çiftliği."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "P harfi. 1513'te ünlü dünya haritasını çizen Osmanlı denizcisi kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Piri Reis."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "R harfi. Fatih'in Anadolu Hisarı'nın karşısına yaptırdığı hisar hangisidir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Rumeli Hisarı."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "S harfi. 1187'de Kudüs'ü Haçlılardan geri alan komutan kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Selahaddin Eyyubi."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Ş harfi. Osman Gazi'nin kayınpederi olan ünlü âlim kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Şeyh Edebali."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "T harfi. Divan-ı Hümayun'un toplandığı saray hangisidir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Topkapı."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "U harfi. Yerleşik hayata geçen ilk Türk devleti hangisidir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Uygurlar."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "V harfi. Osmanlı'nın son padişahı kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Vahdettin."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Y harfi. Kanuni Sultan Süleyman'ın süt kardeşi kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Yahya Efendi."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Z harfi. Fatih'in fetihteki ünlü veziri kimdir?"
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Zağanos Paşa."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    },
+    {
+      "lines": [
+        "Kaçını bildin? Yorumlara yaz. Kaçırmamak için animasyon tarih'i takip et."
+      ],
+      "big": "",
+      "sub": "",
+      "label": "QUIZ",
+      "fx": [],
+      "image": "images/bg.jpg",
+      "prompt": "quiz"
+    }
+  ],
+  "finale": "",
+  "maps": [],
+  "cards": [],
+  "eras": [
+    {
+      "name": "QUIZ",
+      "from": 0,
+      "to": 45
+    }
+  ],
+  "outro": {
+    "title": "KAÇINI BİLDİN?",
+    "line": "Yorumlara yaz"
+  },
+  "aciklama": "",
+  "kanca_alternatifleri": [],
+  "aciklama_alternatifleri": [],
+  "hashtagler": [],
+  "kaynaklar": [],
+  "kontrol_notlari": [],
+  "konu": "Harf quiz",
+  "tarih": "",
+  "slug": "her-harfe-tarih-3",
+  "durum": "onaylandi",
+  "sade": true,
+  "seslendirme_metni": "Her harfe bir tarih sorusu! Bakalım bu sefer kaçını bileceksin?\nA harfi. Kanuni Sultan Süleyman'ın annesi kimdir?\nAyşe Hafsa Sultan.\nB harfi. Atatürk'ün bin dokuz yüz on dokuzda Samsun'a çıktığı vapurun adı nedir?\nBandırma.\nC harfi. Padişahlar tahta çıkınca yeniçerilere dağıtılan bahşişin adı nedir?\nCülus.\nD harfi. Atatürk'ün vefat ettiği İstanbul'daki saray hangisidir?\nDolmabahçe.\nE harfi. İstanbul'dan önceki Osmanlı başkenti neresidir?\nEdirne.\nF harfi. Atatürk'ün Anıtkabir'de sergilenen köpeğinin adı nedir?\nFoks.\nG harfi. Atatürk'ün bizzat yazdığı matematik kitabının adı nedir?\nGeometri.\nH harfi. Fetihte gemilerin karadan yürütülerek indirildiği su yolu hangisidir?\nHaliç.\nİ harfi. Türkiye'nin ikinci cumhurbaşkanı kimdir?\nİsmet İnönü.\nK harfi. Kurtuluş Savaşı'nda Doğu Cephesi komutanı kimdir?\nKazım Karabekir.\nM harfi. Şehzade Mustafa'yı boğduğu rivayet edilen paşa kimdir?\nMahmut Paşa.\nN harfi. Üçüncü Selim'in kurduğu modern ordunun adı nedir?\nNizam-ı Cedid.\nO harfi. Atatürk'ün bin dokuz yüz yirmi beşte kurduğu çiftlik hangisidir?\nOrman Çiftliği.\nP harfi. bin beş yüz on üçte ünlü dünya haritasını çizen Osmanlı denizcisi kimdir?\nPiri Reis.\nR harfi. Fatih'in Anadolu Hisarı'nın karşısına yaptırdığı hisar hangisidir?\nRumeli Hisarı.\nS harfi. bin yüz seksen yedide Kudüs'ü Haçlılardan geri alan komutan kimdir?\nSelahaddin Eyyubi.\nŞ harfi. Osman Gazi'nin kayınpederi olan ünlü âlim kimdir?\nŞeyh Edebali.\nT harfi. Divan-ı Hümayun'un toplandığı saray hangisidir?\nTopkapı.\nU harfi. Yerleşik hayata geçen ilk Türk devleti hangisidir?\nUygurlar.\nV harfi. Osmanlı'nın son padişahı kimdir?\nVahdettin.\nY harfi. Kanuni Sultan Süleyman'ın süt kardeşi kimdir?\nYahya Efendi.\nZ harfi. Fatih'in fetihteki ünlü veziri kimdir?\nZağanos Paşa.\nKaçını bildin? Yorumlara yaz. Kaçırmamak için animasyon tarih'i takip et.",
+  "alt_bilgi": {
+    "A": "İlk Valide Sultan",
+    "B": "19 Mayıs 1919",
+    "C": "Tahta çıkış bahşişi",
+    "D": "10 Kasım 1938",
+    "E": "1363–1453",
+    "F": "Anıtkabir Müzesi",
+    "G": "1937",
+    "H": "1453",
+    "İ": "1938–1950",
+    "K": "Doğu Cephesi",
+    "M": "Zal Mahmut Paşa · 1553",
+    "N": "1793",
+    "O": "1925 Ankara",
+    "P": "1513",
+    "R": "1452",
+    "S": "1187",
+    "Ş": "Osmanlı'nın manevi kurucusu",
+    "T": "Osmanlı yönetim merkezi",
+    "U": "744–840",
+    "V": "1918–1922",
+    "Y": "Beşiktaşlı Yahya Efendi",
+    "Z": "1453"
+  },
+  "ses_stil": "Bir quiz sunucususun. İlk cümleyi neşeli ve enerjik söyle. Ardından soruları net, enerjik ve akıcı, normal konuşma hızında oku. Her soru ile cevabı arasında kısa bir duraklama bırak, cümle içinde uzun sessizlik bırakma. Metin:\n"
+}
