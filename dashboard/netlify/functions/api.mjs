@@ -286,7 +286,8 @@ async function quizListe() {
     const R = rels.find((r) => r.tag_name === `video-${slug}`), a = (n) => R?.assets?.find((x) => x.name === n);
     const run = runs.filter((r) => (r.display_title || "").endsWith(`· ${slug}`) || r.display_title === slug).sort((x, y) => new Date(y.created_at) - new Date(x.created_at))[0];
     const o = { slug, format, format_ad: QSEMA[format]?.ad || format, baslik: sc.baslik || slug, soru, tema: sc.tema === "spor" || /-spor(-|$)/.test(slug) ? "spor" : "tarih",
-      workflow: qWfKey(format), release: !!R, mp4: a("video.mp4")?.browser_download_url || null, kapak: a("kapak.jpg")?.browser_download_url || null, zaman: R?.published_at || null, run: null };
+      workflow: qWfKey(format), release: !!R, mp4: a("video.mp4")?.browser_download_url || null, kapak: a("kapak.jpg")?.browser_download_url || null, zaman: R?.published_at || null, run: null,
+      aciklama: sc.aciklama || "", hashtagler: sc.hashtagler || "", sabit_yorum: sc.sabit_yorum || "" };
     if (run) {
       o.run = { id: run.id, status: run.status, conclusion: run.conclusion, started: run.run_started_at || run.created_at, updated: run.updated_at, url: run.html_url };
       const yeni = !R || new Date(run.created_at) > new Date(R.published_at);
@@ -641,6 +642,19 @@ export default async (req) => {
         if (!validSlug(b.slug) || !QUIZ_ON.some((o) => b.slug.startsWith(o))) return json({ hata: "Geçersiz proje" }, 400);
         const sc = (await readJson(`projects/${b.slug}/script.json`)) || {}, fmt = QTUM.includes(sc.format) ? sc.format : qFmtSlug(b.slug);
         await dispatch(qWfKey(fmt), { slug: b.slug }); qListeOnbellek.v = null; return json({ ok: true });
+      }
+      case "quiz_aciklama_kaydet": { // video detay: Instagram açıklama / hashtag / sabit yorum
+        if (!validSlug(b.slug) || !QUIZ_ON.some((o) => b.slug.startsWith(o))) return json({ hata: "Geçersiz proje" }, 400);
+        const sc = (await readJson(`projects/${b.slug}/script.json`)) || {};
+        for (const k of ["aciklama", "hashtagler", "sabit_yorum"]) if (typeof b[k] === "string") sc[k] = b[k].slice(0, 2200);
+        await writeFile(`projects/${b.slug}/script.json`, Buffer.from(JSON.stringify(sc, null, 1)).toString("base64"), `Açıklama düzenlendi: ${b.slug}`);
+        qListeOnbellek.v = null; return json({ ok: true });
+      }
+      case "quiz_aciklama_gemini": {
+        const n = Math.max(1, Math.min(99, +b.soru || 10)), spor = b.tema === "spor";
+        try { const j = await gemini(`Türkçe bir Instagram ${spor ? "spor" : "tarih"} quiz Reels'i (${String(b.format_ad || "quiz").slice(0, 60)}, ${n} soru) için açıklama yaz. Ton: samimi, esprili, takipçiyle konuşur gibi; yapay zeka gibi durmasın; videonun içeriğini/sorularını ÖZETLEME. Kısa paragraflar, birkaç emoji, sonunda puanı yorumlara yazmaya çağır. Örnek stil: "Geçen quiz çok kolay dediniz, bu sefer zorlaştırdık 😏\n\n22 harf, 22 tarih sorusu. Bakalım bu sefer kaç tane bileceksin? 🤔\nVideoyu durdurmak yok, puanını yorumlara yaz 👇\n\n22'de 22 yapan gerçek tarih kurdu 🏆". Hashtag'leri açıklamaya koyma. Sadece JSON: {"aciklama":"...","hashtagler":"#.. #..","sabit_yorum":"..."}`);
+          return json({ ok: true, aciklama: String(j.aciklama || ""), hashtagler: String(j.hashtagler || ""), sabit_yorum: String(j.sabit_yorum || "") }); }
+        catch (e) { return json({ hata: String(e.message || e) }, 500); }
       }
       case "quiz_durum": { // release varsa video + kapak, yoksa son quiz_studyo koşusu
         if (!validSlug(b.slug)) return json({ hata: "Geçersiz proje" }, 400);

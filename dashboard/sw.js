@@ -1,4 +1,4 @@
-// panel sürümü: 2026-11-26a (tüm quizler listesi)
+// panel sürümü: 2026-11-26b (quiz video detay)
 self.addEventListener("install", (e) => self.skipWaiting());
 self.addEventListener("activate", (e) => self.clients.claim());
 self.addEventListener("fetch", () => {});

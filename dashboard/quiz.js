@@ -25,7 +25,11 @@ function quizSekmeHtml(tema) {
 const qcss = `.qt-kart{display:flex;gap:10px;padding:8px 0;border-top:1px solid #fff1}.qt-kart img,.qt-yok{width:64px;aspect-ratio:9/16;object-fit:cover;border-radius:8px;flex:none;background:#0004;display:grid;place-items:center}
 .qt-govde{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}.qt-govde b{font-size:14px;overflow-wrap:anywhere}.qt-roz{align-self:flex-start;color:#000;font-size:11px;font-weight:700;border-radius:99px;padding:2px 8px}
 .qt-bar{height:5px;background:#fff2;border-radius:3px;overflow:hidden}.qt-bar i{display:block;height:100%;background:var(--gold)}.qt-btn{display:flex;flex-wrap:wrap;gap:6px;margin-top:3px}.qt-btn .btn{text-decoration:none;font-size:13px;padding:6px 10px}
-.qt-modal{position:fixed;inset:0;background:#000c;z-index:999;display:grid;place-items:center;padding:12px}.qt-modal>div{display:flex;flex-direction:column;gap:8px;max-width:100%}.qt-modal video{max-height:82vh;max-width:100%;border-radius:10px}
+.qt-kart{cursor:pointer}.qt-modal{position:fixed;inset:0;background:#000d;z-index:999;overflow-y:auto;padding:12px;-webkit-overflow-scrolling:touch}.qt-modal>div{display:flex;flex-direction:column;gap:10px;max-width:520px;margin:0 auto}
+.qt-modal video{max-height:70vh;width:100%;border-radius:10px;background:#000}.qt-ust{display:flex;justify-content:space-between;align-items:center;gap:8px}.qt-ust b{overflow-wrap:anywhere}
+.qt-kutu{background:#0006;border:1px solid #fff2;border-radius:12px;padding:10px}.qt-kutu h4{margin:0 0 6px;font-size:13px;display:flex;justify-content:space-between;align-items:center;gap:6px}
+.qt-kutu textarea{width:100%;box-sizing:border-box;background:#0005;color:inherit;border:1px solid #fff3;border-radius:8px;padding:8px;font:inherit;font-size:14px;resize:vertical}.qt-kutu pre{white-space:pre-wrap;margin:0;font:inherit;font-size:14px;overflow-wrap:anywhere}
+.qt-kapak{display:flex;gap:10px;align-items:center}.qt-kapak img{width:72px;aspect-ratio:9/16;object-fit:cover;border-radius:8px}
 .qs-formatlar{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin:10px 0}
 .qs-f img{height:78px}@media(max-width:640px){.qs-f img{height:auto}}.qs-row.hata{border-color:var(--err);box-shadow:0 0 0 1px var(--err)}.qs-row input.hata{border-color:var(--err)}
 .qs-blok{border:1px dashed #fff3;border-radius:12px;padding:10px;margin:12px 0}.qs-blok h3{margin:0 0 6px;font-size:14px}.qs textarea{min-height:170px;resize:vertical}
@@ -230,12 +234,13 @@ async function qTum() {
       const ilerleme = d === "uret" && r.adim_top ? `<div class="qt-bar"><i style="width:${Math.round((100 * (r.adim_no || 0)) / r.adim_top)}%"></i></div><small class="mut">Adım ${r.adim_no || 0} / ${r.adim_top}</small>` : "";
       const alt = d === "hazir" ? `<div class="qt-btn"><button class="ghost" data-qtizle="${esc(q.mp4)}">▶ İzle</button><a class="ghost btn" href="${esc(q.mp4)}" download>⬇ İndir (video)</a>${q.kapak ? `<a class="ghost btn" href="${esc(q.kapak)}" download>⬇ Kapak</a>` : ""}</div>`
         : d === "hata" ? `<div class="qs-err">${esc(r.hata_adim ? r.hata_adim + ": " : "")}${(r.hata || []).map(esc).join(" · ") || "bilinmeyen hata"}</div><div class="qt-btn">${r.url ? `<a class="ghost btn" href="${esc(r.url)}" target="_blank" rel="noopener">GitHub'da aç</a>` : ""}<button class="ghost" data-qttekrar="${esc(q.slug)}">↻ Tekrar dene</button></div>` : "";
-      return `<div class="qt-kart">${q.kapak ? `<img loading="lazy" src="${esc(q.kapak)}" alt="">` : `<div class="qt-yok">🧩</div>`}<div class="qt-govde"><b>${esc(q.baslik)}</b>
+      return `<div class="qt-kart" data-qtslug="${esc(q.slug)}">${q.kapak ? `<img loading="lazy" src="${esc(q.kapak)}" alt="">` : `<div class="qt-yok">🧩</div>`}<div class="qt-govde"><b>${esc(q.baslik)}</b>
         <small class="mut">${esc(q.format_ad)}${q.soru ? ` · ${q.soru} soru` : ""} · ${qGecen(r.updated || q.zaman)}</small>
         <span class="qt-roz" style="background:${renk}">${ust}</span>${ilerleme}${alt}</div></div>`;
     }).join("") : `<div class="mut" style="font-size:12px">Henüz quiz yok</div>`);
   });
-  document.querySelectorAll("[data-qtizle]").forEach((b) => (b.onclick = () => qTumIzle(b.dataset.qtizle)));
+  qTumListe = L;
+  document.querySelectorAll("[data-qtslug]").forEach((k) => (k.onclick = (e) => { if (e.target.closest("a,button:not([data-qtizle])")) return; e.preventDefault(); const q = L.find((x) => x.slug === k.dataset.qtslug); if (q) qDetay(q); }));
   document.querySelectorAll("[data-qttekrar]").forEach((b) => (b.onclick = async () => {
     if (!confirm(`"${b.dataset.qttekrar}" yeniden üretilsin mi? Mevcut ses kullanılır.`)) return;
     b.disabled = true; try { await api("quiz_tekrar", { slug: b.dataset.qttekrar }); toast("Yeniden başlatıldı"); setTimeout(qTum, 4000); } catch (e) { toast("Başlatılamadı"); b.disabled = false; }
@@ -243,9 +248,43 @@ async function qTum() {
   qTumCalisan = calisan;
   if (calisan && !document.hidden) qTumZaman = setTimeout(qTum, 20000);
 }
-function qTumIzle(url) {
+let qTumListe = [];
+const QHT_TARIH = "#tarih #osmanlı #türktarihi #tarihsorusu #quiz #bilgiyarışması #osmanlıtarihi #atatürk #tarihbilgisi #animasyontarih #keşfet #reels";
+const QHT_SPOR = "#spor #futbol #sportarihi #sporquiz #quiz #bilgiyarışması #futbolbilgisi #galatasaray #fenerbahçe #beşiktaş #keşfet #reels";
+const QSABIT = "Kaçını bildin? 👇 Puanını yaz, en yüksek puanı sabitleyelim 🏆";
+function qVarsayilan(q) { // kural tabanlı, ücretsiz: slug numarasına göre şablon değişir
+  const n = q.soru || 10, spor = q.tema === "spor", konu = spor ? "spor" : "tarih", kurt = spor ? "gerçek spor kurdu" : "gerçek tarih kurdu";
+  const no = +((q.slug.match(/(\d+)(?!.*\d)/) || [0, 0])[1]) || 0, f = q.format_ad || "quiz";
+  const har = /harf/i.test(f + q.format), birim = har ? `${n} harf, ${n} ${konu} sorusu` : `${n} soru, ${f.toLowerCase()} usulü`;
+  const G = ["Geçen quiz çok kolay dediniz, bu sefer zorlaştırdık 😏", "Bu sefer kimse kolay demesin 😏", "Yorumlarda \"daha zor\" diyenler, bu sizin için 😎", "Hızlı olan kazanır, hazır mısın? ⏱️", "Bunu arkadaşına da at, bakalım kim daha çok biliyor 😏", "Söz veriyoruz, bu sefer biraz kafa yakacak 🤯"];
+  const O = [`Bakalım bu sefer kaç tane bileceksin? 🤔`, `Kaçta kaç yapacaksın, merak ediyoruz 🤔`, `İlk yarıyı herkes bilir, asıl iş sonda 👀`, `Dürüst ol, kopya yok 🤫`];
+  const S = ["Videoyu durdurmak yok, puanını yorumlara yaz 👇", "Durdurmadan oyna, skorunu yorumlara bırak 👇", "Puanını yorumlara yaz, en yükseği sabitliyoruz 👇"];
+  const K = [`${n}'de ${n} yapan ${kurt} 🏆`, `${n}/${n} yapan varsa efsanedir 🏆`, `Yarısını geçtiysen fena değil, ${n}'de ${n} ise saygılar 🫡`];
+  return { aciklama: `${G[no % G.length]}\n\n${birim}. ${O[no % O.length]}\n${S[no % S.length]}\n\n${K[no % K.length]}`, hashtagler: spor ? QHT_SPOR : QHT_TARIH, sabit_yorum: QSABIT };
+}
+async function qKopyala(t) { try { await navigator.clipboard.writeText(t); } catch { const a = document.createElement("textarea"); a.value = t; document.body.append(a); a.select(); document.execCommand("copy"); a.remove(); } toast("Kopyalandı ✓"); }
+function qDetay(q) {
+  const v = qVarsayilan(q), D = { aciklama: q.aciklama || v.aciklama, hashtagler: q.hashtagler || v.hashtagler, sabit_yorum: q.sabit_yorum || v.sabit_yorum };
+  const kutu = (k, b, sat) => `<div class="qt-kutu"><h4>${b}<button class="ghost" data-qkop="${k}">📋 Kopyala</button></h4><pre data-qgos="${k}"></pre><textarea data-qdz="${k}" rows="${sat}" hidden></textarea></div>`;
   const m = document.createElement("div"); m.className = "qt-modal";
-  m.innerHTML = `<div><video src="${esc(url)}" controls autoplay playsinline></video><button class="ghost" data-kapat>Kapat</button></div>`;
+  m.innerHTML = `<div><div class="qt-ust"><b>${esc(q.baslik)}</b><button class="ghost" data-kapat>✕ Kapat</button></div>
+    ${q.mp4 ? `<video src="${esc(q.mp4)}" controls autoplay playsinline ${q.kapak ? `poster="${esc(q.kapak)}"` : ""}></video>` : `<div class="mut">Video henüz hazır değil</div>`}
+    <div class="qt-kapak">${q.kapak ? `<img src="${esc(q.kapak)}" alt="Kapak">` : ""}<div class="qt-btn">${q.mp4 ? `<a class="ghost btn" href="${esc(q.mp4)}" download>⬇ Video</a>` : ""}${q.kapak ? `<a class="ghost btn" href="${esc(q.kapak)}" download>⬇ Kapak</a>` : ""}</div></div>
+    ${!q.aciklama ? `<small class="mut">Hazır şablon öneri gösteriliyor — düzenleyip kaydedebilirsin.</small>` : ""}
+    ${kutu("aciklama", "Açıklama", 9)}${kutu("hashtagler", "Hashtagler", 3)}${kutu("sabit_yorum", "Sabit yorum önerisi", 2)}
+    <div class="qs-err" data-qderr></div>
+    <div class="qt-btn"><button class="ghost" data-qduzenle>✏️ Düzenle</button><button data-qkaydet hidden>💾 Kaydet</button><button class="ghost" data-qgem>✨ Gemini ile yeni öneri</button></div></div>`;
+  const $ = (s) => m.querySelector(s), ciz = () => Object.keys(D).forEach((k) => { $(`[data-qgos=${k}]`).textContent = D[k]; $(`[data-qdz=${k}]`).value = D[k]; });
+  const duzen = (on) => { Object.keys(D).forEach((k) => { $(`[data-qgos=${k}]`).hidden = on; $(`[data-qdz=${k}]`).hidden = !on; }); $("[data-qkaydet]").hidden = !on; $("[data-qduzenle]").textContent = on ? "Vazgeç" : "✏️ Düzenle"; };
+  const oku = () => { if (!$("[data-qkaydet]").hidden) Object.keys(D).forEach((k) => (D[k] = $(`[data-qdz=${k}]`).value)); };
+  ciz();
+  m.querySelectorAll("[data-qkop]").forEach((b) => (b.onclick = () => { oku(); qKopyala(D[b.dataset.qkop]); }));
+  $("[data-qduzenle]").onclick = () => { const on = $("[data-qkaydet]").hidden; if (!on) ciz(); duzen(on); };
+  $("[data-qkaydet]").onclick = async (e) => { const b = e.target; oku(); b.disabled = true; $("[data-qderr]").textContent = "";
+    try { await api("quiz_aciklama_kaydet", { slug: q.slug, ...D }); Object.assign(q, D); ciz(); duzen(false); toast("Kaydedildi ✓"); } catch (er) { $("[data-qderr]").textContent = er.message || "Kaydedilemedi"; } b.disabled = false; };
+  $("[data-qgem]").onclick = async (e) => { const b = e.target; b.disabled = true; b.textContent = "Gemini yazıyor…"; $("[data-qderr]").textContent = "";
+    try { const r = await api("quiz_aciklama_gemini", { soru: q.soru, tema: q.tema, format_ad: q.format_ad }); ["aciklama", "hashtagler", "sabit_yorum"].forEach((k) => r[k] && (D[k] = r[k])); ciz(); duzen(true); toast("Öneri geldi — beğendiysen Kaydet"); }
+    catch (er) { $("[data-qderr]").textContent = "Gemini: " + (er.message || "hata"); } b.disabled = false; b.textContent = "✨ Gemini ile yeni öneri"; };
   m.onclick = (e) => { if (e.target === m || e.target.dataset.kapat != null) m.remove(); }; document.body.append(m);
 }
 document.addEventListener("visibilitychange", () => { if (document.hidden) clearTimeout(qTumZaman); else if (qTumCalisan) qTum(); });
