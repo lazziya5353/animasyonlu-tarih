@@ -1,0 +1,236 @@
+{
+ "kaynak": "edge-satir",
+ "ses": "tr-TR-AhmetNeural",
+ "segmentler": [
+  {
+   "satir": "Her harfe bir tarih sorusu! Hazır mısın?",
+   "bas": 0.0,
+   "bit": 2.45
+  },
+  {
+   "satir": "A harfi. 1969'da Ay'a ilk ayak basan astronot kimdir?",
+   "bas": 2.7,
+   "bit": 6.55
+  },
+  {
+   "satir": "Armstrong.",
+   "bas": 6.8,
+   "bit": 7.53
+  },
+  {
+   "satir": "B harfi. Asma Bahçeleri'yle ünlü antik uygarlık hangisidir?",
+   "bas": 7.78,
+   "bit": 11.32
+  },
+  {
+   "satir": "Babil.",
+   "bas": 11.57,
+   "bit": 12.09
+  },
+  {
+   "satir": "C harfi. En büyük kara imparatorluğunu kuran Moğol lider kimdir?",
+   "bas": 12.34,
+   "bit": 15.83
+  },
+  {
+   "satir": "Cengiz Han.",
+   "bas": 16.08,
+   "bit": 16.79
+  },
+  {
+   "satir": "Ç harfi. Kağıt, pusula ve barut hangi ülkede icat edildi?",
+   "bas": 17.04,
+   "bit": 20.49
+  },
+  {
+   "satir": "Çin.",
+   "bas": 20.74,
+   "bit": 21.05
+  },
+  {
+   "satir": "D harfi. Mona Lisa'yı yapan Rönesans dahisi kimdir?",
+   "bas": 21.3,
+   "bit": 24.46
+  },
+  {
+   "satir": "Da Vinci.",
+   "bas": 24.71,
+   "bit": 25.28
+  },
+  {
+   "satir": "E harfi. İzafiyet Teorisi'ni geliştiren fizikçi kimdir?",
+   "bas": 25.53,
+   "bit": 28.7
+  },
+  {
+   "satir": "Einstein.",
+   "bas": 28.95,
+   "bit": 29.63
+  },
+  {
+   "satir": "F harfi. Antik Mısır'ın tanrı-kralına ne denirdi?",
+   "bas": 29.88,
+   "bit": 32.71
+  },
+  {
+   "satir": "Firavun.",
+   "bas": 32.96,
+   "bit": 33.44
+  },
+  {
+   "satir": "G harfi. Hareketli harfli matbaayı geliştiren Alman kimdir?",
+   "bas": 33.69,
+   "bit": 37.17
+  },
+  {
+   "satir": "Gutenberg.",
+   "bas": 37.42,
+   "bit": 38.04
+  },
+  {
+   "satir": "H harfi. Antik Mısır'ın resimli yazısına ne denir?",
+   "bas": 38.29,
+   "bit": 41.15
+  },
+  {
+   "satir": "Hiyeroglif.",
+   "bas": 41.4,
+   "bit": 41.97
+  },
+  {
+   "satir": "İ harfi. Kolomb'un 1492 seferini hangi ülke destekledi?",
+   "bas": 42.22,
+   "bit": 46.08
+  },
+  {
+   "satir": "İspanya.",
+   "bas": 46.33,
+   "bit": 47.01
+  },
+  {
+   "satir": "K harfi. Antik Mısır'ın son kraliçesi kimdir?",
+   "bas": 47.26,
+   "bit": 50.12
+  },
+  {
+   "satir": "Kleopatra.",
+   "bas": 50.37,
+   "bit": 51.11
+  },
+  {
+   "satir": "L harfi. İlk madeni parayı basan Anadolu uygarlığı hangisidir?",
+   "bas": 51.36,
+   "bit": 54.94
+  },
+  {
+   "satir": "Lidya.",
+   "bas": 55.19,
+   "bit": 55.73
+  },
+  {
+   "satir": "M harfi. 1215'te İngiliz kralını sınırlayan belge hangisidir?",
+   "bas": 55.98,
+   "bit": 59.92
+  },
+  {
+   "satir": "Magna Carta.",
+   "bas": 60.17,
+   "bit": 61.1
+  },
+  {
+   "satir": "N harfi. Avrupa'nın çoğunu fetheden Fransız imparator kimdir?",
+   "bas": 61.35,
+   "bit": 64.87
+  },
+  {
+   "satir": "Napolyon.",
+   "bas": 65.12,
+   "bit": 65.76
+  },
+  {
+   "satir": "O harfi. Antik Yunan'da dört yılda bir yapılan oyunlar hangisidir?",
+   "bas": 66.01,
+   "bit": 69.53
+  },
+  {
+   "satir": "Olimpiyat.",
+   "bas": 69.78,
+   "bit": 70.45
+  },
+  {
+   "satir": "Ö harfi. Elementler'i yazan Yunanlı matematikçi kimdir?",
+   "bas": 70.7,
+   "bit": 73.8
+  },
+  {
+   "satir": "Öklid.",
+   "bas": 74.05,
+   "bit": 74.51
+  },
+  {
+   "satir": "R harfi. İtalya'da başlayan yeniden doğuş dönemi hangisidir?",
+   "bas": 74.76,
+   "bit": 78.28
+  },
+  {
+   "satir": "Rönesans.",
+   "bas": 78.53,
+   "bit": 79.28
+  },
+  {
+   "satir": "S harfi. Çivi yazısını bulan uygarlık hangisidir?",
+   "bas": 79.53,
+   "bit": 82.54
+  },
+  {
+   "satir": "Sümerler.",
+   "bas": 82.79,
+   "bit": 83.5
+  },
+  {
+   "satir": "T harfi. 1912'de buzdağına çarpıp batan gemi hangisidir?",
+   "bas": 83.75,
+   "bit": 87.56
+  },
+  {
+   "satir": "Titanik.",
+   "bas": 87.81,
+   "bit": 88.27
+  },
+  {
+   "satir": "Ü harfi. Dias'ın 1488'de dolaştığı Afrika burnu hangisidir?",
+   "bas": 88.52,
+   "bit": 92.83
+  },
+  {
+   "satir": "Ümit Burnu.",
+   "bas": 93.08,
+   "bit": 93.79
+  },
+  {
+   "satir": "V harfi. Avrupa kıyılarına akın eden İskandinav denizciler kimdir?",
+   "bas": 94.04,
+   "bit": 97.91
+  },
+  {
+   "satir": "Vikingler.",
+   "bas": 98.16,
+   "bit": 98.88
+  },
+  {
+   "satir": "Z harfi. Olimpos'un baş tanrısı kimdir?",
+   "bas": 99.13,
+   "bit": 101.7
+  },
+  {
+   "satir": "Zeus.",
+   "bas": 101.95,
+   "bit": 102.64
+  },
+  {
+   "satir": "Kaçını bildin? Yorumlara yaz!",
+   "bas": 102.89,
+   "bit": 104.67
+  }
+ ]
+}
