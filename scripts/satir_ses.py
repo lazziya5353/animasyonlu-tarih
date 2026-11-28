@@ -40,6 +40,18 @@ def kirp(a):
     if not len(v): return a
     return a[max(0, v[0]*240 - int(0.04*SR)):min(len(a), (v[-1]+1)*240 + int(0.08*SR))]
 
+def ic_durak(a, maks=0.3):
+    """satir ICI uzun duraklari (orn. 'N harfi.' sonrasi) 0.25 sn'ye indir; satirlar zaten ayri, bolme yapilmaz"""
+    f = np.sqrt((a[:len(a)//240*240].reshape(-1, 240)**2).mean(1)) < 10**(-42/20); out, j, son = [], 0, 0
+    while j < len(f):
+        if f[j]:
+            k = j
+            while k < len(f) and f[k]: k += 1
+            if (k - j)*0.01 > maks and j > 0 and k < len(f): out += [a[son:j*240 + 3000]]; son = k*240 - 3000
+            j = k
+        else: j += 1
+    return np.concatenate(out + [a[son:]])
+
 def main(slug):
     P = os.path.join(ROOT, "projects", slug); S = json.load(open(os.path.join(P, "script.json")))
     ses = S.get("ses") or os.environ.get("GEMINI_VOICE") or "Charon"
@@ -53,6 +65,7 @@ def main(slug):
         else:
             a = kirp(tts(satir, ses, stil)); yeni += 1
             subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "s16le", "-ar", str(SR), "-ac", "1", "-i", "-", yol], input=(np.clip(a, -1, 1)*32767).astype("<i2").tobytes(), check=True)
+        a = ic_durak(a)
         print(f"{i+1}/{len(S['sahneler'])} {len(a)/SR:.2f} sn · {satir[:60]}")
         seg.append({"satir": satir, "bas": round(t, 3), "bit": round(t + len(a)/SR, 3)})
         parcalar += [a, np.zeros(int(0.25*SR), np.float32)]; t += len(a)/SR + 0.25
