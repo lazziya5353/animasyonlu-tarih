@@ -17,4 +17,4 @@
 - Ş Şövalye · T Titanik: 15 Nisan 1912 battı.
 - Ü Ümit Burnu: Bartolomeu Dias 1488'de dolaştı (kullanıcı verisindeki 1497–98 Vasco da Gama'dır, düzeltildi).
 - V Vikingler: 8.–11. yy. · Y Yazı: tarih çağlarını başlatır. · Z Zeus.
-- U (Uygurlar) çıkarıldı: quiz 2 ve 3'te zaten soruldu, ayrıca süre.
+- Süre (≤177 sn) için çıkarılanlar: U Uygurlar (quiz 2 ve 3 tekrarı), P Piramit, I Irak, Ş Şövalye, F Firavun, Y Yazı, H Hiyeroglif, Ç Çin. 19 soru kaldı.

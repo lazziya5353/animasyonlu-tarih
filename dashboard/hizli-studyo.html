@@ -1210,7 +1210,7 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
     }
     async function extOnEnter() {
       const tgt = $('select-ext-target').value;
-      $('ext-hint').textContent = tgt === 'eleven' ? 'ElevenLabs: metni tek seferde yapıştır; satırlar arasına <break time="1.5s" /> eklendi.' : 'Clipchamp: her satır ayrı paragraf. Satırlar arasında ~1,5 sn duraklama bırak (gerekirse boşluk ekle).';
+      $('ext-hint').textContent = tgt === 'eleven' ? 'ElevenLabs: metni tek seferde yapıştır; satırlar arasına <break time="1.5s" /> eklendi.' : 'Clipchamp: düz metin, her satır ayrı satırda (break etiketi yok). Satırlar arasında ~1,5 sn duraklama bırak.';
       const e = state.ext; const key = await extProjectKey();
       if (e.mono && e.lines.length && e.cuts.length - 1 === extLines().length) { if (key !== e.key) { e.key = key; } extBuild(); return; }
       const saved = (await idbGet(key)) || null;
@@ -1251,9 +1251,11 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
     function extBindUI() {
       $('select-ext-target').addEventListener('change', extOnEnter);
       $('btn-ext-copy').addEventListener('click', () => {
-        const L = extLines().map(l => l.text); if (!L.length) { showToast('⚠️ Liste boş.', true); return; }
-        const txt = $('select-ext-target').value === 'eleven' ? L.join(' <break time="1.5s" /> ') : L.join('\n\n');
-        navigator.clipboard.writeText(txt).then(() => showToast(`📋 ${L.length} satır kopyalandı`)).catch(() => showToast('❌ Kopyalanamadı', true));
+        // Clipchamp SSML anlamaz: düz metin, her satır kendi satırında, hiçbir <break>/etiket yok
+        const L = extLines().map(l => String(l.text || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()).filter(Boolean); if (!L.length) { showToast('⚠️ Liste boş.', true); return; }
+        const tgt = $('select-ext-target').value;
+        const txt = tgt === 'eleven' ? L.join(' <break time="1.5s" /> ') : L.join('\n');
+        navigator.clipboard.writeText(txt).then(() => showToast(`📋 ${L.length} satır kopyalandı (${tgt === 'eleven' ? 'ElevenLabs, break etiketli' : 'Clipchamp, düz satırlar'})`)).catch(() => showToast('❌ Kopyalanamadı', true));
       });
       $('input-ext-audio').addEventListener('change', async ev => {
         const f = ev.target.files[0]; ev.target.value = ''; if (!f) return;
