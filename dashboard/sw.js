@@ -1,4 +1,4 @@
-// panel sürümü: 2026-11-28c (hızlı stüdyo tekrar soru düzeltmesi)
+// panel sürümü: 2026-11-28d (hızlı stüdyo: tek satır cevap, filigran başlık dışında, eşit harfler, okuma bitmeden geri sayım yok)
 self.addEventListener("install", (e) => self.skipWaiting());
 self.addEventListener("activate", (e) => self.clients.claim());
 self.addEventListener("fetch", () => {});

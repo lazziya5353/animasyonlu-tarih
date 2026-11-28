@@ -57,7 +57,8 @@
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+      line-height: 1; font-family: Inter, sans-serif; box-sizing: border-box;
       border: 1.5px solid rgba(217, 167, 92, 0.35);
       background: rgba(24, 18, 13, 0.85);
       color: #d6c3a5;
@@ -67,8 +68,8 @@
       background: radial-gradient(circle at 30% 30%, #fef08a, #f59e0b 75%, #b45309);
       color: #1c1105;
       border-color: #fef9c3;
-      transform: translate(-50%, -50%) scale(1.32);
-      box-shadow: 0 0 22px rgba(251, 191, 36, 0.85), 0 0 8px rgba(255, 255, 255, 0.7);
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 0 3px #ef4444, 0 0 22px rgba(251, 191, 36, 0.85), 0 0 8px rgba(255, 255, 255, 0.7);
       z-index: 20;
     }
     .letter-node.correct {
@@ -158,20 +159,20 @@
     body.recording-mode #recording-float-controls { display: flex !important; }
 
     /* Animasyonlar */
-    @keyframes nodePopIn { 0% { opacity: 0; transform: translate(-50%, -50%) scale(0.15); } 70% { opacity: 1; transform: translate(-50%, -50%) scale(1.18); } 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); } }
+    @keyframes nodePopIn { 0% { opacity: 0; } 100% { opacity: 1; } }
     @keyframes wheelSpinIn { 0% { opacity: 0; transform: rotate(-160deg) scale(0.55); } 75% { opacity: 1; transform: rotate(8deg) scale(1.03); } 100% { opacity: 1; transform: rotate(0deg) scale(1); } }
     @keyframes nodeGoldWave { 0%, 100% { border-color: rgba(217,167,92,0.35); } 50% { box-shadow: 0 0 16px rgba(251,191,36,0.55); border-color: rgba(253,224,71,0.85); } }
-    @keyframes activeBouncePulse { 0%, 100% { transform: translate(-50%, -50%) scale(1.32); } 50% { transform: translate(-50%, -50%) scale(1.48); } }
+    @keyframes activeBouncePulse { 0%, 100% { box-shadow: 0 0 0 3px #ef4444; } 50% { box-shadow: 0 0 0 6px #ef4444; } }
     @keyframes wordRiseIn { 0% { opacity: 0; transform: translateY(8px); } 100% { opacity: 1; transform: translateY(0); } }
     @keyframes textSlideUp { 0% { opacity: 0; transform: translateY(14px); } 100% { opacity: 1; transform: translateY(0); } }
     @keyframes slotFlipPop { 0% { opacity: 0; transform: scale(0.5); } 100% { opacity: 1; transform: scale(1); } }
     @keyframes outroPopIn { 0% { opacity: 0; transform: scale(0.88) translateY(16px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
     @keyframes watermarkRoam {
-      0%   { left: 10%; top: 14%; transform: translate(0, 0) rotate(-6deg); }
-      25%  { left: 86%; top: 28%; transform: translate(-100%, 0) rotate(5deg); }
-      50%  { left: 14%; top: 56%; transform: translate(0, -50%) rotate(-4deg); }
-      75%  { left: 86%; top: 76%; transform: translate(-100%, -50%) rotate(6deg); }
-      100% { left: 10%; top: 14%; transform: translate(0, 0) rotate(-6deg); }
+      0%   { left: 12%; top: 34%; transform: translate(0, 0) rotate(-6deg); }
+      25%  { left: 86%; top: 42%; transform: translate(-100%, 0) rotate(5deg); }
+      50%  { left: 14%; top: 58%; transform: translate(0, -50%) rotate(-4deg); }
+      75%  { left: 86%; top: 62%; transform: translate(-100%, -50%) rotate(6deg); }
+      100% { left: 12%; top: 34%; transform: translate(0, 0) rotate(-6deg); }
     }
     .anim-wheel-spin { animation: wheelSpinIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) both; }
     .anim-node-cascade { animation: nodePopIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both; animation-delay: calc(var(--node-idx, 0) * 28ms); }
@@ -191,10 +192,11 @@
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: #14110f; }
     ::-webkit-scrollbar-thumb { background: #3f3226; border-radius: 999px; }
-    .hub-answer { display:none; font-family:'Inter',sans-serif; font-weight:900; color:#34d399; line-height:1.02; text-transform:none; word-break:break-word; text-shadow:0 0 14px rgba(52,211,153,.45); }
+    .hub-answer { display:none; font-family:'Inter',sans-serif; font-weight:900; color:#34d399; line-height:1.02; text-transform:none; white-space:nowrap; word-break:keep-all; overflow-wrap:normal; text-shadow:0 0 14px rgba(52,211,153,.45); }
     .center-hub.hub-reveal .hub-answer { display:block; animation: hubPop .38s cubic-bezier(.2,1.6,.4,1) both; }
     .center-hub.hub-reveal #hub-timer, .center-hub.hub-reveal #hub-phase { display:none; }
     @keyframes hubPop { from { transform: scale(.4); opacity:0 } to { transform: scale(1); opacity:1 } }
+    .center-hub.hub-think #hub-timer { color:#e8c478; font-family:Cinzel,serif; }
     .center-hub.hub-think { animation: hubPulse 1s ease-in-out infinite; }
     @keyframes hubPulse { 0%,100% { transform: scale(1) } 50% { transform: scale(1.06) } }
     #q-note.note-big { font-size: 14px; padding: 4px 12px; }
@@ -398,8 +400,8 @@
           <input id="range-think" type="range" min="2" max="8" step="0.5" value="3" class="w-full accent-amber-400" />
         </div>
         <div class="flex flex-col gap-1">
-          <div class="flex justify-between"><span class="text-stone-400">Cevap</span><span id="val-reveal" class="text-amber-300 font-bold">1.6 sn</span></div>
-          <input id="range-reveal" type="range" min="0.8" max="4" step="0.2" value="1.6" class="w-full accent-amber-400" />
+          <div class="flex justify-between"><span class="text-stone-400">Cevap</span><span id="val-reveal" class="text-amber-300 font-bold">0.8 sn</span></div>
+          <input id="range-reveal" type="range" min="0.8" max="4" step="0.2" value="0.8" class="w-full accent-amber-400" />
         </div>
       </div>
 
@@ -1599,7 +1601,8 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
       if (!total) return;
       const radius = 120;
       const cx = 147, cy = 147;
-      const nodeSize = total > 22 ? 26 : (total > 15 ? 30 : 34);
+      const W0 = els.wheelNodes.clientWidth || 295; // gerçek kap genişliğine göre: tüm harfler eşit boyut
+      const nodeSize = Math.round(W0 * (total > 22 ? 0.088 : 0.1));
       const animOn = $('toggle-anim-mode').checked;
       const wheelAnim = $('select-wheel-anim').value;
 
@@ -1619,7 +1622,7 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
         node.style.top = `${(y / 295) * 100}%`;
         node.style.width = `${nodeSize}px`;
         node.style.height = `${nodeSize}px`;
-        node.style.fontSize = total > 22 ? '11px' : '13px';
+        node.style.fontSize = Math.round(nodeSize * 0.44) + 'px';
         node.style.setProperty('--node-idx', idx);
         node.textContent = q.letter;
         node.dataset.idx = idx;
@@ -1765,12 +1768,12 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
       return best.l;
     }
     function hubAnswerHtml(answer) {
-      const up = trUpper(answer); const one = up.length; const two = splitTwoLines(up); const twoMax = Math.max(...two.map(x => x.length));
-      const useTwo = one > 9 && two.length === 2;
-      const chars = useTwo ? twoMax : one;
-      const px = Math.max(9, Math.min(30, Math.floor(100 / (chars * 0.66))));
+      // tek satır, kelime asla bölünmez: göbeğe sığana kadar ölçerek küçült (ARMSTRONG, ÜMİT BURNU, MAGNA CARTA...)
+      const up = trUpper(answer); const maxW = (els.centerHub.clientWidth || 112) * 0.84;
+      const m = hubAnswerHtml.c || (hubAnswerHtml.c = document.createElement('canvas').getContext('2d'));
+      let px = 30; for (; px > 7; px--) { m.font = `900 ${px}px Inter, sans-serif`; if (m.measureText(up).width <= maxW) break; }
       els.hubAnswer.style.fontSize = px + 'px';
-      return (useTwo ? two : [up]).map(escapeHtml).join('<br>');
+      return escapeHtml(up);
     }
 
     function renderStageVisuals() {
@@ -1842,7 +1845,7 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
         els.centerHub.classList.toggle('hub-think', state.phase === 'thinking');
         if (state.phase === 'reading') {
           els.centerHub.classList.remove('hub-reveal');
-          els.hubTimer.textContent = Math.ceil(parseFloat($('range-think').value));
+          els.hubTimer.textContent = q.letter; // okuma bitmeden sayı gösterilmez (GitHub videosu gibi)
           els.hubPhase.textContent = 'Dinle...';
           els.cwTimerPill.textContent = `${q.letter} HARFİ • Dinle...`;
           renderQuestionTextAnimated(q.question, false);
@@ -2096,7 +2099,7 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
         // 3) cevap açılır  4) bekleme
         state.phase = 'reveal'; state.revealT0 = now();
         state.solvedIndices.add(i); renderStageVisuals(); playChimeSfx();
-        if (voiced() && $('toggle-speak-answer').checked) { await sleep(250); await speakSegmentLive(answerSpeechText(q), token); }
+        if (voiced() && $('toggle-speak-answer').checked) { await sleep(150); await speakSegmentLive(answerSpeechText(q), token); }
         await sleep(timings.revealSec * 1000);
       }
       if (token !== state.runToken) return;
@@ -2155,13 +2158,9 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
     const easeBack = x => { x = clamp01(x); const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
     function fitAnswer(ctx, text, maxW, maxH) {
       const up = trUpper(text);
-      for (let sz = 80; sz >= 20; sz -= 2) {
-        ctx.font = `900 ${sz}px Inter, sans-serif`;
-        if (ctx.measureText(up).width <= maxW && sz <= maxH) return { size: sz, lines: [up] };
-        const two = splitTwoLines(up);
-        if (two.length === 2 && two.every(l => ctx.measureText(l).width <= maxW) && sz * 2.1 <= maxH) return { size: sz, lines: two };
-      }
-      return { size: 20, lines: splitTwoLines(up).slice(0, 2) };
+      // tek satır, kelime bölünmez; sığana kadar küçülür (GitHub renderer ile aynı kural)
+      for (let sz = 80; sz > 14; sz -= 2) { ctx.font = `900 ${sz}px Inter, sans-serif`; if (ctx.measureText(up).width <= maxW && sz <= maxH) return { size: sz, lines: [up] }; }
+      return { size: 14, lines: [up] };
     }
     // Soru metni animasyonları (zamana bağlı: t = sorunun başlangıcından beri geçen sn)
     function drawAnimatedText(ctx, text, cx, startY, lineH, maxW, t, mode) {
@@ -2233,12 +2232,12 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
       if ($('toggle-roaming-wm').checked) {
         const t = (frameState.timeSec || 0) * 0.25;
         const wx = W * (0.2 + 0.6 * (0.5 + 0.5 * Math.sin(t)));
-        const wy = H * (0.18 + 0.62 * (0.5 + 0.5 * Math.cos(t * 0.7)));
+        const wy = H * (0.30 + 0.32 * (0.5 + 0.5 * Math.cos(t * 0.7))); // başlık (üst %20) ve soru kartı dışında
         ctx.save();
         ctx.translate(wx, wy);
         ctx.rotate(Math.sin(t) * 0.08);
         ctx.font = '800 32px Inter, sans-serif';
-        ctx.fillStyle = 'rgba(246, 224, 181, 0.24)';
+        ctx.fillStyle = 'rgba(246, 224, 181, 0.17)';
         ctx.textAlign = 'center';
         ctx.fillText(wm, 0, 0);
         ctx.restore();
@@ -2320,9 +2319,9 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
           } else {
             ctx.font = '800 26px Inter, sans-serif'; ctx.fillStyle = gold;
             ctx.fillText(`${q.letter} HARFİ`, cx, cy - 52);
-            ctx.font = '800 84px "JetBrains Mono", monospace';
-            ctx.fillStyle = ph === 'reading' ? 'rgba(254,240,138,0.45)' : '#fef08a';
-            ctx.fillText(String(frameState.timerVal), cx, cy + 32);
+            ctx.font = ph === 'reading' ? '800 84px Cinzel, serif' : '800 96px Cinzel, serif';
+            ctx.fillStyle = ph === 'reading' ? 'rgba(254,240,138,0.35)' : '#e8c478';
+            ctx.fillText(ph === 'reading' ? q.letter : String(frameState.timerVal), cx, cy + 34); // okurken harf, düşünürken 3-2-1
             ctx.font = '600 24px Inter, sans-serif'; ctx.fillStyle = '#d6d3d1';
             ctx.fillText(ph === 'reading' ? 'Dinle...' : 'Düşün...', cx, cy + 78);
           }
@@ -2338,16 +2337,17 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
           const isSolved = frameState.solvedSet.has(idx);
 
           ctx.beginPath();
-          ctx.arc(nx, ny, isActive ? nodeR * 1.24 : nodeR, 0, Math.PI * 2);
-          ctx.fillStyle = isActive ? '#f59e0b' : (isSolved ? '#10b981' : '#18120d');
+          ctx.arc(nx, ny, nodeR, 0, Math.PI * 2);
+          ctx.fillStyle = isSolved ? '#10b981' : (isActive ? '#f59e0b' : '#18120d');
           ctx.fill();
           ctx.lineWidth = isActive ? 5 : 3;
           ctx.strokeStyle = isActive ? '#fef9c3' : (isSolved ? '#a7f3d0' : 'rgba(217,167,92,0.45)');
           ctx.stroke();
 
-          ctx.font = `800 ${isActive ? 34 : 28}px Inter, sans-serif`;
+          ctx.font = '800 28px Inter, sans-serif';
           ctx.fillStyle = isActive || isSolved ? '#09090b' : '#e7d7be';
           ctx.fillText(q.letter, nx, ny + 10);
+          if (isActive) { ctx.beginPath(); ctx.arc(nx, ny, nodeR + 9, 0, Math.PI * 2); ctx.strokeStyle = '#ef4444'; ctx.lineWidth = 5; ctx.stroke(); }
         });
       } else {
         // Çengel Bulmaca Canvas Çizimi
@@ -3073,7 +3073,7 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
       });
       $('btn-normal-tempo').addEventListener('click', () => {
         $('range-think').value = 3; $('val-think').textContent = '3 sn';
-        $('range-reveal').value = 1.6; $('val-reveal').textContent = '1.6 sn';
+        $('range-reveal').value = 0.8; $('val-reveal').textContent = '0.8 sn'; // GitHub videosu: cevap ~1,6 sn görünür (ses + 0,8)
         updateEstimatedDuration();
       });
 
