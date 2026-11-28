@@ -2447,12 +2447,14 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
 
         // 4) MP4 (mp4-muxer + WebCodecs)
         const W = 1080, H = 1920, FPS = 30;
-        const muxer = new Mp4Muxer.Muxer({ target: new Mp4Muxer.ArrayBufferTarget(), video: { codec: 'avc', width: W, height: H }, audio: { codec: 'aac', numberOfChannels: 2, sampleRate }, fastStart: 'in-memory' });
+        const aacOk = (await AudioEncoder.isConfigSupported({ codec: 'mp4a.40.2', numberOfChannels: 2, sampleRate, bitrate: 128_000 }).catch(() => ({}))).supported;
+        if (!aacOk) showToast('ℹ️ Bu tarayıcı AAC kodlamıyor; ses Opus olarak yazılıyor (Chrome masaüstünde AAC olur).');
+        const muxer = new Mp4Muxer.Muxer({ target: new Mp4Muxer.ArrayBufferTarget(), video: { codec: 'avc', width: W, height: H }, audio: { codec: aacOk ? 'aac' : 'opus', numberOfChannels: 2, sampleRate }, fastStart: 'in-memory' });
         let encErr = null;
         const videoEncoder = new VideoEncoder({ output: (chunk, meta) => muxer.addVideoChunk(chunk, meta), error: e => { encErr = e; console.error(e); } });
         videoEncoder.configure({ codec: 'avc1.4d002a', width: W, height: H, bitrate: 5_500_000, framerate: FPS });
         const audioEncoder = new AudioEncoder({ output: (chunk, meta) => muxer.addAudioChunk(chunk, meta), error: e => { encErr = e; console.error(e); } });
-        audioEncoder.configure({ codec: 'mp4a.40.2', numberOfChannels: 2, sampleRate, bitrate: 128_000 });
+        audioEncoder.configure({ codec: aacOk ? 'mp4a.40.2' : 'opus', numberOfChannels: 2, sampleRate, bitrate: 128_000 });
         const ch0 = renderedAudio.getChannelData(0), ch1 = renderedAudio.getChannelData(1);
         for (let offset = 0; offset < renderedAudio.length; offset += 1024) {
           const count = Math.min(1024, renderedAudio.length - offset);
