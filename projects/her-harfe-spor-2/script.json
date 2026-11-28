@@ -1,0 +1,593 @@
+{
+ "baslik": "Her Harfe Bir Spor Sorusu 2",
+ "hook": "HER HARFE BİR SPOR SORUSU",
+ "map_region": "anadolu",
+ "finale": "",
+ "maps": [],
+ "cards": [],
+ "eras": [
+  {
+   "name": "QUIZ",
+   "from": 0,
+   "to": 45
+  }
+ ],
+ "outro": {
+  "title": "KAÇINI BİLDİN?",
+  "line": "Yorumlara yaz"
+ },
+ "aciklama": "",
+ "kanca_alternatifleri": [],
+ "aciklama_alternatifleri": [],
+ "hashtagler": [],
+ "kaynaklar": [],
+ "kontrol_notlari": [],
+ "konu": "Spor harf quiz",
+ "tarih": "",
+ "slug": "her-harfe-spor-2",
+ "durum": "onaylandi",
+ "sade": true,
+ "seslendirme_metni": "Her harfe bir spor sorusu! Hazır mısın?\nA harfi. iki bin beş Şampiyonlar Ligi finali hangi stadyumda oynandı?\nAtatürk Olimpiyat.\nB harfi. iki bin onda Süper Lig'i kazanan Anadolu kulübü hangisi?\nBursaspor.\nC harfi. iki bin UEFA Kupası finalinde penaltılarda devleşen kalecimiz kim?\nClaudio Taffarel.\nD harfi. Galatasaray'da topuk golüyle hafızalara kazınan Fildişili kim?\nDidier Drogba.\nF harfi. Galatasaray'a UEFA Kupası'nı kazandıran hoca kim?\nFatih Terim.\nG harfi. Avrupa'da kupa kazanan ilk ve tek Türk futbol kulübü hangisi?\nGalatasaray.\nH harfi. Süper Lig tarihinin en golcü futbolcusu kim?\nHakan Şükür.\nİ harfi. iki bin ikide Senegal'e altın golü atan futbolcumuz kim?\nİlhan Mansız.\nJ harfi. Fenerbahçe'ye iki bin yirmi üçte Türkiye Kupası'nı kazandıran Portekizli hoca kim?\nJorge Jesus.\nK harfi. bin dokuz yüz doksan yedi ve iki bin ikide Türkiye Kupası'nı alan Körfez ekibi hangisi?\nKocaelispor.\nL harfi. Fenerbahçe'nin Ordinaryüs lakaplı efsanesi kim?\nLefter.\nM harfi. Galatasaray'ın Taçsız Kral lakaplı golcüsü kim?\nMetin Oktay.\nN harfi. EURO iki bin sekizde Çekya'ya son dakikalarda iki gol atan kim?\nNihat Kahveci.\nO harfi. Başakşehir'i ilk kez şampiyon yapan hoca kim?\nOkan Buruk.\nR harfi. yüz yirmi maçla uzun yıllar milli forma rekorunu tutan kalecimiz kim?\nRüştü Reçber.\nS harfi. Beşiktaş'ta hem oyuncu hem hoca olarak şampiyon olan kim?\nSergen Yalçın.\nŞ harfi. iki bin ikide Türkiye'yi dünya üçüncüsü yapan hoca kim?\nŞenol Güneş.\nT harfi. İstanbul dışından çıkan ilk Süper Lig şampiyonu hangisi?\nTrabzonspor.\nU harfi. EURO iki bin sekiz yarı finalinde Almanya'ya ilk golümüzü atan kim?\nUğur Boral.\nÜ harfi. iki bin ikide mohikan saçıyla ikonikleşen sağ bekimiz kim?\nÜmit Davala.\nV harfi. Yıllarca Fenerbahçe ve milli takım kalesini koruyan kim?\nVolkan Demirel.\nY harfi. Trabzonspor altyapısından çıkıp Lille'le Fransa şampiyonu olan kim?\nYusuf Yazıcı.\nZ harfi. İlk resmi milli maçımızda ilk golümüzü atan efsane kim?\nZeki Rıza Sporel.\nKaçını bildin? Yorumlara yaz, animasyon spor'u takip et.",
+ "alt_bilgi": {
+  "A": "Atatürk Olimpiyat Stadyumu · İstanbul",
+  "B": "2009-10 Süper Lig şampiyonu",
+  "C": "Brezilyalı kaleci · Arsenal finali, 2000",
+  "D": "Akhisar maçı · Şubat 2013",
+  "F": "UEFA Kupası · 17 Mayıs 2000",
+  "G": "UEFA Kupası ve Süper Kupa · 2000",
+  "H": "249 Süper Lig golü",
+  "İ": "Çeyrek final · Senegal 1-0",
+  "J": "Final · Başakşehir 2-0",
+  "K": "İki Türkiye Kupası · 1997, 2002",
+  "L": "Lefter Küçükandonyadis",
+  "M": "Galatasaray · 1950-60'lar",
+  "N": "Çekya 2-3 Türkiye · 2008",
+  "O": "2019-20 sezonu",
+  "R": "120 A Milli maç",
+  "S": "Hoca olarak şampiyon · 2020-21",
+  "Ş": "2002 Dünya Kupası",
+  "T": "1975-76 şampiyonu",
+  "U": "Yarı final · Almanya 3-2",
+  "Ü": "2002 Dünya Kupası",
+  "V": "Fenerbahçe · A Milli Takım",
+  "Y": "Lille · 2020-21 şampiyonu",
+  "Z": "Romanya 2-2 · 26 Ekim 1923"
+ },
+ "ses_stil": "Bir quiz sunucususun. İlk cümleyi neşeli ve enerjik söyle. Ardından soruları net, enerjik ve akıcı, normal konuşma hızında oku. Her soru ile cevabı arasında kısa bir duraklama bırak, cümle içinde uzun sessizlik bırakma. Metin:\n",
+ "tema": "spor",
+ "geri_sayim": false,
+ "dusunme": 3.0,
+ "bekleme": 0.5,
+ "zor_ek": 0,
+ "dusunme_sabit": true,
+ "sahneler": [
+  {
+   "lines": [
+    "Her harfe bir spor sorusu! Hazır mısın?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "A harfi. 2005 Şampiyonlar Ligi finali hangi stadyumda oynandı?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Atatürk Olimpiyat."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "B harfi. 2010'da Süper Lig'i kazanan Anadolu kulübü hangisi?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Bursaspor."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "C harfi. 2000 UEFA Kupası finalinde penaltılarda devleşen kalecimiz kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Claudio Taffarel."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "D harfi. Galatasaray'da topuk golüyle hafızalara kazınan Fildişili kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Didier Drogba."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "F harfi. Galatasaray'a UEFA Kupası'nı kazandıran hoca kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Fatih Terim."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "G harfi. Avrupa'da kupa kazanan ilk ve tek Türk futbol kulübü hangisi?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Galatasaray."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "H harfi. Süper Lig tarihinin en golcü futbolcusu kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Hakan Şükür."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "İ harfi. 2002'de Senegal'e altın golü atan futbolcumuz kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "İlhan Mansız."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "J harfi. Fenerbahçe'ye 2023'te Türkiye Kupası'nı kazandıran Portekizli hoca kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Jorge Jesus."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "K harfi. 1997 ve 2002'de Türkiye Kupası'nı alan Körfez ekibi hangisi?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Kocaelispor."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "L harfi. Fenerbahçe'nin Ordinaryüs lakaplı efsanesi kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Lefter."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "M harfi. Galatasaray'ın Taçsız Kral lakaplı golcüsü kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Metin Oktay."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "N harfi. EURO 2008'de Çekya'ya son dakikalarda iki gol atan kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Nihat Kahveci."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "O harfi. Başakşehir'i ilk kez şampiyon yapan hoca kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Okan Buruk."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "R harfi. 120 maçla uzun yıllar milli forma rekorunu tutan kalecimiz kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Rüştü Reçber."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "S harfi. Beşiktaş'ta hem oyuncu hem hoca olarak şampiyon olan kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Sergen Yalçın."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Ş harfi. 2002'de Türkiye'yi dünya üçüncüsü yapan hoca kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Şenol Güneş."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "T harfi. İstanbul dışından çıkan ilk Süper Lig şampiyonu hangisi?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Trabzonspor."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "U harfi. EURO 2008 yarı finalinde Almanya'ya ilk golümüzü atan kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Uğur Boral."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Ü harfi. 2002'de mohikan saçıyla ikonikleşen sağ bekimiz kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Ümit Davala."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "V harfi. Yıllarca Fenerbahçe ve milli takım kalesini koruyan kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Volkan Demirel."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Y harfi. Trabzonspor altyapısından çıkıp Lille'le Fransa şampiyonu olan kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Yusuf Yazıcı."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Z harfi. İlk resmi milli maçımızda ilk golümüzü atan efsane kim?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Zeki Rıza Sporel."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Kaçını bildin? Yorumlara yaz, animasyon spor'u takip et."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  }
+ ]
+}

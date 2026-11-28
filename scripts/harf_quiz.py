@@ -13,6 +13,13 @@ W, H, FPS = 1080, 1920, 30
 GOLD = (232, 196, 120); WHITE = (255, 255, 255); BG = (14, 10, 7)
 F = lambda n, s: ImageFont.truetype(R + n + ".ttf", s)
 CX, CY, RAD, RR = 540, 1060, 440, 36
+# temalar: script.json "tema" (tarih = altin, varsayilan; spor = panelin yesili). Renk/baslik/filigran buradan gelir.
+TEMALAR = {"tarih": dict(vurgu=(232, 196, 120), baslik="TARİH SORUSU", hesap="@animasyon.tarih", isik=(70, 45, 22), kapak_isik=(150, 110, 60), zemin=(14, 10, 7)),
+           "spor": dict(vurgu=(94, 224, 181), baslik="SPOR SORUSU", hesap="@animasyon.spor", isik=(16, 64, 46), kapak_isik=(40, 130, 95), zemin=(6, 14, 11))}
+TEMA = TEMALAR["tarih"]
+def tema_uygula(ad):
+    global GOLD, TEMA
+    TEMA = TEMALAR.get(ad or "tarih", TEMALAR["tarih"]); GOLD = TEMA["vurgu"]
 
 def arkaplan_hazirla(yol):
     """Tematik arka plan (quiz 3+): kapla-kirp, hafif bulanik, %38 parlaklik. Metin okunur kalsin diye karartilir."""
@@ -29,10 +36,10 @@ def arkaplan_kare(src, t, dur, kb):
 def base(bg=None):
     if bg is not None: im = bg.copy()
     else:
-        im = Image.new("RGB", (W, H), BG)
+        im = Image.new("RGB", (W, H), TEMA["zemin"])
         g = Image.new("L", (W, H), 0); ImageDraw.Draw(g).ellipse((CX-620, CY-620, CX+620, CY+620), fill=255)
         g = g.filter(ImageFilter.GaussianBlur(260))
-        im = Image.composite(Image.new("RGB", (W, H), (70, 45, 22)), im, g)
+        im = Image.composite(Image.new("RGB", (W, H), TEMA["isik"]), im, g)
     d = ImageDraw.Draw(im)
     def ct(y, t, f, c, sp=0):
         if sp:
@@ -40,9 +47,9 @@ def base(bg=None):
             for ch, w in zip(t, ws): d.text((x, y), ch, font=f, fill=c, anchor="ls"); x += w + sp
         else: d.text((CX, y), t, font=f, fill=c, anchor="ms")
     ct(235, "HER HARFE BİR", F("Montserrat-900", 44), WHITE, 9)
-    ct(340, "TARİH SORUSU", F("Cinzel-700", 92), GOLD)
+    ct(340, TEMA["baslik"], F("Cinzel-700", 92), GOLD)
     ct(408, "kaçını bileceksin?", F("Montserrat-700", 38), (225, 210, 190))
-    d.text((CX, 1820), "@animasyon.tarih", font=F("Montserrat-700", 34), fill=WHITE, anchor="ms")
+    d.text((CX, 1820), TEMA["hesap"], font=F("Montserrat-700", 34), fill=WHITE, anchor="ms")
     return im
 
 def pos(i, n):
@@ -109,12 +116,10 @@ def center(im, k, n, q, ans, hint, a_alpha, a_scale):
     if ans and a_alpha > 0:
         lay = Image.new("RGBA", (W, 620), (0, 0, 0, 0)); ld = ImageDraw.Draw(lay)
         top = max(y + 20, 1060 - 10) if len(q or "") else 1000
-        f, ls = fitlines(ld, ans, "Cinzel-700", 84, MW, 2, 48)
-        yy = 10; lb = []
-        while True:  # cevap satirlari halkanin kirisine sigana kadar kucult
-            h = int(f.size*1.18)
-            if all(ld.textlength(l, font=f) <= safe_w(top + yy + i*h, top + yy + i*h + f.size) for i, l in enumerate(ls)) or f.size <= 40: break
-            f, ls = fitlines(ld, ans, "Cinzel-700", f.size - 4, MW, 2, f.size - 4)
+        yy = 10; lb = []; ls = [ans]   # cevap TEK satir: kelime bolunmez, halkanin kirisine sigana kadar kuculur
+        for sz in range(84, 25, -2):
+            f = F("Cinzel-700", sz)
+            if ld.textlength(ans, font=f) <= safe_w(top + yy, top + yy + sz): break
         for l in ls: ld.text((CX, yy), l, font=f, fill=GOLD + (255,), anchor="mt"); lb.append(ld.textbbox((CX, yy), l, font=f, anchor="mt")); yy += int(f.size*1.18)
         if hint:
             ht = f"•  {hint}  •"; yy += 18
@@ -149,6 +154,7 @@ def main():
     a = ap.parse_args()
     import numpy as np
     SJ = json.load(open(a.script)); S = [" ".join(x["lines"]) for x in SJ["sahneler"]]
+    tema_uygula(SJ.get("tema"))
     n = (len(S) - 2)//2; Q = []
     for k in range(n):
         q = S[1+2*k]; L, rest = q.split(" harfi.", 1)
@@ -194,16 +200,7 @@ def main():
             if len(sg) < 480: sg = np.zeros(int(0.3*SR), np.float32)
             f = min(240, len(sg)//2); r = np.linspace(0, 1, f, dtype=np.float32); sg[:f] *= r; sg[len(sg)-f:] *= r[::-1]
             segs.append(sg)
-        # sure siniri 177 sn (2:57): once bekleme, sonra ZOR ek suresi, sonra dusunme suresi (en az 2 sn) kisalir
-        konusma = sum(len(x) for x in segs)/SR; zb = float(SJ.get("zor_ek", 1.0))
-        top = lambda: konusma + 0.2 + n*(a.pause + a.hold + 0.25) + len(ZOR)*zb + 1.0
-        while top() > 177 and a.hold > 0.3: a.hold = round(max(0.3, a.hold - 0.05), 3)
-        if top() > 177: zb = 0.0
-        while top() > 177 and a.pause > 2.0: a.pause = round(max(2.0, a.pause - 0.05), 3)
-        if top() > 177: sys.exit(f"HATA: Video {top():.1f} sn olur, sınır 177 sn (2:57). Düşünme 2 sn'ye, bekleme 0.3 sn'ye indirildi yine de sığmıyor; soru sayısını azalt ya da soruları kısalt.")
-        print(f"zaman cizelgesi: konusma {konusma:.1f} sn, dusunme {a.pause} sn, bekleme {a.hold} sn, toplam {top():.1f} sn")
     else:
-        zb = float(SJ.get("zor_ek", 1.0))
         fr = np.sqrt((au[:len(au)//480*480].reshape(-1, 480)**2).mean(1)); q = fr < 10**(-42/20); sil = []; j = 0
         while j < len(q):  # kendi enerji tabanli sessizlik tespiti (10 ms kare, -42 dB, >=80 ms)
             if q[j]:
@@ -269,6 +266,25 @@ def main():
                 c0 = int((g[0] - s0 + 0.125)*SR); c1 = int((g[1] - s0 - 0.125)*SR); sg = np.concatenate([sg[:c0], sg[c1:]])
             f = min(240, len(sg)//2); r = np.linspace(0, 1, f, dtype=np.float32); sg[:f] *= r; sg[len(sg)-f:] *= r[::-1]
             segs.append(sg)
+    # sure siniri 177 sn (2:57): once bekleme, sonra ZOR ek suresi, sonra dusunme suresi (en az 2 sn) kisalir
+    konusma = sum(len(x) for x in segs)/SR; zb = float(SJ.get("zor_ek", 1.0))
+    top = lambda: konusma + 0.2 + n*(a.pause + a.hold + 0.25) + len(ZOR)*zb + 1.0
+    if SJ.get("dusunme_sabit") and top() > 177:
+        # dusunme suresi ASLA kisalmaz (kural 16): once ses hizlanir (toplam tempo en cok 1.35), sonra bekleme en az 0.3
+        sabit = top() - konusma; ek = min(konusma/max(1, 177 - sabit), 1.35/a.tempo)
+        def hizla(x):
+            o = subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-", "-af", f"atempo={ek:.4f}", "-f", "f32le", "-"],
+                               input=x.astype(np.float32).tobytes(), capture_output=True, check=True).stdout
+            return np.frombuffer(o, np.float32).copy()
+        segs = [hizla(x) for x in segs]; konusma = sum(len(x) for x in segs)/SR
+        print(f"sure siniri: ses x{ek:.3f} hizlandi (toplam tempo {a.tempo*ek:.3f})")
+        while top() > 177 and a.hold > 0.3: a.hold = round(max(0.3, a.hold - 0.05), 3)
+        if top() > 177: sys.exit(f"HATA: Video {top():.1f} sn olur, sınır 177 sn. Ses x1.35'e kadar hızlandı, düşünme {a.pause} sn sabit; soru sayısını azalt ya da soruları kısalt.")
+    while top() > 177 and a.hold > 0.3: a.hold = round(max(0.3, a.hold - 0.05), 3)
+    if top() > 177: zb = 0.0
+    while top() > 177 and a.pause > 2.0: a.pause = round(max(2.0, a.pause - 0.05), 3)
+    if top() > 177: sys.exit(f"HATA: Video {top():.1f} sn olur, sınır 177 sn (2:57). Düşünme 2 sn'ye, bekleme 0.3 sn'ye indirildi yine de sığmıyor; soru sayısını azalt ya da soruları kısalt.")
+    print(f"zaman cizelgesi: konusma {konusma:.1f} sn, dusunme {a.pause} sn, bekleme {a.hold} sn, toplam {top():.1f} sn")
     z = lambda t: np.zeros(int(t*SR), np.float32)
     parts, t = [segs[0], z(0.2)], len(segs[0])/SR + 0.2
     ev = []  # (q_start, q_end, a_start, a_end, gone)
@@ -285,8 +301,8 @@ def main():
     p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
                           "-i", tmpa, "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", a.out], stdin=subprocess.PIPE)
     # hirsizliga karsi filigran: orta alanda yavasca gezinen yari saydam (~30% beyaz) "@animasyon.tarih"
-    WMf = F("Montserrat-900", 44); wb = WMf.getbbox("@animasyon.tarih")
-    WM = Image.new("RGBA", (wb[2]+8, wb[3]+8), (0, 0, 0, 0)); ImageDraw.Draw(WM).text((4, 4), "@animasyon.tarih", font=WMf, fill=(255, 255, 255, 43))
+    WMf = F("Montserrat-900", 44); wb = WMf.getbbox(TEMA["hesap"])
+    WM = Image.new("RGBA", (wb[2]+8, wb[3]+8), (0, 0, 0, 0)); ImageDraw.Draw(WM).text((4, 4), TEMA["hesap"], font=WMf, fill=(255, 255, 255, 43))
     kutular = {}   # kart -> cevap tam gorunurken metin kutulari + filigran kutusu
     for fi in range(int(dur*FPS)):
         t = fi / FPS
