@@ -1,0 +1,20 @@
+# Doğrulama — Her Harfe Bir Tarih Sorusu 6 (genel dünya tarihi)
+- A Armstrong: Apollo 11, 20 Temmuz 1969, Ay'a ilk ayak basan Neil Armstrong.
+- B Babil: Asma Bahçeleri, Yedi Harika'dan biri (Mezopotamya).
+- C Cengiz Han: Moğol İmparatorluğu 1206'da kuruldu; tarihin en büyük bitişik kara imparatorluğu.
+- Ç Çin: kağıt, pusula, barut (Dört Büyük İcat).
+- D Da Vinci: Mona Lisa (1503–1519).
+- E Einstein: görelilik; Nobel Fizik 1921 (fotoelektrik etki için).
+- F Firavun · G Gutenberg (hareketli harfli matbaa, 1440'lar) · H Hiyeroglif.
+- I Irak: Mezopotamya büyük ölçüde bugünkü Irak'ta.
+- İ İspanya: 1492, Kastilya Kraliçesi Isabella ve Aragon Kralı Ferdinand.
+- K Kleopatra VII: Ptolemaios Mısırı'nın son aktif hükümdarı, ö. M.Ö. 30.
+- L Lidya: bilinen ilk madeni paralar, M.Ö. 7. yy, başkent Sardes.
+- M Magna Carta: 1215, Kral John.
+- N Napolyon: 1804'te imparator. · O Olimpiyat: geleneksel başlangıç M.Ö. 776, Olimpia.
+- Ö Öklid: Elementler, M.Ö. ~300. · P Piramit: Gize — Keops, Kefren, Mikerinos.
+- R Rönesans: 14.–16. yy, İtalya. · S Sümerler: çivi yazısı, M.Ö. ~3200.
+- Ş Şövalye · T Titanik: 15 Nisan 1912 battı.
+- Ü Ümit Burnu: Bartolomeu Dias 1488'de dolaştı (kullanıcı verisindeki 1497–98 Vasco da Gama'dır, düzeltildi).
+- V Vikingler: 8.–11. yy. · Y Yazı: tarih çağlarını başlatır. · Z Zeus.
+- Çıkarılanlar: U Uygurlar (quiz 2-3 tekrarı), P Piramit, I Irak, Ş Şövalye, Y Yazı. 22 soru.

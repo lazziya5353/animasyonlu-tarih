@@ -1,0 +1,605 @@
+{
+ "baslik": "Her Harfe Bir Tarih Sorusu 6",
+ "hook": "HER HARFE BİR TARİH SORUSU",
+ "map_region": "anadolu",
+ "sahneler": [
+  {
+   "lines": [
+    "Her harfe bir tarih sorusu! Hazır mısın?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "A harfi. 1969'da Ay'a ilk ayak basan astronot kimdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "kolay"
+  },
+  {
+   "lines": [
+    "Armstrong."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "B harfi. Asma Bahçeleri'yle ünlü antik uygarlık hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "kolay"
+  },
+  {
+   "lines": [
+    "Babil."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "C harfi. En büyük kara imparatorluğunu kuran Moğol lider kimdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "kolay"
+  },
+  {
+   "lines": [
+    "Cengiz Han."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Ç harfi. Kağıt, pusula ve barut hangi ülkede icat edildi?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "kolay"
+  },
+  {
+   "lines": [
+    "Çin."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "D harfi. Mona Lisa'yı yapan Rönesans dahisi kimdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "kolay"
+  },
+  {
+   "lines": [
+    "Da Vinci."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "E harfi. İzafiyet Teorisi'ni geliştiren fizikçi kimdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "kolay"
+  },
+  {
+   "lines": [
+    "Einstein."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "F harfi. Antik Mısır'ın tanrı-kralına ne denirdi?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "kolay"
+  },
+  {
+   "lines": [
+    "Firavun."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "G harfi. Hareketli harfli matbaayı geliştiren Alman kimdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "zor"
+  },
+  {
+   "lines": [
+    "Gutenberg."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "H harfi. Antik Mısır'ın resimli yazısına ne denir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Hiyeroglif."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "İ harfi. Kolomb'un 1492 seferini hangi ülke destekledi?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "kolay"
+  },
+  {
+   "lines": [
+    "İspanya."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "K harfi. Antik Mısır'ın son kraliçesi kimdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "kolay"
+  },
+  {
+   "lines": [
+    "Kleopatra."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "L harfi. İlk madeni parayı basan Anadolu uygarlığı hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "zor"
+  },
+  {
+   "lines": [
+    "Lidya."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "M harfi. 1215'te İngiliz kralını sınırlayan belge hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Magna Carta."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "N harfi. Avrupa'nın çoğunu fetheden Fransız imparator kimdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "kolay"
+  },
+  {
+   "lines": [
+    "Napolyon."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "O harfi. Antik Yunan'da dört yılda bir yapılan oyunlar hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "kolay"
+  },
+  {
+   "lines": [
+    "Olimpiyat."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Ö harfi. Elementler'i yazan Yunanlı matematikçi kimdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "zor"
+  },
+  {
+   "lines": [
+    "Öklid."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "R harfi. İtalya'da başlayan yeniden doğuş dönemi hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Rönesans."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "S harfi. Çivi yazısını bulan uygarlık hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "orta"
+  },
+  {
+   "lines": [
+    "Sümerler."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "T harfi. 1912'de buzdağına çarpıp batan gemi hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "kolay"
+  },
+  {
+   "lines": [
+    "Titanik."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Ü harfi. Dias'ın 1488'de dolaştığı Afrika burnu hangisidir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "zor"
+  },
+  {
+   "lines": [
+    "Ümit Burnu."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "V harfi. Avrupa kıyılarına akın eden İskandinav denizciler kimdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "kolay"
+  },
+  {
+   "lines": [
+    "Vikingler."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Z harfi. Olimpos'un baş tanrısı kimdir?"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz",
+   "zorluk": "kolay"
+  },
+  {
+   "lines": [
+    "Zeus."
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  },
+  {
+   "lines": [
+    "Kaçını bildin? Yorumlara yaz!"
+   ],
+   "big": "",
+   "sub": "",
+   "label": "QUIZ",
+   "fx": [],
+   "image": "images/bg.jpg",
+   "prompt": "quiz"
+  }
+ ],
+ "finale": "",
+ "maps": [],
+ "cards": [],
+ "eras": [
+  {
+   "name": "QUIZ",
+   "from": 0,
+   "to": 46
+  }
+ ],
+ "outro": {
+  "title": "KAÇINI BİLDİN?",
+  "line": "Yorumlara yaz"
+ },
+ "aciklama": "Her harfe bir tarih sorusu, 6. bölüm! 🌍 Bu sefer dünya tarihi: Ay'a ilk adımdan Magna Carta'ya, firavunlardan Ümit Burnu'na 22 soru. Her soruda 3 saniyen var. 4'ü ZOR soru, hepsini bilen çıkar mı? Kaç tanesini bildiğini yorumlara yaz 👇 Arkadaşını etiketle, kim daha çok bilecek görelim!",
+ "kanca_alternatifleri": [],
+ "aciklama_alternatifleri": [],
+ "hashtagler": [
+  "#tarih",
+  "#dünyatarihi",
+  "#tarihquiz",
+  "#bilgiyarışması",
+  "#quiz",
+  "#genelkültür",
+  "#herharfebirsoru",
+  "#tarihbilgisi",
+  "#reels",
+  "#keşfet",
+  "#animasyontarih"
+ ],
+ "kaynaklar": [],
+ "kontrol_notlari": [],
+ "konu": "Harf quiz",
+ "tarih": "",
+ "slug": "her-harfe-tarih-6c",
+ "durum": "onaylandi",
+ "sade": true,
+ "seslendirme_metni": "Her harfe bir tarih sorusu! Hazır mısın?\nA harfi. 1969'da Ay'a ilk ayak basan astronot kimdir?\nArmstrong.\nB harfi. Asma Bahçeleri'yle ünlü antik uygarlık hangisidir?\nBabil.\nC harfi. En büyük kara imparatorluğunu kuran Moğol lider kimdir?\nCengiz Han.\nÇ harfi. Kağıt, pusula ve barut hangi ülkede icat edildi?\nÇin.\nD harfi. Mona Lisa'yı yapan Rönesans dahisi kimdir?\nDa Vinci.\nE harfi. İzafiyet Teorisi'ni geliştiren fizikçi kimdir?\nEinstein.\nF harfi. Antik Mısır'ın tanrı-kralına ne denirdi?\nFiravun.\nG harfi. Hareketli harfli matbaayı geliştiren Alman kimdir?\nGutenberg.\nH harfi. Antik Mısır'ın resimli yazısına ne denir?\nHiyeroglif.\nİ harfi. Kolomb'un 1492 seferini hangi ülke destekledi?\nİspanya.\nK harfi. Antik Mısır'ın son kraliçesi kimdir?\nKleopatra.\nL harfi. İlk madeni parayı basan Anadolu uygarlığı hangisidir?\nLidya.\nM harfi. 1215'te İngiliz kralını sınırlayan belge hangisidir?\nMagna Carta.\nN harfi. Avrupa'nın çoğunu fetheden Fransız imparator kimdir?\nNapolyon.\nO harfi. Antik Yunan'da dört yılda bir yapılan oyunlar hangisidir?\nOlimpiyat.\nÖ harfi. Elementler'i yazan Yunanlı matematikçi kimdir?\nÖklid.\nR harfi. İtalya'da başlayan yeniden doğuş dönemi hangisidir?\nRönesans.\nS harfi. Çivi yazısını bulan uygarlık hangisidir?\nSümerler.\nT harfi. 1912'de buzdağına çarpıp batan gemi hangisidir?\nTitanik.\nÜ harfi. Dias'ın 1488'de dolaştığı Afrika burnu hangisidir?\nÜmit Burnu.\nV harfi. Avrupa kıyılarına akın eden İskandinav denizciler kimdir?\nVikingler.\nZ harfi. Olimpos'un baş tanrısı kimdir?\nZeus.\nKaçını bildin? Yorumlara yaz!",
+ "alt_bilgi": {
+  "A": "Neil Armstrong · Apollo 11",
+  "B": "Dünyanın Yedi Harikası'ndan biri",
+  "C": "Moğol İmparatorluğu · 1206",
+  "Ç": "Büyük icatların yurdu",
+  "D": "Leonardo da Vinci",
+  "E": "Albert Einstein · Nobel 1921",
+  "F": "Piramitlerin yaptırıcıları",
+  "G": "Johannes Gutenberg · 1440'lar",
+  "H": "Kutsal oyma yazı",
+  "İ": "Kraliçe Isabella · Kral Ferdinand",
+  "K": "Mısır'ın son firavunu · M.Ö. 30",
+  "L": "M.Ö. 7. yüzyıl · Sardes",
+  "M": "Kral John · 1215",
+  "N": "Napolyon Bonapart · 1804",
+  "O": "M.Ö. 776 · Olimpia",
+  "Ö": "Geometrinin babası · M.Ö. 300",
+  "R": "14.–16. yüzyıl · İtalya",
+  "S": "M.Ö. 3200 civarı",
+  "T": "15 Nisan 1912",
+  "Ü": "Hindistan deniz yolunun kapısı",
+  "V": "8.–11. yüzyıl",
+  "Z": "Şimşeklerin tanrısı"
+ },
+ "ses_modu": "satir",
+ "ses_motoru": "edge",
+ "ses": "tr-TR-AhmetNeural",
+ "ses_hizi": "+15%",
+ "dusunme": 3.0,
+ "bekleme": 0.7,
+ "zor_ek": 0,
+ "tempo": 1.1
+}
