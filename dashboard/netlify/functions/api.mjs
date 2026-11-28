@@ -407,9 +407,9 @@ export default async (req) => {
       case "gemini_anahtar": { // Netlify'daki anahtar geçersizse panelden bir kez yapıştırılır (Blobs'ta şifreli; asla geri döndürülmez)
         const st = getStore({ name: "ayar", consistency: "strong" });
         if (b.sil) { await st.delete("gemini_anahtar"); gKeyOnb = null; return json({ ok: true }); }
-        const k = String(b.anahtar || "").trim();
+        const k = String(b.anahtar || "").trim().replace(/^["'`]+|["'`]+$/g, "").replace(/\s+/g, "");
         if (!k) { const v = await geminiKey(); return json({ var: !!v, kaynak: (await st.get("gemini_anahtar").catch(() => null)) ? "panel" : v ? "netlify" : null }); }
-        if (!/^[A-Za-z0-9_\-]{30,60}$/.test(k)) return json({ hata: "Anahtar biçimi hatalı" }, 400);
+        if (!/^[\x21-\x7e]{20,300}$/.test(k)) return json({ hata: "Anahtar biçimi hatalı (boşluksuz, tek satır yapıştır)" }, 400);
         const r = await fetch("https://generativelanguage.googleapis.com/v1beta/models?pageSize=1", { headers: { "x-goog-api-key": k }, signal: AbortSignal.timeout(8000) }).catch(() => null);
         if (!r || !r.ok) return json({ hata: "Google bu anahtarı kabul etmedi (API key not valid)" }, 400);
         await st.set("gemini_anahtar", igSifrele(k)); gKeyOnb = null; return json({ ok: true });

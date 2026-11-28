@@ -1352,7 +1352,8 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
       const lines = String(text || '').split(/\r?\n/).map(l => l.trim()).filter(Boolean);
       const out = [];
       for (const line of lines) {
-        let parts = line.includes('|') ? line.split('|') : (line.includes('\t') ? line.split('\t') : line.split(';'));
+        let parts = line.includes('|') ? line.split('|') : (line.includes('\t') ? line.split('\t') : (/\s[-–—]\s/.test(line) ? line.split(/\s[-–—]\s/) : line.split(';')));
+        if (parts.length > 4 && parts[0].trim().length <= 2) parts = [parts[0], parts[1], parts[2], parts.slice(3).join(' - ')];
         parts = parts.map(p => p.trim());
         if (parts.length < 2) continue;
         let letter = '', question = '', answer = '', note = '', category = defaultCat;
