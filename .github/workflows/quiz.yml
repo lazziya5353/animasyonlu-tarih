@@ -36,6 +36,10 @@ jobs:
           SES: ${{ inputs.ses }}
         run: |
           P=projects/$SLUG
+          # panelden gelen (otomatik) projeler: seslendirme metni sahnelerden (sayilar yaziyla) + bos aciklama/hashtag sablonu
+          python scripts/quiz_hazirla.py "$SLUG"
+          git config user.name "github-actions"; git config user.email "github-actions@users.noreply.github.com"
+          git add "$P/script.json"; git commit -qm "Quiz hazirlik: $SLUG" && (git pull --rebase -q; git push -q) || true
           # ses her zaman bu projenin kendi metninden: metin/stil ozeti ses.kaynak ile uyusmuyorsa yeniden uret
           OZ=$(python -c "import json,hashlib,sys;s=json.load(open(sys.argv[1]));print(hashlib.sha256((sys.argv[2]+'|'+s.get('ses_stil','')+'|'+s['seslendirme_metni']).encode()).hexdigest())" $P/script.json "$SLUG")
           # panelden dis ses (ses_harici.*) yuklendiyse Gemini TTS atlanir; 0 = dis ses kullanildi, 3 = yok
@@ -44,14 +48,20 @@ jobs:
           if [ "$RC" = 0 ]; then echo "dis ses -> ses.wav (mono 24 kHz, loudnorm)"; [ -f "$P/segmentler.json" ] && echo "segment haritasi: $P/segmentler.json (sessizlik tespiti yok)"
           elif [ "$MOD" = "satir" ]; then
             # satir satir TTS: her satir ayri istek, audio/ altinda onbellek, sinirlar segmentler.json
-            python scripts/satir_ses.py "$SLUG"
+            python scripts/satir_ses.py "$SLUG"; python -c "import json,sys;s=json.load(open(sys.argv[1]));print(('Edge TTS '+s.get('ses','tr-TR-AhmetNeural')) if s.get('ses_motoru')=='edge' else 'Gemini '+s.get('ses','Charon')+' (satır satır)')" $P/script.json > "$P/ses.motor"
             git config user.name "github-actions"; git config user.email "github-actions@users.noreply.github.com"
             git add "projects/$SLUG/audio" "projects/$SLUG/segmentler.json"; git commit -m "Quiz satır sesleri: $SLUG" && (git pull --rebase -q; git push) || true
           elif [ "$SES" = "1" ] || [ ! -f "$P/ses.wav" ] || [ "$(cat $P/ses.kaynak 2>/dev/null)" != "$OZ" ]; then
             rm -f "$P/ses.wav"
-            python scripts/generate_assets.py --slug "$SLUG" --ses
+            set +e; python scripts/generate_assets.py --slug "$SLUG" --ses; set -e
+            if [ -s "$P/ses.wav" ]; then echo "$OZ" > "$P/ses.kaynak"; echo "Gemini Charon (tek istek)" > "$P/ses.motor"
+            else
+              # Gemini kotasi/hatasi: Edge TTS satir satir (kotasiz). Kullanilan ses ses.motor'a yazilir, release notunda gorunur.
+              echo "UYARI: Gemini ses uretemedi -> Edge TTS (tr-TR-AhmetNeural) satir satir"
+              python -c "import json,sys;p=sys.argv[1];s=json.load(open(p));s.update(ses_modu='satir',ses_motoru='edge',ses_hizi=s.get('ses_hizi') or '+15%',tempo=s.get('tempo') or 1.1);json.dump(s,open(p,'w'),ensure_ascii=False,indent=1)" $P/script.json
+              python scripts/satir_ses.py "$SLUG"; echo "Edge TTS tr-TR-AhmetNeural (satır satır, Gemini kotası yetmedi)" > "$P/ses.motor"
+            fi
             test -s "$P/ses.wav" || { echo "HATA: $P/ses.wav uretilemedi (baska projenin sesi KULLANILMAZ)"; exit 1; }
-            echo "$OZ" > "$P/ses.kaynak"
             git config user.name "github-actions"; git config user.email "github-actions@users.noreply.github.com"
             git add "projects/$SLUG"; git commit -m "Quiz sesi: $SLUG" && (git pull --rebase -q; git push) || true
           fi
@@ -72,7 +82,10 @@ jobs:
         run: |
           TAG="video-$SLUG"
           gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --title "$SLUG" --notes "Animasyonlu Tarih quiz videosu"
-          gh release upload "$TAG" "projects/$SLUG/out/video.mp4" "projects/$SLUG/out/kapak.jpg" --clobber
+          P=projects/$SLUG; SURE=$(ffprobe -v error -show_entries format=duration -of csv=p=0 $P/out/video.mp4)
+          python -c "import json,sys;s=json.load(open(sys.argv[1]));open(sys.argv[2],'w').write(s.get('aciklama','')+'\n\n'+s.get('hashtagler',''))" $P/script.json $P/out/aciklama.txt
+          gh release upload "$TAG" "$P/out/video.mp4" "$P/out/kapak.jpg" "$P/out/aciklama.txt" --clobber
+          gh release edit "$TAG" --notes "Süre: ${SURE%.*} sn · Ses: $(cat $P/ses.motor 2>/dev/null || echo 'önceki ses')"
           python scripts/set_status.py kurgucu tamam "$SLUG quiz videosu hazır" "release:$TAG" || true
       - name: Hata durumunu panele yaz
         if: failure()

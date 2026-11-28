@@ -31,14 +31,17 @@ def bekci(v, S, T, wm, seg=False):
     h = []; parca = [("giris", 0.0, T[0]["soru_t"], S["sahneler"][0]["lines"][0])]
     if seg and T[0]["soru_t"] < 0.8: parca = []  # dis seste giris kaydedilmemis (bos segment)
     # segment haritasi varsa: HER sorunun sesi yalnizca kendi satiriyla karsilastirilir (kayma olamaz, ornekleme gereksiz)
-    for k in (range(1, len(T) + 1) if seg else (1, 11, 22)):
+    for k in range(1, len(T) + 1):  # HER soru kendi kart metniyle (kural 22)
         if k <= len(T): x = T[k-1]; parca.append((f"soru {k} ({x['harf']})", x["soru_t"], x["soru_bit"], S["sahneler"][1+2*(k-1)]["lines"][0]))
         else: h.append(f"bekci: {k}. soru yok")
+    for k, x in enumerate(T):  # cevaplar: kisa (1-3 kelime), yalnizca uyari olarak yazdirilir
+        parca.append((f"cevap {k+1} ({x['harf']})", max(0, x["cevap_t"] - 0.1), x["cevap_bit"] + 0.15, S["sahneler"][2+2*k]["lines"][0]))
     for ad, t0, t1, metin in parca:
         txt = " ".join(s.text for s in wm.transcribe(pcm(v, t0, t1), language="tr")[0])
         a, b = " ".join(kelimeler(txt)), " ".join(kelimeler(metin))
         r = difflib.SequenceMatcher(None, a, b).ratio(); ok = r >= 0.6
         print(f"BEKCI {ad}: oran {r:.2f} {'ESLESTI' if ok else 'ESLESMEDI'}\n  ses : {a}\n  kart: {b}")
+        if not ok and ad.startswith("cevap"): print(f"  UYARI {ad}: dusuk oran (kisa cevap)"); continue
         if not ok: h.append(f"bekci {ad}: ses kartla eslesmiyor (oran {r:.2f}: {a!r})")
     return h
 
