@@ -1,0 +1,2978 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⚡ Hızlı Stüdyo · Animasyon Tarih</title>
+  <meta name="theme-color" content="#12100e" />
+  <link rel="icon" href="icon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mammoth@1.6.0/mammoth.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mp4-muxer@5.1.3/build/mp4-muxer.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    button, label, input, select, textarea { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+    body { margin: 0; font-family: 'Inter', sans-serif; background-color: #0b0908; color: #f5efe6; overflow-x: hidden; }
+    .font-cinzel { font-family: 'Cinzel', serif; }
+    .font-mono-num { font-family: 'JetBrains Mono', monospace; }
+
+    /* 9:16 Video Sahnesi */
+    .shorts-stage {
+      aspect-ratio: 9 / 16;
+      background:
+        radial-gradient(circle at 50% 34%, rgba(168, 108, 42, 0.28) 0%, rgba(45, 29, 16, 0.85) 55%, rgba(15, 11, 8, 1) 100%),
+        repeating-linear-gradient(45deg, rgba(255, 224, 178, 0.015) 0px, rgba(255, 224, 178, 0.015) 2px, transparent 2px, transparent 8px);
+      box-shadow: 0 25px 70px -15px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(217, 167, 92, 0.25);
+      position: relative;
+      overflow: hidden;
+      user-select: none;
+    }
+    .shorts-stage::before {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border: 1px solid rgba(217, 167, 92, 0.22);
+      border-radius: 20px;
+      pointer-events: none;
+      z-index: 30;
+    }
+    #stage-bg-layer { position: absolute; inset: 0; z-index: 1; background-size: cover; background-position: center; pointer-events: none; transition: background 0.3s ease; }
+    #stage-bg-dim { position: absolute; inset: 0; z-index: 2; background: rgba(0, 0, 0, 0.45); pointer-events: none; }
+
+    .title-shimmer {
+      background: linear-gradient(180deg, #fff5dc 0%, #e6b972 52%, #b07a32 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 10px rgba(217, 167, 92, 0.35));
+    }
+    .letter-node {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+      border: 1.5px solid rgba(217, 167, 92, 0.35);
+      background: rgba(24, 18, 13, 0.85);
+      color: #d6c3a5;
+      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.08), 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    .letter-node.active {
+      background: radial-gradient(circle at 30% 30%, #fef08a, #f59e0b 75%, #b45309);
+      color: #1c1105;
+      border-color: #fef9c3;
+      transform: translate(-50%, -50%) scale(1.32);
+      box-shadow: 0 0 22px rgba(251, 191, 36, 0.85), 0 0 8px rgba(255, 255, 255, 0.7);
+      z-index: 20;
+    }
+    .letter-node.correct {
+      background: radial-gradient(circle at 30% 30%, #6ee7b7, #10b981 75%, #047857);
+      color: #032219;
+      border-color: #a7f3d0;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.65);
+    }
+    .center-hub {
+      background: radial-gradient(circle at 50% 35%, #2b1f15 0%, #16100b 80%);
+      border: 2px solid rgba(217, 167, 92, 0.45);
+      box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.85), 0 0 30px rgba(217, 167, 92, 0.15);
+    }
+    .center-hub.hub-reveal {
+      border-color: rgba(52, 211, 153, 0.7);
+      box-shadow: inset 0 0 25px rgba(6, 78, 59, 0.6), 0 0 32px rgba(16, 185, 129, 0.35);
+    }
+    .answer-slot {
+      background: rgba(20, 15, 11, 0.85);
+      border: 1.5px solid rgba(217, 167, 92, 0.4);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #f6e0b5;
+      transition: all 0.25s ease;
+    }
+    .answer-slot.slot-hint { border-color: rgba(251, 191, 36, 0.65); background: rgba(245, 158, 11, 0.15); color: #fde68a; }
+    .answer-slot.slot-revealed {
+      border-color: #34d399;
+      background: linear-gradient(180deg, rgba(16, 185, 129, 0.3) 0%, rgba(6, 78, 59, 0.75) 100%);
+      color: #ecfdf5;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.35);
+      transform: translateY(-2px);
+    }
+    .cw-cell {
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      font-weight: 800;
+      transition: all 0.25s ease;
+      background: rgba(24, 18, 13, 0.92);
+      border: 1.5px solid rgba(217, 167, 92, 0.38);
+      color: transparent;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+    }
+    .cw-cell.cw-active { background: rgba(245, 158, 11, 0.22); border-color: #fbbf24; box-shadow: 0 0 14px rgba(251, 191, 36, 0.5); z-index: 10; }
+    .cw-cell.cw-hint { color: #fde68a; background: rgba(245, 158, 11, 0.28); }
+    .cw-cell.cw-solved { background: linear-gradient(180deg, #10b981 0%, #047857 100%); border-color: #a7f3d0; color: #ecfdf5; box-shadow: 0 0 12px rgba(16, 185, 129, 0.55); }
+    .cw-num { position: absolute; top: 1px; left: 3px; font-size: 8px; line-height: 1; font-weight: 700; color: #e6b972; pointer-events: none; }
+    .cw-cell.cw-solved .cw-num { color: #d1fae5; }
+
+    .question-card {
+      background: linear-gradient(180deg, rgba(33, 24, 17, 0.92) 0%, rgba(19, 14, 10, 0.96) 100%);
+      border: 1px solid rgba(217, 167, 92, 0.35);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
+    }
+
+    /* Spor Teması */
+    .shorts-stage.theme-sport {
+      background:
+        radial-gradient(ellipse at 50% 8%, rgba(56, 189, 248, 0.22) 0%, transparent 48%),
+        radial-gradient(circle at 50% 42%, rgba(16, 185, 129, 0.26) 0%, rgba(6, 36, 24, 0.94) 56%, rgba(3, 14, 11, 1) 100%),
+        repeating-linear-gradient(0deg, rgba(34, 197, 94, 0.045) 0px, rgba(34, 197, 94, 0.045) 28px, transparent 28px, transparent 56px);
+    }
+    .shorts-stage.theme-sport::before { border: 1.5px solid rgba(52, 211, 153, 0.28); }
+    .shorts-stage.theme-sport #stage-kicker { color: #4ade80; }
+    .shorts-stage.theme-sport #stage-title {
+      font-family: 'Inter', sans-serif; font-weight: 900; font-style: italic;
+      background: linear-gradient(180deg, #ffffff 0%, #bef264 58%, #22c55e 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .shorts-stage.theme-sport .letter-node { border-color: rgba(74, 222, 128, 0.45); background: rgba(10, 34, 26, 0.94); color: #dcfce7; }
+    .shorts-stage.theme-sport .letter-node.active { background: radial-gradient(circle at 30% 30%, #f7fee7, #a3e635 65%, #4d7c0f); color: #052e16; border-color: #ffffff; }
+    .shorts-stage.theme-sport .letter-node.correct { background: radial-gradient(circle at 30% 30%, #67e8f9, #06b6d4 70%, #0e7490); color: #042f2e; }
+    .shorts-stage.theme-sport .center-hub { background: radial-gradient(circle at 50% 30%, #0d3326 0%, #041510 82%); border-color: rgba(74, 222, 128, 0.65); }
+    .shorts-stage.theme-sport .question-card { background: linear-gradient(180deg, rgba(7, 29, 22, 0.94) 0%, rgba(4, 16, 13, 0.98) 100%); border-color: rgba(52, 211, 153, 0.42); border-top: 2.5px solid #22c55e; }
+    .shorts-stage.theme-sport .answer-slot { background: rgba(5, 22, 17, 0.92); border-color: rgba(52, 211, 153, 0.42); color: #ecfdf5; }
+
+    /* Tam Ekran Kayıt Modu */
+    body.recording-mode #control-panel { display: none !important; }
+    body.recording-mode #stage-wrapper { width: 100vw !important; height: 100vh !important; padding: 0 !important; background: #000 !important; }
+    body.recording-mode .shorts-stage { height: 100vh !important; width: auto !important; max-width: 100vw !important; border-radius: 0 !important; box-shadow: none !important; }
+    body.recording-mode #recording-float-controls { display: flex !important; }
+
+    /* Animasyonlar */
+    @keyframes nodePopIn { 0% { opacity: 0; transform: translate(-50%, -50%) scale(0.15); } 70% { opacity: 1; transform: translate(-50%, -50%) scale(1.18); } 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); } }
+    @keyframes wheelSpinIn { 0% { opacity: 0; transform: rotate(-160deg) scale(0.55); } 75% { opacity: 1; transform: rotate(8deg) scale(1.03); } 100% { opacity: 1; transform: rotate(0deg) scale(1); } }
+    @keyframes nodeGoldWave { 0%, 100% { border-color: rgba(217,167,92,0.35); } 50% { box-shadow: 0 0 16px rgba(251,191,36,0.55); border-color: rgba(253,224,71,0.85); } }
+    @keyframes activeBouncePulse { 0%, 100% { transform: translate(-50%, -50%) scale(1.32); } 50% { transform: translate(-50%, -50%) scale(1.48); } }
+    @keyframes wordRiseIn { 0% { opacity: 0; transform: translateY(8px); } 100% { opacity: 1; transform: translateY(0); } }
+    @keyframes textSlideUp { 0% { opacity: 0; transform: translateY(14px); } 100% { opacity: 1; transform: translateY(0); } }
+    @keyframes slotFlipPop { 0% { opacity: 0; transform: scale(0.5); } 100% { opacity: 1; transform: scale(1); } }
+    @keyframes outroPopIn { 0% { opacity: 0; transform: scale(0.88) translateY(16px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
+    @keyframes watermarkRoam {
+      0%   { left: 10%; top: 14%; transform: translate(0, 0) rotate(-6deg); }
+      25%  { left: 86%; top: 28%; transform: translate(-100%, 0) rotate(5deg); }
+      50%  { left: 14%; top: 56%; transform: translate(0, -50%) rotate(-4deg); }
+      75%  { left: 86%; top: 76%; transform: translate(-100%, -50%) rotate(6deg); }
+      100% { left: 10%; top: 14%; transform: translate(0, 0) rotate(-6deg); }
+    }
+    .anim-wheel-spin { animation: wheelSpinIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) both; }
+    .anim-node-cascade { animation: nodePopIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both; animation-delay: calc(var(--node-idx, 0) * 28ms); }
+    .anim-node-pulse:not(.active):not(.correct) { animation: nodeGoldWave 2.4s ease-in-out infinite; animation-delay: calc(var(--node-idx, 0) * 90ms); }
+    .anim-active-bounce.active { animation: activeBouncePulse 0.9s ease-in-out infinite; }
+    .anim-word-span { display: inline-block; animation: wordRiseIn 0.32s ease both; }
+    .anim-text-slide { animation: textSlideUp 0.42s ease both; }
+    .anim-slot-pop { animation: slotFlipPop 0.34s ease both; }
+    .outro-card { animation: outroPopIn 0.45s ease both; }
+    .roaming-watermark {
+      position: absolute; z-index: 32; pointer-events: none; user-select: none;
+      font-size: 13px; font-weight: 800; letter-spacing: 0.08em;
+      color: rgba(246, 224, 181, 0.28); text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
+      white-space: nowrap; animation: watermarkRoam 26s ease-in-out infinite;
+    }
+    .roaming-watermark.wm-paused { animation-play-state: paused; }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #14110f; }
+    ::-webkit-scrollbar-thumb { background: #3f3226; border-radius: 999px; }
+    .hub-answer { display:none; font-family:'Inter',sans-serif; font-weight:900; color:#34d399; line-height:1.02; text-transform:none; word-break:break-word; text-shadow:0 0 14px rgba(52,211,153,.45); }
+    .center-hub.hub-reveal .hub-answer { display:block; animation: hubPop .38s cubic-bezier(.2,1.6,.4,1) both; }
+    .center-hub.hub-reveal #hub-timer, .center-hub.hub-reveal #hub-phase { display:none; }
+    @keyframes hubPop { from { transform: scale(.4); opacity:0 } to { transform: scale(1); opacity:1 } }
+    .center-hub.hub-think { animation: hubPulse 1s ease-in-out infinite; }
+    @keyframes hubPulse { 0%,100% { transform: scale(1) } 50% { transform: scale(1.06) } }
+    #q-note.note-big { font-size: 14px; padding: 4px 12px; }
+    #login-gate { position:fixed; inset:0; z-index:90; background:rgba(0,0,0,.88); display:none; align-items:center; justify-content:center; }
+    #login-gate.on { display:flex; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col lg:flex-row">
+
+  <!-- SOL KONTROL PANELİ -->
+  <aside id="control-panel" class="w-full lg:w-[440px] xl:w-[470px] bg-[#12100e] border-b lg:border-b-0 lg:border-r border-amber-900/30 p-4 sm:p-5 flex flex-col gap-3.5 lg:h-screen lg:overflow-y-auto z-40">
+    <div class="flex items-center justify-between gap-2 border-b border-amber-900/30 pb-3">
+      <div>
+        <a href="./" class="text-[11px] uppercase tracking-widest text-amber-400/80 font-semibold hover:text-amber-300">← Panel · Reels & Shorts</a>
+        <h1 class="text-lg font-bold text-amber-50 leading-tight">⚡ Hızlı Stüdyo</h1>
+      </div>
+      <button id="btn-record-mode" type="button" class="px-3 py-2 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 border border-amber-400/40 text-amber-200 text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer">
+        <span>🎥</span><span>Tam Ekran</span>
+      </button>
+    </div>
+
+    <!-- OYUN MODU SEÇİCİ -->
+    <div class="grid grid-cols-2 gap-1.5 bg-[#1b1714] p-1.5 rounded-2xl border border-amber-900/30">
+      <button id="mode-passaparola" type="button" class="py-2 px-3 rounded-xl text-xs font-bold bg-amber-500 text-stone-950 transition cursor-pointer flex items-center justify-center gap-1.5">
+        <span>⭕</span><span>Passaparola Çemberi</span>
+      </button>
+      <button id="mode-crossword" type="button" class="py-2 px-3 rounded-xl text-xs font-bold text-amber-200/80 hover:bg-stone-800 transition cursor-pointer flex items-center justify-center gap-1.5">
+        <span>🧩</span><span>Çengel Bulmaca</span>
+      </button>
+    </div>
+
+    <!-- TARİH SORU BANKASI & DAHA ÖNCE SORULANLAR BUTONU -->
+    <div class="grid grid-cols-3 gap-1.5">
+      <button id="btn-open-bank" type="button" class="col-span-2 py-2.5 px-3 rounded-2xl bg-gradient-to-r from-emerald-900/70 to-amber-900/60 hover:from-emerald-800/80 hover:to-amber-800/70 border border-emerald-400/40 text-emerald-100 text-xs font-bold flex items-center justify-between transition cursor-pointer shadow-lg">
+        <span class="flex items-center gap-1.5"><span>📚</span><span>Soru Bankası</span></span>
+        <span id="bank-count-pill" class="px-2 py-0.5 rounded-full bg-emerald-500/25 border border-emerald-400/40 text-[10px] text-emerald-200">Aç</span>
+      </button>
+      <button id="btn-open-asked" type="button" class="py-2.5 px-2 rounded-2xl bg-stone-900 hover:bg-stone-800 border border-amber-500/35 text-amber-200 text-[11px] font-bold flex flex-col items-center justify-center leading-tight transition cursor-pointer">
+        <span>🕒 Sorulanlar</span>
+        <span id="asked-count-pill" class="text-[10px] text-amber-400 font-mono">0</span>
+      </button>
+    </div>
+
+    <!-- Hazır Konu Paketleri & Sahne Teması -->
+    <div class="bg-[#1b1714] border border-amber-900/30 rounded-2xl p-3 flex flex-col gap-2">
+      <div class="grid grid-cols-2 gap-2">
+        <button id="preset-tarih" type="button" class="py-2 px-3 rounded-xl bg-amber-500/20 border border-amber-400/50 text-amber-100 text-xs font-semibold hover:bg-amber-500/30 transition cursor-pointer">🏛️ Tarih Soruları</button>
+        <button id="preset-futbol" type="button" class="py-2 px-3 rounded-xl bg-stone-800/80 border border-stone-700 text-stone-200 text-xs font-semibold hover:bg-stone-700/80 transition cursor-pointer">⚽ Futbol & Süper Lig</button>
+      </div>
+      <div class="pt-1.5 border-t border-stone-800/80 flex items-center justify-between gap-2">
+        <span class="text-[10px] text-stone-400 font-semibold">🎨 Sahne Görünümü:</span>
+        <div class="grid grid-cols-2 gap-1 bg-stone-900 p-0.5 rounded-lg border border-stone-800">
+          <button id="theme-tarih-btn" type="button" class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-amber-500 text-stone-950 cursor-pointer">🏛️ Tarih</button>
+          <button id="theme-sport-btn" type="button" class="px-2.5 py-1 rounded-md text-[10px] font-bold text-stone-300 hover:bg-stone-800 cursor-pointer">⚽ Spor</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ARKA PLAN SEÇENEĞİ -->
+    <div class="bg-[#1b1714] border border-amber-900/30 rounded-2xl p-3 flex flex-col gap-2">
+      <div class="flex items-center justify-between">
+        <span class="text-xs font-semibold text-amber-200/90">🖼️ Arka Plan Seçeneği</span>
+        <button id="btn-bg-clear" type="button" class="text-[10px] text-stone-400 hover:text-amber-300 cursor-pointer">Varsayılana Dön</button>
+      </div>
+      <div class="grid grid-cols-3 gap-1.5">
+        <button type="button" data-bgpreset="default" class="btn-bg-preset py-1.5 px-2 rounded-lg bg-amber-500/20 border border-amber-400/50 text-[10px] font-bold text-amber-100 cursor-pointer">Varsayılan</button>
+        <button type="button" data-bgpreset="parchment" class="btn-bg-preset py-1.5 px-2 rounded-lg bg-stone-900 border border-stone-700 text-[10px] font-semibold text-stone-300 cursor-pointer">Antik Altın</button>
+        <button type="button" data-bgpreset="stadium" class="btn-bg-preset py-1.5 px-2 rounded-lg bg-stone-900 border border-stone-700 text-[10px] font-semibold text-stone-300 cursor-pointer">Stadyum</button>
+        <button type="button" data-bgpreset="navy" class="btn-bg-preset py-1.5 px-2 rounded-lg bg-stone-900 border border-stone-700 text-[10px] font-semibold text-stone-300 cursor-pointer">Gece Lacivert</button>
+        <button type="button" data-bgpreset="crimson" class="btn-bg-preset py-1.5 px-2 rounded-lg bg-stone-900 border border-stone-700 text-[10px] font-semibold text-stone-300 cursor-pointer">Bordo Kadife</button>
+        <button type="button" data-bgpreset="obsidian" class="btn-bg-preset py-1.5 px-2 rounded-lg bg-stone-900 border border-stone-700 text-[10px] font-semibold text-stone-300 cursor-pointer">Siyah Mermer</button>
+      </div>
+      <label class="py-1.5 px-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 border border-stone-700 text-amber-200 text-[11px] font-semibold text-center cursor-pointer transition">
+        <span>📂 Kendi Arka Plan Görselini Seç</span>
+        <input id="input-bg-image" type="file" accept="image/*" class="hidden" />
+      </label>
+      <div class="flex items-center justify-between gap-2 text-[11px]">
+        <span class="text-stone-400">Karartma: <strong id="val-bg-dim" class="text-amber-300">45%</strong></span>
+        <input id="range-bg-dim" type="range" min="0" max="85" step="5" value="45" class="w-36 accent-amber-400" />
+      </div>
+    </div>
+
+    <!-- KAPAK FOTOĞRAFI -->
+    <div class="bg-[#1b1714] border border-amber-900/30 rounded-2xl p-3 flex flex-col gap-2">
+      <div class="flex items-center justify-between gap-2">
+        <span class="text-xs font-semibold text-amber-200/90">📸 Kapak Fotoğrafı (Thumbnail)</span>
+        <button id="btn-open-cover-modal" type="button" class="px-2.5 py-1 rounded-lg bg-amber-500 hover:bg-amber-400 text-stone-950 text-[10px] font-extrabold cursor-pointer transition">✏️ Düzenle & İndir</button>
+      </div>
+      <label class="flex items-center gap-2 text-[11px] text-stone-300 cursor-pointer select-none">
+        <input id="toggle-cover-first-frame" type="checkbox" checked class="accent-amber-400 rounded cursor-pointer" />
+        <span>🎬 Videonun İlk Karesine Kapağı Ekle (0.45 sn)</span>
+      </label>
+    </div>
+
+    <!-- Başlık, Bölüm & Kanal Bilgileri -->
+    <div class="bg-[#1b1714] border border-amber-900/30 rounded-2xl p-3 flex flex-col gap-2">
+      <div class="flex items-center justify-between">
+        <span class="text-xs font-semibold text-amber-200/90">Başlık & Kanal Bilgileri</span>
+        <button id="btn-preview-outro" type="button" class="px-2 py-1 rounded-lg bg-amber-500/15 hover:bg-amber-500/25 border border-amber-400/35 text-amber-200 text-[10px] font-bold cursor-pointer">🏆 Bitiş Ekranı</button>
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <input id="input-kicker" type="text" value="HER HARFE BİR" placeholder="Üst Satır" class="bg-stone-900 border border-stone-700 rounded-xl px-2.5 py-1.5 text-xs text-amber-100 focus:outline-none focus:border-amber-400" />
+        <input id="input-title" type="text" value="TARİH SORUSU" placeholder="Ana Başlık" class="bg-stone-900 border border-stone-700 rounded-xl px-2.5 py-1.5 text-xs text-amber-100 focus:outline-none focus:border-amber-400" />
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <input id="input-subtitle" type="text" value="kaçını bileceksin?" placeholder="Alt Satır" class="bg-stone-900 border border-stone-700 rounded-xl px-2.5 py-1.5 text-xs text-amber-100 focus:outline-none focus:border-amber-400" />
+        <input id="input-watermark" type="text" value="@animasyon.tarih" placeholder="Kanal Filigranı" class="bg-stone-900 border border-stone-700 rounded-xl px-2.5 py-1.5 text-xs text-amber-100 focus:outline-none focus:border-amber-400" />
+      </div>
+      <div class="flex items-center gap-1.5">
+        <input id="input-episode" type="text" value="" placeholder="Bölüm Etiketi (örn. BÖLÜM 5)" class="flex-1 bg-stone-900 border border-stone-700 rounded-xl px-2.5 py-1.5 text-xs text-amber-100 focus:outline-none focus:border-amber-400" />
+        <button id="btn-episode-next" type="button" class="px-2.5 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/40 text-amber-200 text-xs font-bold cursor-pointer">+1</button>
+        <button id="btn-episode-clear" type="button" class="px-2 py-1.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-300 text-xs cursor-pointer">✕</button>
+      </div>
+      <label class="flex items-center gap-2 text-[11px] text-stone-300 cursor-pointer select-none">
+        <input id="toggle-roaming-wm" type="checkbox" checked class="accent-amber-400 rounded cursor-pointer" />
+        <span>🛡️ Videoda Gezen Filigran</span>
+      </label>
+    </div>
+
+    <!-- Animasyon Modu -->
+    <div class="bg-[#1b1714] border border-amber-900/30 rounded-2xl p-3 flex flex-col gap-2">
+      <div class="flex items-center justify-between gap-2">
+        <label class="flex items-center gap-2 text-xs font-semibold text-amber-200/90 cursor-pointer select-none">
+          <input id="toggle-anim-mode" type="checkbox" checked class="accent-amber-400 rounded cursor-pointer" />
+          <span>✨ Animasyon Modu</span>
+        </label>
+        <span id="anim-mode-badge" class="text-[10px] px-2 py-0.5 rounded-full bg-stone-800 text-stone-400 font-semibold">Aktif</span>
+      </div>
+      <div id="anim-options-panel" class="flex flex-col gap-2 pt-1 border-t border-stone-800/80">
+        <div class="grid grid-cols-2 gap-2">
+          <select id="select-wheel-anim" class="bg-stone-900 border border-stone-700 rounded-lg px-2 py-1.5 text-[11px] text-amber-100">
+            <option value="cascade">Sırayla Dizilme</option>
+            <option value="spin">Dönerek Açılış</option>
+            <option value="pulse">Altın Nabız</option>
+            <option value="bounce">Zıplayan Aktif Harf</option>
+          </select>
+          <select id="select-text-anim" class="bg-stone-900 border border-stone-700 rounded-lg px-2 py-1.5 text-[11px] text-amber-100">
+            <option value="words">Kelime kelime</option>
+            <option value="slide">Yukarıdan kayma</option>
+            <option value="typewriter">Daktilo</option>
+            <option value="letters">Harf harf cevap açılışı</option>
+            <option value="pop">Pop</option>
+          </select>
+        </div>
+        <div class="flex items-center justify-between gap-2">
+          <label class="flex items-center gap-1.5 text-[11px] text-stone-300 cursor-pointer">
+            <input id="toggle-slot-anim" type="checkbox" checked class="accent-amber-400 cursor-pointer" />
+            <span>Cevap göbekte zıplasın</span>
+          </label>
+          <button id="btn-preview-anim" type="button" class="px-2.5 py-1 rounded-lg bg-amber-500/20 text-amber-200 text-[10px] font-bold cursor-pointer">🎬 Önizle</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seslendirme & Zamanlama -->
+    <div class="bg-[#1b1714] border border-amber-900/30 rounded-2xl p-3 flex flex-col gap-2.5">
+      <div class="flex items-center justify-between gap-2">
+        <span class="text-xs font-semibold text-amber-200/90">🎙️ Seslendirme & Zamanlama</span>
+        <button id="btn-copy-tts-script" type="button" class="px-2 py-1 rounded-lg bg-stone-800 hover:bg-stone-700 border border-stone-600 text-amber-200 text-[10px] font-bold cursor-pointer">📋 Spiker Metni</button>
+      </div>
+
+      <div class="grid grid-cols-4 gap-1 bg-stone-950 p-1 rounded-xl border border-stone-800">
+        <button id="audio-mode-gemini" type="button" class="col-span-2 py-1.5 px-1 rounded-lg text-[10px] font-semibold bg-amber-500 text-stone-950 cursor-pointer">🎙️ Gemini Ses (satır satır)</button>
+        <button id="audio-mode-silent" type="button" class="col-span-2 py-1.5 px-1 rounded-lg text-[10px] font-semibold text-stone-300 hover:bg-stone-800 cursor-pointer">🎵 Sessiz + müzik</button>
+      </div>
+
+      <div id="gemini-settings" class="flex flex-col gap-1.5 bg-stone-950/70 p-2.5 rounded-xl border border-stone-800">
+        <div class="grid grid-cols-3 gap-1.5 items-center">
+          <span class="col-span-1 text-[11px] text-stone-300">Ses:</span>
+          <select id="select-gemini-voice" class="col-span-2 bg-stone-900 border border-stone-700 rounded-lg px-1.5 py-1.5 text-[11px] text-amber-100">
+            <option value="Charon" selected>Charon (tok erkek)</option><option value="Orus">Orus</option><option value="Fenrir">Fenrir</option><option value="Iapetus">Iapetus</option><option value="Puck">Puck</option><option value="Kore">Kore (kadın)</option><option value="Aoede">Aoede (kadın)</option><option value="Zephyr">Zephyr (kadın)</option>
+          </select>
+        </div>
+        <label class="flex items-center gap-2 text-[11px] text-stone-300 cursor-pointer"><input id="toggle-speak-answer" type="checkbox" class="accent-amber-400" /><span>Cevabı da seslendir (cevap açıldıktan sonra)</span></label>
+        <span id="gemini-status" class="text-[10px] text-stone-400">Her satır ayrı seslendirilir, önbelleğe alınır; tekrar render bedava. Anahtar sunucuda.</span>
+      </div>
+
+      <div class="grid grid-cols-3 gap-2 text-[11px]">
+        <div class="flex flex-col gap-1">
+          <div class="flex justify-between"><span class="text-stone-400">Efekt</span><span id="val-sfx" class="text-amber-300 font-bold">70%</span></div>
+          <input id="range-sfx" type="range" min="0" max="1" step="0.1" value="0.7" class="w-full accent-amber-400" />
+        </div>
+        <div class="flex flex-col gap-1">
+          <div class="flex justify-between"><span class="text-stone-400">Düşünme</span><span id="val-think" class="text-amber-300 font-bold">3 sn</span></div>
+          <input id="range-think" type="range" min="2" max="8" step="0.5" value="3" class="w-full accent-amber-400" />
+        </div>
+        <div class="flex flex-col gap-1">
+          <div class="flex justify-between"><span class="text-stone-400">Cevap</span><span id="val-reveal" class="text-amber-300 font-bold">1.6 sn</span></div>
+          <input id="range-reveal" type="range" min="0.8" max="4" step="0.2" value="1.6" class="w-full accent-amber-400" />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-1.5">
+        <button id="btn-fast-tempo" type="button" class="py-1 rounded-lg bg-stone-800 hover:bg-stone-700 text-amber-200 text-[10px] font-semibold cursor-pointer">⚡ Hızlı (2s / 1s)</button>
+        <button id="btn-normal-tempo" type="button" class="py-1 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 text-[10px] font-semibold cursor-pointer">⏱️ Standart (3s / 1.6s)</button>
+      </div>
+
+      <!-- MAKS 2:59 SÜRE KİLİDİ -->
+      <div class="bg-stone-950/80 border border-amber-500/30 rounded-xl p-2 flex flex-col gap-1">
+        <label class="flex items-center gap-1.5 text-[11px] text-amber-200 font-semibold cursor-pointer select-none">
+          <input id="toggle-max-duration-cap" type="checkbox" checked disabled class="accent-amber-400" />
+          <span>🔒 Maks. 2:57 (177 sn) kesin sınır · kapak dahil</span>
+        </label>
+        <span id="duration-cap-info" class="text-[10px] text-emerald-400 leading-tight">Video hiçbir durumda 2:57'yi geçmez.</span>
+      </div>
+
+      <!-- ARKA PLAN MÜZİĞİ -->
+      <div class="bg-stone-950/70 border border-stone-800 rounded-xl p-2 flex flex-col gap-1.5">
+        <div class="flex items-center justify-between text-[11px]">
+          <span class="text-stone-300 font-semibold">🎵 Arka Plan Müziği (MP3)</span>
+          <button id="btn-bgm-clear" type="button" class="text-[10px] text-stone-400 hover:text-rose-400 cursor-pointer hidden">✕ Kaldır</button>
+        </div>
+        <input id="input-bgm-file" type="file" accept="audio/*" class="text-[10px] text-stone-300 file:mr-2 file:py-1 file:px-2 file:rounded-lg file:border-0 file:bg-stone-800 file:text-amber-200 file:font-semibold file:cursor-pointer" />
+        <div class="flex items-center justify-between gap-2 text-[10px]">
+          <span class="text-stone-400">Ses: <strong id="val-bgm-vol" class="text-amber-300">20%</strong> (Konuşurken kısılır)</span>
+          <input id="range-bgm-vol" type="range" min="0" max="0.6" step="0.05" value="0.2" class="w-24 accent-amber-400" />
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-1.5 text-[11px] text-stone-300">
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input id="toggle-first-hint" type="checkbox" checked class="accent-amber-400 cursor-pointer" />
+          <span>İlk Harf İpucunu Kutuda Göster</span>
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input id="toggle-intro-speech" type="checkbox" checked class="accent-amber-400 cursor-pointer" />
+          <span>Giriş anonsunu oku (sığmazsa otomatik atlanır)</span>
+        </label>
+        <input id="input-intro-custom" type="text" placeholder="Özel giriş cümlesi (boşsa üst başlıktan üretilir)" class="bg-stone-900 border border-stone-700 rounded-lg px-2.5 py-1.5 text-[11px] text-amber-100" />
+      </div>
+    </div>
+
+    <!-- PASSAPAROLA HARF & SORU SAYISI AYARLARI -->
+    <div id="passaparola-settings-box" class="bg-[#1b1714] border border-amber-900/30 rounded-2xl p-3 flex flex-col gap-2">
+      <div class="flex items-center justify-between gap-2">
+        <span class="text-xs font-semibold text-amber-200/90">🎯 Soru / Harf Sayısı</span>
+        <div class="flex items-center gap-1.5">
+          <input id="input-question-count" type="number" min="1" max="29" value="22" class="w-12 bg-stone-900 border border-stone-700 rounded-md px-1 py-0.5 text-[11px] font-bold text-center text-amber-300" />
+          <span id="val-question-count" class="px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-300 text-[11px] font-bold">22 Soru</span>
+          <span id="est-duration-badge" class="px-2 py-0.5 rounded-md bg-stone-800 text-stone-300 text-[11px] font-mono">~2 dk 40 sn</span>
+        </div>
+      </div>
+      <input id="range-question-count" type="range" min="1" max="29" value="22" class="w-full accent-amber-400" />
+      <div class="grid grid-cols-6 gap-1">
+        <button type="button" data-qcount="6" class="btn-quick-count py-1 rounded-lg bg-stone-800 hover:bg-stone-700 text-[10px] font-semibold text-stone-200 cursor-pointer">6</button>
+        <button type="button" data-qcount="10" class="btn-quick-count py-1 rounded-lg bg-stone-800 hover:bg-stone-700 text-[10px] font-semibold text-stone-200 cursor-pointer">10</button>
+        <button type="button" data-qcount="12" class="btn-quick-count py-1 rounded-lg bg-stone-800 hover:bg-stone-700 text-[10px] font-semibold text-stone-200 cursor-pointer">12</button>
+        <button type="button" data-qcount="15" class="btn-quick-count py-1 rounded-lg bg-stone-800 hover:bg-stone-700 text-[10px] font-semibold text-stone-200 cursor-pointer">15</button>
+        <button type="button" data-qcount="20" class="btn-quick-count py-1 rounded-lg bg-stone-800 hover:bg-stone-700 text-[10px] font-semibold text-stone-200 cursor-pointer">20</button>
+        <button type="button" data-qcount="99" class="btn-quick-count py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-[10px] font-bold text-amber-200 cursor-pointer">Tümü</button>
+      </div>
+      <div class="flex flex-col gap-1">
+        <div class="flex items-center justify-between text-[11px]">
+          <span class="text-stone-300 font-semibold">Çemberdeki Harfleri Seç</span>
+          <div class="flex items-center gap-2">
+            <button id="btn-letters-all" type="button" class="text-amber-300 hover:underline cursor-pointer">Tümünü Seç</button>
+            <button id="btn-letters-none" type="button" class="text-stone-400 hover:underline cursor-pointer">Sıfırla</button>
+          </div>
+        </div>
+        <div id="letter-picker-grid" class="grid grid-cols-10 gap-1"></div>
+      </div>
+    </div>
+
+    <!-- HIZLI SORU EKLE (TEKRAR UYARILI) -->
+    <div class="bg-[#1b1714] border border-amber-900/30 rounded-2xl p-3 flex flex-col gap-2">
+      <span class="text-xs font-semibold text-amber-200/90">➕ Hızlı Soru Ekle (Tekrar Kontrollü)</span>
+      <div class="grid grid-cols-4 gap-1.5">
+        <input id="quick-q-letter" type="text" maxlength="1" placeholder="Harf" class="bg-stone-900 border border-stone-700 rounded-lg px-2 py-1.5 text-xs uppercase text-center font-bold text-amber-200" />
+        <input id="quick-q-answer" type="text" placeholder="Cevap (örn: MALAZGİRT)" class="col-span-3 bg-stone-900 border border-stone-700 rounded-lg px-2.5 py-1.5 text-xs uppercase text-amber-100" />
+      </div>
+      <input id="quick-q-text" type="text" placeholder="Soru metnini yazın..." class="bg-stone-900 border border-stone-700 rounded-lg px-2.5 py-1.5 text-xs text-stone-100" />
+      <div class="flex gap-1.5">
+        <input id="quick-q-note" type="text" placeholder="Alt bilgi / açıklama (isteğe bağlı)" class="flex-1 bg-stone-900 border border-stone-700 rounded-lg px-2.5 py-1.5 text-xs text-stone-200" />
+        <button id="btn-quick-add-q" type="button" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold cursor-pointer">+ Ekle</button>
+      </div>
+      <!-- Tekrar Uyarı Kutusu -->
+      <div id="quick-dup-warning" class="hidden rounded-xl bg-rose-950/80 border border-rose-500/50 p-2.5 text-[11px] text-rose-200 flex flex-col gap-2">
+        <span id="quick-dup-text" class="font-semibold">⚠️ Bu soru/cevap daha önce sorulmuştu! Lütfen değiştirin.</span>
+        <div class="flex gap-2">
+          <button id="btn-dup-change" type="button" class="flex-1 py-1 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 font-semibold cursor-pointer">Değiştireceğim</button>
+          <button id="btn-dup-force" type="button" class="flex-1 py-1 rounded-lg bg-rose-600 hover:bg-rose-500 text-white font-bold cursor-pointer">Yine de Ekle</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SORU LİSTESİ & DİREKT EXCEL YÜKLEME -->
+    <div class="bg-[#1b1714] border border-amber-900/30 rounded-2xl p-3 flex flex-col gap-2">
+      <div class="flex items-center justify-between gap-2 flex-wrap">
+        <span class="text-xs font-semibold text-amber-200/90">📝 Soru Listesi (Anlık Güncellenir)</span>
+        <div class="flex items-center gap-1.5">
+          <label class="px-2.5 py-1 rounded-lg bg-emerald-600/25 hover:bg-emerald-600/40 border border-emerald-400/50 text-emerald-200 text-[10px] font-bold cursor-pointer transition">
+            <span>📊 Excel Yükle</span>
+            <input id="input-direct-excel" type="file" accept=".xlsx,.xls,.csv,.txt,.docx" class="hidden" />
+          </label>
+          <button id="btn-shorten" type="button" class="px-2.5 py-1 rounded-lg bg-sky-600/25 hover:bg-sky-600/40 border border-sky-400/50 text-sky-200 text-[10px] font-bold cursor-pointer">✂️ Gemini ile kısalt</button>
+          <button id="btn-apply-questions" type="button" class="px-2.5 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/40 text-amber-200 text-[10px] font-bold cursor-pointer">Uygula</button>
+        </div>
+      </div>
+      <div id="dup-dropped" class="hidden rounded-lg bg-amber-950/75 border border-amber-500/40 px-2.5 py-1.5 text-[10px] text-amber-200 leading-snug"></div>
+      <div id="cap-warning" class="hidden rounded-lg bg-rose-900/80 border border-rose-400/70 px-2.5 py-1.5 text-[11px] font-bold text-rose-100 leading-snug"></div>
+      <div id="list-dup-warning" class="hidden rounded-lg bg-rose-950/75 border border-rose-500/40 px-2.5 py-1.5 text-[10px] text-rose-200 leading-snug"></div>
+      <textarea id="input-questions" rows="7" placeholder="HARF | Soru | CEVAP | Alt Bilgi" class="w-full bg-stone-950 border border-stone-700 rounded-xl p-2.5 text-[11px] font-mono text-stone-200 focus:outline-none focus:border-amber-400 leading-relaxed"></textarea>
+    </div>
+
+    <!-- OYNATMA & VİDEO İNDİRME KONTROLLERİ (YAPIŞKAN ALT ÇUBUK) -->
+    <div class="sticky bottom-0 z-30 bg-[#12100e]/95 backdrop-blur-md pt-2 pb-1 border-t border-amber-900/30 flex flex-col gap-2">
+      <div class="grid grid-cols-4 gap-1.5">
+        <button id="btn-play-pause" type="button" class="col-span-2 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-400 hover:to-yellow-300 text-stone-950 font-extrabold text-xs shadow-lg cursor-pointer">▶ Başlat</button>
+        <button id="btn-prev" type="button" class="py-2.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-bold cursor-pointer">⏮</button>
+        <button id="btn-next" type="button" class="py-2.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-bold cursor-pointer">⏭</button>
+      </div>
+
+      <!-- HIZLI OFFLINE MP4 RENDER -->
+      <button id="btn-fast-render" type="button" class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-stone-950 font-extrabold text-xs shadow-lg flex items-center justify-center gap-2 cursor-pointer transition">
+        <span>⚡</span><span>İzlemeden Hızlı İndir (MP4 · Maks 2:57)</span>
+      </button>
+
+      <!-- Render İlerleme Çubuğu -->
+      <div id="fast-render-progress-box" class="hidden bg-stone-950 border border-emerald-500/40 rounded-xl p-2.5 flex flex-col gap-1.5">
+        <div class="flex items-center justify-between text-[11px]">
+          <span id="fast-render-status" class="text-emerald-300 font-semibold">Hazırlanıyor...</span>
+          <button id="btn-cancel-fast-render" type="button" class="text-rose-400 hover:text-rose-300 font-bold cursor-pointer">✕ İptal</button>
+        </div>
+        <div class="w-full h-2 bg-stone-800 rounded-full overflow-hidden">
+          <div id="fast-render-bar" class="h-full bg-gradient-to-r from-emerald-500 to-teal-300 transition-all duration-150" style="width:0%"></div>
+        </div>
+      </div>
+
+      <!-- CANLI KAYDET & İNDİR -->
+      <div class="grid grid-cols-3 gap-1.5">
+        <button id="btn-record-download" type="button" class="col-span-2 py-2 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs shadow cursor-pointer">🎬 Canlı Kaydet & İndir</button>
+        <button id="btn-reset" type="button" class="py-2 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-300 font-semibold text-xs cursor-pointer">↺ Sıfırla</button>
+      </div>
+
+      <label class="flex items-center gap-2 text-[10px] text-stone-400 cursor-pointer select-none">
+        <input id="toggle-instant-finish" type="checkbox" checked class="accent-amber-400 cursor-pointer" />
+        <span>⚡ Son sorudan sonra kapanış beklemeden hemen indir</span>
+      </label>
+    </div>
+  </aside>
+
+  <!-- SAĞ 9:16 CANLI SAHNE -->
+  <main id="stage-wrapper" class="flex-1 min-h-[75vh] lg:h-screen flex items-center justify-center p-4 sm:p-6 bg-[#090807] relative">
+    <!-- Tam Ekran Kayıt Yüzen Kontrolleri -->
+    <div id="recording-float-controls" class="hidden fixed top-4 right-4 z-50 gap-2">
+      <button id="btn-float-play" type="button" class="px-3 py-2 rounded-xl bg-amber-500 text-stone-950 font-bold text-xs shadow-lg cursor-pointer">▶ / ⏸</button>
+      <button id="btn-exit-record" type="button" class="px-3 py-2 rounded-xl bg-stone-900/90 border border-stone-600 text-stone-100 font-bold text-xs shadow-lg cursor-pointer">✕ Çık</button>
+    </div>
+
+    <!-- 9:16 SHORTS SAHNESİ -->
+    <div id="shorts-stage" class="shorts-stage w-full max-w-[390px] sm:max-w-[420px] rounded-[28px] flex flex-col justify-between px-4 pt-6 pb-4">
+      <div id="stage-bg-layer"></div>
+      <div id="stage-bg-dim"></div>
+      <div id="roaming-watermark" class="roaming-watermark wm-paused">@animasyon.tarih</div>
+
+      <!-- Üst Başlık -->
+      <header class="relative z-20 text-center flex flex-col items-center gap-0.5 pt-1">
+        <span id="stage-episode-badge" class="hidden mb-1 px-2.5 py-0.5 rounded-full bg-amber-500/20 border border-amber-400/50 text-amber-200 text-[10px] font-extrabold tracking-widest uppercase"></span>
+        <span id="stage-kicker" class="text-[11px] font-bold tracking-[0.26em] text-amber-300/90 uppercase">HER HARFE BİR</span>
+        <h2 id="stage-title" class="font-cinzel text-2xl sm:text-[26px] font-extrabold title-shimmer leading-tight tracking-wide">TARİH SORUSU</h2>
+        <p id="stage-subtitle" class="text-xs text-amber-100/75 font-medium">kaçını bileceksin?</p>
+      </header>
+
+      <!-- ORTA ALAN: PASSAPAROLA ÇEMBERİ VEYA ÇENGEL BULMACA -->
+      <section class="relative z-20 flex-1 flex items-center justify-center my-1">
+        <!-- Passaparola Çemberi -->
+        <div id="wheel-container" class="relative w-[275px] h-[275px] sm:w-[295px] sm:h-[295px] flex items-center justify-center">
+          <div class="wheel-inner-ring absolute w-[178px] h-[178px] rounded-full border border-amber-400/20 pointer-events-none"></div>
+          <div id="wheel-nodes" class="absolute inset-0"></div>
+          <div id="center-hub" class="center-hub w-[112px] h-[112px] rounded-full flex flex-col items-center justify-center text-center px-2 z-10">
+            <div id="hub-idle" class="flex flex-col items-center">
+              <span class="font-cinzel text-xs font-extrabold text-amber-200 tracking-wider">HAZIR MISIN?</span>
+              <span class="text-[10px] text-amber-400/70 mt-0.5">Başlat'a bas</span>
+            </div>
+            <div id="hub-active" class="hidden flex-col items-center">
+              <span id="hub-letter-badge" class="text-[10px] font-extrabold tracking-widest text-amber-300 uppercase">A HARFİ</span>
+              <span id="hub-timer" class="font-mono-num text-3xl font-extrabold text-amber-100 leading-none my-0.5">3</span>
+              <span id="hub-phase" class="text-[10px] text-stone-300">Dinle...</span>
+              <span id="hub-answer" class="hub-answer"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Çengel Bulmaca Izgarası -->
+        <div id="crossword-container" class="hidden w-full max-w-[330px] flex-col items-center justify-center gap-2">
+          <div id="crossword-grid" class="grid gap-1 p-2 rounded-2xl bg-black/40 border border-amber-500/25"></div>
+          <div id="cw-timer-pill" class="px-3 py-1 rounded-full bg-stone-900/90 border border-amber-400/40 text-xs font-bold text-amber-200">HAZIR MISIN?</div>
+        </div>
+      </section>
+
+      <!-- ALT SORU KARTI & CEVAP KUTULARI -->
+      <section class="relative z-20 flex flex-col gap-2.5 pb-1">
+        <div id="question-card" class="question-card rounded-2xl px-4 py-3.5 text-center min-h-[104px] flex flex-col items-center justify-center gap-1.5">
+          <div id="q-meta-row" class="flex items-center justify-center gap-1.5 text-[10px] font-extrabold tracking-widest uppercase">
+            <span id="q-progress" class="text-amber-400">1 / 22</span>
+            <span class="text-amber-500/50">•</span>
+            <span id="q-letter-label" class="text-amber-200">A HARFİ</span>
+          </div>
+          <p id="q-text" class="text-sm sm:text-[15px] font-bold text-stone-100 leading-snug">Sorular hazır. Başlat'a tıklayarak oynatabilirsiniz.</p>
+          <p id="q-note" class="hidden note-big text-[13px] font-bold text-emerald-300 bg-emerald-950/60 border border-emerald-500/35 rounded-lg px-2.5 py-0.5"></p>
+        </div>
+
+        <div id="answer-slots" class="flex flex-wrap items-center justify-center gap-1.5 min-h-[34px]"></div>
+
+        <div class="text-center pt-0.5">
+          <span id="stage-watermark" class="text-[11px] font-bold tracking-wider text-amber-200/45">@animasyon.tarih</span>
+        </div>
+      </section>
+
+      <!-- BİTİŞ / KAPANIŞ EKRANI -->
+      <div id="outro-overlay" class="hidden absolute inset-0 z-40 bg-black/80 backdrop-blur-sm flex items-center justify-center p-5">
+        <div class="outro-card w-full rounded-3xl bg-gradient-to-b from-[#241a11] to-[#120d09] border border-amber-400/50 p-6 text-center flex flex-col items-center gap-3 shadow-2xl">
+          <span class="text-3xl">🏆</span>
+          <h3 class="font-cinzel text-2xl font-extrabold text-amber-200">TEBRİKLER!</h3>
+          <p class="text-xs text-stone-300">Kaç tanesini bildin? Yorumlara yazmayı unutma!</p>
+          <div class="px-4 py-2 rounded-full bg-amber-500 text-stone-950 font-extrabold text-xs tracking-wide shadow-lg">ABONE OL & BEĞEN</div>
+          <span id="outro-wm" class="text-[11px] text-amber-300/75 font-bold">@animasyon.tarih</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- MODAL 1: TARİH SORU BANKASI & DAHA ÖNCE SORULANLAR -->
+  <div id="bank-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-5">
+    <div class="w-full max-w-4xl max-h-[90vh] bg-[#16120f] border border-amber-500/35 rounded-3xl flex flex-col overflow-hidden shadow-2xl">
+      <div class="p-4 border-b border-amber-900/40 flex items-center justify-between gap-2">
+        <div class="flex items-center gap-2">
+          <button id="tab-btn-bank" type="button" class="px-3.5 py-2 rounded-xl bg-amber-500 text-stone-950 font-extrabold text-xs cursor-pointer">📚 Soru Bankası (<span id="modal-bank-count">0</span>)</button>
+          <button id="tab-btn-asked" type="button" class="px-3.5 py-2 rounded-xl bg-stone-800 text-stone-200 hover:bg-stone-700 font-bold text-xs cursor-pointer">🕒 Daha Önce Sorulanlar (<span id="modal-asked-count">0</span>)</button>
+        </div>
+        <button id="btn-close-bank" type="button" class="w-8 h-8 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200 font-bold cursor-pointer">✕</button>
+      </div>
+
+      <!-- SEKME 1: SORU BANKASI -->
+      <div id="tab-panel-bank" class="flex-1 flex flex-col overflow-hidden p-4 gap-3">
+        <div class="flex flex-wrap items-center gap-2">
+          <input id="bank-search" type="text" placeholder="Soru, cevap veya harf ara..." class="flex-1 min-w-[180px] bg-stone-900 border border-stone-700 rounded-xl px-3 py-2 text-xs text-stone-100" />
+          <label class="px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold cursor-pointer">
+            <span>📂 Excel / TXT / Word Yükle</span>
+            <input id="input-bank-file" type="file" accept=".xlsx,.xls,.csv,.txt,.docx" class="hidden" />
+          </label>
+          <button id="btn-bank-random" type="button" class="px-3 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 text-xs font-extrabold cursor-pointer">🎲 Rastgele Doldur</button>
+          <button id="btn-bank-backup" type="button" class="px-3 py-2 rounded-xl bg-stone-800 hover:bg-stone-700 text-amber-200 text-xs font-semibold cursor-pointer">💾 .TXT Yedekle</button>
+        </div>
+        <div id="bank-categories" class="flex flex-wrap gap-1.5"></div>
+        <div id="bank-import-msg" class="hidden text-xs font-semibold text-emerald-300 bg-emerald-950/60 border border-emerald-500/35 rounded-xl px-3 py-2"></div>
+        <div id="bank-list" class="flex-1 overflow-y-auto grid grid-cols-1 sm:grid-cols-2 gap-2 pr-1"></div>
+      </div>
+
+      <!-- SEKME 2: DAHA ÖNCE SORULANLAR -->
+      <div id="tab-panel-asked" class="hidden flex-1 flex-col overflow-hidden p-4 gap-3">
+        <div class="flex flex-wrap items-center gap-2">
+          <input id="asked-search" type="text" placeholder="Daha önce sorulanlarda ara..." class="flex-1 min-w-[180px] bg-stone-900 border border-stone-700 rounded-xl px-3 py-2 text-xs text-stone-100" />
+          <button id="btn-asked-export" type="button" class="px-3 py-2 rounded-xl bg-amber-500/20 border border-amber-400/40 text-amber-200 text-xs font-bold cursor-pointer">💾 Arşivi .TXT İndir</button>
+          <button id="btn-asked-clear" type="button" class="px-3 py-2 rounded-xl bg-rose-900/60 hover:bg-rose-800 text-rose-200 text-xs font-bold cursor-pointer">🗑️ Arşivi Temizle</button>
+        </div>
+        <div id="asked-list" class="flex-1 overflow-y-auto flex flex-col gap-2 pr-1"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: KAPAK FOTOĞRAFI (THUMBNAIL) STÜDYOSU -->
+  <div id="cover-modal" class="hidden fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-3 sm:p-5">
+    <div class="w-full max-w-3xl bg-[#16120f] border border-amber-500/40 rounded-3xl p-4 sm:p-5 flex flex-col sm:flex-row gap-5 shadow-2xl max-h-[92vh] overflow-y-auto">
+      <div class="flex flex-col items-center gap-2">
+        <canvas id="cover-preview-canvas" width="540" height="960" class="w-[240px] sm:w-[270px] rounded-2xl border border-amber-400/40 shadow-2xl bg-black"></canvas>
+      </div>
+      <div class="flex-1 flex flex-col justify-between gap-3">
+        <div class="flex flex-col gap-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-cinzel text-lg font-bold text-amber-200">📸 Kapak Fotoğrafı Stüdyosu</h3>
+            <button id="btn-close-cover" type="button" class="w-8 h-8 rounded-xl bg-stone-800 text-stone-200 font-bold cursor-pointer">✕</button>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="text-[11px] text-stone-400">Üst Rozet</label>
+            <input id="cover-inp-badge" type="text" value="HER HARFE BİR SORU" class="bg-stone-900 border border-stone-700 rounded-xl px-3 py-2 text-xs text-amber-100" />
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="text-[11px] text-stone-400">Büyük Başlık</label>
+            <input id="cover-inp-title" type="text" value="TARİH PASSAPAROLA" class="bg-stone-900 border border-stone-700 rounded-xl px-3 py-2 text-xs text-amber-100 font-bold" />
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="text-[11px] text-stone-400">Alt Vurgu Yazısı</label>
+            <input id="cover-inp-accent" type="text" value="22/22 YAPABİLİR MİSİN?" class="bg-stone-900 border border-stone-700 rounded-xl px-3 py-2 text-xs text-amber-100" />
+          </div>
+          <div class="flex items-center gap-3">
+            <label class="text-[11px] text-stone-400">Vurgu Rengi:</label>
+            <input id="cover-inp-color" type="color" value="#fbbf24" class="w-10 h-8 rounded bg-transparent cursor-pointer" />
+          </div>
+        </div>
+        <div class="flex gap-2 pt-2">
+          <button id="btn-download-cover" type="button" class="flex-1 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-400 text-stone-950 font-extrabold text-xs cursor-pointer">⬇️ 1080×1920 PNG İndir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="login-gate"><div class="bg-[#16120f] border border-amber-500/40 rounded-2xl p-6 text-center flex flex-col gap-3"><b class="text-amber-200">Önce panele giriş yap</b><a href="./" class="px-4 py-2 rounded-xl bg-amber-500 text-stone-950 font-extrabold text-xs">Panele git →</a></div></div>
+
+  <!-- BİLDİRİM TOAST -->
+  <div id="toast-box" class="hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-[60] px-4 py-2.5 rounded-2xl bg-emerald-600 text-white text-xs font-bold shadow-2xl"></div>
+
+  <script>
+  (() => {
+    'use strict';
+
+    // ==================== SABİTLER & HAZIR VERİLER ====================
+    const TR_ALPHABET = ['A','B','C','Ç','D','E','F','G','H','I','İ','J','K','L','M','N','O','Ö','P','R','S','Ş','T','U','Ü','V','Y','Z'];
+    const STORAGE_BANK_KEY = 'hizli_studyo_bank_v4';
+    const STORAGE_ASKED_KEY = 'passaparola_asked_history_v3';
+const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
+    const READ_PAD = 0.25; // soru sesi bittikten sonra kısa nefes, sonra geri sayım
+
+    const DEFAULT_TARIH_QUESTIONS = [
+      "A | Kanuni Sultan Süleyman'ın annesi kimdir? | Ayşe Hafsa Sultan | İlk Valide Sultan",
+      "B | Atatürk'ün 1919'da Samsun'a çıktığı vapurun adı nedir? | Bandırma | 19 Mayıs 1919",
+      "C | Padişahlar tahta çıkınca yeniçerilere dağıtılan bahşişin adı nedir? | Cülus | Tahta çıkış bahşişi",
+      "D | Atatürk'ün vefat ettiği İstanbul'daki saray hangisidir? | Dolmabahçe | 10 Kasım 1938",
+      "E | İstanbul'dan önceki Osmanlı başkenti neresidir? | Edirne | 1363–1453",
+      "F | Atatürk'ün Anıtkabir'de sergilenen köpeğinin adı nedir? | Foks | Anıtkabir Müzesi",
+      "G | Atatürk'ün bizzat yazdığı matematik kitabının adı nedir? | Geometri | 1937",
+      "H | Fetihte gemilerin karadan yürütülerek indirildiği su yolu hangisidir? | Haliç | 1453",
+      "İ | Türkiye'nin ikinci cumhurbaşkanı kimdir? | İsmet İnönü | 1938–1950",
+      "K | Kurtuluş Savaşı'nda Doğu Cephesi komutanı kimdir? | Kazım Karabekir | Doğu Cephesi",
+      "M | Şehzade Mustafa'yı boğduğu rivayet edilen paşa kimdir? | Mahmut Paşa | Zal Mahmut Paşa · 1553",
+      "N | III. Selim'in kurduğu modern ordunun adı nedir? | Nizam-ı Cedid | 1793",
+      "O | Atatürk'ün 1925'te kurduğu çiftlik hangisidir? | Orman Çiftliği | 1925 Ankara",
+      "P | 1513'te ünlü dünya haritasını çizen Osmanlı denizcisi kimdir? | Piri Reis | 1513",
+      "R | Fatih'in Anadolu Hisarı'nın karşısına yaptırdığı hisar hangisidir? | Rumeli Hisarı | 1452",
+      "S | 1187'de Kudüs'ü Haçlılardan geri alan komutan kimdir? | Selahaddin Eyyubi | 1187",
+      "Ş | Osman Gazi'nin kayınpederi olan ünlü âlim kimdir? | Şeyh Edebali | Osmanlı'nın manevi kurucusu",
+      "T | Divan-ı Hümayun'un toplandığı saray hangisidir? | Topkapı | Osmanlı yönetim merkezi",
+      "U | Yerleşik hayata geçen ilk Türk devleti hangisidir? | Uygurlar | 744–840",
+      "V | Osmanlı'nın son padişahı kimdir? | Vahdettin | 1918–1922",
+      "Y | Kanuni Sultan Süleyman'ın süt kardeşi kimdir? | Yahya Efendi | Beşiktaşlı Yahya Efendi",
+      "Z | Fatih'in fetihteki ünlü veziri kimdir? | Zağanos Paşa | 1453"
+];
+
+    const DEFAULT_FUTBOL_QUESTIONS = [
+      "A | 2005 Şampiyonlar Ligi finaline ev sahipliği yapan İstanbul stadyumu hangisidir? | Atatürk Olimpiyat Stadyumu - 25 Mayıs 2005 (Liverpool | Milan",
+      "B | 2009-2010 Süper Lig şampiyonu hangi Anadolu kulübüdür? | Bursaspor | 16 Mayıs 2010 (75 Puan)",
+      "C | 2000 UEFA Kupası finalinde penaltılarda devleşen Galatasaray kalecisi kimdir? | Cláudio Taffarel | 17 Mayıs 2000 (Kopenhag)",
+      "Ç | Premier League'de Yılın Takımı'na seçilen ilk Türk stoper kimdir? | Çağlar Söyüncü | 2019-2020 Sezonu (Leicester City)",
+      "D | Galatasaray'da topuk golüyle hafızalara kazınan Fildişi Sahilli yıldız kimdir? | Didier Drogba | 9 Nisan 2013 (Real Madrid Maçı)",
+      "E | Rüştü Reçber'den sonra A Milli formayı en çok giyen futbolcu kimdir? | Emre Belözoğlu | 101 Resmi Maç (2000-2019)",
+      "F | Galatasaray ile UEFA Kupası'nı kazanan teknik direktör kimdir? | Fatih Terim | 17 Mayıs 2000",
+      "G | Avrupa'da kupa kazanan ilk ve tek Türk futbol kulübü hangisidir? | Galatasaray | 2000 UEFA ve Süper Kupa",
+      "H | 249 golle Süper Lig tarihinin en golcü futbolcusu kimdir? | Hakan Şükür | 1987-2008",
+      "İ | 2002 Dünya Kupası'nda Senegal'e altın golü atan futbolcumuz kimdir? | İlhan Mansız | 22 Haziran 2002 (94. Dakika)",
+      "K | 1997 ve 2002 yıllarında Türkiye Kupası'nı kazanan Körfez ekibi hangisidir? | Kocaelispor | 1997 ve 2002 Finalleri",
+      "L | Fenerbahçe'nin \"Ordinaryüs\" lakaplı efsane futbolcusu kimdir? | Lefter Küçükandonyadis | 615 Maçta 423 Gol",
+      "M | Galatasaray'ın \"Taçsız Kral\" lakaplı efsane golcüsü kimdir? | Metin Oktay | 6 Kez Süper Lig Gol Kralı",
+      "N | EURO 2008'de Çek Cumhuriyeti'ne son dakikalarda 2 gol atan kaptanımız kimdir? | Nihat Kahveci | 15 Haziran 2008 (87. ve 89. Dk)",
+      "O | Başakşehir'i tarihinde ilk kez Süper Lig şampiyonu yapan teknik direktör kimdir? | Okan Buruk | 2019-2020 Sezonu",
+      "P | Beşiktaş taraftarının unutulmaz Fransız golcüsü kimdir? | Pascal Nouma | 2002-2003 (100. Yıl Şampiyonu)",
+      "R | A Milli formayı en çok giyen efsane kalecimiz kimdir? | Rüştü Reçber | 120 Resmi Maç (1994-2012)",
+      "S | Beşiktaş'ta hem futbolcu hem hoca olarak şampiyonluk yaşayan efsane kimdir? | Sergen Yalçın | 2020-2021 Çifte Kupa",
+      "T | İstanbul dışından Süper Lig şampiyonu çıkan ilk kulüp hangisidir? | Trabzonspor | 1975-1976 Sezonu",
+      "U | EURO 2008'de Almanya'ya açılış golümüzü atan eski Fenerbahçeli futbolcu kimdir? | Uğur Boral | 25 Haziran 2008 (22. Dakika)",
+      "V | Uzun yıllar Fenerbahçe ve A Milli Takım kalesini koruyan file bekçimiz kimdir? | Volkan Demirel | 525 Resmi Maç",
+      "Z | Türkiye'nin ilk resmi milli maçında ilk golümüzü atan efsane futbolcu kimdir? | Zeki Rıza Sporel | 26 Ekim 1923 (Romanya Maçı)"
+];
+
+    const BUILTIN_BANK_SEED = [...DEFAULT_TARIH_QUESTIONS.map(l => ['Tarih (doğrulanmış)', l]), ...DEFAULT_FUTBOL_QUESTIONS.map(l => ['Spor (doğrulanmış)', l])].map(([cat, line]) => {
+      const p = line.split('|').map(x => x.trim());
+      return { letter: p[0], question: p[1], answer: p[2].toLocaleUpperCase('tr-TR'), note: p[3] || '', category: cat };
+    });
+
+    const BG_PRESETS = {
+      default: '',
+      parchment: 'radial-gradient(circle at 50% 30%, #6b4721 0%, #2b1a0c 58%, #0f0a06 100%)',
+      stadium: 'radial-gradient(circle at 50% 25%, #0f5132 0%, #07261a 58%, #020c09 100%)',
+      navy: 'radial-gradient(circle at 50% 28%, #1e3a8a 0%, #0f172a 60%, #020617 100%)',
+      crimson: 'radial-gradient(circle at 50% 30%, #7f1d1d 0%, #3b0a0a 60%, #140404 100%)',
+      obsidian: 'radial-gradient(circle at 50% 30%, #27272a 0%, #18181b 60%, #09090b 100%)'
+    };
+
+    // ==================== UYGULAMA DURUMU ====================
+    const state = {
+      mode: 'passaparola', // 'passaparola' | 'crossword'
+      theme: 'tarih',      // 'tarih' | 'sport'
+      audioMode: 'gemini', // 'gemini' | 'silent'
+      remoteAsked: [], // panelden: projects/*/script.json + Blobs studyo_sorulanlar
+      voiceCache: new Map(), // anahtar -> AudioBuffer
+      phaseT0: 0, qT0: 0, thinkT0: 0, thinkDur: 3, revealT0: 0,
+      bgPreset: 'default',
+      bgImageUrl: '',
+      bgImageObj: null,
+      bgDim: 0.45,
+      allParsedQuestions: [],
+      questions: [],
+      selectedLetters: new Set(TR_ALPHABET),
+      questionCount: 22,
+      currentIndex: -1,
+      phase: 'idle', // 'idle' | 'intro' | 'reading' | 'thinking' | 'reveal' | 'outro'
+      timerVal: 3,
+      isPlaying: false,
+      runToken: 0,
+      crossword: null,
+      solvedIndices: new Set(),
+      // Ses
+      audioCtx: null,
+      audioMixDest: null,
+      externalAudioBuffer: null,
+      externalSegments: [],
+      externalAudioUrl: '',
+      bgmBuffer: null,
+      bgmSource: null,
+      bgmGain: null,
+      // Kayıt & Render
+      isRecording: false,
+      mediaRecorder: null,
+      recordedChunks: [],
+      captureCanvas: null,
+      captureCtx: null,
+      captureRaf: null,
+      fastRenderAbort: false,
+      // Banka & Arşiv
+      bank: [],
+      askedArchive: [],
+      bankFilterCat: 'Tümü',
+      pendingQuickQ: null
+    };
+
+    // ==================== DOM REFERANSLARI ====================
+    const $ = id => document.getElementById(id);
+    const els = {
+      stage: $('shorts-stage'),
+      bgLayer: $('stage-bg-layer'),
+      bgDim: $('stage-bg-dim'),
+      roamingWm: $('roaming-watermark'),
+      stageKicker: $('stage-kicker'),
+      stageTitle: $('stage-title'),
+      stageSubtitle: $('stage-subtitle'),
+      stageWm: $('stage-watermark'),
+      stageEpisode: $('stage-episode-badge'),
+      outroWm: $('outro-wm'),
+      wheelContainer: $('wheel-container'),
+      wheelNodes: $('wheel-nodes'),
+      centerHub: $('center-hub'),
+      hubIdle: $('hub-idle'),
+      hubActive: $('hub-active'),
+      hubLetterBadge: $('hub-letter-badge'),
+      hubTimer: $('hub-timer'),
+      hubPhase: $('hub-phase'),
+      hubAnswer: $('hub-answer'),
+      cwContainer: $('crossword-container'),
+      cwGrid: $('crossword-grid'),
+      cwTimerPill: $('cw-timer-pill'),
+      qMetaRow: $('q-meta-row'),
+      qProgress: $('q-progress'),
+      qLetterLabel: $('q-letter-label'),
+      qText: $('q-text'),
+      qNote: $('q-note'),
+      answerSlots: $('answer-slots'),
+      outroOverlay: $('outro-overlay'),
+      inputQuestions: $('input-questions'),
+      letterPickerGrid: $('letter-picker-grid'),
+      toast: $('toast-box')
+    };
+
+    // ==================== YARDIMCI FONKSİYONLAR ====================
+    let toastTimer = null;
+    function showToast(msg, isError = false) {
+      els.toast.textContent = msg;
+      els.toast.className = `fixed bottom-5 left-1/2 -translate-x-1/2 z-[60] px-4 py-2.5 rounded-2xl text-white text-xs font-bold shadow-2xl ${isError ? 'bg-rose-600' : 'bg-emerald-600'}`;
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => els.toast.classList.add('hidden'), 2800);
+    }
+
+    function trUpper(str) {
+      return String(str || '').trim().toLocaleUpperCase('tr-TR');
+    }
+
+    function normalizeKey(str) {
+      return trUpper(str).replace(/[^A-ZÇĞİÖŞÜ0-9]/g, '');
+    }
+
+    function sleep(ms) {
+      return new Promise(res => setTimeout(res, Math.max(0, ms)));
+    }
+
+    function formatMinSec(sec) {
+      const s = Math.max(0, Math.round(sec));
+      const m = Math.floor(s / 60);
+      const r = s % 60;
+      return `${m} dk ${String(r).padStart(2, '0')} sn`;
+    }
+
+    function getIntroText() {
+      const custom = $('input-intro-custom').value.trim();
+      if (custom) return custom;
+      const kicker = $('input-kicker').value.trim();
+      const title = $('input-title').value.trim();
+      const sub = $('input-subtitle').value.trim();
+      return `${kicker} ${title}. ${sub} Hazırsan başlıyoruz!`.replace(/\s+/g, ' ').trim();
+    }
+
+    function escapeHtml(s) {
+      return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    // ==================== PANEL API · SES ÖNBELLEĞİ · TEKRAR KONTROLÜ ====================
+    const TOKEN = localStorage.getItem('at_token') || '';
+    async function api(action, body = {}) {
+      const r = await fetch('/api', { method: 'POST', headers: { 'content-type': 'application/json', 'x-panel-token': TOKEN }, body: JSON.stringify({ action, ...body }) });
+      if (r.status === 401) { $('login-gate').classList.add('on'); throw new Error('Giriş gerekli'); }
+      const j = await r.json().catch(() => ({})); if (!r.ok) throw new Error(j.hata || ('HTTP ' + r.status)); return j;
+    }
+    let idbP = null;
+    function idb() {
+      if (!idbP) idbP = new Promise((res, rej) => { const q = indexedDB.open('hizli-studyo', 1); q.onupgradeneeded = () => q.result.createObjectStore('ses'); q.onsuccess = () => res(q.result); q.onerror = () => rej(q.error); });
+      return idbP;
+    }
+    async function idbGet(k) { try { const d = await idb(); return await new Promise(r => { const t = d.transaction('ses').objectStore('ses').get(k); t.onsuccess = () => r(t.result || null); t.onerror = () => r(null); }); } catch (e) { return null; } }
+    async function idbSet(k, v) { try { const d = await idb(); await new Promise(r => { const t = d.transaction('ses', 'readwrite'); t.objectStore('ses').put(v, k); t.oncomplete = r; t.onerror = r; }); } catch (e) {} }
+    async function sha(text) { const h = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)); return Array.from(new Uint8Array(h)).map(b => b.toString(16).padStart(2, '0')).join('').slice(0, 32); }
+    function bigrams(s) { const k = normalizeKey(s); const out = new Map(); for (let i = 0; i < k.length - 1; i++) { const g = k.slice(i, i + 2); out.set(g, (out.get(g) || 0) + 1); } return out; }
+    function similarity(a, b) { // Dice katsayısı (0..1)
+      const A = bigrams(a), B = bigrams(b); let na = 0, nb = 0, x = 0;
+      A.forEach(v => na += v); B.forEach(v => nb += v); if (!na || !nb) return 0;
+      A.forEach((v, g) => { if (B.has(g)) x += Math.min(v, B.get(g)); });
+      return (2 * x) / (na + nb);
+    }
+    function findRemoteDup(q) {
+      const ak = normalizeKey(q.answer);
+      for (const r of state.remoteAsked) {
+        if (ak && normalizeKey(r.a) === ak) return r;
+        if (q.question && r.q && similarity(q.question, r.q) >= 0.8) return r;
+      }
+      return null;
+    }
+    async function loadRemoteAsked() {
+      if (!TOKEN) { $('login-gate').classList.add('on'); return; }
+      try {
+        const r = await api('studyo_sorulanlar');
+        state.remoteAsked = [...(r.proje || []), ...(r.studyo || [])];
+        checkTextareaDuplicates();
+      } catch (e) { if (e.message !== 'Giriş gerekli') showToast('Sorulanlar arşivi alınamadı: ' + e.message, true); }
+    }
+    function saveRemoteAsked(list) {
+      const sorular = list.map(q => ({ q: q.question, a: q.answer, harf: q.letter }));
+      api('studyo_kaydet', { sorular }).then(() => { state.remoteAsked.push(...sorular); }).catch(() => {});
+    }
+    function speechTextFor(q) { return `${q.letter} harfi. ${q.question}`; }
+    function answerSpeechText(q) { return String(q.answer || '').toLocaleLowerCase('tr-TR').replace(/(^|\s)\S/g, m => m.toLocaleUpperCase('tr-TR')) + '.'; }
+    function estSpeech(text) { return Math.max(1.6, String(text || '').split(/\s+/).filter(Boolean).length * 0.42 + 0.5); }
+    function pcmToBuffer(b64, sr) {
+      const bin = atob(b64); const n = bin.length >> 1; ensureAudioReady();
+      const buf = state.audioCtx.createBuffer(1, Math.max(1, n), sr || 24000); const ch = buf.getChannelData(0);
+      for (let i = 0; i < n; i++) { let v = bin.charCodeAt(2 * i) | (bin.charCodeAt(2 * i + 1) << 8); if (v >= 32768) v -= 65536; ch[i] = v / 32768; }
+      return buf;
+    }
+    function trimSilence(buf) { // baş/son sessizliği kırp (senkron için kesin süre)
+      const d = buf.getChannelData(0), sr = buf.sampleRate, th = 0.012; let a = 0, b = d.length - 1;
+      while (a < b && Math.abs(d[a]) < th) a++; while (b > a && Math.abs(d[b]) < th) b--;
+      a = Math.max(0, a - Math.floor(sr * 0.04)); b = Math.min(d.length - 1, b + Math.floor(sr * 0.08));
+      if (b - a < sr * 0.2) return buf;
+      const out = state.audioCtx.createBuffer(1, b - a + 1, sr); out.getChannelData(0).set(d.subarray(a, b + 1)); return out;
+    }
+    function voiceKeyFor(text) { return $('select-gemini-voice').value + '|' + text; }
+    function cachedDur(text) { const b = state.voiceCache.get(voiceKeyFor(text)); return b ? b.duration : null; }
+    async function fetchLineAudio(text) {
+      const vk = voiceKeyFor(text);
+      if (state.voiceCache.has(vk)) return state.voiceCache.get(vk);
+      const key = await sha(vk);
+      let rec = await idbGet(key);
+      if (!rec) {
+        let last;
+        for (let t = 0; t < 3 && !rec; t++) {
+          try { const r = await api('tts_satir', { metin: text, ses: $('select-gemini-voice').value }); rec = { b64: r.b64, sr: r.sr }; }
+          catch (e) { last = e; if (e.message === 'Giriş gerekli') throw e; await sleep(1200 * (t + 1)); }
+        }
+        if (!rec) throw last || new Error('TTS başarısız');
+        await idbSet(key, rec);
+      }
+      const buf = trimSilence(pcmToBuffer(rec.b64, rec.sr));
+      state.voiceCache.set(vk, buf);
+      return buf;
+    }
+    function allSpeechTexts() {
+      const t = [];
+      if ($('toggle-intro-speech').checked) t.push(getIntroText());
+      state.questions.forEach(q => { t.push(speechTextFor(q)); if ($('toggle-speak-answer').checked) t.push(answerSpeechText(q)); });
+      return t;
+    }
+    async function prepareAllAudio(onProgress) {
+      if (state.audioMode !== 'gemini') return true;
+      const texts = [...new Set(allSpeechTexts())]; let done = 0, fail = 0, i = 0;
+      const statusEl = $('gemini-status');
+      await Promise.all(Array.from({ length: 3 }, async () => {
+        while (i < texts.length) {
+          const t = texts[i++];
+          try { await fetchLineAudio(t); } catch (e) { fail++; if (e.message === 'Giriş gerekli') throw e; }
+          done++; const msg = `Ses hazırlanıyor ${done}/${texts.length}${fail ? ` · ${fail} hata` : ''}`;
+          statusEl.textContent = msg; if (onProgress) onProgress(done, texts.length, msg);
+        }
+      }));
+      statusEl.textContent = fail ? `⚠️ ${fail} satır seslendirilemedi (o satırlar sessiz geçer). Tekrar dene.` : `✓ ${texts.length} satır hazır (önbellekte).`;
+      updateEstimatedDuration();
+      return fail === 0;
+    }
+
+    // ==================== LOCALSTORAGE: BANKA & DAHA ÖNCE SORULANLAR ====================
+    function loadBankAndAsked() {
+      try {
+        const rawBank = localStorage.getItem(STORAGE_BANK_KEY);
+        state.bank = rawBank ? JSON.parse(rawBank) : [...BUILTIN_BANK_SEED];
+        if (!Array.isArray(state.bank) || state.bank.length === 0) state.bank = [...BUILTIN_BANK_SEED];
+      } catch (e) {
+        state.bank = [...BUILTIN_BANK_SEED];
+      }
+      try {
+        const rawAsked = localStorage.getItem(STORAGE_ASKED_KEY);
+        state.askedArchive = rawAsked ? JSON.parse(rawAsked) : [];
+        if (!Array.isArray(state.askedArchive)) state.askedArchive = [];
+      } catch (e) {
+        state.askedArchive = [];
+      }
+      updateBankCountsUI();
+    }
+
+    function saveBank() {
+      try { localStorage.setItem(STORAGE_BANK_KEY, JSON.stringify(state.bank)); } catch (e) {}
+      updateBankCountsUI();
+    }
+
+    function saveAskedArchive() {
+      try { localStorage.setItem(STORAGE_ASKED_KEY, JSON.stringify(state.askedArchive)); } catch (e) {}
+      updateBankCountsUI();
+    }
+
+    function updateBankCountsUI() {
+      $('bank-count-pill').textContent = `${state.bank.length} Soru`;
+      $('asked-count-pill').textContent = state.askedArchive.length;
+      $('modal-bank-count').textContent = state.bank.length;
+      $('modal-asked-count').textContent = state.askedArchive.length;
+    }
+
+    function isQuestionAskedBefore(question, answer) {
+      const ansKey = normalizeKey(answer);
+      const qKey = normalizeKey(question);
+      return state.askedArchive.some(item =>
+        (ansKey && normalizeKey(item.answer) === ansKey) ||
+        (qKey && qKey.length > 12 && normalizeKey(item.question) === qKey)
+      ) || !!findRemoteDup({ question, answer });
+    }
+
+    function recordQuestionsAsAsked(list) {
+      if (!Array.isArray(list) || !list.length) return;
+      const now = new Date().toLocaleDateString('tr-TR');
+      let added = 0;
+      for (const q of list) {
+        if (!q || !q.answer) continue;
+        if (!isQuestionAskedBefore(q.question, q.answer)) {
+          state.askedArchive.unshift({
+            letter: q.letter,
+            question: q.question,
+            answer: q.answer,
+            note: q.note || '',
+            date: now
+          });
+          added++;
+        }
+      }
+      if (added > 0) saveAskedArchive();
+    }
+
+    // ==================== AKILLI ÇOK SAYFALI EXCEL / TXT / DOCX OKUYUCU ====================
+    function parseLinesToQuestions(text, defaultCat = 'İçe Aktarılan') {
+      const lines = String(text || '').split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+      const out = [];
+      for (const line of lines) {
+        let parts = line.includes('|') ? line.split('|') : (line.includes('\t') ? line.split('\t') : line.split(';'));
+        parts = parts.map(p => p.trim());
+        if (parts.length < 2) continue;
+        let letter = '', question = '', answer = '', note = '', category = defaultCat;
+        if (parts.length >= 3 && parts[0].length <= 2) {
+          letter = trUpper(parts[0]).slice(0, 1);
+          question = parts[1];
+          answer = trUpper(parts[2]);
+          note = parts[3] || '';
+          category = parts[4] || defaultCat;
+        } else {
+          question = parts[0];
+          answer = trUpper(parts[1]);
+          letter = answer.slice(0, 1);
+          note = parts[2] || '';
+        }
+        if (question && answer && letter) {
+          out.push({ letter, question, answer, note, category });
+        }
+      }
+      return out;
+    }
+
+    function parseExcelWorkbookToQuestions(workbook) {
+      const results = [];
+      for (const sheetName of workbook.SheetNames) {
+        const sheet = workbook.Sheets[sheetName];
+        if (!sheet) continue;
+        const rows = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: '' });
+        if (!rows || !rows.length) continue;
+
+        let idxLetter = -1, idxQuestion = -1, idxAnswer = -1, idxNote = -1, idxCat = -1;
+        let startRow = 0;
+
+        // İlk 5 satırda başlık ara
+        for (let r = 0; r < Math.min(5, rows.length); r++) {
+          const row = rows[r].map(c => trUpper(String(c || '')));
+          const hasQ = row.findIndex(c => c.includes('SORU') || c.includes('İPUCU') || c.includes('IPUCU'));
+          const hasA = row.findIndex(c => c.includes('CEVAP') || c.includes('YANIT') || c.includes('KELİME') || c.includes('KELIME'));
+          if (hasQ !== -1 && hasA !== -1) {
+            idxQuestion = hasQ;
+            idxAnswer = hasA;
+            idxLetter = row.findIndex(c => c === 'HARF' || c.includes('HARF'));
+            idxNote = row.findIndex(c => c.includes('ALT') || c.includes('NOT') || c.includes('AÇIKLAMA') || c.includes('ACIKLAMA') || c.includes('BİLGİ') || c.includes('BILGI'));
+            idxCat = row.findIndex(c => c.includes('KATEGORİ') || c.includes('KATEGORI') || c.includes('DÖNEM') || c.includes('DONEM') || c.includes('KONU'));
+            startRow = r + 1;
+            break;
+          }
+        }
+
+        for (let r = startRow; r < rows.length; r++) {
+          const rawRow = rows[r];
+          if (!rawRow || !rawRow.length) continue;
+          const cells = rawRow.map(c => String(c == null ? '' : c).trim());
+          if (cells.every(c => !c)) continue;
+
+          let letter = '', question = '', answer = '', note = '', category = sheetName || 'Excel';
+
+          if (idxQuestion !== -1 && idxAnswer !== -1) {
+            question = cells[idxQuestion] || '';
+            answer = trUpper(cells[idxAnswer] || '');
+            letter = idxLetter !== -1 ? trUpper(cells[idxLetter] || '').slice(0, 1) : '';
+            note = idxNote !== -1 ? (cells[idxNote] || '') : '';
+            if (idxCat !== -1 && cells[idxCat]) category = cells[idxCat];
+          } else {
+            // Başlıksız tablo: sıra numarasını atla
+            const nonEmpty = cells.filter(Boolean);
+            let offset = 0;
+            if (nonEmpty.length >= 3 && /^\d+$/.test(nonEmpty[0])) offset = 1;
+            const sliced = nonEmpty.slice(offset);
+            if (sliced.length >= 3 && sliced[0].length <= 2) {
+              letter = trUpper(sliced[0]).slice(0, 1);
+              question = sliced[1];
+              answer = trUpper(sliced[2]);
+              note = sliced[3] || '';
+            } else if (sliced.length >= 2) {
+              question = sliced[0];
+              answer = trUpper(sliced[1]);
+              note = sliced[2] || '';
+            }
+          }
+
+          if (!letter && answer) letter = answer.slice(0, 1);
+          // Başlık satırı gibi görünenleri atla
+          if (!question || !answer || trUpper(question) === 'SORU' || answer === 'CEVAP') continue;
+          if (question.length < 4) continue;
+
+          results.push({ letter, question, answer, note, category });
+        }
+      }
+      return results;
+    }
+
+    async function handleFileImport(file, applyDirectlyToStage = false) {
+      if (!file) return;
+      try {
+        const ext = file.name.split('.').pop().toLowerCase();
+        let imported = [];
+
+        if (ext === 'xlsx' || ext === 'xls' || ext === 'csv') {
+          const buf = await file.arrayBuffer();
+          const wb = XLSX.read(buf, { type: 'array' });
+          imported = parseExcelWorkbookToQuestions(wb);
+        } else if (ext === 'docx' && window.mammoth) {
+          const buf = await file.arrayBuffer();
+          const res = await mammoth.extractRawText({ arrayBuffer: buf });
+          imported = parseLinesToQuestions(res.value, 'Word');
+        } else {
+          const txt = await file.text();
+          imported = parseLinesToQuestions(txt, 'Metin');
+        }
+
+        if (!imported.length) {
+          showToast('⚠️ Dosyada uygun soru formatı bulunamadı.', true);
+          return;
+        }
+
+        // Bankaya tekrarsız ekle
+        const existingAns = new Set(state.bank.map(b => normalizeKey(b.answer)));
+        let addedCount = 0;
+        let dupCount = 0;
+        for (const item of imported) {
+          const key = normalizeKey(item.answer);
+          if (key && !existingAns.has(key)) {
+            existingAns.add(key);
+            state.bank.push(item);
+            addedCount++;
+          } else {
+            dupCount++;
+          }
+        }
+        saveBank();
+
+        const msg = `✓ ${imported.length} soru okundu: ${addedCount} yeni eklendi, ${dupCount} tekrar elendi.`;
+        showToast(msg);
+        const infoEl = $('bank-import-msg');
+        if (infoEl) {
+          infoEl.textContent = msg;
+          infoEl.classList.remove('hidden');
+        }
+
+        if (applyDirectlyToStage) {
+          // Her harften 1 soru seçip sahneye hemen yükle (sorulmamışlara öncelik)
+          const byLetter = new Map();
+          for (const q of imported) {
+            if (!byLetter.has(q.letter)) byLetter.set(q.letter, []);
+            byLetter.get(q.letter).push(q);
+          }
+          const picked = [];
+          for (const ch of TR_ALPHABET) {
+            const arr = byLetter.get(ch);
+            if (!arr || !arr.length) continue;
+            const fresh = arr.filter(x => !isQuestionAskedBefore(x.question, x.answer));
+            const pool = fresh.length ? fresh : arr;
+            picked.push(pool[Math.floor(Math.random() * pool.length)]);
+          }
+          const finalPick = picked.length ? picked : imported.slice(0, 22);
+          els.inputQuestions.value = finalPick.map(q => q.note ? `${q.letter} | ${q.question} | ${q.answer} | ${q.note}` : `${q.letter} | ${q.question} | ${q.answer}`).join('\n');
+          applyQuestionsFromTextarea(true);
+        }
+        renderBankModal();
+      } catch (err) {
+        console.error(err);
+        showToast('❌ Dosya okunurken hata oluştu: ' + err.message, true);
+      }
+    }
+
+    // ==================== SORU LİSTESİ & ÇEMBER / ÇENGEL BULMACA ====================
+    function renderLetterPicker() {
+      els.letterPickerGrid.innerHTML = '';
+      for (const ch of TR_ALPHABET) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.textContent = ch;
+        const active = state.selectedLetters.has(ch);
+        btn.className = `py-1 rounded-md text-[10px] font-bold cursor-pointer transition ${active ? 'bg-amber-500 text-stone-950' : 'bg-stone-900 text-stone-500 border border-stone-800'}`;
+        btn.addEventListener('click', () => {
+          if (state.selectedLetters.has(ch)) state.selectedLetters.delete(ch);
+          else state.selectedLetters.add(ch);
+          renderLetterPicker();
+          rebuildActiveQuestions();
+        });
+        els.letterPickerGrid.appendChild(btn);
+      }
+    }
+
+    function applyQuestionsFromTextarea(autoDrop = false) {
+      let parsed = parseLinesToQuestions(els.inputQuestions.value, 'Liste');
+      if (autoDrop === true) {
+        const dropped = [], kept = [];
+        for (const q of parsed) { const d = findRemoteDup(q) || (state.askedArchive.find(a => normalizeKey(a.answer) === normalizeKey(q.answer)) ? { a: q.answer } : null); if (d) dropped.push([q, d]); else kept.push(q); }
+        const box = $('dup-dropped');
+        if (dropped.length) {
+          parsed = kept;
+          els.inputQuestions.value = kept.map(q => q.note ? `${q.letter} | ${q.question} | ${q.answer} | ${q.note}` : `${q.letter} | ${q.question} | ${q.answer}`).join('\n');
+          box.textContent = `♻️ ${dropped.length} tekrar soru elendi: ` + dropped.slice(0, 12).map(([q, d]) => `${q.letter}·${q.answer}${d.kaynak ? ` (${d.kaynak})` : ''}`).join(', ') + (dropped.length > 12 ? '…' : '');
+          box.classList.remove('hidden');
+        } else box.classList.add('hidden');
+      }
+      state.allParsedQuestions = parsed;
+      checkTextareaDuplicates();
+      rebuildActiveQuestions();
+    }
+
+    function checkTextareaDuplicates() {
+      const dups = state.allParsedQuestions.filter(q => isQuestionAskedBefore(q.question, q.answer));
+      const box = $('list-dup-warning');
+      if (dups.length > 0) {
+        const names = dups.slice(0, 4).map(d => d.answer).join(', ');
+        box.textContent = `⚠️ Uyarı: Listedeki ${dups.length} soru daha önce sorulmuştu (${names}${dups.length > 4 ? '...' : ''}). İsterseniz değiştirin.`;
+        box.classList.remove('hidden');
+      } else {
+        box.classList.add('hidden');
+      }
+    }
+
+    function rebuildActiveQuestions() {
+      let filtered = state.allParsedQuestions.filter(q => state.selectedLetters.has(q.letter));
+      if (!filtered.length) filtered = [...state.allParsedQuestions];
+      const maxC = Math.min(state.questionCount, filtered.length);
+      state.questions = filtered.slice(0, Math.max(1, maxC));
+      if (state.allParsedQuestions.length === 0) state.questions = [];
+
+      $('val-question-count').textContent = `${state.questions.length} Soru`;
+      if (state.mode === 'crossword') buildCrosswordLayout();
+      renderStageVisuals();
+      updateEstimatedDuration();
+    }
+
+    function renderWheelNodes() {
+      els.wheelNodes.innerHTML = '';
+      const total = state.questions.length;
+      if (!total) return;
+      const radius = 120;
+      const cx = 147, cy = 147;
+      const nodeSize = total > 22 ? 26 : (total > 15 ? 30 : 34);
+      const animOn = $('toggle-anim-mode').checked;
+      const wheelAnim = $('select-wheel-anim').value;
+
+      els.wheelNodes.classList.remove('anim-wheel-spin');
+      if (animOn && wheelAnim === 'spin') {
+        void els.wheelNodes.offsetWidth;
+        els.wheelNodes.classList.add('anim-wheel-spin');
+      }
+
+      state.questions.forEach((q, idx) => {
+        const angle = (idx / total) * Math.PI * 2 - Math.PI / 2;
+        const x = cx + Math.cos(angle) * radius;
+        const y = cy + Math.sin(angle) * radius;
+        const node = document.createElement('div');
+        node.className = 'letter-node';
+        node.style.left = `${(x / 295) * 100}%`;
+        node.style.top = `${(y / 295) * 100}%`;
+        node.style.width = `${nodeSize}px`;
+        node.style.height = `${nodeSize}px`;
+        node.style.fontSize = total > 22 ? '11px' : '13px';
+        node.style.setProperty('--node-idx', idx);
+        node.textContent = q.letter;
+        node.dataset.idx = idx;
+
+        if (idx === state.currentIndex && state.phase !== 'idle' && state.phase !== 'intro') node.classList.add('active');
+        if (state.solvedIndices.has(idx)) node.classList.add('correct');
+        if (animOn) {
+          if (wheelAnim === 'cascade') node.classList.add('anim-node-cascade');
+          if (wheelAnim === 'pulse') node.classList.add('anim-node-pulse');
+          if (wheelAnim === 'bounce') node.classList.add('anim-active-bounce');
+        }
+        els.wheelNodes.appendChild(node);
+      });
+    }
+
+    function buildCrosswordLayout() {
+      const qs = state.questions.slice(0, 10);
+      const size = 11;
+      const grid = Array.from({ length: size }, () => Array(size).fill(null));
+      const placed = [];
+
+      qs.forEach((q, idx) => {
+        const word = trUpper(q.answer).replace(/\s+/g, '').slice(0, size);
+        const horiz = idx % 2 === 0;
+        let placedOk = false;
+        // Basit kesişim veya boş satır yerleştirme
+        for (let attempt = 0; attempt < 30 && !placedOk; attempt++) {
+          const r = horiz ? Math.floor((idx / Math.max(1, qs.length)) * (size - 1)) : Math.max(0, Math.floor((size - word.length) / 2));
+          const c = horiz ? Math.max(0, Math.floor((size - word.length) / 2)) : Math.min(size - 1, (idx * 2) % size);
+          let ok = true;
+          for (let k = 0; k < word.length; k++) {
+            const rr = horiz ? r : r + k;
+            const cc = horiz ? c + k : c;
+            if (rr >= size || cc >= size) { ok = false; break; }
+            if (grid[rr][cc] && grid[rr][cc].ch !== word[k]) { ok = false; break; }
+          }
+          if (ok) {
+            const cells = [];
+            for (let k = 0; k < word.length; k++) {
+              const rr = horiz ? r : r + k;
+              const cc = horiz ? c + k : c;
+              if (!grid[rr][cc]) grid[rr][cc] = { ch: word[k], num: k === 0 ? idx + 1 : null, owners: [] };
+              else if (k === 0 && !grid[rr][cc].num) grid[rr][cc].num = idx + 1;
+              grid[rr][cc].owners.push(idx);
+              cells.push([rr, cc]);
+            }
+            placed.push({ idx, word, cells });
+            placedOk = true;
+          }
+        }
+      });
+      state.crossword = { size, grid, placed };
+    }
+
+    function renderCrosswordGrid() {
+      if (!state.crossword) buildCrosswordLayout();
+      const { size, grid } = state.crossword;
+      els.cwGrid.style.gridTemplateColumns = `repeat(${size}, minmax(0, 1fr))`;
+      els.cwGrid.innerHTML = '';
+      const hintOn = $('toggle-first-hint').checked;
+
+      for (let r = 0; r < size; r++) {
+        for (let c = 0; c < size; c++) {
+          const cellData = grid[r][c];
+          const div = document.createElement('div');
+          div.style.width = '24px';
+          div.style.height = '24px';
+          div.style.fontSize = '11px';
+          if (!cellData) {
+            div.className = 'opacity-0 pointer-events-none';
+          } else {
+            const isActive = cellData.owners.includes(state.currentIndex);
+            const isSolved = cellData.owners.some(o => state.solvedIndices.has(o));
+            div.className = 'cw-cell';
+            if (isActive) div.classList.add('cw-active');
+            if (isSolved) div.classList.add('cw-solved');
+            else if (isActive && hintOn && cellData.num === state.currentIndex + 1) div.classList.add('cw-hint');
+            div.textContent = (isSolved || (isActive && hintOn && cellData.num === state.currentIndex + 1)) ? cellData.ch : '';
+            if (cellData.num) {
+              const sp = document.createElement('span');
+              sp.className = 'cw-num';
+              sp.textContent = cellData.num;
+              div.appendChild(sp);
+            }
+          }
+          els.cwGrid.appendChild(div);
+        }
+      }
+    }
+
+    function renderQuestionTextAnimated(text, isIntro = false) {
+      const animOn = $('toggle-anim-mode').checked;
+      const textAnim = $('select-text-anim').value;
+      els.qText.className = isIntro
+        ? 'text-base sm:text-lg font-extrabold text-amber-200 leading-snug'
+        : 'text-sm sm:text-[15px] font-bold text-stone-100 leading-snug';
+
+      if (!animOn && !isIntro) {
+        els.qText.textContent = text;
+        return;
+      }
+
+      if (isIntro || textAnim === 'words') {
+        els.qText.innerHTML = '';
+        const words = String(text || '').split(/\s+/).filter(Boolean);
+        words.forEach((w, i) => {
+          const sp = document.createElement('span');
+          sp.className = 'anim-word-span';
+          sp.style.animationDelay = `${i * 55}ms`;
+          sp.textContent = w;
+          els.qText.appendChild(sp);
+          if (i < words.length - 1) els.qText.appendChild(document.createTextNode(' '));
+        });
+      } else if (textAnim === 'slide') {
+        els.qText.textContent = text;
+        els.qText.classList.add('anim-text-slide');
+      } else {
+        els.qText.textContent = text;
+      }
+    }
+
+    function renderAnswerSlots(answer, reveal = false) {
+      els.answerSlots.innerHTML = '';
+      if (!answer || state.mode === 'passaparola') return; // çemberde cevap göbekte gösterilir
+      const chars = Array.from(trUpper(answer));
+      const hintOn = $('toggle-first-hint').checked;
+      const boxSize = chars.length > 11 ? 22 : (chars.length > 8 ? 26 : 30);
+      chars.forEach((ch, idx) => {
+        if (ch === ' ') { const gap = document.createElement('div'); gap.style.width = '10px'; els.answerSlots.appendChild(gap); return; }
+        const slot = document.createElement('div');
+        slot.className = 'answer-slot';
+        slot.style.width = `${boxSize}px`; slot.style.height = `${boxSize}px`;
+        slot.style.fontSize = chars.length > 10 ? '11px' : '13px';
+        if (reveal) { slot.classList.add('slot-revealed', 'anim-slot-pop'); slot.style.animationDelay = `${idx * 35}ms`; slot.textContent = ch; }
+        else if (hintOn && idx === 0) { slot.classList.add('slot-hint'); slot.textContent = ch; }
+        els.answerSlots.appendChild(slot);
+      });
+    }
+    function splitTwoLines(text) { // en dengeli 2 satır
+      const w = String(text).split(/\s+/).filter(Boolean); if (w.length < 2) return [text];
+      let best = null;
+      for (let i = 1; i < w.length; i++) { const a = w.slice(0, i).join(' '), b = w.slice(i).join(' '); const m = Math.max(a.length, b.length); if (!best || m < best.m) best = { m, l: [a, b] }; }
+      return best.l;
+    }
+    function hubAnswerHtml(answer) {
+      const up = trUpper(answer); const one = up.length; const two = splitTwoLines(up); const twoMax = Math.max(...two.map(x => x.length));
+      const useTwo = one > 9 && two.length === 2;
+      const chars = useTwo ? twoMax : one;
+      const px = Math.max(9, Math.min(30, Math.floor(100 / (chars * 0.66))));
+      els.hubAnswer.style.fontSize = px + 'px';
+      return (useTwo ? two : [up]).map(escapeHtml).join('<br>');
+    }
+
+    function renderStageVisuals() {
+      // Başlıklar
+      els.stageKicker.textContent = $('input-kicker').value;
+      els.stageTitle.textContent = $('input-title').value;
+      els.stageSubtitle.textContent = $('input-subtitle').value;
+      const wm = $('input-watermark').value;
+      els.stageWm.textContent = wm;
+      els.roamingWm.textContent = wm;
+      els.outroWm.textContent = wm;
+      els.roamingWm.style.display = $('toggle-roaming-wm').checked ? 'block' : 'none';
+
+      const ep = $('input-episode').value.trim();
+      if (ep) {
+        els.stageEpisode.textContent = ep;
+        els.stageEpisode.classList.remove('hidden');
+      } else {
+        els.stageEpisode.classList.add('hidden');
+      }
+
+      // Mod
+      if (state.mode === 'passaparola') {
+        els.wheelContainer.classList.remove('hidden');
+        els.cwContainer.classList.add('hidden');
+        renderWheelNodes();
+      } else {
+        els.wheelContainer.classList.add('hidden');
+        els.cwContainer.classList.remove('hidden');
+        renderCrosswordGrid();
+      }
+
+      // Fazlara göre orta göbek ve kart
+      els.outroOverlay.classList.toggle('hidden', state.phase !== 'outro');
+
+      if (state.phase !== 'thinking') els.centerHub.classList.remove('hub-think');
+      if (state.phase === 'idle') {
+        els.hubIdle.classList.remove('hidden');
+        els.hubActive.classList.add('hidden');
+        els.centerHub.classList.remove('hub-reveal');
+        els.qMetaRow.classList.remove('hidden');
+        els.qProgress.textContent = `0 / ${state.questions.length}`;
+        els.qLetterLabel.textContent = 'HAZIR';
+        els.qText.textContent = 'Sorular hazır. Başlat\'a tıklayarak oynatabilirsiniz.';
+        els.qNote.classList.add('hidden');
+        els.answerSlots.innerHTML = '';
+        els.cwTimerPill.textContent = 'HAZIR MISIN?';
+      } else if (state.phase === 'intro') {
+        // SEÇENEK B: "0 / 27 • GİRİŞ" ve "Giriş yapılıyor..." yok, canlı giriş altyazısı var!
+        els.hubIdle.classList.remove('hidden');
+        els.hubActive.classList.add('hidden');
+        els.hubIdle.firstElementChild.textContent = 'HAZIR MISIN?';
+        els.hubIdle.lastElementChild.textContent = '';
+        els.centerHub.classList.remove('hub-reveal');
+        els.qMetaRow.classList.add('hidden');
+        renderQuestionTextAnimated(getIntroText(), true);
+        els.qNote.classList.add('hidden');
+        els.answerSlots.innerHTML = '';
+        els.cwTimerPill.textContent = 'HAZIR MISIN?';
+      } else if (state.currentIndex >= 0 && state.questions[state.currentIndex]) {
+        const q = state.questions[state.currentIndex];
+        els.hubIdle.classList.add('hidden');
+        els.hubActive.classList.remove('hidden');
+        els.hubLetterBadge.textContent = `${q.letter} HARFİ`;
+        els.qMetaRow.classList.remove('hidden');
+        els.qProgress.textContent = `${state.currentIndex + 1} / ${state.questions.length}`;
+        els.qLetterLabel.textContent = `${q.letter} HARFİ`;
+
+        els.centerHub.classList.toggle('hub-think', state.phase === 'thinking');
+        if (state.phase === 'reading') {
+          els.centerHub.classList.remove('hub-reveal');
+          els.hubTimer.textContent = Math.ceil(parseFloat($('range-think').value));
+          els.hubPhase.textContent = 'Dinle...';
+          els.cwTimerPill.textContent = `${q.letter} HARFİ • Dinle...`;
+          renderQuestionTextAnimated(q.question, false);
+          els.qNote.classList.add('hidden');
+          renderAnswerSlots(q.answer, false);
+        } else if (state.phase === 'thinking') {
+          els.centerHub.classList.remove('hub-reveal');
+          els.hubTimer.textContent = state.timerVal;
+          els.hubPhase.textContent = 'Düşün...';
+          els.cwTimerPill.textContent = `⏱️ ${state.timerVal} sn`;
+        } else if (state.phase === 'reveal') {
+          els.centerHub.classList.add('hub-reveal');
+          els.hubTimer.textContent = '✓';
+          els.hubPhase.textContent = 'Doğru Cevap';
+          els.hubAnswer.innerHTML = hubAnswerHtml(q.answer);
+          els.cwTimerPill.textContent = `✓ ${q.answer}`;
+          renderAnswerSlots(q.answer, true);
+          if (q.note) {
+            els.qNote.textContent = q.note;
+            els.qNote.classList.remove('hidden');
+          }
+        }
+      }
+    }
+
+    // ==================== ARKA PLAN & TEMA ====================
+    function applyBackgroundUI() {
+      els.bgDim.style.background = `rgba(0, 0, 0, ${state.bgDim})`;
+      if (state.bgImageUrl) {
+        els.bgLayer.style.background = `url("${state.bgImageUrl}") center / cover no-repeat`;
+      } else if (state.bgPreset && BG_PRESETS[state.bgPreset]) {
+        els.bgLayer.style.background = BG_PRESETS[state.bgPreset];
+      } else {
+        els.bgLayer.style.background = 'none';
+      }
+      document.querySelectorAll('.btn-bg-preset').forEach(b => {
+        const active = !state.bgImageUrl && b.dataset.bgpreset === state.bgPreset;
+        b.className = `btn-bg-preset py-1.5 px-2 rounded-lg text-[10px] cursor-pointer ${active ? 'bg-amber-500/25 border border-amber-400/60 font-bold text-amber-100' : 'bg-stone-900 border border-stone-700 font-semibold text-stone-300'}`;
+      });
+    }
+
+    function setTheme(theme) {
+      state.theme = theme;
+      els.stage.classList.toggle('theme-sport', theme === 'sport');
+      $('theme-tarih-btn').className = theme === 'tarih' ? 'px-2.5 py-1 rounded-md text-[10px] font-bold bg-amber-500 text-stone-950 cursor-pointer' : 'px-2.5 py-1 rounded-md text-[10px] font-bold text-stone-300 hover:bg-stone-800 cursor-pointer';
+      $('theme-sport-btn').className = theme === 'sport' ? 'px-2.5 py-1 rounded-md text-[10px] font-bold bg-emerald-500 text-stone-950 cursor-pointer' : 'px-2.5 py-1 rounded-md text-[10px] font-bold text-stone-300 hover:bg-stone-800 cursor-pointer';
+    }
+
+    // ==================== SES MOTORU & SÜRE KİLİDİ (2:59) ====================
+    function ensureAudioReady() {
+      if (!state.audioCtx) {
+        const AC = window.AudioContext || window.webkitAudioContext;
+        state.audioCtx = new AC();
+        state.audioMixDest = state.audioCtx.createMediaStreamDestination();
+        // Kayıt sırasında ses kanalını canlı tutan duyulmayan sinyal
+        const osc = state.audioCtx.createOscillator();
+        const g = state.audioCtx.createGain();
+        g.gain.value = 0.00001;
+        osc.connect(g);
+        g.connect(state.audioMixDest);
+        osc.start();
+      }
+      if (state.audioCtx.state === 'suspended') state.audioCtx.resume();
+    }
+
+    function playTone(freq, durSec, type = 'sine', volScale = 0.25) {
+      const sfxVol = parseFloat($('range-sfx').value);
+      if (sfxVol <= 0) return;
+      try {
+        ensureAudioReady();
+        const t = state.audioCtx.currentTime;
+        const osc = state.audioCtx.createOscillator();
+        const gain = state.audioCtx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, t);
+        gain.gain.setValueAtTime(sfxVol * volScale, t);
+        gain.gain.exponentialRampToValueAtTime(0.001, t + durSec);
+        osc.connect(gain);
+        gain.connect(state.audioCtx.destination);
+        if (state.audioMixDest) gain.connect(state.audioMixDest);
+        osc.start(t);
+        osc.stop(t + durSec);
+      } catch (e) {}
+    }
+
+    function playTickSfx() { playTone(880, 0.07, 'triangle', 0.22); }
+    function playChimeSfx() {
+      playTone(587.3, 0.14, 'sine', 0.24);
+      setTimeout(() => playTone(880, 0.24, 'sine', 0.26), 90);
+    }
+
+    function startBgmPlayback() {
+      stopBgmPlayback();
+      if (!state.bgmBuffer) return;
+      try {
+        ensureAudioReady();
+        const src = state.audioCtx.createBufferSource();
+        src.buffer = state.bgmBuffer;
+        src.loop = true;
+        const g = state.audioCtx.createGain();
+        g.gain.value = parseFloat($('range-bgm-vol').value);
+        src.connect(g);
+        g.connect(state.audioCtx.destination);
+        if (state.audioMixDest) g.connect(state.audioMixDest);
+        src.start(0);
+        state.bgmSource = src;
+        state.bgmGain = g;
+      } catch (e) {}
+    }
+
+    function duckBgm(speaking) {
+      if (!state.bgmGain || !state.audioCtx) return;
+      const base = parseFloat($('range-bgm-vol').value);
+      state.bgmGain.gain.setTargetAtTime(speaking ? base * 0.35 : base, state.audioCtx.currentTime, 0.08);
+    }
+
+    function stopBgmPlayback() {
+      try { if (state.bgmSource) state.bgmSource.stop(); } catch (e) {}
+      state.bgmSource = null;
+      state.bgmGain = null;
+    }
+
+    // Harici MP3 sessizlik bazlı akıllı segmentasyon
+
+
+    // Kesin 2:59 Süre Hesaplayıcı
+    // 2:57 kesin süre planı. Sıra: 1) cevap bekleme kısalır 2) düşünme (min 2 sn) 3) giriş atlanır 4) hâlâ sığmazsa uyarı
+    function planTimings(introDur, qDurs, aDurs) {
+      const n = qDurs.length;
+      const hasCover = $('toggle-cover-first-frame').checked;
+      const instantEnd = $('toggle-instant-finish').checked;
+      const coverSec = hasCover ? 0.45 : 0, outroSec = instantEnd ? 0.3 : 1.5;
+      let thinkSec = parseFloat($('range-think').value), revealSec = parseFloat($('range-reveal').value);
+      let intro = introDur || 0, dropIntro = false, adjusted = false;
+      const sumQ = qDurs.reduce((a, b) => a + b, 0), sumA = (aDurs || []).reduce((a, b) => a + b, 0);
+      const total = () => coverSec + outroSec + intro + sumQ + sumA + n * (READ_PAD + thinkSec + revealSec);
+      let over = total() - MAX_VIDEO_SEC;
+      if (over > 0) { adjusted = true; const c = Math.min(over, n * Math.max(0, revealSec - 0.8)); revealSec -= c / Math.max(1, n); over -= c; }
+      if (over > 0) { const c = Math.min(over, n * Math.max(0, thinkSec - 2)); thinkSec -= c / Math.max(1, n); over -= c; }
+      if (over > 0 && intro > 0) { over -= intro; intro = 0; dropIntro = true; }
+      let removeN = 0;
+      if (over > 0.001) { const per = (sumQ + sumA) / Math.max(1, n) + READ_PAD + thinkSec + revealSec; removeN = Math.ceil(over / per); }
+      return { thinkSec, revealSec, coverSec, outroSec, introSec: intro, dropIntro, adjusted, removeN, totalSec: total() };
+    }
+    function computeBalancedTimings() {
+      const hasIntro = $('toggle-intro-speech').checked;
+      const silent = state.audioMode !== 'gemini';
+      const d = t => (!silent && cachedDur(t)) || estSpeech(t);
+      const introDur = hasIntro ? d(getIntroText()) : 0;
+      const qDurs = state.questions.map(q => d(speechTextFor(q)));
+      const aDurs = (!silent && $('toggle-speak-answer').checked) ? state.questions.map(q => d(answerSpeechText(q))) : [];
+      return planTimings(introDur, qDurs, aDurs);
+    }
+
+    function updateEstimatedDuration() {
+      const t = computeBalancedTimings();
+      $('est-duration-badge').textContent = `~${formatMinSec(t.totalSec)}`;
+      const capInfo = $('duration-cap-info'); const warn = $('cap-warning');
+      if (t.removeN > 0) {
+        warn.textContent = `⛔ 2:57'ye sığmıyor: ${t.removeN} soru çıkar (düşünme 2 sn, bekleme 0.8 sn'ye indi${t.dropIntro ? ', giriş atlandı' : ''}).`;
+        warn.classList.remove('hidden');
+      } else warn.classList.add('hidden');
+      capInfo.className = 'text-[10px] leading-tight ' + (t.removeN ? 'text-rose-400' : 'text-emerald-400');
+      capInfo.textContent = t.adjusted
+        ? `🔒 Sığdırıldı: düşünme ${t.thinkSec.toFixed(1)} sn, bekleme ${t.revealSec.toFixed(1)} sn${t.dropIntro ? ', giriş atlandı' : ''}. Toplam ${formatMinSec(t.totalSec)}.`
+        : `Tahmini süre: ${formatMinSec(t.totalSec)} (maks. 2:57).`;
+    }
+
+    // ==================== CANLI SESLENDİRME ====================
+    async function fetchGeminiAudioBuffer(text) { return fetchLineAudio(text); }
+
+
+
+    function playAudioBufferLive(buffer, startSec = 0, durationSec = null, playbackRate = 1.0, token = state.runToken) {
+      return new Promise(resolve => {
+        if (!buffer) return resolve();
+        try {
+          ensureAudioReady();
+          const src = state.audioCtx.createBufferSource();
+          src.buffer = buffer;
+          src.playbackRate.value = playbackRate;
+          src.connect(state.audioCtx.destination);
+          if (state.audioMixDest) src.connect(state.audioMixDest);
+          const dur = durationSec != null ? Math.min(durationSec, buffer.duration - startSec) : (buffer.duration - startSec);
+          if (dur <= 0.02) return resolve();
+          duckBgm(true);
+          src.onended = () => { duckBgm(false); resolve(); };
+          src.start(0, startSec, dur);
+          const checkInt = setInterval(() => {
+            if (token !== state.runToken || !state.isPlaying) {
+              clearInterval(checkInt);
+              try { src.stop(); } catch (e) {}
+              duckBgm(false);
+              resolve();
+            }
+          }, 120);
+        } catch (e) {
+          resolve();
+        }
+      });
+    }
+
+    async function speakSegmentLive(text, token) {
+      if (state.audioMode !== 'gemini') { await sleep(estSpeech(text) * 1000); return; }
+      try {
+        const buf = await fetchLineAudio(text);
+        if (token !== state.runToken) return;
+        await playAudioBufferLive(buf, 0, buf.duration, 1.0, token);
+      } catch (e) { await sleep(estSpeech(text) * 1000); }
+    }
+
+    // ==================== CANLI OYNATMA DÖNGÜSÜ ====================
+    async function runPlayback() {
+      if (!state.questions.length) { showToast('⚠️ Önce soru listesi ekleyin.', true); return; }
+      state.isPlaying = true; state.runToken++;
+      const token = state.runToken;
+      $('btn-play-pause').textContent = '⏸ Duraklat';
+      if (state.audioMode === 'gemini') { $('btn-play-pause').textContent = '⏳ Sesler…'; try { await prepareAllAudio(); } catch (e) {} if (token !== state.runToken) return; $('btn-play-pause').textContent = '⏸ Duraklat'; }
+      els.roamingWm.classList.remove('wm-paused');
+      startBgmPlayback();
+      const timings = computeBalancedTimings();
+      const hasIntro = $('toggle-intro-speech').checked && !timings.dropIntro;
+      const now = () => performance.now() / 1000;
+      if (state.currentIndex < 0) {
+        state.solvedIndices.clear();
+        if (hasIntro) {
+          state.phase = 'intro'; state.phaseT0 = now(); renderStageVisuals();
+          await speakSegmentLive(getIntroText(), token);
+          if (token !== state.runToken) return;
+        }
+        state.currentIndex = 0;
+      }
+      for (let i = state.currentIndex; i < state.questions.length; i++) {
+        if (token !== state.runToken) return;
+        state.currentIndex = i;
+        const q = state.questions[i];
+        // 1) soru sesi tamamen biter
+        state.phase = 'reading'; state.qT0 = now(); state.timerVal = Math.ceil(timings.thinkSec); renderStageVisuals();
+        await speakSegmentLive(speechTextFor(q), token);
+        if (token !== state.runToken) return;
+        await sleep(READ_PAD * 1000);
+        // 2) sonra geri sayım
+        state.phase = 'thinking'; state.thinkT0 = now(); state.thinkDur = timings.thinkSec;
+        const steps = Math.max(1, Math.round(timings.thinkSec)); const stepMs = (timings.thinkSec * 1000) / steps;
+        for (let t = steps; t >= 1; t--) {
+          if (token !== state.runToken) return;
+          state.timerVal = t; renderStageVisuals(); playTickSfx();
+          await sleep(stepMs);
+        }
+        if (token !== state.runToken) return;
+        // 3) cevap açılır  4) bekleme
+        state.phase = 'reveal'; state.revealT0 = now();
+        state.solvedIndices.add(i); renderStageVisuals(); playChimeSfx();
+        if (state.audioMode === 'gemini' && $('toggle-speak-answer').checked) { await sleep(250); await speakSegmentLive(answerSpeechText(q), token); }
+        await sleep(timings.revealSec * 1000);
+      }
+      if (token !== state.runToken) return;
+      recordQuestionsAsAsked(state.questions);
+      checkTextareaDuplicates();
+      if (!$('toggle-instant-finish').checked) { state.phase = 'outro'; renderStageVisuals(); await sleep(timings.outroSec * 1000); }
+      else await sleep(250);
+      stopPlayback(false);
+      if (state.isRecording) stopLiveRecording();
+    }
+
+    function stopPlayback(resetToIdle = false) {
+      state.isPlaying = false;
+      state.runToken++;
+      stopBgmPlayback();
+      $('btn-play-pause').textContent = '▶ Başlat';
+      els.roamingWm.classList.add('wm-paused');
+      if (resetToIdle) {
+        state.currentIndex = -1;
+        state.phase = 'idle';
+        state.solvedIndices.clear();
+        renderStageVisuals();
+      }
+    }
+
+    // ==================== 1080x1920 CANVAS ÇİZİM MOTORU (CANLI KAYIT + OFFLINE RENDER + KAPAK) ====================
+    function drawRoundedRect(ctx, x, y, w, h, r) {
+      ctx.beginPath();
+      ctx.moveTo(x + r, y);
+      ctx.arcTo(x + w, y, x + w, y + h, r);
+      ctx.arcTo(x + w, y + h, x, y + h, r);
+      ctx.arcTo(x, y + h, x, y, r);
+      ctx.arcTo(x, y, x + w, y, r);
+      ctx.closePath();
+    }
+
+    function wrapCanvasText(ctx, text, maxWidth) {
+      const words = String(text || '').split(/\s+/).filter(Boolean);
+      const lines = [];
+      let cur = '';
+      for (const w of words) {
+        const test = cur ? `${cur} ${w}` : w;
+        if (ctx.measureText(test).width > maxWidth && cur) {
+          lines.push(cur);
+          cur = w;
+        } else {
+          cur = test;
+        }
+      }
+      if (cur) lines.push(cur);
+      return lines;
+    }
+
+    const clamp01 = x => Math.max(0, Math.min(1, x));
+    const easeOut = x => 1 - Math.pow(1 - clamp01(x), 3);
+    const easeBack = x => { x = clamp01(x); const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+    function fitAnswer(ctx, text, maxW, maxH) {
+      const up = trUpper(text);
+      for (let sz = 80; sz >= 20; sz -= 2) {
+        ctx.font = `900 ${sz}px Inter, sans-serif`;
+        if (ctx.measureText(up).width <= maxW && sz <= maxH) return { size: sz, lines: [up] };
+        const two = splitTwoLines(up);
+        if (two.length === 2 && two.every(l => ctx.measureText(l).width <= maxW) && sz * 2.1 <= maxH) return { size: sz, lines: two };
+      }
+      return { size: 20, lines: splitTwoLines(up).slice(0, 2) };
+    }
+    // Soru metni animasyonları (zamana bağlı: t = sorunun başlangıcından beri geçen sn)
+    function drawAnimatedText(ctx, text, cx, startY, lineH, maxW, t, mode) {
+      const lines = wrapCanvasText(ctx, text, maxW).slice(0, 4);
+      if (t == null || !$('toggle-anim-mode').checked || mode === 'letters') { lines.forEach((ln, i) => ctx.fillText(ln, cx, startY + i * lineH)); return lines.length; }
+      ctx.save();
+      if (mode === 'slide') {
+        const e = easeOut(t / 0.45); ctx.globalAlpha *= e; ctx.translate(0, -(1 - e) * 70);
+        lines.forEach((ln, i) => ctx.fillText(ln, cx, startY + i * lineH));
+      } else if (mode === 'pop') {
+        const e = easeBack(t / 0.38), midY = startY + ((lines.length - 1) * lineH) / 2 - 12;
+        ctx.globalAlpha *= clamp01(t / 0.15); ctx.translate(cx, midY); ctx.scale(0.55 + 0.45 * e, 0.55 + 0.45 * e); ctx.translate(-cx, -midY);
+        lines.forEach((ln, i) => ctx.fillText(ln, cx, startY + i * lineH));
+      } else if (mode === 'typewriter') {
+        let left = Math.floor(t / 0.032); ctx.textAlign = 'left';
+        lines.forEach((ln, i) => { if (left <= 0) return; const w = ctx.measureText(ln).width; const part = Array.from(ln).slice(0, left).join(''); left -= Array.from(ln).length + 1; ctx.fillText(part, cx - w / 2, startY + i * lineH); });
+      } else { // words
+        let k = 0; ctx.textAlign = 'left'; const sp = ctx.measureText(' ').width; const baseA = ctx.globalAlpha;
+        lines.forEach((ln, i) => {
+          let x = cx - ctx.measureText(ln).width / 2;
+          for (const w of ln.split(' ')) { const a = clamp01((t - k * 0.085) / 0.2); if (a > 0) { ctx.globalAlpha = baseA * a; ctx.fillText(w, x, startY + i * lineH + (1 - a) * 20); } x += ctx.measureText(w).width + sp; k++; }
+        });
+      }
+      ctx.restore();
+      return lines.length;
+    }
+
+    function drawBackgroundToCanvas(ctx, W, H) {
+      const isSport = state.theme === 'sport';
+      const grad = ctx.createRadialGradient(W * 0.5, H * 0.34, 40, W * 0.5, H * 0.45, H * 0.72);
+      if (state.bgPreset === 'navy') { grad.addColorStop(0, '#1e3a8a'); grad.addColorStop(1, '#020617'); }
+      else if (state.bgPreset === 'crimson') { grad.addColorStop(0, '#7f1d1d'); grad.addColorStop(1, '#140404'); }
+      else if (state.bgPreset === 'obsidian') { grad.addColorStop(0, '#27272a'); grad.addColorStop(1, '#09090b'); }
+      else if (state.bgPreset === 'stadium' || isSport) { grad.addColorStop(0, '#0f5132'); grad.addColorStop(1, '#020c09'); }
+      else { grad.addColorStop(0, '#4a2e14'); grad.addColorStop(0.55, '#1d130b'); grad.addColorStop(1, '#0b0806'); }
+
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, W, H);
+
+      if (state.bgImageObj) {
+        const img = state.bgImageObj;
+        const scale = Math.max(W / img.width, H / img.height);
+        const dw = img.width * scale, dh = img.height * scale;
+        ctx.drawImage(img, (W - dw) / 2, (H - dh) / 2, dw, dh);
+      }
+      ctx.fillStyle = `rgba(0,0,0,${state.bgDim})`;
+      ctx.fillRect(0, 0, W, H);
+
+      // İç çerçeve
+      ctx.strokeStyle = isSport ? 'rgba(52,211,153,0.3)' : 'rgba(217,167,92,0.28)';
+      ctx.lineWidth = 3;
+      drawRoundedRect(ctx, 26, 26, W - 52, H - 52, 46);
+      ctx.stroke();
+    }
+
+    function renderFrameToCanvas(ctx, W, H, frameState) {
+      drawBackgroundToCanvas(ctx, W, H);
+      const isSport = state.theme === 'sport';
+      const gold = isSport ? '#4ade80' : '#fbbf24';
+      const wm = $('input-watermark').value || '@animasyon.tarih';
+
+      // Kapak karesi
+      if (frameState.isCover) {
+        drawCoverToCanvas(ctx, W, H);
+        return;
+      }
+
+      // Gezen Filigran
+      if ($('toggle-roaming-wm').checked) {
+        const t = (frameState.timeSec || 0) * 0.25;
+        const wx = W * (0.2 + 0.6 * (0.5 + 0.5 * Math.sin(t)));
+        const wy = H * (0.18 + 0.62 * (0.5 + 0.5 * Math.cos(t * 0.7)));
+        ctx.save();
+        ctx.translate(wx, wy);
+        ctx.rotate(Math.sin(t) * 0.08);
+        ctx.font = '800 32px Inter, sans-serif';
+        ctx.fillStyle = 'rgba(246, 224, 181, 0.24)';
+        ctx.textAlign = 'center';
+        ctx.fillText(wm, 0, 0);
+        ctx.restore();
+      }
+
+      // Üst Başlıklar
+      ctx.textAlign = 'center';
+      let topY = 125;
+      const ep = $('input-episode').value.trim();
+      if (ep) {
+        ctx.font = '800 24px Inter, sans-serif';
+        ctx.fillStyle = gold;
+        ctx.fillText(ep.toUpperCase(), W / 2, topY - 38);
+      }
+      ctx.font = '700 28px Inter, sans-serif';
+      ctx.fillStyle = gold;
+      ctx.fillText($('input-kicker').value.toUpperCase(), W / 2, topY);
+
+      ctx.font = isSport ? 'italic 900 66px Inter, sans-serif' : '800 64px Cinzel, serif';
+      ctx.fillStyle = '#fff5dc';
+      ctx.fillText($('input-title').value, W / 2, topY + 74);
+
+      ctx.font = '600 30px Inter, sans-serif';
+      ctx.fillStyle = 'rgba(255,245,220,0.75)';
+      ctx.fillText($('input-subtitle').value, W / 2, topY + 118);
+
+      // Orta: Çember veya Çengel Bulmaca
+      const cx = W / 2, cy = 790;
+      if (state.mode === 'passaparola') {
+        const total = state.questions.length || 1;
+        const radius = 325;
+        ctx.strokeStyle = isSport ? 'rgba(74,222,128,0.22)' : 'rgba(217,167,92,0.22)';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.arc(cx, cy, 225, 0, Math.PI * 2);
+        ctx.stroke();
+
+        // Göbek (geri sayımda nabız + yay zamanlayıcı; cevapta göbekte büyük yeşil cevap)
+        const ph = frameState.phase;
+        let hubR = 145;
+        if (ph === 'thinking') hubR *= 1 + 0.045 * Math.sin((frameState.thinkT || 0) * Math.PI * 2);
+        if (ph === 'reveal') { const rt = frameState.revealT || 0; hubR *= 1 + 0.07 * Math.max(0, 1 - rt / 0.5) * Math.sin(rt * 16); }
+        ctx.fillStyle = ph === 'reveal' ? (isSport ? '#05291c' : '#0d2219') : (isSport ? '#072219' : '#1b130d');
+        ctx.strokeStyle = ph === 'reveal' ? '#34d399' : gold;
+        ctx.lineWidth = 5;
+        ctx.beginPath(); ctx.arc(cx, cy, hubR, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+        if (ph === 'thinking') {
+          const frac = clamp01(frameState.thinkFrac || 0), left = (1 - frac);
+          ctx.lineCap = 'round';
+          ctx.strokeStyle = 'rgba(255,255,255,0.10)'; ctx.lineWidth = 14;
+          ctx.beginPath(); ctx.arc(cx, cy, 172, 0, Math.PI * 2); ctx.stroke();
+          ctx.strokeStyle = left < 0.34 ? '#f87171' : gold; ctx.lineWidth = 14;
+          ctx.beginPath(); ctx.arc(cx, cy, 172, -Math.PI / 2, -Math.PI / 2 + left * Math.PI * 2); ctx.stroke();
+          ctx.lineCap = 'butt';
+        }
+        if (ph === 'intro' || ph === 'idle') {
+          ctx.font = '800 30px Cinzel, serif'; ctx.fillStyle = '#fde68a';
+          ctx.fillText('HAZIR MISIN?', cx, cy + 10);
+        } else if (frameState.currentIndex >= 0 && state.questions[frameState.currentIndex]) {
+          const q = state.questions[frameState.currentIndex];
+          if (ph === 'reveal') {
+            ctx.font = '800 24px Inter, sans-serif'; ctx.fillStyle = '#a7f3d0';
+            ctx.fillText(`${q.letter} HARFİ`, cx, cy - 92);
+            const fit = fitAnswer(ctx, q.answer, 250, 150);
+            const rt = frameState.revealT == null ? 9 : frameState.revealT;
+            const bounce = $('toggle-slot-anim').checked ? easeBack(rt / 0.34) : 1;
+            const lettersMode = $('toggle-anim-mode').checked && $('select-text-anim').value === 'letters';
+            let vis = lettersMode ? Math.floor(rt / 0.06) + 1 : 1e9;
+            ctx.save(); ctx.translate(cx, cy + 6); ctx.scale(0.5 + 0.5 * bounce, 0.5 + 0.5 * bounce);
+            ctx.font = `900 ${fit.size}px Inter, sans-serif`; ctx.fillStyle = '#34d399';
+            ctx.shadowColor = 'rgba(52,211,153,0.55)'; ctx.shadowBlur = 24;
+            const lh = fit.size * 1.05, y0 = -((fit.lines.length - 1) * lh) / 2 + fit.size * 0.36;
+            fit.lines.forEach((ln, li) => {
+              const ch = Array.from(ln); const show = ch.slice(0, Math.max(0, vis)).join(''); vis -= ch.length;
+              if (lettersMode) { ctx.textAlign = 'left'; ctx.fillText(show, -ctx.measureText(ln).width / 2, y0 + li * lh); ctx.textAlign = 'center'; }
+              else ctx.fillText(ln, 0, y0 + li * lh);
+            });
+            ctx.restore();
+          } else {
+            ctx.font = '800 26px Inter, sans-serif'; ctx.fillStyle = gold;
+            ctx.fillText(`${q.letter} HARFİ`, cx, cy - 52);
+            ctx.font = '800 84px "JetBrains Mono", monospace';
+            ctx.fillStyle = ph === 'reading' ? 'rgba(254,240,138,0.45)' : '#fef08a';
+            ctx.fillText(String(frameState.timerVal), cx, cy + 32);
+            ctx.font = '600 24px Inter, sans-serif'; ctx.fillStyle = '#d6d3d1';
+            ctx.fillText(ph === 'reading' ? 'Dinle...' : 'Düşün...', cx, cy + 78);
+          }
+        }
+
+        // Harf Düğümleri
+        const nodeR = total > 22 ? 32 : 38;
+        state.questions.forEach((q, idx) => {
+          const ang = (idx / total) * Math.PI * 2 - Math.PI / 2;
+          const nx = cx + Math.cos(ang) * radius;
+          const ny = cy + Math.sin(ang) * radius;
+          const isActive = idx === frameState.currentIndex && frameState.phase !== 'intro' && frameState.phase !== 'idle';
+          const isSolved = frameState.solvedSet.has(idx);
+
+          ctx.beginPath();
+          ctx.arc(nx, ny, isActive ? nodeR * 1.24 : nodeR, 0, Math.PI * 2);
+          ctx.fillStyle = isActive ? '#f59e0b' : (isSolved ? '#10b981' : '#18120d');
+          ctx.fill();
+          ctx.lineWidth = isActive ? 5 : 3;
+          ctx.strokeStyle = isActive ? '#fef9c3' : (isSolved ? '#a7f3d0' : 'rgba(217,167,92,0.45)');
+          ctx.stroke();
+
+          ctx.font = `800 ${isActive ? 34 : 28}px Inter, sans-serif`;
+          ctx.fillStyle = isActive || isSolved ? '#09090b' : '#e7d7be';
+          ctx.fillText(q.letter, nx, ny + 10);
+        });
+      } else {
+        // Çengel Bulmaca Canvas Çizimi
+        if (!state.crossword) buildCrosswordLayout();
+        const { size, grid } = state.crossword;
+        const cellSz = 56, gap = 6;
+        const totalW = size * (cellSz + gap) - gap;
+        const ox = (W - totalW) / 2, oy = 470;
+        const hintOn = $('toggle-first-hint').checked;
+        for (let r = 0; r < size; r++) {
+          for (let c = 0; c < size; c++) {
+            const cell = grid[r][c];
+            if (!cell) continue;
+            const x = ox + c * (cellSz + gap), y = oy + r * (cellSz + gap);
+            const isAct = cell.owners.includes(frameState.currentIndex);
+            const isSolv = cell.owners.some(o => frameState.solvedSet.has(o));
+            drawRoundedRect(ctx, x, y, cellSz, cellSz, 10);
+            ctx.fillStyle = isSolv ? '#059669' : (isAct ? 'rgba(245,158,11,0.28)' : 'rgba(24,18,13,0.92)');
+            ctx.fill();
+            ctx.strokeStyle = isSolv ? '#a7f3d0' : (isAct ? '#fbbf24' : 'rgba(217,167,92,0.45)');
+            ctx.lineWidth = 3;
+            ctx.stroke();
+            if (isSolv || (isAct && hintOn && cell.num === frameState.currentIndex + 1)) {
+              ctx.font = '800 30px Inter, sans-serif';
+              ctx.fillStyle = isSolv ? '#ecfdf5' : '#fde68a';
+              ctx.fillText(cell.ch, x + cellSz / 2, y + 38);
+            }
+          }
+        }
+      }
+
+      // Alt Soru Kartı (çemberde cevap kutusu yok: alt bilgi kartın içinde)
+      const isWheel = state.mode === 'passaparola';
+      const cardX = 70, cardY = 1265, cardW = W - 140, cardH = isWheel ? 420 : 310;
+      drawRoundedRect(ctx, cardX, cardY, cardW, cardH, 34);
+      ctx.fillStyle = isSport ? 'rgba(7,29,22,0.94)' : 'rgba(24,17,12,0.94)';
+      ctx.fill();
+      ctx.strokeStyle = frameState.phase === 'reveal' ? 'rgba(52,211,153,0.7)' : (isSport ? 'rgba(52,211,153,0.45)' : 'rgba(217,167,92,0.42)');
+      ctx.lineWidth = 3;
+      ctx.stroke();
+      const textMode = $('select-text-anim').value;
+
+      if (frameState.phase === 'intro') {
+        ctx.font = '800 40px Inter, sans-serif';
+        ctx.fillStyle = '#fde68a';
+        const n = wrapCanvasText(ctx, getIntroText(), cardW - 90).length;
+        const startY = cardY + cardH / 2 - ((n - 1) * 52) / 2 + 12;
+        drawAnimatedText(ctx, getIntroText(), W / 2, startY, 52, cardW - 90, frameState.phaseT, 'words');
+      } else if (frameState.currentIndex >= 0 && state.questions[frameState.currentIndex]) {
+        const q = state.questions[frameState.currentIndex];
+        const reveal = frameState.phase === 'reveal';
+        ctx.font = '800 26px Inter, sans-serif';
+        ctx.fillStyle = gold;
+        ctx.fillText(`${frameState.currentIndex + 1} / ${state.questions.length}  •  ${q.letter} HARFİ`, W / 2, cardY + 52);
+
+        ctx.font = '700 38px Inter, sans-serif';
+        ctx.fillStyle = reveal ? 'rgba(245,245,244,0.8)' : '#f5f5f4';
+        const nLines = Math.min(4, wrapCanvasText(ctx, q.question, cardW - 84).length);
+        const lineH = 48;
+        const noteSpace = isWheel ? 120 : 0;
+        const textStartY = cardY + 112 + Math.max(0, ((cardH - 112 - noteSpace - 30) - nLines * lineH) / 2);
+        drawAnimatedText(ctx, q.question, W / 2, textStartY, lineH, cardW - 84, frameState.qT, textMode);
+
+        if (reveal && q.note) {
+          const a = clamp01(((frameState.revealT == null ? 9 : frameState.revealT) - 0.15) / 0.3);
+          ctx.save(); ctx.globalAlpha = a;
+          ctx.font = '800 32px Inter, sans-serif';
+          const nl = wrapCanvasText(ctx, q.note, cardW - 120).slice(0, 2);
+          const bh = nl.length * 40 + 26, by = cardY + cardH - bh - 22;
+          drawRoundedRect(ctx, cardX + 40, by, cardW - 80, bh, 20);
+          ctx.fillStyle = 'rgba(6,78,59,0.75)'; ctx.fill();
+          ctx.strokeStyle = 'rgba(52,211,153,0.55)'; ctx.lineWidth = 2; ctx.stroke();
+          ctx.fillStyle = '#a7f3d0';
+          nl.forEach((ln, k) => ctx.fillText(ln, W / 2, by + 44 + k * 40));
+          ctx.restore();
+        }
+
+        if (!isWheel) { // çengel bulmaca: cevap kutuları kalır
+          const chars = Array.from(trUpper(q.answer));
+          const hintOn = $('toggle-first-hint').checked;
+          const boxSz = chars.length > 11 ? 58 : (chars.length > 8 ? 68 : 78);
+          const gap = 10;
+          const totalSlotW = chars.length * (boxSz + gap) - gap;
+          let sx = (W - totalSlotW) / 2;
+          const sy = 1620;
+          chars.forEach((ch, idx) => {
+            if (ch === ' ') { sx += 26; return; }
+            drawRoundedRect(ctx, sx, sy, boxSz, boxSz, 16);
+            ctx.fillStyle = reveal ? '#065f46' : (hintOn && idx === 0 ? 'rgba(245,158,11,0.22)' : 'rgba(20,15,11,0.9)');
+            ctx.fill();
+            ctx.strokeStyle = reveal ? '#34d399' : (hintOn && idx === 0 ? '#fbbf24' : 'rgba(217,167,92,0.45)');
+            ctx.lineWidth = 3;
+            ctx.stroke();
+            if (reveal || (hintOn && idx === 0)) {
+              ctx.font = `800 ${boxSz * 0.5}px Inter, sans-serif`;
+              ctx.fillStyle = reveal ? '#ecfdf5' : '#fde68a';
+              ctx.fillText(ch, sx + boxSz / 2, sy + boxSz * 0.68);
+            }
+            sx += boxSz + gap;
+          });
+        }
+      }
+
+      // Alt Filigran
+      ctx.font = '700 28px Inter, sans-serif';
+      ctx.fillStyle = 'rgba(246, 224, 181, 0.45)';
+      ctx.fillText(wm, W / 2, H - 56);
+
+      // Kapanış Ekranı
+      if (frameState.phase === 'outro') {
+        ctx.fillStyle = 'rgba(0,0,0,0.82)';
+        ctx.fillRect(0, 0, W, H);
+        drawRoundedRect(ctx, 110, 620, W - 220, 620, 48);
+        ctx.fillStyle = '#1b140d';
+        ctx.fill();
+        ctx.strokeStyle = gold;
+        ctx.lineWidth = 5;
+        ctx.stroke();
+        ctx.font = '800 66px Cinzel, serif';
+        ctx.fillStyle = '#fde68a';
+        ctx.fillText('TEBRİKLER!', W / 2, 830);
+        ctx.font = '600 34px Inter, sans-serif';
+        ctx.fillStyle = '#e7e5e4';
+        ctx.fillText('Kaç tanesini bildin? Yorumlara yaz!', W / 2, 920);
+        drawRoundedRect(ctx, 270, 990, W - 540, 90, 45);
+        ctx.fillStyle = gold;
+        ctx.fill();
+        ctx.font = '900 32px Inter, sans-serif';
+        ctx.fillStyle = '#1c1105';
+        ctx.fillText('ABONE OL & BEĞEN', W / 2, 1046);
+      }
+    }
+
+    // ==================== KAPAK FOTOĞRAFI ÇİZİMİ ====================
+    function drawCoverToCanvas(ctx, W, H) {
+      drawBackgroundToCanvas(ctx, W, H);
+      const accentColor = $('cover-inp-color').value || '#fbbf24';
+      const badge = $('cover-inp-badge').value || 'HER HARFE BİR SORU';
+      const title = $('cover-inp-title').value || 'TARİH PASSAPAROLA';
+      const accent = $('cover-inp-accent').value || 'HEPSİNİ BİLEBİLİR MİSİN?';
+
+      ctx.textAlign = 'center';
+      // Arka planda seçili modun silueti (Çember veya Bulmaca)
+      ctx.save();
+      ctx.globalAlpha = 0.35;
+      if (state.mode === 'passaparola') {
+        const cx = W / 2, cy = H * 0.52, r = 340;
+        TR_ALPHABET.slice(0, 22).forEach((ch, idx) => {
+          const ang = (idx / 22) * Math.PI * 2 - Math.PI / 2;
+          const x = cx + Math.cos(ang) * r, y = cy + Math.sin(ang) * r;
+          ctx.beginPath();
+          ctx.arc(x, y, 36, 0, Math.PI * 2);
+          ctx.fillStyle = idx === 0 ? accentColor : '#1c1510';
+          ctx.fill();
+          ctx.strokeStyle = accentColor;
+          ctx.lineWidth = 3;
+          ctx.stroke();
+          ctx.font = '800 30px Inter, sans-serif';
+          ctx.fillStyle = idx === 0 ? '#111' : '#fde68a';
+          ctx.fillText(ch, x, y + 11);
+        });
+      } else {
+        for (let r = 0; r < 6; r++) {
+          for (let c = 0; c < 6; c++) {
+            if ((r + c) % 2 === 0) {
+              drawRoundedRect(ctx, 210 + c * 112, 620 + r * 112, 100, 100, 16);
+              ctx.fillStyle = '#1c1510';
+              ctx.fill();
+              ctx.strokeStyle = accentColor;
+              ctx.lineWidth = 4;
+              ctx.stroke();
+            }
+          }
+        }
+      }
+      ctx.restore();
+
+      // Üst Rozet
+      drawRoundedRect(ctx, W / 2 - 260, 260, 520, 74, 37);
+      ctx.fillStyle = accentColor;
+      ctx.fill();
+      ctx.font = '900 30px Inter, sans-serif';
+      ctx.fillStyle = '#120d08';
+      ctx.fillText(badge.toUpperCase(), W / 2, 308);
+
+      // Büyük Başlık
+      ctx.font = '800 94px Cinzel, serif';
+      ctx.fillStyle = '#fff9eb';
+      const titleLines = wrapCanvasText(ctx, title.toUpperCase(), W - 140);
+      titleLines.forEach((ln, i) => ctx.fillText(ln, W / 2, 490 + i * 105));
+
+      // Alt Vurgu Kutusu
+      drawRoundedRect(ctx, 110, H - 360, W - 220, 130, 32);
+      ctx.fillStyle = 'rgba(0,0,0,0.72)';
+      ctx.fill();
+      ctx.strokeStyle = accentColor;
+      ctx.lineWidth = 5;
+      ctx.stroke();
+      ctx.font = '900 44px Inter, sans-serif';
+      ctx.fillStyle = accentColor;
+      ctx.fillText(accent.toUpperCase(), W / 2, H - 280);
+
+      // Filigran
+      ctx.font = '700 32px Inter, sans-serif';
+      ctx.fillStyle = 'rgba(255,245,220,0.7)';
+      ctx.fillText($('input-watermark').value || '@animasyon.tarih', W / 2, H - 110);
+    }
+
+    function updateCoverPreview() {
+      const cvs = $('cover-preview-canvas');
+      const ctx = cvs.getContext('2d');
+      ctx.save();
+      ctx.scale(0.5, 0.5);
+      drawCoverToCanvas(ctx, 1080, 1920);
+      ctx.restore();
+    }
+
+    // ==================== CANLI KAYIT (EKRAN PAYLAŞMASIZ DİREKT İNDİRME) ====================
+    function liveTimes() {
+      const n = performance.now() / 1000;
+      return { phaseT: n - state.phaseT0, qT: n - state.qT0, thinkT: n - state.thinkT0, thinkFrac: (n - state.thinkT0) / Math.max(0.1, state.thinkDur), revealT: n - state.revealT0 };
+    }
+    function startLiveRecording() {
+      if (!state.questions.length) { showToast('⚠️ Önce soru ekleyin.', true); return; }
+      if (computeBalancedTimings().removeN > 0) { showToast('⛔ 2:57\'ye sığmıyor, önce soru çıkar.', true); return; }
+      ensureAudioReady();
+      state.captureCanvas = document.createElement('canvas');
+      state.captureCanvas.width = 1080;
+      state.captureCanvas.height = 1920;
+      state.captureCtx = state.captureCanvas.getContext('2d');
+
+      const vStream = state.captureCanvas.captureStream(30);
+      const aStream = state.audioMixDest.stream;
+      const combined = new MediaStream([...vStream.getVideoTracks(), ...aStream.getAudioTracks()]);
+
+      // Windows Medya Oynatıcı uyumlu kodek seçimi
+      const candidates = [
+        'video/mp4;codecs=avc1.42E01E,mp4a.40.2',
+        'video/webm;codecs=vp9,opus',
+        'video/webm;codecs=vp8,opus',
+        'video/webm'
+      ];
+      const mime = candidates.find(m => MediaRecorder.isTypeSupported(m)) || '';
+      state.recordedChunks = [];
+      state.mediaRecorder = new MediaRecorder(combined, mime ? { mimeType: mime, videoBitsPerSecond: 6000000 } : undefined);
+      state.mediaRecorder.ondataavailable = e => { if (e.data && e.data.size > 0) state.recordedChunks.push(e.data); };
+      state.mediaRecorder.onstop = () => {
+        const ext = mime.includes('mp4') ? 'mp4' : 'webm';
+        const blob = new Blob(state.recordedChunks, { type: mime || 'video/webm' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `passaparola-shorts-${Date.now()}.${ext}`;
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(url), 5000);
+        showToast(`✓ Video indirildi (.${ext.toUpperCase()})!`);
+        saveRemoteAsked(state.questions);
+        $('btn-record-download').textContent = '🎬 Canlı Kaydet & İndir';
+        state.isRecording = false;
+        document.body.classList.remove('recording-mode');
+      };
+
+      state.isRecording = true;
+      $('btn-record-download').textContent = '⏹ Kaydı Durdur & İndir';
+      const recStart = performance.now();
+      const showCoverFirst = $('toggle-cover-first-frame').checked;
+
+      const drawLoop = () => {
+        if (!state.isRecording) return;
+        const elapsed = (performance.now() - recStart) / 1000;
+        // 2:59 kesin güvenlik kesicisi
+        if ($('toggle-max-duration-cap').checked && elapsed >= MAX_VIDEO_SEC) {
+          stopPlayback(false);
+          stopLiveRecording();
+          return;
+        }
+        renderFrameToCanvas(state.captureCtx, 1080, 1920, {
+          isCover: showCoverFirst && elapsed < 0.45,
+          timeSec: elapsed,
+          phase: state.phase,
+          currentIndex: state.currentIndex,
+          timerVal: state.timerVal,
+          solvedSet: state.solvedIndices,
+          ...liveTimes()
+        });
+        state.captureRaf = requestAnimationFrame(drawLoop);
+      };
+
+      state.mediaRecorder.start(250);
+      drawLoop();
+      stopPlayback(true);
+      setTimeout(() => runPlayback(), showCoverFirst ? 450 : 50);
+    }
+
+    function stopLiveRecording() {
+      state.isRecording = false;
+      if (state.captureRaf) cancelAnimationFrame(state.captureRaf);
+      if (state.mediaRecorder && state.mediaRecorder.state !== 'inactive') {
+        state.mediaRecorder.stop();
+      }
+    }
+
+    // ==================== ⚡ İZLEMEDEN HIZLI İNDİR (OFFLINE MP4 RENDER · MAKS 2:59) ====================
+    async function runFastOfflineRender() {
+      if (!state.questions.length) { showToast('⚠️ Önce soru ekleyin.', true); return; }
+      if (typeof VideoEncoder === 'undefined' || typeof AudioEncoder === 'undefined' || !window.Mp4Muxer) {
+        showToast('⚠️ Tarayıcın WebCodecs desteklemiyor; Canlı Kaydet kullanılıyor.', true);
+        startLiveRecording();
+        return;
+      }
+      state.fastRenderAbort = false;
+      const box = $('fast-render-progress-box'), statusEl = $('fast-render-status'), barEl = $('fast-render-bar');
+      box.classList.remove('hidden'); barEl.style.width = '3%'; statusEl.textContent = 'Sesler hazırlanıyor...';
+      try {
+        ensureAudioReady();
+        // 1) her satır ayrı TTS (önbellekli)
+        await prepareAllAudio((d, n, msg) => { statusEl.textContent = msg; barEl.style.width = `${3 + Math.round((d / n) * 14)}%`; });
+        if (state.fastRenderAbort) throw new Error('İptal edildi');
+        const timings = computeBalancedTimings();
+        if (timings.removeN > 0) { box.classList.add('hidden'); updateEstimatedDuration(); showToast(`⛔ 2:57'ye sığmıyor: ${timings.removeN} soru çıkar.`, true); return; }
+        const gem = state.audioMode === 'gemini';
+        const clip = text => { const b = gem ? state.voiceCache.get(voiceKeyFor(text)) : null; return { buf: b || null, dur: b ? b.duration : estSpeech(text) }; };
+        const hasIntro = $('toggle-intro-speech').checked && !timings.dropIntro;
+        const speakAns = gem && $('toggle-speak-answer').checked;
+        const instantEnd = $('toggle-instant-finish').checked;
+        const { thinkSec, revealSec, coverSec, outroSec } = timings;
+        const n = state.questions.length;
+
+        // 2) zaman çizelgesi: soru sesi biter -> geri sayım -> cevap -> bekleme (kayma imkânsız)
+        const timeline = [], audioEvents = [], tickTimes = [], chimeTimes = [];
+        let cursor = 0;
+        if (coverSec > 0) { timeline.push({ t0: 0, t1: coverSec, isCover: true, phase: 'idle', idx: -1, solvedCount: 0 }); cursor = coverSec; }
+        if (hasIntro) {
+          const c = clip(getIntroText());
+          audioEvents.push({ at: cursor, buf: c.buf, dur: c.dur });
+          timeline.push({ t0: cursor, t1: cursor + c.dur, phase: 'intro', idx: -1, solvedCount: 0, phaseStart: cursor });
+          cursor += c.dur;
+        }
+        for (let i = 0; i < n; i++) {
+          const q = state.questions[i];
+          const c = clip(speechTextFor(q)); const qStart = cursor;
+          audioEvents.push({ at: cursor, buf: c.buf, dur: c.dur });
+          timeline.push({ t0: cursor, t1: cursor + c.dur + READ_PAD, phase: 'reading', idx: i, solvedCount: i, qStart, timerVal: Math.ceil(thinkSec) });
+          cursor += c.dur + READ_PAD;
+          const thinkStart = cursor, steps = Math.max(1, Math.round(thinkSec)), stepD = thinkSec / steps;
+          for (let k = 0; k < steps; k++) tickTimes.push(cursor + k * stepD);
+          timeline.push({ t0: cursor, t1: cursor + thinkSec, phase: 'thinking', idx: i, solvedCount: i, qStart, thinkStart, thinkDur: thinkSec, steps, stepD });
+          cursor += thinkSec;
+          chimeTimes.push(cursor);
+          let revDur = revealSec;
+          if (speakAns) { const a = clip(answerSpeechText(q)); audioEvents.push({ at: cursor + 0.15, buf: a.buf, dur: a.dur }); revDur += a.dur; }
+          timeline.push({ t0: cursor, t1: cursor + revDur, phase: 'reveal', idx: i, solvedCount: i + 1, qStart, revealStart: cursor });
+          cursor += revDur;
+        }
+        if (outroSec > 0) { timeline.push({ t0: cursor, t1: cursor + outroSec, phase: instantEnd ? 'reveal' : 'outro', idx: n - 1, solvedCount: n, qStart: -99, revealStart: -99 }); cursor += outroSec; }
+        const totalDuration = Math.min(cursor, MAX_VIDEO_SEC);
+        statusEl.textContent = `Ses miksleniyor (${formatMinSec(totalDuration)})...`;
+        barEl.style.width = '18%';
+
+        // 3) ses miksi (müzik konuşurken kısılır)
+        const sampleRate = 48000;
+        const offCtx = new OfflineAudioContext(2, Math.ceil(totalDuration * sampleRate), sampleRate);
+        if (state.bgmBuffer) {
+          const base = parseFloat($('range-bgm-vol').value);
+          const g = offCtx.createGain(); g.connect(offCtx.destination);
+          g.gain.setValueAtTime(base, 0);
+          for (const ev of audioEvents) { if (!ev.buf) continue; g.gain.setTargetAtTime(base * 0.35, Math.max(0, ev.at - 0.08), 0.06); g.gain.setTargetAtTime(base, ev.at + ev.dur, 0.12); }
+          for (let bt = 0; bt < totalDuration; bt += state.bgmBuffer.duration) { const src = offCtx.createBufferSource(); src.buffer = state.bgmBuffer; src.connect(g); src.start(bt); }
+        }
+        for (const ev of audioEvents) {
+          if (!ev.buf || ev.at >= totalDuration) continue;
+          const src = offCtx.createBufferSource(); src.buffer = ev.buf; src.connect(offCtx.destination); src.start(ev.at);
+        }
+        const sfxVol = parseFloat($('range-sfx').value);
+        if (sfxVol > 0) {
+          for (const tt of tickTimes) {
+            if (tt >= totalDuration) continue;
+            const o = offCtx.createOscillator(), g = offCtx.createGain();
+            o.type = 'triangle'; o.frequency.setValueAtTime(880, tt);
+            g.gain.setValueAtTime(sfxVol * 0.22, tt); g.gain.exponentialRampToValueAtTime(0.001, tt + 0.07);
+            o.connect(g); g.connect(offCtx.destination); o.start(tt); o.stop(tt + 0.075);
+          }
+          for (const ct of chimeTimes) {
+            if (ct >= totalDuration) continue;
+            const o = offCtx.createOscillator(), g = offCtx.createGain();
+            o.type = 'sine'; o.frequency.setValueAtTime(587.3, ct); o.frequency.setValueAtTime(880, ct + 0.09);
+            g.gain.setValueAtTime(sfxVol * 0.25, ct); g.gain.exponentialRampToValueAtTime(0.001, ct + 0.3);
+            o.connect(g); g.connect(offCtx.destination); o.start(ct); o.stop(ct + 0.32);
+          }
+        }
+        const renderedAudio = await offCtx.startRendering();
+        if (state.fastRenderAbort) throw new Error('İptal edildi');
+
+        // 4) MP4 (mp4-muxer + WebCodecs)
+        const W = 1080, H = 1920, FPS = 30;
+        const muxer = new Mp4Muxer.Muxer({ target: new Mp4Muxer.ArrayBufferTarget(), video: { codec: 'avc', width: W, height: H }, audio: { codec: 'aac', numberOfChannels: 2, sampleRate }, fastStart: 'in-memory' });
+        let encErr = null;
+        const videoEncoder = new VideoEncoder({ output: (chunk, meta) => muxer.addVideoChunk(chunk, meta), error: e => { encErr = e; console.error(e); } });
+        videoEncoder.configure({ codec: 'avc1.4d002a', width: W, height: H, bitrate: 5_500_000, framerate: FPS });
+        const audioEncoder = new AudioEncoder({ output: (chunk, meta) => muxer.addAudioChunk(chunk, meta), error: e => { encErr = e; console.error(e); } });
+        audioEncoder.configure({ codec: 'mp4a.40.2', numberOfChannels: 2, sampleRate, bitrate: 128_000 });
+        const ch0 = renderedAudio.getChannelData(0), ch1 = renderedAudio.getChannelData(1);
+        for (let offset = 0; offset < renderedAudio.length; offset += 1024) {
+          const count = Math.min(1024, renderedAudio.length - offset);
+          const planar = new Float32Array(count * 2);
+          planar.set(ch0.subarray(offset, offset + count), 0); planar.set(ch1.subarray(offset, offset + count), count);
+          const ad = new AudioData({ format: 'f32-planar', sampleRate, numberOfFrames: count, numberOfChannels: 2, timestamp: Math.round((offset / sampleRate) * 1_000_000), data: planar });
+          audioEncoder.encode(ad); ad.close();
+        }
+        const cvs = document.createElement('canvas'); cvs.width = W; cvs.height = H;
+        const ctx = cvs.getContext('2d');
+        const totalFrames = Math.ceil(totalDuration * FPS);
+        let segPointer = 0;
+        for (let f = 0; f < totalFrames; f++) {
+          if (state.fastRenderAbort) throw new Error('İptal edildi');
+          if (encErr) throw encErr;
+          const tSec = f / FPS;
+          while (segPointer < timeline.length - 1 && timeline[segPointer].t1 <= tSec) segPointer++;
+          const seg = timeline[segPointer];
+          const solvedSet = new Set(); for (let k = 0; k < seg.solvedCount; k++) solvedSet.add(k);
+          let timerVal = seg.timerVal || 0;
+          if (seg.phase === 'thinking') timerVal = Math.max(1, seg.steps - Math.floor((tSec - seg.thinkStart) / seg.stepD));
+          renderFrameToCanvas(ctx, W, H, {
+            isCover: !!seg.isCover, timeSec: tSec, phase: seg.phase, currentIndex: seg.idx, timerVal, solvedSet,
+            phaseT: seg.phaseStart != null ? tSec - seg.phaseStart : null,
+            qT: seg.qStart != null ? tSec - seg.qStart : null,
+            thinkT: seg.thinkStart != null ? tSec - seg.thinkStart : 0,
+            thinkFrac: seg.thinkStart != null ? (tSec - seg.thinkStart) / seg.thinkDur : 0,
+            revealT: seg.revealStart != null ? tSec - seg.revealStart : null
+          });
+          const vf = new VideoFrame(cvs, { timestamp: Math.round(tSec * 1_000_000), duration: Math.round(1_000_000 / FPS) });
+          videoEncoder.encode(vf, { keyFrame: f % 60 === 0 });
+          vf.close();
+          if (f % 15 === 0) {
+            const pct = Math.min(98, 20 + Math.round((f / totalFrames) * 78));
+            barEl.style.width = `${pct}%`; statusEl.textContent = `MP4 işleniyor... %${pct}`;
+            while (videoEncoder.encodeQueueSize > 8) await sleep(8);
+            await sleep(0);
+          }
+        }
+        statusEl.textContent = 'MP4 dosyası paketleniyor...'; barEl.style.width = '99%';
+        await videoEncoder.flush(); await audioEncoder.flush();
+        muxer.finalize();
+        const blob = new Blob([muxer.target.buffer], { type: 'video/mp4' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a'); a.href = url; a.download = `hizli-studyo-${Date.now()}.mp4`; a.click();
+        setTimeout(() => URL.revokeObjectURL(url), 60000);
+        recordQuestionsAsAsked(state.questions);
+        saveRemoteAsked(state.questions);
+        barEl.style.width = '100%'; statusEl.textContent = '✓ Tamamlandı ve indirildi!';
+        showToast(`⚡ MP4 hazır! (${formatMinSec(totalDuration)})`);
+        setTimeout(() => box.classList.add('hidden'), 2500);
+      } catch (err) {
+        box.classList.add('hidden');
+        if (err.message !== 'İptal edildi') { console.error(err); showToast('❌ Hızlı render hatası: ' + err.message, true); }
+        else showToast('İptal edildi.', true);
+      }
+    }
+
+    // ==================== SORU BANKASI & DAHA ÖNCE SORULANLAR MODALI ====================
+    function renderBankModal() {
+      // Kategoriler
+      const cats = ['Tümü', ...new Set(state.bank.map(b => b.category || 'Genel'))];
+      const catWrap = $('bank-categories');
+      catWrap.innerHTML = '';
+      cats.slice(0, 14).forEach(cat => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = cat;
+        b.className = `px-2.5 py-1 rounded-lg text-[10px] font-bold cursor-pointer ${state.bankFilterCat === cat ? 'bg-amber-500 text-stone-950' : 'bg-stone-800 text-stone-300 hover:bg-stone-700'}`;
+        b.addEventListener('click', () => { state.bankFilterCat = cat; renderBankModal(); });
+        catWrap.appendChild(b);
+      });
+
+      const qTerm = trUpper($('bank-search').value);
+      const listEl = $('bank-list');
+      listEl.innerHTML = '';
+      const filtered = state.bank.filter(item => {
+        if (state.bankFilterCat !== 'Tümü' && (item.category || 'Genel') !== state.bankFilterCat) return false;
+        if (qTerm && !trUpper(`${item.letter} ${item.question} ${item.answer} ${item.note}`).includes(qTerm)) return false;
+        return true;
+      });
+
+      filtered.slice(0, 200).forEach(item => {
+        const asked = isQuestionAskedBefore(item.question, item.answer);
+        const card = document.createElement('div');
+        card.className = 'bg-stone-900/90 border border-stone-800 rounded-xl p-2.5 flex flex-col gap-1';
+        card.innerHTML = `
+          <div class="flex items-center justify-between gap-2">
+            <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[10px] font-extrabold">${escapeHtml(item.letter)} • ${escapeHtml(item.answer)}</span>
+            <div class="flex items-center gap-1.5">
+              ${asked ? '<span class="px-1.5 py-0.5 rounded bg-rose-950 text-rose-300 text-[9px] font-bold">🕒 Soruldu</span>' : ''}
+              <button type="button" class="btn-add-from-bank px-2 py-0.5 rounded bg-emerald-600 hover:bg-emerald-500 text-white text-[10px] font-bold cursor-pointer">+ Listeye Ekle</button>
+            </div>
+          </div>
+          <p class="text-[11px] text-stone-200 leading-snug">${escapeHtml(item.question)}</p>
+        `;
+        card.querySelector('.btn-add-from-bank').addEventListener('click', () => {
+          const line = item.note ? `${item.letter} | ${item.question} | ${item.answer} | ${item.note}` : `${item.letter} | ${item.question} | ${item.answer}`;
+          els.inputQuestions.value = (els.inputQuestions.value.trim() ? els.inputQuestions.value.trim() + '\n' : '') + line;
+          applyQuestionsFromTextarea();
+          showToast(`✓ "${item.answer}" listeye eklendi!`);
+        });
+        listEl.appendChild(card);
+      });
+
+      // Daha Önce Sorulanlar
+      const aTerm = trUpper($('asked-search').value);
+      const askedEl = $('asked-list');
+      askedEl.innerHTML = '';
+      const filteredAsked = state.askedArchive.filter(item => !aTerm || trUpper(`${item.letter} ${item.question} ${item.answer}`).includes(aTerm));
+
+      if (!filteredAsked.length) {
+        askedEl.innerHTML = '<p class="text-xs text-stone-400 text-center py-8">Henüz kaydedilmiş sorulmuş soru yok.</p>';
+      } else {
+        filteredAsked.forEach((item, idx) => {
+          const row = document.createElement('div');
+          row.className = 'bg-stone-900 border border-stone-800 rounded-xl p-2.5 flex items-center justify-between gap-2';
+          row.innerHTML = `
+            <div class="min-w-0">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-extrabold text-amber-300">${escapeHtml(item.letter)} • ${escapeHtml(item.answer)}</span>
+                <span class="text-[10px] text-stone-500">${escapeHtml(item.date || '')}</span>
+              </div>
+              <p class="text-[11px] text-stone-300 truncate">${escapeHtml(item.question)}</p>
+            </div>
+            <button type="button" class="btn-del-asked px-2 py-1 rounded-lg bg-stone-800 hover:bg-rose-700 text-stone-300 hover:text-white text-[10px] cursor-pointer shrink-0">Sil</button>
+          `;
+          row.querySelector('.btn-del-asked').addEventListener('click', () => {
+            state.askedArchive.splice(idx, 1);
+            saveAskedArchive();
+            renderBankModal();
+            checkTextareaDuplicates();
+          });
+          askedEl.appendChild(row);
+        });
+      }
+    }
+
+    function openBankModal(tab = 'bank') {
+      $('bank-modal').classList.remove('hidden');
+      const isBank = tab === 'bank';
+      $('tab-panel-bank').classList.toggle('hidden', !isBank);
+      $('tab-panel-asked').classList.toggle('hidden', isBank);
+      $('tab-panel-asked').classList.toggle('flex', !isBank);
+      $('tab-btn-bank').className = isBank ? 'px-3.5 py-2 rounded-xl bg-amber-500 text-stone-950 font-extrabold text-xs cursor-pointer' : 'px-3.5 py-2 rounded-xl bg-stone-800 text-stone-200 font-bold text-xs cursor-pointer';
+      $('tab-btn-asked').className = !isBank ? 'px-3.5 py-2 rounded-xl bg-amber-500 text-stone-950 font-extrabold text-xs cursor-pointer' : 'px-3.5 py-2 rounded-xl bg-stone-800 text-stone-200 font-bold text-xs cursor-pointer';
+      renderBankModal();
+    }
+
+    // ==================== OLAY DİNLEYİCİLERİ (EVENT LISTENERS) ====================
+    function bindAllEvents() {
+      // Oyun Modu
+      $('mode-passaparola').addEventListener('click', () => {
+        state.mode = 'passaparola';
+        $('mode-passaparola').className = 'py-2 px-3 rounded-xl text-xs font-bold bg-amber-500 text-stone-950 transition cursor-pointer flex items-center justify-center gap-1.5';
+        $('mode-crossword').className = 'py-2 px-3 rounded-xl text-xs font-bold text-amber-200/80 hover:bg-stone-800 transition cursor-pointer flex items-center justify-center gap-1.5';
+        $('passaparola-settings-box').classList.remove('hidden');
+        renderStageVisuals();
+      });
+      $('mode-crossword').addEventListener('click', () => {
+        state.mode = 'crossword';
+        $('mode-crossword').className = 'py-2 px-3 rounded-xl text-xs font-bold bg-amber-500 text-stone-950 transition cursor-pointer flex items-center justify-center gap-1.5';
+        $('mode-passaparola').className = 'py-2 px-3 rounded-xl text-xs font-bold text-amber-200/80 hover:bg-stone-800 transition cursor-pointer flex items-center justify-center gap-1.5';
+        buildCrosswordLayout();
+        renderStageVisuals();
+      });
+
+      // Hazır Paketler & Tema
+      $('preset-tarih').addEventListener('click', () => {
+        $('input-kicker').value = 'HER HARFE BİR';
+        $('input-title').value = 'TARİH SORUSU';
+        $('input-subtitle').value = 'kaçını bileceksin?';
+        $('input-watermark').value = '@animasyon.tarih';
+        setTheme('tarih');
+        els.inputQuestions.value = DEFAULT_TARIH_QUESTIONS.join('\n');
+        applyQuestionsFromTextarea();
+        showToast('🏛️ Tarih paketi yüklendi!');
+      });
+      $('preset-futbol').addEventListener('click', () => {
+        $('input-kicker').value = 'HER HARFE BİR';
+        $('input-title').value = 'FUTBOL SORUSU';
+        $('input-subtitle').value = 'kaçını bileceksin?';
+        $('input-watermark').value = '@animasyon.spor';
+        setTheme('sport');
+        els.inputQuestions.value = DEFAULT_FUTBOL_QUESTIONS.join('\n');
+        applyQuestionsFromTextarea();
+        showToast('⚽ Futbol paketi yüklendi!');
+      });
+      $('theme-tarih-btn').addEventListener('click', () => setTheme('tarih'));
+      $('theme-sport-btn').addEventListener('click', () => setTheme('sport'));
+
+      // Arka Plan
+      document.querySelectorAll('.btn-bg-preset').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.bgPreset = btn.dataset.bgpreset;
+          state.bgImageUrl = '';
+          state.bgImageObj = null;
+          applyBackgroundUI();
+        });
+      });
+      $('btn-bg-clear').addEventListener('click', () => {
+        state.bgPreset = 'default';
+        state.bgImageUrl = '';
+        state.bgImageObj = null;
+        applyBackgroundUI();
+      });
+      $('input-bg-image').addEventListener('change', e => {
+        const f = e.target.files[0];
+        if (!f) return;
+        const url = URL.createObjectURL(f);
+        state.bgImageUrl = url;
+        const img = new Image();
+        img.onload = () => { state.bgImageObj = img; applyBackgroundUI(); };
+        img.src = url;
+      });
+      $('range-bg-dim').addEventListener('input', e => {
+        state.bgDim = parseInt(e.target.value, 10) / 100;
+        $('val-bg-dim').textContent = `${e.target.value}%`;
+        applyBackgroundUI();
+      });
+
+      // Başlıklar & Bölüm
+      ['input-kicker', 'input-title', 'input-subtitle', 'input-watermark', 'input-episode'].forEach(id => {
+        $(id).addEventListener('input', renderStageVisuals);
+      });
+      $('toggle-roaming-wm').addEventListener('change', renderStageVisuals);
+      $('btn-episode-next').addEventListener('click', () => {
+        const cur = $('input-episode').value.trim();
+        const m = cur.match(/(\d+)/);
+        $('input-episode').value = m ? cur.replace(/\d+/, Number(m[1]) + 1) : 'BÖLÜM 1';
+        renderStageVisuals();
+      });
+      $('btn-episode-clear').addEventListener('click', () => { $('input-episode').value = ''; renderStageVisuals(); });
+      $('btn-preview-outro').addEventListener('click', () => {
+        state.phase = state.phase === 'outro' ? 'idle' : 'outro';
+        renderStageVisuals();
+      });
+
+      // Animasyon Modu
+      $('toggle-anim-mode').addEventListener('change', e => {
+        const on = e.target.checked;
+        $('anim-options-panel').classList.toggle('hidden', !on);
+        $('anim-options-panel').classList.toggle('flex', on);
+        $('anim-mode-badge').textContent = on ? 'Aktif' : 'Kapalı';
+        renderStageVisuals();
+      });
+      $('btn-preview-anim').addEventListener('click', () => {
+        renderStageVisuals();
+        showToast('✨ Animasyon önizlendi!');
+      });
+
+      // Ses Modları
+      const audioModes = ['gemini', 'silent'];
+      audioModes.forEach(m => {
+        $(`audio-mode-${m}`).addEventListener('click', () => {
+          state.audioMode = m;
+          audioModes.forEach(x => {
+            $(`audio-mode-${x}`).className = `col-span-2 py-1.5 px-1 rounded-lg text-[10px] font-semibold cursor-pointer ${x === m ? 'bg-amber-500 text-stone-950' : 'text-stone-300 hover:bg-stone-800'}`;
+          });
+          $('gemini-settings').classList.toggle('hidden', m !== 'gemini');
+          updateEstimatedDuration();
+        });
+      });
+      $('select-gemini-voice').addEventListener('change', updateEstimatedDuration);
+      $('toggle-speak-answer').addEventListener('change', updateEstimatedDuration);
+
+      // Spiker Metnini Kopyala
+      $('btn-copy-tts-script').addEventListener('click', () => {
+        const lines = [];
+        if ($('toggle-intro-speech').checked) lines.push(getIntroText());
+        state.questions.forEach(q => lines.push(speechTextFor(q)));
+        const ta = document.createElement('textarea');
+        ta.value = lines.join('\n\n');
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); showToast('✓ Spiker metni kopyalandı!'); } catch (e) {}
+        document.body.removeChild(ta);
+      });
+
+      // Arka Plan Müziği
+      $('input-bgm-file').addEventListener('change', async e => {
+        const file = e.target.files[0];
+        if (!file) return;
+        try {
+          ensureAudioReady();
+          const ab = await file.arrayBuffer();
+          state.bgmBuffer = await state.audioCtx.decodeAudioData(ab);
+          $('btn-bgm-clear').classList.remove('hidden');
+          showToast('🎵 Arka plan müziği yüklendi!');
+        } catch (err) {
+          showToast('❌ Müzik yüklenemedi.', true);
+        }
+      });
+      $('btn-bgm-clear').addEventListener('click', () => {
+        state.bgmBuffer = null;
+        stopBgmPlayback();
+        $('input-bgm-file').value = '';
+        $('btn-bgm-clear').classList.add('hidden');
+      });
+      $('range-bgm-vol').addEventListener('input', e => {
+        $('val-bgm-vol').textContent = `${Math.round(parseFloat(e.target.value) * 100)}%`;
+      });
+
+      // Zamanlama Sürgüleri
+      $('range-sfx').addEventListener('input', e => { $('val-sfx').textContent = `${Math.round(parseFloat(e.target.value) * 100)}%`; });
+      $('range-think').addEventListener('input', e => { $('val-think').textContent = `${e.target.value} sn`; updateEstimatedDuration(); });
+      $('range-reveal').addEventListener('input', e => { $('val-reveal').textContent = `${e.target.value} sn`; updateEstimatedDuration(); });
+      $('toggle-max-duration-cap').addEventListener('change', updateEstimatedDuration);
+      $('toggle-intro-speech').addEventListener('change', updateEstimatedDuration);
+      $('toggle-cover-first-frame').addEventListener('change', updateEstimatedDuration);
+      $('toggle-instant-finish').addEventListener('change', updateEstimatedDuration);
+
+      $('btn-fast-tempo').addEventListener('click', () => {
+        $('range-think').value = 2; $('val-think').textContent = '2 sn';
+        $('range-reveal').value = 1.0; $('val-reveal').textContent = '1 sn';
+        updateEstimatedDuration();
+      });
+      $('btn-normal-tempo').addEventListener('click', () => {
+        $('range-think').value = 3; $('val-think').textContent = '3 sn';
+        $('range-reveal').value = 1.6; $('val-reveal').textContent = '1.6 sn';
+        updateEstimatedDuration();
+      });
+
+      // Soru Sayısı & Harf Seçici
+      const setQCount = val => {
+        state.questionCount = Math.max(1, Math.min(29, parseInt(val, 10) || 1));
+        $('range-question-count').value = state.questionCount;
+        $('input-question-count').value = state.questionCount;
+        rebuildActiveQuestions();
+      };
+      $('range-question-count').addEventListener('input', e => setQCount(e.target.value));
+      $('input-question-count').addEventListener('input', e => setQCount(e.target.value));
+      document.querySelectorAll('.btn-quick-count').forEach(b => {
+        b.addEventListener('click', () => setQCount(Number(b.dataset.qcount) === 99 ? Math.max(1, state.allParsedQuestions.length) : b.dataset.qcount));
+      });
+      $('btn-letters-all').addEventListener('click', () => { state.selectedLetters = new Set(TR_ALPHABET); renderLetterPicker(); rebuildActiveQuestions(); });
+      $('btn-letters-none').addEventListener('click', () => { state.selectedLetters.clear(); renderLetterPicker(); rebuildActiveQuestions(); });
+
+      // Hızlı Soru Ekle (Tekrar Uyarılı)
+      $('quick-q-answer').addEventListener('input', () => {
+        const v = trUpper($('quick-q-answer').value);
+        if (v && !$('quick-q-letter').value.trim()) $('quick-q-letter').value = v.slice(0, 1);
+      });
+      const commitQuickQuestion = qObj => {
+        const line = qObj.note ? `${qObj.letter} | ${qObj.question} | ${qObj.answer} | ${qObj.note}` : `${qObj.letter} | ${qObj.question} | ${qObj.answer}`;
+        els.inputQuestions.value = (els.inputQuestions.value.trim() ? els.inputQuestions.value.trim() + '\n' : '') + line;
+        applyQuestionsFromTextarea();
+        $('quick-q-letter').value = ''; $('quick-q-answer').value = ''; $('quick-q-text').value = ''; $('quick-q-note').value = '';
+        $('quick-dup-warning').classList.add('hidden');
+        state.pendingQuickQ = null;
+        showToast(`✓ "${qObj.answer}" eklendi!`);
+      };
+      $('btn-quick-add-q').addEventListener('click', () => {
+        const answer = trUpper($('quick-q-answer').value);
+        const letter = trUpper($('quick-q-letter').value || answer.slice(0, 1)).slice(0, 1);
+        const question = $('quick-q-text').value.trim();
+        const note = $('quick-q-note').value.trim();
+        if (!letter || !question || !answer) { showToast('⚠️ Harf, Soru ve Cevap zorunludur.', true); return; }
+        const qObj = { letter, question, answer, note };
+        const inList = state.allParsedQuestions.some(x => normalizeKey(x.answer) === normalizeKey(answer));
+        const inAsked = isQuestionAskedBefore(question, answer);
+        if (inList || inAsked) {
+          state.pendingQuickQ = qObj;
+          $('quick-dup-text').textContent = inAsked
+            ? `⚠️ "${answer}" daha önce sorulmuştu! Lütfen başka bir soruyla değiştirin.`
+            : `⚠️ "${answer}" şu anki listede zaten var! Lütfen değiştirin.`;
+          $('quick-dup-warning').classList.remove('hidden');
+          return;
+        }
+        commitQuickQuestion(qObj);
+      });
+      $('btn-dup-change').addEventListener('click', () => {
+        $('quick-dup-warning').classList.add('hidden');
+        state.pendingQuickQ = null;
+        $('quick-q-answer').focus();
+      });
+      $('btn-dup-force').addEventListener('click', () => {
+        if (state.pendingQuickQ) commitQuickQuestion(state.pendingQuickQ);
+      });
+
+      // Anlık Soru Listesi Güncelleme & Direkt Excel
+      els.inputQuestions.addEventListener('input', () => applyQuestionsFromTextarea(false));
+      els.inputQuestions.addEventListener('paste', () => setTimeout(() => applyQuestionsFromTextarea(true), 0));
+      $('btn-apply-questions').addEventListener('click', () => { applyQuestionsFromTextarea(true); showToast('✓ Liste uygulandı (tekrarlar elendi)!'); });
+      $('btn-shorten').addEventListener('click', async () => {
+        const list = state.allParsedQuestions; if (!list.length) { showToast('⚠️ Liste boş.', true); return; }
+        const b = $('btn-shorten'); b.disabled = true; b.textContent = '✂️ Kısaltılıyor…';
+        try {
+          const r = await api('studyo_kisalt', { sorular: list.map(q => ({ harf: q.letter, soru: q.question, cevap: q.answer })) });
+          const out = r.sorular || [];
+          list.forEach((q, i) => { const x = out[i]; if (x && x.soru && x.soru.split(/\s+/).length <= 16) q.question = x.soru.trim(); });
+          els.inputQuestions.value = list.map(q => q.note ? `${q.letter} | ${q.question} | ${q.answer} | ${q.note}` : `${q.letter} | ${q.question} | ${q.answer}`).join('\n');
+          applyQuestionsFromTextarea(false);
+          showToast(`✂️ ${out.length} soru kısaltıldı. Kontrol et!`);
+        } catch (e) { showToast('❌ Kısaltma hatası: ' + e.message, true); }
+        b.disabled = false; b.textContent = '✂️ Gemini ile kısalt';
+      });
+      $('input-direct-excel').addEventListener('change', e => {
+        if (e.target.files[0]) handleFileImport(e.target.files[0], true);
+        e.target.value = '';
+      });
+
+      // Oynatma & Kayıt Butonları
+      $('btn-play-pause').addEventListener('click', () => { if (state.isPlaying) stopPlayback(false); else runPlayback(); });
+      $('btn-float-play').addEventListener('click', () => { if (state.isPlaying) stopPlayback(false); else runPlayback(); });
+      $('btn-reset').addEventListener('click', () => stopPlayback(true));
+      $('btn-prev').addEventListener('click', () => {
+        stopPlayback(false);
+        state.currentIndex = Math.max(0, state.currentIndex - 1);
+        state.phase = 'reading';
+        renderStageVisuals();
+      });
+      $('btn-next').addEventListener('click', () => {
+        stopPlayback(false);
+        state.currentIndex = Math.min(state.questions.length - 1, state.currentIndex + 1);
+        state.phase = 'reading';
+        renderStageVisuals();
+      });
+
+      $('btn-record-download').addEventListener('click', () => {
+        if (state.isRecording) { stopPlayback(false); stopLiveRecording(); }
+        else startLiveRecording();
+      });
+      $('btn-fast-render').addEventListener('click', runFastOfflineRender);
+      $('btn-cancel-fast-render').addEventListener('click', () => { state.fastRenderAbort = true; });
+
+      // Tam Ekran Modu
+      $('btn-record-mode').addEventListener('click', () => document.body.classList.add('recording-mode'));
+      $('btn-exit-record').addEventListener('click', () => document.body.classList.remove('recording-mode'));
+
+      // Banka & Sorulanlar Modalı
+      $('btn-open-bank').addEventListener('click', () => openBankModal('bank'));
+      $('btn-open-asked').addEventListener('click', () => openBankModal('asked'));
+      $('tab-btn-bank').addEventListener('click', () => openBankModal('bank'));
+      $('tab-btn-asked').addEventListener('click', () => openBankModal('asked'));
+      $('btn-close-bank').addEventListener('click', () => $('bank-modal').classList.add('hidden'));
+      $('bank-search').addEventListener('input', renderBankModal);
+      $('asked-search').addEventListener('input', renderBankModal);
+      $('input-bank-file').addEventListener('change', e => {
+        if (e.target.files[0]) handleFileImport(e.target.files[0], false);
+        e.target.value = '';
+      });
+      $('btn-bank-random').addEventListener('click', () => {
+        const byLetter = new Map();
+        state.bank.forEach(q => {
+          if (!byLetter.has(q.letter)) byLetter.set(q.letter, []);
+          byLetter.get(q.letter).push(q);
+        });
+        const picked = [];
+        for (const ch of TR_ALPHABET) {
+          const arr = byLetter.get(ch);
+          if (!arr || !arr.length) continue;
+          const fresh = arr.filter(x => !isQuestionAskedBefore(x.question, x.answer));
+          const pool = fresh.length ? fresh : arr;
+          picked.push(pool[Math.floor(Math.random() * pool.length)]);
+        }
+        els.inputQuestions.value = picked.map(q => q.note ? `${q.letter} | ${q.question} | ${q.answer} | ${q.note}` : `${q.letter} | ${q.question} | ${q.answer}`).join('\n');
+        applyQuestionsFromTextarea();
+        $('bank-modal').classList.add('hidden');
+        showToast(`🎲 ${picked.length} soru rastgele seçildi!`);
+      });
+      $('btn-bank-backup').addEventListener('click', () => {
+        const txt = state.bank.map(q => `${q.letter} | ${q.question} | ${q.answer}${q.note ? ' | ' + q.note : ''}`).join('\n');
+        const blob = new Blob([txt], { type: 'text/plain;charset=utf-8' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `tarih-soru-bankasi-${state.bank.length}.txt`;
+        a.click();
+      });
+      $('btn-asked-export').addEventListener('click', () => {
+        const txt = state.askedArchive.map(q => `${q.letter} | ${q.question} | ${q.answer}${q.note ? ' | ' + q.note : ''}`).join('\n');
+        const blob = new Blob([txt], { type: 'text/plain;charset=utf-8' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `daha-once-sorulanlar-${state.askedArchive.length}.txt`;
+        a.click();
+      });
+      $('btn-asked-clear').addEventListener('click', () => {
+        state.askedArchive = [];
+        saveAskedArchive();
+        renderBankModal();
+        checkTextareaDuplicates();
+        showToast('Arşiv temizlendi.');
+      });
+
+      // Kapak Fotoğrafı Modalı
+      $('btn-open-cover-modal').addEventListener('click', () => {
+        $('cover-modal').classList.remove('hidden');
+        updateCoverPreview();
+      });
+      $('btn-close-cover').addEventListener('click', () => $('cover-modal').classList.add('hidden'));
+      ['cover-inp-badge', 'cover-inp-title', 'cover-inp-accent', 'cover-inp-color'].forEach(id => {
+        $(id).addEventListener('input', updateCoverPreview);
+      });
+      $('btn-download-cover').addEventListener('click', () => {
+        const cvs = document.createElement('canvas');
+        cvs.width = 1080; cvs.height = 1920;
+        drawCoverToCanvas(cvs.getContext('2d'), 1080, 1920);
+        const a = document.createElement('a');
+        a.href = cvs.toDataURL('image/png');
+        a.download = `kapak-thumbnail-${Date.now()}.png`;
+        a.click();
+        showToast('📸 1080×1920 Kapak PNG indirildi!');
+      });
+    }
+
+    // ==================== BAŞLATMA ====================
+    function init() {
+      loadBankAndAsked();
+      renderLetterPicker();
+      bindAllEvents();
+      els.inputQuestions.value = DEFAULT_TARIH_QUESTIONS.join('\n');
+      applyBackgroundUI();
+      applyQuestionsFromTextarea();
+      if (new URLSearchParams(location.search).get('tema') === 'spor') $('preset-futbol').click();
+      loadRemoteAsked();
+    }
+
+    window.addEventListener('DOMContentLoaded', init);
+  })();
+  </script>
+</body>
+</html>

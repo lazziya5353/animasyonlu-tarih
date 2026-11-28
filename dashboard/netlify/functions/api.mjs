@@ -98,6 +98,45 @@ async function quizEskiScript(fmt, slug, tema, Q, baslik, n, girisOzel) {
     seslendirme_metni: sah.map((x) => x.lines[0]).join("\n"), alt_bilgi: Object.fromEntries(S.map((q) => [q.harf, t(q.alt_bilgi)])), aciklama: "", hashtagler: [], kaynaklar: [], kontrol_notlari: [] };
 }
 
+// ───────── Hızlı Stüdyo (hizli-studyo.html): satır satır TTS, tekrar soru arşivi, kısaltma ─────────
+const TTS_MODELLER = ["gemini-2.5-flash-preview-tts", "gemini-2.5-flash-tts", "gemini-3-flash-preview-tts", "gemini-2.5-pro-preview-tts"];
+const SESLER = ["Charon", "Orus", "Puck", "Kore", "Fenrir", "Aoede", "Zephyr", "Iapetus", "Algenib", "Sadaltager"];
+let ttsModelIyi = null;
+async function ttsSatir(metin, ses) {
+  const key = process.env.GEMINI_API_KEY; if (!key) throw new Error("GEMINI_API_KEY tanımlı değil");
+  const voice = SESLER.includes(ses) ? ses : "Charon";
+  const body = { contents: [{ parts: [{ text: `Türkçe, net ve enerjik bir quiz sunucusu gibi oku: ${metin}` }] }], generationConfig: { responseModalities: ["AUDIO"], speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voice } } } } };
+  const sira = ttsModelIyi ? [ttsModelIyi, ...TTS_MODELLER.filter((m) => m !== ttsModelIyi)] : TTS_MODELLER; let son = "";
+  for (const m of sira) {
+    const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent`, { method: "POST", signal: AbortSignal.timeout(22000), headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify(body) }).catch((e) => ({ ok: false, status: 0, json: async () => ({ error: { message: String(e.message || e) } }) }));
+    if (!r.ok) { let d = ""; try { d = (await r.json()).error?.message || ""; } catch {} son = `${m} ${r.status}: ${d.slice(0, 120)}`; if (r.status === 404 || r.status === 400 || r.status === 0) continue; if (r.status === 429 || r.status >= 500) continue; throw new Error(son); }
+    const p = ((await r.json()).candidates?.[0]?.content?.parts || []).find((x) => x.inlineData?.data);
+    if (!p) { son = `${m}: ses dönmedi`; continue; }
+    ttsModelIyi = m; const mime = p.inlineData.mimeType || "audio/L16;rate=24000"; const sr = Number((mime.match(/rate=(\d+)/) || [])[1] || 24000);
+    return { b64: p.inlineData.data, mime, sr, model: m, ses: voice };
+  }
+  throw new Error("TTS başarısız: " + son);
+}
+let sorulanOnbellek = null;
+function sorulanCikar(slug, d) {
+  const out = []; const t = (x) => String(x ?? "").trim();
+  if (Array.isArray(d?.sorular)) for (const q of d.sorular) {
+    let a = q.cevap; if (a == null && Array.isArray(q.secenekler) && q.dogru != null) { a = q.secenekler[q.dogru]; if (a && typeof a === "object") a = a.ad; }
+    const s = t(q.soru || (Array.isArray(q.ipuclari) ? q.ipuclari.join(" ") : "") || q.ifade || q.cumle);
+    if (s || a) out.push({ q: s, a: t(a), kaynak: slug });
+  }
+  else if (Array.isArray(d?.sahneler)) { const L = d.sahneler.map((x) => t(x.lines?.[0])); for (let i = 0; i < L.length - 1; i++) { const m = L[i].match(/^([A-ZÇĞİÖŞÜ]) harfi\.\s*(.+)$/); if (m) out.push({ q: m[2], a: L[i + 1].replace(/[.]+$/, ""), harf: m[1], kaynak: slug }); } }
+  return out;
+}
+async function sorulanlar() {
+  if (sorulanOnbellek && Date.now() - sorulanOnbellek.t < 10 * 60e3) return sorulanOnbellek.v;
+  const r = await gh(`/repos/${REPO}/contents/projects`); const ad = r.ok ? (await r.json()).filter((x) => x.type === "dir" && !x.name.startsWith("_")).map((x) => x.name) : [];
+  const v = []; let i = 0;
+  await Promise.all(Array.from({ length: 8 }, async () => { while (i < ad.length) { const s = ad[i++]; const d = await readJson(`projects/${s}/script.json`).catch(() => null); if (d) v.push(...sorulanCikar(s, d)); } }));
+  sorulanOnbellek = { t: Date.now(), v }; return v;
+}
+const studyoStore = () => getStore({ name: "ayar", consistency: "strong" });
+
 let failed = []; // basit kaba kuvvet koruması (sıcak fonksiyon örneği başına)
 const gecerliGh = new Map(); // doğrulanmış GitHub Actions anahtarları (10 dk)
 
@@ -341,6 +380,25 @@ export default async (req) => {
 
   try {
     switch (b.action) {
+      case "tts_satir": {
+        const m = String(b.metin || "").trim().slice(0, 600); if (!m) return json({ hata: "Metin boş" }, 400);
+        return json(await ttsSatir(m, b.ses));
+      }
+      case "studyo_sorulanlar": {
+        const [proje, kayit] = await Promise.all([sorulanlar(), studyoStore().get("studyo_sorulanlar", { type: "json" }).catch(() => null)]);
+        return json({ proje, studyo: kayit || [] });
+      }
+      case "studyo_kaydet": {
+        const yeni = (Array.isArray(b.sorular) ? b.sorular : []).slice(0, 60).map((x) => ({ q: String(x.q || "").slice(0, 300), a: String(x.a || "").slice(0, 80), harf: String(x.harf || "").slice(0, 2), t: new Date().toISOString().slice(0, 10) })).filter((x) => x.a);
+        const st = studyoStore(); const A = (await st.get("studyo_sorulanlar", { type: "json" })) || [];
+        A.push(...yeni); await st.setJSON("studyo_sorulanlar", A.slice(-3000)); return json({ ok: true, n: A.length });
+      }
+      case "studyo_kisalt": {
+        const Q = (Array.isArray(b.sorular) ? b.sorular : []).slice(0, 40).map((x) => ({ harf: String(x.harf || ""), soru: String(x.soru || "").slice(0, 400), cevap: String(x.cevap || "").slice(0, 80) }));
+        if (!Q.length) return json({ hata: "Soru yok" }, 400);
+        const r = await gemini(`Aşağıdaki Türkçe quiz sorularının her birini en çok 12 kelimelik, net, akıcı ve tek doğru cevabı olan bir soruya dönüştür. CEVAP AYNI KALMALI ve soru cevabı ele vermemeli. Harf sırası ve sayısı aynı kalsın. Sadece JSON döndür: {"sorular":[{"harf":"A","soru":"...","cevap":"..."}]}\n${JSON.stringify(Q)}`, { ms: 24000 });
+        return json({ sorular: (r.sorular || []).map((x, i) => ({ harf: Q[i]?.harf, cevap: Q[i]?.cevap, soru: String(x.soru || Q[i]?.soru || "") })) });
+      }
       case "overview": {
         const [status, usage, report, list, analiz, yorumlar, instagram] = await Promise.all([
           readJson("data/status.json"), readJson("data/usage.json"), readJson("reports/latest.json"),

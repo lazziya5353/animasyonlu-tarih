@@ -19,7 +19,7 @@ function qset(o, p, v) { const k = p.split("."); let x = o; k.slice(0, -1).forEa
 function qbos(fmt) { const q = { zorluk: "orta" }; (QYOL[fmt] || []).forEach(([p, , t]) => qset(q, p, t === "dy" ? true : t === "abcd" ? 0 : t === "e" ? [] : "")); return q; }
 
 function quizSekmeHtml(tema) {
-  return `<h2>🧩 QUIZ</h2><div class="card qs" data-qs="${tema}"><div class="mut">Format seç, soruları yaz ya da ajana hazırlat, onayla, üret. Ücretsiz: GitHub Actions + Gemini ücretsiz kota.</div>
+  return `<h2>🧩 QUIZ</h2><div class="card qs" data-qs="${tema}"><a class="btn gold" style="display:block;text-align:center;margin-bottom:8px" href="hizli-studyo.html?tema=${tema === "spor" ? "spor" : "tarih"}">⚡ Hızlı Stüdyo · tarayıcıda anında MP4 (Her Harfe Bir)</a><div class="mut">Format seç, soruları yaz ya da ajana hazırlat, onayla, üret. Ücretsiz: GitHub Actions + Gemini ücretsiz kota.</div>
   <div class="qs-formatlar" data-qf></div><div data-qgovde></div><div data-qisler></div><div data-qtum></div></div>`;
 }
 const qcss = `.qt-kart{display:flex;gap:10px;padding:8px 0;border-top:1px solid #fff1}.qt-kart img,.qt-yok{width:64px;aspect-ratio:9/16;object-fit:cover;border-radius:8px;flex:none;background:#0004;display:grid;place-items:center}
