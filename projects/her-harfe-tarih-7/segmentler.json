@@ -1,0 +1,56 @@
+{
+ "kaynak": "gemini-satir",
+ "ses": "Charon",
+ "segmentler": [
+  {
+   "satir": "Her harfe bir tarih sorusu! Bakalım kaçını bileceksin?",
+   "bas": 0.0,
+   "bit": 3.35
+  },
+  {
+   "satir": "A harfi. Kanuni Sultan Süleyman'ın annesi kimdir?",
+   "bas": 3.6,
+   "bit": 7.39
+  },
+  {
+   "satir": "Ayşe Hafsa Sultan.",
+   "bas": 7.64,
+   "bit": 9.13
+  },
+  {
+   "satir": "E harfi. İstanbul'dan önceki Osmanlı başkenti neresidir?",
+   "bas": 9.38,
+   "bit": 14.01
+  },
+  {
+   "satir": "Edirne.",
+   "bas": 14.26,
+   "bit": 14.92
+  },
+  {
+   "satir": "M harfi. Şehzade Mustafa'yı boğduğu rivayet edilen paşa kimdir?",
+   "bas": 15.17,
+   "bit": 19.77
+  },
+  {
+   "satir": "Mahmut Paşa.",
+   "bas": 20.02,
+   "bit": 21.0
+  },
+  {
+   "satir": "N harfi. III. Selim'in kurduğu modern ordunun adı nedir?",
+   "bas": 21.25,
+   "bit": 25.84
+  },
+  {
+   "satir": "Nizam-ı Cedid.",
+   "bas": 26.09,
+   "bit": 27.34
+  },
+  {
+   "satir": "Kaçını bildin? Yorumlara yaz.",
+   "bas": 27.59,
+   "bit": 29.54
+  }
+ ]
+}
