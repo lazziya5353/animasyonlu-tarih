@@ -78,7 +78,9 @@ def main(v, script, bekci_ac=False):
             if len(a) == 0 or np.sqrt((a**2).mean()) < 0.005: hata.append(f"{L} {tip}: ses yok")
             elif max_pause(a) > 0.4: hata.append(f"{L} {tip}: {max_pause(a):.2f} sn ic durak")
             if wm and len(a):
-                txt = norm(" ".join(s.text for s in wm.transcribe(a, language="tr")[0]))
+                # segment modunda kisa cevap klibi kendi satiriyla ipucu verilerek yaziya dokulur (Whisper kisa kelimeleri karistiriyor; yanlis klip yine eslesmez)
+                ip = ans[L] if seg and tip == "cevap" else None
+                txt = norm(" ".join(s.text for s in wm.transcribe(a, language="tr", initial_prompt=ip)[0]))
                 w = norm(ans[L]).split()[0]; print(f"{L} {tip} [{t0:.1f}-{t1:.1f}]: {txt}")
                 if tip == "soru":
                     govde = re.sub(r"^.*?\bharf[iı]\b", "", txt, count=1)  # "X harfi" duyurusu harf adiyla karisabilir (S -> seyh)
