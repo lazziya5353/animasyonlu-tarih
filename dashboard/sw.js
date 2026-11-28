@@ -1,4 +1,4 @@
-// panel sürümü: 2026-11-28b (hızlı stüdyo GitHub’a gönder + Gemini anahtarı + Ayır düzeltmesi)
+// panel sürümü: 2026-11-28c (hızlı stüdyo tekrar soru düzeltmesi)
 self.addEventListener("install", (e) => self.skipWaiting());
 self.addEventListener("activate", (e) => self.clients.claim());
 self.addEventListener("fetch", () => {});

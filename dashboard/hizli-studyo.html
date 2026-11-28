@@ -241,8 +241,8 @@
     <!-- Hazır Konu Paketleri & Sahne Teması -->
     <div class="bg-[#1b1714] border border-amber-900/30 rounded-2xl p-3 flex flex-col gap-2">
       <div class="grid grid-cols-2 gap-2">
-        <button id="preset-tarih" type="button" class="py-2 px-3 rounded-xl bg-amber-500/20 border border-amber-400/50 text-amber-100 text-xs font-semibold hover:bg-amber-500/30 transition cursor-pointer">🏛️ Tarih Soruları</button>
-        <button id="preset-futbol" type="button" class="py-2 px-3 rounded-xl bg-stone-800/80 border border-stone-700 text-stone-200 text-xs font-semibold hover:bg-stone-700/80 transition cursor-pointer">⚽ Futbol & Süper Lig</button>
+        <button id="preset-tarih" type="button" class="py-2 px-3 rounded-xl bg-amber-500/20 border border-amber-400/50 text-amber-100 text-xs font-semibold hover:bg-amber-500/30 transition cursor-pointer">🏛️ Örnek tarih listesi (kullanılmış)</button>
+        <button id="preset-futbol" type="button" class="py-2 px-3 rounded-xl bg-stone-800/80 border border-stone-700 text-stone-200 text-xs font-semibold hover:bg-stone-700/80 transition cursor-pointer">⚽ Örnek futbol listesi (kullanılmış)</button>
       </div>
       <div class="pt-1.5 border-t border-stone-800/80 flex items-center justify-between gap-2">
         <span class="text-[10px] text-stone-400 font-semibold">🎨 Sahne Görünümü:</span>
@@ -510,6 +510,7 @@
           <button id="btn-apply-questions" type="button" class="px-2.5 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/40 text-amber-200 text-[10px] font-bold cursor-pointer">Uygula</button>
         </div>
       </div>
+      <div id="empty-warning" class="hidden rounded-lg bg-rose-950/80 border border-rose-500/50 px-2.5 py-1.5 text-[11px] text-rose-200 font-bold leading-snug">⚠️ Listede soru yok. Aşağıdaki kutuya "HARF | Soru | CEVAP | Alt bilgi" satırları yapıştır ya da Soru Bankası'ndan doldur.</div>
       <div id="dup-dropped" class="hidden rounded-lg bg-amber-950/75 border border-amber-500/40 px-2.5 py-1.5 text-[10px] text-amber-200 leading-snug"></div>
       <div id="cap-warning" class="hidden rounded-lg bg-rose-900/80 border border-rose-400/70 px-2.5 py-1.5 text-[11px] font-bold text-rose-100 leading-snug"></div>
       <div id="list-dup-warning" class="hidden rounded-lg bg-rose-950/75 border border-rose-500/40 px-2.5 py-1.5 text-[10px] text-rose-200 leading-snug"></div>
@@ -1537,20 +1538,28 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
       }
     }
 
+    state.dupOk = new Set(); // "Yine de kullan" denen tekrarlar (cevap anahtarı)
+    function qLine(q) { return q.note ? `${q.letter} | ${q.question} | ${q.answer} | ${q.note}` : `${q.letter} | ${q.question} | ${q.answer}`; }
+    function dupOf(q) { return findRemoteDup(q) || (state.askedArchive.find(a => normalizeKey(a.answer) === normalizeKey(q.answer)) ? { a: q.answer } : null); }
+    function cikarSatirlar(keys) { // yalnızca kullanıcı isteyince satır çıkarılır
+      const kalan = String(els.inputQuestions.value || '').split(/\r?\n/).filter(l => { const p = parseLinesToQuestions(l)[0]; return !(p && keys.has(normalizeKey(p.answer))); });
+      els.inputQuestions.value = kalan.join('\n'); applyQuestionsFromTextarea();
+    }
+    function renderDupBox() { // tekrarlar sarı listelenir; hiçbir satır kendiliğinden silinmez
+      const box = $('dup-dropped');
+      const d = state.allParsedQuestions.map(q => [q, dupOf(q)]).filter(([q, x]) => x && !state.dupOk.has(normalizeKey(q.answer)));
+      if (!d.length) { box.classList.add('hidden'); box.innerHTML = ''; return; }
+      box.innerHTML = `<div class="font-bold mb-1">♻️ ${d.length} soru daha önce sorulmuş (satırlar korunuyor):</div>` +
+        d.slice(0, 40).map(([q, x]) => `<div class="flex items-center gap-1.5 py-0.5 bg-yellow-500/15 rounded px-1 mb-0.5"><span class="flex-1 text-yellow-200">${escapeHtml(q.letter)} · ${escapeHtml(q.answer)}${x.kaynak ? ` <span class="text-stone-400">(${escapeHtml(x.kaynak)})</span>` : ''}</span><button type="button" data-dupcikar="${escapeHtml(normalizeKey(q.answer))}" class="px-1.5 py-0.5 rounded bg-rose-700/70 text-white font-bold cursor-pointer">Çıkar</button></div>`).join('') +
+        `<div class="flex gap-1.5 mt-1"><button type="button" id="btn-dup-cikar-hepsi" class="flex-1 py-1 rounded bg-rose-600 text-white font-bold cursor-pointer">Tekrarları çıkar</button><button type="button" id="btn-dup-yine" class="flex-1 py-1 rounded bg-stone-700 text-stone-100 font-bold cursor-pointer">Yine de kullan</button></div>`;
+      box.classList.remove('hidden');
+      box.querySelectorAll('[data-dupcikar]').forEach(b => b.onclick = () => cikarSatirlar(new Set([b.dataset.dupcikar])));
+      $('btn-dup-cikar-hepsi').onclick = () => cikarSatirlar(new Set(d.map(([q]) => normalizeKey(q.answer))));
+      $('btn-dup-yine').onclick = () => { d.forEach(([q]) => state.dupOk.add(normalizeKey(q.answer))); renderDupBox(); };
+    }
     function applyQuestionsFromTextarea(autoDrop = false) {
-      let parsed = parseLinesToQuestions(els.inputQuestions.value, 'Liste');
-      if (autoDrop === true) {
-        const dropped = [], kept = [];
-        for (const q of parsed) { const d = findRemoteDup(q) || (state.askedArchive.find(a => normalizeKey(a.answer) === normalizeKey(q.answer)) ? { a: q.answer } : null); if (d) dropped.push([q, d]); else kept.push(q); }
-        const box = $('dup-dropped');
-        if (dropped.length) {
-          parsed = kept;
-          els.inputQuestions.value = kept.map(q => q.note ? `${q.letter} | ${q.question} | ${q.answer} | ${q.note}` : `${q.letter} | ${q.question} | ${q.answer}`).join('\n');
-          box.textContent = `♻️ ${dropped.length} tekrar soru elendi: ` + dropped.slice(0, 12).map(([q, d]) => `${q.letter}·${q.answer}${d.kaynak ? ` (${d.kaynak})` : ''}`).join(', ') + (dropped.length > 12 ? '…' : '');
-          box.classList.remove('hidden');
-        } else box.classList.add('hidden');
-      }
-      state.allParsedQuestions = parsed;
+      state.allParsedQuestions = parseLinesToQuestions(els.inputQuestions.value, 'Liste');
+      renderDupBox();
       checkTextareaDuplicates();
       rebuildActiveQuestions();
     }
@@ -1575,6 +1584,7 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
       if (state.allParsedQuestions.length === 0) state.questions = [];
 
       $('val-question-count').textContent = `${state.questions.length} Soru`;
+      const bos = $('empty-warning'); if (bos) bos.classList.toggle('hidden', state.questions.length > 0);
       if (state.mode === 'crossword') buildCrosswordLayout();
       renderStageVisuals();
       updateEstimatedDuration();
@@ -3260,10 +3270,11 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
       loadBankAndAsked();
       renderLetterPicker();
       bindAllEvents();
-      els.inputQuestions.value = DEFAULT_TARIH_QUESTIONS.join('\n');
+      els.inputQuestions.value = ''; // boş başlar (eski quizlerde kullanılmış listeler önceden doldurulmaz)
+      els.inputQuestions.placeholder = 'örnek: A | Kanuni Sultan Süleyman\'ın annesi kimdir? | AYŞE HAFSA SULTAN | İlk Valide Sultan';
       applyBackgroundUI();
       applyQuestionsFromTextarea();
-      if (new URLSearchParams(location.search).get('tema') === 'spor') $('preset-futbol').click();
+      if (new URLSearchParams(location.search).get('tema') === 'spor') setTheme('sport');
       loadRemoteAsked();
     }
 
