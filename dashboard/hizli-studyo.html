@@ -357,8 +357,25 @@
       </div>
 
       <div class="grid grid-cols-4 gap-1 bg-stone-950 p-1 rounded-xl border border-stone-800">
-        <button id="audio-mode-gemini" type="button" class="col-span-2 py-1.5 px-1 rounded-lg text-[10px] font-semibold bg-amber-500 text-stone-950 cursor-pointer">🎙️ Gemini Ses (satır satır)</button>
-        <button id="audio-mode-silent" type="button" class="col-span-2 py-1.5 px-1 rounded-lg text-[10px] font-semibold text-stone-300 hover:bg-stone-800 cursor-pointer">🎵 Sessiz + müzik</button>
+        <div class="col-span-4 grid grid-cols-3 gap-1">
+        <button id="audio-mode-gemini" type="button" class="col-span-1 py-1.5 px-1 rounded-lg text-[10px] font-semibold bg-amber-500 text-stone-950 cursor-pointer">🎙️ Gemini Ses</button>
+        <button id="audio-mode-ext" type="button" class="col-span-1 py-1.5 px-1 rounded-lg text-[10px] font-semibold text-stone-300 hover:bg-stone-800 cursor-pointer">🎧 Dış Ses (ElevenLabs / Clipchamp)</button>
+        <button id="audio-mode-silent" type="button" class="col-span-1 py-1.5 px-1 rounded-lg text-[10px] font-semibold text-stone-300 hover:bg-stone-800 cursor-pointer">🎵 Sessiz + müzik</button>
+        </div>
+      </div>
+
+      <label class="flex items-center gap-2 text-[11px] text-stone-300 cursor-pointer"><input id="toggle-speak-answer" type="checkbox" class="accent-amber-400" /><span>Cevabı da seslendir (cevap açıldıktan sonra)</span></label>
+      <div id="ext-settings" class="hidden flex flex-col gap-1.5 bg-stone-950/70 p-2.5 rounded-xl border border-stone-800">
+        <div class="flex gap-1.5 items-center">
+          <select id="select-ext-target" class="bg-stone-900 border border-stone-700 rounded-lg px-1.5 py-1.5 text-[11px] text-amber-100"><option value="eleven">ElevenLabs</option><option value="clipchamp">Clipchamp</option></select>
+          <button id="btn-ext-copy" type="button" class="flex-1 px-2 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 border border-stone-600 text-amber-200 text-[10px] font-bold cursor-pointer">📋 Seslendirme metnini kopyala</button>
+        </div>
+        <span id="ext-hint" class="text-[10px] text-stone-400"></span>
+        <label class="px-2 py-1.5 rounded-lg bg-sky-600/25 hover:bg-sky-600/40 border border-sky-400/50 text-sky-200 text-[10px] font-bold cursor-pointer text-center">⬆️ Tek ses dosyası yükle (mp3 / wav / m4a)<input id="input-ext-audio" type="file" accept="audio/*,.mp3,.wav,.m4a" class="hidden" /></label>
+        <div class="flex items-center gap-2 text-[11px]"><span class="text-stone-400">Hız</span><input id="range-ext-speed" type="range" min="0.9" max="1.2" step="0.05" value="1" class="flex-1 accent-amber-400" /><span id="val-ext-speed" class="text-amber-300 font-bold">1.00x</span></div>
+        <canvas id="ext-wave" width="640" height="96" class="w-full h-24 rounded-lg bg-stone-900 border border-stone-700 cursor-col-resize touch-none"></canvas>
+        <div id="ext-seg-list" class="flex flex-wrap gap-1"></div>
+        <span id="ext-status" class="text-[10px] text-stone-400">Metni kopyala → seslendir → tek dosyayı yükle. Sınırları sürükleyip ▶ ile kontrol et.</span>
       </div>
 
       <div id="gemini-settings" class="flex flex-col gap-1.5 bg-stone-950/70 p-2.5 rounded-xl border border-stone-800">
@@ -368,7 +385,6 @@
             <option value="Charon" selected>Charon (tok erkek)</option><option value="Orus">Orus</option><option value="Fenrir">Fenrir</option><option value="Iapetus">Iapetus</option><option value="Puck">Puck</option><option value="Kore">Kore (kadın)</option><option value="Aoede">Aoede (kadın)</option><option value="Zephyr">Zephyr (kadın)</option>
           </select>
         </div>
-        <label class="flex items-center gap-2 text-[11px] text-stone-300 cursor-pointer"><input id="toggle-speak-answer" type="checkbox" class="accent-amber-400" /><span>Cevabı da seslendir (cevap açıldıktan sonra)</span></label>
         <span id="gemini-status" class="text-[10px] text-stone-400">Her satır ayrı seslendirilir, önbelleğe alınır; tekrar render bedava. Anahtar sunucuda.</span>
       </div>
 
@@ -776,7 +792,7 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
     const state = {
       mode: 'passaparola', // 'passaparola' | 'crossword'
       theme: 'tarih',      // 'tarih' | 'sport'
-      audioMode: 'gemini', // 'gemini' | 'silent'
+      audioMode: 'gemini', // 'gemini' | 'ext' | 'silent'
       remoteAsked: [], // panelden: projects/*/script.json + Blobs studyo_sorulanlar
       voiceCache: new Map(), // anahtar -> AudioBuffer
       phaseT0: 0, qT0: 0, thinkT0: 0, thinkDur: 3, revealT0: 0,
@@ -902,7 +918,7 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
     async function api(action, body = {}) {
       const r = await fetch('/api', { method: 'POST', headers: { 'content-type': 'application/json', 'x-panel-token': TOKEN }, body: JSON.stringify({ action, ...body }) });
       if (r.status === 401) { $('login-gate').classList.add('on'); throw new Error('Giriş gerekli'); }
-      const j = await r.json().catch(() => ({})); if (!r.ok) throw new Error(j.hata || ('HTTP ' + r.status)); return j;
+      const j = await r.json().catch(() => ({})); if (!r.ok) throw new Error(j.hata || ([502, 504].includes(r.status) ? `sunucu zaman aşımı (HTTP ${r.status})` : 'HTTP ' + r.status)); return j;
     }
     let idbP = null;
     function idb() {
@@ -955,11 +971,13 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
       if (b - a < sr * 0.2) return buf;
       const out = state.audioCtx.createBuffer(1, b - a + 1, sr); out.getChannelData(0).set(d.subarray(a, b + 1)); return out;
     }
-    function voiceKeyFor(text) { return $('select-gemini-voice').value + '|' + text; }
+    function voiced() { return state.audioMode === 'gemini' || state.audioMode === 'ext'; }
+    function voiceKeyFor(text) { return (state.audioMode === 'ext' ? 'ext' : $('select-gemini-voice').value) + '|' + text; }
     function cachedDur(text) { const b = state.voiceCache.get(voiceKeyFor(text)); return b ? b.duration : null; }
     async function fetchLineAudio(text) {
       const vk = voiceKeyFor(text);
       if (state.voiceCache.has(vk)) return state.voiceCache.get(vk);
+      if (state.audioMode === 'ext') throw new Error('Dış ses segmenti yok');
       const key = await sha(vk);
       let rec = await idbGet(key);
       if (!rec) {
@@ -982,6 +1000,7 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
       return t;
     }
     async function prepareAllAudio(onProgress) {
+      if (state.audioMode === 'ext') { if (state.ext.mono) extBuild(); if (!extReady()) throw new Error('Dış ses: önce ses dosyasını yükle (segment sayısı satır sayısıyla aynı olmalı)'); return true; }
       if (state.audioMode !== 'gemini') return true;
       const texts = [...new Set(allSpeechTexts())]; let done = 0, fail = 0, i = 0;
       const statusEl = $('gemini-status');
@@ -996,6 +1015,173 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
       statusEl.textContent = fail ? `⚠️ ${fail} satır seslendirilemedi (o satırlar sessiz geçer). Tekrar dene.` : `✓ ${texts.length} satır hazır (önbellekte).`;
       updateEstimatedDuration();
       return fail === 0;
+    }
+
+    // ==================== 🎧 DIŞ SES (ElevenLabs / Clipchamp) · TEK DOSYA → N SEGMENT ====================
+    // EXT-SEG-START (saf fonksiyonlar; DOM yok — test edilebilir)
+    function extRms(data, sr, win = 0.02) {
+      const w = Math.max(1, Math.round(sr * win)), n = Math.floor(data.length / w), out = new Float32Array(n);
+      for (let i = 0; i < n; i++) { let a = 0; for (let j = i * w, e = j + w; j < e; j++) a += data[j] * data[j]; out[i] = Math.sqrt(a / w); }
+      return { rms: out, hop: w / sr };
+    }
+    function extThreshold(rms) {
+      const s = Array.from(rms).sort((a, b) => a - b); if (!s.length) return 0.01;
+      const lo = s[Math.floor(s.length * 0.1)], hi = s[Math.floor(s.length * 0.9)];
+      return Math.max(0.002, lo + (hi - lo) * 0.1);
+    }
+    // N segmentlik sınırlar (N+1 zaman, sn): ≥minGap sessizlikleri böl; fazlaysa kısa boşlukları birleştir, azsa en uzun iç boşluklardan böl
+    function extDetectCuts(data, sr, N, minGap = 0.9) {
+      const { rms, hop } = extRms(data, sr); const th = extThreshold(rms); const dur = data.length / sr;
+      const loud = Array.from(rms, v => v > th);
+      let first = loud.indexOf(true), last = loud.lastIndexOf(true);
+      if (first < 0) { first = 0; last = rms.length - 1; }
+      const sil = []; // tüm iç sessizlikler [başlangıç, bitiş] (kare)
+      for (let i = first; i <= last; i++) { if (!loud[i]) { let j = i; while (j <= last && !loud[j]) j++; sil.push([i, j]); i = j; } }
+      const lenOf = g => (g[1] - g[0]) * hop;
+      let gaps = sil.filter(g => lenOf(g) >= minGap);
+      if (gaps.length > N - 1) gaps = gaps.slice().sort((a, b) => lenOf(b) - lenOf(a)).slice(0, Math.max(0, N - 1)).sort((a, b) => a[0] - b[0]);
+      let cuts = [first * hop, ...gaps.map(g => (g[0] + g[1]) / 2 * hop), Math.min(dur, (last + 1) * hop)];
+      const used = new Set(gaps.map(g => g[0]));
+      while (cuts.length - 1 < N) { // eksik: kalan en uzun iç sessizlikten, yoksa en uzun segmentin ortasından böl
+        const cand = sil.filter(g => !used.has(g[0]) && lenOf(g) >= 0.12).sort((a, b) => lenOf(b) - lenOf(a))[0];
+        let t;
+        if (cand) { used.add(cand[0]); t = (cand[0] + cand[1]) / 2 * hop; }
+        else { let bi = 0; for (let i = 1; i < cuts.length - 1; i++) if (cuts[i + 1] - cuts[i] > cuts[bi + 1] - cuts[bi]) bi = i; t = (cuts[bi] + cuts[bi + 1]) / 2; }
+        cuts.push(t); cuts.sort((a, b) => a - b);
+      }
+      return { cuts, th };
+    }
+    function extTrimRange(data, sr, a, b, th) { // segment içi baş/son sessizliği kırp → [i0, i1) örnek
+      const { rms, hop } = extRms(data.subarray(Math.floor(a * sr), Math.floor(b * sr)), sr);
+      let f = 0, l = rms.length - 1; while (f < l && rms[f] <= th) f++; while (l > f && rms[l] <= th) l--;
+      const s0 = Math.floor(a * sr), i0 = Math.max(s0, s0 + Math.floor((f * hop - 0.04) * sr)), i1 = Math.min(Math.floor(b * sr), s0 + Math.ceil(((l + 1) * hop + 0.08) * sr));
+      return i1 - i0 < sr * 0.15 ? [s0, Math.floor(b * sr)] : [i0, i1];
+    }
+    function extResample(src, speed) { // hız: 0.9–1.2 (playbackRate gibi)
+      if (Math.abs(speed - 1) < 0.001) return src.slice();
+      const n = Math.max(1, Math.floor(src.length / speed)), out = new Float32Array(n);
+      for (let i = 0; i < n; i++) { const x = i * speed, k = Math.floor(x), f = x - k; out[i] = (src[k] || 0) * (1 - f) + (src[k + 1] || 0) * f; }
+      return out;
+    }
+    // EXT-SEG-END
+    state.ext = { mono: null, sr: 0, cuts: [], th: 0.01, file: null, name: '', lines: [], key: '' };
+    function extLines() {
+      const L = [];
+      if ($('toggle-intro-speech').checked) L.push({ text: getIntroText(), label: 'Giriş' });
+      const ans = $('toggle-speak-answer').checked;
+      state.questions.forEach(q => { L.push({ text: speechTextFor(q), label: q.letter }); if (ans) L.push({ text: answerSpeechText(q), label: q.letter + '✓' }); });
+      return L;
+    }
+    function extReady() { const e = state.ext; return !!e.mono && e.cuts.length - 1 === extLines().length && e.lines.length === e.cuts.length - 1; }
+    function extSpeed() { return Math.min(1.2, Math.max(0.9, parseFloat($('range-ext-speed').value) || 1)); }
+    async function extProjectKey() { return 'ext:' + await sha(extLines().map(l => l.text).join('\n')); }
+    function extBuild() { // segmentleri ses önbelleğine koy → render/önizleme Gemini moduyla aynı zaman çizelgesini kullanır
+      const e = state.ext; if (!e.mono) return;
+      e.lines = extLines(); ensureAudioReady();
+      for (const [k] of state.voiceCache) if (k.startsWith('ext|')) state.voiceCache.delete(k);
+      if (e.cuts.length - 1 !== e.lines.length) { $('ext-status').textContent = `⚠️ ${e.cuts.length - 1} segment var, ${e.lines.length} satır gerekli. Dosyayı yeniden yükle.`; extDraw(); return; }
+      const sp = extSpeed();
+      e.lines.forEach((l, i) => {
+        const [i0, i1] = extTrimRange(e.mono, e.sr, e.cuts[i], e.cuts[i + 1], e.th);
+        const d = extResample(e.mono.subarray(i0, i1), sp);
+        const buf = state.audioCtx.createBuffer(1, d.length, e.sr); buf.getChannelData(0).set(d);
+        state.voiceCache.set('ext|' + l.text, buf);
+      });
+      extDraw(); extList(); updateEstimatedDuration();
+      const tot = e.lines.reduce((a, l) => a + (state.voiceCache.get('ext|' + l.text)?.duration || 0), 0);
+      $('ext-status').textContent = `✓ ${e.lines.length} segment hazır · konuşma ${tot.toFixed(1)} sn · hız ${sp.toFixed(2)}x. ▶ ile kontrol et, gerekirse sınırları sürükle.`;
+    }
+    async function extSave() {
+      const e = state.ext; if (!e.file) return;
+      e.key = await extProjectKey();
+      const rec = { file: e.file, name: e.name, cuts: e.cuts, speed: extSpeed(), th: e.th };
+      await idbSet(e.key, rec); await idbSet('ext:son', rec);
+    }
+    async function extLoadFile(arrBuf, name, saved) {
+      ensureAudioReady();
+      const dec = await state.audioCtx.decodeAudioData(arrBuf.slice(0));
+      const mono = new Float32Array(dec.length);
+      for (let c = 0; c < dec.numberOfChannels; c++) { const ch = dec.getChannelData(c); for (let i = 0; i < ch.length; i++) mono[i] += ch[i] / dec.numberOfChannels; }
+      const e = state.ext; e.mono = mono; e.sr = dec.sampleRate; e.file = arrBuf; e.name = name;
+      const N = extLines().length;
+      const det = extDetectCuts(mono, dec.sampleRate, N); e.th = det.th;
+      e.cuts = saved && saved.cuts && saved.cuts.length === N + 1 ? saved.cuts : det.cuts;
+      if (saved && saved.speed) { $('range-ext-speed').value = saved.speed; $('val-ext-speed').textContent = (+saved.speed).toFixed(2) + 'x'; }
+      extBuild();
+      if (!saved) await extSave();
+    }
+    async function extOnEnter() {
+      const tgt = $('select-ext-target').value;
+      $('ext-hint').textContent = tgt === 'eleven' ? 'ElevenLabs: metni tek seferde yapıştır; satırlar arasına <break time="1.5s" /> eklendi.' : 'Clipchamp: her satır ayrı paragraf. Satırlar arasında ~1,5 sn duraklama bırak (gerekirse boşluk ekle).';
+      const e = state.ext; const key = await extProjectKey();
+      if (e.mono && e.lines.length && e.cuts.length - 1 === extLines().length) { if (key !== e.key) { e.key = key; } extBuild(); return; }
+      const saved = (await idbGet(key)) || null;
+      if (saved && saved.file) { try { await extLoadFile(saved.file, saved.name, saved); e.key = key; return; } catch (err) {} }
+      if (e.mono) { const N = extLines().length; const det = extDetectCuts(e.mono, e.sr, N); e.cuts = det.cuts; e.th = det.th; extBuild(); extSave(); }
+      else extDraw();
+    }
+    const EXT_COLORS = n => Array.from({ length: n }, (_, i) => `hsla(${(i * 47) % 360},70%,55%,`);
+    function extDraw() {
+      const cv = $('ext-wave'), ctx = cv.getContext('2d'), W = cv.width, H = cv.height, e = state.ext;
+      ctx.clearRect(0, 0, W, H);
+      if (!e.mono) { ctx.fillStyle = '#78716c'; ctx.font = '12px sans-serif'; ctx.fillText('Ses dosyası yüklenmedi', 10, H / 2); return; }
+      const dur = e.mono.length / e.sr, X = t => t / dur * W, col = EXT_COLORS(e.cuts.length);
+      const lines = e.lines.length ? e.lines : extLines();
+      for (let i = 0; i < e.cuts.length - 1; i++) {
+        ctx.fillStyle = col[i] + '0.22)'; ctx.fillRect(X(e.cuts[i]), 0, X(e.cuts[i + 1]) - X(e.cuts[i]), H);
+        ctx.fillStyle = col[i] + '1)'; ctx.font = 'bold 11px sans-serif'; ctx.fillText((lines[i] && lines[i].label) || String(i + 1), X(e.cuts[i]) + 3, 12);
+      }
+      ctx.fillStyle = '#fde68a'; const step = Math.max(1, Math.floor(e.mono.length / W));
+      for (let x = 0; x < W; x++) { let m = 0; for (let j = x * step, z = Math.min(e.mono.length, j + step); j < z; j += 4) m = Math.max(m, Math.abs(e.mono[j])); const h = Math.max(1, m * H * 0.9); ctx.fillRect(x, (H - h) / 2, 1, h); }
+      ctx.fillStyle = '#f43f5e'; e.cuts.forEach(c => ctx.fillRect(X(c) - 1, 0, 2, H));
+    }
+    function extPlay(i) {
+      const l = state.ext.lines[i]; const b = l && state.voiceCache.get('ext|' + l.text); if (!b) return;
+      ensureAudioReady(); if (state.extSrc) try { state.extSrc.stop(); } catch (e) {}
+      const src = state.audioCtx.createBufferSource(); src.buffer = b; src.connect(state.audioCtx.destination); src.start(); state.extSrc = src;
+    }
+    function extList() {
+      const box = $('ext-seg-list'), e = state.ext, col = EXT_COLORS(e.cuts.length); box.innerHTML = '';
+      e.lines.forEach((l, i) => {
+        const b = document.createElement('button'); b.type = 'button';
+        b.className = 'px-1.5 py-0.5 rounded border text-[10px] font-bold cursor-pointer text-stone-100';
+        b.style.borderColor = col[i] + '1)'; b.style.background = col[i] + '0.25)';
+        const d = state.voiceCache.get('ext|' + l.text)?.duration || 0;
+        b.textContent = `▶ ${l.label} ${d.toFixed(1)}s`; b.title = l.text; b.addEventListener('click', () => extPlay(i)); box.appendChild(b);
+      });
+    }
+    function extBindUI() {
+      $('select-ext-target').addEventListener('change', extOnEnter);
+      $('btn-ext-copy').addEventListener('click', () => {
+        const L = extLines().map(l => l.text); if (!L.length) { showToast('⚠️ Liste boş.', true); return; }
+        const txt = $('select-ext-target').value === 'eleven' ? L.join(' <break time="1.5s" /> ') : L.join('\n\n');
+        navigator.clipboard.writeText(txt).then(() => showToast(`📋 ${L.length} satır kopyalandı`)).catch(() => showToast('❌ Kopyalanamadı', true));
+      });
+      $('input-ext-audio').addEventListener('change', async ev => {
+        const f = ev.target.files[0]; ev.target.value = ''; if (!f) return;
+        if (!extLines().length) { showToast('⚠️ Önce soru listesi ekle.', true); return; }
+        $('ext-status').textContent = 'Ses çözülüyor, boşluklar aranıyor…';
+        try { await extLoadFile(await f.arrayBuffer(), f.name, null); showToast('🎧 Ses bölündü, segmentleri kontrol et'); }
+        catch (err) { $('ext-status').textContent = '❌ Ses dosyası okunamadı: ' + (err.message || err); showToast('❌ Ses dosyası okunamadı', true); }
+      });
+      $('range-ext-speed').addEventListener('input', () => { $('val-ext-speed').textContent = extSpeed().toFixed(2) + 'x'; });
+      $('range-ext-speed').addEventListener('change', () => { extBuild(); extSave(); });
+      const cv = $('ext-wave'); let drag = -1;
+      const tAt = ev => { const r = cv.getBoundingClientRect(); return Math.min(1, Math.max(0, (ev.clientX - r.left) / r.width)) * (state.ext.mono.length / state.ext.sr); };
+      cv.addEventListener('pointerdown', ev => {
+        const e = state.ext; if (!e.mono) return; const t = tAt(ev), dur = e.mono.length / e.sr, tol = dur * 10 / cv.getBoundingClientRect().width;
+        let best = -1, bd = Infinity; e.cuts.forEach((c, i) => { const d = Math.abs(c - t); if (d < bd) { bd = d; best = i; } });
+        if (bd <= tol) { drag = best; cv.setPointerCapture(ev.pointerId); }
+        else { const i = e.cuts.findIndex((c, k) => t >= c && t < e.cuts[k + 1]); if (i >= 0 && i < e.lines.length) extPlay(i); }
+      });
+      cv.addEventListener('pointermove', ev => {
+        if (drag < 0) return; const e = state.ext, t = tAt(ev);
+        const lo = drag > 0 ? e.cuts[drag - 1] + 0.1 : 0, hi = drag < e.cuts.length - 1 ? e.cuts[drag + 1] - 0.1 : e.mono.length / e.sr;
+        e.cuts[drag] = Math.min(hi, Math.max(lo, t)); extDraw();
+      });
+      const up = () => { if (drag < 0) return; drag = -1; extBuild(); extSave(); };
+      cv.addEventListener('pointerup', up); cv.addEventListener('pointercancel', up);
+      extDraw();
     }
 
     // ==================== LOCALSTORAGE: BANKA & DAHA ÖNCE SORULANLAR ====================
@@ -1693,7 +1879,7 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
     }
     function computeBalancedTimings() {
       const hasIntro = $('toggle-intro-speech').checked;
-      const silent = state.audioMode !== 'gemini';
+      const silent = !voiced();
       const d = t => (!silent && cachedDur(t)) || estSpeech(t);
       const introDur = hasIntro ? d(getIntroText()) : 0;
       const qDurs = state.questions.map(q => d(speechTextFor(q)));
@@ -1750,7 +1936,7 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
     }
 
     async function speakSegmentLive(text, token) {
-      if (state.audioMode !== 'gemini') { await sleep(estSpeech(text) * 1000); return; }
+      if (!voiced()) { await sleep(estSpeech(text) * 1000); return; }
       try {
         const buf = await fetchLineAudio(text);
         if (token !== state.runToken) return;
@@ -1764,7 +1950,7 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
       state.isPlaying = true; state.runToken++;
       const token = state.runToken;
       $('btn-play-pause').textContent = '⏸ Duraklat';
-      if (state.audioMode === 'gemini') { $('btn-play-pause').textContent = '⏳ Sesler…'; try { await prepareAllAudio(); } catch (e) {} if (token !== state.runToken) return; $('btn-play-pause').textContent = '⏸ Duraklat'; }
+      if (voiced()) { $('btn-play-pause').textContent = '⏳ Sesler…'; try { await prepareAllAudio(); } catch (e) { if (state.audioMode === 'ext') showToast('⚠️ ' + e.message, true); } if (token !== state.runToken) return; $('btn-play-pause').textContent = '⏸ Duraklat'; }
       els.roamingWm.classList.remove('wm-paused');
       startBgmPlayback();
       const timings = computeBalancedTimings();
@@ -1800,7 +1986,7 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
         // 3) cevap açılır  4) bekleme
         state.phase = 'reveal'; state.revealT0 = now();
         state.solvedIndices.add(i); renderStageVisuals(); playChimeSfx();
-        if (state.audioMode === 'gemini' && $('toggle-speak-answer').checked) { await sleep(250); await speakSegmentLive(answerSpeechText(q), token); }
+        if (voiced() && $('toggle-speak-answer').checked) { await sleep(250); await speakSegmentLive(answerSpeechText(q), token); }
         await sleep(timings.revealSec * 1000);
       }
       if (token !== state.runToken) return;
@@ -2372,7 +2558,7 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
         if (state.fastRenderAbort) throw new Error('İptal edildi');
         const timings = computeBalancedTimings();
         if (timings.removeN > 0) { box.classList.add('hidden'); updateEstimatedDuration(); showToast(`⛔ 2:57'ye sığmıyor: ${timings.removeN} soru çıkar.`, true); return; }
-        const gem = state.audioMode === 'gemini';
+        const gem = voiced();
         const clip = text => { const b = gem ? state.voiceCache.get(voiceKeyFor(text)) : null; return { buf: b || null, dur: b ? b.duration : estSpeech(text) }; };
         const hasIntro = $('toggle-intro-speech').checked && !timings.dropIntro;
         const speakAns = gem && $('toggle-speak-answer').checked;
@@ -2707,19 +2893,22 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
       });
 
       // Ses Modları
-      const audioModes = ['gemini', 'silent'];
+      const audioModes = ['gemini', 'ext', 'silent'];
       audioModes.forEach(m => {
         $(`audio-mode-${m}`).addEventListener('click', () => {
           state.audioMode = m;
           audioModes.forEach(x => {
-            $(`audio-mode-${x}`).className = `col-span-2 py-1.5 px-1 rounded-lg text-[10px] font-semibold cursor-pointer ${x === m ? 'bg-amber-500 text-stone-950' : 'text-stone-300 hover:bg-stone-800'}`;
+            $(`audio-mode-${x}`).className = `col-span-1 py-1.5 px-1 rounded-lg text-[10px] font-semibold cursor-pointer ${x === m ? 'bg-amber-500 text-stone-950' : 'text-stone-300 hover:bg-stone-800'}`;
           });
           $('gemini-settings').classList.toggle('hidden', m !== 'gemini');
+          $('ext-settings').classList.toggle('hidden', m !== 'ext');
+          if (m === 'ext') extOnEnter();
           updateEstimatedDuration();
         });
       });
       $('select-gemini-voice').addEventListener('change', updateEstimatedDuration);
-      $('toggle-speak-answer').addEventListener('change', updateEstimatedDuration);
+      $('toggle-speak-answer').addEventListener('change', () => { updateEstimatedDuration(); if (state.audioMode === 'ext') extOnEnter(); });
+      extBindUI();
 
       // Spiker Metnini Kopyala
       $('btn-copy-tts-script').addEventListener('click', () => {
@@ -2843,12 +3032,18 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
         const list = state.allParsedQuestions; if (!list.length) { showToast('⚠️ Liste boş.', true); return; }
         const b = $('btn-shorten'); b.disabled = true; b.textContent = '✂️ Kısaltılıyor…';
         try {
-          const r = await api('studyo_kisalt', { sorular: list.map(q => ({ harf: q.letter, soru: q.question, cevap: q.answer })) });
-          const out = r.sorular || [];
-          list.forEach((q, i) => { const x = out[i]; if (x && x.soru && x.soru.split(/\s+/).length <= 16) q.question = x.soru.trim(); });
+          const parcalar = []; for (let i = 0; i < list.length; i += 8) parcalar.push(list.slice(i, i + 8));
+          let ok = 0, hata = '';
+          await Promise.all(parcalar.map(async grup => {
+            try {
+              const r = await api('studyo_kisalt', { sorular: grup.map(q => ({ harf: q.letter, soru: q.question, cevap: q.answer })) });
+              (r.sorular || []).forEach((x, i) => { const q = grup[i]; if (q && x && x.degisti && x.soru && x.soru.split(/\s+/).length <= 16) { q.question = x.soru.trim(); ok++; } });
+            } catch (e) { hata = e.message; }
+          }));
           els.inputQuestions.value = list.map(q => q.note ? `${q.letter} | ${q.question} | ${q.answer} | ${q.note}` : `${q.letter} | ${q.question} | ${q.answer}`).join('\n');
           applyQuestionsFromTextarea(false);
-          showToast(`✂️ ${out.length} soru kısaltıldı. Kontrol et!`);
+          if (ok) showToast(`✂️ ${ok}/${list.length} soru kısaltıldı${hata ? ' (bazıları hata verdi)' : ''}. Kontrol et!`, !!hata);
+          else showToast('❌ Kısaltılamadı: ' + (hata || 'Gemini değişiklik önermedi'), true);
         } catch (e) { showToast('❌ Kısaltma hatası: ' + e.message, true); }
         b.disabled = false; b.textContent = '✂️ Gemini ile kısalt';
       });

@@ -68,14 +68,27 @@ function quizIstem(fmt, konu, adet, kar, tema) {
   return `Türkçe bir Instagram ${alan} quiz videosu için '${s.ad}' formatında ${adet} soru hazırla. Konu: ${konu}.\nZorluk dağılımı: ${kar.kolay} kolay, ${kar.orta} orta, ${kar.zor} zor; zorları başa/ortaya/sona dağıt.\nKurallar: ${s.kurallar} Her bilgi kesin doğru ve iki kaynakla doğrulanabilir olmalı; tartışmalı ya da rivayet bilgileri kullanma. Sorular kısa (en çok 14 kelime), alt_bilgi en çok 6 kelime. Türkçe karakterleri doğru yaz.\nSadece JSON döndür: {"sorular": [ ... ]}. Tek bir sorunun şeması (örnek): ${JSON.stringify(s.ornek)}`;
 }
 const quizKontrolIstem = (fmt, sorular) => "Aşağıdaki quiz sorularını tek tek doğruluk açısından denetle (Google araması kullan). Yanlış yıl, yanlış kişi, uydurma söz, birden fazla doğru cevabı olan soru, cevabı soruda ele veren ipucu ya da hatalı koordinat varsa DÜZELT; düzeltemiyorsan soruyu çıkar. Aynı şemayı koru. Sadece JSON döndür: {\"sorular\": [...], \"notlar\": [\"soru N: ne değişti ve neden (kaynak)\"]}.\n" + JSON.stringify({ format: fmt, sorular });
+const METIN_MODELLER = ["gemini-2.5-flash", "gemini-flash-latest", "gemini-2.0-flash"];
 async function gemini(text, { arama = false, ms = 9000 } = {}) {
   const key = process.env.GEMINI_API_KEY; if (!key) throw new Error("anahtar yok");
   const body = { contents: [{ parts: [{ text }] }], generationConfig: arama ? { temperature: 0.2 } : { temperature: 0.6, responseMimeType: "application/json" } };
   if (arama) body.tools = [{ google_search: {} }];
-  const r = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent", { method: "POST", signal: AbortSignal.timeout(ms), headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify(body) });
-  if (!r.ok) { let d = ""; try { d = (await r.json()).error?.message || ""; } catch {} throw new Error(`Gemini ${r.status}${d ? ": " + d.slice(0, 120) : ""}`); }
-  const t = ((await r.json()).candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").replace(/^```(json)?|```$/gm, "");
-  return JSON.parse(t.slice(t.indexOf("{"), t.lastIndexOf("}") + 1));
+  const son = Date.now() + ms; let hata = "";
+  for (const m of METIN_MODELLER) {
+    const kalan = son - Date.now(); if (kalan < 1500) break;
+    const b = { ...body, generationConfig: { ...body.generationConfig } };
+    if (!/2\.5/.test(m)) delete b.generationConfig.thinkingConfig; else if (!arama) b.generationConfig.thinkingConfig = { thinkingBudget: 0 };
+    let r;
+    try { r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent`, { method: "POST", signal: AbortSignal.timeout(kalan), headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify(b) }); }
+    catch (e) { throw new Error(`${m}: ${e.name === "TimeoutError" ? "zaman aşımı" : e.message}`); }
+    if (!r.ok) { let d = ""; try { d = (await r.json()).error?.message || ""; } catch {} hata = `Gemini ${r.status} (${m})${d ? ": " + d.slice(0, 160) : ""}`; if ([400, 404, 403].includes(r.status) || r.status >= 500 || r.status === 429) continue; throw new Error(hata); }
+    const j = await r.json();
+    const t = (j.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("").replace(/^```(json)?|```$/gm, "");
+    const a = t.indexOf("{"), z = t.lastIndexOf("}");
+    if (a < 0 || z < a) { hata = `${m}: boş/JSON olmayan cevap${j.candidates?.[0]?.finishReason ? " (" + j.candidates[0].finishReason + ")" : ""}`; continue; }
+    try { return JSON.parse(t.slice(a, z + 1)); } catch { hata = `${m}: JSON çözülemedi`; continue; }
+  }
+  throw new Error(hata || "zaman aşımı");
 }
 async function quizSiradaki(fmt) { // projects/<format>-<n>: ilk boş n
   const r = await gh(`/repos/${REPO}/contents/projects`); const ad = r.ok ? (await r.json()).map((x) => x.name) : [];
@@ -396,8 +409,13 @@ export default async (req) => {
       case "studyo_kisalt": {
         const Q = (Array.isArray(b.sorular) ? b.sorular : []).slice(0, 40).map((x) => ({ harf: String(x.harf || ""), soru: String(x.soru || "").slice(0, 400), cevap: String(x.cevap || "").slice(0, 80) }));
         if (!Q.length) return json({ hata: "Soru yok" }, 400);
-        const r = await gemini(`Aşağıdaki Türkçe quiz sorularının her birini en çok 12 kelimelik, net, akıcı ve tek doğru cevabı olan bir soruya dönüştür. CEVAP AYNI KALMALI ve soru cevabı ele vermemeli. Harf sırası ve sayısı aynı kalsın. Sadece JSON döndür: {"sorular":[{"harf":"A","soru":"...","cevap":"..."}]}\n${JSON.stringify(Q)}`, { ms: 24000 });
-        return json({ sorular: (r.sorular || []).map((x, i) => ({ harf: Q[i]?.harf, cevap: Q[i]?.cevap, soru: String(x.soru || Q[i]?.soru || "") })) });
+        try {
+          const r = await gemini(`Aşağıdaki Türkçe quiz sorularının her birini en çok 12 kelimelik, net, akıcı ve tek doğru cevabı olan bir soruya dönüştür. CEVAP AYNI KALMALI ve soru cevabı ele vermemeli. Harf ve sayı aynı kalsın; her öğede "i" alanını aynen geri yaz. Sadece JSON döndür: {"sorular":[{"i":0,"harf":"A","soru":"..."}]}\n${JSON.stringify(Q.map((q, i) => ({ i, ...q })))}`, { ms: 9000 });
+          const L = Array.isArray(r.sorular) ? r.sorular : Array.isArray(r) ? r : [];
+          const out = Q.map((q, i) => { const x = L.find((y) => Number(y?.i) === i) || L.filter((y) => y?.harf && y.harf === q.harf).length === 1 && L.find((y) => y.harf === q.harf) || (L.length === Q.length ? L[i] : null); return { harf: q.harf, cevap: q.cevap, soru: String(x?.soru || "").trim() || q.soru, degisti: !!String(x?.soru || "").trim() }; });
+          if (!out.some((x) => x.degisti)) return json({ hata: "Gemini kısaltılmış soru döndürmedi" }, 502);
+          return json({ sorular: out });
+        } catch (e) { return json({ hata: e.message === "anahtar yok" ? "GEMINI_API_KEY tanımlı değil" : `Gemini yanıt vermedi (${e.message})` }, 502); }
       }
       case "overview": {
         const [status, usage, report, list, analiz, yorumlar, instagram] = await Promise.all([
