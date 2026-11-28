@@ -44,3 +44,11 @@ Akış: ses (Gemini) → video + kapak (`scripts/quiz_kapak.py`) → `scripts/qu
 - "İlk kez" iddialarında kronoloji kontrol edilir (ör. Rumeli'ye ilk ayak: Çimpe 1352, Gelibolu 1354 depremi sonrası).
 - Doğrulanamayan alıntı/tarif çıkarılır veya "rivayete göre / kaynaklara göre" ile verilir.
 - Doğrulama sonucu projede `dogrulama.md` olarak saklanır; yoksa render başlatılmaz.
+
+## Quiz 6 dersleri (28 Kasım)
+15. Gemini ücretsiz TTS kotası günde ~10 istek: satır satır sesli 40–55 satırlık quiz bunu aşar. Kota sorunu olmasın diye script.json'da `"ses_motoru": "edge"` (Microsoft Edge TTS, anahtarsız, kotasız; ses `tr-TR-AhmetNeural`, `"ses_hizi": "+8%"`) kullanılır; satir_ses.py her satırı ayrı ister, `audio/` önbelleği ve segmentler.json aynı kalır → kayma olmaz, bekçi her soruyu kendi satırıyla Whisper'la doğrular.
+16. 177 sn sınırı önceden hesaplanır: soru başına ≈ (soru+cevap sesi)/tempo + düşünme 3 + bekleme 0,7 + 0,25. Edge sesiyle bu ~8,4 sn → giriş/kapanışla en fazla ~19 soru. Fazlaysa önce tekrar eden (önceki quizde sorulmuş), sonra en az ilgi çekici/aynı temadan çok olan sorular çıkarılır; düşünme 3 sn ve cevap ~1,6 sn korunur (renderer'ın otomatik kısaltmasına bırakılmaz).
+17. Uzun quizlerde zor etiketi süre yemesin: `"zor_ek": 0` (etiket + flaş kalır, +1 sn eklenmez).
+18. Düşünme süresinde halkanın içinde büyük altın geri sayım rakamı (3-2-1) çıkar (referans Passaparola videosu gibi); kapatmak için `"geri_sayim": false`.
+19. Kullanıcı verisindeki tarih/kişi eşleşmeleri tek tek kontrol edilir (ör. Ümit Burnu'nu 1488'de Bartolomeu Dias dolaştı; 1497–98 Vasco da Gama'dır).
+20. Hızlı Stüdyo dış ses: Clipchamp seçiliyken "Seslendirme metnini kopyala" düz satırlar verir (her satır bir satır, <break> yok); break etiketi yalnızca ElevenLabs için.
