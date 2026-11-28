@@ -506,6 +506,7 @@
             <input id="input-direct-excel" type="file" accept=".xlsx,.xls,.csv,.txt,.docx" class="hidden" />
           </label>
           <button id="btn-shorten" type="button" class="px-2.5 py-1 rounded-lg bg-sky-600/25 hover:bg-sky-600/40 border border-sky-400/50 text-sky-200 text-[10px] font-bold cursor-pointer">✂️ Gemini ile kısalt</button>
+          <button id="btn-gemini-key" type="button" title="Netlify'daki Gemini anahtarı geçersizse buraya bir kez yapıştır" class="px-2.5 py-1 rounded-lg bg-stone-800 hover:bg-stone-700 border border-stone-600 text-stone-200 text-[10px] font-bold cursor-pointer">🔑 Gemini anahtarı</button>
           <button id="btn-apply-questions" type="button" class="px-2.5 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/40 text-amber-200 text-[10px] font-bold cursor-pointer">Uygula</button>
         </div>
       </div>
@@ -527,6 +528,13 @@
       <button id="btn-fast-render" type="button" class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-stone-950 font-extrabold text-xs shadow-lg flex items-center justify-center gap-2 cursor-pointer transition">
         <span>⚡</span><span>İzlemeden Hızlı İndir (MP4 · Maks 2:57)</span>
       </button>
+
+      <!-- GITHUB'A GÖNDER: quiz 3/4 tasarımı, tüm kontroller, panelde Tüm quizler listesine düşer -->
+      <button id="btn-github-send" type="button" class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-indigo-500 to-sky-400 hover:from-indigo-400 hover:to-sky-300 text-stone-950 font-extrabold text-xs shadow-lg flex items-center justify-center gap-2 cursor-pointer transition">
+        <span>🚀</span><span>GitHub'a gönder (quiz 3/4 tasarımı, kontrollü)</span>
+      </button>
+      <div id="github-send-status" class="hidden bg-stone-950 border border-sky-500/40 rounded-xl p-2.5 text-[11px] text-sky-200 leading-snug"></div>
+      <div class="text-[10px] text-stone-500 -mt-1 text-center">Yedek: aşağıdaki "Hızlı İndir" videoyu tarayıcıda hemen indirir.</div>
 
       <!-- Render İlerleme Çubuğu -->
       <div id="fast-render-progress-box" class="hidden bg-stone-950 border border-emerald-500/40 rounded-xl p-2.5 flex flex-col gap-1.5">
@@ -1064,6 +1072,95 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
       return out;
     }
     // EXT-SEG-END
+    // ==================== GITHUB'A GÖNDER ====================
+    const GH_ABC = 'ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ';
+    async function geminiAnahtarSor() {
+      let durum = ''; try { const r = await api('gemini_anahtar'); durum = r.kaynak === 'panel' ? 'Şu an panelden kaydedilen anahtar kullanılıyor.' : r.kaynak === 'netlify' ? "Şu an Netlify'daki anahtar kullanılıyor (geçersiz olabilir)." : 'Kayıtlı anahtar yok.'; } catch (e) {}
+      const k = (prompt(`🔑 Gemini API anahtarını yapıştır (aistudio.google.com > API keys). Şifreli saklanır, bir daha gösterilmez.\n${durum}`) || '').trim();
+      if (!k) return;
+      try { await api('gemini_anahtar', { anahtar: k }); showToast('✓ Gemini anahtarı kaydedildi. Kısaltma ve Gemini ses artık bu anahtarı kullanır.'); }
+      catch (e) { showToast('❌ ' + e.message, true); }
+    }
+    function ghDurum(html) { const b = $('github-send-status'); b.classList.remove('hidden'); b.innerHTML = html; }
+    function wavYaz(f32, sr) {
+      const n = f32.length, buf = new ArrayBuffer(44 + n * 2), v = new DataView(buf), w = (o, t) => { for (let i = 0; i < t.length; i++) v.setUint8(o + i, t.charCodeAt(i)); };
+      w(0, 'RIFF'); v.setUint32(4, 36 + n * 2, true); w(8, 'WAVE'); w(12, 'fmt '); v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true);
+      v.setUint32(24, sr, true); v.setUint32(28, sr * 2, true); v.setUint16(32, 2, true); v.setUint16(34, 16, true); w(36, 'data'); v.setUint32(40, n * 2, true);
+      for (let i = 0; i < n; i++) v.setInt16(44 + i * 2, Math.max(-1, Math.min(1, f32[i])) * 32767, true);
+      return new Uint8Array(buf);
+    }
+    function b64Parca(u8) { let s = ''; for (let i = 0; i < u8.length; i += 32768) s += String.fromCharCode.apply(null, u8.subarray(i, i + 32768)); return btoa(s); }
+    function disSesPaketi(sorted) { // onaylanan segmentler -> tek WAV (24 kHz) + sınırlar (sn); sıra script.json ile aynı: giriş, soru/cevap..., kapanış
+      const SR = 24000, gap = new Float32Array(Math.round(SR * 0.25)), parca = [], seg = []; let t = 0;
+      const ekle = (text) => {
+        const b = text ? state.voiceCache.get('ext|' + text) : null;
+        if (!b) { seg.push({ bas: +t.toFixed(3), bit: +t.toFixed(3) }); return; }
+        const src = b.getChannelData(0), k = b.sampleRate / SR, n = Math.floor(src.length / k), out = new Float32Array(n);
+        for (let i = 0; i < n; i++) { const x = i * k, j = Math.floor(x), f = x - j; out[i] = (src[j] || 0) * (1 - f) + (src[j + 1] || 0) * f; }
+        seg.push({ bas: +t.toFixed(3), bit: +(t + n / SR).toFixed(3) }); parca.push(out, gap); t += n / SR + gap.length / SR;
+      };
+      ekle($('toggle-intro-speech').checked ? getIntroText() : null);
+      sorted.forEach(q => { const b = state.voiceCache.get('ext|' + speechTextFor(q)); if (!b) throw new Error(`${q.letter} sorusunun ses segmenti yok`); ekle(speechTextFor(q)); ekle(answerSpeechText(q)); });
+      ekle(null); // kapanış dış seste kaydedilmedi: boş segment
+      const top = parca.reduce((a, x) => a + x.length, 0), all = new Float32Array(top); let o = 0; parca.forEach(x => { all.set(x, o); o += x.length; });
+      return { wav: wavYaz(all, SR), seg };
+    }
+    let ghIzle = null;
+    async function githubGonder() {
+      const btn = $('btn-github-send'); if (btn.disabled) return;
+      const Q = state.questions || [];
+      if (Q.length < 4) { showToast('⚠️ En az 4 soru gerekli.', true); return; }
+      if (Q.length > 29) { showToast('⚠️ En fazla 29 soru.', true); return; }
+      const harfler = Q.map(q => trUpper(q.letter).slice(0, 1));
+      if (new Set(harfler).size !== harfler.length) { showToast('⚠️ Her harf bir kez kullanılmalı.', true); return; }
+      const kotu = Q.find(q => trUpper(q.answer)[0] !== trUpper(q.letter)); if (kotu) { showToast(`⚠️ ${kotu.letter}: cevap bu harfle başlamıyor.`, true); return; }
+      const ext = state.audioMode === 'ext';
+      if (state.audioMode === 'silent') { showToast('⚠️ GitHub sesli video üretir: Gemini Ses ya da Dış Ses seç.', true); return; }
+      if (ext) {
+        if (!$('toggle-speak-answer').checked) { showToast('⚠️ Dış ses: "cevabı seslendir" açık olmalı (her cevabın segmenti gerekli).', true); return; }
+        if (state.ext.mono) extBuild();
+        if (!extReady()) { showToast('⚠️ Dış ses: önce dosyayı yükle, segment sayısı satır sayısıyla aynı olmalı.', true); return; }
+      }
+      const sorted = [...Q].sort((a, b) => GH_ABC.indexOf(trUpper(a.letter)[0]) - GH_ABC.indexOf(trUpper(b.letter)[0]));
+      const tema = state.theme === 'sport' ? 'spor' : 'tarih';
+      const cev = (q) => answerSpeechText(q).replace(/[.]+$/, '');
+      const govde = {
+        format: 'her-harfe', hizli: true, tema,
+        sorular: sorted.map(q => ({ harf: trUpper(q.letter).slice(0, 1), soru: q.question.trim(), cevap: cev(q), alt_bilgi: (q.note || '').trim() })),
+        ses: $('select-gemini-voice').value,
+        dusunme: parseFloat($('range-think').value) || undefined, bekleme: parseFloat($('range-reveal').value) || undefined
+      };
+      if ($('toggle-intro-speech').checked) { const g = getIntroText().replace(/\s+/g, ' ').trim(); if (g && g.length <= 180) govde.giris = g; }
+      btn.disabled = true; ghDurum('⏳ Proje hazırlanıyor…');
+      try {
+        let paket = null;
+        if (ext) { paket = disSesPaketi(sorted); govde.ses_harici = true; govde.segmentler = paket.seg; }
+        const r = await api('quiz_uret', govde); const slug = r.slug;
+        if (paket) {
+          const P = 3300000, n = Math.ceil(paket.wav.length / P);
+          if (n > 8) throw new Error('Ses dosyası çok büyük');
+          for (let i = 0; i < n; i++) { ghDurum(`⏳ ${slug}: ses yükleniyor ${i + 1}/${n}…`); await api('quiz_ses_yukle', { slug, ext: 'wav', i, n, base64: b64Parca(paket.wav.subarray(i * P, (i + 1) * P)) }); }
+        }
+        saveRemoteAsked(sorted);
+        ghDurum(`✅ Gönderildi: <b>${escapeHtml(slug)}</b>. GitHub videoyu quiz 3/4 tasarımıyla üretiyor (~10–20 dk). Panelde <b>QUIZ › Tüm quizler</b> listesinde görünecek.<div id="gh-izle" class="mt-1 text-stone-300"></div>`);
+        izleBaslat(slug);
+      } catch (e) { ghDurum('❌ Gönderilemedi: ' + escapeHtml(e.message)); showToast('❌ ' + e.message, true); }
+      btn.disabled = false;
+    }
+    function izleBaslat(slug) {
+      clearInterval(ghIzle); const t0 = Date.now();
+      const bak = async () => {
+        const d = $('gh-izle'); if (!d) return clearInterval(ghIzle);
+        if (Date.now() - t0 > 45 * 60e3) { d.textContent = 'Takip durdu; sonucu panelden kontrol et.'; return clearInterval(ghIzle); }
+        try {
+          const x = ((await api('quiz_liste')).quizler || []).find(q => q.slug === slug); if (!x) { d.textContent = 'Sırada…'; return; }
+          if (x.release && x.mp4 && !(x.run && x.run.status !== 'completed')) { d.innerHTML = `🎬 Hazır! <a class="underline text-sky-300" href="${escapeHtml(x.mp4)}" target="_blank" rel="noopener">Videoyu aç</a>`; return clearInterval(ghIzle); }
+          if (x.run && x.run.conclusion === 'failure') { d.innerHTML = '❌ Hata' + (x.run.hata_adim ? ` (${escapeHtml(x.run.hata_adim)})` : '') + ': ' + escapeHtml((x.run.hata || []).join(' · ') || 'GitHub kaydına bak') + (x.run.url ? ` · <a class="underline" href="${escapeHtml(x.run.url)}" target="_blank" rel="noopener">kayıt</a>` : ''); return clearInterval(ghIzle); }
+          d.textContent = x.run ? `Çalışıyor: ${x.run.adim || 'başlıyor'}${x.run.adim_no ? ` (${x.run.adim_no}/${x.run.adim_top})` : ''}` : 'Sırada…';
+        } catch (e) {}
+      };
+      bak(); ghIzle = setInterval(bak, 30000);
+    }
     state.ext = { mono: null, sr: 0, cuts: [], th: 0.01, file: null, name: '', lines: [], key: '' };
     function extLines() {
       const L = [];
@@ -3043,7 +3140,7 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
           els.inputQuestions.value = list.map(q => q.note ? `${q.letter} | ${q.question} | ${q.answer} | ${q.note}` : `${q.letter} | ${q.question} | ${q.answer}`).join('\n');
           applyQuestionsFromTextarea(false);
           if (ok) showToast(`✂️ ${ok}/${list.length} soru kısaltıldı${hata ? ' (bazıları hata verdi)' : ''}. Kontrol et!`, !!hata);
-          else showToast('❌ Kısaltılamadı: ' + (hata || 'Gemini değişiklik önermedi'), true);
+          else showToast('❌ Kısaltılamadı: ' + (/key not valid|anahtar/i.test(hata) ? 'Gemini anahtarı geçersiz. 🔑 Gemini anahtarı düğmesinden çalışan anahtarı bir kez yapıştır.' : (hata || 'Gemini değişiklik önermedi')), true);
         } catch (e) { showToast('❌ Kısaltma hatası: ' + e.message, true); }
         b.disabled = false; b.textContent = '✂️ Gemini ile kısalt';
       });
@@ -3074,6 +3171,8 @@ const MAX_VIDEO_SEC = 177; // kesin 2:57 (kapak dahil)
         else startLiveRecording();
       });
       $('btn-fast-render').addEventListener('click', runFastOfflineRender);
+      $('btn-github-send').addEventListener('click', githubGonder);
+      $('btn-gemini-key').addEventListener('click', geminiAnahtarSor);
       $('btn-cancel-fast-render').addEventListener('click', () => { state.fastRenderAbort = true; });
 
       // Tam Ekran Modu

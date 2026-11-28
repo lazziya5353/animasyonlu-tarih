@@ -69,8 +69,15 @@ function quizIstem(fmt, konu, adet, kar, tema) {
 }
 const quizKontrolIstem = (fmt, sorular) => "Aşağıdaki quiz sorularını tek tek doğruluk açısından denetle (Google araması kullan). Yanlış yıl, yanlış kişi, uydurma söz, birden fazla doğru cevabı olan soru, cevabı soruda ele veren ipucu ya da hatalı koordinat varsa DÜZELT; düzeltemiyorsan soruyu çıkar. Aynı şemayı koru. Sadece JSON döndür: {\"sorular\": [...], \"notlar\": [\"soru N: ne değişti ve neden (kaynak)\"]}.\n" + JSON.stringify({ format: fmt, sorular });
 const METIN_MODELLER = ["gemini-2.5-flash", "gemini-flash-latest", "gemini-2.0-flash"];
+// Gemini anahtarı: panelden kaydedilen (Blobs, şifreli) anahtar önceliklidir; yoksa Netlify ortam değişkeni
+let gKeyOnb = null;
+async function geminiKey() {
+  if (gKeyOnb && Date.now() - gKeyOnb.t < 60e3) return gKeyOnb.v;
+  let v = null; try { const enc = await getStore({ name: "ayar", consistency: "strong" }).get("gemini_anahtar"); if (enc) v = igCoz(enc); } catch {}
+  v = v || process.env.GEMINI_API_KEY || null; gKeyOnb = { t: Date.now(), v }; return v;
+}
 async function gemini(text, { arama = false, ms = 9000 } = {}) {
-  const key = process.env.GEMINI_API_KEY; if (!key) throw new Error("anahtar yok");
+  const key = await geminiKey(); if (!key) throw new Error("anahtar yok");
   const body = { contents: [{ parts: [{ text }] }], generationConfig: arama ? { temperature: 0.2 } : { temperature: 0.6, responseMimeType: "application/json" } };
   if (arama) body.tools = [{ google_search: {} }];
   const son = Date.now() + ms; let hata = "";
@@ -106,7 +113,7 @@ async function quizEskiScript(fmt, slug, tema, Q, baslik, n, girisOzel) {
   const sahne = (l, z) => ({ lines: [l], big: "", sub: "", label: "QUIZ", fx: [], image: "images/bg.jpg", prompt: "quiz", ...(z ? { zorluk: z } : {}) });
   const sah = [sahne(giris)]; for (const q of S) { sah.push(sahne(`${q.harf} harfi. ${t(q.soru)}`, q.zorluk)); sah.push(sahne(`${t(q.cevap).replace(/[.]+$/, "")}.`)); }
   sah.push(sahne("Kaçını bildin? Yorumlara yaz."));
-  return { baslik: t(baslik) || `Her Harfe Bir ${tema === "spor" ? "Spor" : "Tarih"} Sorusu ${n}`, hook: `HER HARFE BİR ${tema === "spor" ? "SPOR" : "TARİH"} SORUSU`, slug, tema, map_region: "anadolu", sahneler: sah, finale: "", maps: [], cards: [],
+  return { baslik: t(baslik) || `Her Harfe Bir ${tema === "spor" ? "Spor" : "Tarih"} Sorusu ${n}`, hook: `HER HARFE BİR ${tema === "spor" ? "SPOR" : "TARİH"} SORUSU`, slug, tema, map_region: "anadolu", sahneler: sah, ses_modu: "satir", finale: "", maps: [], cards: [],
     eras: [{ name: "QUIZ", from: 0, to: 45 }], outro: { title: "KAÇINI BİLDİN?", line: "Yorumlara yaz" }, konu: "Harf quiz", tarih: "", durum: "onaylandi", kaynak: "panel", sade: true, ses_stil: stil,
     seslendirme_metni: sah.map((x) => x.lines[0]).join("\n"), alt_bilgi: Object.fromEntries(S.map((q) => [q.harf, t(q.alt_bilgi)])), aciklama: "", hashtagler: [], kaynaklar: [], kontrol_notlari: [] };
 }
@@ -116,7 +123,7 @@ const TTS_MODELLER = ["gemini-2.5-flash-preview-tts", "gemini-2.5-flash-tts", "g
 const SESLER = ["Charon", "Orus", "Puck", "Kore", "Fenrir", "Aoede", "Zephyr", "Iapetus", "Algenib", "Sadaltager"];
 let ttsModelIyi = null;
 async function ttsSatir(metin, ses) {
-  const key = process.env.GEMINI_API_KEY; if (!key) throw new Error("GEMINI_API_KEY tanımlı değil");
+  const key = await geminiKey(); if (!key) throw new Error("Gemini anahtarı tanımlı değil (Hızlı Stüdyo > 🔑 Gemini anahtarı)");
   const voice = SESLER.includes(ses) ? ses : "Charon";
   const body = { contents: [{ parts: [{ text: `Türkçe, net ve enerjik bir quiz sunucusu gibi oku: ${metin}` }] }], generationConfig: { responseModalities: ["AUDIO"], speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voice } } } } };
   const sira = ttsModelIyi ? [ttsModelIyi, ...TTS_MODELLER.filter((m) => m !== ttsModelIyi)] : TTS_MODELLER; let son = "";
@@ -297,7 +304,7 @@ function kuralOneri(metin, id = "") {
   return sec(["teşekkürler 🙌", "sağ ol 🙏", "yorumun için teşekkürler 😊"]);
 }
 async function geminiOneri(liste) { // isteğe bağlı: GEMINI_API_KEY varsa tek seferde toplu öneri
-  const key = process.env.GEMINI_API_KEY; if (!key || !liste.length) return 0;
+  const key = await geminiKey(); if (!key || !liste.length) return 0;
   const istem = "Bir Türk tarih Instagram sayfası (@animasyon.tarih) adına yorumlara cevap yaz. Çok kısa (en fazla 10 kelime), samimi, gündelik, yapay zekâ gibi durmayan, gerekirse 1 emoji. Örnek tarz: \"helal olsun 👏\", \"bir dahaki sefere daha iyi olur 💪\". JSON dizi döndür: [{\"id\":\"...\",\"cevap\":\"...\"}].\n" + JSON.stringify(liste.map((y) => ({ id: y.id, yorum: String(y.metin || "").slice(0, 300), video: y.medya?.baslik })));
   const r = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent", { method: "POST", signal: AbortSignal.timeout(7000),
     headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify({ contents: [{ parts: [{ text: istem }] }], generationConfig: { temperature: 0.7, responseMimeType: "application/json" } }) });
@@ -397,6 +404,16 @@ export default async (req) => {
         const m = String(b.metin || "").trim().slice(0, 600); if (!m) return json({ hata: "Metin boş" }, 400);
         return json(await ttsSatir(m, b.ses));
       }
+      case "gemini_anahtar": { // Netlify'daki anahtar geçersizse panelden bir kez yapıştırılır (Blobs'ta şifreli; asla geri döndürülmez)
+        const st = getStore({ name: "ayar", consistency: "strong" });
+        if (b.sil) { await st.delete("gemini_anahtar"); gKeyOnb = null; return json({ ok: true }); }
+        const k = String(b.anahtar || "").trim();
+        if (!k) { const v = await geminiKey(); return json({ var: !!v, kaynak: (await st.get("gemini_anahtar").catch(() => null)) ? "panel" : v ? "netlify" : null }); }
+        if (!/^[A-Za-z0-9_\-]{30,60}$/.test(k)) return json({ hata: "Anahtar biçimi hatalı" }, 400);
+        const r = await fetch("https://generativelanguage.googleapis.com/v1beta/models?pageSize=1", { headers: { "x-goog-api-key": k }, signal: AbortSignal.timeout(8000) }).catch(() => null);
+        if (!r || !r.ok) return json({ hata: "Google bu anahtarı kabul etmedi (API key not valid)" }, 400);
+        await st.set("gemini_anahtar", igSifrele(k)); gKeyOnb = null; return json({ ok: true });
+      }
       case "studyo_sorulanlar": {
         const [proje, kayit] = await Promise.all([sorulanlar(), studyoStore().get("studyo_sorulanlar", { type: "json" }).catch(() => null)]);
         return json({ proje, studyo: kayit || [] });
@@ -415,7 +432,7 @@ export default async (req) => {
           const out = Q.map((q, i) => { const x = L.find((y) => Number(y?.i) === i) || L.filter((y) => y?.harf && y.harf === q.harf).length === 1 && L.find((y) => y.harf === q.harf) || (L.length === Q.length ? L[i] : null); return { harf: q.harf, cevap: q.cevap, soru: String(x?.soru || "").trim() || q.soru, degisti: !!String(x?.soru || "").trim() }; });
           if (!out.some((x) => x.degisti)) return json({ hata: "Gemini kısaltılmış soru döndürmedi" }, 502);
           return json({ sorular: out });
-        } catch (e) { return json({ hata: e.message === "anahtar yok" ? "GEMINI_API_KEY tanımlı değil" : `Gemini yanıt vermedi (${e.message})` }, 502); }
+        } catch (e) { return json({ hata: e.message === "anahtar yok" ? "Gemini anahtarı tanımlı değil" : `Gemini yanıt vermedi (${e.message})` }, 502); }
       }
       case "overview": {
         const [status, usage, report, list, analiz, yorumlar, instagram] = await Promise.all([
@@ -646,7 +663,7 @@ export default async (req) => {
         let kar = { kolay: Number(k.kolay) || 0, orta: Number(k.orta) || 0, zor: Number(k.zor) || 0 };
         if (kar.kolay + kar.orta + kar.zor !== adet) kar = { kolay: Math.round(adet * 0.4), zor: Math.round(adet * 0.2) }, kar.orta = adet - kar.kolay - kar.zor;
         const tema = b.tema === "spor" ? "spor" : "tarih";
-        if (process.env.GEMINI_API_KEY && !b.yedek) {
+        if ((await geminiKey()) && !b.yedek) {
           try { const j = await gemini(quizIstem(b.format, konu, adet, kar, tema)); return json({ ok: true, durum: "hazir", sorular: j.sorular || [], dogrulama_gerekli: true }); }
           catch (e) { /* zaman aşımı ya da kota: GitHub yedeğine düş */ }
         }
@@ -663,7 +680,7 @@ export default async (req) => {
         if (!QTUM.includes(b.format)) return json({ hata: "Format seçilmedi" }, 400);
         const metin = String(b.metin || "").trim().slice(0, 12000); if (metin.length < 5) return json({ hata: "Metin boş" }, 400);
         try { const j = await gemini(quizAyirIstem(b.format, metin, b.yerel, b.tema), { ms: 9500 }); return json({ ok: true, sorular: j.sorular || [], notlar: j.notlar || [] }); }
-        catch (e) { return json({ ok: false, hata: `Gemini ile ayrılamadı (${e.message})` }); }
+        catch (e) { return json({ ok: false, hata: /key not valid|anahtar yok|API_KEY/i.test(e.message) ? "Gemini anahtarı geçersiz/eksik, Gemini atlandı" : `Gemini ile ayrılamadı (${e.message})` }); }
       }
       case "quiz_taslak_durum": {
         if (!/^[a-z0-9-]{4,40}$/.test(b.id || "")) return json({ hata: "Geçersiz id" }, 400);
@@ -671,13 +688,20 @@ export default async (req) => {
       }
       case "quiz_uret": { // onaylanan sorular -> projects/<format>-<n>/script.json (+ görseller) -> quiz_studyo.yml
         const fmt = b.format; if (!QTUM.includes(fmt)) return json({ hata: "Format seçilmedi" }, 400);
-        const Q = Array.isArray(b.sorular) ? b.sorular : [], ust = fmt === "her-harfe" ? 29 : 15; if (Q.length < 6 || Q.length > ust) return json({ hata: `6-${ust} soru olmalı` }, 400);
+        const Q = Array.isArray(b.sorular) ? b.sorular : [], ust = fmt === "her-harfe" ? 29 : 15, alt = fmt === "her-harfe" && b.hizli ? 4 : 6; if (Q.length < alt || Q.length > ust) return json({ hata: `${alt}-${ust} soru olmalı` }, 400);
         const tema = b.tema === "spor" ? "spor" : "tarih";
         const giris = String(b.giris ?? "").replace(/\s+/g, " ").trim(); if (b.giris !== undefined && (!giris || giris.length > 180)) return json({ hata: "Giriş cümlesi boş olamaz / en fazla 180 karakter" }, 400);
         if (QSEMA[fmt].eski) { // Her Harfe -> quiz.yml, Harflerden Bul -> harf_bul.yml (mevcut script.json şemaları)
           const slug = await quizSiradaki(fmt === "her-harfe" ? `her-harfe-${tema}` : tema === "spor" ? "harflerden-bul-spor" : "harflerden-bul");
           const n = slug.split("-").pop(), sc = await quizEskiScript(fmt, slug, tema, Q, b.baslik, n, giris);
           if (sc.hata) return json({ hata: sc.hata }, 400);
+          if (b.hizli) { sc.kaynak = "hizli-studyo"; if (SESLER.includes(b.ses)) sc.ses = b.ses; for (const k of ["dusunme", "bekleme"]) if (+b[k] > 0) sc[k] = Math.min(6, Math.max(1, +b[k])); }
+          if (fmt === "her-harfe" && b.ses_harici) { // dış ses: sayfada onaylanan segment sınırları (sn) -> segmentler.json; sessizlik tespiti yapılmaz
+            const G = Array.isArray(b.segmentler) ? b.segmentler : [], L = sc.sahneler.length;
+            if (G.length !== L || G.some((x) => !(+x.bas >= 0 && +x.bit >= +x.bas))) return json({ hata: `Segment sayısı ${G.length}, ${L} olmalı` }, 400);
+            sc.ses_modu = "segment"; sc.tempo = 1;
+            await writeFile(`projects/${slug}/segmentler.json`, b64({ kaynak: "dis-ses", segmentler: G.map((x, i) => ({ satir: sc.sahneler[i].lines[0], bas: +(+x.bas).toFixed(3), bit: +(+x.bit).toFixed(3) })) }), `Dış ses segmentleri: ${slug}`);
+          }
           await writeFile(`projects/${slug}/script.json`, b64(sc), `Quiz Stüdyo: ${slug} (panelden onaylandı)`);
           await baslikYaz(slug, sc.baslik).catch(() => {});
           if (b.ses_harici) return json({ ok: true, slug, ses_bekliyor: true }); // dis ses: workflow, ses yüklenince quiz_ses_yukle'den başlar
@@ -843,7 +867,7 @@ export default async (req) => {
         const istem = "Bir Türk tarih Instagram sayfasının (@animasyon.tarih) tek bir Reels videosunun verileri aşağıda. Sade, samimi, gündelik Türkçeyle (yapay zekâ gibi durmayan) 2-3 cümlelik değerlendirme ve 1-2 somut öneri yaz. Abartma, rakamlara dayan. Sadece JSON: {\"metin\": \"...\"}\n" + JSON.stringify(b.ozet || {}).slice(0, 3000);
         try { const j = await gemini(istem); const metin = String(j.metin || "").slice(0, 1200); if (!metin) throw new Error("boş cevap");
           await st.setJSON(k, { t: Date.now(), metin }); return json({ ok: true, metin, zaman: Date.now() }); }
-        catch (e) { return json({ hata: e.message === "anahtar yok" ? "GEMINI_API_KEY tanımlı değil" : `Gemini yanıt vermedi (${e.message})` }, 502); }
+        catch (e) { return json({ hata: e.message === "anahtar yok" ? "Gemini anahtarı tanımlı değil" : `Gemini yanıt vermedi (${e.message})` }, 502); }
       }
       case "ig_yanitla": case "ig_gizle": {
         if (!/^\d{5,30}$/.test(String(b.id || ""))) return json({ hata: "Geçersiz yorum" }, 400);

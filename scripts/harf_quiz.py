@@ -176,82 +176,106 @@ def main():
         d.text((CX, 1130), "BİLDİN?", font=F("Cinzel-700", 104), fill=GOLD, anchor="ms")
         d.text((CX, 1200), f"{n} HARF · {n} SORU", font=F("Montserrat-900", 34), fill=WHITE, anchor="ms")
         im.save(a.kapak, quality=93)
+    # segmentler.json (Hizli Studyo: satir satir TTS ya da onaylanmis dis ses sinirlari) varsa AYNEN kullanilir, sessizlik tespiti yapilmaz
+    SEGY = os.path.join(os.path.dirname(os.path.abspath(a.script)), "segmentler.json")
+    SEG = json.load(open(SEGY))["segmentler"] if os.path.exists(SEGY) else None
+    if SEG is not None:
+        if len(SEG) != 2*n + 2: sys.exit(f"HATA: segmentler.json {len(SEG)} satır içeriyor, {2*n + 2} olmalı (giriş + {n} soru/cevap + kapanış)")
+        a.tempo = float(SJ.get("tempo") or 1.12)
+    a.pause = float(SJ.get("dusunme") or a.pause); a.hold = float(SJ.get("bekleme") or a.hold)
     # --- sesi sessizliklerle 2n+2 parcaya bol
     SR = 48000
     raw = subprocess.run(["ffmpeg", "-v", "error", "-i", a.wav, "-af", f"atempo={a.tempo}", "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
     au = np.frombuffer(raw, np.float32); tot = len(au)/SR
-    fr = np.sqrt((au[:len(au)//480*480].reshape(-1, 480)**2).mean(1)); q = fr < 10**(-42/20); sil = []; j = 0
-    while j < len(q):  # kendi enerji tabanli sessizlik tespiti (10 ms kare, -42 dB, >=80 ms)
-        if q[j]:
-            k = j
-            while k < len(q) and q[k]: k += 1
-            if k - j >= 8: sil.append((j*0.01, k*0.01))
-            j = k
-        else: j += 1
-    q35 = fr < 10**(-35/20); sil35 = []; j = 0
-    while j < len(q35):
-        if q35[j]:
-            k = j
-            while k < len(q35) and q35[k]: k += 1
-            if k - j > 40: sil35.append((j*0.01, k*0.01))
-            j = k
-        else: j += 1
-    sil = [x for x in sil if x[0] > 0.05 and x[1] < tot - 0.05]
-    if a.timed:
-        sc = json.load(open(a.timed))["scenes"]; assert len(sc) == 2*n + 2
-        gaps = []
-        for k in range(1, len(sc)):
-            b = (sc[k-1]["end"] + sc[k]["start"])/2
-            g = min(sil, key=lambda g: abs((g[0]+g[1])/2 - b))
-            gaps.append(g if abs((g[0]+g[1])/2 - b) < 0.4 and g not in gaps else (b - 0.08, b + 0.06))
+    if SEG is not None:
+        segs = []
+        for x in SEG:  # zaman cizelgesi atempo sonrasina olceklenir
+            sg = au[int(x["bas"]/a.tempo*SR):int(x["bit"]/a.tempo*SR)].copy()
+            if len(sg) < 480: sg = np.zeros(int(0.3*SR), np.float32)
+            f = min(240, len(sg)//2); r = np.linspace(0, 1, f, dtype=np.float32); sg[:f] *= r; sg[len(sg)-f:] *= r[::-1]
+            segs.append(sg)
+        # sure siniri 177 sn (2:57): once bekleme, sonra ZOR ek suresi, sonra dusunme suresi (en az 2 sn) kisalir
+        konusma = sum(len(x) for x in segs)/SR; zb = 1.0
+        top = lambda: konusma + 0.2 + n*(a.pause + a.hold + 0.25) + len(ZOR)*zb + 1.0
+        while top() > 177 and a.hold > 0.3: a.hold = round(max(0.3, a.hold - 0.05), 3)
+        if top() > 177: zb = 0.0
+        while top() > 177 and a.pause > 2.0: a.pause = round(max(2.0, a.pause - 0.05), 3)
+        if top() > 177: sys.exit(f"HATA: Video {top():.1f} sn olur, sınır 177 sn (2:57). Düşünme 2 sn'ye, bekleme 0.3 sn'ye indirildi yine de sığmıyor; soru sayısını azalt ya da soruları kısalt.")
+        print(f"zaman cizelgesi: konusma {konusma:.1f} sn, dusunme {a.pause} sn, bekleme {a.hold} sn, toplam {top():.1f} sn")
     else:
-        # once metin tabanli bolme (Whisper kelime zamanlari); guven dusukse sessizlik DP'sine don
-        try:
-            from ses_hizala import satir_sinirlari; sn = satir_sinirlari(au, SR, S)
-        except Exception as e: print("uyari: metin hizalama calismadi:", e); sn = None
-        gaps = [(b - 0.08, b + 0.06) for b in sn[1:-1]] if sn else None
-    if gaps is None:
-        # metin uzunluguna gore DP hizalama: en uzun sessizlikleri secmek cumle-ici duraklari
-        # sahne siniri sanip soru/cevap seslerini kaydiriyordu (sessiz soru hatasi)
-        ch = [len(x) for x in S]; rate = tot/sum(ch); m = len(sil); K = 2*n + 1
-        mid = lambda j: (sil[j][0]+sil[j][1])/2
-        def cost(t0, t1, c):
-            return math.log(max(t1 - t0, 0.05)/(rate*c))**2
-        def pen(k, i, j):  # yapi: soru "X harfi." + kisa durakla baslar; cevap tek parca (ic durak yok)
-            ins = sil[i+1:j]
-            if k % 2 == 1: return 0 if any(0.25 < g[0] - sil[i][1] < 1.0 for g in ins) else 3.0
-            return 3.0 * sum(1 for g in ins if g[1] - g[0] > 0.2)
-        INF = float("inf"); D = [[INF]*m for _ in range(K)]; P = [[-1]*m for _ in range(K)]
-        cost0 = cost; cost = lambda t0, t1, c: cost0(t0, t1, c)
-        for j in range(m): D[0][j] = cost(0, mid(j), ch[0])
-        for k in range(1, K):
-            for j in range(k, m):
-                for i in range(k-1, j):
-                    v = D[k-1][i] + cost(mid(i), mid(j), ch[k]) - 1.5*(sil[j][1]-sil[j][0]) + pen(k, i, j)
-                    if v < D[k][j]: D[k][j] = v; P[k][j] = i
-        j = min(range(m), key=lambda j: D[K-1][j] + cost(mid(j), tot, ch[-1])); idx = []
-        for k in range(K-1, -1, -1): idx.append(j); j = P[k][j]
-        gaps = [sil[j] for j in reversed(idx)]
-    assert len(set(gaps)) == 2*n + 1, "sessizlik sayisi yetmiyor"
-    edges = [(0.0, None)] + gaps + [(None, tot)]
-    segs = []
-    for k in range(2*n + 2):
-        s0 = edges[k][1] - 0.06 if edges[k][1] is not None else 0.0
-        s1 = edges[k+1][0] + 0.08 if edges[k+1][0] is not None else tot
-        sg = au[int(max(0, s0)*SR):int(s1*SR)].copy()
-        # 0.4 sn'den uzun ic sessizlikleri 0.25 sn'ye kisalt
-        ins = [g for g in sil35 if g[0] > s0 + 0.05 and g[1] < s1 - 0.05 and g[1] - g[0] > 0.4]
-        for g in reversed(ins):
-            c0 = int((g[0] - s0 + 0.125)*SR); c1 = int((g[1] - s0 - 0.125)*SR); sg = np.concatenate([sg[:c0], sg[c1:]])
-        f = min(240, len(sg)//2); r = np.linspace(0, 1, f, dtype=np.float32); sg[:f] *= r; sg[len(sg)-f:] *= r[::-1]
-        segs.append(sg)
+        zb = 1.0
+        fr = np.sqrt((au[:len(au)//480*480].reshape(-1, 480)**2).mean(1)); q = fr < 10**(-42/20); sil = []; j = 0
+        while j < len(q):  # kendi enerji tabanli sessizlik tespiti (10 ms kare, -42 dB, >=80 ms)
+            if q[j]:
+                k = j
+                while k < len(q) and q[k]: k += 1
+                if k - j >= 8: sil.append((j*0.01, k*0.01))
+                j = k
+            else: j += 1
+        q35 = fr < 10**(-35/20); sil35 = []; j = 0
+        while j < len(q35):
+            if q35[j]:
+                k = j
+                while k < len(q35) and q35[k]: k += 1
+                if k - j > 40: sil35.append((j*0.01, k*0.01))
+                j = k
+            else: j += 1
+        sil = [x for x in sil if x[0] > 0.05 and x[1] < tot - 0.05]
+        if a.timed:
+            sc = json.load(open(a.timed))["scenes"]; assert len(sc) == 2*n + 2
+            gaps = []
+            for k in range(1, len(sc)):
+                b = (sc[k-1]["end"] + sc[k]["start"])/2
+                g = min(sil, key=lambda g: abs((g[0]+g[1])/2 - b))
+                gaps.append(g if abs((g[0]+g[1])/2 - b) < 0.4 and g not in gaps else (b - 0.08, b + 0.06))
+        else:
+            # once metin tabanli bolme (Whisper kelime zamanlari); guven dusukse sessizlik DP'sine don
+            try:
+                from ses_hizala import satir_sinirlari; sn = satir_sinirlari(au, SR, S)
+            except Exception as e: print("uyari: metin hizalama calismadi:", e); sn = None
+            gaps = [(b - 0.08, b + 0.06) for b in sn[1:-1]] if sn else None
+        if gaps is None:
+            # metin uzunluguna gore DP hizalama: en uzun sessizlikleri secmek cumle-ici duraklari
+            # sahne siniri sanip soru/cevap seslerini kaydiriyordu (sessiz soru hatasi)
+            ch = [len(x) for x in S]; rate = tot/sum(ch); m = len(sil); K = 2*n + 1
+            mid = lambda j: (sil[j][0]+sil[j][1])/2
+            def cost(t0, t1, c):
+                return math.log(max(t1 - t0, 0.05)/(rate*c))**2
+            def pen(k, i, j):  # yapi: soru "X harfi." + kisa durakla baslar; cevap tek parca (ic durak yok)
+                ins = sil[i+1:j]
+                if k % 2 == 1: return 0 if any(0.25 < g[0] - sil[i][1] < 1.0 for g in ins) else 3.0
+                return 3.0 * sum(1 for g in ins if g[1] - g[0] > 0.2)
+            INF = float("inf"); D = [[INF]*m for _ in range(K)]; P = [[-1]*m for _ in range(K)]
+            cost0 = cost; cost = lambda t0, t1, c: cost0(t0, t1, c)
+            for j in range(m): D[0][j] = cost(0, mid(j), ch[0])
+            for k in range(1, K):
+                for j in range(k, m):
+                    for i in range(k-1, j):
+                        v = D[k-1][i] + cost(mid(i), mid(j), ch[k]) - 1.5*(sil[j][1]-sil[j][0]) + pen(k, i, j)
+                        if v < D[k][j]: D[k][j] = v; P[k][j] = i
+            j = min(range(m), key=lambda j: D[K-1][j] + cost(mid(j), tot, ch[-1])); idx = []
+            for k in range(K-1, -1, -1): idx.append(j); j = P[k][j]
+            gaps = [sil[j] for j in reversed(idx)]
+        assert len(set(gaps)) == 2*n + 1, "sessizlik sayisi yetmiyor"
+        edges = [(0.0, None)] + gaps + [(None, tot)]
+        segs = []
+        for k in range(2*n + 2):
+            s0 = edges[k][1] - 0.06 if edges[k][1] is not None else 0.0
+            s1 = edges[k+1][0] + 0.08 if edges[k+1][0] is not None else tot
+            sg = au[int(max(0, s0)*SR):int(s1*SR)].copy()
+            # 0.4 sn'den uzun ic sessizlikleri 0.25 sn'ye kisalt
+            ins = [g for g in sil35 if g[0] > s0 + 0.05 and g[1] < s1 - 0.05 and g[1] - g[0] > 0.4]
+            for g in reversed(ins):
+                c0 = int((g[0] - s0 + 0.125)*SR); c1 = int((g[1] - s0 - 0.125)*SR); sg = np.concatenate([sg[:c0], sg[c1:]])
+            f = min(240, len(sg)//2); r = np.linspace(0, 1, f, dtype=np.float32); sg[:f] *= r; sg[len(sg)-f:] *= r[::-1]
+            segs.append(sg)
     z = lambda t: np.zeros(int(t*SR), np.float32)
     parts, t = [segs[0], z(0.2)], len(segs[0])/SR + 0.2
     ev = []  # (q_start, q_end, a_start, a_end, gone)
     for k in range(n):
         qa, aa = segs[1+2*k], segs[2+2*k]
-        qs = t; qe = qs + len(qa)/SR; as_ = qe + a.pause + (1.0 if len(ev) in ZOR else 0); ae = as_ + len(aa)/SR; gone = ae + a.hold + 0.25
-        parts += [qa, z(a.pause + (1.0 if len(ev) in ZOR else 0)), aa, z(a.hold + 0.25)]; ev.append((qs, qe, as_, ae, gone)); t = gone
+        qs = t; qe = qs + len(qa)/SR; as_ = qe + a.pause + (zb if len(ev) in ZOR else 0); ae = as_ + len(aa)/SR; gone = ae + a.hold + 0.25
+        parts += [qa, z(a.pause + (zb if len(ev) in ZOR else 0)), aa, z(a.hold + 0.25)]; ev.append((qs, qe, as_, ae, gone)); t = gone
     outro = t; parts += [segs[-1], z(1.0)]
     A = np.concatenate(parts); dur = len(A)/SR
     tmpa = a.out + ".a.wav"

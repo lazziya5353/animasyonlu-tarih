@@ -40,7 +40,13 @@ jobs:
           OZ=$(python -c "import json,hashlib,sys;s=json.load(open(sys.argv[1]));print(hashlib.sha256((sys.argv[2]+'|'+s.get('ses_stil','')+'|'+s['seslendirme_metni']).encode()).hexdigest())" $P/script.json "$SLUG")
           # panelden dis ses (ses_harici.*) yuklendiyse Gemini TTS atlanir; 0 = dis ses kullanildi, 3 = yok
           set +e; python scripts/harici_ses.py hazirla "$SLUG"; RC=$?; set -e; [ "$RC" = 1 ] && exit 1
-          if [ "$RC" = 0 ]; then echo "dis ses -> ses.wav (mono 24 kHz, loudnorm)"
+          MOD=$(python -c "import json,sys;print(json.load(open(sys.argv[1])).get('ses_modu',''))" $P/script.json)
+          if [ "$RC" = 0 ]; then echo "dis ses -> ses.wav (mono 24 kHz, loudnorm)"; [ -f "$P/segmentler.json" ] && echo "segment haritasi: $P/segmentler.json (sessizlik tespiti yok)"
+          elif [ "$MOD" = "satir" ]; then
+            # satir satir TTS: her satir ayri istek, audio/ altinda onbellek, sinirlar segmentler.json
+            python scripts/satir_ses.py "$SLUG"
+            git config user.name "github-actions"; git config user.email "github-actions@users.noreply.github.com"
+            git add "projects/$SLUG/audio" "projects/$SLUG/segmentler.json"; git commit -m "Quiz satır sesleri: $SLUG" && (git pull --rebase -q; git push) || true
           elif [ "$SES" = "1" ] || [ ! -f "$P/ses.wav" ] || [ "$(cat $P/ses.kaynak 2>/dev/null)" != "$OZ" ]; then
             rm -f "$P/ses.wav"
             python scripts/generate_assets.py --slug "$SLUG" --ses

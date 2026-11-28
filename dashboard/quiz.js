@@ -347,6 +347,15 @@ function qTamamla(fmt, Q) { // türetilen alanlar: Her Harfe harfi + sıralama, 
   return Q;
 }
 function qAyirYerel(fmt, metin) { // kural tabanlı: blokları bul, soru/cevap/seçenek/doğru harfini çıkar
+  metin = String(metin).replace(/\\n/g, "\n").replace(/^\s*["“”']+|["“”']+\s*$/g, "");
+  const borulu = metin.split(/\r?\n/).map((x) => x.trim()).filter(Boolean);
+  if (borulu.length && borulu.every((l) => l.split(/\s*[|\t]\s*/).length >= 2 && /[|\t]/.test(l))) { // "A | soru | cevap | alt" ya da "soru | cevap | alt"
+    const sorular = borulu.map((l) => { const p = l.split(/\s*[|\t]\s*/).map((x) => x.trim()); const q = qbos(fmt);
+      const harfli = p.length >= 3 && p[0].length <= 2, [h, so, ce, al] = harfli ? p : ["", ...p];
+      if (fmt === "her-harfe") Object.assign(q, { harf: h, soru: so || "", cevap: ce || "" }); else if ("soru" in q) Object.assign(q, { soru: so || "", cevap: ce || "" });
+      if ("alt_bilgi" in q && al) q.alt_bilgi = al; return q; });
+    if (fmt === "her-harfe" || fmt === "harf-bul") return { sorular, belirsiz: false };
+  }
   const sat = metin.replace(/\r/g, "").replace(/[ \t]+(?=\(?[B-Da-d]\)\s)/g, "\n").replace(/[ \t]+(?=(Doğru|Cevap)\s*:)/gi, "\n").split("\n").map((x) => x.trim()).filter(Boolean);
   const SEC = /^\(?([A-Da-d])[).:\-]\s*(.+)$/, DOG = /^(doğru(\s*cevap)?|cevap|yanıt|answer)\s*[:=\-]\s*(.+)$/i, NUM = /^(\d{1,2})\s*[.)\-:]\s*(.+)$/;
   const HH = /^([A-Za-zÇĞİÖŞÜçğıöşü])\s*[-–:)]\s*(.+?)\s+[-–]\s+(.+)$/;
@@ -395,8 +404,8 @@ async function qAyir(g, fmt, S, tema, btn, ciz) {
     try { const r = await api("quiz_ayir", { format: fmt, metin, yerel: yerel.sorular, tema });
       if (r.ok && r.sorular?.length) { sorular = r.sorular.map((q) => ({ zorluk: "orta", ...q })); notlar = [`Gemini ${sorular.length} soruya ayırdı; eksik alanları taslakladı.`, ...(r.notlar || [])];
         btn.textContent = "Doğruluk notu…"; const k = await api("quiz_dogrula", { format: fmt, sorular }).catch(() => null); if (k?.notlar?.length) notlar.push(...k.notlar.map((x) => "🔎 " + (typeof x === "string" ? x : JSON.stringify(x)))); }
-      else notlar.push(`⚠️ ${r.hata || "Gemini ayıramadı"}; yerel sonuç gösteriliyor, kırmızı alanları elle doldur.`);
-    } catch (e) { notlar.push(`⚠️ ${e.message}; yerel sonuç gösteriliyor.`); }
+      else notlar.push(`ℹ️ ${r.hata || "Gemini ayıramadı"}; yerel sonuç kullanıldı, boş alanları elle doldur.`);
+    } catch (e) { notlar.push(`ℹ️ Gemini'ye ulaşılamadı (${e.message}); yerel sonuç kullanıldı.`); }
     btn.disabled = false; btn.textContent = "✂️ Ayır";
   }
   qTamamla(fmt, sorular);
@@ -404,7 +413,7 @@ async function qAyir(g, fmt, S, tema, btn, ciz) {
   S.sorular = (ekle ? [...S.sorular.filter((q) => QYOL[fmt].some(([p]) => { const v = qget(q, p); return v != null && v !== "" && !(Array.isArray(v) && !v.length); })), ...sorular] : sorular).slice(0, ust);
   qTamamla(fmt, S.sorular); ciz();
   const h2 = qDogrula(fmt, S.sorular);
-  not.innerHTML = [...notlar, h2.length ? `⚠️ ${h2.length} sorun var; kırmızı satırları düzelt.` : "✓ Tüm satırlar geçerli. Kontrol et, sonra \"Onayla ve Üret\"."].map((x) => `<div class="qs-not">${esc(x)}</div>`).join("");
+  not.innerHTML = [...notlar, h2.length ? `⚠️ ${h2.length} sorun: ${h2.slice(0, 4).join(" · ")}${h2.length > 4 ? " …" : ""}` : "✓ Tüm satırlar geçerli. Kontrol et, sonra \"Onayla ve Üret\"."].map((x) => `<div class="qs-not">${esc(x)}</div>`).join("");
 }
 
 // ---- Dış ses: workflow'un seslendirme_metni ile birebir aynı metin (quiz_studyo.py hazirla / harf_bul.py hazirla / api quizEskiScript)
