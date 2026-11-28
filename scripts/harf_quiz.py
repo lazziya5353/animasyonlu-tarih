@@ -195,7 +195,7 @@ def main():
             f = min(240, len(sg)//2); r = np.linspace(0, 1, f, dtype=np.float32); sg[:f] *= r; sg[len(sg)-f:] *= r[::-1]
             segs.append(sg)
         # sure siniri 177 sn (2:57): once bekleme, sonra ZOR ek suresi, sonra dusunme suresi (en az 2 sn) kisalir
-        konusma = sum(len(x) for x in segs)/SR; zb = 1.0
+        konusma = sum(len(x) for x in segs)/SR; zb = float(SJ.get("zor_ek", 1.0))
         top = lambda: konusma + 0.2 + n*(a.pause + a.hold + 0.25) + len(ZOR)*zb + 1.0
         while top() > 177 and a.hold > 0.3: a.hold = round(max(0.3, a.hold - 0.05), 3)
         if top() > 177: zb = 0.0
@@ -203,7 +203,7 @@ def main():
         if top() > 177: sys.exit(f"HATA: Video {top():.1f} sn olur, sınır 177 sn (2:57). Düşünme 2 sn'ye, bekleme 0.3 sn'ye indirildi yine de sığmıyor; soru sayısını azalt ya da soruları kısalt.")
         print(f"zaman cizelgesi: konusma {konusma:.1f} sn, dusunme {a.pause} sn, bekleme {a.hold} sn, toplam {top():.1f} sn")
     else:
-        zb = 1.0
+        zb = float(SJ.get("zor_ek", 1.0))
         fr = np.sqrt((au[:len(au)//480*480].reshape(-1, 480)**2).mean(1)); q = fr < 10**(-42/20); sil = []; j = 0
         while j < len(q):  # kendi enerji tabanli sessizlik tespiti (10 ms kare, -42 dB, >=80 ms)
             if q[j]:
@@ -306,6 +306,9 @@ def main():
                 r2 = 392; dd = ImageDraw.Draw(im)
                 dd.arc((CX-r2, CY-r2, CX+r2, CY+r2), -90, -90 + 360*min(1, (t-qe)/(as_-qe)), fill=(200, 60, 50), width=6)
             bg = im.copy()
+            if qe <= t < as_ and SJ.get("geri_sayim", True):  # buyuk geri sayim rakami (3-2-1), sorunun altinda, halkanin icinde
+                kal = as_ - t; rk = str(max(1, math.ceil(kal))); fz = 1 - (math.ceil(kal) - kal)
+                cf = F("Cinzel-700", int(110 + 20*max(0, fz - 0.8)/0.2)); ImageDraw.Draw(im).text((CX, 1215), rk, font=cf, fill=GOLD, anchor="mm")
             if ansv:
                 k = min(1, (t - as_)/0.3); center(im, cur+1, n, Q[cur][1], Q[cur][2], up(HINT.get(Q[cur][0], "")), k, 0.9 + 0.1*k)
             else:

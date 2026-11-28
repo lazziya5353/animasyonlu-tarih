@@ -34,6 +34,21 @@ def tts(metin, ses, stil):
         print("bekleniyor:", son); time.sleep(20 * (deneme + 1))
     sys.exit(f"HATA: Gemini ses üretmedi ({son})")
 
+def edge_tts(metin, ses, hiz):
+    """Microsoft Edge TTS (ucretsiz, anahtarsiz, gunluk kota yok): satir basina bir istek; Gemini'nin ~10 istek/gun
+    ucretsiz kotasi 50+ satirlik quizde yetmiyor (script.json "ses_motoru": "edge")."""
+    import asyncio, tempfile, edge_tts as et
+    yol = tempfile.mktemp(suffix=".mp3"); son = ""
+    for deneme in range(5):
+        try:
+            asyncio.run(et.Communicate(metin, ses, rate=hiz).save(yol))
+            if os.path.getsize(yol) > 1000: break
+        except Exception as e: son = str(e)
+        print("edge bekleniyor:", son); time.sleep(5 * (deneme + 1))
+    else: sys.exit(f"HATA: Edge TTS ses üretmedi ({son})")
+    a = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-i", yol, "-ac", "1", "-ar", str(SR), "-f", "s16le", "-"], capture_output=True, check=True).stdout, "<i2").astype(np.float32) / 32768
+    os.remove(yol); return a
+
 def kirp(a):
     """bas/son sessizligi kirp (10 ms kare, -40 dB); 40 ms on, 80 ms son pay"""
     f = np.sqrt((a[:len(a)//240*240].reshape(-1, 240)**2).mean(1)); v = np.where(f > 10**(-40/20))[0]
@@ -54,16 +69,18 @@ def ic_durak(a, maks=0.3):
 
 def main(slug):
     P = os.path.join(ROOT, "projects", slug); S = json.load(open(os.path.join(P, "script.json")))
-    ses = S.get("ses") or os.environ.get("GEMINI_VOICE") or "Charon"
+    motor = S.get("ses_motoru", "gemini")
+    ses = S.get("ses") or ("tr-TR-AhmetNeural" if motor == "edge" else os.environ.get("GEMINI_VOICE") or "Charon")
+    hiz = S.get("ses_hizi", "+0%")
     os.makedirs(os.path.join(P, "audio"), exist_ok=True)
     parcalar, seg, t, yeni = [], [], 0.0, 0
     for i, sh in enumerate(S["sahneler"]):
-        satir = sh["lines"][0].strip(); stil = STIL_GIRIS if i == 0 else STIL
+        satir = sh["lines"][0].strip(); stil = (STIL_GIRIS if i == 0 else STIL) if motor != "edge" else f"edge{hiz}"
         h = hashlib.sha256(f"{ses}|{stil}|{satir}".encode()).hexdigest()[:20]; yol = os.path.join(P, "audio", h + ".wav")
         if os.path.exists(yol):
             a = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-i", yol, "-ac", "1", "-ar", str(SR), "-f", "s16le", "-"], capture_output=True, check=True).stdout, "<i2").astype(np.float32) / 32768
         else:
-            a = kirp(tts(satir, ses, stil)); yeni += 1
+            a = kirp(edge_tts(satir, ses, hiz) if motor == "edge" else tts(satir, ses, stil)); yeni += 1
             subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "s16le", "-ar", str(SR), "-ac", "1", "-i", "-", yol], input=(np.clip(a, -1, 1)*32767).astype("<i2").tobytes(), check=True)
         a = ic_durak(a)
         print(f"{i+1}/{len(S['sahneler'])} {len(a)/SR:.2f} sn · {satir[:60]}")
@@ -71,7 +88,7 @@ def main(slug):
         parcalar += [a, np.zeros(int(0.25*SR), np.float32)]; t += len(a)/SR + 0.25
     A = np.concatenate(parcalar)
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "s16le", "-ar", str(SR), "-ac", "1", "-i", "-", os.path.join(P, "ses.wav")], input=(np.clip(A, -1, 1)*32767).astype("<i2").tobytes(), check=True)
-    json.dump({"kaynak": "gemini-satir", "ses": ses, "segmentler": seg}, open(os.path.join(P, "segmentler.json"), "w"), ensure_ascii=False, indent=1)
+    json.dump({"kaynak": f"{motor}-satir", "ses": ses, "segmentler": seg}, open(os.path.join(P, "segmentler.json"), "w"), ensure_ascii=False, indent=1)
     print(f"ses.wav {t:.1f} sn, {len(seg)} satır ({yeni} yeni istek)")
 
 if __name__ == "__main__": main(sys.argv[1])

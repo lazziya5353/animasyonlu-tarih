@@ -29,7 +29,7 @@ jobs:
         timeout-minutes: 10
         run: bash scripts/ffmpeg_kur.sh
       - timeout-minutes: 10
-        run: pip install -q numpy soundfile pillow faster-whisper
+        run: pip install -q numpy soundfile pillow faster-whisper edge-tts
       - name: Ses
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
